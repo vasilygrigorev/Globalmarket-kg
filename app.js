@@ -54,8 +54,8 @@ const promoBanners = [
   {
     image: "assets/hero-promo-clear-dark.jpg",
     alt: "Шампуни Clear Men в темной синей ванной",
-    eyebrow: "Clear Men",
-    title: "Уход за волосами",
+    eyebrow: "Уход за волосами",
+    title: "Clear Men",
     href: "#catalog",
   },
   {
