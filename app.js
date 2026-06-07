@@ -39,7 +39,29 @@ const customerCardText = document.querySelector("#customerCardText");
 const clearCustomerButton = document.querySelector("#clearCustomer");
 const siteHeader = document.querySelector(".site-header");
 const toggleSearchButton = document.querySelector("#toggleSearch");
+const heroTrack = document.querySelector("#heroTrack");
+const heroDots = document.querySelector("#heroDots");
 let activeZoomImage = null;
+
+const promoBanners = [
+  {
+    image: "assets/hero-green-wide-v1.png",
+    alt: "Светлая кухня-прачечная с товарами для дома",
+    eyebrow: "Доставка товаров для дома",
+    title: "Бытовая химия и уход",
+    href: "#catalog",
+  },
+  {
+    image: "assets/hero-shopfoto2-laundry.png",
+    alt: "Светлая прачечная с товарами для стирки",
+    eyebrow: "Товары для стирки",
+    title: "Гели, порошки, ополаскиватели",
+    href: "#catalog",
+  },
+];
+
+let activeHeroIndex = 0;
+let heroTimer = null;
 
 const currency = new Intl.NumberFormat("ru-RU");
 const decimalCurrency = new Intl.NumberFormat("ru-RU", {
@@ -71,6 +93,54 @@ function formatPrice(value) {
 
 function formatWholesale(value) {
   return `${decimalCurrency.format(Number(value))} сом`;
+}
+
+function renderHeroBanners() {
+  if (!heroTrack || !heroDots || !promoBanners.length) return;
+  heroTrack.innerHTML = promoBanners
+    .map(
+      (banner) => `
+        <article class="hero-slide">
+          <img class="hero-image" src="${escapeHtml(banner.image)}" alt="${escapeHtml(banner.alt)}" />
+          <a class="hero-content" href="${escapeHtml(banner.href)}">
+            <p class="eyebrow">${escapeHtml(banner.eyebrow)}</p>
+            <h1>${escapeHtml(banner.title)}</h1>
+          </a>
+        </article>
+      `,
+    )
+    .join("");
+  heroDots.innerHTML = promoBanners
+    .map(
+      (_, index) => `
+        <button class="hero-dot ${index === activeHeroIndex ? "active" : ""}" type="button" data-hero-slide="${index}" aria-label="Показать баннер ${index + 1}"></button>
+      `,
+    )
+    .join("");
+  updateHeroBanner();
+}
+
+function updateHeroBanner() {
+  if (!heroTrack || !heroDots) return;
+  heroTrack.style.transform = `translateX(-${activeHeroIndex * 100}%)`;
+  heroDots.querySelectorAll(".hero-dot").forEach((dot, index) => {
+    const isActive = index === activeHeroIndex;
+    dot.classList.toggle("active", isActive);
+    dot.setAttribute("aria-current", isActive ? "true" : "false");
+  });
+}
+
+function showHeroBanner(index) {
+  activeHeroIndex = (index + promoBanners.length) % promoBanners.length;
+  updateHeroBanner();
+}
+
+function startHeroRotation() {
+  if (promoBanners.length < 2) return;
+  window.clearInterval(heroTimer);
+  heroTimer = window.setInterval(() => {
+    showHeroBanner(activeHeroIndex + 1);
+  }, 5200);
 }
 
 function isRegisteredCustomer() {
@@ -681,6 +751,13 @@ toggleSearchButton.addEventListener("click", () => {
   if (isOpen) headerSearchInput.focus();
 });
 
+heroDots?.addEventListener("click", (event) => {
+  const dot = event.target.closest("[data-hero-slide]");
+  if (!dot) return;
+  showHeroBanner(Number(dot.dataset.heroSlide));
+  startHeroRotation();
+});
+
 customerForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(event.currentTarget);
@@ -734,6 +811,9 @@ document.querySelector("#checkoutForm").addEventListener("submit", (event) => {
   formStatus.innerHTML = `Открываем WhatsApp. Если он не открылся, <a href="${whatsapp}" target="_blank" rel="noreferrer">нажмите здесь</a>.`;
   window.location.href = whatsapp;
 });
+
+renderHeroBanners();
+startHeroRotation();
 
 loadCatalog().catch((error) => {
   productGrid.innerHTML = `<p class="empty-cart">${escapeHtml(error.message)}</p>`;

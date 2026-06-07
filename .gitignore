@@ -1,4 +1,5 @@
 .DS_Store
+.wrangler/
 
 # Local generated previews and screenshots
 /*.png
