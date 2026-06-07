@@ -58,6 +58,13 @@ const promoBanners = [
     title: "Уход за волосами",
     href: "#catalog",
   },
+  {
+    image: "assets/hero-green-wide-v1.png",
+    alt: "Теплая прачечная с растениями и товарами для дома",
+    eyebrow: "Для дома",
+    title: "Бытовая химия и уход",
+    href: "#catalog",
+  },
 ];
 
 let activeHeroIndex = 0;
