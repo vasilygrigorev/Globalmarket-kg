@@ -121,9 +121,35 @@ select {
   cursor: pointer;
 }
 
-.search-toggle span {
-  font-size: 20px;
-  line-height: 1;
+.search-icon {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.search-icon::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 10px;
+  height: 10px;
+  border: 1.7px solid var(--ink);
+  border-radius: 50%;
+}
+
+.search-icon::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  bottom: 2px;
+  width: 7px;
+  height: 1.7px;
+  border-radius: 2px;
+  background: var(--ink);
+  transform: rotate(45deg);
+  transform-origin: center;
 }
 
 .cart-button,
@@ -144,32 +170,48 @@ select {
 }
 
 .cart-button {
-  position: relative;
-  min-width: 48px;
-  padding: 0 10px 0 28px;
+  min-width: 68px;
+  height: 44px;
+  padding: 0 10px;
+  gap: 6px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.cart-button::before {
+.cart-bag-icon {
+  position: relative;
+  display: block;
+  width: 19px;
+  height: 19px;
+}
+
+.cart-bag-icon::before {
   content: "";
   position: absolute;
-  left: 11px;
-  top: 15px;
-  width: 13px;
+  left: 2px;
+  bottom: 1px;
+  width: 15px;
   height: 12px;
   border: 1.7px solid var(--ink);
-  border-radius: 2px 2px 4px 4px;
+  border-radius: 2px 2px 5px 5px;
 }
 
-.cart-button::after {
+.cart-bag-icon::after {
   content: "";
   position: absolute;
-  left: 15px;
-  top: 10px;
+  left: 6px;
+  top: 0;
   width: 7px;
   height: 8px;
   border: 1.7px solid var(--ink);
   border-bottom: 0;
   border-radius: 8px 8px 0 0;
+}
+
+.cart-separator,
+#cartCount {
+  line-height: 1;
 }
 
 .cart-icon {
@@ -665,9 +707,9 @@ textarea {
   display: -webkit-box;
   min-height: 32px;
   overflow: hidden;
-  color: var(--ink);
+  color: var(--muted);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.22;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -1301,53 +1343,65 @@ textarea {
   }
 
   .cart-button {
-    min-width: 46px;
-    padding-right: 8px;
+    min-width: 68px;
   }
 
   .hero {
     display: block;
-    min-height: 92px;
+    min-height: 122px;
     margin: 0 0 4px;
     overflow: hidden;
     border: 0;
     border-radius: 0;
-    background: var(--paper);
   }
 
   .hero-image {
-    inset: 0 -18px 0 auto;
-    width: 236px;
+    inset: 0;
+    width: 100%;
     height: 100%;
     max-width: none;
     object-fit: cover;
     object-position: right center;
-    opacity: 0.74;
+    opacity: 1;
     transform: none;
   }
 
   .hero::after {
-    background: linear-gradient(90deg, rgba(245, 245, 247, 0.99) 0%, rgba(245, 245, 247, 0.9) 58%, rgba(245, 245, 247, 0.08) 100%);
+    display: none;
   }
 
   .hero-content {
-    width: min(66%, 260px);
-    padding: 14px 18px;
+    width: min(88%, 520px);
+    height: 122px;
+    margin: 0;
+    padding: 9px 18px 12px;
+    color: var(--white);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.68), 0 1px 2px rgba(0, 0, 0, 0.36);
   }
 
   .hero-content .eyebrow {
-    margin-bottom: 5px;
-    font-size: 9px;
+    position: absolute;
+    left: 18px;
+    bottom: 12px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 10px;
+    font-weight: 600;
   }
 
   .hero-content h1 {
     max-width: none;
-    font-size: 21px;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 29px;
+    font-weight: 300;
+    line-height: 1.04;
   }
 
   .hero-copy {
-    margin: 5px 0 0;
-    font-size: 12px;
+    margin: 6px 0 0;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 14px;
+    font-weight: 500;
     line-height: 1.35;
   }
 
@@ -1495,6 +1549,7 @@ textarea {
   .product-variant-line {
     min-height: 30px;
     font-size: 12px;
+    font-weight: 500;
   }
 
   .product-info p,
