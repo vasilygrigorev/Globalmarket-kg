@@ -92,6 +92,64 @@ function productCardImage(product) {
   return product.image || fallbackImageFor(product);
 }
 
+function normalizeText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function titleWithoutFirstMatch(title, value) {
+  const cleanTitle = normalizeText(title);
+  const cleanValue = normalizeText(value);
+  if (!cleanValue) return cleanTitle;
+  const escaped = cleanValue.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return normalizeText(cleanTitle.replace(new RegExp(escaped, "i"), ""));
+}
+
+function displayProductType(product) {
+  const type = normalizeText(product.productType || "");
+  const lower = type.toLowerCase();
+  if (lower.includes("концентрированный кондиционер")) return "ополаскиватель";
+  if (lower.includes("кондиционер для белья")) return "ополаскиватель";
+  if (lower.includes("гель для стирки")) return "гель для стирки";
+  if (lower.includes("стиральный порошок")) return "стиральный порошок";
+  if (lower.includes("капсулы")) return "капсулы для стирки";
+  if (lower.includes("мужской шампунь") || lower.includes("шампунь")) return "шампунь";
+  if (lower.includes("кондиционер для волос")) return "кондиционер";
+  if (lower.includes("гель для душа")) return "гель для душа";
+  if (lower.includes("дезодорант")) return "дезодорант";
+  if (lower.includes("зубная паста")) return "зубная паста";
+  if (lower.includes("брить")) return "бритье";
+  return type || normalizeText(product.category || "товар");
+}
+
+function productSize(title) {
+  const text = normalizeText(title).replace(",", ".");
+  const combo = text.match(/(?:^|\s)(\d+(?:\.\d+)?\s*(?:мл|ml|л|l|кг|kg|г|g)\s*\+\s*\d+(?:\.\d+)?\s*(?:мл|ml|л|l|кг|kg|г|g))(?:\s|$)/i);
+  const single = text.match(/(?:^|\s)(\d+(?:\.\d+)?\s*(?:мл|ml|л|l|кг|kg|г|g|шт))(?:\s|$)/i);
+  const value = combo?.[1] || single?.[1] || "";
+  return value.replace(/\./g, ",").replace(/\bml\b/i, "мл").replace(/\bl\b/i, "л").replace(/\bkg\b/i, "кг").replace(/\bg\b/i, "г");
+}
+
+function productDisplayParts(product) {
+  const brand = normalizeText(product.brand || "Global Market");
+  const type = displayProductType(product);
+  const size = productSize(product.title);
+  let variant = normalizeText(product.title);
+  variant = titleWithoutFirstMatch(variant, brand);
+  variant = titleWithoutFirstMatch(variant, product.productType);
+  variant = titleWithoutFirstMatch(variant, type);
+  variant = titleWithoutFirstMatch(variant, size);
+  variant = normalizeText(
+    variant
+      .replace(/\d+(?:[.,]\d+)?\s*(?:мл|ml|л|l|кг|kg|г|g|шт)/gi, "")
+      .replace(/\s*\+\s*/g, " ")
+      .replace(/[()]/g, " "),
+  );
+  if (!variant || variant.toLowerCase() === brand.toLowerCase()) {
+    variant = normalizeText(product.description).split(".")[0] || product.title;
+  }
+  return { brand, type, size, variant };
+}
+
 function loadCustomer() {
   try {
     const customer = JSON.parse(localStorage.getItem("globalMarketCustomer") || "null");
@@ -222,19 +280,26 @@ function renderProducts() {
     return;
   }
   productGrid.innerHTML = pageProducts
-    .map(
-      (product) => `
+    .map((product) => {
+      const display = productDisplayParts(product);
+      return `
         <article class="product-card">
           <div class="product-visual" style="--tone-a: ${product.tones[0]}; --tone-b: ${product.tones[1]}">
             <span class="placeholder-brand">${escapeHtml(product.brand || "GM")}</span>
             <img class="product-image ${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy" data-open-product="${product.id}">
           </div>
           <div class="product-info">
-            <div class="product-meta">
+            <button class="product-title-button product-copy" type="button" data-open-product="${product.id}">
+              <span class="product-brand-line">${escapeHtml(display.brand)}</span>
+              <span class="product-kind-line">
+                <strong>${escapeHtml(display.type)}</strong>
+                ${display.size ? `<span>${escapeHtml(display.size)}</span>` : ""}
+              </span>
+              <span class="product-variant-line">${escapeHtml(display.variant)}</span>
+            </button>
+            <div class="product-meta product-meta-compact">
               <span>${escapeHtml(product.category)}</span>
-              <span>${escapeHtml(product.brand || "В наличии")}</span>
             </div>
-            <h3><button class="product-title-button" type="button" data-open-product="${product.id}">${escapeHtml(product.title)}</button></h3>
             <p>${escapeHtml(product.description)}</p>
             <div class="price-stack">
               <span class="price">${formatPrice(productPrice(product))}</span>
@@ -251,8 +316,8 @@ function renderProducts() {
             </div>
           </div>
         </article>
-      `,
-    )
+      `;
+    })
     .join("");
   const remaining = Math.max(visibleProducts.length - state.visibleLimit, 0);
   loadMore.hidden = remaining === 0;
@@ -305,6 +370,7 @@ function modalVisual(product) {
 function openProductModal(productId) {
   const product = products.find((item) => item.id === productId);
   if (!product) return;
+  const display = productDisplayParts(product);
 
   const characteristics = [
     ["Бренд", product.brand || "Global Market"],
@@ -320,11 +386,11 @@ function openProductModal(productId) {
         ${modalVisual(product)}
       </div>
       <div class="modal-product-info">
-        <div class="product-meta">
-          <span>${escapeHtml(product.category)}</span>
-          <span>${escapeHtml(product.brand || "В наличии")}</span>
+        <div class="modal-title-stack">
+          <span class="modal-brand-line">${escapeHtml(display.brand)}</span>
+          <h2 id="productModalTitle">${escapeHtml(display.type)}${display.size ? ` · ${escapeHtml(display.size)}` : ""}</h2>
+          <span>${escapeHtml(display.variant)}</span>
         </div>
-        <h2 id="productModalTitle">${escapeHtml(product.title)}</h2>
         <p>${escapeHtml(product.description)}</p>
         <div class="modal-price-box">
           <span>${isRegisteredCustomer() ? "Ваша цена" : "Цена"}</span>
