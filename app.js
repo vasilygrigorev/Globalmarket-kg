@@ -65,6 +65,27 @@ const promoBanners = [
     title: "Бытовая химия и уход",
     href: "#catalog",
   },
+  {
+    image: "assets/hero-promo-dalli-autumn.jpg",
+    alt: "Средства Dalli на осеннем фоне",
+    eyebrow: "Dalli",
+    title: "Стирка для всей семьи",
+    href: "#catalog",
+  },
+  {
+    image: "assets/hero-promo-dash-green.jpg",
+    alt: "Средства Dash на зеленом тропическом фоне",
+    eyebrow: "Dash",
+    title: "Свежая стирка",
+    href: "#catalog",
+  },
+  {
+    image: "assets/hero-promo-pink-stuff.jpg",
+    alt: "Средства The Pink Stuff на розовом фоне",
+    eyebrow: "The Pink Stuff",
+    title: "Чистота и блеск",
+    href: "#catalog",
+  },
 ];
 
 let activeHeroIndex = 0;
