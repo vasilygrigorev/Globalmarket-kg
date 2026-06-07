@@ -1,0 +1,29 @@
+.DS_Store
+
+# Local generated previews and screenshots
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+.playwright-mcp/
+
+# Private/local inventory sources
+data/catalog.json
+data/store.db
+data/*.mxl
+data/*.xls
+data/*.xlsx
+data/*.csv
+data/*_scan_state.json
+
+# Raw/photo intake and extracted working assets
+assets/document_inbox/
+assets/product_sources/
+assets/telegram_inbox/
+
+# Local reports
+outputs/
+
+# Python caches
+__pycache__/
+*.pyc

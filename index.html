@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Market KG - интернет-магазин</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css?v=20260607-apple-logo" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Global Market KG">
+        <span>Global Market KG</span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#catalog">Каталог</a>
+        <a href="#delivery">Доставка</a>
+        <a href="#checkout">Оплата</a>
+      </nav>
+      <label class="header-search" aria-label="Поиск по товарам">
+        <span aria-hidden="true">⌕</span>
+        <input id="headerSearchInput" type="search" placeholder="Найти товар" />
+      </label>
+      <button class="cart-button" id="openCart" type="button" aria-label="Открыть корзину">
+        <span id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Главная витрина">
+        <img class="hero-image" src="assets/hero-shopfoto2-laundry.png" alt="Светлая прачечная с товарами для дома" />
+        <div class="hero-content">
+          <p class="eyebrow">Доставка товаров для дома</p>
+          <h1>Global Market</h1>
+          <p class="hero-copy">Бытовая химия, уход и красота с удобным заказом через WhatsApp.</p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#catalog">Перейти в каталог</a>
+            <a class="secondary-link" href="#delivery">Условия доставки</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-categories" aria-label="Быстрые категории">
+        <div class="quick-category-grid" id="quickCategoryGrid"></div>
+      </section>
+
+      <section class="service-strip" id="delivery" aria-label="Преимущества магазина">
+        <article>
+          <strong>2 часа</strong>
+          <span>быстрая связь с менеджером</span>
+        </article>
+        <article>
+          <strong><span id="deliveryThreshold">10 000</span> сом</strong>
+          <span>порог бесплатной доставки</span>
+        </article>
+      </section>
+
+      <section class="catalog-section" id="catalog">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Каталог</p>
+            <h2>Товары в наличии</h2>
+          </div>
+          <label class="search-field">
+            <span>Поиск</span>
+            <input id="searchInput" type="search" placeholder="Ariel, Dove, шампунь..." />
+          </label>
+        </div>
+
+        <section class="promo-row" aria-label="Промо-блоки">
+          <article>
+            <span>Розница</span>
+            <strong>Выгодные цены в сомах</strong>
+          </article>
+          <article>
+            <span>Опт</span>
+            <strong>Оптовый доступ по заявке</strong>
+          </article>
+          <article>
+            <span>Заказ</span>
+            <strong>Заказ отправляется в WhatsApp</strong>
+          </article>
+        </section>
+
+        <div class="catalog-layout">
+          <aside class="filters" aria-label="Фильтры каталога">
+            <div class="filter-group">
+              <span class="filter-title">Категория</span>
+              <div class="category-filter" id="categoryFilter"></div>
+            </div>
+            <label class="range-filter">
+              <span class="filter-title">Цена до <output id="priceOutput">9000</output> сом</span>
+              <input id="priceRange" type="range" min="900" max="9000" step="100" value="9000" />
+            </label>
+            <div class="filter-hint">
+              Наличие уточнит менеджер при подтверждении заказа.
+            </div>
+          </aside>
+
+          <div>
+            <div class="catalog-tools">
+              <span id="resultCount">0 товаров</span>
+              <select id="sortSelect" aria-label="Сортировка">
+                <option value="featured">Сначала популярные</option>
+                <option value="price-asc">Сначала дешевле</option>
+                <option value="price-desc">Сначала дороже</option>
+              </select>
+            </div>
+            <div class="product-grid" id="productGrid"></div>
+            <button class="load-more" id="loadMore" type="button">Показать еще</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="checkout-section" id="checkout">
+        <div>
+          <p class="eyebrow">Оформление</p>
+          <h2>Заказ менеджеру</h2>
+          <p>Оставьте контакты и адрес. После оформления откроется WhatsApp с готовым сообщением для менеджера.</p>
+          <div class="checkout-note">
+            Бесплатная доставка от <strong><span id="deliveryThresholdCheckout">10 000</span> сом</strong>. Если сумма меньше, условия доставки согласуются вручную.
+          </div>
+        </div>
+        <section class="customer-card" aria-label="Регистрация клиента">
+          <div>
+            <p class="eyebrow">Регистрация</p>
+            <h3 id="customerCardTitle">Скидка после регистрации</h3>
+            <p id="customerCardText">Укажите имя и WhatsApp, чтобы получить скидку 3%.</p>
+          </div>
+          <form class="customer-form" id="customerForm">
+            <label>
+              Имя
+              <input name="customerName" autocomplete="name" required />
+            </label>
+            <label>
+              WhatsApp
+              <input name="customerPhone" type="tel" autocomplete="tel" required />
+            </label>
+            <div class="customer-actions">
+              <button class="secondary-link" type="submit">Зарегистрироваться</button>
+              <button class="text-button" id="clearCustomer" type="button" hidden>Сбросить</button>
+            </div>
+          </form>
+        </section>
+        <form class="checkout-form" id="checkoutForm">
+          <label>
+            Имя
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Телефон / WhatsApp
+            <input name="phone" type="tel" autocomplete="tel" required />
+          </label>
+          <label>
+            Город
+            <input name="city" autocomplete="address-level2" />
+          </label>
+          <label>
+            Регион
+            <input name="region" autocomplete="address-level1" />
+          </label>
+          <label>
+            Адрес
+            <input name="address" autocomplete="street-address" />
+          </label>
+          <label>
+            Комментарий
+            <textarea name="comment" rows="3" placeholder="Удобное время, ориентир, пожелания"></textarea>
+          </label>
+          <button class="primary-button" type="submit">Отправить заказ в WhatsApp</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Корзина" aria-hidden="true">
+      <div class="drawer-panel">
+        <div class="drawer-header">
+          <h2>Корзина</h2>
+          <button class="icon-button" id="closeCart" type="button" aria-label="Закрыть корзину">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-summary">
+          <p class="cart-delivery" id="cartDeliveryNote">Доставка согласуется с менеджером.</p>
+          <div>
+            <span>Итого</span>
+            <strong id="cartTotal">0 сом</strong>
+          </div>
+          <a class="primary-link full" href="#checkout" id="checkoutLink">К оформлению</a>
+        </div>
+      </div>
+    </aside>
+
+    <section class="product-modal" id="productModal" aria-hidden="true" aria-labelledby="productModalTitle" role="dialog">
+      <div class="product-modal-panel">
+        <button class="icon-button modal-close" id="closeProductModal" type="button" aria-label="Закрыть карточку товара">×</button>
+        <div id="productModalContent"></div>
+      </div>
+    </section>
+
+    <script src="app.js?v=20260607-public-catalog"></script>
+  </body>
+</html>
