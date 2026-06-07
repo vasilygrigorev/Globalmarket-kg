@@ -45,6 +45,13 @@ let activeZoomImage = null;
 
 const promoBanners = [
   {
+    image: "assets/hero-green-wide-v1.png",
+    alt: "Теплая прачечная с растениями и товарами для дома",
+    eyebrow: "Для дома",
+    title: "Бытовая химия и уход",
+    href: "#catalog",
+  },
+  {
     image: "assets/hero-promo-downy-dark.jpg",
     alt: "Ополаскиватели Downy в темной синей прачечной",
     eyebrow: "Downy",
@@ -56,13 +63,6 @@ const promoBanners = [
     alt: "Шампуни Clear Men в темной синей ванной",
     eyebrow: "Уход за волосами",
     title: "Clear Men",
-    href: "#catalog",
-  },
-  {
-    image: "assets/hero-green-wide-v1.png",
-    alt: "Теплая прачечная с растениями и товарами для дома",
-    eyebrow: "Для дома",
-    title: "Бытовая химия и уход",
     href: "#catalog",
   },
   {
