@@ -21,6 +21,7 @@ data/*_scan_state.json
 assets/document_inbox/
 assets/product_sources/
 assets/telegram_inbox/
+assets/telegram_uploads/
 
 # Local reports
 outputs/

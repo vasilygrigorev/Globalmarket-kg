@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T05:02:51.037081+00:00",
+  "generatedAt": "2026-06-07T16:34:10.971546+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -811,6 +811,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "galleryImages": [
+        "assets/products/downy/downy-concentrate-rose-garden-1l-card-front.png",
         "assets/products/downy/downy-concentrate-rose-garden-1l-final-front.png",
         "assets/products/downy/downy-concentrate-rose-garden-1l-final-back.png"
       ],
@@ -820,7 +821,7 @@
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/downy/downy-concentrate-rose-garden-1l-final-front.png",
+      "image": "assets/products/downy/downy-concentrate-rose-garden-1l-card-front.png",
       "icon": "🫧",
       "registeredPriceKgs": 771,
       "description": "Концентрированный кондиционер Downy All-in-One Rose Garden, объём 1 л. Аромат Rose Garden / сад роз, до 27 стирок. По иконкам на этикетке: защита цвета, больше мягкости и более длительная свежесть. Штрихкод: 8700216311830.",
@@ -1044,6 +1045,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "galleryImages": [
+        "assets/products/downy/downy-concentrate-vanilla-musk-1l-card-front.png",
         "assets/products/downy/downy-concentrate-vanilla-musk-1l-final-front.png",
         "assets/products/downy/downy-concentrate-vanilla-musk-1l-final-back.png"
       ],
@@ -1053,7 +1055,7 @@
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/downy/downy-concentrate-vanilla-musk-1l-final-front.png",
+      "image": "assets/products/downy/downy-concentrate-vanilla-musk-1l-card-front.png",
       "icon": "🫧",
       "registeredPriceKgs": 771,
       "description": "Концентрированный кондиционер Downy All-in-One Vanilla & Musk, объём 1 л. Аромат ваниль и мускус, до 25 стирок. На этикетке заявлены fresher, softer, brighter и свежесть до 30 дней от стирки до шкафа. Штрихкод: 8700216311588.",
@@ -1162,6 +1164,8 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "galleryImages": [
+        "assets/products/downy/downy-fresh-valley-dew-1l-card-front.png",
+        "assets/products/downy/downy-fresh-valley-dew-1l-card-alt-front.png",
         "assets/products/downy/downy-fresh-valley-dew-1l-final-front.png",
         "assets/products/downy/downy-fresh-valley-dew-1l-final-back.png",
         "assets/products/downy/downy-fresh-valley-dew-1l-final-alt-front.png",
@@ -1173,7 +1177,7 @@
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/downy/downy-fresh-valley-dew-1l-final-front.png",
+      "image": "assets/products/downy/downy-fresh-valley-dew-1l-card-front.png",
       "icon": "🫧",
       "registeredPriceKgs": 577,
       "description": "Кондиционер для белья Downy Fresh Valley Dew, объём 1 л. Аромат Valley Dew / свежий аромат, до 9 стирок. По лицевой этикетке указано Fresh и до 7 дней свежести. Штрихкод: 5413149637924.",
@@ -1190,6 +1194,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "galleryImages": [
+        "assets/products/downy/downy-concentrate-valley-dew-1l-card-front.png",
         "assets/products/downy/downy-concentrate-valley-dew-1l-final-front.png",
         "assets/products/downy/downy-concentrate-valley-dew-1l-final-back.png"
       ],
@@ -1199,7 +1204,7 @@
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/downy/downy-concentrate-valley-dew-1l-final-front.png",
+      "image": "assets/products/downy/downy-concentrate-valley-dew-1l-card-front.png",
       "icon": "🫧",
       "registeredPriceKgs": 771,
       "description": "Концентрированный кондиционер Downy All-in-One Valley Dew, объём 1 л. Аромат Valley Dew / свежий аромат, до 27 стирок. По иконкам на этикетке: защита цвета, больше мягкости и более длительная свежесть.",
@@ -2458,6 +2463,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "galleryImages": [
+        "assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
         "assets/products/clear/clear-men-legend-cr7-600ml-final-front.png",
         "assets/products/clear/clear-men-legend-cr7-600ml-final-back.png"
       ],
@@ -2467,7 +2473,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/clear/clear-men-legend-cr7-600ml-final-front.png",
+      "image": "assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
       "icon": "🧴",
       "registeredPriceKgs": 771,
       "description": "Мужской шампунь Clear Men Legend by CR7 против перхоти, объём 600 мл. На этикетке указана линейка Legend by CR7 и компонент natural sea salt / натуральная морская соль. Штрихкод: 6221155081546.",
@@ -2576,6 +2582,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "galleryImages": [
+        "assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png",
         "assets/products/clear/clear-men-cool-sport-menthol-600ml-final-front.png",
         "assets/products/clear/clear-men-cool-sport-menthol-600ml-final-back.png"
       ],
@@ -2585,7 +2592,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/clear/clear-men-cool-sport-menthol-600ml-final-front.png",
+      "image": "assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png",
       "icon": "🧴",
       "registeredPriceKgs": 771,
       "description": "Мужской шампунь Clear Men Cool Sport Menthol против перхоти, объём 600 мл. Формула с ментолом и заявленным 10x Deep Refreshing Effect для выраженного ощущения свежести. Штрихкод: 6221155120587.",
@@ -2671,6 +2678,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "galleryImages": [
+        "assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-card-front.png",
         "assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-final-front.png",
         "assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-final-back.png"
       ],
@@ -2680,7 +2688,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-final-front.png",
+      "image": "assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-card-front.png",
       "icon": "🧴",
       "registeredPriceKgs": 771,
       "description": "Мужской шампунь Clear Men Hair Fall Defence Coffee против перхоти, объём 600 мл. На лицевой этикетке указано with Coffee Beans, на задней - Hair Fall Defence и 3 Zero Tech: dandruff, itch, grease. Штрихкод: 6221155088262.",
