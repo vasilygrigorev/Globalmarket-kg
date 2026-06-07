@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="soap">
+  <rect width="320" height="320" rx="0" fill="#f5f5f7"/>
+  <g fill="#ffffff" stroke="#b9b9bf" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+
+      <rect x="76" y="132" width="180" height="112" rx="52" />
+      <path d="M116 186h92" class="accent" />
+      <circle cx="208" cy="126" r="12" class="panel" />
+      <circle cx="234" cy="102" r="8" class="panel" />
+  </g>
+  <style>
+    .panel { fill: #fbfbfd; }
+    .accent { fill: none; stroke: #86868b; stroke-width: 5; }
+    .accent-fill { fill: #86868b; stroke: none; }
+    .thick { fill: none; stroke: #b9b9bf; stroke-width: 12; }
+  </style>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="food">
+  <rect width="320" height="320" rx="0" fill="#f5f5f7"/>
+  <g fill="#ffffff" stroke="#b9b9bf" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+
+      <path d="M98 96h124l-16 206H114z" />
+      <path d="M116 134h88v78h-88z" class="panel" />
+      <path d="M124 238h72" class="accent" />
+      <circle cx="196" cy="92" r="20" class="panel" />
+  </g>
+  <style>
+    .panel { fill: #fbfbfd; }
+    .accent { fill: none; stroke: #86868b; stroke-width: 5; }
+    .accent-fill { fill: #86868b; stroke: none; }
+    .thick { fill: none; stroke: #b9b9bf; stroke-width: 12; }
+  </style>
+</svg>

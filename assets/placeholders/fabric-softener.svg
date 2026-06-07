@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="fabric softener">
+  <rect width="320" height="320" rx="0" fill="#f5f5f7"/>
+  <g fill="#ffffff" stroke="#b9b9bf" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+
+      <path d="M128 64h44v28h-44z" />
+      <path d="M106 92h80c10 38 18 86 18 148 0 34-19 58-54 58s-54-24-54-58c0-62 8-110 18-148z" />
+      <path d="M116 154h82v68h-82z" class="panel" />
+      <path d="M126 246c18 14 40 14 58 0" class="accent" />
+  </g>
+  <style>
+    .panel { fill: #fbfbfd; }
+    .accent { fill: none; stroke: #86868b; stroke-width: 5; }
+    .accent-fill { fill: #86868b; stroke: none; }
+    .thick { fill: none; stroke: #b9b9bf; stroke-width: 12; }
+  </style>
+</svg>

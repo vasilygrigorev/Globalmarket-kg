@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="laundry gel">
+  <rect width="320" height="320" rx="0" fill="#f5f5f7"/>
+  <g fill="#ffffff" stroke="#b9b9bf" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+
+      <path d="M118 68h36v22h-36z" />
+      <path d="M108 90h56l10 168c1 18-12 34-30 34h-32c-18 0-31-16-30-34l10-168z" />
+      <path d="M104 146h68v80h-68z" class="panel" />
+      <path d="M118 188c16-22 32 22 50 0" class="accent" />
+  </g>
+  <style>
+    .panel { fill: #fbfbfd; }
+    .accent { fill: none; stroke: #86868b; stroke-width: 5; }
+    .accent-fill { fill: #86868b; stroke: none; }
+    .thick { fill: none; stroke: #b9b9bf; stroke-width: 12; }
+  </style>
+</svg>

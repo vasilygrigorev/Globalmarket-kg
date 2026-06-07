@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="deodorant roll">
+  <rect width="320" height="320" rx="0" fill="#f5f5f7"/>
+  <g fill="#ffffff" stroke="#b9b9bf" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+
+      <path d="M102 116h92v184h-92z" />
+      <path d="M116 74h64a26 26 0 0 1 26 26v16H90v-16a26 26 0 0 1 26-26z" />
+      <path d="M118 164h58v90h-58z" class="panel" />
+  </g>
+  <style>
+    .panel { fill: #fbfbfd; }
+    .accent { fill: none; stroke: #86868b; stroke-width: 5; }
+    .accent-fill { fill: #86868b; stroke: none; }
+    .thick { fill: none; stroke: #b9b9bf; stroke-width: 12; }
+  </style>
+</svg>

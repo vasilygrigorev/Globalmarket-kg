@@ -45,6 +45,24 @@ const decimalCurrency = new Intl.NumberFormat("ru-RU", {
   maximumFractionDigits: 2,
 });
 
+const fallbackImages = [
+  { keys: ["капсулы"], image: "assets/placeholders/laundry-capsules.svg" },
+  { keys: ["стиральный порошок", "порошок"], image: "assets/placeholders/laundry-powder.svg" },
+  { keys: ["кондиционер для белья", "концентрированный кондиционер"], image: "assets/placeholders/fabric-softener.svg" },
+  { keys: ["гель для стирки", "стирка и уход за бельем"], image: "assets/placeholders/laundry-gel.svg" },
+  { keys: ["мужской шампунь", "шампунь"], image: "assets/placeholders/shampoo.svg" },
+  { keys: ["кондиционер для волос"], image: "assets/placeholders/conditioner.svg" },
+  { keys: ["гель для душа"], image: "assets/placeholders/shower-gel.svg" },
+  { keys: ["мыло"], image: "assets/placeholders/soap.svg" },
+  { keys: ["дезодорант-стик", "стик"], image: "assets/placeholders/deodorant-roll.svg" },
+  { keys: ["роликовый дезодорант", "дезодорант", "дезодоранты"], image: "assets/placeholders/deodorant-spray.svg" },
+  { keys: ["сменные кассеты", "бритвенные станки", "средство для бритья", "гель для бритья", "бритье"], image: "assets/placeholders/shaving.svg" },
+  { keys: ["зубная паста", "зубная гигиена"], image: "assets/placeholders/toothpaste.svg" },
+  { keys: ["средство для посуды"], image: "assets/placeholders/dish.svg" },
+  { keys: ["чистящее средство", "уборка и чистота"], image: "assets/placeholders/cleaning.svg" },
+  { keys: ["молотый кофе", "продукты"], image: "assets/placeholders/food.svg" },
+];
+
 function formatPrice(value) {
   return `${currency.format(Math.round(value))} сом`;
 }
@@ -63,6 +81,15 @@ function productPrice(product) {
 
 function hasProductImage(product) {
   return Boolean(product.image || product.galleryImages?.length);
+}
+
+function fallbackImageFor(product) {
+  const haystack = `${product.productType || ""} ${product.category || ""} ${product.title || ""}`.toLowerCase();
+  return fallbackImages.find((item) => item.keys.some((key) => haystack.includes(key)))?.image || "assets/placeholders/generic.svg";
+}
+
+function productCardImage(product) {
+  return product.image || fallbackImageFor(product);
 }
 
 function loadCustomer() {
@@ -200,11 +227,7 @@ function renderProducts() {
         <article class="product-card">
           <div class="product-visual" style="--tone-a: ${product.tones[0]}; --tone-b: ${product.tones[1]}">
             <span class="placeholder-brand">${escapeHtml(product.brand || "GM")}</span>
-            ${
-              product.image
-                ? `<img class="product-image" src="${escapeHtml(product.image)}" alt="${escapeHtml(product.title)}" loading="lazy" data-open-product="${product.id}">`
-                : `<span class="placeholder-icon" aria-hidden="true"></span>`
-            }
+            <img class="product-image ${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy" data-open-product="${product.id}">
           </div>
           <div class="product-info">
             <div class="product-meta">
@@ -246,7 +269,11 @@ function imageLabel(path, index) {
 function modalVisual(product) {
   const gallery = product.galleryImages?.length ? product.galleryImages : product.image ? [product.image] : [];
   if (!gallery.length) {
-    return `<span class="modal-placeholder-icon" aria-hidden="true"></span>`;
+    const fallbackImage = fallbackImageFor(product);
+    return `<button class="modal-image-zoom" type="button" data-zoom-image="${escapeHtml(fallbackImage)}" aria-label="Увеличить изображение категории">
+      <img class="modal-product-image fallback-image" src="${escapeHtml(fallbackImage)}" alt="${escapeHtml(product.title)}">
+      <span>Увеличить</span>
+    </button>`;
   }
   const mainImage = gallery[0];
   return `
