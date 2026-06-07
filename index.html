@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Market KG - интернет-магазин</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css?v=20260607-price-action" />
+    <link rel="stylesheet" href="styles.css?v=20260607-compact-header" />
   </head>
   <body>
     <header class="site-header">
@@ -21,6 +21,9 @@
         <span aria-hidden="true">⌕</span>
         <input id="headerSearchInput" type="search" placeholder="Найти товар" />
       </label>
+      <button class="search-toggle" id="toggleSearch" type="button" aria-label="Открыть поиск" aria-expanded="false">
+        <span aria-hidden="true">⌕</span>
+      </button>
       <button class="cart-button" id="openCart" type="button" aria-label="Открыть корзину">
         <span id="cartCount">0</span>
       </button>
@@ -198,6 +201,6 @@
       </div>
     </section>
 
-    <script src="app.js?v=20260607-price-action"></script>
+    <script src="app.js?v=20260607-compact-header"></script>
   </body>
 </html>

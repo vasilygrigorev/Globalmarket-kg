@@ -37,6 +37,8 @@ const customerForm = document.querySelector("#customerForm");
 const customerCardTitle = document.querySelector("#customerCardTitle");
 const customerCardText = document.querySelector("#customerCardText");
 const clearCustomerButton = document.querySelector("#clearCustomer");
+const siteHeader = document.querySelector(".site-header");
+const toggleSearchButton = document.querySelector("#toggleSearch");
 let activeZoomImage = null;
 
 const currency = new Intl.NumberFormat("ru-RU");
@@ -673,6 +675,12 @@ document.querySelector("#closeCart").addEventListener("click", () => setCartOpen
 document.querySelector("#closeProductModal").addEventListener("click", closeProductModal);
 document.querySelector("#checkoutLink").addEventListener("click", () => setCartOpen(false));
 
+toggleSearchButton.addEventListener("click", () => {
+  const isOpen = siteHeader.classList.toggle("search-open");
+  toggleSearchButton.setAttribute("aria-expanded", String(isOpen));
+  if (isOpen) headerSearchInput.focus();
+});
+
 customerForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(event.currentTarget);
@@ -696,6 +704,11 @@ clearCustomerButton.addEventListener("click", () => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
+    if (siteHeader.classList.contains("search-open")) {
+      siteHeader.classList.remove("search-open");
+      toggleSearchButton.setAttribute("aria-expanded", "false");
+      return;
+    }
     if (activeZoomImage) {
       closeImageZoom();
       return;

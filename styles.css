@@ -108,6 +108,24 @@ select {
   outline: 0;
 }
 
+.search-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.86);
+  cursor: pointer;
+}
+
+.search-toggle span {
+  font-size: 20px;
+  line-height: 1;
+}
+
 .cart-button,
 .icon-button {
   justify-self: end;
@@ -123,6 +141,35 @@ select {
   color: var(--ink);
   background: rgba(255, 255, 255, 0.86);
   cursor: pointer;
+}
+
+.cart-button {
+  position: relative;
+  min-width: 48px;
+  padding: 0 10px 0 28px;
+}
+
+.cart-button::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 15px;
+  width: 13px;
+  height: 12px;
+  border: 1.7px solid var(--ink);
+  border-radius: 2px 2px 4px 4px;
+}
+
+.cart-button::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  width: 7px;
+  height: 8px;
+  border: 1.7px solid var(--ink);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .cart-icon {
@@ -1229,7 +1276,7 @@ textarea {
 
 @media (max-width: 680px) {
   .site-header {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
     gap: 12px;
     padding: 12px 18px;
   }
@@ -1239,7 +1286,71 @@ textarea {
     font-weight: 300;
   }
 
+  .search-toggle {
+    display: inline-flex;
+  }
+
+  .header-search {
+    display: none;
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .site-header.search-open .header-search {
+    display: flex;
+  }
+
+  .cart-button {
+    min-width: 46px;
+    padding-right: 8px;
+  }
+
   .hero {
+    display: block;
+    min-height: 132px;
+    margin: 12px 10px 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--white);
+  }
+
+  .hero-image {
+    inset: auto -34px 0 auto;
+    width: 252px;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+    opacity: 0.9;
+    transform: none;
+  }
+
+  .hero::after {
+    background: linear-gradient(90deg, rgba(245, 245, 247, 0.98) 0%, rgba(245, 245, 247, 0.88) 56%, rgba(245, 245, 247, 0.1) 100%);
+  }
+
+  .hero-content {
+    width: min(70%, 280px);
+    padding: 18px;
+  }
+
+  .hero-content .eyebrow {
+    margin-bottom: 6px;
+    font-size: 10px;
+  }
+
+  .hero-content h1 {
+    max-width: none;
+    font-size: 26px;
+  }
+
+  .hero-copy {
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .hero-actions {
     display: none;
   }
 
