@@ -302,8 +302,11 @@ function renderProducts() {
             </div>
             <p>${escapeHtml(product.description)}</p>
             <div class="price-stack">
-              <span class="price">${formatPrice(productPrice(product))}</span>
-              <span>${
+              <div class="price-action-row">
+                <span class="price">${formatPrice(productPrice(product))}</span>
+                <button class="add-button compact-add-button" type="button" data-add="${product.id}" aria-label="Добавить в корзину">В корзину</button>
+              </div>
+              <span class="registered-price-note">${
                 isRegisteredCustomer()
                   ? `Скидка регистрации: ${catalogSettings.default_registered_discount_percent}%`
                   : `После регистрации: ${formatPrice(product.registeredPriceKgs)}`
@@ -312,7 +315,6 @@ function renderProducts() {
             <div class="buy-row">
               <span class="stock-note">Подтвердим наличие</span>
               <button class="details-button" type="button" data-open-product="${product.id}">Подробнее</button>
-              <button class="add-button" type="button" data-add="${product.id}">В корзину</button>
             </div>
           </div>
         </article>
