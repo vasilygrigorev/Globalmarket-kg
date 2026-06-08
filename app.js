@@ -39,8 +39,11 @@ const customerCardText = document.querySelector("#customerCardText");
 const clearCustomerButton = document.querySelector("#clearCustomer");
 const siteHeader = document.querySelector(".site-header");
 const toggleSearchButton = document.querySelector("#toggleSearch");
+const hero = document.querySelector(".hero");
 const heroTrack = document.querySelector("#heroTrack");
 const heroDots = document.querySelector("#heroDots");
+const heroPrevButton = document.querySelector("#heroPrev");
+const heroNextButton = document.querySelector("#heroNext");
 let activeZoomImage = null;
 
 const promoBanners = [
@@ -90,6 +93,11 @@ const promoBanners = [
 
 let activeHeroIndex = 0;
 let heroTimer = null;
+let heroPointerStartX = 0;
+let heroPointerStartY = 0;
+let heroPointerId = null;
+let heroSwipeMoved = false;
+let suppressHeroClick = false;
 
 const currency = new Intl.NumberFormat("ru-RU");
 const decimalCurrency = new Intl.NumberFormat("ru-RU", {
@@ -169,6 +177,11 @@ function startHeroRotation() {
   heroTimer = window.setInterval(() => {
     showHeroBanner(activeHeroIndex + 1);
   }, 5200);
+}
+
+function manuallyShowHeroBanner(index) {
+  showHeroBanner(index);
+  startHeroRotation();
 }
 
 function isRegisteredCustomer() {
@@ -782,9 +795,61 @@ toggleSearchButton.addEventListener("click", () => {
 heroDots?.addEventListener("click", (event) => {
   const dot = event.target.closest("[data-hero-slide]");
   if (!dot) return;
-  showHeroBanner(Number(dot.dataset.heroSlide));
-  startHeroRotation();
+  manuallyShowHeroBanner(Number(dot.dataset.heroSlide));
 });
+
+heroPrevButton?.addEventListener("click", () => {
+  manuallyShowHeroBanner(activeHeroIndex - 1);
+});
+
+heroNextButton?.addEventListener("click", () => {
+  manuallyShowHeroBanner(activeHeroIndex + 1);
+});
+
+hero?.addEventListener("pointerdown", (event) => {
+  if (event.pointerType === "mouse" && event.button !== 0) return;
+  heroPointerId = event.pointerId;
+  heroPointerStartX = event.clientX;
+  heroPointerStartY = event.clientY;
+  heroSwipeMoved = false;
+});
+
+hero?.addEventListener("pointermove", (event) => {
+  if (heroPointerId !== event.pointerId) return;
+  const deltaX = event.clientX - heroPointerStartX;
+  const deltaY = event.clientY - heroPointerStartY;
+  if (Math.abs(deltaX) > 12 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25) {
+    heroSwipeMoved = true;
+  }
+});
+
+hero?.addEventListener("pointerup", (event) => {
+  if (heroPointerId !== event.pointerId) return;
+  const deltaX = event.clientX - heroPointerStartX;
+  const deltaY = event.clientY - heroPointerStartY;
+  heroPointerId = null;
+  if (!heroSwipeMoved || Math.abs(deltaX) < 42 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
+  suppressHeroClick = true;
+  manuallyShowHeroBanner(deltaX < 0 ? activeHeroIndex + 1 : activeHeroIndex - 1);
+  window.setTimeout(() => {
+    suppressHeroClick = false;
+  }, 0);
+});
+
+hero?.addEventListener("pointercancel", () => {
+  heroPointerId = null;
+  heroSwipeMoved = false;
+});
+
+hero?.addEventListener(
+  "click",
+  (event) => {
+    if (!suppressHeroClick) return;
+    event.preventDefault();
+    event.stopPropagation();
+  },
+  true,
+);
 
 customerForm.addEventListener("submit", (event) => {
   event.preventDefault();
