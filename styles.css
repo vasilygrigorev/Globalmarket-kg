@@ -256,10 +256,7 @@ select {
 }
 
 .hero-slide::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(245, 245, 247, 0.94) 0%, rgba(245, 245, 247, 0.72) 38%, rgba(245, 245, 247, 0.08) 76%);
+  display: none;
 }
 
 .hero-content {
@@ -268,6 +265,9 @@ select {
   display: block;
   width: min(620px, calc(100% - 36px));
   padding: clamp(74px, 11vw, 120px) clamp(18px, 4vw, 56px) 72px;
+  color: var(--white);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.52), 0 1px 3px rgba(0, 0, 0, 0.42);
 }
 
 .hero-dots {
@@ -312,6 +312,15 @@ h2 {
 h1 {
   font-size: clamp(52px, 8vw, 104px);
   max-width: 8ch;
+}
+
+.hero-content .eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+.hero-content h1 {
+  font-weight: 200;
 }
 
 h2 {
