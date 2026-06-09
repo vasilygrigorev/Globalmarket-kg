@@ -1558,24 +1558,27 @@
       "unit": "шт",
       "badge": "TRESemme",
       "retailPriceKgs": 695,
-      "category": "Уборка и чистота",
-      "categoryId": "home_cleaning",
-      "galleryImages": [],
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "galleryImages": [
+        "assets/products/tresemme/tresemme-clean-replenish-828ml-card-front.jpg",
+        "assets/products/tresemme/tresemme-clean-replenish-828ml-front.jpg"
+      ],
       "status": "review",
       "id": "prd_432b62d4b317",
       "tones": [
         "#d7eadf",
         "#6aa58f"
       ],
-      "image": null,
+      "image": "assets/products/tresemme/tresemme-clean-replenish-828ml-card-front.jpg",
       "icon": "✨",
       "registeredPriceKgs": 674,
-      "description": "TRESemme: товар для дома и личного ухода.",
-      "title": "TRESemme Шамп.(828) Clean & Replenish",
-      "productType": "уборка и чистота",
-      "brand": "TRESemme",
+      "description": "Шампунь TRESemmé Clean & Replenish 3-в-1 для очищения, ухода и распутывания волос. Объём 828 мл, с pro vitamin C и green tea.",
+      "title": "TRESemmé Clean & Replenish шампунь 828 мл",
+      "productType": "шампунь",
+      "brand": "TRESemmé",
       "rating": 4.8,
-      "searchText": "tresemme шамп.(828) clean & replenish уборка и чистота tresemme уборка и чистота tresemme: товар для дома и личного ухода."
+      "searchText": "tresemmé clean & replenish шампунь 828 мл tresemmé шампунь шампунь tresemmé clean & replenish 3-в-1 для очищения, ухода и распутывания волос. объём 828 мл, с pro vitamin c и green tea. уход за волосами"
     },
     {
       "unit": "шт",
@@ -3030,22 +3033,26 @@
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/tresemme/tresemme-smooth-silky-828ml-card-front.jpg",
+        "assets/products/tresemme/tresemme-smooth-silky-828ml-front.jpg",
+        "assets/products/tresemme/tresemme-smooth-silky-828ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_01077bb33667",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/tresemme/tresemme-smooth-silky-828ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "TRESemme: средство для ухода за волосами на каждый день.",
-      "title": "TRESemme Шамп.(828) Smooth Silki",
+      "description": "Шампунь TRESemmé Silky & Smooth для гладкости и блеска волос. Объём 828 мл, формула с argan oleo blend.",
+      "title": "TRESemmé Silky & Smooth шампунь 828 мл",
       "productType": "шампунь",
-      "brand": "TRESemme",
+      "brand": "TRESemmé",
       "rating": 4.8,
-      "searchText": "tresemme шамп.(828) smooth silki уход за волосами tresemme шампунь tresemme: средство для ухода за волосами на каждый день."
+      "searchText": "tresemmé silky & smooth шампунь 828 мл tresemmé шампунь шампунь tresemmé silky & smooth для гладкости и блеска волос. объём 828 мл, формула с argan oleo blend. уход за волосами"
     },
     {
       "unit": "шт",
@@ -3858,22 +3865,26 @@
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/tresemme/tresemme-color-828ml-card-front.jpg",
+        "assets/products/tresemme/tresemme-color-828ml-front.jpg",
+        "assets/products/tresemme/tresemme-color-828ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_7cf735f59b18",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/tresemme/tresemme-color-828ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "TRESemme: средство для ухода за волосами на каждый день.",
-      "title": "TRESemme Шамп.(828) Color",
+      "description": "Шампунь TRESemmé Revitalized Color для окрашенных волос. Объём 828 мл, формула с hibiscus essence для яркости и блеска.",
+      "title": "TRESemmé Color шампунь 828 мл",
       "productType": "шампунь",
-      "brand": "TRESemme",
+      "brand": "TRESemmé",
       "rating": 4.8,
-      "searchText": "tresemme шамп.(828) color уход за волосами tresemme шампунь tresemme: средство для ухода за волосами на каждый день."
+      "searchText": "tresemmé color шампунь 828 мл tresemmé шампунь шампунь tresemmé revitalized color для окрашенных волос. объём 828 мл, формула с hibiscus essence для яркости и блеска. уход за волосами"
     },
     {
       "unit": "шт",
@@ -4019,22 +4030,26 @@
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
+        "assets/products/tresemme/tresemme-volume-828ml-front.jpg",
+        "assets/products/tresemme/tresemme-volume-828ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_096618ced7c1",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "TRESemme: средство для ухода за волосами на каждый день.",
-      "title": "TRESemme Шамп.(828) Volume",
+      "description": "Шампунь TRESemmé Volume для придания объёма волосам. Объём 828 мл, формула с collagen & peptide complex.",
+      "title": "TRESemmé Volume шампунь 828 мл",
       "productType": "шампунь",
-      "brand": "TRESemme",
+      "brand": "TRESemmé",
       "rating": 4.8,
-      "searchText": "tresemme шамп.(828) volume уход за волосами tresemme шампунь tresemme: средство для ухода за волосами на каждый день."
+      "searchText": "tresemmé volume шампунь 828 мл tresemmé шампунь шампунь tresemmé volume для придания объёма волосам. объём 828 мл, формула с collagen & peptide complex. уход за волосами"
     },
     {
       "unit": "шт",
