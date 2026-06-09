@@ -3631,26 +3631,30 @@
     },
     {
       "unit": "шт",
-      "badge": "Sun",
+      "badge": "Sunsilk",
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/sunsilk/sunsilk-black-shine-625ml-card-front.jpg",
+        "assets/products/sunsilk/sunsilk-black-shine-625ml-front.jpg",
+        "assets/products/sunsilk/sunsilk-black-shine-625ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_e82e0719de28",
       "tones": [
-        "#f4d5df",
-        "#b66f91"
+        "#251f28",
+        "#c13e99"
       ],
-      "image": null,
+      "image": "assets/products/sunsilk/sunsilk-black-shine-625ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "Sun: средство для ухода за волосами на каждый день.",
-      "title": "Sun silk Шамп.(650) Black Shine",
+      "description": "Шампунь Sunsilk Black Shine для блеска тёмных волос. Объём 625 мл, формула с henna, oil, pearl и vitamin E.",
+      "title": "Sunsilk Black Shine шампунь 625 мл",
       "productType": "шампунь",
-      "brand": "Sun",
+      "brand": "Sunsilk",
       "rating": 4.8,
-      "searchText": "sun silk шамп.(650) black shine уход за волосами sun шампунь sun: средство для ухода за волосами на каждый день."
+      "searchText": "sunsilk black shine шампунь 625 мл sunsilk шампунь шампунь sunsilk black shine для блеска тёмных волос. объём 625 мл, формула с henna, oil, pearl и vitamin e. уход за волосами"
     },
     {
       "unit": "шт",
@@ -3769,26 +3773,30 @@
     },
     {
       "unit": "шт",
-      "badge": "Sun",
+      "badge": "Sunsilk",
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-card-front.jpg",
+        "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-front.jpg",
+        "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_8ecb44018700",
       "tones": [
-        "#f4d5df",
-        "#b66f91"
+        "#f5a4c5",
+        "#d84991"
       ],
-      "image": null,
+      "image": "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "Sun: средство для ухода за волосами на каждый день.",
-      "title": "Sun silk Шамп.(650) Smooth & Manageable",
+      "description": "Шампунь Sunsilk Smooth & Manageable для более послушных и гладких волос. Объём 625 мл, формула с argan oil, elastin и vitamin C.",
+      "title": "Sunsilk Smooth & Manageable шампунь 625 мл",
       "productType": "шампунь",
-      "brand": "Sun",
+      "brand": "Sunsilk",
       "rating": 4.8,
-      "searchText": "sun silk шамп.(650) smooth & manageable уход за волосами sun шампунь sun: средство для ухода за волосами на каждый день."
+      "searchText": "sunsilk smooth & manageable шампунь 625 мл sunsilk шампунь шампунь sunsilk smooth & manageable для более послушных и гладких волос. объём 625 мл, формула с argan oil, elastin и vitamin c. уход за волосами"
     },
     {
       "unit": "шт",
@@ -4053,26 +4061,30 @@
     },
     {
       "unit": "шт",
-      "badge": "Sun",
+      "badge": "Sunsilk",
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-card-front.jpg",
+        "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-front.jpg",
+        "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_bdfdfa2b110e",
       "tones": [
-        "#f4d5df",
-        "#b66f91"
+        "#d7e8ff",
+        "#5c94d6"
       ],
-      "image": null,
+      "image": "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "Sun: средство для ухода за волосами на каждый день.",
-      "title": "Sun silk Шамп.(650) Anti Dandruff",
+      "description": "Шампунь Sunsilk Anti-Dandruff Healthy Strong против перхоти. Объём 625 мл, формула с tea tree oil, aloe vera и ginseng.",
+      "title": "Sunsilk Anti-Dandruff Healthy Strong шампунь 625 мл",
       "productType": "шампунь",
-      "brand": "Sun",
+      "brand": "Sunsilk",
       "rating": 4.8,
-      "searchText": "sun silk шамп.(650) anti dandruff уход за волосами sun шампунь sun: средство для ухода за волосами на каждый день."
+      "searchText": "sunsilk anti-dandruff healthy strong шампунь 625 мл sunsilk шампунь шампунь sunsilk anti-dandruff healthy strong против перхоти. объём 625 мл, формула с tea tree oil, aloe vera и ginseng. уход за волосами"
     },
     {
       "unit": "шт",
@@ -10314,6 +10326,33 @@
       "brand": "TRESemmé",
       "rating": 4.8,
       "searchText": "tresemmé rich moisture шампунь 828 мл tresemmé шампунь шампунь tresemmé rich moisture для питания и увлажнения волос. объём 828 мл, формула с hyaluronic plex. уход за волосами"
+    },
+    {
+      "unit": "шт",
+      "badge": "Sunsilk",
+      "retailPriceKgs": 695,
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "galleryImages": [
+        "assets/products/sunsilk/sunsilk-soft-smooth-625ml-card-front.jpg",
+        "assets/products/sunsilk/sunsilk-soft-smooth-625ml-front.jpg",
+        "assets/products/sunsilk/sunsilk-soft-smooth-625ml-back.jpg"
+      ],
+      "status": "review",
+      "id": "prd_b72b872b2b7d",
+      "tones": [
+        "#f4c94d",
+        "#c48922"
+      ],
+      "image": "assets/products/sunsilk/sunsilk-soft-smooth-625ml-card-front.jpg",
+      "icon": "🧴",
+      "registeredPriceKgs": 674,
+      "description": "Шампунь Sunsilk Soft & Smooth для мягкости и гладкости волос. Объём 625 мл, формула с light natural oil, cashmere keratin и vitamin E.",
+      "title": "Sunsilk Soft & Smooth шампунь 625 мл",
+      "productType": "шампунь",
+      "brand": "Sunsilk",
+      "rating": 4.8,
+      "searchText": "sunsilk soft & smooth шампунь 625 мл sunsilk шампунь шампунь sunsilk soft & smooth для мягкости и гладкости волос. объём 625 мл, формула с light natural oil, cashmere keratin и vitamin e. уход за волосами"
     }
   ]
 }
