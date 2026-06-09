@@ -10260,6 +10260,60 @@
       "brand": "Concord",
       "rating": 4.8,
       "searchText": "concord з/щетки kids (814) разное concord разное concord: товар для дома и личного ухода."
+    },
+    {
+      "unit": "шт",
+      "badge": "TRESemme",
+      "retailPriceKgs": 595,
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "galleryImages": [
+        "assets/products/tresemme/tresemme-curl-hydration-828ml-card-front.jpg",
+        "assets/products/tresemme/tresemme-curl-hydration-828ml-front.jpg",
+        "assets/products/tresemme/tresemme-curl-hydration-828ml-back.jpg"
+      ],
+      "status": "review",
+      "id": "prd_4cf797e1e1b4",
+      "tones": [
+        "#d7eadf",
+        "#6aa58f"
+      ],
+      "image": "assets/products/tresemme/tresemme-curl-hydration-828ml-card-front.jpg",
+      "icon": "🧴",
+      "registeredPriceKgs": 577,
+      "description": "Шампунь TRESemmé Curl Hydration для увлажнения и ухода за кудрявыми волосами. Объём 828 мл, заявлено до 7x более увлажнённых локонов.",
+      "title": "TRESemmé Curl Hydration шампунь 828 мл",
+      "productType": "шампунь",
+      "brand": "TRESemmé",
+      "rating": 4.8,
+      "searchText": "tresemmé curl hydration шампунь 828 мл tresemmé шампунь шампунь tresemmé curl hydration для увлажнения и ухода за кудрявыми волосами. объём 828 мл, заявлено до 7x более увлажнённых локонов. уход за волосами"
+    },
+    {
+      "unit": "шт",
+      "badge": "TRESemme",
+      "retailPriceKgs": 695,
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "galleryImages": [
+        "assets/products/tresemme/tresemme-rich-moisture-828ml-card-front.jpg",
+        "assets/products/tresemme/tresemme-rich-moisture-828ml-front.jpg",
+        "assets/products/tresemme/tresemme-rich-moisture-828ml-back.jpg"
+      ],
+      "status": "review",
+      "id": "prd_dbf6cb3b3a0e",
+      "tones": [
+        "#f3ddaa",
+        "#9a762c"
+      ],
+      "image": "assets/products/tresemme/tresemme-rich-moisture-828ml-card-front.jpg",
+      "icon": "🧴",
+      "registeredPriceKgs": 674,
+      "description": "Шампунь TRESemmé Rich Moisture для питания и увлажнения волос. Объём 828 мл, формула с hyaluronic plex.",
+      "title": "TRESemmé Rich Moisture шампунь 828 мл",
+      "productType": "шампунь",
+      "brand": "TRESemmé",
+      "rating": 4.8,
+      "searchText": "tresemmé rich moisture шампунь 828 мл tresemmé шампунь шампунь tresemmé rich moisture для питания и увлажнения волос. объём 828 мл, формула с hyaluronic plex. уход за волосами"
     }
   ]
 }
