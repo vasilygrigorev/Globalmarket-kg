@@ -720,6 +720,7 @@
       "categoryId": "laundry",
       "galleryImages": [
         "assets/products/downy/downy-concentrate-rose-garden-1l-card-front.png",
+        "assets/products/downy/downy-concentrate-rose-garden-1l-final-front.png",
         "assets/products/downy/downy-concentrate-rose-garden-1l-final-back.png"
       ],
       "status": "active",
@@ -1091,6 +1092,7 @@
       "categoryId": "laundry",
       "galleryImages": [
         "assets/products/downy/downy-concentrate-vanilla-musk-1l-card-front.png",
+        "assets/products/downy/downy-concentrate-vanilla-musk-1l-final-front.png",
         "assets/products/downy/downy-concentrate-vanilla-musk-1l-final-back.png"
       ],
       "status": "active",
@@ -1117,8 +1119,9 @@
       "categoryId": "laundry",
       "galleryImages": [
         "assets/products/downy/downy-fresh-valley-dew-1l-card-front.png",
-        "assets/products/downy/downy-fresh-valley-dew-1l-final-alt-front.png",
+        "assets/products/downy/downy-fresh-valley-dew-1l-final-front.png",
         "assets/products/downy/downy-fresh-valley-dew-1l-final-back.png",
+        "assets/products/downy/downy-fresh-valley-dew-1l-final-alt-front.png",
         "assets/products/downy/downy-fresh-valley-dew-1l-final-alt-back.png"
       ],
       "status": "active",
@@ -1191,6 +1194,7 @@
       "categoryId": "laundry",
       "galleryImages": [
         "assets/products/downy/downy-concentrate-valley-dew-1l-card-front.png",
+        "assets/products/downy/downy-concentrate-valley-dew-1l-final-front.png",
         "assets/products/downy/downy-concentrate-valley-dew-1l-final-back.png"
       ],
       "status": "active",
