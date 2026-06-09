@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T08:16:30.354968+00:00",
+  "generatedAt": "2026-06-09T08:30:45.344157+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -2719,22 +2719,26 @@
       "retailPriceKgs": 1195,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/clear/clear-oil-control-1l-card-front.jpg",
+        "assets/products/clear/clear-oil-control-1l-front.jpg",
+        "assets/products/clear/clear-oil-control-1l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_4a32663564b9",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/clear/clear-oil-control-1l-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 1159,
-      "description": "Clear: средство для ухода за волосами на каждый день. Формат: 1 л, 1л.",
-      "title": "Clear Шампунь (L) (1л)Oil Cantrol",
-      "productType": "шампунь",
+      "description": "Шампунь Clear Oil Control против перхоти, объём 1 л. Формула для контроля жирности кожи головы с лаймовой свежестью, заявлена свежесть до 28 дней и комплекс 10x Super Vitamin.",
+      "title": "Clear Oil Control шампунь 1 л",
+      "productType": "шампунь против перхоти",
       "brand": "Clear",
       "rating": 4.8,
-      "searchText": "clear шампунь (l) (1л)oil cantrol уход за волосами clear шампунь clear: средство для ухода за волосами на каждый день. формат: 1 л, 1л."
+      "searchText": "clear oil control шампунь 1 л уход за волосами clear шампунь против перхоти шампунь clear oil control против перхоти, объём 1 л. формула для контроля жирности кожи головы с лаймовой свежестью, заявлена свежесть до 28 дней и комплекс 10x super vitamin."
     },
     {
       "unit": "шт",

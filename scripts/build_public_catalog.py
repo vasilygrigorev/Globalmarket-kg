@@ -14,25 +14,25 @@ PUBLIC_SETTINGS = {
     "manager_whatsapp",
 }
 
-PUBLIC_PRODUCT_FIELDS = {
-    "id",
-    "title",
+PUBLIC_PRODUCT_FIELDS = [
+    "unit",
+    "badge",
+    "retailPriceKgs",
     "category",
     "categoryId",
-    "brand",
-    "productType",
-    "unit",
+    "galleryImages",
     "status",
-    "retailPriceKgs",
+    "id",
+    "tones",
+    "image",
+    "icon",
     "registeredPriceKgs",
     "description",
-    "image",
-    "galleryImages",
-    "icon",
-    "tones",
-    "badge",
+    "title",
+    "productType",
+    "brand",
     "rating",
-}
+]
 
 
 def compact_search_text(product):
