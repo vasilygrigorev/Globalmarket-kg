@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T08:30:45.344157+00:00",
+  "generatedAt": "2026-06-09T09:01:49.385572+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -2433,26 +2433,30 @@
     },
     {
       "unit": "шт",
-      "badge": "Fa",
+      "badge": "Clear",
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg",
+        "assets/products/clear/clear-anti-hairfall-ginger-600ml-front.jpg",
+        "assets/products/clear/clear-anti-hairfall-ginger-600ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_516bdfde072f",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 771,
-      "description": "Fa: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Clear Шамп.Arab.(M) (600ml) Anti Hair Fall",
-      "productType": "шампунь",
-      "brand": "Fa",
+      "description": "Шампунь Clear Anti-Hairfall против перхоти, объём 600 мл. Scalp Care Shampoo с ginger root / корнем имбиря и 3 Zero Tech: dandruff, itch, grease.",
+      "title": "Clear Anti-Hairfall шампунь 600 мл",
+      "productType": "шампунь против перхоти",
+      "brand": "Clear",
       "rating": 4.8,
-      "searchText": "clear шамп.arab.(m) (600ml) anti hair fall уход за волосами fa шампунь fa: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
+      "searchText": "clear anti-hairfall шампунь 600 мл уход за волосами clear шампунь против перхоти шампунь clear anti-hairfall против перхоти, объём 600 мл. scalp care shampoo с ginger root / корнем имбиря и 3 zero tech: dandruff, itch, grease."
     },
     {
       "unit": "шт",
@@ -2578,22 +2582,26 @@
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/clear/clear-soft-and-shiny-600ml-card-front.jpg",
+        "assets/products/clear/clear-soft-and-shiny-600ml-front.jpg",
+        "assets/products/clear/clear-soft-and-shiny-600ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_3922b6ace1e1",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/clear/clear-soft-and-shiny-600ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 771,
-      "description": "Clear: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Clear Шамп.Arab.(L) (600ml) Soft And Shiny",
-      "productType": "шампунь",
+      "description": "Шампунь Clear Soft and Shiny против перхоти, объём 600 мл. Scalp Care Shampoo с silk proteins / протеинами шёлка и 3 Zero Tech: dandruff, itch, grease.",
+      "title": "Clear Soft and Shiny шампунь 600 мл",
+      "productType": "шампунь против перхоти",
       "brand": "Clear",
       "rating": 4.8,
-      "searchText": "clear шамп.arab.(l) (600ml) soft and shiny уход за волосами clear шампунь clear: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
+      "searchText": "clear soft and shiny шампунь 600 мл уход за волосами clear шампунь против перхоти шампунь clear soft and shiny против перхоти, объём 600 мл. scalp care shampoo с silk proteins / протеинами шёлка и 3 zero tech: dandruff, itch, grease."
     },
     {
       "unit": "шт",
