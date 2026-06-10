@@ -9,6 +9,8 @@ CATALOG = ROOT / "data" / "public-catalog.json"
 
 KNOWN_EXCEPTIONS = {
     "prd_432b62d4b317": "TRESemmé Clean & Replenish: missing back photo; needs reshoot/source photo.",
+    "prd_1f1557a2acbb": "Pantene Damage Repair 600 ml: missing back photo in 2026-06-10 Petya album; user requested publication.",
+    "prd_296bd01a7c1f": "Pantene Sheer Volume 600 ml: missing back photo in 2026-06-10 Petya album; user requested publication.",
 }
 
 

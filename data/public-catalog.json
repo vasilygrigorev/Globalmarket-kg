@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T09:01:49.385572+00:00",
+  "generatedAt": "2026-06-10T07:28:52.686376+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -1451,27 +1451,31 @@
       "searchText": "tide порошок (2.5кг) antibakterial стирка и уход за бельем tide стиральный порошок tide: стиральный порошок для ежедневного ухода за бельем и домашней стирки. формат: 2.5 кг, 2.5кг."
     },
     {
-      "unit": "шт",
+      "unit": "500 мл",
       "badge": "Jif",
       "retailPriceKgs": 550,
-      "category": "Уборка и чистота",
-      "categoryId": "home_cleaning",
-      "galleryImages": [],
+      "category": "Уборка и чистящие средства",
+      "categoryId": "cleaning",
+      "galleryImages": [
+        "assets/products/jif/jif-cream-lemon-500ml-card-front.jpg",
+        "assets/products/jif/jif-cream-lemon-500ml-front.jpg",
+        "assets/products/jif/jif-cream-lemon-500ml-back.jpg"
+      ],
       "status": "active",
       "id": "prd_9174d6118ed3",
       "tones": [
         "#d7eadf",
         "#6aa58f"
       ],
-      "image": null,
+      "image": "assets/products/jif/jif-cream-lemon-500ml-card-front.jpg",
       "icon": "✨",
       "registeredPriceKgs": 533,
-      "description": "Чистящий крем Jif Lemon для кухни, ванной и твердых поверхностей. Объем 500 мл.",
+      "description": "Чистящий крем Jif Lemon для кухни, ванной и твердых поверхностей. Формат: 500 мл.",
       "title": "Jif Lemon чистящий крем 500 мл",
-      "productType": "чистящее средство",
+      "productType": "чистящий крем",
       "brand": "Jif",
       "rating": 4.8,
-      "searchText": "jif lemon чистящий крем 500 мл уборка и чистота jif чистящее средство чистящий крем jif lemon для кухни, ванной и твердых поверхностей. объем 500 мл."
+      "searchText": "jif lemon чистящий крем 500 мл уборка и чистящие средства jif чистящий крем чистящий крем jif lemon для кухни, ванной и твердых поверхностей. формат: 500 мл."
     },
     {
       "unit": "шт",
@@ -1891,165 +1895,191 @@
       "searchText": "head & shoulders menthol шампунь 400 мл уход за волосами head & shoulders шампунь шампунь head & shoulders menthol для ощущения свежести и ежедневного ухода. объем 400 мл."
     },
     {
-      "unit": "шт",
+      "unit": "600 мл",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
+      "categoryId": "hair-care",
+      "galleryImages": [
+        "assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-smooth-silky-600ml-front.jpg",
+        "assets/products/pantene/pantene-smooth-silky-600ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_d0bc9026f5ab",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Smooth Silky",
+      "description": "Шампунь Pantene Pro-V Smooth & Silky для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Smooth & Silky шампунь 600 мл",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) smooth silky уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
+      "searchText": "pantene smooth & silky шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v smooth & silky для ежедневного ухода за волосами. формат: 600 мл."
     },
     {
-      "unit": "шт",
+      "unit": "600 мл",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
+      "categoryId": "hair-care",
+      "galleryImages": [
+        "assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-daily-care-600ml-front.jpg",
+        "assets/products/pantene/pantene-daily-care-600ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_572ed90689d1",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Daily Care",
+      "description": "Шампунь Pantene Pro-V Daily Care для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Daily Care шампунь 600 мл",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) daily care уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
+      "searchText": "pantene daily care шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v daily care для ежедневного ухода за волосами. формат: 600 мл."
     },
     {
-      "unit": "шт",
+      "unit": "600 мл",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
+      "categoryId": "hair-care",
+      "galleryImages": [
+        "assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-anti-hair-fall-600ml-front.jpg",
+        "assets/products/pantene/pantene-anti-hair-fall-600ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_dce1df68b778",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Anti Hair Fall",
+      "description": "Шампунь Pantene Pro-V Anti Hair Fall для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Anti Hair Fall шампунь 600 мл",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) anti hair fall уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
+      "searchText": "pantene anti hair fall шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v anti hair fall для ежедневного ухода за волосами. формат: 600 мл."
     },
     {
-      "unit": "шт",
+      "unit": "600 мл",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
+      "categoryId": "hair-care",
+      "galleryImages": [
+        "assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-damage-repair-600ml-front.jpg"
+      ],
       "status": "review",
       "id": "prd_1f1557a2acbb",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Damage Repair",
+      "description": "Шампунь Pantene Pro-V Damage Repair для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Damage Repair шампунь 600 мл",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) damage repair уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
+      "searchText": "pantene damage repair шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v damage repair для ежедневного ухода за волосами. формат: 600 мл."
     },
     {
-      "unit": "шт",
+      "unit": "600 мл",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
+      "categoryId": "hair-care",
+      "galleryImages": [
+        "assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-goodbye-frizz-600ml-front.jpg",
+        "assets/products/pantene/pantene-goodbye-frizz-600ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_1e0cb301d44d",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Good Bye",
+      "description": "Шампунь Pantene Pro-V Goodbye Frizz для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Goodbye Frizz шампунь 600 мл",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) good bye уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
+      "searchText": "pantene goodbye frizz шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v goodbye frizz для ежедневного ухода за волосами. формат: 600 мл."
     },
     {
-      "unit": "шт",
+      "unit": "600 мл",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
+      "categoryId": "hair-care",
+      "galleryImages": [
+        "assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-moisture-renewal-600ml-front.jpg",
+        "assets/products/pantene/pantene-moisture-renewal-600ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_5faaff6cf17c",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Moisture",
+      "description": "Шампунь Pantene Pro-V Moisture Renewal для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Moisture Renewal шампунь 600 мл",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) moisture уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
+      "searchText": "pantene moisture renewal шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v moisture renewal для ежедневного ухода за волосами. формат: 600 мл."
     },
     {
-      "unit": "шт",
+      "unit": "600 мл",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
+      "categoryId": "hair-care",
+      "galleryImages": [
+        "assets/products/pantene/pantene-sheer-volume-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-sheer-volume-600ml-front.jpg"
+      ],
       "status": "review",
       "id": "prd_296bd01a7c1f",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/pantene/pantene-sheer-volume-600ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Volume",
+      "description": "Шампунь Pantene Pro-V Sheer Volume для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Sheer Volume шампунь 600 мл",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) volume уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
+      "searchText": "pantene sheer volume шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v sheer volume для ежедневного ухода за волосами. формат: 600 мл."
     },
     {
       "unit": "шт",
@@ -2282,27 +2312,31 @@
       "searchText": "lux гельдуш (500 мл) rose уход за волосами lux уход за волосами lux: средство для ухода за волосами на каждый день. формат: 500 мл."
     },
     {
-      "unit": "шт",
+      "unit": "600 мл",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
+      "categoryId": "hair-care",
+      "galleryImages": [
+        "assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-anti-dandruff-600ml-front.jpg",
+        "assets/products/pantene/pantene-anti-dandruff-600ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_da9eaa7d3675",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Anti Dandruff",
+      "description": "Шампунь Pantene Pro-V Anti-Dandruff для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Anti-Dandruff шампунь 600 мл",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) anti dandruff уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
+      "searchText": "pantene anti-dandruff шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v anti-dandruff для ежедневного ухода за волосами. формат: 600 мл."
     },
     {
       "unit": "шт",

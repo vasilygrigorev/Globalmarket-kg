@@ -21,3 +21,5 @@ Rules:
 Current known exception:
 
 - `prd_432b62d4b317` / `TRESemmé Clean & Replenish шампунь 828 мл` has card + front only. The back photo was not found locally and should be requested/reshot.
+- `prd_1f1557a2acbb` / `Pantene Damage Repair шампунь 600 мл` has card + front only. The 2026-06-10 Petya album had no confident back photo for this variant.
+- `prd_296bd01a7c1f` / `Pantene Sheer Volume шампунь 600 мл` has card + front only. The 2026-06-10 Petya album had no confident back photo for this variant.
