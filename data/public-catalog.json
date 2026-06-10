@@ -1059,27 +1059,31 @@
       "searchText": "comfort (конд.д/белья) (1l) spring стирка и уход за бельем comfort кондиционер для белья comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 1 l, 1l."
     },
     {
-      "unit": "шт",
+      "unit": "155 г",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/lenor/lenor-fresh-155g-card-front.jpg",
+        "assets/products/lenor/lenor-fresh-155g-front.jpg",
+        "assets/products/lenor/lenor-fresh-155g-back.jpg"
+      ],
       "status": "review",
       "id": "prd_311be4dd4930",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-fresh-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Fresh",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Fresh. Формат: 155 г.",
+      "title": "Lenor Fresh парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) fresh стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor fresh парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: fresh. формат: 155 г."
     },
     {
       "unit": "шт",
