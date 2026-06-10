@@ -552,73 +552,85 @@
       "searchText": "lenor parfume (210g) ariel стирка и уход за бельем ariel кондиционер для белья ariel: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 210 g, 210g."
     },
     {
-      "unit": "шт",
+      "unit": "210 г",
       "badge": "Lenor",
       "retailPriceKgs": 750,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg",
+        "assets/products/lenor/lenor-gold-orchid-210g-front.jpg",
+        "assets/products/lenor/lenor-gold-orchid-210g-back.jpg"
+      ],
       "status": "review",
       "id": "prd_19a727030e6b",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 727,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 210 g, 210g.",
-      "title": "Lenor Parfume (210g) Gold Orchid",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Gold Orchid. Формат: 210 г.",
+      "title": "Lenor Gold Orchid парфюм для белья 210 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (210g) gold orchid стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 210 g, 210g."
+      "searchText": "lenor gold orchid парфюм для белья 210 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: gold orchid. формат: 210 г."
     },
     {
-      "unit": "шт",
+      "unit": "155 г",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg",
+        "assets/products/lenor/lenor-jasmine-white-cedar-155g-front.jpg",
+        "assets/products/lenor/lenor-jasmine-white-cedar-155g-back.jpg"
+      ],
       "status": "review",
       "id": "prd_594869df277e",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) White Cedar",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Jasmine & White Cedar. Формат: 155 г.",
+      "title": "Lenor Jasmine & White Cedar парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) white cedar стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor jasmine & white cedar парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: jasmine & white cedar. формат: 155 г."
     },
     {
-      "unit": "шт",
+      "unit": "155 г",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg",
+        "assets/products/lenor/lenor-spring-awakening-155g-front.jpg",
+        "assets/products/lenor/lenor-spring-awakening-155g-back.jpg"
+      ],
       "status": "review",
       "id": "prd_d0f02fd7d3b0",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Spring",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Spring Awakening. Формат: 155 г.",
+      "title": "Lenor Spring Awakening парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) spring стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor spring awakening парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: spring awakening. формат: 155 г."
     },
     {
       "unit": "шт",
@@ -786,27 +798,31 @@
       "searchText": "downy концентр.(конд.д/белья) (3л) valley dew стирка и уход за бельем downy стирка и уход за бельем downy: стирка и уход за бельем для ежедневного ухода за бельем и домашней стирки. формат: 3 л, 3л."
     },
     {
-      "unit": "шт",
+      "unit": "155 г",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg",
+        "assets/products/lenor/lenor-dreamy-jasmine-155g-front.jpg",
+        "assets/products/lenor/lenor-dreamy-jasmine-155g-back.jpg"
+      ],
       "status": "review",
       "id": "prd_1710ac102a49",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Dreamy Jasmine",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Dreamy Jasmine. Формат: 155 г.",
+      "title": "Lenor Dreamy Jasmine парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) dreamy jasmine стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor dreamy jasmine парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: dreamy jasmine. формат: 155 г."
     },
     {
       "unit": "шт",
@@ -924,27 +940,31 @@
       "searchText": "persil gel (4,8l) white flower стирка и уход за бельем persil гель для стирки persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. формат: 4,8 l, 4,8l."
     },
     {
-      "unit": "шт",
+      "unit": "155 г",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg",
+        "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-front.jpg",
+        "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-back.jpg"
+      ],
       "status": "review",
       "id": "prd_0fb16d2a0b60",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Sandal Wood",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Sandalwood & Eucalyptus. Формат: 155 г.",
+      "title": "Lenor Sandalwood & Eucalyptus парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) sandal wood стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor sandalwood & eucalyptus парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: sandalwood & eucalyptus. формат: 155 г."
     },
     {
       "unit": "шт",
@@ -1139,27 +1159,31 @@
       "searchText": "downy fresh valley dew кондиционер для белья 1 л стирка и уход за бельем downy кондиционер для белья кондиционер для белья downy fresh valley dew, объём 1 л. аромат valley dew / свежий аромат, до 9 стирок. по лицевой этикетке указано fresh и до 7 дней свежести. штрихкод: 5413149637924."
     },
     {
-      "unit": "шт",
+      "unit": "155 г",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg",
+        "assets/products/lenor/lenor-cool-cotton-155g-front.jpg",
+        "assets/products/lenor/lenor-cool-cotton-155g-back.jpg"
+      ],
       "status": "review",
       "id": "prd_56516b8b34c7",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Cool Cotton",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Cool Cotton. Формат: 155 г.",
+      "title": "Lenor Cool Cotton парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) cool cotton стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor cool cotton парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: cool cotton. формат: 155 г."
     },
     {
       "unit": "шт",
