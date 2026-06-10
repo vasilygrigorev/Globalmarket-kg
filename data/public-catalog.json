@@ -894,27 +894,31 @@
       "searchText": "persil gel (3l+1l) high foam стирка и уход за бельем persil гель для стирки persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. формат: 3 l, 1 l."
     },
     {
-      "unit": "шт",
+      "unit": "155 г",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg",
+        "assets/products/lenor/lenor-northern-solstice-155g-front.jpg",
+        "assets/products/lenor/lenor-northern-solstice-155g-back.jpg"
+      ],
       "status": "review",
       "id": "prd_40d21a2a86d6",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Northern Solstice",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Northern Solstice. Формат: 155 г.",
+      "title": "Lenor Northern Solstice парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) northern solstice стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor northern solstice парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: northern solstice. формат: 155 г."
     },
     {
       "unit": "шт",
