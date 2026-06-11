@@ -32,6 +32,18 @@ def check_gallery(product):
     if pid in KNOWN_EXCEPTIONS:
         return issues
 
+    if product.get("categoryId") == "perfume":
+        if len(gallery) != 1:
+            issues.append(f"{pid} {title}: perfume products must have exactly 1 card image, got {len(gallery)}")
+            return issues
+        if image != gallery[0]:
+            issues.append(f"{pid} {title}: image must equal galleryImages[0]")
+        if "card" not in Path(gallery[0]).stem.lower():
+            issues.append(f"{pid} {title}: perfume image should be a card image, got {gallery[0]}")
+        if not (ROOT / gallery[0]).exists():
+            issues.append(f"{pid} {title}: missing file {gallery[0]}")
+        return issues
+
     if len(gallery) != 3:
         issues.append(f"{pid} {title}: expected 3 gallery images, got {len(gallery)}")
         return issues

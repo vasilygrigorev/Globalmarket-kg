@@ -17,6 +17,16 @@ image = galleryImages[0]
 
 Extra photos can be stored in `assets/products/...` or product notes, but they should not be shown in the public gallery by default.
 
+Perfume decant products are a separate format:
+
+```text
+categoryId = perfume
+galleryImages[0] = card-front
+image = galleryImages[0]
+```
+
+They use one designed product card only and do not require front/back gallery photos.
+
 Known exception as of 2026-06-10:
 
 - `prd_432b62d4b317` / `TRESemmé Clean & Replenish шампунь 828 мл`: missing back photo; currently card + front only.

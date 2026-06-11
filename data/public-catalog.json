@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T07:28:52.686376+00:00",
+  "generatedAt": "2026-06-11T06:19:39.099442+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -15,13 +15,13 @@
     {
       "id": "home_cleaning",
       "title": "Уборка и чистота",
-      "count": 11,
+      "count": 9,
       "icon": "✨"
     },
     {
       "id": "hair",
       "title": "Уход за волосами",
-      "count": 109,
+      "count": 105,
       "icon": "🧴"
     },
     {
@@ -29,6 +29,12 @@
       "title": "Уход за телом",
       "count": 49,
       "icon": "🌸"
+    },
+    {
+      "id": "perfume",
+      "title": "Парфюм 5 мл",
+      "count": 3,
+      "icon": "✦"
     },
     {
       "id": "oral",
@@ -10424,6 +10430,81 @@
       "brand": "Sunsilk",
       "rating": 4.8,
       "searchText": "sunsilk soft & smooth шампунь 625 мл sunsilk шампунь шампунь sunsilk soft & smooth для мягкости и гладкости волос. объём 625 мл, формула с light natural oil, cashmere keratin и vitamin e. уход за волосами"
+    },
+    {
+      "unit": "5 мл",
+      "badge": "Chanel",
+      "retailPriceKgs": 895,
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "galleryImages": [
+        "assets/products/perfume/chanel-chance-5ml-card-front.jpg"
+      ],
+      "status": "active",
+      "id": "prd_perfume_chanel_chance_5ml",
+      "tones": [
+        "#26151f",
+        "#d89ab7"
+      ],
+      "image": "assets/products/perfume/chanel-chance-5ml-card-front.jpg",
+      "icon": "✦",
+      "registeredPriceKgs": 868,
+      "description": "Брендовый парфюм Chanel Chance в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.",
+      "title": "Chanel Chance парфюм 5 мл",
+      "productType": "парфюм на разлив",
+      "brand": "Chanel",
+      "rating": 4.95,
+      "searchText": "chanel chance парфюм 5 мл парфюм 5 мл chanel chance парфюм на разлив брендовый парфюм travel формат оригинальный аромат 5 мл"
+    },
+    {
+      "unit": "5 мл",
+      "badge": "Le Labo",
+      "retailPriceKgs": 2245,
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "galleryImages": [
+        "assets/products/perfume/le-labo-another-13-5ml-card-front.jpg"
+      ],
+      "status": "active",
+      "id": "prd_perfume_le_labo_another_13_5ml",
+      "tones": [
+        "#151515",
+        "#b8b2aa"
+      ],
+      "image": "assets/products/perfume/le-labo-another-13-5ml-card-front.jpg",
+      "icon": "✦",
+      "registeredPriceKgs": 2177,
+      "description": "Брендовый парфюм Le Labo Another 13 в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.",
+      "title": "Le Labo Another 13 парфюм 5 мл",
+      "productType": "парфюм на разлив",
+      "brand": "Le Labo",
+      "rating": 4.95,
+      "searchText": "le labo another 13 парфюм 5 мл парфюм 5 мл le labo another 13 парфюм на разлив брендовый парфюм travel формат оригинальный аромат 5 мл"
+    },
+    {
+      "unit": "5 мл",
+      "badge": "Bybozo",
+      "retailPriceKgs": 995,
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "galleryImages": [
+        "assets/products/perfume/bybozo-sea-breeze-5ml-card-front.jpg"
+      ],
+      "status": "active",
+      "id": "prd_perfume_bybozo_sea_breeze_5ml",
+      "tones": [
+        "#102929",
+        "#d1c2a2"
+      ],
+      "image": "assets/products/perfume/bybozo-sea-breeze-5ml-card-front.jpg",
+      "icon": "✦",
+      "registeredPriceKgs": 965,
+      "description": "Брендовый парфюм Bybozo Sea Breeze в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.",
+      "title": "Bybozo Sea Breeze парфюм 5 мл",
+      "productType": "парфюм на разлив",
+      "brand": "Bybozo",
+      "rating": 4.95,
+      "searchText": "bybozo sea breeze парфюм 5 мл парфюм 5 мл bybozo sea breeze парфюм на разлив брендовый парфюм travel формат оригинальный аромат 5 мл"
     }
   ]
 }

@@ -16,6 +16,7 @@ Rules:
 - Do not publish a photographed product with only card/front or card/back unless the missing side is explicitly recorded as an exception.
 - Do not place extra `alt-front`, `alt-back`, contact sheets, OCR screenshots, or temporary Telegram files in the public gallery. Keep extra files on disk or in notes, but not in `galleryImages`.
 - Telegram albums from Petya are expected in groups of three photos: card, front, back. If count is not divisible by 3, do not auto-map without manual review.
+- Perfume sold by decant/travel format is different: `categoryId: perfume` products use exactly one public image, a designed product card. They do not need front/back gallery photos.
 - Before deployment after photo/catalog work, run `python3 scripts/verify_product_galleries.py`.
 
 Current known exception:
