@@ -397,6 +397,15 @@ function featuredProductCompare(a, b) {
 }
 
 function diversifyFeaturedProducts(sortedProducts) {
+  const photographed = sortedProducts.filter((product) => hasProductImage(product));
+  const withoutPhotos = sortedProducts.filter((product) => !hasProductImage(product));
+  return [
+    ...diversifyProductGroup(photographed),
+    ...diversifyProductGroup(withoutPhotos),
+  ];
+}
+
+function diversifyProductGroup(sortedProducts) {
   const preferredCategoryOrder = [
     "perfume",
     "laundry",
