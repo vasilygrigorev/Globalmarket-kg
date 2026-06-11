@@ -338,7 +338,7 @@ function renderQuickCategories(catalogCategories) {
     ? catalogCategories
     : [...new Set(products.map((product) => product.category))].map((title) => ({ title, count: products.filter((product) => product.category === title).length }));
   quickCategoryGrid.innerHTML = categories
-    .slice(0, 8)
+    .slice(0, 12)
     .map((category) => {
       const title = category.title;
       return `<button class="quick-category" type="button" data-category="${escapeHtml(title)}">
@@ -373,14 +373,73 @@ function getVisibleProducts() {
     return matchesCategory && matchesPrice && matchesQuery;
   });
 
-  return filtered.sort((a, b) => {
+  const sorted = filtered.sort((a, b) => {
     if (state.sort === "price-asc") return productPrice(a) - productPrice(b);
     if (state.sort === "price-desc") return productPrice(b) - productPrice(a);
-    if (hasProductImage(a) !== hasProductImage(b)) return hasProductImage(b) - hasProductImage(a);
-    const statusScore = (product) => (product.status === "active" ? 1 : 0);
-    if (statusScore(a) !== statusScore(b)) return statusScore(b) - statusScore(a);
-    return a.title.localeCompare(b.title, "ru");
+    return featuredProductCompare(a, b);
   });
+
+  if (state.sort === "featured" && state.category === "Все" && !normalizedQuery) {
+    return diversifyFeaturedProducts(sorted);
+  }
+
+  return sorted;
+}
+
+function featuredProductCompare(a, b) {
+  const imageScore = Number(hasProductImage(b)) - Number(hasProductImage(a));
+  if (imageScore) return imageScore;
+  const statusScore = Number(b.status === "active") - Number(a.status === "active");
+  if (statusScore) return statusScore;
+  const ratingScore = Number(b.rating || 0) - Number(a.rating || 0);
+  if (ratingScore) return ratingScore;
+  return a.title.localeCompare(b.title, "ru");
+}
+
+function diversifyFeaturedProducts(sortedProducts) {
+  const preferredCategoryOrder = [
+    "perfume",
+    "laundry",
+    "home_cleaning",
+    "hair",
+    "body",
+    "deodorants",
+    "oral",
+    "shaving",
+    "food",
+    "germany",
+    "other",
+  ];
+  const buckets = new Map();
+  sortedProducts.forEach((product) => {
+    const key = product.categoryId || product.category || "other";
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(product);
+  });
+
+  const orderedKeys = [
+    ...preferredCategoryOrder.filter((key) => buckets.has(key)),
+    ...[...buckets.keys()].filter((key) => !preferredCategoryOrder.includes(key)).sort((a, b) => a.localeCompare(b, "ru")),
+  ];
+  const result = [];
+  const usedBrands = new Set();
+  let hasItems = true;
+
+  while (hasItems) {
+    hasItems = false;
+    for (const key of orderedKeys) {
+      const bucket = buckets.get(key);
+      if (!bucket?.length) continue;
+      hasItems = true;
+      const preferredIndex = bucket.findIndex((product) => !usedBrands.has(product.brand || product.title));
+      const [nextProduct] = bucket.splice(preferredIndex >= 0 ? preferredIndex : 0, 1);
+      usedBrands.add(nextProduct.brand || nextProduct.title);
+      result.push(nextProduct);
+    }
+    usedBrands.clear();
+  }
+
+  return result;
 }
 
 function renderProducts() {
