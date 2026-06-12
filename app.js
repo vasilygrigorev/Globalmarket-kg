@@ -93,6 +93,21 @@ const promoBanners = [
   },
 ];
 
+const quickCategoryCards = [
+  { title: "Стирка", category: "Стирка и уход за бельем", image: "assets/category-cards/category-laundry.jpg" },
+  { title: "Чистка", category: "Уборка и чистота", image: "assets/category-cards/category-cleaning.jpg" },
+  { title: "Волосы", category: "Уход за волосами", image: "assets/category-cards/category-hair.jpg" },
+  { title: "Тело", category: "Уход за телом", image: "assets/category-cards/category-body.jpg" },
+  { title: "Кремы", category: "Уход за телом", query: "крем", image: "assets/category-cards/category-creams.jpg" },
+  { title: "Зубы", category: "Зубная гигиена", image: "assets/category-cards/category-oral.jpg" },
+  { title: "Бритье", category: "Бритье", image: "assets/category-cards/category-shaving.jpg" },
+  { title: "Дезодоранты", category: "Дезодоранты", image: "assets/category-cards/category-deodorants.jpg" },
+  { title: "Парфюм", category: "Парфюм 5 мл", image: "assets/category-cards/category-perfume.jpg" },
+  { title: "Еда", category: "Продукты", image: "assets/category-cards/category-food.jpg" },
+  { title: "Германия", category: "Товары из Германии", image: "assets/category-cards/category-germany.jpg" },
+  { title: "Дом", category: "Разное", image: "assets/category-cards/category-home.jpg" },
+];
+
 let activeHeroIndex = 0;
 let heroTimer = null;
 let heroPointerStartX = 0;
@@ -341,14 +356,24 @@ function renderQuickCategories(catalogCategories) {
     ? catalogCategories
     : [...new Set(products.map((product) => product.category))].map((title) => ({ title, count: products.filter((product) => product.category === title).length }));
   menuCategories = categories;
-  quickCategoryGrid.innerHTML = categories
-    .slice(0, 12)
-    .map((category) => {
-      const title = category.title;
-      return `<button class="quick-category" type="button" data-category="${escapeHtml(title)}">
-        <span>${category.icon || "🛍️"}</span>
-        <strong>${escapeHtml(title)}</strong>
-        <small>${category.count} ${getProductWord(category.count)}</small>
+  const countByCategory = new Map(categories.map((category) => [category.title, category.count]));
+  quickCategoryGrid.innerHTML = quickCategoryCards
+    .map((card) => {
+      const count = products.filter((product) => {
+        const matchesCategory = !card.category || product.category === card.category;
+        const matchesQuery = !card.query || `${product.title} ${product.productType} ${product.description} ${product.searchText}`.toLowerCase().includes(card.query);
+        return matchesCategory && matchesQuery;
+      }).length || countByCategory.get(card.category) || 0;
+      const dataAttributes = [
+        card.category ? `data-category="${escapeHtml(card.category)}"` : "",
+        card.query ? `data-query="${escapeHtml(card.query)}"` : "",
+      ]
+        .filter(Boolean)
+        .join(" ");
+      return `<button class="quick-category" type="button" ${dataAttributes}>
+        <img src="${escapeHtml(card.image)}" alt="" loading="lazy" />
+        <strong>${escapeHtml(card.title)}</strong>
+        <small>${count} ${getProductWord(count)}</small>
       </button>`;
     })
     .join("");
@@ -393,7 +418,32 @@ function setMenuOpen(isOpen) {
 
 function selectCategory(category) {
   state.category = category;
+  state.query = "";
   state.visibleLimit = 60;
+  searchInput.value = "";
+  headerSearchInput.value = "";
+  renderCategories();
+  renderCategoryMenu();
+  renderProducts();
+}
+
+function selectQuery(query) {
+  state.category = "Все";
+  state.query = query;
+  state.visibleLimit = 60;
+  searchInput.value = query;
+  headerSearchInput.value = query;
+  renderCategories();
+  renderCategoryMenu();
+  renderProducts();
+}
+
+function selectCategoryQuery(category, query) {
+  state.category = category;
+  state.query = query;
+  state.visibleLimit = 60;
+  searchInput.value = query;
+  headerSearchInput.value = query;
   renderCategories();
   renderCategoryMenu();
   renderProducts();
@@ -794,8 +844,15 @@ categoryFilter.addEventListener("click", (event) => {
 
 quickCategoryGrid.addEventListener("click", (event) => {
   const button = event.target.closest("[data-category]");
-  if (!button) return;
-  selectCategory(button.dataset.category);
+  const queryButton = event.target.closest("[data-query]");
+  if (!button && !queryButton) return;
+  if (button && queryButton) {
+    selectCategoryQuery(button.dataset.category, queryButton.dataset.query);
+  } else if (queryButton) {
+    selectQuery(queryButton.dataset.query);
+  } else {
+    selectCategory(button.dataset.category);
+  }
   document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
 });
 
