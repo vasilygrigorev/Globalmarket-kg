@@ -1757,23 +1757,27 @@ textarea {
   }
 
   .quick-category {
-    grid-template-columns: 36px minmax(0, 1fr);
+    grid-template-columns: 48px minmax(0, 1fr);
     grid-template-rows: auto auto;
-    gap: 4px;
-    column-gap: 6px;
+    gap: 2px;
+    column-gap: 7px;
     align-items: center;
     min-width: 0;
-    padding: 6px;
+    min-height: 52px;
+    overflow: hidden;
+    padding: 0 6px 0 0;
     border-radius: 8px;
     background: var(--white);
   }
 
   .quick-category img {
     grid-row: 1 / 3;
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 100%;
     aspect-ratio: auto;
-    border-radius: 7px;
+    align-self: stretch;
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
   }
 
   .quick-category strong {
