@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Market KG - интернет-магазин</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css?v=20260611-mobile-categories" />
+    <link rel="stylesheet" href="styles.css?v=20260612-mobile-menu" />
   </head>
   <body>
     <header class="site-header">
+      <button class="menu-toggle" id="toggleMenu" type="button" aria-label="Открыть категории" aria-expanded="false" aria-controls="categoryMenu">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
       <a class="brand" href="#top" aria-label="Global Market KG">
         <span>Global Market KG</span>
       </a>
@@ -29,6 +32,7 @@
         <span class="cart-separator" aria-hidden="true">:</span>
         <span id="cartCount">0</span>
       </button>
+      <nav class="category-menu" id="categoryMenu" aria-label="Категории" hidden></nav>
     </header>
 
     <main id="top">
@@ -197,6 +201,6 @@
       </div>
     </section>
 
-    <script src="app.js?v=20260611-photo-first-featured"></script>
+    <script src="app.js?v=20260612-mobile-menu"></script>
   </body>
 </html>

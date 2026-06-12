@@ -39,6 +39,8 @@ const customerCardText = document.querySelector("#customerCardText");
 const clearCustomerButton = document.querySelector("#clearCustomer");
 const siteHeader = document.querySelector(".site-header");
 const toggleSearchButton = document.querySelector("#toggleSearch");
+const toggleMenuButton = document.querySelector("#toggleMenu");
+const categoryMenu = document.querySelector("#categoryMenu");
 const hero = document.querySelector(".hero");
 const heroTrack = document.querySelector("#heroTrack");
 const heroDots = document.querySelector("#heroDots");
@@ -98,6 +100,7 @@ let heroPointerStartY = 0;
 let heroPointerId = null;
 let heroSwipeMoved = false;
 let suppressHeroClick = false;
+let menuCategories = [];
 
 const currency = new Intl.NumberFormat("ru-RU");
 const decimalCurrency = new Intl.NumberFormat("ru-RU", {
@@ -337,6 +340,7 @@ function renderQuickCategories(catalogCategories) {
   const categories = catalogCategories.length
     ? catalogCategories
     : [...new Set(products.map((product) => product.category))].map((title) => ({ title, count: products.filter((product) => product.category === title).length }));
+  menuCategories = categories;
   quickCategoryGrid.innerHTML = categories
     .slice(0, 12)
     .map((category) => {
@@ -348,6 +352,7 @@ function renderQuickCategories(catalogCategories) {
       </button>`;
     })
     .join("");
+  renderCategoryMenu();
 }
 
 function renderCategories() {
@@ -360,6 +365,38 @@ function renderCategories() {
       </button>`;
     })
     .join("");
+}
+
+function renderCategoryMenu() {
+  if (!categoryMenu) return;
+  const allCategories = [
+    { title: "Все", icon: "⌂", count: products.length },
+    ...menuCategories,
+  ];
+  categoryMenu.innerHTML = allCategories
+    .map((category) => {
+      const title = category.title;
+      return `<button class="${state.category === title ? "active" : ""}" type="button" data-category="${escapeHtml(title)}">
+        <span class="category-menu-icon" aria-hidden="true">${category.icon || "🛍️"}</span>
+        <span class="category-menu-title">${escapeHtml(title === "Все" ? "Все товары" : title)}</span>
+        <span class="category-menu-count">${category.count ?? ""}</span>
+      </button>`;
+    })
+    .join("");
+}
+
+function setMenuOpen(isOpen) {
+  if (!categoryMenu || !toggleMenuButton) return;
+  categoryMenu.hidden = !isOpen;
+  toggleMenuButton.setAttribute("aria-expanded", String(isOpen));
+}
+
+function selectCategory(category) {
+  state.category = category;
+  state.visibleLimit = 60;
+  renderCategories();
+  renderCategoryMenu();
+  renderProducts();
 }
 
 function getVisibleProducts() {
@@ -752,20 +789,32 @@ function escapeHtml(value) {
 categoryFilter.addEventListener("click", (event) => {
   const button = event.target.closest("[data-category]");
   if (!button) return;
-  state.category = button.dataset.category;
-  state.visibleLimit = 60;
-  renderCategories();
-  renderProducts();
+  selectCategory(button.dataset.category);
 });
 
 quickCategoryGrid.addEventListener("click", (event) => {
   const button = event.target.closest("[data-category]");
   if (!button) return;
-  state.category = button.dataset.category;
-  state.visibleLimit = 60;
+  selectCategory(button.dataset.category);
   document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
-  renderCategories();
-  renderProducts();
+});
+
+toggleMenuButton?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  const isOpen = categoryMenu?.hidden;
+  setMenuOpen(Boolean(isOpen));
+  if (siteHeader.classList.contains("search-open")) {
+    siteHeader.classList.remove("search-open");
+    toggleSearchButton.setAttribute("aria-expanded", "false");
+  }
+});
+
+categoryMenu?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-category]");
+  if (!button) return;
+  selectCategory(button.dataset.category);
+  setMenuOpen(false);
+  document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
 });
 
 productGrid.addEventListener("click", (event) => {
@@ -857,6 +906,7 @@ document.querySelector("#checkoutLink").addEventListener("click", () => setCartO
 toggleSearchButton.addEventListener("click", () => {
   const isOpen = siteHeader.classList.toggle("search-open");
   toggleSearchButton.setAttribute("aria-expanded", String(isOpen));
+  if (isOpen) setMenuOpen(false);
   if (isOpen) headerSearchInput.focus();
 });
 
@@ -942,6 +992,10 @@ clearCustomerButton.addEventListener("click", () => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
+    if (!categoryMenu?.hidden) {
+      setMenuOpen(false);
+      return;
+    }
     if (siteHeader.classList.contains("search-open")) {
       siteHeader.classList.remove("search-open");
       toggleSearchButton.setAttribute("aria-expanded", "false");
@@ -954,6 +1008,12 @@ document.addEventListener("keydown", (event) => {
     closeProductModal();
     setCartOpen(false);
   }
+});
+
+document.addEventListener("click", (event) => {
+  if (categoryMenu?.hidden) return;
+  if (event.target.closest("#categoryMenu") || event.target.closest("#toggleMenu")) return;
+  setMenuOpen(false);
 });
 
 cartDrawer.addEventListener("click", (event) => {
