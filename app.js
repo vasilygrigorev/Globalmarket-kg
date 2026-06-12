@@ -8,6 +8,7 @@ let catalogSettings = {
 const state = {
   category: "Все",
   query: "",
+  label: "",
   maxPrice: 0,
   sort: "featured",
   visibleLimit: 60,
@@ -20,6 +21,7 @@ const categoryFilter = document.querySelector("#categoryFilter");
 const searchInput = document.querySelector("#searchInput");
 const headerSearchInput = document.querySelector("#headerSearchInput");
 const quickCategoryGrid = document.querySelector("#quickCategoryGrid");
+const catalogDirectory = document.querySelector("#catalogDirectory");
 const priceRange = document.querySelector("#priceRange");
 const priceOutput = document.querySelector("#priceOutput");
 const sortSelect = document.querySelector("#sortSelect");
@@ -347,6 +349,7 @@ async function loadCatalog() {
   renderCustomerPanel();
   renderQuickCategories(catalog.categories || []);
   renderCategories();
+  renderCatalogDirectory();
   renderProducts();
   renderCart();
 }
@@ -370,7 +373,7 @@ function renderQuickCategories(catalogCategories) {
       ]
         .filter(Boolean)
         .join(" ");
-      return `<button class="quick-category" type="button" ${dataAttributes}>
+      return `<button class="quick-category" type="button" ${dataAttributes} data-label="${escapeHtml(card.title)}">
         <img src="${escapeHtml(card.image)}" alt="" loading="lazy" />
         <strong>${escapeHtml(card.title)}</strong>
         <small>${count} ${getProductWord(count)}</small>
@@ -419,34 +422,75 @@ function setMenuOpen(isOpen) {
 function selectCategory(category) {
   state.category = category;
   state.query = "";
+  state.label = "";
   state.visibleLimit = 60;
   searchInput.value = "";
   headerSearchInput.value = "";
   renderCategories();
   renderCategoryMenu();
+  renderCatalogDirectory();
   renderProducts();
 }
 
-function selectQuery(query) {
+function selectQuery(query, label = "") {
   state.category = "Все";
   state.query = query;
+  state.label = label;
   state.visibleLimit = 60;
   searchInput.value = query;
   headerSearchInput.value = query;
   renderCategories();
   renderCategoryMenu();
+  renderCatalogDirectory();
   renderProducts();
 }
 
-function selectCategoryQuery(category, query) {
+function selectCategoryQuery(category, query, label = "") {
   state.category = category;
   state.query = query;
+  state.label = label;
   state.visibleLimit = 60;
   searchInput.value = query;
   headerSearchInput.value = query;
   renderCategories();
   renderCategoryMenu();
+  renderCatalogDirectory();
   renderProducts();
+}
+
+function renderCatalogDirectory() {
+  if (!catalogDirectory) return;
+  const parts = [{ title: "Главная", category: "Все" }];
+  if (state.category !== "Все") {
+    parts.push({ title: displayCategoryName(state.category), category: state.category });
+  }
+  if (state.query) {
+    parts.push({ title: state.label || state.query, query: state.query });
+  }
+  catalogDirectory.innerHTML = parts
+    .map((part, index) => {
+      const isCurrent = index === parts.length - 1;
+      const attrs = part.query
+        ? `data-query="${escapeHtml(part.query)}" data-label="${escapeHtml(part.title)}"`
+        : `data-category="${escapeHtml(part.category)}"`;
+      return `<button class="${isCurrent ? "current" : ""}" type="button" ${attrs} ${isCurrent ? 'aria-current="page"' : ""}>${escapeHtml(part.title)}</button>`;
+    })
+    .join('<span aria-hidden="true">/</span>');
+}
+
+function displayCategoryName(category) {
+  const shortNames = {
+    "Стирка и уход за бельем": "Стирка",
+    "Уборка и чистота": "Чистка",
+    "Уход за волосами": "Волосы",
+    "Уход за телом": "Тело",
+    "Зубная гигиена": "Зубы",
+    "Парфюм 5 мл": "Парфюм",
+    "Продукты": "Еда",
+    "Товары из Германии": "Германия",
+    "Разное": "Дом",
+  };
+  return shortNames[category] || category;
 }
 
 function getVisibleProducts() {
@@ -846,12 +890,24 @@ quickCategoryGrid.addEventListener("click", (event) => {
   const button = event.target.closest("[data-category]");
   const queryButton = event.target.closest("[data-query]");
   if (!button && !queryButton) return;
+  const label = event.target.closest(".quick-category")?.dataset.label || "";
   if (button && queryButton) {
-    selectCategoryQuery(button.dataset.category, queryButton.dataset.query);
+    selectCategoryQuery(button.dataset.category, queryButton.dataset.query, label);
   } else if (queryButton) {
-    selectQuery(queryButton.dataset.query);
+    selectQuery(queryButton.dataset.query, label);
   } else {
     selectCategory(button.dataset.category);
+  }
+  document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
+});
+
+catalogDirectory?.addEventListener("click", (event) => {
+  const button = event.target.closest("button");
+  if (!button) return;
+  if (button.dataset.query) {
+    selectQuery(button.dataset.query, button.dataset.label || button.dataset.query);
+  } else {
+    selectCategory(button.dataset.category || "Все");
   }
   document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
 });
@@ -925,15 +981,19 @@ cartItems.addEventListener("click", (event) => {
 
 searchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
+  state.label = "";
   headerSearchInput.value = state.query;
   state.visibleLimit = 60;
+  renderCatalogDirectory();
   renderProducts();
 });
 
 headerSearchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
+  state.label = "";
   searchInput.value = state.query;
   state.visibleLimit = 60;
+  renderCatalogDirectory();
   renderProducts();
 });
 
