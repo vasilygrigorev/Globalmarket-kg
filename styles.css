@@ -221,6 +221,53 @@ select {
   font-weight: 400;
 }
 
+.cart-button.cart-feedback {
+  border-color: rgba(48, 168, 92, 0.34);
+  color: #1f8f46;
+  background: rgba(239, 255, 244, 0.95);
+  animation: cartPulse 0.7s ease;
+}
+
+.floating-cart-button {
+  position: fixed;
+  top: max(10px, env(safe-area-inset-top));
+  right: 12px;
+  z-index: 45;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 58px;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid rgba(48, 168, 92, 0.34);
+  border-radius: 8px;
+  color: #1f8f46;
+  background: rgba(239, 255, 244, 0.96);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px) scale(0.96);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  cursor: pointer;
+}
+
+.floating-cart-button.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+@keyframes cartPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.06);
+  }
+}
+
 .cart-bag-icon {
   position: relative;
   display: block;
@@ -249,6 +296,13 @@ select {
   border: 1.7px solid var(--ink);
   border-bottom: 0;
   border-radius: 8px 8px 0 0;
+}
+
+.floating-cart-button .cart-bag-icon::before,
+.floating-cart-button .cart-bag-icon::after,
+.cart-button.cart-feedback .cart-bag-icon::before,
+.cart-button.cart-feedback .cart-bag-icon::after {
+  border-color: currentColor;
 }
 
 .cart-separator,
@@ -793,6 +847,23 @@ h2 {
   cursor: pointer;
 }
 
+.recent-product-action button.added,
+.add-button.added {
+  border-color: rgba(48, 168, 92, 0.36);
+  color: #fff;
+  background: #30a85c;
+}
+
+.recent-product-action button.added {
+  font-size: 0;
+}
+
+.recent-product-action button.added::before {
+  content: "✓";
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .service-strip article {
   display: flex;
   flex-direction: column;
@@ -1281,6 +1352,18 @@ textarea {
   font-size: 22px;
   font-weight: 300;
   line-height: 1;
+}
+
+.compact-add-button.added {
+  border-color: rgba(48, 168, 92, 0.36);
+  color: #fff;
+  background: #30a85c;
+}
+
+.compact-add-button.added::before {
+  content: "✓";
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .registered-price-note {
