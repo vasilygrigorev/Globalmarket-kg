@@ -1563,14 +1563,14 @@ textarea {
   position: relative;
   display: grid;
   place-items: center;
-  padding: 44px 28px;
+  padding: 26px 18px;
   background: var(--paper);
 }
 
 .modal-product-image {
   display: block;
-  width: min(88%, 360px);
-  max-height: 430px;
+  width: min(100%, 460px);
+  max-height: 500px;
   object-fit: contain;
   filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.12));
 }
@@ -1583,14 +1583,14 @@ textarea {
   display: grid;
   width: 100%;
   justify-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .modal-image-zoom {
   display: grid;
   justify-items: center;
-  gap: 8px;
-  width: min(88%, 380px);
+  width: min(100%, 480px);
+  padding: 0;
   border: 0;
   background: transparent;
   color: var(--ink);
@@ -1599,16 +1599,6 @@ textarea {
 
 .modal-image-zoom .modal-product-image {
   width: 100%;
-}
-
-.modal-image-zoom span {
-  padding: 6px 10px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.72);
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 800;
 }
 
 .gallery-thumbs {
@@ -2359,6 +2349,19 @@ textarea {
 
   .product-modal-panel {
     max-height: calc(100vh - 24px);
+  }
+
+  .modal-product-visual {
+    padding: 0;
+  }
+
+  .modal-image-zoom {
+    width: 100%;
+  }
+
+  .modal-product-image {
+    width: 100%;
+    max-height: min(62vh, 560px);
   }
 
   .modal-product-info {

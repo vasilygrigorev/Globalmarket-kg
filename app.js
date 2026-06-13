@@ -825,7 +825,6 @@ function modalVisual(product) {
     const fallbackImage = fallbackImageFor(product);
     return `<button class="modal-image-zoom" type="button" data-zoom-image="${escapeHtml(fallbackImage)}" aria-label="Увеличить изображение категории">
       <img class="modal-product-image fallback-image" src="${escapeHtml(fallbackImage)}" alt="${escapeHtml(product.title)}">
-      <span>Увеличить</span>
     </button>`;
   }
   const mainImage = gallery[0];
@@ -833,7 +832,6 @@ function modalVisual(product) {
     <div class="modal-gallery" data-gallery-product="${product.id}">
       <button class="modal-image-zoom" type="button" data-zoom-image="${escapeHtml(mainImage)}" aria-label="Увеличить фото">
         <img class="modal-product-image" src="${escapeHtml(mainImage)}" alt="${escapeHtml(product.title)}" data-modal-main-image>
-        <span>Увеличить</span>
       </button>
       ${
         gallery.length > 1
