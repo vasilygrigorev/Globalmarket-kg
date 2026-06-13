@@ -23,6 +23,7 @@ html {
 
 body {
   margin: 0;
+  padding-top: var(--site-header-height, 73px);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--ink);
   background: var(--paper);
@@ -49,9 +50,11 @@ select {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
+  left: 0;
+  right: 0;
+  z-index: 25;
   display: grid;
   grid-template-columns: auto auto minmax(240px, 520px) auto;
   align-items: center;
@@ -60,6 +63,19 @@ select {
   background: rgba(245, 245, 247, 0.82);
   border-bottom: 1px solid rgba(210, 210, 215, 0.8);
   backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: none;
+  transform: translateY(0);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
+  will-change: transform;
+}
+
+.site-header.header-hidden {
+  transform: translateY(calc(-100% - 8px));
+}
+
+.site-header.header-floating {
+  background: rgba(245, 245, 247, 0.92);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
 }
 
 .brand {
