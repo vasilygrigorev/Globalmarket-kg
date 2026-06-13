@@ -15,7 +15,7 @@
     {
       "id": "home_cleaning",
       "title": "Уборка и чистота",
-      "count": 9,
+      "count": 10,
       "icon": "✨"
     },
     {
@@ -1460,8 +1460,8 @@
       "unit": "500 мл",
       "badge": "Jif",
       "retailPriceKgs": 550,
-      "category": "Уборка и чистящие средства",
-      "categoryId": "cleaning",
+      "category": "Уборка и чистота",
+      "categoryId": "home_cleaning",
       "galleryImages": [
         "assets/products/jif/jif-cream-lemon-500ml-card-front.jpg",
         "assets/products/jif/jif-cream-lemon-500ml-front.jpg",
@@ -1481,7 +1481,7 @@
       "productType": "чистящий крем",
       "brand": "Jif",
       "rating": 4.8,
-      "searchText": "jif lemon чистящий крем 500 мл уборка и чистящие средства jif чистящий крем чистящий крем jif lemon для кухни, ванной и твердых поверхностей. формат: 500 мл."
+      "searchText": "jif lemon чистящий крем 500 мл уборка и чистота jif чистящий крем чистящий крем jif lemon для кухни, ванной и твердых поверхностей. формат: 500 мл."
     },
     {
       "unit": "шт",
