@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Market KG - интернет-магазин</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css?v=20260613-category-font-xl" />
+    <link rel="stylesheet" href="styles.css?v=20260613-favorites-cart-badges" />
   </head>
   <body>
     <header class="site-header">
@@ -112,6 +112,7 @@
           <div>
             <div class="catalog-tools">
               <span id="resultCount">0 товаров</span>
+              <button class="favorite-filter" id="favoriteFilter" type="button" aria-pressed="false">♡ Избранное</button>
               <select id="sortSelect" aria-label="Сортировка">
                 <option value="featured">Сначала популярные</option>
                 <option value="price-asc">Сначала дешевле</option>
@@ -194,6 +195,9 @@
         <div class="cart-items" id="cartItems"></div>
         <div class="cart-summary">
           <p class="cart-delivery" id="cartDeliveryNote">Доставка согласуется с менеджером.</p>
+          <div class="cart-progress" id="cartDeliveryProgress" aria-hidden="true">
+            <span id="cartDeliveryProgressBar"></span>
+          </div>
           <div>
             <span>Итого</span>
             <strong id="cartTotal">0 сом</strong>
@@ -210,6 +214,6 @@
       </div>
     </section>
 
-    <script src="app.js?v=20260613-recently-viewed"></script>
+    <script src="app.js?v=20260613-favorites-cart-badges"></script>
   </body>
 </html>

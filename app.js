@@ -9,6 +9,7 @@ const state = {
   category: "Все",
   query: "",
   label: "",
+  favoriteOnly: false,
   maxPrice: 0,
   sort: "featured",
   visibleLimit: 60,
@@ -27,6 +28,7 @@ const recentlyViewedRow = document.querySelector("#recentlyViewedRow");
 const priceRange = document.querySelector("#priceRange");
 const priceOutput = document.querySelector("#priceOutput");
 const sortSelect = document.querySelector("#sortSelect");
+const favoriteFilterButton = document.querySelector("#favoriteFilter");
 const loadMore = document.querySelector("#loadMore");
 const resultCount = document.querySelector("#resultCount");
 const cartDrawer = document.querySelector("#cartDrawer");
@@ -34,6 +36,8 @@ const cartItems = document.querySelector("#cartItems");
 const cartCount = document.querySelector("#cartCount");
 const cartTotal = document.querySelector("#cartTotal");
 const cartDeliveryNote = document.querySelector("#cartDeliveryNote");
+const cartDeliveryProgress = document.querySelector("#cartDeliveryProgress");
+const cartDeliveryProgressBar = document.querySelector("#cartDeliveryProgressBar");
 const formStatus = document.querySelector("#formStatus");
 const productModal = document.querySelector("#productModal");
 const productModalContent = document.querySelector("#productModalContent");
@@ -54,6 +58,8 @@ let activeZoomImage = null;
 
 const recentlyViewedStorageKey = "globalMarketRecentlyViewed";
 let recentlyViewedIds = loadRecentlyViewed();
+const favoritesStorageKey = "globalMarketFavorites";
+let favoriteIds = new Set(loadFavorites());
 
 const promoBanners = [
   {
@@ -230,6 +236,37 @@ function productCardImage(product) {
   return product.image || fallbackImageFor(product);
 }
 
+function loadFavorites() {
+  try {
+    const ids = JSON.parse(localStorage.getItem(favoritesStorageKey) || "[]");
+    if (Array.isArray(ids)) return ids.filter((id) => typeof id === "string").slice(0, 200);
+  } catch {
+    return [];
+  }
+  return [];
+}
+
+function saveFavorites() {
+  localStorage.setItem(favoritesStorageKey, JSON.stringify([...favoriteIds]));
+}
+
+function isFavorite(productId) {
+  return favoriteIds.has(productId);
+}
+
+function toggleFavorite(productId) {
+  if (!productId) return;
+  if (favoriteIds.has(productId)) {
+    favoriteIds.delete(productId);
+  } else {
+    favoriteIds.add(productId);
+  }
+  saveFavorites();
+  renderFavoriteFilter();
+  renderProducts();
+  renderRecentlyViewed();
+}
+
 function loadRecentlyViewed() {
   try {
     const ids = JSON.parse(localStorage.getItem(recentlyViewedStorageKey) || "[]");
@@ -376,6 +413,7 @@ async function loadCatalog() {
   renderQuickCategories(catalog.categories || []);
   renderCategories();
   renderCatalogDirectory();
+  renderFavoriteFilter();
   renderRecentlyViewed();
   renderProducts();
   renderCart();
@@ -420,6 +458,14 @@ function renderCategories() {
       </button>`;
     })
     .join("");
+}
+
+function renderFavoriteFilter() {
+  if (!favoriteFilterButton) return;
+  const count = products.filter((product) => favoriteIds.has(product.id)).length;
+  favoriteFilterButton.classList.toggle("active", state.favoriteOnly);
+  favoriteFilterButton.setAttribute("aria-pressed", String(state.favoriteOnly));
+  favoriteFilterButton.textContent = state.favoriteOnly ? `♥ Избранное (${count})` : `♡ Избранное${count ? ` (${count})` : ""}`;
 }
 
 function renderCategoryMenu() {
@@ -523,12 +569,13 @@ function displayCategoryName(category) {
 function getVisibleProducts() {
   const normalizedQuery = state.query.trim().toLowerCase();
   const filtered = products.filter((product) => {
+    const matchesFavorite = !state.favoriteOnly || favoriteIds.has(product.id);
     const matchesCategory = state.category === "Все" || product.category === state.category;
     const matchesPrice = productPrice(product) <= state.maxPrice;
     const matchesQuery = `${product.title} ${product.category} ${product.brand} ${product.productType} ${product.description} ${product.searchText}`
       .toLowerCase()
       .includes(normalizedQuery);
-    return matchesCategory && matchesPrice && matchesQuery;
+    return matchesFavorite && matchesCategory && matchesPrice && matchesQuery;
   });
 
   const sorted = filtered.sort((a, b) => {
@@ -645,22 +692,37 @@ function renderRecentlyViewed() {
     .join("");
 }
 
+function productBadges(product) {
+  const badges = [];
+  if (product.categoryId === "perfume" || product.brand === "Concord") badges.push("Новинка");
+  if (hasProductImage(product) && Number(product.rating || 0) >= 4.8) badges.push("Хит");
+  if (Number(product.retailPriceKgs || 0) > 0 && Number(product.retailPriceKgs) <= 500) badges.push("Выгодно");
+  return badges.slice(0, 2);
+}
+
 function renderProducts() {
   const visibleProducts = getVisibleProducts();
   const pageProducts = visibleProducts.slice(0, state.visibleLimit);
   resultCount.textContent = `${visibleProducts.length} ${getProductWord(visibleProducts.length)}`;
   if (!visibleProducts.length) {
-    productGrid.innerHTML = '<p class="empty-cart">По этим фильтрам ничего не найдено.</p>';
+    productGrid.innerHTML = `<p class="empty-cart">${state.favoriteOnly ? "В избранном пока пусто." : "По этим фильтрам ничего не найдено."}</p>`;
     loadMore.hidden = true;
     return;
   }
   productGrid.innerHTML = pageProducts
     .map((product) => {
       const display = productDisplayParts(product);
+      const badges = productBadges(product);
       return `
         <article class="product-card">
           <div class="product-visual" style="--tone-a: ${product.tones[0]}; --tone-b: ${product.tones[1]}">
             <span class="placeholder-brand">${escapeHtml(product.brand || "GM")}</span>
+            <button class="favorite-button ${isFavorite(product.id) ? "active" : ""}" type="button" data-favorite="${product.id}" aria-label="${isFavorite(product.id) ? "Убрать из избранного" : "Добавить в избранное"}" aria-pressed="${isFavorite(product.id)}">${isFavorite(product.id) ? "♥" : "♡"}</button>
+            ${
+              badges.length
+                ? `<div class="marketing-badges">${badges.map((badge) => `<span>${escapeHtml(badge)}</span>`).join("")}</div>`
+                : ""
+            }
             <img class="product-image ${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy" data-open-product="${product.id}">
           </div>
           <div class="product-info">
@@ -788,6 +850,7 @@ function openProductModal(productId) {
           Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от ${formatPrice(catalogSettings.free_delivery_threshold_kgs)}.
         </div>
         <div class="modal-actions">
+          <button class="modal-favorite-button ${isFavorite(product.id) ? "active" : ""}" type="button" data-modal-favorite="${product.id}" aria-pressed="${isFavorite(product.id)}">${isFavorite(product.id) ? "♥ В избранном" : "♡ В избранное"}</button>
           <button class="add-button" type="button" data-modal-add="${product.id}">В корзину</button>
           <a class="secondary-link" href="#checkout" id="modalCheckoutLink">К оформлению</a>
         </div>
@@ -868,15 +931,20 @@ function renderCart() {
   const total = cartTotalValue();
   cartCount.textContent = totalCount;
   cartTotal.textContent = formatPrice(total);
+  const threshold = catalogSettings.free_delivery_threshold_kgs;
+  const progress = threshold > 0 ? Math.min(total / threshold, 1) : 0;
+  if (cartDeliveryProgressBar) cartDeliveryProgressBar.style.width = `${Math.round(progress * 100)}%`;
+  if (cartDeliveryProgress) cartDeliveryProgress.hidden = total === 0;
   if (total >= catalogSettings.free_delivery_threshold_kgs) {
-    cartDeliveryNote.textContent = "Заказ подходит под бесплатную доставку.";
+    cartDeliveryNote.textContent = "Бесплатная доставка доступна. Менеджер подтвердит условия.";
   } else {
-    cartDeliveryNote.textContent = `До бесплатной доставки: ${formatPrice(catalogSettings.free_delivery_threshold_kgs - total)}.`;
+    cartDeliveryNote.textContent = `До бесплатной доставки осталось ${formatPrice(catalogSettings.free_delivery_threshold_kgs - total)}.`;
   }
 
   if (entries.length === 0) {
     cartItems.innerHTML = '<p class="empty-cart">Корзина пустая. Добавьте товары из каталога, чтобы оформить заказ.</p>';
     cartDeliveryNote.textContent = "Доставка согласуется с менеджером.";
+    if (cartDeliveryProgress) cartDeliveryProgress.hidden = true;
     return;
   }
 
@@ -1006,8 +1074,13 @@ categoryMenu?.addEventListener("click", (event) => {
 });
 
 productGrid.addEventListener("click", (event) => {
+  const favoriteButton = event.target.closest("[data-favorite]");
   const button = event.target.closest("[data-add]");
   const detailsButton = event.target.closest("[data-open-product]");
+  if (favoriteButton) {
+    toggleFavorite(favoriteButton.dataset.favorite);
+    return;
+  }
   if (button) {
     addToCart(button.dataset.add);
     setCartOpen(true);
@@ -1021,6 +1094,7 @@ productModal.addEventListener("click", (event) => {
   const galleryButton = event.target.closest("[data-gallery-image]");
   const zoomButton = event.target.closest("[data-zoom-image]");
   const addButton = event.target.closest("[data-modal-add]");
+  const favoriteButton = event.target.closest("[data-modal-favorite]");
   const checkoutLink = event.target.closest("#modalCheckoutLink");
   if (galleryButton) {
     const gallery = galleryButton.closest(".modal-gallery");
@@ -1041,7 +1115,19 @@ productModal.addEventListener("click", (event) => {
     closeProductModal();
     setCartOpen(true);
   }
+  if (favoriteButton) {
+    toggleFavorite(favoriteButton.dataset.modalFavorite);
+    openProductModal(favoriteButton.dataset.modalFavorite);
+    return;
+  }
   if (checkoutLink) closeProductModal();
+});
+
+favoriteFilterButton?.addEventListener("click", () => {
+  state.favoriteOnly = !state.favoriteOnly;
+  state.visibleLimit = 60;
+  renderFavoriteFilter();
+  renderProducts();
 });
 
 cartItems.addEventListener("click", (event) => {
