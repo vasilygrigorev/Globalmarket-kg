@@ -236,6 +236,54 @@ function productCardImage(product) {
   return product.image || fallbackImageFor(product);
 }
 
+function productShareUrl(product) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("product", product.id);
+  url.hash = `product-${product.id}`;
+  return url.toString();
+}
+
+function productShareText(product) {
+  const display = productDisplayParts(product);
+  return [
+    "Global Market KG",
+    `${display.brand} ${display.type}${display.size ? ` ${display.size}` : ""}`.trim(),
+    display.variant,
+    `Цена: ${formatPrice(productPrice(product))}`,
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+async function shareProduct(productId, triggerButton) {
+  const product = products.find((item) => item.id === productId);
+  if (!product) return;
+  const shareData = {
+    title: product.title,
+    text: productShareText(product),
+    url: productShareUrl(product),
+  };
+
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData);
+      return;
+    }
+    await navigator.clipboard.writeText(`${shareData.text}\n${shareData.url}`);
+    if (triggerButton) {
+      const originalText = triggerButton.textContent;
+      triggerButton.textContent = "Ссылка скопирована";
+      window.setTimeout(() => {
+        triggerButton.textContent = originalText;
+      }, 1800);
+    }
+  } catch (error) {
+    if (error?.name !== "AbortError") {
+      console.warn("Не удалось поделиться товаром", error);
+    }
+  }
+}
+
 function loadFavorites() {
   try {
     const ids = JSON.parse(localStorage.getItem(favoritesStorageKey) || "[]");
@@ -417,6 +465,7 @@ async function loadCatalog() {
   renderRecentlyViewed();
   renderProducts();
   renderCart();
+  openSharedProductFromUrl();
 }
 
 function renderQuickCategories(catalogCategories) {
@@ -851,6 +900,7 @@ function openProductModal(productId) {
         </div>
         <div class="modal-actions">
           <button class="modal-favorite-button ${isFavorite(product.id) ? "active" : ""}" type="button" data-modal-favorite="${product.id}" aria-pressed="${isFavorite(product.id)}">${isFavorite(product.id) ? "♥ В избранном" : "♡ В избранное"}</button>
+          <button class="modal-share-button" type="button" data-share-product="${product.id}">Поделиться</button>
           <button class="add-button" type="button" data-modal-add="${product.id}">В корзину</button>
           <a class="secondary-link" href="#checkout" id="modalCheckoutLink">К оформлению</a>
         </div>
@@ -867,6 +917,13 @@ function closeProductModal() {
   productModal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
   closeImageZoom();
+}
+
+function openSharedProductFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get("product") || window.location.hash.replace(/^#product-/, "");
+  if (!productId || !products.some((product) => product.id === productId)) return;
+  openProductModal(productId);
 }
 
 function openImageZoom(src, alt) {
@@ -1095,6 +1152,7 @@ productModal.addEventListener("click", (event) => {
   const zoomButton = event.target.closest("[data-zoom-image]");
   const addButton = event.target.closest("[data-modal-add]");
   const favoriteButton = event.target.closest("[data-modal-favorite]");
+  const shareButton = event.target.closest("[data-share-product]");
   const checkoutLink = event.target.closest("#modalCheckoutLink");
   if (galleryButton) {
     const gallery = galleryButton.closest(".modal-gallery");
@@ -1118,6 +1176,10 @@ productModal.addEventListener("click", (event) => {
   if (favoriteButton) {
     toggleFavorite(favoriteButton.dataset.modalFavorite);
     openProductModal(favoriteButton.dataset.modalFavorite);
+    return;
+  }
+  if (shareButton) {
+    shareProduct(shareButton.dataset.shareProduct, shareButton);
     return;
   }
   if (checkoutLink) closeProductModal();

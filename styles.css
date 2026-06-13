@@ -1755,7 +1755,8 @@ textarea {
   flex-wrap: wrap;
 }
 
-.modal-favorite-button {
+.modal-favorite-button,
+.modal-share-button {
   min-height: 42px;
   padding: 0 16px;
   border: 1px solid var(--line);
@@ -1770,6 +1771,11 @@ textarea {
   border-color: rgba(215, 0, 21, 0.24);
   color: #d70015;
   background: #fff4f6;
+}
+
+.modal-share-button {
+  color: var(--muted);
+  font-weight: 650;
 }
 
 .image-zoom-overlay {
