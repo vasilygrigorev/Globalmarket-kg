@@ -41,6 +41,7 @@ const cartDeliveryProgressBar = document.querySelector("#cartDeliveryProgressBar
 const formStatus = document.querySelector("#formStatus");
 const productModal = document.querySelector("#productModal");
 const productModalContent = document.querySelector("#productModalContent");
+const modalTopActions = document.querySelector("#modalTopActions");
 const customerForm = document.querySelector("#customerForm");
 const customerCardTitle = document.querySelector("#customerCardTitle");
 const customerCardText = document.querySelector("#customerCardText");
@@ -271,10 +272,21 @@ async function shareProduct(productId, triggerButton) {
     }
     await navigator.clipboard.writeText(`${shareData.text}\n${shareData.url}`);
     if (triggerButton) {
+      const isIconButton = triggerButton.classList.contains("modal-icon-action");
       const originalText = triggerButton.textContent;
-      triggerButton.textContent = "Ссылка скопирована";
+      if (isIconButton) {
+        triggerButton.classList.add("copied");
+        triggerButton.setAttribute("aria-label", "Ссылка скопирована");
+      } else {
+        triggerButton.textContent = "Ссылка скопирована";
+      }
       window.setTimeout(() => {
-        triggerButton.textContent = originalText;
+        if (isIconButton) {
+          triggerButton.classList.remove("copied");
+          triggerButton.setAttribute("aria-label", "Поделиться товаром");
+        } else {
+          triggerButton.textContent = originalText;
+        }
       }, 1800);
     }
   } catch (error) {
@@ -866,6 +878,20 @@ function openProductModal(productId) {
     ["Единица", product.unit || "шт"],
   ];
 
+  modalTopActions.innerHTML = `
+    <button class="modal-icon-action modal-favorite-icon ${isFavorite(product.id) ? "active" : ""}" type="button" data-modal-favorite="${product.id}" aria-label="${isFavorite(product.id) ? "Убрать из избранного" : "Добавить в избранное"}" aria-pressed="${isFavorite(product.id)}">
+      <span aria-hidden="true">${isFavorite(product.id) ? "♥" : "♡"}</span>
+    </button>
+    <button class="modal-icon-action" type="button" data-share-product="${product.id}" aria-label="Поделиться товаром">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <path d="m8.6 10.6 6.8-4.2M8.6 13.4l6.8 4.2"></path>
+      </svg>
+    </button>
+  `;
+
   productModalContent.innerHTML = `
     <article class="modal-product">
       <div class="modal-product-visual" style="--tone-a: ${product.tones[0]}; --tone-b: ${product.tones[1]}">
@@ -897,8 +923,6 @@ function openProductModal(productId) {
           Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от ${formatPrice(catalogSettings.free_delivery_threshold_kgs)}.
         </div>
         <div class="modal-actions">
-          <button class="modal-favorite-button ${isFavorite(product.id) ? "active" : ""}" type="button" data-modal-favorite="${product.id}" aria-pressed="${isFavorite(product.id)}">${isFavorite(product.id) ? "♥ В избранном" : "♡ В избранное"}</button>
-          <button class="modal-share-button" type="button" data-share-product="${product.id}">Поделиться</button>
           <button class="add-button" type="button" data-modal-add="${product.id}">В корзину</button>
           <a class="secondary-link" href="#checkout" id="modalCheckoutLink">К оформлению</a>
         </div>
@@ -913,6 +937,7 @@ function openProductModal(productId) {
 function closeProductModal() {
   productModal.classList.remove("open");
   productModal.setAttribute("aria-hidden", "true");
+  modalTopActions.innerHTML = "";
   document.body.classList.remove("modal-open");
   closeImageZoom();
 }
