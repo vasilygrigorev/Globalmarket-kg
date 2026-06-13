@@ -952,7 +952,7 @@ function renderCart() {
     .map(
       ({ product, qty }) => `
         <article class="cart-item">
-          <span class="cart-item-icon" aria-hidden="true">${product.icon}</span>
+          <img class="cart-item-image ${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}">
           <div>
             <strong>${escapeHtml(product.title)}</strong>
             <span>${formatPrice(productPrice(product))}</span>

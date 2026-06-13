@@ -1433,14 +1433,19 @@ textarea {
   border-bottom: 1px solid var(--line);
 }
 
-.cart-item-icon {
-  display: grid;
-  place-items: center;
+.cart-item-image {
+  display: block;
   width: 54px;
   height: 54px;
+  border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
-  font-size: 28px;
+  object-fit: cover;
+}
+
+.cart-item-image.fallback-image {
+  padding: 8px;
+  object-fit: contain;
 }
 
 .qty-controls {
