@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Market KG - интернет-магазин</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css?v=20260612-category-compact-final" />
+    <link rel="stylesheet" href="styles.css?v=20260613-recently-viewed" />
   </head>
   <body>
     <header class="site-header">
@@ -46,6 +46,14 @@
       <section class="quick-categories" aria-label="Быстрые категории">
         <nav class="catalog-directory" id="catalogDirectory" aria-label="Текущий раздел"></nav>
         <div class="quick-category-grid" id="quickCategoryGrid"></div>
+      </section>
+
+      <section class="recently-viewed" id="recentlyViewed" aria-label="Недавно смотрели" hidden>
+        <div class="recently-viewed-heading">
+          <h2>Недавно смотрели</h2>
+          <span>на этом устройстве</span>
+        </div>
+        <div class="recently-viewed-row" id="recentlyViewedRow"></div>
       </section>
 
       <section class="service-strip" id="delivery" aria-label="Преимущества магазина">
@@ -202,6 +210,6 @@
       </div>
     </section>
 
-    <script src="app.js?v=20260612-category-compact-final"></script>
+    <script src="app.js?v=20260613-recently-viewed"></script>
   </body>
 </html>

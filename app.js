@@ -22,6 +22,8 @@ const searchInput = document.querySelector("#searchInput");
 const headerSearchInput = document.querySelector("#headerSearchInput");
 const quickCategoryGrid = document.querySelector("#quickCategoryGrid");
 const catalogDirectory = document.querySelector("#catalogDirectory");
+const recentlyViewedSection = document.querySelector("#recentlyViewed");
+const recentlyViewedRow = document.querySelector("#recentlyViewedRow");
 const priceRange = document.querySelector("#priceRange");
 const priceOutput = document.querySelector("#priceOutput");
 const sortSelect = document.querySelector("#sortSelect");
@@ -49,6 +51,9 @@ const heroDots = document.querySelector("#heroDots");
 const heroPrevButton = document.querySelector("#heroPrev");
 const heroNextButton = document.querySelector("#heroNext");
 let activeZoomImage = null;
+
+const recentlyViewedStorageKey = "globalMarketRecentlyViewed";
+let recentlyViewedIds = loadRecentlyViewed();
 
 const promoBanners = [
   {
@@ -225,6 +230,27 @@ function productCardImage(product) {
   return product.image || fallbackImageFor(product);
 }
 
+function loadRecentlyViewed() {
+  try {
+    const ids = JSON.parse(localStorage.getItem(recentlyViewedStorageKey) || "[]");
+    if (Array.isArray(ids)) return ids.filter((id) => typeof id === "string").slice(0, 20);
+  } catch {
+    return [];
+  }
+  return [];
+}
+
+function saveRecentlyViewed() {
+  localStorage.setItem(recentlyViewedStorageKey, JSON.stringify(recentlyViewedIds.slice(0, 20)));
+}
+
+function recordRecentlyViewed(productId) {
+  if (!productId) return;
+  recentlyViewedIds = [productId, ...recentlyViewedIds.filter((id) => id !== productId)].slice(0, 20);
+  saveRecentlyViewed();
+  renderRecentlyViewed();
+}
+
 function normalizeText(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
@@ -350,6 +376,7 @@ async function loadCatalog() {
   renderQuickCategories(catalog.categories || []);
   renderCategories();
   renderCatalogDirectory();
+  renderRecentlyViewed();
   renderProducts();
   renderCart();
 }
@@ -582,6 +609,42 @@ function diversifyProductGroup(sortedProducts) {
   return result;
 }
 
+function renderRecentlyViewed() {
+  if (!recentlyViewedSection || !recentlyViewedRow) return;
+  const recentProducts = recentlyViewedIds
+    .map((id) => products.find((product) => product.id === id))
+    .filter(Boolean)
+    .slice(0, 12);
+
+  recentlyViewedSection.hidden = recentProducts.length === 0;
+  if (!recentProducts.length) {
+    recentlyViewedRow.innerHTML = "";
+    return;
+  }
+
+  recentlyViewedRow.innerHTML = recentProducts
+    .map((product) => {
+      const display = productDisplayParts(product);
+      return `
+        <article class="recent-product">
+          <button class="recent-product-image" type="button" data-recent-open="${product.id}" aria-label="Открыть ${escapeHtml(product.title)}">
+            <img class="${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy">
+            <span>${escapeHtml(display.brand)}</span>
+          </button>
+          <button class="recent-product-copy" type="button" data-recent-open="${product.id}">
+            <strong>${escapeHtml(display.type)}</strong>
+            <small>${escapeHtml(display.size || product.unit || "")}</small>
+          </button>
+          <div class="recent-product-action">
+            <span>${currency.format(Math.round(productPrice(product)))}</span>
+            <button type="button" data-recent-add="${product.id}" aria-label="Добавить ${escapeHtml(product.title)} в корзину">+</button>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 function renderProducts() {
   const visibleProducts = getVisibleProducts();
   const pageProducts = visibleProducts.slice(0, state.visibleLimit);
@@ -684,6 +747,7 @@ function modalVisual(product) {
 function openProductModal(productId) {
   const product = products.find((item) => item.id === productId);
   if (!product) return;
+  recordRecentlyViewed(productId);
   const display = productDisplayParts(product);
 
   const characteristics = [
@@ -901,6 +965,17 @@ quickCategoryGrid.addEventListener("click", (event) => {
   document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
 });
 
+recentlyViewedRow?.addEventListener("click", (event) => {
+  const addButton = event.target.closest("[data-recent-add]");
+  const openButton = event.target.closest("[data-recent-open]");
+  if (addButton) {
+    addToCart(addButton.dataset.recentAdd);
+    setCartOpen(true);
+    return;
+  }
+  if (openButton) openProductModal(openButton.dataset.recentOpen);
+});
+
 catalogDirectory?.addEventListener("click", (event) => {
   const button = event.target.closest("button");
   if (!button) return;
@@ -1095,6 +1170,7 @@ customerForm.addEventListener("submit", (event) => {
   });
   renderCustomerPanel();
   renderProducts();
+  renderRecentlyViewed();
   renderCart();
   formStatus.textContent = "Регистрация сохранена. Скидка применена к корзине и каталогу.";
 });
@@ -1103,6 +1179,7 @@ clearCustomerButton.addEventListener("click", () => {
   clearCustomer();
   renderCustomerPanel();
   renderProducts();
+  renderRecentlyViewed();
   renderCart();
   formStatus.textContent = "Регистрация сброшена. В каталоге снова розничные цены.";
 });
