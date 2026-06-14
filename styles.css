@@ -81,8 +81,10 @@ select {
 .brand {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   min-width: 0;
   color: var(--ink);
+  overflow: hidden;
 }
 
 .brand-logo {
@@ -90,6 +92,28 @@ select {
   width: clamp(196px, 22vw, 264px);
   max-width: 100%;
   height: auto;
+}
+
+.brand-orb {
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.16) saturate(0.94);
+  opacity: 0.94;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 58%, rgba(0, 0, 0, 0.86) 66%, transparent 76%);
+  mask-image: radial-gradient(circle at 50% 50%, #000 58%, rgba(0, 0, 0, 0.86) 66%, transparent 76%);
+}
+
+.brand-wordmark {
+  display: block;
+  width: clamp(166px, 18vw, 228px);
+  max-width: 100%;
+  height: auto;
+  flex: 0 1 auto;
 }
 
 .brand-mark {
@@ -2137,10 +2161,21 @@ textarea {
     min-width: 0;
     max-width: 100%;
     overflow: hidden;
+    gap: 7px;
   }
 
   .brand-logo {
-    width: min(100%, 206px);
+    width: min(100%, 196px);
+  }
+
+  .brand-orb {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+
+  .brand-wordmark {
+    width: min(100%, 166px);
   }
 
   .search-toggle {
