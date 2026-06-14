@@ -274,6 +274,42 @@ select {
   transform: translateY(0) scale(1);
 }
 
+.back-to-top-button {
+  position: fixed;
+  right: 12px;
+  bottom: max(22px, env(safe-area-inset-bottom));
+  z-index: 44;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(210, 210, 215, 0.86);
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  cursor: pointer;
+}
+
+.back-to-top-button::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  transform: translateY(3px) rotate(45deg);
+}
+
+.back-to-top-button.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 @keyframes cartPulse {
   0%,
   100% {
@@ -1358,9 +1394,19 @@ textarea {
 }
 
 .price {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 850;
   color: var(--ink);
+  letter-spacing: 0;
+}
+
+.som-sign {
+  display: inline-block;
+  margin-left: 1px;
+  line-height: 0.86;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
 }
 
 .add-button {
@@ -1618,6 +1664,13 @@ textarea {
   font-size: 14px;
 }
 
+.cart-hint {
+  margin: -6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
 .cart-progress {
   height: 6px;
   overflow: hidden;
@@ -1638,8 +1691,28 @@ textarea {
   transition: width 0.2s ease;
 }
 
-.cart-summary > div {
+.cart-summary > div:not(.cart-progress) {
+  display: flex;
+  align-items: baseline;
   justify-content: space-between;
+}
+
+.cart-summary strong {
+  font-size: 24px;
+}
+
+.repeat-order-button {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--white);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.repeat-order-button[hidden] {
+  display: none;
 }
 
 .full {
@@ -1895,7 +1968,7 @@ textarea {
 }
 
 .modal-price-box strong {
-  font-size: 30px;
+  font-size: 36px;
 }
 
 .product-specs {
@@ -2525,7 +2598,7 @@ textarea {
   }
 
   .price {
-    font-size: 18px;
+    font-size: 21px;
   }
 
   .compact-add-button {

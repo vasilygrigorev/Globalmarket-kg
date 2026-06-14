@@ -5,6 +5,11 @@ let catalogSettings = {
   manager_whatsapp: "+996706771103",
 };
 
+const cartDraftStorageKey = "globalMarketCartDraft";
+const lastOrderStorageKey = "globalMarketLastOrder";
+const recentlyViewedStorageKey = "globalMarketRecentlyViewed";
+const favoritesStorageKey = "globalMarketFavorites";
+
 const state = {
   category: "Все",
   query: "",
@@ -13,7 +18,7 @@ const state = {
   maxPrice: 0,
   sort: "featured",
   visibleLimit: 60,
-  cart: new Map(),
+  cart: loadCartDraft(),
   customer: loadCustomer(),
 };
 
@@ -42,6 +47,8 @@ const formStatus = document.querySelector("#formStatus");
 const openCartButton = document.querySelector("#openCart");
 const floatingCartButton = document.querySelector("#floatingCart");
 const floatingCartCount = document.querySelector("#floatingCartCount");
+const backToTopButton = document.querySelector("#backToTop");
+const repeatLastOrderButton = document.querySelector("#repeatLastOrder");
 const productModal = document.querySelector("#productModal");
 const productModalContent = document.querySelector("#productModalContent");
 const modalTopActions = document.querySelector("#modalTopActions");
@@ -60,9 +67,7 @@ const heroPrevButton = document.querySelector("#heroPrev");
 const heroNextButton = document.querySelector("#heroNext");
 let activeZoomImage = null;
 
-const recentlyViewedStorageKey = "globalMarketRecentlyViewed";
 let recentlyViewedIds = loadRecentlyViewed();
-const favoritesStorageKey = "globalMarketFavorites";
 let favoriteIds = new Set(loadFavorites());
 
 const promoBanners = [
@@ -163,6 +168,10 @@ const fallbackImages = [
 
 function formatPrice(value) {
   return `${currency.format(Math.round(value))} сом`;
+}
+
+function formatPriceHtml(value) {
+  return `${currency.format(Math.round(value))} <span class="som-sign">с</span>`;
 }
 
 function formatWholesale(value) {
@@ -308,6 +317,66 @@ async function shareProduct(productId, triggerButton) {
       console.warn("Не удалось поделиться товаром", error);
     }
   }
+}
+
+function loadCartDraft() {
+  try {
+    const rows = JSON.parse(localStorage.getItem(cartDraftStorageKey) || "[]");
+    if (!Array.isArray(rows)) return new Map();
+    return new Map(
+      rows
+        .filter((row) => Array.isArray(row) && typeof row[0] === "string" && Number(row[1]) > 0)
+        .map(([id, qty]) => [id, Math.min(Math.max(Math.round(Number(qty)), 1), 99)])
+        .slice(0, 200),
+    );
+  } catch {
+    return new Map();
+  }
+}
+
+function saveCartDraft() {
+  const rows = [...state.cart.entries()].filter(([, qty]) => qty > 0).slice(0, 200);
+  localStorage.setItem(cartDraftStorageKey, JSON.stringify(rows));
+}
+
+function loadLastOrder() {
+  try {
+    const order = JSON.parse(localStorage.getItem(lastOrderStorageKey) || "null");
+    if (Array.isArray(order?.items)) return order;
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+function saveLastOrder() {
+  const items = cartEntries().map(({ product, qty }) => ({ id: product.id, qty }));
+  if (!items.length) return;
+  localStorage.setItem(
+    lastOrderStorageKey,
+    JSON.stringify({
+      savedAt: new Date().toISOString(),
+      items,
+      totalKgs: cartTotalValue(),
+    }),
+  );
+}
+
+function repeatLastOrder() {
+  const order = loadLastOrder();
+  if (!order?.items?.length) return;
+  const nextCart = new Map();
+  order.items.forEach((item) => {
+    if (products.some((product) => product.id === item.id) && Number(item.qty) > 0) {
+      nextCart.set(item.id, Math.min(Math.max(Math.round(Number(item.qty)), 1), 99));
+    }
+  });
+  if (!nextCart.size) return;
+  state.cart = nextCart;
+  saveCartDraft();
+  renderCart();
+  setCartOpen(true);
+  if (formStatus) formStatus.textContent = "Последний заказ добавлен в корзину.";
 }
 
 function loadFavorites() {
@@ -759,7 +828,7 @@ function renderRecentlyViewed() {
             <small>${escapeHtml(display.size || product.unit || "")}</small>
           </button>
           <div class="recent-product-action">
-            <span>${currency.format(Math.round(productPrice(product)))}</span>
+            <span>${formatPriceHtml(productPrice(product))}</span>
             <button type="button" data-recent-add="${product.id}" aria-label="Добавить ${escapeHtml(product.title)} в корзину">+</button>
           </div>
         </article>
@@ -816,13 +885,13 @@ function renderProducts() {
             <p>${escapeHtml(product.description)}</p>
             <div class="price-stack">
               <div class="price-action-row">
-                <span class="price">${formatPrice(productPrice(product))}</span>
+                <span class="price">${formatPriceHtml(productPrice(product))}</span>
                 <button class="add-button compact-add-button" type="button" data-add="${product.id}" aria-label="Добавить в корзину">В корзину</button>
               </div>
               <span class="registered-price-note">${
                 isRegisteredCustomer()
                   ? `Скидка регистрации: ${catalogSettings.default_registered_discount_percent}%`
-                  : `После регистрации: ${formatPrice(product.registeredPriceKgs)}`
+                  : `После регистрации: ${formatPriceHtml(product.registeredPriceKgs)}`
               }</span>
             </div>
             <div class="buy-row">
@@ -922,11 +991,11 @@ function openProductModal(productId) {
         <p>${escapeHtml(product.description)}</p>
         <div class="modal-price-box">
           <span>${isRegisteredCustomer() ? "Ваша цена" : "Цена"}</span>
-          <strong>${formatPrice(productPrice(product))}</strong>
+          <strong>${formatPriceHtml(productPrice(product))}</strong>
           <small>${
             isRegisteredCustomer()
               ? `Скидка регистрации: ${catalogSettings.default_registered_discount_percent}%`
-              : `После регистрации: ${formatPrice(product.registeredPriceKgs)}`
+              : `После регистрации: ${formatPriceHtml(product.registeredPriceKgs)}`
           }</small>
         </div>
         <dl class="product-specs">
@@ -935,7 +1004,7 @@ function openProductModal(productId) {
             .join("")}
         </dl>
         <div class="modal-note">
-          Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от ${formatPrice(catalogSettings.free_delivery_threshold_kgs)}.
+          Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от ${formatPriceHtml(catalogSettings.free_delivery_threshold_kgs)}.
         </div>
         <div class="modal-actions">
           <button class="add-button" type="button" data-modal-add="${product.id}">В корзину</button>
@@ -999,6 +1068,7 @@ function getProductWord(count) {
 function addToCart(productId) {
   const current = state.cart.get(productId) || 0;
   state.cart.set(productId, current + 1);
+  saveCartDraft();
   renderCart();
 }
 
@@ -1054,6 +1124,7 @@ function updateQty(productId, delta) {
   } else {
     state.cart.set(productId, next);
   }
+  saveCartDraft();
   renderCart();
 }
 
@@ -1073,7 +1144,8 @@ function renderCart() {
   const total = cartTotalValue();
   cartCount.textContent = totalCount;
   if (floatingCartCount) floatingCartCount.textContent = totalCount;
-  cartTotal.textContent = formatPrice(total);
+  cartTotal.innerHTML = formatPriceHtml(total);
+  if (repeatLastOrderButton) repeatLastOrderButton.hidden = !loadLastOrder();
   const threshold = catalogSettings.free_delivery_threshold_kgs;
   const progress = threshold > 0 ? Math.min(total / threshold, 1) : 0;
   if (cartDeliveryProgressBar) cartDeliveryProgressBar.style.width = `${Math.round(progress * 100)}%`;
@@ -1098,7 +1170,7 @@ function renderCart() {
           <img class="cart-item-image ${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}">
           <div>
             <strong>${escapeHtml(product.title)}</strong>
-            <span>${formatPrice(productPrice(product))}</span>
+            <span>${formatPriceHtml(productPrice(product))}</span>
             <div class="qty-controls" aria-label="Количество ${escapeHtml(product.title)}">
               <button type="button" data-qty="${product.id}" data-delta="-1">−</button>
               <span>${qty}</span>
@@ -1116,6 +1188,7 @@ function setCartOpen(isOpen) {
   cartDrawer.classList.toggle("open", isOpen);
   cartDrawer.setAttribute("aria-hidden", String(!isOpen));
   if (isOpen) revealSmartHeader();
+  updateBackToTopButton();
 }
 
 function updateSiteHeaderHeight() {
@@ -1139,6 +1212,13 @@ function revealSmartHeader() {
   siteHeader.classList.toggle("header-floating", window.scrollY > 16);
 }
 
+function updateBackToTopButton() {
+  if (!backToTopButton) return;
+  const shouldShow = window.scrollY > 900 && !cartDrawer.classList.contains("open") && !productModal.classList.contains("open");
+  backToTopButton.hidden = !shouldShow;
+  backToTopButton.classList.toggle("show", shouldShow);
+}
+
 function updateSmartHeader() {
   const currentY = Math.max(window.scrollY, 0);
   const delta = currentY - lastHeaderScrollY;
@@ -1155,6 +1235,7 @@ function updateSmartHeader() {
   }
 
   lastHeaderScrollY = currentY;
+  updateBackToTopButton();
   headerScrollTicking = false;
 }
 
@@ -1331,6 +1412,7 @@ cartItems.addEventListener("click", (event) => {
   if (qtyButton) updateQty(qtyButton.dataset.qty, Number(qtyButton.dataset.delta));
   if (removeButton) {
     state.cart.delete(removeButton.dataset.remove);
+    saveCartDraft();
     renderCart();
   }
 });
@@ -1377,6 +1459,10 @@ floatingCartButton?.addEventListener("click", () => {
   floatingCartButton.hidden = true;
   setCartOpen(true);
 });
+backToTopButton?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+repeatLastOrderButton?.addEventListener("click", repeatLastOrder);
 document.querySelector("#closeCart").addEventListener("click", () => setCartOpen(false));
 document.querySelector("#closeProductModal").addEventListener("click", closeProductModal);
 document.querySelector("#checkoutLink").addEventListener("click", () => setCartOpen(false));
@@ -1522,11 +1608,13 @@ document.querySelector("#checkoutForm").addEventListener("submit", (event) => {
   const formData = new FormData(event.currentTarget);
   const message = orderMessage(formData);
   const whatsapp = `https://wa.me/${catalogSettings.manager_whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
+  saveLastOrder();
   formStatus.innerHTML = `Открываем WhatsApp. Если он не открылся, <a href="${whatsapp}" target="_blank" rel="noreferrer">нажмите здесь</a>.`;
   window.location.href = whatsapp;
 });
 
 updateSiteHeaderHeight();
+updateBackToTopButton();
 renderHeroBanners();
 startHeroRotation();
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Market KG - интернет-магазин</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css?v=20260614-compact-header-icons" />
+    <link rel="stylesheet" href="styles.css?v=20260614-cart-history-price" />
   </head>
   <body>
     <header class="site-header">
@@ -38,6 +38,7 @@
       <span class="cart-bag-icon" aria-hidden="true"></span>
       <span id="floatingCartCount">0</span>
     </button>
+    <button class="back-to-top-button" id="backToTop" type="button" aria-label="Наверх" hidden></button>
 
     <main id="top">
       <section class="hero" aria-label="Главная витрина">
@@ -199,6 +200,7 @@
         <div class="cart-items" id="cartItems"></div>
         <div class="cart-summary">
           <p class="cart-delivery" id="cartDeliveryNote">Доставка согласуется с менеджером.</p>
+          <p class="cart-hint">Корзина сохранится на этом устройстве.</p>
           <div class="cart-progress" id="cartDeliveryProgress" aria-hidden="true">
             <span id="cartDeliveryProgressBar"></span>
           </div>
@@ -206,6 +208,7 @@
             <span>Итого</span>
             <strong id="cartTotal">0 сом</strong>
           </div>
+          <button class="repeat-order-button" id="repeatLastOrder" type="button" hidden>Повторить последний заказ</button>
           <a class="primary-link full" href="#checkout" id="checkoutLink">К оформлению</a>
         </div>
       </div>
@@ -219,6 +222,6 @@
       </div>
     </section>
 
-    <script src="app.js?v=20260614-compact-header-icons"></script>
+    <script src="app.js?v=20260614-cart-history-price"></script>
   </body>
 </html>
