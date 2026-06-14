@@ -243,6 +243,14 @@ function productCardImage(product) {
   return product.image || fallbackImageFor(product);
 }
 
+function favoriteIcon(active) {
+  return `
+    <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 20.3 4.9 13.4C1.8 10.4 2 5.6 5.4 3.6c2.1-1.2 4.8-.7 6.6 1.2 1.8-1.9 4.5-2.4 6.6-1.2 3.4 2 3.6 6.8.5 9.8L12 20.3Z"></path>
+    </svg>
+  `;
+}
+
 function productShareUrl(product) {
   const url = new URL(window.location.href);
   url.searchParams.set("product", product.id);
@@ -785,7 +793,7 @@ function renderProducts() {
         <article class="product-card">
           <div class="product-visual" style="--tone-a: ${product.tones[0]}; --tone-b: ${product.tones[1]}">
             <span class="placeholder-brand">${escapeHtml(product.brand || "GM")}</span>
-            <button class="favorite-button ${isFavorite(product.id) ? "active" : ""}" type="button" data-favorite="${product.id}" aria-label="${isFavorite(product.id) ? "Убрать из избранного" : "Добавить в избранное"}" aria-pressed="${isFavorite(product.id)}">${isFavorite(product.id) ? "♥" : "♡"}</button>
+            <button class="favorite-button ${isFavorite(product.id) ? "active" : ""}" type="button" data-favorite="${product.id}" aria-label="${isFavorite(product.id) ? "Убрать из избранного" : "Добавить в избранное"}" aria-pressed="${isFavorite(product.id)}">${favoriteIcon(isFavorite(product.id))}</button>
             ${
               badges.length
                 ? `<div class="marketing-badges">${badges.map((badge) => `<span>${escapeHtml(badge)}</span>`).join("")}</div>`
@@ -887,7 +895,7 @@ function openProductModal(productId) {
 
   modalTopActions.innerHTML = `
     <button class="modal-icon-action modal-favorite-icon ${isFavorite(product.id) ? "active" : ""}" type="button" data-modal-favorite="${product.id}" aria-label="${isFavorite(product.id) ? "Убрать из избранного" : "Добавить в избранное"}" aria-pressed="${isFavorite(product.id)}">
-      <span aria-hidden="true">${isFavorite(product.id) ? "♥" : "♡"}</span>
+      ${favoriteIcon(isFavorite(product.id))}
     </button>
     <button class="modal-icon-action" type="button" data-share-product="${product.id}" aria-label="Поделиться товаром">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">

@@ -23,7 +23,7 @@ html {
 
 body {
   margin: 0;
-  padding-top: var(--site-header-height, 73px);
+  padding-top: var(--site-header-height, 58px);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--ink);
   background: var(--paper);
@@ -58,8 +58,8 @@ select {
   display: grid;
   grid-template-columns: auto auto minmax(240px, 520px) auto;
   align-items: center;
-  gap: 18px;
-  padding: 14px clamp(18px, 4vw, 56px);
+  gap: 14px;
+  padding: 9px clamp(14px, 3vw, 40px);
   background: rgba(245, 245, 247, 0.82);
   border-bottom: 1px solid rgba(210, 210, 215, 0.8);
   backdrop-filter: saturate(180%) blur(20px);
@@ -84,7 +84,7 @@ select {
   gap: 0;
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 300;
   letter-spacing: 0;
 }
@@ -97,8 +97,8 @@ select {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--ink);
@@ -110,8 +110,8 @@ select {
 .menu-icon::before,
 .menu-icon::after {
   display: block;
-  width: 17px;
-  height: 1.5px;
+  width: 15px;
+  height: 1.6px;
   border-radius: 999px;
   background: currentColor;
 }
@@ -128,11 +128,11 @@ select {
 }
 
 .menu-icon::before {
-  top: -6px;
+  top: -5px;
 }
 
 .menu-icon::after {
-  top: 6px;
+  top: 5px;
 }
 
 .main-nav {
@@ -170,8 +170,8 @@ select {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--ink);
@@ -182,8 +182,8 @@ select {
 .search-icon {
   position: relative;
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .search-icon::before {
@@ -217,9 +217,9 @@ select {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-width: 44px;
-  height: 44px;
-  padding: 0 13px;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--ink);
@@ -228,9 +228,9 @@ select {
 }
 
 .cart-button {
-  min-width: 68px;
-  height: 44px;
-  padding: 0 10px;
+  min-width: 58px;
+  height: 36px;
+  padding: 0 8px;
   gap: 6px;
   color: var(--ink);
   font-size: 16px;
@@ -287,8 +287,8 @@ select {
 .cart-bag-icon {
   position: relative;
   display: block;
-  width: 19px;
-  height: 19px;
+  width: 17px;
+  height: 17px;
 }
 
 .cart-bag-icon::before {
@@ -296,20 +296,20 @@ select {
   position: absolute;
   left: 2px;
   bottom: 1px;
-  width: 15px;
-  height: 12px;
-  border: 1.7px solid var(--ink);
+  width: 13px;
+  height: 11px;
+  border: 1.6px solid var(--ink);
   border-radius: 2px 2px 5px 5px;
 }
 
 .cart-bag-icon::after {
   content: "";
   position: absolute;
-  left: 6px;
+  left: 5px;
   top: 0;
   width: 7px;
-  height: 8px;
-  border: 1.7px solid var(--ink);
+  height: 7px;
+  border: 1.6px solid var(--ink);
   border-bottom: 0;
   border-radius: 8px 8px 0 0;
 }
@@ -875,9 +875,12 @@ h2 {
 }
 
 .recent-product-action button.added::before {
-  content: "✓";
-  font-size: 16px;
-  font-weight: 700;
+  content: "";
+  width: 6px;
+  height: 11px;
+  border: solid currentColor;
+  border-width: 0 3px 3px 0;
+  transform: translateY(-1px) rotate(45deg);
 }
 
 .service-strip article {
@@ -1188,6 +1191,26 @@ textarea {
   cursor: pointer;
 }
 
+.heart-icon {
+  display: block;
+  width: 19px;
+  height: 19px;
+}
+
+.heart-icon path,
+.modal-icon-action .heart-icon path {
+  fill: rgba(255, 255, 255, 0.12);
+  stroke: currentColor;
+  stroke-linejoin: round;
+  stroke-width: 2.35;
+}
+
+.favorite-button.active .heart-icon path,
+.modal-favorite-icon.active .heart-icon path {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
 .favorite-button.active {
   border-color: rgba(215, 0, 21, 0.22);
   color: #d70015;
@@ -1377,9 +1400,12 @@ textarea {
 }
 
 .compact-add-button.added::before {
-  content: "✓";
-  font-size: 18px;
-  font-weight: 700;
+  content: "";
+  width: 8px;
+  height: 14px;
+  border: solid currentColor;
+  border-width: 0 3px 3px 0;
+  transform: translateY(-1px) rotate(45deg);
 }
 
 .registered-price-note {
@@ -1682,6 +1708,16 @@ textarea {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.9;
+}
+
+.modal-icon-action .heart-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-icon-action .heart-icon path {
+  fill: rgba(255, 255, 255, 0.12);
+  stroke-width: 2.35;
 }
 
 .modal-favorite-icon {
@@ -2006,20 +2042,20 @@ textarea {
 @media (max-width: 680px) {
   .site-header {
     grid-template-columns: auto minmax(0, 1fr) auto auto;
-    gap: 8px;
-    padding: 10px 14px;
+    gap: 7px;
+    padding: 6px 10px;
   }
 
   .menu-toggle {
     display: inline-flex;
-    width: 38px;
-    height: 38px;
+    width: 32px;
+    height: 32px;
   }
 
   .brand {
     min-width: 0;
     overflow: hidden;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 300;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -2027,8 +2063,8 @@ textarea {
 
   .search-toggle {
     display: inline-flex;
-    width: 38px;
-    height: 38px;
+    width: 32px;
+    height: 32px;
   }
 
   .header-search {
@@ -2042,35 +2078,35 @@ textarea {
   }
 
   .cart-button {
-    min-width: 56px;
-    height: 38px;
-    padding: 0 8px;
+    min-width: 50px;
+    height: 32px;
+    padding: 0 7px;
     gap: 4px;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .cart-bag-icon {
-    width: 17px;
-    height: 17px;
+    width: 15px;
+    height: 15px;
   }
 
   .cart-bag-icon::before {
     left: 2px;
-    width: 13px;
-    height: 11px;
-    border-width: 1.5px;
+    width: 11px;
+    height: 10px;
+    border-width: 1.45px;
   }
 
   .cart-bag-icon::after {
-    left: 5px;
+    left: 4px;
     width: 7px;
-    height: 7px;
-    border-width: 1.5px;
+    height: 6px;
+    border-width: 1.45px;
   }
 
   .search-icon {
-    width: 17px;
-    height: 17px;
+    width: 15px;
+    height: 15px;
   }
 
   .search-icon::before {
@@ -2419,6 +2455,11 @@ textarea {
     width: 30px;
     height: 30px;
     font-size: 17px;
+  }
+
+  .favorite-button .heart-icon {
+    width: 17px;
+    height: 17px;
   }
 
   .marketing-badges {
