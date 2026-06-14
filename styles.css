@@ -60,7 +60,7 @@ select {
   align-items: center;
   gap: 14px;
   padding: 9px clamp(14px, 3vw, 40px);
-  background: linear-gradient(180deg, rgba(232, 234, 238, 0.9), rgba(245, 246, 248, 0.88));
+  background: linear-gradient(180deg, rgba(202, 204, 208, 0.98), rgba(216, 218, 222, 0.96));
   border-bottom: 1px solid rgba(210, 210, 215, 0.8);
   backdrop-filter: saturate(180%) blur(20px);
   box-shadow: none;
@@ -74,65 +74,22 @@ select {
 }
 
 .site-header.header-floating {
-  background: linear-gradient(180deg, rgba(232, 234, 238, 0.96), rgba(245, 246, 248, 0.94));
+  background: linear-gradient(180deg, rgba(202, 204, 208, 0.99), rgba(216, 218, 222, 0.98));
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   min-width: 0;
   color: var(--ink);
 }
 
-.brand-orb {
-  position: relative;
-  flex: 0 0 auto;
-  width: 42px;
-  height: 42px;
-}
-
-.brand-orb::before {
-  content: "";
-  position: absolute;
-  inset: -5px;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(0, 142, 237, 0.34), transparent 62%);
-  filter: blur(2px);
-}
-
-.brand-orb img {
-  position: relative;
+.brand-logo {
   display: block;
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  object-fit: cover;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.88), 0 6px 16px rgba(3, 94, 180, 0.28);
-}
-
-.brand-wordmark {
-  display: inline-flex;
-  align-items: baseline;
-  min-width: 0;
-  overflow: hidden;
-  font-family: "Michroma", Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(17px, 2vw, 24px);
-  font-weight: 400;
-  letter-spacing: 0.24em;
-  line-height: 1;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.brand-global {
-  color: var(--ink);
-}
-
-.brand-market {
-  margin-left: 0.24em;
-  color: #0796ed;
+  width: clamp(210px, 24vw, 292px);
+  max-width: 100%;
+  height: auto;
 }
 
 .brand-mark {
@@ -2180,29 +2137,10 @@ textarea {
     min-width: 0;
     max-width: 100%;
     overflow: hidden;
-    gap: 5px;
   }
 
-  .brand-orb {
-    width: 27px;
-    height: 27px;
-  }
-
-  .brand-orb img {
-    width: 27px;
-    height: 27px;
-  }
-
-  .brand-wordmark {
-    flex: 1 1 auto;
-    min-width: 0;
-    max-width: 100%;
-    font-size: clamp(9px, 2.45vw, 12px);
-    letter-spacing: 0.08em;
-  }
-
-  .brand-market {
-    margin-left: 0.08em;
+  .brand-logo {
+    width: min(100%, 240px);
   }
 
   .search-toggle {
