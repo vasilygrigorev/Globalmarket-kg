@@ -1420,6 +1420,8 @@ textarea {
 }
 
 .compact-add-button {
+  display: inline-grid;
+  place-items: center;
   width: 34px;
   min-width: 34px;
   height: 34px;
@@ -1447,11 +1449,12 @@ textarea {
 
 .compact-add-button.added::before {
   content: "";
-  width: 8px;
-  height: 14px;
-  border: solid currentColor;
-  border-width: 0 3px 3px 0;
-  transform: translateY(-1px) rotate(45deg);
+  display: block;
+  width: 13px;
+  height: 8px;
+  border-left: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  transform: translateY(-1px) rotate(-45deg);
 }
 
 .registered-price-note {
