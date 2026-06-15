@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T06:19:39.099442+00:00",
+  "generatedAt": "2026-06-15T13:55:00+06:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -51,7 +51,7 @@
     {
       "id": "shaving",
       "title": "Бритье",
-      "count": 35,
+      "count": 36,
       "icon": "🪒"
     },
     {
@@ -7151,27 +7151,31 @@
       "searchText": "gillette venus simply станки 4 шт бритье gillette venus бритвенные станки женские бритвенные станки gillette venus simply для мягкого бритья. в упаковке 4 штуки."
     },
     {
-      "unit": "шт",
+      "unit": "200 мл",
       "badge": "Gillette",
       "retailPriceKgs": 450,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-fusion-moisturising-shave-gel-200ml-card-front.jpg",
+        "assets/products/gillette/gillette-fusion-moisturising-shave-gel-200ml-front.jpg",
+        "assets/products/gillette/gillette-fusion-moisturising-shave-gel-200ml-back.jpg"
+      ],
       "status": "active",
       "id": "prd_1dfaa90e937f",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-fusion-moisturising-shave-gel-200ml-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 436,
-      "description": "Гель для бритья Gillette Fusion Moisture для гладкого скольжения. Объем 200 мл.",
-      "title": "Gillette Fusion Moisture гель для бритья 200 мл",
+      "description": "Гель для бритья Gillette Fusion 5x Action Moisturising с какао-маслом для гладкого скольжения. Объем 200 мл.",
+      "title": "Gillette Fusion Moisturising гель для бритья 200 мл",
       "productType": "гель для бритья",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "gillette fusion moisture гель для бритья 200 мл бритье gillette гель для бритья гель для бритья gillette fusion moisture для гладкого скольжения. объем 200 мл."
+      "searchText": "gillette fusion moisturising гель для бритья 200 мл бритье gillette гель для бритья гель для бритья gillette fusion 5x action moisturising с какао-маслом для гладкого скольжения. объем 200 мл."
     },
     {
       "unit": "шт",
@@ -7222,6 +7226,33 @@
       "brand": "Gillette",
       "rating": 4.8,
       "searchText": "gillette moisturising гель для бритья 200 мл бритье gillette гель для бритья гель для бритья gillette series moisturising с какао-маслом для комфортного скольжения и защиты от раздражения. объем 200 мл."
+    },
+    {
+      "id": "prd_gillette_sensitive_shave_gel_200ml",
+      "title": "Gillette Sensitive гель для бритья 200 мл",
+      "brand": "Gillette",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "productType": "гель для бритья",
+      "unit": "200 мл",
+      "description": "Гель для бритья Gillette Series Sensitive с алоэ вера для чувствительной кожи и комфортного скольжения. Объем 200 мл.",
+      "retailPriceKgs": 395,
+      "registeredPriceKgs": 383,
+      "status": "active",
+      "rating": 4.8,
+      "badge": "Gillette",
+      "icon": "🪒",
+      "tones": [
+        "#d8e1e7",
+        "#667d8c"
+      ],
+      "image": "assets/products/gillette/gillette-sensitive-shave-gel-200ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/gillette/gillette-sensitive-shave-gel-200ml-card-front.jpg",
+        "assets/products/gillette/gillette-sensitive-shave-gel-200ml-front.jpg",
+        "assets/products/gillette/gillette-sensitive-shave-gel-200ml-back.jpg"
+      ],
+      "searchText": "gillette sensitive гель для бритья 200 мл бритье gillette гель для бритья гель для бритья gillette series sensitive с алоэ вера для чувствительной кожи и комфортного скольжения. объем 200 мл."
     },
     {
       "unit": "шт",
