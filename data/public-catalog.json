@@ -6579,27 +6579,31 @@
       "searchText": "axe b.spray (150) (m) dark temptation дезодоранты axe дезодоранты axe: дезодорант для ежедневной свежести."
     },
     {
-      "unit": "шт",
+      "unit": "122 мл",
       "badge": "AXE",
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/axe/axe-signature-rogue-122ml-card-front.jpg",
+        "assets/products/axe/axe-signature-rogue-122ml-front.jpg",
+        "assets/products/axe/axe-signature-rogue-122ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_e616d7830dcc",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/axe/axe-signature-rogue-122ml-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 291,
-      "description": "AXE: дезодорант для ежедневной свежести.",
-      "title": "AXE Deo 0% Gas (122) (M) Rogue",
-      "productType": "дезодоранты",
+      "description": "Дезодорант AXE Signature Rogue 0% Gas с цветочно-древесным ароматом и заявленной защитой до 72 часов. Объем 122 мл.",
+      "title": "AXE Signature Rogue дезодорант 122 мл",
+      "productType": "дезодорант 0% газа",
       "brand": "AXE",
       "rating": 4.8,
-      "searchText": "axe deo 0% gas (122) (m) rogue дезодоранты axe дезодоранты axe: дезодорант для ежедневной свежести."
+      "searchText": "axe signature rogue дезодорант 122 мл дезодоранты axe дезодорант 0% газа дезодорант axe signature rogue 0% gas с цветочно-древесным ароматом и заявленной защитой до 72 часов. объем 122 мл."
     },
     {
       "unit": "шт",
@@ -6694,27 +6698,31 @@
       "searchText": "fa rollon(m) (50) sport дезодоранты fa дезодоранты fa: дезодорант для ежедневной свежести."
     },
     {
-      "unit": "шт",
+      "unit": "122 мл",
       "badge": "AXE",
       "retailPriceKgs": 350,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/axe/axe-signature-intense-122ml-card-front.jpg",
+        "assets/products/axe/axe-signature-intense-122ml-front.jpg",
+        "assets/products/axe/axe-signature-intense-122ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_e79bae4e0c99",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/axe/axe-signature-intense-122ml-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 339,
-      "description": "AXE: дезодорант для ежедневной свежести.",
-      "title": "AXE Deo 0% Gas (122) (M) Intense",
-      "productType": "дезодоранты",
+      "description": "Дезодорант AXE Signature Intense 0% Gas с древесно-пряным ароматом и заявленной защитой до 72 часов. Объем 122 мл.",
+      "title": "AXE Signature Intense дезодорант 122 мл",
+      "productType": "дезодорант 0% газа",
       "brand": "AXE",
       "rating": 4.8,
-      "searchText": "axe deo 0% gas (122) (m) intense дезодоранты axe дезодоранты axe: дезодорант для ежедневной свежести."
+      "searchText": "axe signature intense дезодорант 122 мл дезодоранты axe дезодорант 0% газа дезодорант axe signature intense 0% gas с древесно-пряным ароматом и заявленной защитой до 72 часов. объем 122 мл."
     },
     {
       "unit": "шт",
@@ -6740,50 +6748,58 @@
       "searchText": "axe deo 0% gas (122) (m) suave дезодоранты axe дезодоранты axe: дезодорант для ежедневной свежести."
     },
     {
-      "unit": "шт",
+      "unit": "122 мл",
       "badge": "AXE",
       "retailPriceKgs": 230,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/axe/axe-signature-gold-temptation-122ml-card-front.jpg",
+        "assets/products/axe/axe-signature-gold-temptation-122ml-front.jpg",
+        "assets/products/axe/axe-signature-gold-temptation-122ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_84707e91d0d1",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/axe/axe-signature-gold-temptation-122ml-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 223,
-      "description": "AXE: дезодорант для ежедневной свежести.",
-      "title": "AXE Deo 0% Gas (122) (M) Gold Temptation",
-      "productType": "дезодоранты",
+      "description": "Дезодорант AXE Signature Gold Temptation 0% Gas с цитрусовым характером и заявленной защитой до 72 часов. Объем 122 мл.",
+      "title": "AXE Signature Gold Temptation дезодорант 122 мл",
+      "productType": "дезодорант 0% газа",
       "brand": "AXE",
       "rating": 4.8,
-      "searchText": "axe deo 0% gas (122) (m) gold temptation дезодоранты axe дезодоранты axe: дезодорант для ежедневной свежести."
+      "searchText": "axe signature gold temptation дезодорант 122 мл дезодоранты axe дезодорант 0% газа дезодорант axe signature gold temptation 0% gas с цитрусовым характером и заявленной защитой до 72 часов. объем 122 мл."
     },
     {
-      "unit": "шт",
+      "unit": "122 мл",
       "badge": "AXE",
       "retailPriceKgs": 270,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/axe/axe-signature-corporate-122ml-card-front.jpg",
+        "assets/products/axe/axe-signature-corporate-122ml-front.jpg",
+        "assets/products/axe/axe-signature-corporate-122ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_8b110a525852",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/axe/axe-signature-corporate-122ml-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 261,
-      "description": "AXE: дезодорант для ежедневной свежести.",
-      "title": "AXE Deo 0% Gas (122) (M) Corparate",
-      "productType": "дезодоранты",
+      "description": "Дезодорант AXE Signature Corporate 0% Gas с древесным ароматом Indoor Woody Fragrance и заявленной защитой до 72 часов. Объем 122 мл.",
+      "title": "AXE Signature Corporate дезодорант 122 мл",
+      "productType": "дезодорант 0% газа",
       "brand": "AXE",
       "rating": 4.8,
-      "searchText": "axe deo 0% gas (122) (m) corparate дезодоранты axe дезодоранты axe: дезодорант для ежедневной свежести."
+      "searchText": "axe signature corporate дезодорант 122 мл дезодоранты axe дезодорант 0% газа дезодорант axe signature corporate 0% gas с древесным ароматом indoor woody fragrance и заявленной защитой до 72 часов. объем 122 мл."
     },
     {
       "unit": "шт",
@@ -6855,27 +6871,31 @@
       "searchText": "reebok deo (150) (m) inspire дезодоранты reebok дезодоранты reebok: дезодорант для ежедневной свежести."
     },
     {
-      "unit": "шт",
+      "unit": "122 мл",
       "badge": "AXE",
       "retailPriceKgs": 260,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/axe/axe-signature-champion-122ml-card-front.jpg",
+        "assets/products/axe/axe-signature-champion-122ml-front.jpg",
+        "assets/products/axe/axe-signature-champion-122ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_17547dd70a52",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/axe/axe-signature-champion-122ml-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 252,
-      "description": "AXE: дезодорант для ежедневной свежести.",
-      "title": "AXE Deo 0% Gas (122) (M) Champion",
-      "productType": "дезодоранты",
+      "description": "Дезодорант AXE Signature Champion 0% Gas с заявленной защитой до 72 часов и ароматом Fresh Aqua. Объем 122 мл.",
+      "title": "AXE Signature Champion дезодорант 122 мл",
+      "productType": "дезодорант 0% газа",
       "brand": "AXE",
       "rating": 4.8,
-      "searchText": "axe deo 0% gas (122) (m) champion дезодоранты axe дезодоранты axe: дезодорант для ежедневной свежести."
+      "searchText": "axe signature champion дезодорант 122 мл дезодоранты axe дезодорант 0% газа дезодорант axe signature champion 0% gas с заявленной защитой до 72 часов и ароматом fresh aqua. объем 122 мл."
     },
     {
       "unit": "шт",
@@ -7177,27 +7197,31 @@
       "searchText": "gillette blue pivot одноразовые станки 5 шт бритье gillette бритвенные станки одноразовые станки gillette blue pivot для комфортного бритья. в упаковке 5 штук."
     },
     {
-      "unit": "шт",
+      "unit": "200 мл",
       "badge": "Gillette",
       "retailPriceKgs": 395,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-moisturising-shave-gel-200ml-card-front.jpg",
+        "assets/products/gillette/gillette-moisturising-shave-gel-200ml-front.jpg",
+        "assets/products/gillette/gillette-moisturising-shave-gel-200ml-back.jpg"
+      ],
       "status": "active",
       "id": "prd_e166f2ec9c56",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-moisturising-shave-gel-200ml-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 383,
-      "description": "Гель для бритья Gillette Moisture для комфортного ежедневного бритья. Объем 200 мл.",
-      "title": "Gillette Moisture гель для бритья 200 мл",
+      "description": "Гель для бритья Gillette Series Moisturising с какао-маслом для комфортного скольжения и защиты от раздражения. Объем 200 мл.",
+      "title": "Gillette Moisturising гель для бритья 200 мл",
       "productType": "гель для бритья",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "gillette moisture гель для бритья 200 мл бритье gillette гель для бритья гель для бритья gillette moisture для комфортного ежедневного бритья. объем 200 мл."
+      "searchText": "gillette moisturising гель для бритья 200 мл бритье gillette гель для бритья гель для бритья gillette series moisturising с какао-маслом для комфортного скольжения и защиты от раздражения. объем 200 мл."
     },
     {
       "unit": "шт",
@@ -7499,50 +7523,58 @@
       "searchText": "6 venus станок (2) breeze бритье 6 бритье 6: товар для бритья и ухода."
     },
     {
-      "unit": "шт",
-      "badge": "Shaving",
+      "unit": "200 мл",
+      "badge": "Gillette",
       "retailPriceKgs": 295,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-foam-sensitive-200ml-card-front.jpg",
+        "assets/products/gillette/gillette-foam-sensitive-200ml-front.jpg",
+        "assets/products/gillette/gillette-foam-sensitive-200ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_26f86cee34e8",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-foam-sensitive-200ml-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 286,
-      "description": "Shaving: товар для бритья и ухода.",
-      "title": "Shaving Foam (200) Sensitive",
-      "productType": "бритье",
-      "brand": "Shaving",
+      "description": "Пена для бритья Gillette Series Sensitive для чувствительной кожи, помогает сделать бритье более комфортным. Объем 200 мл.",
+      "title": "Gillette Sensitive пена для бритья 200 мл",
+      "productType": "пена для бритья",
+      "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "shaving foam (200) sensitive бритье shaving бритье shaving: товар для бритья и ухода."
+      "searchText": "gillette sensitive пена для бритья 200 мл бритье gillette пена для бритья пена для бритья gillette series sensitive для чувствительной кожи, помогает сделать бритье более комфортным. объем 200 мл."
     },
     {
-      "unit": "шт",
-      "badge": "Shaving",
+      "unit": "200 мл",
+      "badge": "Gillette",
       "retailPriceKgs": 295,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-foam-original-200ml-card-front.jpg",
+        "assets/products/gillette/gillette-foam-original-200ml-front.jpg",
+        "assets/products/gillette/gillette-foam-original-200ml-back.jpg"
+      ],
       "status": "review",
       "id": "prd_bd1e6c3316c4",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-foam-original-200ml-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 286,
-      "description": "Shaving: товар для бритья и ухода.",
-      "title": "Shaving Foam (200) Original",
-      "productType": "бритье",
-      "brand": "Shaving",
+      "description": "Пена для бритья Gillette Series Regular для ежедневного бритья и мягкого скольжения лезвия. Объем 200 мл.",
+      "title": "Gillette Regular пена для бритья 200 мл",
+      "productType": "пена для бритья",
+      "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "shaving foam (200) original бритье shaving бритье shaving: товар для бритья и ухода."
+      "searchText": "gillette regular пена для бритья 200 мл бритье gillette пена для бритья пена для бритья gillette series regular для ежедневного бритья и мягкого скольжения лезвия. объем 200 мл."
     },
     {
       "unit": "шт",
