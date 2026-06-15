@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T13:55:00+06:00",
+  "generatedAt": "2026-06-15T12:14:44.670382+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -15,13 +15,13 @@
     {
       "id": "home_cleaning",
       "title": "Уборка и чистота",
-      "count": 10,
+      "count": 11,
       "icon": "✨"
     },
     {
       "id": "hair",
       "title": "Уход за волосами",
-      "count": 105,
+      "count": 109,
       "icon": "🧴"
     },
     {
@@ -29,12 +29,6 @@
       "title": "Уход за телом",
       "count": 49,
       "icon": "🌸"
-    },
-    {
-      "id": "perfume",
-      "title": "Парфюм 5 мл",
-      "count": 3,
-      "icon": "✦"
     },
     {
       "id": "oral",
@@ -51,7 +45,7 @@
     {
       "id": "shaving",
       "title": "Бритье",
-      "count": 36,
+      "count": 35,
       "icon": "🪒"
     },
     {
@@ -126,14 +120,18 @@
       "retailPriceKgs": 1595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/ariel/ariel-fast-dissolving-2-5kg-card-front.jpg",
+        "assets/products/ariel/ariel-fast-dissolving-2-5kg-front.jpg",
+        "assets/products/ariel/ariel-fast-dissolving-2-5kg-back.jpg"
+      ],
       "status": "active",
       "id": "prd_165eafb70eb3",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/ariel/ariel-fast-dissolving-2-5kg-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 1547,
       "description": "Концентрированное средство Ariel Fast Dissolving для стирки белья. Формат 2,5 кг.",
@@ -241,14 +239,18 @@
       "retailPriceKgs": 2090,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/persil/persil-rose-gel-3l-card-front.jpg",
+        "assets/products/persil/persil-rose-gel-3l-front.jpg",
+        "assets/products/persil/persil-rose-gel-3l-back.jpg"
+      ],
       "status": "active",
       "id": "prd_f19e014e94cf",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/persil/persil-rose-gel-3l-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2027,
       "description": "Гель для стирки Persil Rose для повседневного ухода за бельем. Объем 3 л.",
@@ -264,14 +266,18 @@
       "retailPriceKgs": 2090,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/persil/persil-sensitive-gel-3l-card-front.jpg",
+        "assets/products/persil/persil-sensitive-gel-3l-front.jpg",
+        "assets/products/persil/persil-sensitive-gel-3l-back.jpg"
+      ],
       "status": "active",
       "id": "prd_9df7a08005ce",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/persil/persil-sensitive-gel-3l-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2027,
       "description": "Гель Persil Sensitive для бережной стирки и ежедневного ухода за бельем. Объем 3 л.",
@@ -379,14 +385,18 @@
       "retailPriceKgs": 2090,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/persil/persil-lavender-gel-3l-card-front.jpg",
+        "assets/products/persil/persil-lavender-gel-3l-front.jpg",
+        "assets/products/persil/persil-lavender-gel-3l-back.jpg"
+      ],
       "status": "active",
       "id": "prd_1f9a545036b2",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/persil/persil-lavender-gel-3l-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2027,
       "description": "Гель Persil Lavender для стирки белья с ароматом лаванды. Объем 3 л.",
@@ -425,22 +435,26 @@
       "retailPriceKgs": 3200,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/persil/persil-rose-gel-4-8l-card-front.jpg",
+        "assets/products/persil/persil-rose-gel-4-8l-front.jpg",
+        "assets/products/persil/persil-rose-gel-4-8l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_682eb8c7e746",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/persil/persil-rose-gel-4-8l-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 3104,
-      "description": "Persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 4,8 L, 4,8L.",
-      "title": "Persil GEL (4,8L) Rose",
+      "description": "Гель Persil Rose для стирки белья с ароматом розы. Большой объем 4,8 л.",
+      "title": "Persil Rose гель для стирки 4,8 л",
       "productType": "гель для стирки",
       "brand": "Persil",
       "rating": 4.8,
-      "searchText": "persil gel (4,8l) rose стирка и уход за бельем persil гель для стирки persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. формат: 4,8 l, 4,8l."
+      "searchText": "persil rose гель для стирки 4,8 л стирка и уход за бельем persil гель для стирки гель persil rose для стирки белья с ароматом розы. большой объем 4,8 л."
     },
     {
       "unit": "шт",
@@ -558,85 +572,73 @@
       "searchText": "lenor parfume (210g) ariel стирка и уход за бельем ariel кондиционер для белья ariel: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 210 g, 210g."
     },
     {
-      "unit": "210 г",
+      "unit": "шт",
       "badge": "Lenor",
       "retailPriceKgs": 750,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [
-        "assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg",
-        "assets/products/lenor/lenor-gold-orchid-210g-front.jpg",
-        "assets/products/lenor/lenor-gold-orchid-210g-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_19a727030e6b",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg",
+      "image": null,
       "icon": "🫧",
       "registeredPriceKgs": 727,
-      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Gold Orchid. Формат: 210 г.",
-      "title": "Lenor Gold Orchid парфюм для белья 210 г",
-      "productType": "парфюм для белья",
+      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 210 g, 210g.",
+      "title": "Lenor Parfume (210g) Gold Orchid",
+      "productType": "кондиционер для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor gold orchid парфюм для белья 210 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: gold orchid. формат: 210 г."
+      "searchText": "lenor parfume (210g) gold orchid стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 210 g, 210g."
     },
     {
-      "unit": "155 г",
+      "unit": "шт",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [
-        "assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg",
-        "assets/products/lenor/lenor-jasmine-white-cedar-155g-front.jpg",
-        "assets/products/lenor/lenor-jasmine-white-cedar-155g-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_594869df277e",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg",
+      "image": null,
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Jasmine & White Cedar. Формат: 155 г.",
-      "title": "Lenor Jasmine & White Cedar парфюм для белья 155 г",
-      "productType": "парфюм для белья",
+      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
+      "title": "Lenor Parfume (155g) White Cedar",
+      "productType": "кондиционер для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor jasmine & white cedar парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: jasmine & white cedar. формат: 155 г."
+      "searchText": "lenor parfume (155g) white cedar стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
     },
     {
-      "unit": "155 г",
+      "unit": "шт",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [
-        "assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg",
-        "assets/products/lenor/lenor-spring-awakening-155g-front.jpg",
-        "assets/products/lenor/lenor-spring-awakening-155g-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_d0f02fd7d3b0",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg",
+      "image": null,
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Spring Awakening. Формат: 155 г.",
-      "title": "Lenor Spring Awakening парфюм для белья 155 г",
-      "productType": "парфюм для белья",
+      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
+      "title": "Lenor Parfume (155g) Spring",
+      "productType": "кондиционер для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor spring awakening парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: spring awakening. формат: 155 г."
+      "searchText": "lenor parfume (155g) spring стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
     },
     {
       "unit": "шт",
@@ -690,22 +692,26 @@
       "retailPriceKgs": 2090,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/persil/persil-white-flower-gel-3l-card-front.jpg",
+        "assets/products/persil/persil-white-flower-gel-3l-front.jpg",
+        "assets/products/persil/persil-white-flower-gel-3l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_b0bf34e30459",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/persil/persil-white-flower-gel-3l-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2027,
-      "description": "Persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 3 L, 3L.",
-      "title": "Persil GEL (3L) White Flower",
+      "description": "Гель Persil White Flower для стирки белья с цветочным ароматом. Объем 3 л.",
+      "title": "Persil White Flower гель для стирки 3 л",
       "productType": "гель для стирки",
       "brand": "Persil",
       "rating": 4.8,
-      "searchText": "persil gel (3l) white flower стирка и уход за бельем persil гель для стирки persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. формат: 3 l, 3l."
+      "searchText": "persil white flower гель для стирки 3 л стирка и уход за бельем persil гель для стирки гель persil white flower для стирки белья с цветочным ароматом. объем 3 л."
     },
     {
       "unit": "шт",
@@ -804,31 +810,27 @@
       "searchText": "downy концентр.(конд.д/белья) (3л) valley dew стирка и уход за бельем downy стирка и уход за бельем downy: стирка и уход за бельем для ежедневного ухода за бельем и домашней стирки. формат: 3 л, 3л."
     },
     {
-      "unit": "155 г",
+      "unit": "шт",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [
-        "assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg",
-        "assets/products/lenor/lenor-dreamy-jasmine-155g-front.jpg",
-        "assets/products/lenor/lenor-dreamy-jasmine-155g-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_1710ac102a49",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg",
+      "image": null,
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Dreamy Jasmine. Формат: 155 г.",
-      "title": "Lenor Dreamy Jasmine парфюм для белья 155 г",
-      "productType": "парфюм для белья",
+      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
+      "title": "Lenor Parfume (155g) Dreamy Jasmine",
+      "productType": "кондиционер для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor dreamy jasmine парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: dreamy jasmine. формат: 155 г."
+      "searchText": "lenor parfume (155g) dreamy jasmine стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
     },
     {
       "unit": "шт",
@@ -859,22 +861,26 @@
       "retailPriceKgs": 3200,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg",
+        "assets/products/persil/persil-lavender-gel-4-8l-front.jpg",
+        "assets/products/persil/persil-lavender-gel-4-8l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_0e763c9c3654",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 3104,
-      "description": "Persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 4,8 L, 4,8L.",
-      "title": "Persil GEL (4,8L) Lavender",
+      "description": "Гель Persil Lavender для стирки белья с ароматом лаванды. Большой объем 4,8 л.",
+      "title": "Persil Lavender гель для стирки 4,8 л",
       "productType": "гель для стирки",
       "brand": "Persil",
       "rating": 4.8,
-      "searchText": "persil gel (4,8l) lavender стирка и уход за бельем persil гель для стирки persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. формат: 4,8 l, 4,8l."
+      "searchText": "persil lavender гель для стирки 4,8 л стирка и уход за бельем persil гель для стирки гель persil lavender для стирки белья с ароматом лаванды. большой объем 4,8 л."
     },
     {
       "unit": "шт",
@@ -900,31 +906,27 @@
       "searchText": "persil gel (3l+1l) high foam стирка и уход за бельем persil гель для стирки persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. формат: 3 l, 1 l."
     },
     {
-      "unit": "155 г",
+      "unit": "шт",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [
-        "assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg",
-        "assets/products/lenor/lenor-northern-solstice-155g-front.jpg",
-        "assets/products/lenor/lenor-northern-solstice-155g-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_40d21a2a86d6",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg",
+      "image": null,
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Northern Solstice. Формат: 155 г.",
-      "title": "Lenor Northern Solstice парфюм для белья 155 г",
-      "productType": "парфюм для белья",
+      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
+      "title": "Lenor Parfume (155g) Northern Solstice",
+      "productType": "кондиционер для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor northern solstice парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: northern solstice. формат: 155 г."
+      "searchText": "lenor parfume (155g) northern solstice стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
     },
     {
       "unit": "шт",
@@ -932,49 +934,49 @@
       "retailPriceKgs": 3300,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg",
+        "assets/products/persil/persil-white-flower-gel-4-8l-front.jpg",
+        "assets/products/persil/persil-white-flower-gel-4-8l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_f0d3a0b9698b",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 3201,
-      "description": "Persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 4,8 L, 4,8L.",
-      "title": "Persil GEL (4,8L) White Flower",
+      "description": "Гель Persil White Flower для стирки белья с цветочным ароматом. Большой объем 4,8 л.",
+      "title": "Persil White Flower гель для стирки 4,8 л",
       "productType": "гель для стирки",
       "brand": "Persil",
       "rating": 4.8,
-      "searchText": "persil gel (4,8l) white flower стирка и уход за бельем persil гель для стирки persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. формат: 4,8 l, 4,8l."
+      "searchText": "persil white flower гель для стирки 4,8 л стирка и уход за бельем persil гель для стирки гель persil white flower для стирки белья с цветочным ароматом. большой объем 4,8 л."
     },
     {
-      "unit": "155 г",
+      "unit": "шт",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [
-        "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg",
-        "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-front.jpg",
-        "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_0fb16d2a0b60",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg",
+      "image": null,
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Sandalwood & Eucalyptus. Формат: 155 г.",
-      "title": "Lenor Sandalwood & Eucalyptus парфюм для белья 155 г",
-      "productType": "парфюм для белья",
+      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
+      "title": "Lenor Parfume (155g) Sandal Wood",
+      "productType": "кондиционер для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor sandalwood & eucalyptus парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: sandalwood & eucalyptus. формат: 155 г."
+      "searchText": "lenor parfume (155g) sandal wood стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
     },
     {
       "unit": "шт",
@@ -1069,31 +1071,27 @@
       "searchText": "comfort (конд.д/белья) (1l) spring стирка и уход за бельем comfort кондиционер для белья comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 1 l, 1l."
     },
     {
-      "unit": "155 г",
+      "unit": "шт",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [
-        "assets/products/lenor/lenor-fresh-155g-card-front.jpg",
-        "assets/products/lenor/lenor-fresh-155g-front.jpg",
-        "assets/products/lenor/lenor-fresh-155g-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_311be4dd4930",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/lenor/lenor-fresh-155g-card-front.jpg",
+      "image": null,
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Fresh. Формат: 155 г.",
-      "title": "Lenor Fresh парфюм для белья 155 г",
-      "productType": "парфюм для белья",
+      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
+      "title": "Lenor Parfume (155g) Fresh",
+      "productType": "кондиционер для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor fresh парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: fresh. формат: 155 г."
+      "searchText": "lenor parfume (155g) fresh стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
     },
     {
       "unit": "шт",
@@ -1173,31 +1171,27 @@
       "searchText": "downy fresh valley dew кондиционер для белья 1 л стирка и уход за бельем downy кондиционер для белья кондиционер для белья downy fresh valley dew, объём 1 л. аромат valley dew / свежий аромат, до 9 стирок. по лицевой этикетке указано fresh и до 7 дней свежести. штрихкод: 5413149637924."
     },
     {
-      "unit": "155 г",
+      "unit": "шт",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [
-        "assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg",
-        "assets/products/lenor/lenor-cool-cotton-155g-front.jpg",
-        "assets/products/lenor/lenor-cool-cotton-155g-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_56516b8b34c7",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg",
+      "image": null,
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Cool Cotton. Формат: 155 г.",
-      "title": "Lenor Cool Cotton парфюм для белья 155 г",
-      "productType": "парфюм для белья",
+      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
+      "title": "Lenor Parfume (155g) Cool Cotton",
+      "productType": "кондиционер для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor cool cotton парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: cool cotton. формат: 155 г."
+      "searchText": "lenor parfume (155g) cool cotton стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
     },
     {
       "unit": "шт",
@@ -1457,7 +1451,7 @@
       "searchText": "tide порошок (2.5кг) antibakterial стирка и уход за бельем tide стиральный порошок tide: стиральный порошок для ежедневного ухода за бельем и домашней стирки. формат: 2.5 кг, 2.5кг."
     },
     {
-      "unit": "500 мл",
+      "unit": "шт",
       "badge": "Jif",
       "retailPriceKgs": 550,
       "category": "Уборка и чистота",
@@ -1478,10 +1472,10 @@
       "registeredPriceKgs": 533,
       "description": "Чистящий крем Jif Lemon для кухни, ванной и твердых поверхностей. Формат: 500 мл.",
       "title": "Jif Lemon чистящий крем 500 мл",
-      "productType": "чистящий крем",
+      "productType": "чистящее средство",
       "brand": "Jif",
       "rating": 4.8,
-      "searchText": "jif lemon чистящий крем 500 мл уборка и чистота jif чистящий крем чистящий крем jif lemon для кухни, ванной и твердых поверхностей. формат: 500 мл."
+      "searchText": "jif lemon чистящий крем 500 мл уборка и чистота jif чистящее средство чистящий крем jif lemon для кухни, ванной и твердых поверхностей. формат: 500 мл."
     },
     {
       "unit": "шт",
@@ -1602,27 +1596,24 @@
       "unit": "шт",
       "badge": "TRESemme",
       "retailPriceKgs": 695,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [
-        "assets/products/tresemme/tresemme-clean-replenish-828ml-card-front.jpg",
-        "assets/products/tresemme/tresemme-clean-replenish-828ml-front.jpg"
-      ],
+      "category": "Уборка и чистота",
+      "categoryId": "home_cleaning",
+      "galleryImages": [],
       "status": "review",
       "id": "prd_432b62d4b317",
       "tones": [
         "#d7eadf",
         "#6aa58f"
       ],
-      "image": "assets/products/tresemme/tresemme-clean-replenish-828ml-card-front.jpg",
+      "image": null,
       "icon": "✨",
       "registeredPriceKgs": 674,
-      "description": "Шампунь TRESemmé Clean & Replenish 3-в-1 для очищения, ухода и распутывания волос. Объём 828 мл, с pro vitamin C и green tea.",
-      "title": "TRESemmé Clean & Replenish шампунь 828 мл",
-      "productType": "шампунь",
-      "brand": "TRESemmé",
+      "description": "TRESemme: товар для дома и личного ухода.",
+      "title": "TRESemme Шамп.(828) Clean & Replenish",
+      "productType": "уборка и чистота",
+      "brand": "TRESemme",
       "rating": 4.8,
-      "searchText": "tresemmé clean & replenish шампунь 828 мл tresemmé шампунь шампунь tresemmé clean & replenish 3-в-1 для очищения, ухода и распутывания волос. объём 828 мл, с pro vitamin c и green tea. уход за волосами"
+      "searchText": "tresemme шамп.(828) clean & replenish уборка и чистота tresemme уборка и чистота tresemme: товар для дома и личного ухода."
     },
     {
       "unit": "шт",
@@ -1901,191 +1892,165 @@
       "searchText": "head & shoulders menthol шампунь 400 мл уход за волосами head & shoulders шампунь шампунь head & shoulders menthol для ощущения свежести и ежедневного ухода. объем 400 мл."
     },
     {
-      "unit": "600 мл",
+      "unit": "шт",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair-care",
-      "galleryImages": [
-        "assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
-        "assets/products/pantene/pantene-smooth-silky-600ml-front.jpg",
-        "assets/products/pantene/pantene-smooth-silky-600ml-back.jpg"
-      ],
+      "categoryId": "hair",
+      "galleryImages": [],
       "status": "review",
       "id": "prd_d0bc9026f5ab",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Шампунь Pantene Pro-V Smooth & Silky для ежедневного ухода за волосами. Формат: 600 мл.",
-      "title": "Pantene Smooth & Silky шампунь 600 мл",
+      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
+      "title": "Pantene Шамп.Arab (600ml) Smooth Silky",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene smooth & silky шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v smooth & silky для ежедневного ухода за волосами. формат: 600 мл."
+      "searchText": "pantene шамп.arab (600ml) smooth silky уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
-      "unit": "600 мл",
+      "unit": "шт",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair-care",
-      "galleryImages": [
-        "assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
-        "assets/products/pantene/pantene-daily-care-600ml-front.jpg",
-        "assets/products/pantene/pantene-daily-care-600ml-back.jpg"
-      ],
+      "categoryId": "hair",
+      "galleryImages": [],
       "status": "review",
       "id": "prd_572ed90689d1",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Шампунь Pantene Pro-V Daily Care для ежедневного ухода за волосами. Формат: 600 мл.",
-      "title": "Pantene Daily Care шампунь 600 мл",
+      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
+      "title": "Pantene Шамп.Arab (600ml) Daily Care",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene daily care шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v daily care для ежедневного ухода за волосами. формат: 600 мл."
+      "searchText": "pantene шамп.arab (600ml) daily care уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
-      "unit": "600 мл",
+      "unit": "шт",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair-care",
-      "galleryImages": [
-        "assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
-        "assets/products/pantene/pantene-anti-hair-fall-600ml-front.jpg",
-        "assets/products/pantene/pantene-anti-hair-fall-600ml-back.jpg"
-      ],
+      "categoryId": "hair",
+      "galleryImages": [],
       "status": "review",
       "id": "prd_dce1df68b778",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Шампунь Pantene Pro-V Anti Hair Fall для ежедневного ухода за волосами. Формат: 600 мл.",
-      "title": "Pantene Anti Hair Fall шампунь 600 мл",
+      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
+      "title": "Pantene Шамп.Arab (600ml) Anti Hair Fall",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene anti hair fall шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v anti hair fall для ежедневного ухода за волосами. формат: 600 мл."
+      "searchText": "pantene шамп.arab (600ml) anti hair fall уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
-      "unit": "600 мл",
+      "unit": "шт",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair-care",
-      "galleryImages": [
-        "assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg",
-        "assets/products/pantene/pantene-damage-repair-600ml-front.jpg"
-      ],
+      "categoryId": "hair",
+      "galleryImages": [],
       "status": "review",
       "id": "prd_1f1557a2acbb",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Шампунь Pantene Pro-V Damage Repair для ежедневного ухода за волосами. Формат: 600 мл.",
-      "title": "Pantene Damage Repair шампунь 600 мл",
+      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
+      "title": "Pantene Шамп.Arab (600ml) Damage Repair",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene damage repair шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v damage repair для ежедневного ухода за волосами. формат: 600 мл."
+      "searchText": "pantene шамп.arab (600ml) damage repair уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
-      "unit": "600 мл",
+      "unit": "шт",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair-care",
-      "galleryImages": [
-        "assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
-        "assets/products/pantene/pantene-goodbye-frizz-600ml-front.jpg",
-        "assets/products/pantene/pantene-goodbye-frizz-600ml-back.jpg"
-      ],
+      "categoryId": "hair",
+      "galleryImages": [],
       "status": "review",
       "id": "prd_1e0cb301d44d",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Шампунь Pantene Pro-V Goodbye Frizz для ежедневного ухода за волосами. Формат: 600 мл.",
-      "title": "Pantene Goodbye Frizz шампунь 600 мл",
+      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
+      "title": "Pantene Шамп.Arab (600ml) Good Bye",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene goodbye frizz шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v goodbye frizz для ежедневного ухода за волосами. формат: 600 мл."
+      "searchText": "pantene шамп.arab (600ml) good bye уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
-      "unit": "600 мл",
+      "unit": "шт",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair-care",
-      "galleryImages": [
-        "assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
-        "assets/products/pantene/pantene-moisture-renewal-600ml-front.jpg",
-        "assets/products/pantene/pantene-moisture-renewal-600ml-back.jpg"
-      ],
+      "categoryId": "hair",
+      "galleryImages": [],
       "status": "review",
       "id": "prd_5faaff6cf17c",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Шампунь Pantene Pro-V Moisture Renewal для ежедневного ухода за волосами. Формат: 600 мл.",
-      "title": "Pantene Moisture Renewal шампунь 600 мл",
+      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
+      "title": "Pantene Шамп.Arab (600ml) Moisture",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene moisture renewal шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v moisture renewal для ежедневного ухода за волосами. формат: 600 мл."
+      "searchText": "pantene шамп.arab (600ml) moisture уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
-      "unit": "600 мл",
+      "unit": "шт",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair-care",
-      "galleryImages": [
-        "assets/products/pantene/pantene-sheer-volume-600ml-card-front.jpg",
-        "assets/products/pantene/pantene-sheer-volume-600ml-front.jpg"
-      ],
+      "categoryId": "hair",
+      "galleryImages": [],
       "status": "review",
       "id": "prd_296bd01a7c1f",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/pantene/pantene-sheer-volume-600ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Шампунь Pantene Pro-V Sheer Volume для ежедневного ухода за волосами. Формат: 600 мл.",
-      "title": "Pantene Sheer Volume шампунь 600 мл",
+      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
+      "title": "Pantene Шамп.Arab (600ml) Volume",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene sheer volume шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v sheer volume для ежедневного ухода за волосами. формат: 600 мл."
+      "searchText": "pantene шамп.arab (600ml) volume уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
       "unit": "шт",
@@ -2318,31 +2283,27 @@
       "searchText": "lux гельдуш (500 мл) rose уход за волосами lux уход за волосами lux: средство для ухода за волосами на каждый день. формат: 500 мл."
     },
     {
-      "unit": "600 мл",
+      "unit": "шт",
       "badge": "Pantene",
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
-      "categoryId": "hair-care",
-      "galleryImages": [
-        "assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
-        "assets/products/pantene/pantene-anti-dandruff-600ml-front.jpg",
-        "assets/products/pantene/pantene-anti-dandruff-600ml-back.jpg"
-      ],
+      "categoryId": "hair",
+      "galleryImages": [],
       "status": "review",
       "id": "prd_da9eaa7d3675",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 868,
-      "description": "Шампунь Pantene Pro-V Anti-Dandruff для ежедневного ухода за волосами. Формат: 600 мл.",
-      "title": "Pantene Anti-Dandruff шампунь 600 мл",
+      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
+      "title": "Pantene Шамп.Arab (600ml) Anti Dandruff",
       "productType": "шампунь",
       "brand": "Pantene",
       "rating": 4.8,
-      "searchText": "pantene anti-dandruff шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v anti-dandruff для ежедневного ухода за волосами. формат: 600 мл."
+      "searchText": "pantene шамп.arab (600ml) anti dandruff уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
       "unit": "шт",
@@ -3110,26 +3071,22 @@
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [
-        "assets/products/tresemme/tresemme-smooth-silky-828ml-card-front.jpg",
-        "assets/products/tresemme/tresemme-smooth-silky-828ml-front.jpg",
-        "assets/products/tresemme/tresemme-smooth-silky-828ml-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_01077bb33667",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/tresemme/tresemme-smooth-silky-828ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "Шампунь TRESemmé Silky & Smooth для гладкости и блеска волос. Объём 828 мл, формула с argan oleo blend.",
-      "title": "TRESemmé Silky & Smooth шампунь 828 мл",
+      "description": "TRESemme: средство для ухода за волосами на каждый день.",
+      "title": "TRESemme Шамп.(828) Smooth Silki",
       "productType": "шампунь",
-      "brand": "TRESemmé",
+      "brand": "TRESemme",
       "rating": 4.8,
-      "searchText": "tresemmé silky & smooth шампунь 828 мл tresemmé шампунь шампунь tresemmé silky & smooth для гладкости и блеска волос. объём 828 мл, формула с argan oleo blend. уход за волосами"
+      "searchText": "tresemme шамп.(828) smooth silki уход за волосами tresemme шампунь tresemme: средство для ухода за волосами на каждый день."
     },
     {
       "unit": "шт",
@@ -3708,30 +3665,26 @@
     },
     {
       "unit": "шт",
-      "badge": "Sunsilk",
+      "badge": "Sun",
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [
-        "assets/products/sunsilk/sunsilk-black-shine-625ml-card-front.jpg",
-        "assets/products/sunsilk/sunsilk-black-shine-625ml-front.jpg",
-        "assets/products/sunsilk/sunsilk-black-shine-625ml-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_e82e0719de28",
       "tones": [
-        "#251f28",
-        "#c13e99"
+        "#f4d5df",
+        "#b66f91"
       ],
-      "image": "assets/products/sunsilk/sunsilk-black-shine-625ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "Шампунь Sunsilk Black Shine для блеска тёмных волос. Объём 625 мл, формула с henna, oil, pearl и vitamin E.",
-      "title": "Sunsilk Black Shine шампунь 625 мл",
+      "description": "Sun: средство для ухода за волосами на каждый день.",
+      "title": "Sun silk Шамп.(650) Black Shine",
       "productType": "шампунь",
-      "brand": "Sunsilk",
+      "brand": "Sun",
       "rating": 4.8,
-      "searchText": "sunsilk black shine шампунь 625 мл sunsilk шампунь шампунь sunsilk black shine для блеска тёмных волос. объём 625 мл, формула с henna, oil, pearl и vitamin e. уход за волосами"
+      "searchText": "sun silk шамп.(650) black shine уход за волосами sun шампунь sun: средство для ухода за волосами на каждый день."
     },
     {
       "unit": "шт",
@@ -3850,30 +3803,26 @@
     },
     {
       "unit": "шт",
-      "badge": "Sunsilk",
+      "badge": "Sun",
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [
-        "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-card-front.jpg",
-        "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-front.jpg",
-        "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_8ecb44018700",
       "tones": [
-        "#f5a4c5",
-        "#d84991"
+        "#f4d5df",
+        "#b66f91"
       ],
-      "image": "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "Шампунь Sunsilk Smooth & Manageable для более послушных и гладких волос. Объём 625 мл, формула с argan oil, elastin и vitamin C.",
-      "title": "Sunsilk Smooth & Manageable шампунь 625 мл",
+      "description": "Sun: средство для ухода за волосами на каждый день.",
+      "title": "Sun silk Шамп.(650) Smooth & Manageable",
       "productType": "шампунь",
-      "brand": "Sunsilk",
+      "brand": "Sun",
       "rating": 4.8,
-      "searchText": "sunsilk smooth & manageable шампунь 625 мл sunsilk шампунь шампунь sunsilk smooth & manageable для более послушных и гладких волос. объём 625 мл, формула с argan oil, elastin и vitamin c. уход за волосами"
+      "searchText": "sun silk шамп.(650) smooth & manageable уход за волосами sun шампунь sun: средство для ухода за волосами на каждый день."
     },
     {
       "unit": "шт",
@@ -3950,26 +3899,22 @@
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [
-        "assets/products/tresemme/tresemme-color-828ml-card-front.jpg",
-        "assets/products/tresemme/tresemme-color-828ml-front.jpg",
-        "assets/products/tresemme/tresemme-color-828ml-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_7cf735f59b18",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/tresemme/tresemme-color-828ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "Шампунь TRESemmé Revitalized Color для окрашенных волос. Объём 828 мл, формула с hibiscus essence для яркости и блеска.",
-      "title": "TRESemmé Color шампунь 828 мл",
+      "description": "TRESemme: средство для ухода за волосами на каждый день.",
+      "title": "TRESemme Шамп.(828) Color",
       "productType": "шампунь",
-      "brand": "TRESemmé",
+      "brand": "TRESemme",
       "rating": 4.8,
-      "searchText": "tresemmé color шампунь 828 мл tresemmé шампунь шампунь tresemmé revitalized color для окрашенных волос. объём 828 мл, формула с hibiscus essence для яркости и блеска. уход за волосами"
+      "searchText": "tresemme шамп.(828) color уход за волосами tresemme шампунь tresemme: средство для ухода за волосами на каждый день."
     },
     {
       "unit": "шт",
@@ -4115,53 +4060,45 @@
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [
-        "assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
-        "assets/products/tresemme/tresemme-volume-828ml-front.jpg",
-        "assets/products/tresemme/tresemme-volume-828ml-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_096618ced7c1",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "Шампунь TRESemmé Volume для придания объёма волосам. Объём 828 мл, формула с collagen & peptide complex.",
-      "title": "TRESemmé Volume шампунь 828 мл",
+      "description": "TRESemme: средство для ухода за волосами на каждый день.",
+      "title": "TRESemme Шамп.(828) Volume",
       "productType": "шампунь",
-      "brand": "TRESemmé",
+      "brand": "TRESemme",
       "rating": 4.8,
-      "searchText": "tresemmé volume шампунь 828 мл tresemmé шампунь шампунь tresemmé volume для придания объёма волосам. объём 828 мл, формула с collagen & peptide complex. уход за волосами"
+      "searchText": "tresemme шамп.(828) volume уход за волосами tresemme шампунь tresemme: средство для ухода за волосами на каждый день."
     },
     {
       "unit": "шт",
-      "badge": "Sunsilk",
+      "badge": "Sun",
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [
-        "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-card-front.jpg",
-        "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-front.jpg",
-        "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "review",
       "id": "prd_bdfdfa2b110e",
       "tones": [
-        "#d7e8ff",
-        "#5c94d6"
+        "#f4d5df",
+        "#b66f91"
       ],
-      "image": "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-card-front.jpg",
+      "image": null,
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "Шампунь Sunsilk Anti-Dandruff Healthy Strong против перхоти. Объём 625 мл, формула с tea tree oil, aloe vera и ginseng.",
-      "title": "Sunsilk Anti-Dandruff Healthy Strong шампунь 625 мл",
+      "description": "Sun: средство для ухода за волосами на каждый день.",
+      "title": "Sun silk Шамп.(650) Anti Dandruff",
       "productType": "шампунь",
-      "brand": "Sunsilk",
+      "brand": "Sun",
       "rating": 4.8,
-      "searchText": "sunsilk anti-dandruff healthy strong шампунь 625 мл sunsilk шампунь шампунь sunsilk anti-dandruff healthy strong против перхоти. объём 625 мл, формула с tea tree oil, aloe vera и ginseng. уход за волосами"
+      "searchText": "sun silk шамп.(650) anti dandruff уход за волосами sun шампунь sun: средство для ухода за волосами на каждый день."
     },
     {
       "unit": "шт",
@@ -6579,7 +6516,7 @@
       "searchText": "axe b.spray (150) (m) dark temptation дезодоранты axe дезодоранты axe: дезодорант для ежедневной свежести."
     },
     {
-      "unit": "122 мл",
+      "unit": "шт",
       "badge": "AXE",
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
@@ -6589,7 +6526,7 @@
         "assets/products/axe/axe-signature-rogue-122ml-front.jpg",
         "assets/products/axe/axe-signature-rogue-122ml-back.jpg"
       ],
-      "status": "review",
+      "status": "active",
       "id": "prd_e616d7830dcc",
       "tones": [
         "#e1d8f3",
@@ -6657,22 +6594,26 @@
       "retailPriceKgs": 350,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/axe/axe-signature-maverick-122ml-card-front.jpg",
+        "assets/products/axe/axe-signature-maverick-122ml-front.jpg",
+        "assets/products/axe/axe-signature-maverick-122ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_e74e6e5aeafb",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/axe/axe-signature-maverick-122ml-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 339,
-      "description": "AXE: дезодорант для ежедневной свежести.",
-      "title": "AXE Deo 0% Gas (122) (M) Maverick",
-      "productType": "дезодоранты",
+      "description": "Дезодорант AXE Signature Maverick 0% Gas с ароматом Fresh Spicy Fragrance и заявленной защитой до 72 часов. Объем 122 мл.",
+      "title": "AXE Signature Maverick дезодорант 122 мл",
+      "productType": "дезодорант 0% газа",
       "brand": "AXE",
       "rating": 4.8,
-      "searchText": "axe deo 0% gas (122) (m) maverick дезодоранты axe дезодоранты axe: дезодорант для ежедневной свежести."
+      "searchText": "axe signature maverick дезодорант 122 мл дезодоранты axe дезодорант 0% газа дезодорант axe signature maverick 0% gas с ароматом fresh spicy fragrance и заявленной защитой до 72 часов. объем 122 мл."
     },
     {
       "unit": "шт",
@@ -6698,7 +6639,7 @@
       "searchText": "fa rollon(m) (50) sport дезодоранты fa дезодоранты fa: дезодорант для ежедневной свежести."
     },
     {
-      "unit": "122 мл",
+      "unit": "шт",
       "badge": "AXE",
       "retailPriceKgs": 350,
       "category": "Дезодоранты",
@@ -6708,7 +6649,7 @@
         "assets/products/axe/axe-signature-intense-122ml-front.jpg",
         "assets/products/axe/axe-signature-intense-122ml-back.jpg"
       ],
-      "status": "review",
+      "status": "active",
       "id": "prd_e79bae4e0c99",
       "tones": [
         "#e1d8f3",
@@ -6748,7 +6689,7 @@
       "searchText": "axe deo 0% gas (122) (m) suave дезодоранты axe дезодоранты axe: дезодорант для ежедневной свежести."
     },
     {
-      "unit": "122 мл",
+      "unit": "шт",
       "badge": "AXE",
       "retailPriceKgs": 230,
       "category": "Дезодоранты",
@@ -6758,7 +6699,7 @@
         "assets/products/axe/axe-signature-gold-temptation-122ml-front.jpg",
         "assets/products/axe/axe-signature-gold-temptation-122ml-back.jpg"
       ],
-      "status": "review",
+      "status": "active",
       "id": "prd_84707e91d0d1",
       "tones": [
         "#e1d8f3",
@@ -6767,15 +6708,15 @@
       "image": "assets/products/axe/axe-signature-gold-temptation-122ml-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 223,
-      "description": "Дезодорант AXE Signature Gold Temptation 0% Gas с цитрусовым характером и заявленной защитой до 72 часов. Объем 122 мл.",
+      "description": "Дезодорант AXE Signature Gold Temptation 0% Gas с пряным ароматом Exotic Spiced Fragrance и заявленной защитой до 72 часов. Объем 122 мл.",
       "title": "AXE Signature Gold Temptation дезодорант 122 мл",
       "productType": "дезодорант 0% газа",
       "brand": "AXE",
       "rating": 4.8,
-      "searchText": "axe signature gold temptation дезодорант 122 мл дезодоранты axe дезодорант 0% газа дезодорант axe signature gold temptation 0% gas с цитрусовым характером и заявленной защитой до 72 часов. объем 122 мл."
+      "searchText": "axe signature gold temptation дезодорант 122 мл дезодоранты axe дезодорант 0% газа дезодорант axe signature gold temptation 0% gas с пряным ароматом exotic spiced fragrance и заявленной защитой до 72 часов. объем 122 мл."
     },
     {
-      "unit": "122 мл",
+      "unit": "шт",
       "badge": "AXE",
       "retailPriceKgs": 270,
       "category": "Дезодоранты",
@@ -6785,7 +6726,7 @@
         "assets/products/axe/axe-signature-corporate-122ml-front.jpg",
         "assets/products/axe/axe-signature-corporate-122ml-back.jpg"
       ],
-      "status": "review",
+      "status": "active",
       "id": "prd_8b110a525852",
       "tones": [
         "#e1d8f3",
@@ -6871,7 +6812,7 @@
       "searchText": "reebok deo (150) (m) inspire дезодоранты reebok дезодоранты reebok: дезодорант для ежедневной свежести."
     },
     {
-      "unit": "122 мл",
+      "unit": "шт",
       "badge": "AXE",
       "retailPriceKgs": 260,
       "category": "Дезодоранты",
@@ -6881,7 +6822,7 @@
         "assets/products/axe/axe-signature-champion-122ml-front.jpg",
         "assets/products/axe/axe-signature-champion-122ml-back.jpg"
       ],
-      "status": "review",
+      "status": "active",
       "id": "prd_17547dd70a52",
       "tones": [
         "#e1d8f3",
@@ -7151,31 +7092,27 @@
       "searchText": "gillette venus simply станки 4 шт бритье gillette venus бритвенные станки женские бритвенные станки gillette venus simply для мягкого бритья. в упаковке 4 штуки."
     },
     {
-      "unit": "200 мл",
+      "unit": "шт",
       "badge": "Gillette",
       "retailPriceKgs": 450,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [
-        "assets/products/gillette/gillette-fusion-moisturising-shave-gel-200ml-card-front.jpg",
-        "assets/products/gillette/gillette-fusion-moisturising-shave-gel-200ml-front.jpg",
-        "assets/products/gillette/gillette-fusion-moisturising-shave-gel-200ml-back.jpg"
-      ],
+      "galleryImages": [],
       "status": "active",
       "id": "prd_1dfaa90e937f",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-fusion-moisturising-shave-gel-200ml-card-front.jpg",
+      "image": null,
       "icon": "🪒",
       "registeredPriceKgs": 436,
-      "description": "Гель для бритья Gillette Fusion 5x Action Moisturising с какао-маслом для гладкого скольжения. Объем 200 мл.",
-      "title": "Gillette Fusion Moisturising гель для бритья 200 мл",
+      "description": "Гель для бритья Gillette Fusion Moisture для гладкого скольжения. Объем 200 мл.",
+      "title": "Gillette Fusion Moisture гель для бритья 200 мл",
       "productType": "гель для бритья",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "gillette fusion moisturising гель для бритья 200 мл бритье gillette гель для бритья гель для бритья gillette fusion 5x action moisturising с какао-маслом для гладкого скольжения. объем 200 мл."
+      "searchText": "gillette fusion moisture гель для бритья 200 мл бритье gillette гель для бритья гель для бритья gillette fusion moisture для гладкого скольжения. объем 200 мл."
     },
     {
       "unit": "шт",
@@ -7201,7 +7138,7 @@
       "searchText": "gillette blue pivot одноразовые станки 5 шт бритье gillette бритвенные станки одноразовые станки gillette blue pivot для комфортного бритья. в упаковке 5 штук."
     },
     {
-      "unit": "200 мл",
+      "unit": "шт",
       "badge": "Gillette",
       "retailPriceKgs": 395,
       "category": "Бритье",
@@ -7226,33 +7163,6 @@
       "brand": "Gillette",
       "rating": 4.8,
       "searchText": "gillette moisturising гель для бритья 200 мл бритье gillette гель для бритья гель для бритья gillette series moisturising с какао-маслом для комфортного скольжения и защиты от раздражения. объем 200 мл."
-    },
-    {
-      "id": "prd_gillette_sensitive_shave_gel_200ml",
-      "title": "Gillette Sensitive гель для бритья 200 мл",
-      "brand": "Gillette",
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "productType": "гель для бритья",
-      "unit": "200 мл",
-      "description": "Гель для бритья Gillette Series Sensitive с алоэ вера для чувствительной кожи и комфортного скольжения. Объем 200 мл.",
-      "retailPriceKgs": 395,
-      "registeredPriceKgs": 383,
-      "status": "active",
-      "rating": 4.8,
-      "badge": "Gillette",
-      "icon": "🪒",
-      "tones": [
-        "#d8e1e7",
-        "#667d8c"
-      ],
-      "image": "assets/products/gillette/gillette-sensitive-shave-gel-200ml-card-front.jpg",
-      "galleryImages": [
-        "assets/products/gillette/gillette-sensitive-shave-gel-200ml-card-front.jpg",
-        "assets/products/gillette/gillette-sensitive-shave-gel-200ml-front.jpg",
-        "assets/products/gillette/gillette-sensitive-shave-gel-200ml-back.jpg"
-      ],
-      "searchText": "gillette sensitive гель для бритья 200 мл бритье gillette гель для бритья гель для бритья gillette series sensitive с алоэ вера для чувствительной кожи и комфортного скольжения. объем 200 мл."
     },
     {
       "unit": "шт",
@@ -7554,7 +7464,7 @@
       "searchText": "6 venus станок (2) breeze бритье 6 бритье 6: товар для бритья и ухода."
     },
     {
-      "unit": "200 мл",
+      "unit": "шт",
       "badge": "Gillette",
       "retailPriceKgs": 295,
       "category": "Бритье",
@@ -7564,7 +7474,7 @@
         "assets/products/gillette/gillette-foam-sensitive-200ml-front.jpg",
         "assets/products/gillette/gillette-foam-sensitive-200ml-back.jpg"
       ],
-      "status": "review",
+      "status": "active",
       "id": "prd_26f86cee34e8",
       "tones": [
         "#d8e1e7",
@@ -7581,7 +7491,7 @@
       "searchText": "gillette sensitive пена для бритья 200 мл бритье gillette пена для бритья пена для бритья gillette series sensitive для чувствительной кожи, помогает сделать бритье более комфортным. объем 200 мл."
     },
     {
-      "unit": "200 мл",
+      "unit": "шт",
       "badge": "Gillette",
       "retailPriceKgs": 295,
       "category": "Бритье",
@@ -7591,7 +7501,7 @@
         "assets/products/gillette/gillette-foam-original-200ml-front.jpg",
         "assets/products/gillette/gillette-foam-original-200ml-back.jpg"
       ],
-      "status": "review",
+      "status": "active",
       "id": "prd_bd1e6c3316c4",
       "tones": [
         "#d8e1e7",
@@ -8050,22 +7960,26 @@
       "retailPriceKgs": 2595,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dalli/dalli-vollwaschmittel-powder-6kg-card-front.jpg",
+        "assets/products/dalli/dalli-vollwaschmittel-powder-6kg-front.jpg",
+        "assets/products/dalli/dalli-vollwaschmittel-powder-6kg-back.jpg"
+      ],
       "status": "active",
       "id": "prd_3e6fdfc928fc",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-vollwaschmittel-powder-6kg-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 2517,
-      "description": "Немецкий стиральный порошок Dalli Vollwaschmittel для светлого и повседневного белья. Большая упаковка 6 кг.",
+      "description": "Немецкий стиральный порошок Dalli Vollwaschmittel для светлого и повседневного белья. Большая упаковка 6 кг, около 100 стирок.",
       "title": "Dalli Vollwaschmittel стиральный порошок 6 кг",
       "productType": "стиральный порошок",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli vollwaschmittel стиральный порошок 6 кг товары из германии dalli стиральный порошок немецкий стиральный порошок dalli vollwaschmittel для светлого и повседневного белья. большая упаковка 6 кг."
+      "searchText": "dalli vollwaschmittel стиральный порошок 6 кг товары из германии dalli стиральный порошок немецкий стиральный порошок dalli vollwaschmittel для светлого и повседневного белья. большая упаковка 6 кг, около 100 стирок."
     },
     {
       "unit": "шт",
@@ -8073,22 +7987,26 @@
       "retailPriceKgs": 2595,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dalli/dalli-colorwaschmittel-powder-6kg-card-front.jpg",
+        "assets/products/dalli/dalli-colorwaschmittel-powder-6kg-front.jpg",
+        "assets/products/dalli/dalli-colorwaschmittel-powder-6kg-back.jpg"
+      ],
       "status": "active",
       "id": "prd_4b7604e36f02",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-colorwaschmittel-powder-6kg-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 2517,
-      "description": "Немецкий порошок Dalli Colorwaschmittel для цветного белья. Упаковка 6 кг.",
+      "description": "Немецкий стиральный порошок Dalli Colorwaschmittel для цветного белья. Большая упаковка 6 кг, около 100 стирок.",
       "title": "Dalli Colorwaschmittel стиральный порошок 6 кг",
       "productType": "стиральный порошок",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli colorwaschmittel стиральный порошок 6 кг товары из германии dalli стиральный порошок немецкий порошок dalli colorwaschmittel для цветного белья. упаковка 6 кг."
+      "searchText": "dalli colorwaschmittel стиральный порошок 6 кг товары из германии dalli стиральный порошок немецкий стиральный порошок dalli colorwaschmittel для цветного белья. большая упаковка 6 кг, около 100 стирок."
     },
     {
       "unit": "шт",
@@ -8119,22 +8037,26 @@
       "retailPriceKgs": 2395,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg",
+        "assets/products/dalli/dalli-colorwaschmittel-gel-5l-front.jpg",
+        "assets/products/dalli/dalli-colorwaschmittel-gel-5l-back.jpg"
+      ],
       "status": "active",
       "id": "prd_06e5daf553c4",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 2323,
-      "description": "Немецкий гель Dalli для стирки цветного белья. Большой формат 5 л.",
+      "description": "Немецкий гель Dalli Colorwaschmittel для стирки цветного белья. Большой формат 5 л, рассчитан примерно на 100 стирок.",
       "title": "Dalli Colorwaschmittel гель для стирки 5 л",
       "productType": "гель для стирки",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli colorwaschmittel гель для стирки 5 л товары из германии dalli гель для стирки немецкий гель dalli для стирки цветного белья. большой формат 5 л."
+      "searchText": "dalli colorwaschmittel гель для стирки 5 л товары из германии dalli гель для стирки немецкий гель dalli colorwaschmittel для стирки цветного белья. большой формат 5 л, рассчитан примерно на 100 стирок."
     },
     {
       "unit": "шт",
@@ -8184,72 +8106,84 @@
     },
     {
       "unit": "шт",
-      "badge": "G.DASH",
+      "badge": "Dash",
       "retailPriceKgs": 2295,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dash/dash-color-frische-caps-box-60-card-front.jpg",
+        "assets/products/dash/dash-color-frische-caps-box-60-front.jpg",
+        "assets/products/dash/dash-color-frische-caps-box-60-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_4db8a0f93b3f",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dash/dash-color-frische-caps-box-60-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 2226,
-      "description": "G.DASH: товар для дома и личного ухода. Формат: 60 шт, 60шт.",
-      "title": "G.DASH CAPS Box (60шт) 3in1 Color Frische",
-      "productType": "товары из германии",
-      "brand": "G.DASH",
+      "description": "Капсулы Dash Color Frische 3in1 для цветного белья. Упаковка XXL Pack, 60 капсул.",
+      "title": "Dash Color Frische капсулы для стирки 60 шт",
+      "productType": "капсулы для стирки",
+      "brand": "Dash",
       "rating": 4.8,
-      "searchText": "g.dash caps box (60шт) 3in1 color frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 60 шт, 60шт."
+      "searchText": "dash color frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash color frische 3in1 для цветного белья. упаковка xxl pack, 60 капсул."
     },
     {
       "unit": "шт",
-      "badge": "G.DASH",
+      "badge": "Dash",
       "retailPriceKgs": 2295,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg",
+        "assets/products/dash/dash-alpen-frische-caps-box-60-front.jpg",
+        "assets/products/dash/dash-alpen-frische-caps-box-60-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_6d023c2652c2",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 2226,
-      "description": "G.DASH: товар для дома и личного ухода. Формат: 60 шт, 60шт.",
-      "title": "G.DASH CAPS Box (60шт) 3in1 Alpen Frische",
-      "productType": "товары из германии",
-      "brand": "G.DASH",
+      "description": "Капсулы Dash Alpen Frische 3in1 для стирки. Упаковка XXL Pack, 60 капсул.",
+      "title": "Dash Alpen Frische капсулы для стирки 60 шт",
+      "productType": "капсулы для стирки",
+      "brand": "Dash",
       "rating": 4.8,
-      "searchText": "g.dash caps box (60шт) 3in1 alpen frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 60 шт, 60шт."
+      "searchText": "dash alpen frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash alpen frische 3in1 для стирки. упаковка xxl pack, 60 капсул."
     },
     {
       "unit": "шт",
-      "badge": "G.DASH",
+      "badge": "Dash",
       "retailPriceKgs": 690,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg",
+        "assets/products/dash/dash-color-frische-powder-1-17kg-front.jpg",
+        "assets/products/dash/dash-color-frische-powder-1-17kg-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_6ac15f7b2cff",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 669,
-      "description": "G.DASH: товар для дома и личного ухода. Формат: 1.17 kg, 18 стир, 1.17kg, 18стир.",
-      "title": "G.DASH (1.17kg)(18стир) Color Frische",
-      "productType": "товары из германии",
-      "brand": "G.DASH",
+      "description": "Немецкий стиральный порошок Dash Color Frische для цветного белья. Упаковка 1,17 кг, около 18 стирок.",
+      "title": "Dash Color Frische стиральный порошок 1,17 кг",
+      "productType": "стиральный порошок",
+      "brand": "Dash",
       "rating": 4.8,
-      "searchText": "g.dash (1.17kg)(18стир) color frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 1.17 kg, 18 стир, 1.17kg, 18стир."
+      "searchText": "dash color frische стиральный порошок 1,17 кг товары из германии dash стиральный порошок немецкий стиральный порошок dash color frische для цветного белья. упаковка 1,17 кг, около 18 стирок."
     },
     {
       "unit": "шт",
@@ -8276,49 +8210,57 @@
     },
     {
       "unit": "шт",
-      "badge": "G.DASH",
+      "badge": "Dash",
       "retailPriceKgs": 2195,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dash/dash-alpen-frische-caps-60-card-front.jpg",
+        "assets/products/dash/dash-alpen-frische-caps-60-front.jpg",
+        "assets/products/dash/dash-alpen-frische-caps-60-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_ac041a61a578",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dash/dash-alpen-frische-caps-60-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 2129,
-      "description": "G.DASH: товар для дома и личного ухода. Формат: 60 шт, 60шт.",
-      "title": "G.DASH CAPS (60шт) 3in1 Alpen Frische",
-      "productType": "товары из германии",
-      "brand": "G.DASH",
+      "description": "Капсулы Dash Alpen Frische 3in1 для стирки. Пакет 60 капсул.",
+      "title": "Dash Alpen Frische капсулы для стирки 60 шт",
+      "productType": "капсулы для стирки",
+      "brand": "Dash",
       "rating": 4.8,
-      "searchText": "g.dash caps (60шт) 3in1 alpen frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 60 шт, 60шт."
+      "searchText": "dash alpen frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash alpen frische 3in1 для стирки. пакет 60 капсул."
     },
     {
       "unit": "шт",
-      "badge": "G.DASH",
+      "badge": "Dash",
       "retailPriceKgs": 2195,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dash/dash-color-frische-caps-60-card-front.jpg",
+        "assets/products/dash/dash-color-frische-caps-60-front.jpg",
+        "assets/products/dash/dash-color-frische-caps-60-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_33a2990e3c6a",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dash/dash-color-frische-caps-60-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 2129,
-      "description": "G.DASH: товар для дома и личного ухода. Формат: 60 шт, 60шт.",
-      "title": "G.DASH CAPS (60шт) 3in1 Color Frische",
-      "productType": "товары из германии",
-      "brand": "G.DASH",
+      "description": "Капсулы Dash Color Frische 3in1 для цветного белья. Пакет 60 капсул.",
+      "title": "Dash Color Frische капсулы для стирки 60 шт",
+      "productType": "капсулы для стирки",
+      "brand": "Dash",
       "rating": 4.8,
-      "searchText": "g.dash caps (60шт) 3in1 color frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 60 шт, 60шт."
+      "searchText": "dash color frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash color frische 3in1 для цветного белья. пакет 60 капсул."
     },
     {
       "unit": "шт",
@@ -8345,72 +8287,84 @@
     },
     {
       "unit": "шт",
-      "badge": "G.DASH",
+      "badge": "Dash",
       "retailPriceKgs": 2090,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg",
+        "assets/products/dash/dash-active-frische-gel-3-6l-front.jpg",
+        "assets/products/dash/dash-active-frische-gel-3-6l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_3fd39e5d8314",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 2027,
-      "description": "G.DASH: товар для дома и личного ухода. Формат: 3.6 L, 80 стир, 3.6L, 80стир.",
-      "title": "G.DASH GEL (3.6L)(80стир) Active Frische",
-      "productType": "товары из германии",
-      "brand": "G.DASH",
+      "description": "Немецкий гель Dash Active Frische для повседневной стирки. Объем 3,6 л, около 80 стирок.",
+      "title": "Dash Active Frische гель для стирки 3,6 л",
+      "productType": "гель для стирки",
+      "brand": "Dash",
       "rating": 4.8,
-      "searchText": "g.dash gel (3.6l)(80стир) active frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 3.6 l, 80 стир, 3.6l, 80стир."
+      "searchText": "dash active frische гель для стирки 3,6 л товары из германии dash гель для стирки немецкий гель dash active frische для повседневной стирки. объем 3,6 л, около 80 стирок."
     },
     {
       "unit": "шт",
-      "badge": "G.Dalli",
+      "badge": "Dalli",
       "retailPriceKgs": 650,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dalli/dalli-vollwaschmittel-caps-12-card-front.jpg",
+        "assets/products/dalli/dalli-vollwaschmittel-caps-12-front.jpg",
+        "assets/products/dalli/dalli-vollwaschmittel-caps-12-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_f027d150c31a",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-vollwaschmittel-caps-12-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 630,
-      "description": "G.Dalli: товар для дома и личного ухода. Формат: 12 шт, 12шт.",
-      "title": "G.Dalli CAPS (12шт) 3in1 Vollwaschmittel",
-      "productType": "товары из германии",
-      "brand": "G.Dalli",
+      "description": "Капсулы Dalli 3in1 Vollwaschmittel для повседневной стирки. В упаковке 12 капсул.",
+      "title": "Dalli Vollwaschmittel капсулы для стирки 12 шт",
+      "productType": "капсулы для стирки",
+      "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli caps (12шт) 3in1 vollwaschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 12 шт, 12шт."
+      "searchText": "dalli vollwaschmittel капсулы для стирки 12 шт товары из германии dalli капсулы для стирки капсулы dalli 3in1 vollwaschmittel для повседневной стирки. в упаковке 12 капсул."
     },
     {
       "unit": "шт",
-      "badge": "G.Dalli",
+      "badge": "Dalli",
       "retailPriceKgs": 650,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dalli/dalli-colorwaschmittel-caps-12-card-front.jpg",
+        "assets/products/dalli/dalli-colorwaschmittel-caps-12-front.jpg",
+        "assets/products/dalli/dalli-colorwaschmittel-caps-12-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_7ac05b86dfd8",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-colorwaschmittel-caps-12-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 630,
-      "description": "G.Dalli: товар для дома и личного ухода. Формат: 12 шт, 12шт.",
-      "title": "G.Dalli CAPS (12шт) 3in1 Colorwaschmittel",
-      "productType": "товары из германии",
-      "brand": "G.Dalli",
+      "description": "Капсулы Dalli 3in1 Colorwaschmittel для стирки цветного белья. В упаковке 12 капсул.",
+      "title": "Dalli Colorwaschmittel капсулы для стирки 12 шт",
+      "productType": "капсулы для стирки",
+      "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli caps (12шт) 3in1 colorwaschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 12 шт, 12шт."
+      "searchText": "dalli colorwaschmittel капсулы для стирки 12 шт товары из германии dalli капсулы для стирки капсулы dalli 3in1 colorwaschmittel для стирки цветного белья. в упаковке 12 капсул."
     },
     {
       "unit": "шт",
@@ -8460,49 +8414,57 @@
     },
     {
       "unit": "шт",
-      "badge": "G.DASH",
+      "badge": "Dash",
       "retailPriceKgs": 2090,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg",
+        "assets/products/dash/dash-color-frische-gel-3-6l-front.jpg",
+        "assets/products/dash/dash-color-frische-gel-3-6l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_96f0268a48e0",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 2027,
-      "description": "G.DASH: товар для дома и личного ухода. Формат: 3.6 L, 80 стир, 3.6L, 80стир.",
-      "title": "G.DASH GEL (3.6L)(80стир) Color Frische",
-      "productType": "товары из германии",
-      "brand": "G.DASH",
+      "description": "Немецкий гель Dash Color Frische для цветного белья. Объем 3,6 л, около 80 стирок.",
+      "title": "Dash Color Frische гель для стирки 3,6 л",
+      "productType": "гель для стирки",
+      "brand": "Dash",
       "rating": 4.8,
-      "searchText": "g.dash gel (3.6l)(80стир) color frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 3.6 l, 80 стир, 3.6l, 80стир."
+      "searchText": "dash color frische гель для стирки 3,6 л товары из германии dash гель для стирки немецкий гель dash color frische для цветного белья. объем 3,6 л, около 80 стирок."
     },
     {
       "unit": "шт",
-      "badge": "G.DASH",
+      "badge": "Dash",
       "retailPriceKgs": 690,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dash/dash-active-frische-gel-1-1l-card-front.jpg",
+        "assets/products/dash/dash-active-frische-gel-1-1l-front.jpg",
+        "assets/products/dash/dash-active-frische-gel-1-1l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_ebd75b1e7557",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dash/dash-active-frische-gel-1-1l-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 669,
-      "description": "G.DASH: товар для дома и личного ухода. Формат: 1.1 L, 20 стир, 1.1L, 20стир.",
-      "title": "G.DASH GEL (1.1L)(20стир) Active Frische",
-      "productType": "товары из германии",
-      "brand": "G.DASH",
+      "description": "Немецкий гель Dash Active Frische для повседневной стирки. Объем 1,1 л, около 20 стирок.",
+      "title": "Dash Active Frische гель для стирки 1,1 л",
+      "productType": "гель для стирки",
+      "brand": "Dash",
       "rating": 4.8,
-      "searchText": "g.dash gel (1.1l)(20стир) active frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 1.1 l, 20 стир, 1.1l, 20стир."
+      "searchText": "dash active frische гель для стирки 1,1 л товары из германии dash гель для стирки немецкий гель dash active frische для повседневной стирки. объем 1,1 л, около 20 стирок."
     },
     {
       "unit": "шт",
@@ -8529,49 +8491,57 @@
     },
     {
       "unit": "шт",
-      "badge": "G.Dalli",
+      "badge": "Dalli",
       "retailPriceKgs": 690,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dalli/dalli-fein-color-gel-1-1l-card-front.jpg",
+        "assets/products/dalli/dalli-fein-color-gel-1-1l-front.jpg",
+        "assets/products/dalli/dalli-fein-color-gel-1-1l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_50de525f882c",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-fein-color-gel-1-1l-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 669,
-      "description": "G.Dalli: товар для дома и личного ухода. Формат: 1.1 L, 20 стир, 1.1L, 20стир.",
-      "title": "G.Dalli Gel (1.1L)(20стир) Delicate & Color",
-      "productType": "товары из германии",
-      "brand": "G.Dalli",
+      "description": "Немецкий гель Dalli Fein & Color для деликатной стирки и цветного белья. Объем 1,1 л, около 20 стирок.",
+      "title": "Dalli Fein & Color гель для стирки 1,1 л",
+      "productType": "гель для стирки",
+      "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli gel (1.1l)(20стир) delicate & color товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 1.1 l, 20 стир, 1.1l, 20стир."
+      "searchText": "dalli fein & color гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli fein & color для деликатной стирки и цветного белья. объем 1,1 л, около 20 стирок."
     },
     {
       "unit": "шт",
-      "badge": "G.Dalli",
+      "badge": "Dalli",
       "retailPriceKgs": 690,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dalli/dalli-sensitive-gel-1-1l-card-front.jpg",
+        "assets/products/dalli/dalli-sensitive-gel-1-1l-front.jpg",
+        "assets/products/dalli/dalli-sensitive-gel-1-1l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_6c3fa744cf67",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-sensitive-gel-1-1l-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 669,
-      "description": "G.Dalli: товар для дома и личного ухода. Формат: 1.1 L, 20 стир, 1.1L, 20стир.",
-      "title": "G.Dalli Gel (1.1L)(20стир) Sensitive",
-      "productType": "товары из германии",
-      "brand": "G.Dalli",
+      "description": "Немецкий гель Dalli Sensitive для бережной стирки. Объем 1,1 л, около 20 стирок.",
+      "title": "Dalli Sensitive гель для стирки 1,1 л",
+      "productType": "гель для стирки",
+      "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli gel (1.1l)(20стир) sensitive товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 1.1 l, 20 стир, 1.1l, 20стир."
+      "searchText": "dalli sensitive гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli sensitive для бережной стирки. объем 1,1 л, около 20 стирок."
     },
     {
       "unit": "шт",
@@ -8621,49 +8591,57 @@
     },
     {
       "unit": "шт",
-      "badge": "G.Dalli",
+      "badge": "Dalli",
       "retailPriceKgs": 690,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-card-front.jpg",
+        "assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-front.jpg",
+        "assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_48a2b18d3de6",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 669,
-      "description": "G.Dalli: товар для дома и личного ухода. Формат: 1.1 L, 20 стир, 1.1L, 20стир.",
-      "title": "G.Dalli Gel (1.1L)(20стир) Vollwaschmittel",
-      "productType": "товары из германии",
-      "brand": "G.Dalli",
+      "description": "Немецкий гель Dalli Vollwaschmittel Frische-glück для повседневной стирки. Объем 1,1 л, около 20 стирок.",
+      "title": "Dalli Vollwaschmittel Frische-glück гель для стирки 1,1 л",
+      "productType": "гель для стирки",
+      "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli gel (1.1l)(20стир) vollwaschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 1.1 l, 20 стир, 1.1l, 20стир."
+      "searchText": "dalli vollwaschmittel frische-glück гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli vollwaschmittel frische-glück для повседневной стирки. объем 1,1 л, около 20 стирок."
     },
     {
       "unit": "шт",
-      "badge": "G.Dalli",
+      "badge": "Dalli",
       "retailPriceKgs": 690,
       "category": "Товары из Германии",
       "categoryId": "germany",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-card-front.jpg",
+        "assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-front.jpg",
+        "assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_539a47bdb383",
       "tones": [
         "#e5e2dc",
         "#92968c"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-card-front.jpg",
       "icon": "🇩🇪",
       "registeredPriceKgs": 669,
-      "description": "G.Dalli: товар для дома и личного ухода. Формат: 1.1 L, 20 стир, 1.1L, 20стир.",
-      "title": "G.Dalli Gel (1.1L)(20стир) Colorwaschmittel",
-      "productType": "товары из германии",
-      "brand": "G.Dalli",
+      "description": "Немецкий гель Dalli Colorwaschmittel для стирки цветного белья. Объем 1,1 л.",
+      "title": "Dalli Colorwaschmittel гель для стирки 1,1 л",
+      "productType": "гель для стирки",
+      "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli gel (1.1l)(20стир) colorwaschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 1.1 l, 20 стир, 1.1l, 20стир."
+      "searchText": "dalli colorwaschmittel гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli colorwaschmittel для стирки цветного белья. объем 1,1 л."
     },
     {
       "unit": "шт",
@@ -10412,270 +10390,6 @@
       "brand": "Concord",
       "rating": 4.8,
       "searchText": "concord з/щетки kids (814) разное concord разное concord: товар для дома и личного ухода."
-    },
-    {
-      "unit": "шт",
-      "badge": "TRESemme",
-      "retailPriceKgs": 595,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [
-        "assets/products/tresemme/tresemme-curl-hydration-828ml-card-front.jpg",
-        "assets/products/tresemme/tresemme-curl-hydration-828ml-front.jpg",
-        "assets/products/tresemme/tresemme-curl-hydration-828ml-back.jpg"
-      ],
-      "status": "review",
-      "id": "prd_4cf797e1e1b4",
-      "tones": [
-        "#d7eadf",
-        "#6aa58f"
-      ],
-      "image": "assets/products/tresemme/tresemme-curl-hydration-828ml-card-front.jpg",
-      "icon": "🧴",
-      "registeredPriceKgs": 577,
-      "description": "Шампунь TRESemmé Curl Hydration для увлажнения и ухода за кудрявыми волосами. Объём 828 мл, заявлено до 7x более увлажнённых локонов.",
-      "title": "TRESemmé Curl Hydration шампунь 828 мл",
-      "productType": "шампунь",
-      "brand": "TRESemmé",
-      "rating": 4.8,
-      "searchText": "tresemmé curl hydration шампунь 828 мл tresemmé шампунь шампунь tresemmé curl hydration для увлажнения и ухода за кудрявыми волосами. объём 828 мл, заявлено до 7x более увлажнённых локонов. уход за волосами"
-    },
-    {
-      "unit": "шт",
-      "badge": "TRESemme",
-      "retailPriceKgs": 695,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [
-        "assets/products/tresemme/tresemme-rich-moisture-828ml-card-front.jpg",
-        "assets/products/tresemme/tresemme-rich-moisture-828ml-front.jpg",
-        "assets/products/tresemme/tresemme-rich-moisture-828ml-back.jpg"
-      ],
-      "status": "review",
-      "id": "prd_dbf6cb3b3a0e",
-      "tones": [
-        "#f3ddaa",
-        "#9a762c"
-      ],
-      "image": "assets/products/tresemme/tresemme-rich-moisture-828ml-card-front.jpg",
-      "icon": "🧴",
-      "registeredPriceKgs": 674,
-      "description": "Шампунь TRESemmé Rich Moisture для питания и увлажнения волос. Объём 828 мл, формула с hyaluronic plex.",
-      "title": "TRESemmé Rich Moisture шампунь 828 мл",
-      "productType": "шампунь",
-      "brand": "TRESemmé",
-      "rating": 4.8,
-      "searchText": "tresemmé rich moisture шампунь 828 мл tresemmé шампунь шампунь tresemmé rich moisture для питания и увлажнения волос. объём 828 мл, формула с hyaluronic plex. уход за волосами"
-    },
-    {
-      "unit": "шт",
-      "badge": "Sunsilk",
-      "retailPriceKgs": 695,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [
-        "assets/products/sunsilk/sunsilk-soft-smooth-625ml-card-front.jpg",
-        "assets/products/sunsilk/sunsilk-soft-smooth-625ml-front.jpg",
-        "assets/products/sunsilk/sunsilk-soft-smooth-625ml-back.jpg"
-      ],
-      "status": "review",
-      "id": "prd_b72b872b2b7d",
-      "tones": [
-        "#f4c94d",
-        "#c48922"
-      ],
-      "image": "assets/products/sunsilk/sunsilk-soft-smooth-625ml-card-front.jpg",
-      "icon": "🧴",
-      "registeredPriceKgs": 674,
-      "description": "Шампунь Sunsilk Soft & Smooth для мягкости и гладкости волос. Объём 625 мл, формула с light natural oil, cashmere keratin и vitamin E.",
-      "title": "Sunsilk Soft & Smooth шампунь 625 мл",
-      "productType": "шампунь",
-      "brand": "Sunsilk",
-      "rating": 4.8,
-      "searchText": "sunsilk soft & smooth шампунь 625 мл sunsilk шампунь шампунь sunsilk soft & smooth для мягкости и гладкости волос. объём 625 мл, формула с light natural oil, cashmere keratin и vitamin e. уход за волосами"
-    },
-    {
-      "id": "prd_concord_kids_blue_nail_clipper",
-      "title": "Concord Kids 020-1 кусачки для ногтей голубые",
-      "brand": "Concord",
-      "badge": "Concord",
-      "productType": "кусачки для ногтей",
-      "unit": "1 шт",
-      "retailPriceKgs": 190,
-      "description": "Детские кусачки Concord Kids 020-1 для аккуратного ухода за ногтями. Голубой цвет, компактный формат для домашнего использования.",
-      "image": "assets/products/concord/concord-kids-020-1-blue-card-front.jpg",
-      "galleryImages": [
-        "assets/products/concord/concord-kids-020-1-blue-card-front.jpg",
-        "assets/products/concord/concord-kids-020-1-blue-front.jpg",
-        "assets/products/concord/concord-kids-020-1-blue-back.jpg"
-      ],
-      "tones": [
-        "#d8eef5",
-        "#6eaec4"
-      ],
-      "searchText": "concord kids 020-1 кусачки для ногтей голубые клиппер детские маникюр уход за ногтями",
-      "category": "Разное",
-      "categoryId": "other",
-      "status": "active",
-      "icon": "✦",
-      "rating": 4.8,
-      "registeredPriceKgs": 184
-    },
-    {
-      "id": "prd_concord_pink_nail_clipper",
-      "title": "Concord 6401-3 кусачки для ногтей",
-      "brand": "Concord",
-      "badge": "Concord",
-      "productType": "кусачки для ногтей",
-      "unit": "1 шт",
-      "retailPriceKgs": 295,
-      "description": "Кусачки Concord 6401-3 для аккуратного ухода за ногтями. Подходят для домашнего маникюра и повседневного использования.",
-      "image": "assets/products/concord/concord-6401-3-card-front.jpg",
-      "galleryImages": [
-        "assets/products/concord/concord-6401-3-card-front.jpg",
-        "assets/products/concord/concord-6401-3-front.jpg",
-        "assets/products/concord/concord-6401-3-back.jpg"
-      ],
-      "tones": [
-        "#f7d9e3",
-        "#ce6b87"
-      ],
-      "searchText": "concord 6401-3 кусачки для ногтей клиппер маникюр уход за ногтями",
-      "category": "Разное",
-      "categoryId": "other",
-      "status": "active",
-      "icon": "✦",
-      "rating": 4.8,
-      "registeredPriceKgs": 286
-    },
-    {
-      "id": "prd_concord_silver_nail_clipper",
-      "title": "Concord 6425-3 кусачки для ногтей",
-      "brand": "Concord",
-      "badge": "Concord",
-      "productType": "кусачки для ногтей",
-      "unit": "1 шт",
-      "retailPriceKgs": 190,
-      "description": "Кусачки Concord 6425-3 для аккуратного ухода за ногтями. Удобный вариант для домашнего маникюра.",
-      "image": "assets/products/concord/concord-6425-3-card-front.jpg",
-      "galleryImages": [
-        "assets/products/concord/concord-6425-3-card-front.jpg",
-        "assets/products/concord/concord-6425-3-front.jpg",
-        "assets/products/concord/concord-6425-3-back.jpg"
-      ],
-      "tones": [
-        "#eeeeee",
-        "#aeb4bd"
-      ],
-      "searchText": "concord 6425-3 кусачки для ногтей клиппер маникюр уход за ногтями",
-      "category": "Разное",
-      "categoryId": "other",
-      "status": "active",
-      "icon": "✦",
-      "rating": 4.8,
-      "registeredPriceKgs": 184
-    },
-    {
-      "id": "prd_concord_kids_yellow_nail_clipper",
-      "title": "Concord Kids 020-1 кусачки для ногтей желтые",
-      "brand": "Concord",
-      "badge": "Concord",
-      "productType": "кусачки для ногтей",
-      "unit": "1 шт",
-      "retailPriceKgs": 190,
-      "description": "Детские кусачки Concord Kids 020-1 для ухода за ногтями. Желтый цвет, небольшой размер и удобный формат для дома.",
-      "image": "assets/products/concord/concord-kids-020-1-yellow-card-front.jpg",
-      "galleryImages": [
-        "assets/products/concord/concord-kids-020-1-yellow-card-front.jpg",
-        "assets/products/concord/concord-kids-020-1-yellow-front.jpg",
-        "assets/products/concord/concord-kids-020-1-yellow-back.jpg"
-      ],
-      "tones": [
-        "#f7e5a7",
-        "#d2a33b"
-      ],
-      "searchText": "concord kids 020-1 кусачки для ногтей желтые клиппер детские маникюр уход за ногтями",
-      "category": "Разное",
-      "categoryId": "other",
-      "status": "active",
-      "icon": "✦",
-      "rating": 4.8,
-      "registeredPriceKgs": 184
-    },
-    {
-      "unit": "5 мл",
-      "badge": "Chanel",
-      "retailPriceKgs": 895,
-      "category": "Парфюм 5 мл",
-      "categoryId": "perfume",
-      "galleryImages": [
-        "assets/products/perfume/chanel-chance-5ml-card-front-v2.jpg"
-      ],
-      "status": "active",
-      "id": "prd_perfume_chanel_chance_5ml",
-      "tones": [
-        "#26151f",
-        "#d89ab7"
-      ],
-      "image": "assets/products/perfume/chanel-chance-5ml-card-front-v2.jpg",
-      "icon": "✦",
-      "registeredPriceKgs": 868,
-      "description": "Брендовый парфюм Chanel Chance в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.",
-      "title": "Chanel Chance парфюм 5 мл",
-      "productType": "парфюм на разлив",
-      "brand": "Chanel",
-      "rating": 4.95,
-      "searchText": "chanel chance парфюм 5 мл парфюм 5 мл chanel chance парфюм на разлив брендовый парфюм travel формат оригинальный аромат 5 мл"
-    },
-    {
-      "unit": "5 мл",
-      "badge": "Le Labo",
-      "retailPriceKgs": 2245,
-      "category": "Парфюм 5 мл",
-      "categoryId": "perfume",
-      "galleryImages": [
-        "assets/products/perfume/le-labo-another-13-5ml-card-front-v2.jpg"
-      ],
-      "status": "active",
-      "id": "prd_perfume_le_labo_another_13_5ml",
-      "tones": [
-        "#151515",
-        "#b8b2aa"
-      ],
-      "image": "assets/products/perfume/le-labo-another-13-5ml-card-front-v2.jpg",
-      "icon": "✦",
-      "registeredPriceKgs": 2177,
-      "description": "Брендовый парфюм Le Labo Another 13 в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.",
-      "title": "Le Labo Another 13 парфюм 5 мл",
-      "productType": "парфюм на разлив",
-      "brand": "Le Labo",
-      "rating": 4.95,
-      "searchText": "le labo another 13 парфюм 5 мл парфюм 5 мл le labo another 13 парфюм на разлив брендовый парфюм travel формат оригинальный аромат 5 мл"
-    },
-    {
-      "unit": "5 мл",
-      "badge": "Bybozo",
-      "retailPriceKgs": 995,
-      "category": "Парфюм 5 мл",
-      "categoryId": "perfume",
-      "galleryImages": [
-        "assets/products/perfume/bybozo-sea-breeze-5ml-card-front-v2.jpg"
-      ],
-      "status": "active",
-      "id": "prd_perfume_bybozo_sea_breeze_5ml",
-      "tones": [
-        "#102929",
-        "#d1c2a2"
-      ],
-      "image": "assets/products/perfume/bybozo-sea-breeze-5ml-card-front-v2.jpg",
-      "icon": "✦",
-      "registeredPriceKgs": 965,
-      "description": "Брендовый парфюм Bybozo Sea Breeze в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.",
-      "title": "Bybozo Sea Breeze парфюм 5 мл",
-      "productType": "парфюм на разлив",
-      "brand": "Bybozo",
-      "rating": 4.95,
-      "searchText": "bybozo sea breeze парфюм 5 мл парфюм 5 мл bybozo sea breeze парфюм на разлив брендовый парфюм travel формат оригинальный аромат 5 мл"
     }
   ]
 }
