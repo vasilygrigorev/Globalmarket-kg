@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T12:39:46.536205+00:00",
+  "generatedAt": "2026-06-15T13:36:39.110734+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -21,13 +21,13 @@
     {
       "id": "hair",
       "title": "Уход за волосами",
-      "count": 109,
+      "count": 103,
       "icon": "🧴"
     },
     {
       "id": "body",
       "title": "Уход за телом",
-      "count": 49,
+      "count": 55,
       "icon": "🌸"
     },
     {
@@ -3412,75 +3412,6 @@
     },
     {
       "unit": "шт",
-      "badge": "Cussons",
-      "retailPriceKgs": 230,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_41aae31f87a5",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 223,
-      "description": "Cussons: средство для ухода за волосами на каждый день.",
-      "title": "Cussons пена для ванны (500) Marshmallow",
-      "productType": "уход за волосами",
-      "brand": "Cussons",
-      "rating": 4.8,
-      "searchText": "cussons пена для ванны (500) marshmallow уход за волосами cussons уход за волосами cussons: средство для ухода за волосами на каждый день."
-    },
-    {
-      "unit": "шт",
-      "badge": "Cussons",
-      "retailPriceKgs": 230,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_8b31b49260e5",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 223,
-      "description": "Cussons: средство для ухода за волосами на каждый день.",
-      "title": "Cussons пена для ванны (500) Paradise Fruits",
-      "productType": "уход за волосами",
-      "brand": "Cussons",
-      "rating": 4.8,
-      "searchText": "cussons пена для ванны (500) paradise fruits уход за волосами cussons уход за волосами cussons: средство для ухода за волосами на каждый день."
-    },
-    {
-      "unit": "шт",
-      "badge": "Cussons",
-      "retailPriceKgs": 230,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_eb2cd134029c",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 223,
-      "description": "Cussons: средство для ухода за волосами на каждый день.",
-      "title": "Cussons пена для ванны (500) Space Candy",
-      "productType": "уход за волосами",
-      "brand": "Cussons",
-      "rating": 4.8,
-      "searchText": "cussons пена для ванны (500) space candy уход за волосами cussons уход за волосами cussons: средство для ухода за волосами на каждый день."
-    },
-    {
-      "unit": "шт",
       "badge": "Vatika",
       "retailPriceKgs": 395,
       "category": "Уход за волосами",
@@ -3501,75 +3432,6 @@
       "brand": "Vatika",
       "rating": 4.8,
       "searchText": "vatika hair шампунь (400) volume уход за волосами vatika шампунь vatika: средство для ухода за волосами на каждый день."
-    },
-    {
-      "unit": "шт",
-      "badge": "Cussons",
-      "retailPriceKgs": 230,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_7ea551495133",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 223,
-      "description": "Cussons: средство для ухода за волосами на каждый день.",
-      "title": "Cussons пена для ванны (500) Apple",
-      "productType": "уход за волосами",
-      "brand": "Cussons",
-      "rating": 4.8,
-      "searchText": "cussons пена для ванны (500) apple уход за волосами cussons уход за волосами cussons: средство для ухода за волосами на каждый день."
-    },
-    {
-      "unit": "шт",
-      "badge": "Cussons",
-      "retailPriceKgs": 230,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_76fa6e266408",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 223,
-      "description": "Cussons: средство для ухода за волосами на каждый день.",
-      "title": "Cussons пена для ванны (500) Apricot",
-      "productType": "уход за волосами",
-      "brand": "Cussons",
-      "rating": 4.8,
-      "searchText": "cussons пена для ванны (500) apricot уход за волосами cussons уход за волосами cussons: средство для ухода за волосами на каждый день."
-    },
-    {
-      "unit": "шт",
-      "badge": "Cussons",
-      "retailPriceKgs": 230,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_0a8f4b1bdcb6",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 223,
-      "description": "Cussons: средство для ухода за волосами на каждый день.",
-      "title": "Cussons пена для ванны (500) Magnolia",
-      "productType": "уход за волосами",
-      "brand": "Cussons",
-      "rating": 4.8,
-      "searchText": "cussons пена для ванны (500) magnolia уход за волосами cussons уход за волосами cussons: средство для ухода за волосами на каждый день."
     },
     {
       "unit": "шт",
@@ -4674,6 +4536,144 @@
       "brand": "Palmolive",
       "rating": 4.8,
       "searchText": "palmolive мыло (175) citrus&grape (цитр) уход за телом palmolive уход за телом palmolive: средство для ухода за кожей и ежедневной гигиены."
+    },
+    {
+      "unit": "шт",
+      "badge": "Cussons",
+      "retailPriceKgs": 230,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "galleryImages": [],
+      "status": "active",
+      "id": "prd_41aae31f87a5",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": null,
+      "icon": "🌸",
+      "registeredPriceKgs": 223,
+      "description": "Пена для ванны Cussons Marshmallow для ароматной ванны и ухода за телом. Объем 500 мл.",
+      "title": "Cussons пена для ванны Marshmallow 500 мл",
+      "productType": "пена для ванны",
+      "brand": "Cussons",
+      "rating": 4.8,
+      "searchText": "cussons пена для ванны marshmallow 500 мл уход за телом cussons пена для ванны пена для ванны cussons marshmallow для ароматной ванны и ухода за телом. объем 500 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Cussons",
+      "retailPriceKgs": 230,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "galleryImages": [],
+      "status": "active",
+      "id": "prd_8b31b49260e5",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": null,
+      "icon": "🌸",
+      "registeredPriceKgs": 223,
+      "description": "Пена для ванны Cussons Paradise Fruits для ароматной ванны и ухода за телом. Объем 500 мл.",
+      "title": "Cussons пена для ванны Paradise Fruits 500 мл",
+      "productType": "пена для ванны",
+      "brand": "Cussons",
+      "rating": 4.8,
+      "searchText": "cussons пена для ванны paradise fruits 500 мл уход за телом cussons пена для ванны пена для ванны cussons paradise fruits для ароматной ванны и ухода за телом. объем 500 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Cussons",
+      "retailPriceKgs": 230,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "galleryImages": [],
+      "status": "active",
+      "id": "prd_eb2cd134029c",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": null,
+      "icon": "🌸",
+      "registeredPriceKgs": 223,
+      "description": "Пена для ванны Cussons Space Candy для ароматной ванны и ухода за телом. Объем 500 мл.",
+      "title": "Cussons пена для ванны Space Candy 500 мл",
+      "productType": "пена для ванны",
+      "brand": "Cussons",
+      "rating": 4.8,
+      "searchText": "cussons пена для ванны space candy 500 мл уход за телом cussons пена для ванны пена для ванны cussons space candy для ароматной ванны и ухода за телом. объем 500 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Cussons",
+      "retailPriceKgs": 230,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "galleryImages": [],
+      "status": "active",
+      "id": "prd_7ea551495133",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": null,
+      "icon": "🌸",
+      "registeredPriceKgs": 223,
+      "description": "Пена для ванны Cussons Apple для ароматной ванны и ухода за телом. Объем 500 мл.",
+      "title": "Cussons пена для ванны Apple 500 мл",
+      "productType": "пена для ванны",
+      "brand": "Cussons",
+      "rating": 4.8,
+      "searchText": "cussons пена для ванны apple 500 мл уход за телом cussons пена для ванны пена для ванны cussons apple для ароматной ванны и ухода за телом. объем 500 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Cussons",
+      "retailPriceKgs": 230,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "galleryImages": [],
+      "status": "active",
+      "id": "prd_76fa6e266408",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": null,
+      "icon": "🌸",
+      "registeredPriceKgs": 223,
+      "description": "Пена для ванны Cussons Apricot для ароматной ванны и ухода за телом. Объем 500 мл.",
+      "title": "Cussons пена для ванны Apricot 500 мл",
+      "productType": "пена для ванны",
+      "brand": "Cussons",
+      "rating": 4.8,
+      "searchText": "cussons пена для ванны apricot 500 мл уход за телом cussons пена для ванны пена для ванны cussons apricot для ароматной ванны и ухода за телом. объем 500 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Cussons",
+      "retailPriceKgs": 230,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "galleryImages": [],
+      "status": "active",
+      "id": "prd_0a8f4b1bdcb6",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": null,
+      "icon": "🌸",
+      "registeredPriceKgs": 223,
+      "description": "Пена для ванны Cussons Magnolia для ароматной ванны и ухода за телом. Объем 500 мл.",
+      "title": "Cussons пена для ванны Magnolia 500 мл",
+      "productType": "пена для ванны",
+      "brand": "Cussons",
+      "rating": 4.8,
+      "searchText": "cussons пена для ванны magnolia 500 мл уход за телом cussons пена для ванны пена для ванны cussons magnolia для ароматной ванны и ухода за телом. объем 500 мл."
     },
     {
       "unit": "шт",
