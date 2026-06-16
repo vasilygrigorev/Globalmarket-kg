@@ -21,6 +21,7 @@ CATALOG_PATH = ROOT / "data" / "catalog.json"
 REVIEW_CSV_PATH = ROOT / "outputs" / "catalog_review.csv"
 REVIEW_XLSX_PATH = ROOT / "outputs" / "catalog_review.xlsx"
 SETTINGS_PATH = ROOT / "data" / "settings.json"
+MANUAL_PRODUCTS_PATH = ROOT / "data" / "manual_products.json"
 
 EXCLUDED_GROUPS = {"18 x Germ 2"}
 
@@ -66,6 +67,12 @@ CATEGORIES = {
         "placeholder": "shaving",
         "tones": ["#d8e1e7", "#667d8c"],
         "icon": "🪒",
+    },
+    "perfume": {
+        "title": "Парфюм 5 мл",
+        "placeholder": "perfume",
+        "tones": ["#f3d6e4", "#a85f88"],
+        "icon": "🌸",
     },
     "food": {
         "title": "Продукты",
@@ -885,6 +892,21 @@ def product_gallery_images(image_id):
     return result
 
 
+def load_manual_products():
+    if not MANUAL_PRODUCTS_PATH.exists():
+        return []
+    payload = json.loads(MANUAL_PRODUCTS_PATH.read_text(encoding="utf-8"))
+    products = payload.get("products", payload if isinstance(payload, list) else [])
+    active_products = []
+    for product in products:
+        if product.get("visibility", "storefront") != "storefront":
+            continue
+        if product.get("status", "active") not in {"active", "review"}:
+            continue
+        active_products.append(product)
+    return active_products
+
+
 def generate_outputs(conn, settings):
     rows = conn.execute(
         """
@@ -964,6 +986,71 @@ def generate_outputs(conn, settings):
                 "description": row["description"],
                 "visibility": row["visibility"],
                 "comment": "",
+            }
+        )
+
+    for manual in load_manual_products():
+        category_id = manual.get("categoryId") or "other"
+        category = CATEGORIES.get(category_id, CATEGORIES["other"])
+        image = manual.get("image", "")
+        gallery_images = manual.get("galleryImages") or ([image] if image else [])
+        retail = int(manual["retailPriceKgs"])
+        registered = int(manual.get("registeredPriceKgs", math.floor(retail * 0.97)))
+        product = {
+            "id": manual["id"],
+            "sourceId": manual.get("sourceId", "manual"),
+            "sourceCode": manual.get("sourceCode", ""),
+            "title": manual["title"],
+            "rawName": manual.get("rawName", manual["title"]),
+            "category": manual.get("category") or category["title"],
+            "categoryId": category_id,
+            "brand": manual.get("brand", ""),
+            "productType": manual.get("productType", ""),
+            "unit": manual.get("unit", "шт"),
+            "stockQuantity": manual.get("stockQuantity", 1),
+            "stockAmountUsd": manual.get("stockAmountUsd"),
+            "status": manual.get("status", "active"),
+            "basePriceUsd": manual.get("basePriceUsd"),
+            "wholesalePriceKgs": manual.get("wholesalePriceKgs"),
+            "retailPriceKgs": retail,
+            "registeredPriceKgs": registered,
+            "description": manual.get("description", ""),
+            "image": image,
+            "galleryImages": gallery_images,
+            "icon": category["icon"],
+            "tones": category["tones"],
+            "badge": manual.get("badge") or manual.get("brand") or "В наличии",
+            "rating": manual.get("rating", 4.9),
+            "searchText": " ".join(
+                [
+                    manual.get("searchText", ""),
+                    manual["title"],
+                    manual.get("brand", ""),
+                    manual.get("productType", ""),
+                    manual.get("category", category["title"]),
+                ]
+            ),
+        }
+        products.append(product)
+        review_rows.append(
+            {
+                "review_status": product["status"],
+                "source_group": manual.get("sourceGroup", "manual"),
+                "source_code": product["sourceCode"],
+                "raw_name": product["rawName"],
+                "clean_title": product["title"],
+                "brand": product["brand"],
+                "primary_category": product["category"],
+                "unit": product["unit"],
+                "stock_quantity": product["stockQuantity"],
+                "base_price_usd": product["basePriceUsd"],
+                "wholesale_kgs": product["wholesalePriceKgs"],
+                "retail_raw_kgs": retail,
+                "retail_kgs": retail,
+                "registered_kgs": registered,
+                "description": product["description"],
+                "visibility": manual.get("visibility", "storefront"),
+                "comment": "manual product; stock source is separate from regular 1C import",
             }
         )
 

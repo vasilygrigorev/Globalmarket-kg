@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "id": "prd_perfume_bybozo_sea_breeze_5ml",
+      "sourceId": "manual_perfume",
+      "sourceCode": "perfume-bybozo-sea-breeze-5ml",
+      "sourceGroup": "manual perfume",
+      "title": "Bybozo Sea Breeze парфюм 5 мл",
+      "rawName": "Bybozo Sea Breeze парфюм 5 мл",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "brand": "Bybozo",
+      "productType": "парфюм на разлив",
+      "unit": "5 мл",
+      "stockQuantity": 1,
+      "status": "active",
+      "visibility": "storefront",
+      "retailPriceKgs": 995,
+      "registeredPriceKgs": 965,
+      "description": "Брендовый парфюм Bybozo Sea Breeze в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.",
+      "image": "assets/products/perfume/bybozo-sea-breeze-5ml-card-front-v2.jpg",
+      "galleryImages": [
+        "assets/products/perfume/bybozo-sea-breeze-5ml-card-front-v2.jpg"
+      ],
+      "badge": "Bybozo",
+      "rating": 4.9,
+      "searchText": "bybozo sea breeze парфюм духи travel 5 мл разлив"
+    },
+    {
+      "id": "prd_perfume_chanel_chance_5ml",
+      "sourceId": "manual_perfume",
+      "sourceCode": "perfume-chanel-chance-5ml",
+      "sourceGroup": "manual perfume",
+      "title": "Chanel Chance парфюм 5 мл",
+      "rawName": "Chanel Chance парфюм 5 мл",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "brand": "Chanel",
+      "productType": "парфюм на разлив",
+      "unit": "5 мл",
+      "stockQuantity": 1,
+      "status": "active",
+      "visibility": "storefront",
+      "retailPriceKgs": 895,
+      "registeredPriceKgs": 868,
+      "description": "Брендовый парфюм Chanel Chance в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.",
+      "image": "assets/products/perfume/chanel-chance-5ml-card-front-v2.jpg",
+      "galleryImages": [
+        "assets/products/perfume/chanel-chance-5ml-card-front-v2.jpg"
+      ],
+      "badge": "Chanel",
+      "rating": 4.9,
+      "searchText": "chanel chance парфюм духи travel 5 мл разлив"
+    },
+    {
+      "id": "prd_perfume_le_labo_another_13_5ml",
+      "sourceId": "manual_perfume",
+      "sourceCode": "perfume-le-labo-another-13-5ml",
+      "sourceGroup": "manual perfume",
+      "title": "Le Labo Another 13 парфюм 5 мл",
+      "rawName": "Le Labo Another 13 парфюм 5 мл",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "brand": "Le Labo",
+      "productType": "парфюм на разлив",
+      "unit": "5 мл",
+      "stockQuantity": 1,
+      "status": "active",
+      "visibility": "storefront",
+      "retailPriceKgs": 2245,
+      "registeredPriceKgs": 2177,
+      "description": "Брендовый парфюм Le Labo Another 13 в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.",
+      "image": "assets/products/perfume/le-labo-another-13-5ml-card-front-v2.jpg",
+      "galleryImages": [
+        "assets/products/perfume/le-labo-another-13-5ml-card-front-v2.jpg"
+      ],
+      "badge": "Le Labo",
+      "rating": 4.9,
+      "searchText": "le labo another 13 парфюм духи travel 5 мл разлив"
+    }
+  ]
+}
