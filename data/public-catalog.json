@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T09:30:37.895702+00:00",
+  "generatedAt": "2026-06-16T09:46:11.922461+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -75,9 +75,9 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "galleryImages": [
-        "assets/products/persil/persil-rose-gel-3l-plus-1l-card-front.jpg",
-        "assets/products/persil/persil-rose-gel-3l-plus-1l-front.jpg",
-        "assets/products/persil/persil-rose-gel-3l-plus-1l-back.jpg"
+        "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
+        "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-front.jpg",
+        "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_c5f3a1dce862",
@@ -85,7 +85,7 @@
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/persil/persil-rose-gel-3l-plus-1l-card-front.jpg",
+      "image": "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2517,
       "description": "Гель для стирки Persil Rose с ароматом розы. Формат 3 л + 1 л для повседневной стирки белья.",
@@ -152,9 +152,9 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "galleryImages": [
-        "assets/products/persil/persil-white-flower-gel-3l-plus-1l-card-front.jpg",
-        "assets/products/persil/persil-white-flower-gel-3l-plus-1l-front.jpg",
-        "assets/products/persil/persil-white-flower-gel-3l-plus-1l-back.jpg"
+        "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg",
+        "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-front.jpg",
+        "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_77e4cc05435f",
@@ -162,7 +162,7 @@
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/persil/persil-white-flower-gel-3l-plus-1l-card-front.jpg",
+      "image": "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2517,
       "description": "Гель для стирки Persil White Flower с цветочным ароматом. Формат 3 л + 1 л удобен для семейного запаса.",
@@ -897,9 +897,9 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "galleryImages": [
-        "assets/products/persil/persil-high-foam-gel-3l-plus-1l-card-front.jpg",
-        "assets/products/persil/persil-high-foam-gel-3l-plus-1l-front.jpg",
-        "assets/products/persil/persil-high-foam-gel-3l-plus-1l-back.jpg"
+        "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
+        "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-front.jpg",
+        "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_894a7f6437d0",
@@ -907,7 +907,7 @@
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": "assets/products/persil/persil-high-foam-gel-3l-plus-1l-card-front.jpg",
+      "image": "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2517,
       "description": "Гель для стирки Persil High Foam для свежести и чистоты белья. Большой формат 3 л + 1 л.",
@@ -2589,9 +2589,9 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "galleryImages": [
-        "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-card-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-back.jpg"
+        "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_160ca842c98e",
@@ -2599,7 +2599,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-card-front.jpg",
+      "image": "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Шампунь Herbal Essences Hello Hydration с coconut extract для сухих волос.",
@@ -2716,9 +2716,9 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "galleryImages": [
-        "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-card-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-back.jpg"
+        "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_a4eb0f5d79c1",
@@ -2726,7 +2726,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-card-front.jpg",
+      "image": "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Шампунь Herbal Essences Tropical Hydration с тропическим ароматом для увлажнения волос.",
@@ -2839,9 +2839,9 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "galleryImages": [
-        "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-card-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-back.jpg"
+        "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_65a3b809cec1",
@@ -2849,7 +2849,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-card-front.jpg",
+      "image": "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Шампунь Herbal Essences Love Me Longer с pomegranate essences и berry scent для поврежденных волос.",
@@ -2866,9 +2866,9 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "galleryImages": [
-        "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-card-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-back.jpg"
+        "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_77afdc5c4601",
@@ -2876,7 +2876,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-card-front.jpg",
+      "image": "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Шампунь Herbal Essences Daily Detox Clean с golden raspberry и mint essences для всех типов волос.",
@@ -2916,9 +2916,9 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "galleryImages": [
-        "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-card-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-back.jpg"
+        "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_b05450ca161f",
@@ -2926,7 +2926,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-card-front.jpg",
+      "image": "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Шампунь Herbal Essences Dazzling Shine с lime essences для всех типов волос.",
@@ -2943,9 +2943,9 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "galleryImages": [
-        "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-card-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-back.jpg"
+        "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_47adee9fbe47",
@@ -2953,7 +2953,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-card-front.jpg",
+      "image": "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Шампунь Herbal Essences Ignite My Colour с rose extract для окрашенных волос.",
@@ -3039,9 +3039,9 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "galleryImages": [
-        "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-card-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-front.jpg",
-        "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-back.jpg"
+        "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_4a753298e318",
@@ -3049,7 +3049,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-card-front.jpg",
+      "image": "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Шампунь Herbal Essences Daily Detox Shine с white tea и mint essences для тусклых волос.",
@@ -4239,9 +4239,9 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "galleryImages": [
-        "assets/products/johnsons/johnsons-baby-oil-300ml-card-front.jpg",
-        "assets/products/johnsons/johnsons-baby-oil-300ml-front.jpg",
-        "assets/products/johnsons/johnsons-baby-oil-300ml-back.jpg"
+        "assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
+        "assets/products/johnsons/johnsons-baby-oil-300ml-raw-front.jpg",
+        "assets/products/johnsons/johnsons-baby-oil-300ml-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_0b8a7c8dea63",
@@ -4249,7 +4249,7 @@
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": "assets/products/johnsons/johnsons-baby-oil-300ml-card-front.jpg",
+      "image": "assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 339,
       "description": "Детское масло Johnson's Baby Oil для ухода за кожей. Объем 300 мл.",
@@ -4404,9 +4404,9 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "galleryImages": [
-        "assets/products/johnsons/johnsons-baby-oil-200ml-card-front.jpg",
-        "assets/products/johnsons/johnsons-baby-oil-200ml-front.jpg",
-        "assets/products/johnsons/johnsons-baby-oil-200ml-back.jpg"
+        "assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
+        "assets/products/johnsons/johnsons-baby-oil-200ml-raw-front.jpg",
+        "assets/products/johnsons/johnsons-baby-oil-200ml-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_96fe6b1c7d9c",
@@ -4414,7 +4414,7 @@
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": "assets/products/johnsons/johnsons-baby-oil-200ml-card-front.jpg",
+      "image": "assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 286,
       "description": "Детское масло Johnson's Baby Oil для ухода за кожей. Объем 200 мл.",
@@ -7077,9 +7077,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-card-front.jpg",
-        "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-front.jpg",
-        "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-back.jpg"
+        "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg",
+        "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-front.jpg",
+        "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_08eb2cef1689",
@@ -7087,7 +7087,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-card-front.jpg",
+      "image": "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 2512,
       "description": "Сменные кассеты Gillette Fusion5 ProGlide для гладкого и комфортного бритья. В упаковке 8 штук.",
@@ -7127,9 +7127,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-venus-simply-4-card-front.jpg",
-        "assets/products/gillette/gillette-venus-simply-4-front.jpg",
-        "assets/products/gillette/gillette-venus-simply-4-back.jpg"
+        "assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
+        "assets/products/gillette/gillette-venus-simply-4-raw-front.jpg",
+        "assets/products/gillette/gillette-venus-simply-4-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_477c3cbc2534",
@@ -7137,7 +7137,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-venus-simply-4-card-front.jpg",
+      "image": "assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 223,
       "description": "Одноразовые станки Gillette Venus Simply для мягкого бритья. В упаковке 4 штуки.",
@@ -7177,9 +7177,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-blue-pivot-5-card-front.jpg",
-        "assets/products/gillette/gillette-blue-pivot-5-front.jpg",
-        "assets/products/gillette/gillette-blue-pivot-5-back.jpg"
+        "assets/products/gillette/gillette-blue-pivot-5-raw-card-front.jpg",
+        "assets/products/gillette/gillette-blue-pivot-5-raw-front.jpg",
+        "assets/products/gillette/gillette-blue-pivot-5-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_7de0af90808d",
@@ -7187,7 +7187,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-blue-pivot-5-card-front.jpg",
+      "image": "assets/products/gillette/gillette-blue-pivot-5-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 242,
       "description": "Одноразовые станки Gillette Blue Pivot для комфортного бритья. В упаковке 5 штук.",
@@ -7254,9 +7254,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-venus-smooth-cartridges-4-card-front.jpg",
-        "assets/products/gillette/gillette-venus-smooth-cartridges-4-front.jpg",
-        "assets/products/gillette/gillette-venus-smooth-cartridges-4-back.jpg"
+        "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_debb27afb337",
@@ -7264,7 +7264,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-venus-smooth-cartridges-4-card-front.jpg",
+      "image": "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 824,
       "description": "Сменные кассеты Gillette Venus Smooth для женского станка. В упаковке 4 штуки.",
@@ -7281,9 +7281,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-mach3-turbo-cartridges-4-card-front.jpg",
-        "assets/products/gillette/gillette-mach3-turbo-cartridges-4-front.jpg",
-        "assets/products/gillette/gillette-mach3-turbo-cartridges-4-back.jpg"
+        "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
+        "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-front.jpg",
+        "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_e993df33c857",
@@ -7291,7 +7291,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-mach3-turbo-cartridges-4-card-front.jpg",
+      "image": "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 863,
       "description": "Сменные кассеты Gillette Mach3 Turbo для классического чистого бритья. В упаковке 4 штуки.",
@@ -7308,9 +7308,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-venus-smooth-cartridges-8-card-front.jpg",
-        "assets/products/gillette/gillette-venus-smooth-cartridges-8-front.jpg",
-        "assets/products/gillette/gillette-venus-smooth-cartridges-8-back.jpg"
+        "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_45a4eda764f6",
@@ -7318,7 +7318,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-venus-smooth-cartridges-8-card-front.jpg",
+      "image": "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 1547,
       "description": "Сменные кассеты Gillette Venus Smooth для женского станка. В упаковке 8 штук.",
@@ -7335,9 +7335,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-venus-simply-basic-5-card-front.jpg",
-        "assets/products/gillette/gillette-venus-simply-basic-5-front.jpg",
-        "assets/products/gillette/gillette-venus-simply-basic-5-back.jpg"
+        "assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
+        "assets/products/gillette/gillette-venus-simply-basic-5-raw-front.jpg",
+        "assets/products/gillette/gillette-venus-simply-basic-5-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_0fffb16fcaee",
@@ -7345,7 +7345,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-venus-simply-basic-5-card-front.jpg",
+      "image": "assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 242,
       "description": "Одноразовые станки Gillette Venus Simply Basic для мягкого бритья. В упаковке 5 штук.",
@@ -7385,9 +7385,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-venus-smooth-razor-1-card-front.jpg",
-        "assets/products/gillette/gillette-venus-smooth-razor-1-front.jpg",
-        "assets/products/gillette/gillette-venus-smooth-razor-1-back.jpg"
+        "assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-razor-1-raw-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-razor-1-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_94f09d0e25fc",
@@ -7395,7 +7395,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-venus-smooth-razor-1-card-front.jpg",
+      "image": "assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 480,
       "description": "Женский станок Gillette Venus Smooth с 3 лезвиями для гладкого бритья.",
@@ -7435,9 +7435,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-blue3-8-card-front.jpg",
-        "assets/products/gillette/gillette-blue3-8-front.jpg",
-        "assets/products/gillette/gillette-blue3-8-back.jpg"
+        "assets/products/gillette/gillette-blue3-8-raw-card-front.jpg",
+        "assets/products/gillette/gillette-blue3-8-raw-front.jpg",
+        "assets/products/gillette/gillette-blue3-8-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_a91e8f943ffc",
@@ -7445,7 +7445,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-blue3-8-card-front.jpg",
+      "image": "assets/products/gillette/gillette-blue3-8-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 630,
       "description": "Одноразовые станки Gillette Blue3 Comfort для комфортного бритья. В упаковке 8 штук.",
@@ -7462,9 +7462,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-card-front.jpg",
-        "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-front.jpg",
-        "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-back.jpg"
+        "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_08168d08df30",
@@ -7472,7 +7472,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-card-front.jpg",
+      "image": "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 572,
       "description": "Сменные кассеты Gillette Venus Smooth Sensitive с Aloe для чувствительной кожи. В упаковке 2 штуки.",
@@ -7489,9 +7489,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-blue3-3-card-front.jpg",
-        "assets/products/gillette/gillette-blue3-3-front.jpg",
-        "assets/products/gillette/gillette-blue3-3-back.jpg"
+        "assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
+        "assets/products/gillette/gillette-blue3-3-raw-front.jpg",
+        "assets/products/gillette/gillette-blue3-3-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_cbc7943d5965",
@@ -7499,7 +7499,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-blue3-3-card-front.jpg",
+      "image": "assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 291,
       "description": "Одноразовые станки Gillette Blue3 Comfort для комфортного бритья. В упаковке 3 штуки.",
@@ -7516,9 +7516,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-venus-comfortglide-razor-2-card-front.jpg",
-        "assets/products/gillette/gillette-venus-comfortglide-razor-2-front.jpg",
-        "assets/products/gillette/gillette-venus-comfortglide-razor-2-back.jpg"
+        "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-card-front.jpg",
+        "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-front.jpg",
+        "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_13a9f6cc2aa7",
@@ -7526,7 +7526,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-venus-comfortglide-razor-2-card-front.jpg",
+      "image": "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 863,
       "description": "Женские станки Gillette Venus Comfortglide с увлажняющими полосками для мягкого скольжения.",
@@ -7643,9 +7643,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-card-front.jpg",
-        "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-front.jpg",
-        "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-back.jpg"
+        "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg",
+        "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-front.jpg",
+        "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-back.jpg"
       ],
       "status": "active",
       "id": "prd_b26c0045dd47",
@@ -7653,7 +7653,7 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-card-front.jpg",
+      "image": "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 630,
       "description": "Сменные кассеты Gillette Venus Comfortglide с гелевыми полосками. В упаковке 2 штуки.",
