@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T09:20:48.106957+00:00",
+  "generatedAt": "2026-06-16T09:30:37.895702+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -7385,9 +7385,9 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "galleryImages": [
-        "assets/products/gillette/gillette-venus-smooth-sensitive-razor-1-card-front.jpg",
-        "assets/products/gillette/gillette-venus-smooth-sensitive-razor-1-front.jpg",
-        "assets/products/gillette/gillette-venus-smooth-sensitive-razor-1-back.jpg"
+        "assets/products/gillette/gillette-venus-smooth-razor-1-card-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-razor-1-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-razor-1-back.jpg"
       ],
       "status": "active",
       "id": "prd_94f09d0e25fc",
@@ -7395,15 +7395,15 @@
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": "assets/products/gillette/gillette-venus-smooth-sensitive-razor-1-card-front.jpg",
+      "image": "assets/products/gillette/gillette-venus-smooth-razor-1-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 480,
-      "description": "Женский станок Gillette Venus Smooth Sensitive для бережного бритья чувствительной кожи.",
-      "title": "Gillette Venus Smooth Sensitive станок 1 шт",
+      "description": "Женский станок Gillette Venus Smooth с 3 лезвиями для гладкого бритья.",
+      "title": "Gillette Venus Smooth станок 1 шт",
       "productType": "бритвенные станки",
       "brand": "Gillette Venus",
       "rating": 4.8,
-      "searchText": "gillette venus smooth sensitive станок 1 шт бритье gillette venus бритвенные станки женский станок gillette venus smooth sensitive для бережного бритья чувствительной кожи."
+      "searchText": "gillette venus smooth станок 1 шт бритье gillette venus бритвенные станки женский станок gillette venus smooth с 3 лезвиями для гладкого бритья."
     },
     {
       "unit": "шт",
@@ -7515,22 +7515,26 @@
       "retailPriceKgs": 890,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-comfortglide-razor-2-card-front.jpg",
+        "assets/products/gillette/gillette-venus-comfortglide-razor-2-front.jpg",
+        "assets/products/gillette/gillette-venus-comfortglide-razor-2-back.jpg"
+      ],
       "status": "active",
       "id": "prd_13a9f6cc2aa7",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-comfortglide-razor-2-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 863,
-      "description": "Женские бритвенные станки Gillette Venus Breeze для мягкого бритья. В упаковке 2 штуки.",
-      "title": "Gillette Venus Breeze станки 2 шт",
+      "description": "Женские станки Gillette Venus Comfortglide с увлажняющими полосками для мягкого скольжения.",
+      "title": "Gillette Venus Comfortglide станки 2 шт",
       "productType": "бритвенные станки",
       "brand": "Gillette Venus",
       "rating": 4.8,
-      "searchText": "gillette venus breeze станки 2 шт бритье gillette venus бритвенные станки женские бритвенные станки gillette venus breeze для мягкого бритья. в упаковке 2 штуки."
+      "searchText": "gillette venus comfortglide станки 2 шт бритье gillette venus бритвенные станки женские станки gillette venus comfortglide с увлажняющими полосками для мягкого скольжения."
     },
     {
       "unit": "шт",
@@ -7638,22 +7642,26 @@
       "retailPriceKgs": 650,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-card-front.jpg",
+        "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-front.jpg",
+        "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-back.jpg"
+      ],
       "status": "active",
       "id": "prd_b26c0045dd47",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 630,
-      "description": "Сменные кассеты Gillette Venus Breeze для женского бритвенного станка. В упаковке 2 штуки.",
-      "title": "Gillette Venus Breeze сменные кассеты 2 шт",
+      "description": "Сменные кассеты Gillette Venus Comfortglide с гелевыми полосками. В упаковке 2 штуки.",
+      "title": "Gillette Venus Comfortglide сменные кассеты 2 шт",
       "productType": "сменные кассеты для бритья",
       "brand": "Gillette Venus",
       "rating": 4.8,
-      "searchText": "gillette venus breeze сменные кассеты 2 шт бритье gillette venus сменные кассеты для бритья сменные кассеты gillette venus breeze для женского бритвенного станка. в упаковке 2 штуки."
+      "searchText": "gillette venus comfortglide сменные кассеты 2 шт бритье gillette venus сменные кассеты для бритья сменные кассеты gillette venus comfortglide с гелевыми полосками. в упаковке 2 штуки."
     },
     {
       "unit": "шт",
