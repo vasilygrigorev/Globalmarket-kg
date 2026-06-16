@@ -171,6 +171,22 @@
             <input name="phone" type="tel" autocomplete="tel" required />
           </label>
           <label>
+            Откуда узнали о нас?
+            <select name="customerSource">
+              <option value="">Не указано</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Google">Google</option>
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="TikTok">TikTok</option>
+              <option value="знакомые">знакомые</option>
+              <option value="другое">другое</option>
+            </select>
+          </label>
+          <label>
+            Промокод / код рекламы
+            <input name="promoCode" autocomplete="off" />
+          </label>
+          <label>
             Город
             <input name="city" autocomplete="address-level2" />
           </label>
@@ -185,6 +201,10 @@
           <label>
             Комментарий
             <textarea name="comment" rows="3" placeholder="Удобное время, ориентир, пожелания"></textarea>
+          </label>
+          <label class="checkbox-field">
+            <input name="marketingConsent" type="checkbox" value="yes" />
+            <span>Согласен получать обратную связь и акции</span>
           </label>
           <button class="primary-button" type="submit">Отправить заказ в WhatsApp</button>
           <p class="form-status" id="formStatus" role="status"></p>

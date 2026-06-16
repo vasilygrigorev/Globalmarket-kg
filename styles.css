@@ -1032,6 +1032,19 @@ textarea {
   resize: vertical;
 }
 
+.checkout-form .checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.checkout-form .checkbox-field input {
+  width: 18px;
+  min-height: 18px;
+  flex: 0 0 auto;
+}
+
 .catalog-layout {
   display: grid;
   grid-template-columns: 250px minmax(0, 1fr);

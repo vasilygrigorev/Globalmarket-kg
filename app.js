@@ -9,6 +9,8 @@ const cartDraftStorageKey = "globalMarketCartDraft";
 const lastOrderStorageKey = "globalMarketLastOrder";
 const recentlyViewedStorageKey = "globalMarketRecentlyViewed";
 const favoritesStorageKey = "globalMarketFavorites";
+const attributionStorageKey = "globalMarketAttribution";
+const customerDraftStorageKey = "globalMarketCustomerDraft";
 
 const state = {
   category: "Все",
@@ -141,6 +143,7 @@ let menuCategories = [];
 let floatingCartTimer = null;
 let lastHeaderScrollY = window.scrollY;
 let headerScrollTicking = false;
+let attribution = trackAttribution();
 
 const currency = new Intl.NumberFormat("ru-RU");
 const decimalCurrency = new Intl.NumberFormat("ru-RU", {
@@ -509,6 +512,89 @@ function clearCustomer() {
   localStorage.removeItem("globalMarketCustomer");
 }
 
+function safeLocalStorageJson(key, fallback = null) {
+  try {
+    return JSON.parse(localStorage.getItem(key) || "null") || fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function compactValue(value) {
+  return String(value || "").trim();
+}
+
+function displayValue(value) {
+  const cleaned = compactValue(value);
+  return cleaned || "не указано";
+}
+
+function loadCustomerDraft() {
+  return safeLocalStorageJson(customerDraftStorageKey, {});
+}
+
+function saveCustomerDraftFromForm(form) {
+  if (!form) return;
+  const formData = new FormData(form);
+  const draft = {
+    name: compactValue(formData.get("name")),
+    phone: compactValue(formData.get("phone")),
+    customerSource: compactValue(formData.get("customerSource")),
+    promoCode: compactValue(formData.get("promoCode")),
+    city: compactValue(formData.get("city")),
+    region: compactValue(formData.get("region")),
+    address: compactValue(formData.get("address")),
+    comment: compactValue(formData.get("comment")),
+    marketingConsent: formData.get("marketingConsent") === "yes",
+  };
+  localStorage.setItem(customerDraftStorageKey, JSON.stringify(draft));
+}
+
+function fillCheckoutFromDraft() {
+  const checkoutForm = document.querySelector("#checkoutForm");
+  if (!checkoutForm) return;
+  const draft = loadCustomerDraft();
+  Object.entries(draft).forEach(([key, value]) => {
+    const field = checkoutForm.elements[key];
+    if (!field) return;
+    if (field.type === "checkbox") {
+      field.checked = Boolean(value);
+      return;
+    }
+    if (!field.value) field.value = value || "";
+  });
+}
+
+function trackAttribution() {
+  const current = safeLocalStorageJson(attributionStorageKey, {});
+  const params = new URLSearchParams(window.location.search);
+  const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+  const now = new Date().toISOString();
+  const next = { ...current };
+  let changed = false;
+
+  utmKeys.forEach((key) => {
+    const value = compactValue(params.get(key));
+    if (!value) return;
+    next[key] = value;
+    changed = true;
+  });
+
+  const referrer = compactValue(document.referrer);
+  if (!changed && referrer) {
+    next.referrer = referrer;
+    changed = true;
+  } else if (changed && referrer && !next.referrer) {
+    next.referrer = referrer;
+  }
+
+  if (!changed) return current || {};
+  if (!next.first_seen_at) next.first_seen_at = now;
+  next.last_seen_at = now;
+  localStorage.setItem(attributionStorageKey, JSON.stringify(next));
+  return next;
+}
+
 function fillCheckoutFromCustomer() {
   const checkoutForm = document.querySelector("#checkoutForm");
   if (!checkoutForm || !state.customer) return;
@@ -526,6 +612,7 @@ function renderCustomerPanel() {
   customerForm.elements.customerPhone.value = state.customer?.phone || "";
   customerForm.querySelector("button[type='submit']").textContent = registered ? "Обновить данные" : "Зарегистрироваться";
   clearCustomerButton.hidden = !registered;
+  fillCheckoutFromDraft();
   fillCheckoutFromCustomer();
 }
 
@@ -1253,6 +1340,14 @@ function orderMessage(formData) {
     const lineTotal = productPrice(product) * qty;
     return `${index + 1}. ${product.title} — ${qty} ${product.unit || "шт"} x ${formatPrice(productPrice(product))} = ${formatPrice(lineTotal)}`;
   });
+  const sourceSiteLines = [
+    `utm_source: ${displayValue(attribution.utm_source)}`,
+    `utm_medium: ${displayValue(attribution.utm_medium)}`,
+    `utm_campaign: ${displayValue(attribution.utm_campaign)}`,
+    `utm_content: ${displayValue(attribution.utm_content)}`,
+    `utm_term: ${displayValue(attribution.utm_term)}`,
+    `referrer: ${displayValue(attribution.referrer)}`,
+  ];
 
   return [
     "Новый заказ с сайта",
@@ -1269,6 +1364,16 @@ function orderMessage(formData) {
     "",
     `Итого: ${formatPrice(total)}`,
     `Доставка: ${delivery}`,
+    "",
+    "Клиент:",
+    `Имя: ${displayValue(formData.get("name"))}`,
+    `Телефон/WhatsApp: ${displayValue(formData.get("phone"))}`,
+    `Откуда узнали: ${displayValue(formData.get("customerSource"))}`,
+    `Промокод/код: ${displayValue(formData.get("promoCode"))}`,
+    `Согласие на обратную связь: ${formData.get("marketingConsent") === "yes" ? "да" : "нет"}`,
+    "",
+    "Источник сайта:",
+    ...sourceSiteLines,
     "",
     "Цены и наличие подтверждает менеджер.",
   ].join("\n");
@@ -1467,6 +1572,10 @@ document.querySelector("#closeCart").addEventListener("click", () => setCartOpen
 document.querySelector("#closeProductModal").addEventListener("click", closeProductModal);
 document.querySelector("#checkoutLink").addEventListener("click", () => setCartOpen(false));
 
+const checkoutForm = document.querySelector("#checkoutForm");
+checkoutForm.addEventListener("input", () => saveCustomerDraftFromForm(checkoutForm));
+checkoutForm.addEventListener("change", () => saveCustomerDraftFromForm(checkoutForm));
+
 toggleSearchButton.addEventListener("click", () => {
   const isOpen = siteHeader.classList.toggle("search-open");
   toggleSearchButton.setAttribute("aria-expanded", String(isOpen));
@@ -1599,13 +1708,14 @@ cartDrawer.addEventListener("click", (event) => {
   if (event.target === cartDrawer) setCartOpen(false);
 });
 
-document.querySelector("#checkoutForm").addEventListener("submit", (event) => {
+checkoutForm.addEventListener("submit", (event) => {
   event.preventDefault();
   if (!state.cart.size) {
     formStatus.textContent = "Добавьте товары в корзину перед оформлением.";
     return;
   }
   const formData = new FormData(event.currentTarget);
+  saveCustomerDraftFromForm(event.currentTarget);
   const message = orderMessage(formData);
   const whatsapp = `https://wa.me/${catalogSettings.manager_whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
   saveLastOrder();
