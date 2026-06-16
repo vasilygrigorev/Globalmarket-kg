@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T13:36:39.110734+00:00",
+  "generatedAt": "2026-06-16T09:20:48.106957+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -15,13 +15,13 @@
     {
       "id": "home_cleaning",
       "title": "Уборка и чистота",
-      "count": 11,
+      "count": 10,
       "icon": "✨"
     },
     {
       "id": "hair",
       "title": "Уход за волосами",
-      "count": 103,
+      "count": 104,
       "icon": "🧴"
     },
     {
@@ -74,22 +74,26 @@
       "retailPriceKgs": 2595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/persil/persil-rose-gel-3l-plus-1l-card-front.jpg",
+        "assets/products/persil/persil-rose-gel-3l-plus-1l-front.jpg",
+        "assets/products/persil/persil-rose-gel-3l-plus-1l-back.jpg"
+      ],
       "status": "active",
       "id": "prd_c5f3a1dce862",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/persil/persil-rose-gel-3l-plus-1l-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2517,
-      "description": "Гель для стирки Persil Rose для повседневной стирки белья. Большой формат 3 л + 1 л удобен для семьи.",
+      "description": "Гель для стирки Persil Rose с ароматом розы. Формат 3 л + 1 л для повседневной стирки белья.",
       "title": "Persil Rose гель для стирки 3 л + 1 л",
       "productType": "гель для стирки",
       "brand": "Persil",
       "rating": 4.8,
-      "searchText": "persil rose гель для стирки 3 л + 1 л стирка и уход за бельем persil гель для стирки гель для стирки persil rose для повседневной стирки белья. большой формат 3 л + 1 л удобен для семьи."
+      "searchText": "persil rose гель для стирки 3 л + 1 л стирка и уход за бельем persil гель для стирки гель для стирки persil rose с ароматом розы. формат 3 л + 1 л для повседневной стирки белья."
     },
     {
       "unit": "шт",
@@ -147,22 +151,26 @@
       "retailPriceKgs": 2595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/persil/persil-white-flower-gel-3l-plus-1l-card-front.jpg",
+        "assets/products/persil/persil-white-flower-gel-3l-plus-1l-front.jpg",
+        "assets/products/persil/persil-white-flower-gel-3l-plus-1l-back.jpg"
+      ],
       "status": "active",
       "id": "prd_77e4cc05435f",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/persil/persil-white-flower-gel-3l-plus-1l-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2517,
-      "description": "Гель Persil White Flower для домашней стирки с цветочным ароматом. Формат 3 л + 1 л.",
+      "description": "Гель для стирки Persil White Flower с цветочным ароматом. Формат 3 л + 1 л удобен для семейного запаса.",
       "title": "Persil White Flower гель для стирки 3 л + 1 л",
       "productType": "гель для стирки",
       "brand": "Persil",
       "rating": 4.8,
-      "searchText": "persil white flower гель для стирки 3 л + 1 л стирка и уход за бельем persil гель для стирки гель persil white flower для домашней стирки с цветочным ароматом. формат 3 л + 1 л."
+      "searchText": "persil white flower гель для стирки 3 л + 1 л стирка и уход за бельем persil гель для стирки гель для стирки persil white flower с цветочным ароматом. формат 3 л + 1 л удобен для семейного запаса."
     },
     {
       "unit": "шт",
@@ -888,22 +896,26 @@
       "retailPriceKgs": 2595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/persil/persil-high-foam-gel-3l-plus-1l-card-front.jpg",
+        "assets/products/persil/persil-high-foam-gel-3l-plus-1l-front.jpg",
+        "assets/products/persil/persil-high-foam-gel-3l-plus-1l-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_894a7f6437d0",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/persil/persil-high-foam-gel-3l-plus-1l-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2517,
-      "description": "Persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 3 L, 1 L.",
-      "title": "Persil GEL (3L+1L) High Foam",
+      "description": "Гель для стирки Persil High Foam для свежести и чистоты белья. Большой формат 3 л + 1 л.",
+      "title": "Persil High Foam гель для стирки 3 л + 1 л",
       "productType": "гель для стирки",
       "brand": "Persil",
       "rating": 4.8,
-      "searchText": "persil gel (3l+1l) high foam стирка и уход за бельем persil гель для стирки persil: гель для стирки для ежедневного ухода за бельем и домашней стирки. формат: 3 l, 1 l."
+      "searchText": "persil high foam гель для стирки 3 л + 1 л стирка и уход за бельем persil гель для стирки гель для стирки persil high foam для свежести и чистоты белья. большой формат 3 л + 1 л."
     },
     {
       "unit": "шт",
@@ -1499,29 +1511,6 @@
       "brand": "Clear",
       "rating": 4.8,
       "searchText": "clear шамп.arab.(m) (600ml) deep cleans уборка и чистота clear уборка и чистота clear: товар для дома и личного ухода. формат: 600 ml, 600ml."
-    },
-    {
-      "unit": "шт",
-      "badge": "Herb.Ess",
-      "retailPriceKgs": 495,
-      "category": "Уборка и чистота",
-      "categoryId": "home_cleaning",
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_77afdc5c4601",
-      "tones": [
-        "#d7eadf",
-        "#6aa58f"
-      ],
-      "image": null,
-      "icon": "✨",
-      "registeredPriceKgs": 480,
-      "description": "Herb.Ess: товар для дома и личного ухода.",
-      "title": "Herb.Ess. France Шамп (400) Detox Clean",
-      "productType": "уборка и чистота",
-      "brand": "Herb.Ess",
-      "rating": 4.8,
-      "searchText": "herb.ess. france шамп (400) detox clean уборка и чистота herb.ess уборка и чистота herb.ess: товар для дома и личного ухода."
     },
     {
       "unit": "шт",
@@ -2595,26 +2584,30 @@
     },
     {
       "unit": "шт",
-      "badge": "Herb.Ess",
+      "badge": "Herbal Essences",
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_160ca842c98e",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
-      "description": "Herb.Ess: средство для ухода за волосами на каждый день.",
-      "title": "Herb.Ess. France Шамп (400) Hello Hydration",
+      "description": "Шампунь Herbal Essences Hello Hydration с coconut extract для сухих волос.",
+      "title": "Herbal Essences Hello Hydration шампунь 400 мл",
       "productType": "шампунь",
-      "brand": "Herb.Ess",
+      "brand": "Herbal Essences",
       "rating": 4.8,
-      "searchText": "herb.ess. france шамп (400) hello hydration уход за волосами herb.ess шампунь herb.ess: средство для ухода за волосами на каждый день."
+      "searchText": "herbal essences hello hydration шампунь 400 мл уход за волосами herbal essences шампунь шампунь herbal essences hello hydration с coconut extract для сухих волос."
     },
     {
       "unit": "шт",
@@ -2718,26 +2711,30 @@
     },
     {
       "unit": "шт",
-      "badge": "Herb.Ess",
+      "badge": "Herbal Essences",
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_a4eb0f5d79c1",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
-      "description": "Herb.Ess: средство для ухода за волосами на каждый день.",
-      "title": "Herb.Ess. France Шамп (400) Tropical Hydration",
+      "description": "Шампунь Herbal Essences Tropical Hydration с тропическим ароматом для увлажнения волос.",
+      "title": "Herbal Essences Tropical Hydration шампунь 400 мл",
       "productType": "шампунь",
-      "brand": "Herb.Ess",
+      "brand": "Herbal Essences",
       "rating": 4.8,
-      "searchText": "herb.ess. france шамп (400) tropical hydration уход за волосами herb.ess шампунь herb.ess: средство для ухода за волосами на каждый день."
+      "searchText": "herbal essences tropical hydration шампунь 400 мл уход за волосами herbal essences шампунь шампунь herbal essences tropical hydration с тропическим ароматом для увлажнения волос."
     },
     {
       "unit": "шт",
@@ -2837,26 +2834,57 @@
     },
     {
       "unit": "шт",
-      "badge": "Herb.Ess",
+      "badge": "Herbal Essences",
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_65a3b809cec1",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
-      "description": "Herb.Ess: средство для ухода за волосами на каждый день.",
-      "title": "Herb.Ess. France Шамп (400) Love Me",
+      "description": "Шампунь Herbal Essences Love Me Longer с pomegranate essences и berry scent для поврежденных волос.",
+      "title": "Herbal Essences Love Me Longer шампунь 400 мл",
       "productType": "шампунь",
-      "brand": "Herb.Ess",
+      "brand": "Herbal Essences",
       "rating": 4.8,
-      "searchText": "herb.ess. france шамп (400) love me уход за волосами herb.ess шампунь herb.ess: средство для ухода за волосами на каждый день."
+      "searchText": "herbal essences love me longer шампунь 400 мл уход за волосами herbal essences шампунь шампунь herbal essences love me longer с pomegranate essences и berry scent для поврежденных волос."
+    },
+    {
+      "unit": "шт",
+      "badge": "Herbal Essences",
+      "retailPriceKgs": 495,
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "galleryImages": [
+        "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_77afdc5c4601",
+      "tones": [
+        "#f4d5df",
+        "#b66f91"
+      ],
+      "image": "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-card-front.jpg",
+      "icon": "🧴",
+      "registeredPriceKgs": 480,
+      "description": "Шампунь Herbal Essences Daily Detox Clean с golden raspberry и mint essences для всех типов волос.",
+      "title": "Herbal Essences Daily Detox Clean шампунь 400 мл",
+      "productType": "шампунь",
+      "brand": "Herbal Essences",
+      "rating": 4.8,
+      "searchText": "herbal essences daily detox clean шампунь 400 мл уход за волосами herbal essences шампунь шампунь herbal essences daily detox clean с golden raspberry и mint essences для всех типов волос."
     },
     {
       "unit": "шт",
@@ -2883,49 +2911,57 @@
     },
     {
       "unit": "шт",
-      "badge": "Herb.Ess",
+      "badge": "Herbal Essences",
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_47adee9fbe47",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
+      "galleryImages": [
+        "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-back.jpg"
       ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 480,
-      "description": "Herb.Ess: средство для ухода за волосами на каждый день.",
-      "title": "Herb.Ess. France Шамп (400) Color",
-      "productType": "шампунь",
-      "brand": "Herb.Ess",
-      "rating": 4.8,
-      "searchText": "herb.ess. france шамп (400) color уход за волосами herb.ess шампунь herb.ess: средство для ухода за волосами на каждый день."
-    },
-    {
-      "unit": "шт",
-      "badge": "Herb.Ess",
-      "retailPriceKgs": 495,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
+      "status": "active",
       "id": "prd_b05450ca161f",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
-      "description": "Herb.Ess: средство для ухода за волосами на каждый день.",
-      "title": "Herb.Ess. France Шамп (400) Shine",
+      "description": "Шампунь Herbal Essences Dazzling Shine с lime essences для всех типов волос.",
+      "title": "Herbal Essences Dazzling Shine шампунь 400 мл",
       "productType": "шампунь",
-      "brand": "Herb.Ess",
+      "brand": "Herbal Essences",
       "rating": 4.8,
-      "searchText": "herb.ess. france шамп (400) shine уход за волосами herb.ess шампунь herb.ess: средство для ухода за волосами на каждый день."
+      "searchText": "herbal essences dazzling shine шампунь 400 мл уход за волосами herbal essences шампунь шампунь herbal essences dazzling shine с lime essences для всех типов волос."
+    },
+    {
+      "unit": "шт",
+      "badge": "Herbal Essences",
+      "retailPriceKgs": 495,
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "galleryImages": [
+        "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_47adee9fbe47",
+      "tones": [
+        "#f4d5df",
+        "#b66f91"
+      ],
+      "image": "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-card-front.jpg",
+      "icon": "🧴",
+      "registeredPriceKgs": 480,
+      "description": "Шампунь Herbal Essences Ignite My Colour с rose extract для окрашенных волос.",
+      "title": "Herbal Essences Ignite My Colour шампунь 400 мл",
+      "productType": "шампунь",
+      "brand": "Herbal Essences",
+      "rating": 4.8,
+      "searchText": "herbal essences ignite my colour шампунь 400 мл уход за волосами herbal essences шампунь шампунь herbal essences ignite my colour с rose extract для окрашенных волос."
     },
     {
       "unit": "шт",
@@ -2998,26 +3034,30 @@
     },
     {
       "unit": "шт",
-      "badge": "Herb.Ess",
+      "badge": "Herbal Essences",
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-card-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-front.jpg",
+        "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_4a753298e318",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
-      "description": "Herb.Ess: средство для ухода за волосами на каждый день.",
-      "title": "Herb.Ess. France Шамп (400) Detox Shine",
+      "description": "Шампунь Herbal Essences Daily Detox Shine с white tea и mint essences для тусклых волос.",
+      "title": "Herbal Essences Daily Detox Shine шампунь 400 мл",
       "productType": "шампунь",
-      "brand": "Herb.Ess",
+      "brand": "Herbal Essences",
       "rating": 4.8,
-      "searchText": "herb.ess. france шамп (400) detox shine уход за волосами herb.ess шампунь herb.ess: средство для ухода за волосами на каждый день."
+      "searchText": "herbal essences daily detox shine шампунь 400 мл уход за волосами herbal essences шампунь шампунь herbal essences daily detox shine с white tea и mint essences для тусклых волос."
     },
     {
       "unit": "шт",
@@ -4198,14 +4238,18 @@
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/johnsons/johnsons-baby-oil-300ml-card-front.jpg",
+        "assets/products/johnsons/johnsons-baby-oil-300ml-front.jpg",
+        "assets/products/johnsons/johnsons-baby-oil-300ml-back.jpg"
+      ],
       "status": "active",
       "id": "prd_0b8a7c8dea63",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/johnsons/johnsons-baby-oil-300ml-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 339,
       "description": "Детское масло Johnson's Baby Oil для ухода за кожей. Объем 300 мл.",
@@ -4355,26 +4399,30 @@
     },
     {
       "unit": "шт",
-      "badge": "J's",
+      "badge": "Johnson's",
       "retailPriceKgs": 295,
       "category": "Уход за телом",
       "categoryId": "body",
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/johnsons/johnsons-baby-oil-200ml-card-front.jpg",
+        "assets/products/johnsons/johnsons-baby-oil-200ml-front.jpg",
+        "assets/products/johnsons/johnsons-baby-oil-200ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_96fe6b1c7d9c",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/johnsons/johnsons-baby-oil-200ml-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 286,
-      "description": "J's: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "J's Baby Oil (Масло) (200)",
-      "productType": "уход за телом",
-      "brand": "J's",
+      "description": "Детское масло Johnson's Baby Oil для ухода за кожей. Объем 200 мл.",
+      "title": "Johnson's Baby Oil детское масло 200 мл",
+      "productType": "масло для тела",
+      "brand": "Johnson's",
       "rating": 4.8,
-      "searchText": "j's baby oil (масло) (200) уход за телом j's уход за телом j's: средство для ухода за кожей и ежедневной гигиены."
+      "searchText": "johnson's baby oil детское масло 200 мл уход за телом johnson's масло для тела детское масло johnson's baby oil для ухода за кожей. объем 200 мл."
     },
     {
       "unit": "шт",
@@ -7028,22 +7076,26 @@
       "retailPriceKgs": 2590,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-card-front.jpg",
+        "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-front.jpg",
+        "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-back.jpg"
+      ],
       "status": "active",
       "id": "prd_08eb2cef1689",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 2512,
-      "description": "Сменные кассеты Gillette ProGlide для гладкого и комфортного бритья. В упаковке 8 штук.",
-      "title": "Gillette ProGlide сменные кассеты 8 шт",
+      "description": "Сменные кассеты Gillette Fusion5 ProGlide для гладкого и комфортного бритья. В упаковке 8 штук.",
+      "title": "Gillette Fusion5 ProGlide сменные кассеты 8 шт",
       "productType": "сменные кассеты для бритья",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "gillette proglide сменные кассеты 8 шт бритье gillette сменные кассеты для бритья сменные кассеты gillette proglide для гладкого и комфортного бритья. в упаковке 8 штук."
+      "searchText": "gillette fusion5 proglide сменные кассеты 8 шт бритье gillette сменные кассеты для бритья сменные кассеты gillette fusion5 proglide для гладкого и комфортного бритья. в упаковке 8 штук."
     },
     {
       "unit": "шт",
@@ -7074,22 +7126,26 @@
       "retailPriceKgs": 230,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-simply-4-card-front.jpg",
+        "assets/products/gillette/gillette-venus-simply-4-front.jpg",
+        "assets/products/gillette/gillette-venus-simply-4-back.jpg"
+      ],
       "status": "active",
       "id": "prd_477c3cbc2534",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-simply-4-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 223,
-      "description": "Женские бритвенные станки Gillette Venus Simply для мягкого бритья. В упаковке 4 штуки.",
-      "title": "Gillette Venus Simply станки 4 шт",
+      "description": "Одноразовые станки Gillette Venus Simply для мягкого бритья. В упаковке 4 штуки.",
+      "title": "Gillette Venus Simply одноразовые станки 4 шт",
       "productType": "бритвенные станки",
       "brand": "Gillette Venus",
       "rating": 4.8,
-      "searchText": "gillette venus simply станки 4 шт бритье gillette venus бритвенные станки женские бритвенные станки gillette venus simply для мягкого бритья. в упаковке 4 штуки."
+      "searchText": "gillette venus simply одноразовые станки 4 шт бритье gillette venus бритвенные станки одноразовые станки gillette venus simply для мягкого бритья. в упаковке 4 штуки."
     },
     {
       "unit": "шт",
@@ -7120,14 +7176,18 @@
       "retailPriceKgs": 250,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-blue-pivot-5-card-front.jpg",
+        "assets/products/gillette/gillette-blue-pivot-5-front.jpg",
+        "assets/products/gillette/gillette-blue-pivot-5-back.jpg"
+      ],
       "status": "active",
       "id": "prd_7de0af90808d",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-blue-pivot-5-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 242,
       "description": "Одноразовые станки Gillette Blue Pivot для комфортного бритья. В упаковке 5 штук.",
@@ -7193,22 +7253,26 @@
       "retailPriceKgs": 850,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-smooth-cartridges-4-card-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-cartridges-4-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-cartridges-4-back.jpg"
+      ],
       "status": "active",
       "id": "prd_debb27afb337",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-smooth-cartridges-4-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 824,
-      "description": "Сменные кассеты Gillette Venus для женского бритвенного станка. В упаковке 4 штуки.",
-      "title": "Gillette Venus сменные кассеты 4 шт",
+      "description": "Сменные кассеты Gillette Venus Smooth для женского станка. В упаковке 4 штуки.",
+      "title": "Gillette Venus Smooth сменные кассеты 4 шт",
       "productType": "сменные кассеты для бритья",
       "brand": "Gillette Venus",
       "rating": 4.8,
-      "searchText": "gillette venus сменные кассеты 4 шт бритье gillette venus сменные кассеты для бритья сменные кассеты gillette venus для женского бритвенного станка. в упаковке 4 штуки."
+      "searchText": "gillette venus smooth сменные кассеты 4 шт бритье gillette venus сменные кассеты для бритья сменные кассеты gillette venus smooth для женского станка. в упаковке 4 штуки."
     },
     {
       "unit": "шт",
@@ -7216,22 +7280,26 @@
       "retailPriceKgs": 890,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-mach3-turbo-cartridges-4-card-front.jpg",
+        "assets/products/gillette/gillette-mach3-turbo-cartridges-4-front.jpg",
+        "assets/products/gillette/gillette-mach3-turbo-cartridges-4-back.jpg"
+      ],
       "status": "active",
       "id": "prd_e993df33c857",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-mach3-turbo-cartridges-4-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 863,
-      "description": "Сменные кассеты Gillette Turbo для бритвенного станка. В упаковке 4 штуки.",
-      "title": "Gillette Turbo сменные кассеты 4 шт",
+      "description": "Сменные кассеты Gillette Mach3 Turbo для классического чистого бритья. В упаковке 4 штуки.",
+      "title": "Gillette Mach3 Turbo сменные кассеты 4 шт",
       "productType": "сменные кассеты для бритья",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "gillette turbo сменные кассеты 4 шт бритье gillette сменные кассеты для бритья сменные кассеты gillette turbo для бритвенного станка. в упаковке 4 штуки."
+      "searchText": "gillette mach3 turbo сменные кассеты 4 шт бритье gillette сменные кассеты для бритья сменные кассеты gillette mach3 turbo для классического чистого бритья. в упаковке 4 штуки."
     },
     {
       "unit": "шт",
@@ -7239,22 +7307,26 @@
       "retailPriceKgs": 1595,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-smooth-cartridges-8-card-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-cartridges-8-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-cartridges-8-back.jpg"
+      ],
       "status": "active",
       "id": "prd_45a4eda764f6",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-smooth-cartridges-8-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 1547,
-      "description": "Сменные кассеты Gillette Venus для женского бритвенного станка. В упаковке 8 штук.",
-      "title": "Gillette Venus сменные кассеты 8 шт",
+      "description": "Сменные кассеты Gillette Venus Smooth для женского станка. В упаковке 8 штук.",
+      "title": "Gillette Venus Smooth сменные кассеты 8 шт",
       "productType": "сменные кассеты для бритья",
       "brand": "Gillette Venus",
       "rating": 4.8,
-      "searchText": "gillette venus сменные кассеты 8 шт бритье gillette venus сменные кассеты для бритья сменные кассеты gillette venus для женского бритвенного станка. в упаковке 8 штук."
+      "searchText": "gillette venus smooth сменные кассеты 8 шт бритье gillette venus сменные кассеты для бритья сменные кассеты gillette venus smooth для женского станка. в упаковке 8 штук."
     },
     {
       "unit": "шт",
@@ -7262,22 +7334,26 @@
       "retailPriceKgs": 250,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-simply-basic-5-card-front.jpg",
+        "assets/products/gillette/gillette-venus-simply-basic-5-front.jpg",
+        "assets/products/gillette/gillette-venus-simply-basic-5-back.jpg"
+      ],
       "status": "active",
       "id": "prd_0fffb16fcaee",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-simply-basic-5-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 242,
-      "description": "Одноразовые бритвенные станки Gillette Venus Simply для мягкого бритья. В упаковке 5 штук.",
-      "title": "Gillette Venus Simply одноразовые станки 5 шт",
+      "description": "Одноразовые станки Gillette Venus Simply Basic для мягкого бритья. В упаковке 5 штук.",
+      "title": "Gillette Venus Simply Basic одноразовые станки 5 шт",
       "productType": "бритвенные станки",
       "brand": "Gillette Venus",
       "rating": 4.8,
-      "searchText": "gillette venus simply одноразовые станки 5 шт бритье gillette venus бритвенные станки одноразовые бритвенные станки gillette venus simply для мягкого бритья. в упаковке 5 штук."
+      "searchText": "gillette venus simply basic одноразовые станки 5 шт бритье gillette venus бритвенные станки одноразовые станки gillette venus simply basic для мягкого бритья. в упаковке 5 штук."
     },
     {
       "unit": "шт",
@@ -7308,22 +7384,26 @@
       "retailPriceKgs": 495,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-smooth-sensitive-razor-1-card-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-sensitive-razor-1-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-sensitive-razor-1-back.jpg"
+      ],
       "status": "active",
       "id": "prd_94f09d0e25fc",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-smooth-sensitive-razor-1-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 480,
-      "description": "Женский бритвенный станок Gillette Venus для мягкого бритья. В упаковке 1 штука.",
-      "title": "Gillette Venus станок 1 шт",
+      "description": "Женский станок Gillette Venus Smooth Sensitive для бережного бритья чувствительной кожи.",
+      "title": "Gillette Venus Smooth Sensitive станок 1 шт",
       "productType": "бритвенные станки",
       "brand": "Gillette Venus",
       "rating": 4.8,
-      "searchText": "gillette venus станок 1 шт бритье gillette venus бритвенные станки женский бритвенный станок gillette venus для мягкого бритья. в упаковке 1 штука."
+      "searchText": "gillette venus smooth sensitive станок 1 шт бритье gillette venus бритвенные станки женский станок gillette venus smooth sensitive для бережного бритья чувствительной кожи."
     },
     {
       "unit": "шт",
@@ -7354,22 +7434,26 @@
       "retailPriceKgs": 650,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-blue3-8-card-front.jpg",
+        "assets/products/gillette/gillette-blue3-8-front.jpg",
+        "assets/products/gillette/gillette-blue3-8-back.jpg"
+      ],
       "status": "active",
       "id": "prd_a91e8f943ffc",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-blue3-8-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 630,
-      "description": "Одноразовые станки Gillette Blue3 для комфортного бритья. В упаковке 8 штук.",
+      "description": "Одноразовые станки Gillette Blue3 Comfort для комфортного бритья. В упаковке 8 штук.",
       "title": "Gillette Blue3 одноразовые станки 8 шт",
       "productType": "бритвенные станки",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "gillette blue3 одноразовые станки 8 шт бритье gillette бритвенные станки одноразовые станки gillette blue3 для комфортного бритья. в упаковке 8 штук."
+      "searchText": "gillette blue3 одноразовые станки 8 шт бритье gillette бритвенные станки одноразовые станки gillette blue3 comfort для комфортного бритья. в упаковке 8 штук."
     },
     {
       "unit": "шт",
@@ -7377,22 +7461,26 @@
       "retailPriceKgs": 590,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-card-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-front.jpg",
+        "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-back.jpg"
+      ],
       "status": "active",
       "id": "prd_08168d08df30",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 572,
-      "description": "Сменные кассеты Gillette Venus для женского бритвенного станка. В упаковке 2 штуки.",
-      "title": "Gillette Venus сменные кассеты 2 шт",
+      "description": "Сменные кассеты Gillette Venus Smooth Sensitive с Aloe для чувствительной кожи. В упаковке 2 штуки.",
+      "title": "Gillette Venus Smooth Sensitive сменные кассеты 2 шт",
       "productType": "сменные кассеты для бритья",
       "brand": "Gillette Venus",
       "rating": 4.8,
-      "searchText": "gillette venus сменные кассеты 2 шт бритье gillette venus сменные кассеты для бритья сменные кассеты gillette venus для женского бритвенного станка. в упаковке 2 штуки."
+      "searchText": "gillette venus smooth sensitive сменные кассеты 2 шт бритье gillette venus сменные кассеты для бритья сменные кассеты gillette venus smooth sensitive с aloe для чувствительной кожи. в упаковке 2 штуки."
     },
     {
       "unit": "шт",
@@ -7400,22 +7488,26 @@
       "retailPriceKgs": 300,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-blue3-3-card-front.jpg",
+        "assets/products/gillette/gillette-blue3-3-front.jpg",
+        "assets/products/gillette/gillette-blue3-3-back.jpg"
+      ],
       "status": "active",
       "id": "prd_cbc7943d5965",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-blue3-3-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 291,
-      "description": "Одноразовые станки Gillette Blue3 для комфортного бритья. В упаковке 3 штуки.",
+      "description": "Одноразовые станки Gillette Blue3 Comfort для комфортного бритья. В упаковке 3 штуки.",
       "title": "Gillette Blue3 одноразовые станки 3 шт",
       "productType": "бритвенные станки",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "gillette blue3 одноразовые станки 3 шт бритье gillette бритвенные станки одноразовые станки gillette blue3 для комфортного бритья. в упаковке 3 штуки."
+      "searchText": "gillette blue3 одноразовые станки 3 шт бритье gillette бритвенные станки одноразовые станки gillette blue3 comfort для комфортного бритья. в упаковке 3 штуки."
     },
     {
       "unit": "шт",
