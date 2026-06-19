@@ -20,6 +20,8 @@ PUBLIC_PRODUCT_FIELDS = [
     "retailPriceKgs",
     "category",
     "categoryId",
+    "collections",
+    "collectionLabels",
     "galleryImages",
     "status",
     "id",

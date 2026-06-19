@@ -9,13 +9,13 @@
     {
       "id": "laundry",
       "title": "Стирка и уход за бельем",
-      "count": 53,
+      "count": 84,
       "icon": "🫧"
     },
     {
       "id": "home_cleaning",
       "title": "Уборка и чистота",
-      "count": 9,
+      "count": 11,
       "icon": "✨"
     },
     {
@@ -59,12 +59,6 @@
       "title": "Продукты",
       "count": 6,
       "icon": "🍫"
-    },
-    {
-      "id": "germany",
-      "title": "Товары из Германии",
-      "count": 33,
-      "icon": "🇩🇪"
     },
     {
       "id": "other",
@@ -334,22 +328,26 @@
       "retailPriceKgs": 895,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110510-05-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-05-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-05-back.jpg"
+      ],
       "status": "active",
       "id": "prd_2acd534839ea",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110510-05-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 868,
-      "description": "Капсулы Ariel All in 1 Universal для удобной стирки. В упаковке 15 штук.",
+      "description": "Ariel All in 1 Universal капсулы 15 шт для удобной стирки. Наличие и детали заказа подтвердит менеджер.",
       "title": "Ariel All in 1 Universal капсулы 15 шт",
       "productType": "капсулы для стирки",
       "brand": "Ariel",
       "rating": 4.8,
-      "searchText": "ariel all in 1 universal капсулы 15 шт стирка и уход за бельем ariel капсулы для стирки капсулы ariel all in 1 universal для удобной стирки. в упаковке 15 штук."
+      "searchText": "ariel all in 1 universal капсулы 15 шт ariel капсулы для стирки стирка и уход за бельем ariel all in 1 universal капсулы 15 шт для удобной стирки. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -380,22 +378,26 @@
       "retailPriceKgs": 895,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110510-06-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-06-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-06-back.jpg"
+      ],
       "status": "active",
       "id": "prd_bd8fab362271",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110510-06-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 868,
-      "description": "Капсулы Ariel All in 1 Color для стирки цветного белья. В упаковке 15 штук.",
+      "description": "Ariel All in 1 Color капсулы 15 шт для удобной стирки. Наличие и детали заказа подтвердит менеджер.",
       "title": "Ariel All in 1 Color капсулы 15 шт",
       "productType": "капсулы для стирки",
       "brand": "Ariel",
       "rating": 4.8,
-      "searchText": "ariel all in 1 color капсулы 15 шт стирка и уход за бельем ariel капсулы для стирки капсулы ariel all in 1 color для стирки цветного белья. в упаковке 15 штук."
+      "searchText": "ariel all in 1 color капсулы 15 шт ariel капсулы для стирки стирка и уход за бельем ariel all in 1 color капсулы 15 шт для удобной стирки. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -948,26 +950,30 @@
     },
     {
       "unit": "шт",
-      "badge": "0Comfort",
+      "badge": "Comfort",
       "retailPriceKgs": 1290,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-114945-03-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-114945-03-front.jpg",
+        "assets/products/telegram-8767964230-20260619-114945-03-back.jpg"
+      ],
       "status": "review",
       "id": "prd_fd5eee161942",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-114945-03-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 1251,
-      "description": "0Comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 1.5 L, 1.5L.",
-      "title": "0Comfort концентр.(Конд.д/белья) (1.5L) Blue Love",
+      "description": "Comfort Blue Love концентрат для белья 1,5 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Comfort Blue Love концентрат для белья 1,5 л",
       "productType": "кондиционер для белья",
-      "brand": "0Comfort",
+      "brand": "Comfort",
       "rating": 4.8,
-      "searchText": "0comfort концентр.(конд.д/белья) (1.5l) blue love стирка и уход за бельем 0comfort кондиционер для белья 0comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 1.5 l, 1.5l."
+      "searchText": "comfort blue love концентрат для белья 1,5 л comfort кондиционер для белья стирка и уход за бельем comfort blue love концентрат для белья 1,5 л для мягкости и свежести белья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1002,22 +1008,26 @@
       "retailPriceKgs": 595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-114945-02-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-114945-02-front.jpg",
+        "assets/products/telegram-8767964230-20260619-114945-02-back.jpg"
+      ],
       "status": "review",
       "id": "prd_cc0deb97f256",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-114945-02-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 577,
-      "description": "Comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 1 L, 1L.",
-      "title": "Comfort (Конд.д/белья) (1L) Flora Soft",
+      "description": "Comfort Flora Soft кондиционер для белья 1 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Comfort Flora Soft кондиционер для белья 1 л",
       "productType": "кондиционер для белья",
       "brand": "Comfort",
       "rating": 4.8,
-      "searchText": "comfort (конд.д/белья) (1l) flora soft стирка и уход за бельем comfort кондиционер для белья comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 1 l, 1l."
+      "searchText": "comfort flora soft кондиционер для белья 1 л comfort кондиционер для белья стирка и уход за бельем comfort flora soft кондиционер для белья 1 л для мягкости и свежести белья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1025,22 +1035,26 @@
       "retailPriceKgs": 595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-114945-01-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-114945-01-front.jpg",
+        "assets/products/telegram-8767964230-20260619-114945-01-back.jpg"
+      ],
       "status": "review",
       "id": "prd_79ae12d5e324",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-114945-01-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 577,
-      "description": "Comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 1 L, 1L.",
-      "title": "Comfort (Конд.д/белья) (1L) Spring",
+      "description": "Comfort Spring кондиционер для белья 1 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Comfort Spring кондиционер для белья 1 л",
       "productType": "кондиционер для белья",
       "brand": "Comfort",
       "rating": 4.8,
-      "searchText": "comfort (конд.д/белья) (1l) spring стирка и уход за бельем comfort кондиционер для белья comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 1 l, 1l."
+      "searchText": "comfort spring кондиционер для белья 1 л comfort кондиционер для белья стирка и уход за бельем comfort spring кондиционер для белья 1 л для мягкости и свежести белья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1090,26 +1104,30 @@
     },
     {
       "unit": "шт",
-      "badge": "2Comfort",
+      "badge": "Comfort",
       "retailPriceKgs": 1290,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-114945-04-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-114945-04-front.jpg",
+        "assets/products/telegram-8767964230-20260619-114945-04-back.jpg"
+      ],
       "status": "review",
       "id": "prd_733c019c32a5",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-114945-04-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 1251,
-      "description": "2Comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 1.5 L, 1.5L.",
-      "title": "2Comfort концентр.(Конд.д/белья) (1.5L) Iris Jasmin",
+      "description": "Comfort Iris & Jasmine концентрат для белья 1,5 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Comfort Iris & Jasmine концентрат для белья 1,5 л",
       "productType": "кондиционер для белья",
-      "brand": "2Comfort",
+      "brand": "Comfort",
       "rating": 4.8,
-      "searchText": "2comfort концентр.(конд.д/белья) (1.5l) iris jasmin стирка и уход за бельем 2comfort кондиционер для белья 2comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 1.5 l, 1.5l."
+      "searchText": "comfort iris & jasmine концентрат для белья 1,5 л comfort кондиционер для белья стирка и уход за бельем comfort iris & jasmine концентрат для белья 1,5 л для мягкости и свежести белья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1432,22 +1450,26 @@
       "retailPriceKgs": 450,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110510-03-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-03-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-03-back.jpg"
+      ],
       "status": "active",
       "id": "prd_c980a01a8dba",
       "tones": [
         "#d7eadf",
         "#6aa58f"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110510-03-card-front.jpg",
       "icon": "✨",
       "registeredPriceKgs": 436,
-      "description": "Средство Fairy Lavender для мытья посуды с ароматом лаванды. Объем 600 мл.",
+      "description": "Fairy Lavender средство для посуды 600 мл для мытья посуды. Наличие и детали заказа подтвердит менеджер.",
       "title": "Fairy Lavender средство для посуды 600 мл",
       "productType": "средство для посуды",
       "brand": "Fairy",
       "rating": 4.8,
-      "searchText": "fairy lavender средство для посуды 600 мл уборка и чистота fairy средство для посуды средство fairy lavender для мытья посуды с ароматом лаванды. объем 600 мл."
+      "searchText": "fairy lavender средство для посуды 600 мл fairy средство для посуды уборка и чистота fairy lavender средство для посуды 600 мл для мытья посуды. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1501,22 +1523,26 @@
       "retailPriceKgs": 450,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110510-04-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-04-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-04-back.jpg"
+      ],
       "status": "active",
       "id": "prd_43bb60f484a9",
       "tones": [
         "#d7eadf",
         "#6aa58f"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110510-04-card-front.jpg",
       "icon": "✨",
       "registeredPriceKgs": 436,
-      "description": "Средство Fairy Apple для ежедневного мытья посуды. Объем 600 мл.",
+      "description": "Fairy Apple средство для посуды 600 мл для мытья посуды. Наличие и детали заказа подтвердит менеджер.",
       "title": "Fairy Apple средство для посуды 600 мл",
       "productType": "средство для посуды",
       "brand": "Fairy",
       "rating": 4.8,
-      "searchText": "fairy apple средство для посуды 600 мл уборка и чистота fairy средство для посуды средство fairy apple для ежедневного мытья посуды. объем 600 мл."
+      "searchText": "fairy apple средство для посуды 600 мл fairy средство для посуды уборка и чистота fairy apple средство для посуды 600 мл для мытья посуды. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1570,22 +1596,26 @@
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-113508-04-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-113508-04-front.jpg",
+        "assets/products/telegram-8767964230-20260619-113508-04-back.jpg"
+      ],
       "status": "active",
       "id": "prd_9499434568a7",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-113508-04-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
-      "description": "Шампунь Head & Shoulders Dry Scalp для ухода за кожей головы и волосами. Объем 400 мл.",
+      "description": "Head & Shoulders Dry Scalp шампунь 400 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
       "title": "Head & Shoulders Dry Scalp шампунь 400 мл",
       "productType": "шампунь",
       "brand": "Head & Shoulders",
       "rating": 4.8,
-      "searchText": "head & shoulders dry scalp шампунь 400 мл уход за волосами head & shoulders шампунь шампунь head & shoulders dry scalp для ухода за кожей головы и волосами. объем 400 мл."
+      "searchText": "head & shoulders dry scalp шампунь 400 мл head & shoulders шампунь уход за волосами head & shoulders dry scalp шампунь 400 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1593,22 +1623,26 @@
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-113508-01-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-113508-01-front.jpg",
+        "assets/products/telegram-8767964230-20260619-113508-01-back.jpg"
+      ],
       "status": "active",
       "id": "prd_b2586efc6925",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-113508-01-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
-      "description": "Шампунь Head & Shoulders Soothing Scalp для мягкого ежедневного ухода. Объем 400 мл.",
+      "description": "Head & Shoulders Soothing Scalp шампунь 400 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
       "title": "Head & Shoulders Soothing Scalp шампунь 400 мл",
       "productType": "шампунь",
       "brand": "Head & Shoulders",
       "rating": 4.8,
-      "searchText": "head & shoulders soothing scalp шампунь 400 мл уход за волосами head & shoulders шампунь шампунь head & shoulders soothing scalp для мягкого ежедневного ухода. объем 400 мл."
+      "searchText": "head & shoulders soothing scalp шампунь 400 мл head & shoulders шампунь уход за волосами head & shoulders soothing scalp шампунь 400 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1639,22 +1673,26 @@
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-113508-03-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-113508-03-front.jpg",
+        "assets/products/telegram-8767964230-20260619-113508-03-back.jpg"
+      ],
       "status": "active",
       "id": "prd_6280c4c29502",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-113508-03-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
-      "description": "Классический шампунь Head & Shoulders для ежедневного ухода за волосами. Объем 400 мл.",
+      "description": "Head & Shoulders Classic шампунь 400 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
       "title": "Head & Shoulders Classic шампунь 400 мл",
       "productType": "шампунь",
       "brand": "Head & Shoulders",
       "rating": 4.8,
-      "searchText": "head & shoulders classic шампунь 400 мл уход за волосами head & shoulders шампунь классический шампунь head & shoulders для ежедневного ухода за волосами. объем 400 мл."
+      "searchText": "head & shoulders classic шампунь 400 мл head & shoulders шампунь уход за волосами head & shoulders classic шампунь 400 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1731,22 +1769,26 @@
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-113508-02-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-113508-02-front.jpg",
+        "assets/products/telegram-8767964230-20260619-113508-02-back.jpg"
+      ],
       "status": "active",
       "id": "prd_20736a33272d",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-113508-02-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
-      "description": "Шампунь Head & Shoulders Menthol для ощущения свежести и ежедневного ухода. Объем 400 мл.",
+      "description": "Head & Shoulders Menthol шампунь 400 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
       "title": "Head & Shoulders Menthol шампунь 400 мл",
       "productType": "шампунь",
       "brand": "Head & Shoulders",
       "rating": 4.8,
-      "searchText": "head & shoulders menthol шампунь 400 мл уход за волосами head & shoulders шампунь шампунь head & shoulders menthol для ощущения свежести и ежедневного ухода. объем 400 мл."
+      "searchText": "head & shoulders menthol шампунь 400 мл head & shoulders шампунь уход за волосами head & shoulders menthol шампунь 400 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -2053,22 +2095,26 @@
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110800-04-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-04-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-04-back.jpg"
+      ],
       "status": "active",
       "id": "prd_2563a902d211",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110800-04-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 771,
-      "description": "Шампунь Head & Shoulders Smooth & Silky для гладкости волос. Большой объем 650 мл.",
+      "description": "Head & Shoulders Smooth & Silky шампунь 650 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
       "title": "Head & Shoulders Smooth & Silky шампунь 650 мл",
       "productType": "шампунь",
       "brand": "Head & Shoulders",
       "rating": 4.8,
-      "searchText": "head & shoulders smooth & silky шампунь 650 мл уход за волосами head & shoulders шампунь шампунь head & shoulders smooth & silky для гладкости волос. большой объем 650 мл."
+      "searchText": "head & shoulders smooth & silky шампунь 650 мл head & shoulders шампунь уход за волосами head & shoulders smooth & silky шампунь 650 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -2168,22 +2214,26 @@
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110800-03-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-03-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-03-back.jpg"
+      ],
       "status": "active",
       "id": "prd_d8023f79398b",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110800-03-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 771,
-      "description": "Шампунь Head & Shoulders Anti-Hairfall для ежедневного ухода за волосами. Объем 650 мл.",
+      "description": "Head & Shoulders Anti-Hairfall шампунь 650 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
       "title": "Head & Shoulders Anti-Hairfall шампунь 650 мл",
       "productType": "шампунь",
       "brand": "Head & Shoulders",
       "rating": 4.8,
-      "searchText": "head & shoulders anti-hairfall шампунь 650 мл уход за волосами head & shoulders шампунь шампунь head & shoulders anti-hairfall для ежедневного ухода за волосами. объем 650 мл."
+      "searchText": "head & shoulders anti-hairfall шампунь 650 мл head & shoulders шампунь уход за волосами head & shoulders anti-hairfall шампунь 650 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -2191,22 +2241,26 @@
       "retailPriceKgs": 750,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110800-06-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-06-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-06-back.jpg"
+      ],
       "status": "review",
       "id": "prd_e165f2a765a7",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110800-06-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
-      "description": "Dove: средство для ухода за волосами на каждый день.",
-      "title": "Dove Шамп.(680) Straight & Silky",
+      "description": "Dove Straight & Silky шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Dove Straight & Silky шампунь 680 мл",
       "productType": "шампунь",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove шамп.(680) straight & silky уход за волосами dove шампунь dove: средство для ухода за волосами на каждый день."
+      "searchText": "dove straight & silky шампунь 680 мл dove шампунь уход за волосами dove straight & silky шампунь 680 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -2714,22 +2768,26 @@
       "retailPriceKgs": 750,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110800-01-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-01-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-01-back.jpg"
+      ],
       "status": "review",
       "id": "prd_f724e0973fa5",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110800-01-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
-      "description": "Dove: средство для ухода за волосами на каждый день.",
-      "title": "Dove Шамп.(680) Nourish Oil",
+      "description": "Dove Nourishing Oil Care шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Dove Nourishing Oil Care шампунь 680 мл",
       "productType": "шампунь",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove шамп.(680) nourish oil уход за волосами dove шампунь dove: средство для ухода за волосами на каждый день."
+      "searchText": "dove nourishing oil care шампунь 680 мл dove шампунь уход за волосами dove nourishing oil care шампунь 680 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -2910,22 +2968,26 @@
       "retailPriceKgs": 750,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110800-07-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-07-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-07-back.jpg"
+      ],
       "status": "review",
       "id": "prd_5c4dde48386b",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110800-07-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
-      "description": "Dove: средство для ухода за волосами на каждый день.",
-      "title": "Dove Шамп.(680) Hair Fall",
+      "description": "Dove Hair Fall Rescue шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Dove Hair Fall Rescue шампунь 680 мл",
       "productType": "шампунь",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove шамп.(680) hair fall уход за волосами dove шампунь dove: средство для ухода за волосами на каждый день."
+      "searchText": "dove hair fall rescue шампунь 680 мл dove шампунь уход за волосами dove hair fall rescue шампунь 680 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -2956,22 +3018,26 @@
       "retailPriceKgs": 750,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110800-02-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-02-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-02-back.jpg"
+      ],
       "status": "review",
       "id": "prd_fc72d049dab9",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110800-02-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
-      "description": "Dove: средство для ухода за волосами на каждый день.",
-      "title": "Dove Шамп.(680) Intensive Repair",
+      "description": "Dove Intensive Repair шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Dove Intensive Repair шампунь 680 мл",
       "productType": "шампунь",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove шамп.(680) intensive repair уход за волосами dove шампунь dove: средство для ухода за волосами на каждый день."
+      "searchText": "dove intensive repair шампунь 680 мл dove шампунь уход за волосами dove intensive repair шампунь 680 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -3301,22 +3367,26 @@
       "retailPriceKgs": 750,
       "category": "Уход за волосами",
       "categoryId": "hair",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110800-08-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-08-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110800-08-back.jpg"
+      ],
       "status": "review",
       "id": "prd_6bd469f8a2b6",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110800-08-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
-      "description": "Dove: средство для ухода за волосами на каждый день.",
-      "title": "Dove Шамп.(680) Daly Shine",
+      "description": "Dove Daily Shine шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Dove Daily Shine шампунь 680 мл",
       "productType": "шампунь",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove шамп.(680) daly shine уход за волосами dove шампунь dove: средство для ухода за волосами на каждый день."
+      "searchText": "dove daily shine шампунь 680 мл dove шампунь уход за волосами dove daily shine шампунь 680 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -7721,22 +7791,26 @@
       "retailPriceKgs": 450,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110606-01-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110606-01-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110606-01-back.jpg"
+      ],
       "status": "active",
       "id": "prd_13dbf4e592aa",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110606-01-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 436,
-      "description": "Бритвенный станок Concord D 652.",
+      "description": "Concord станок D 652 для бритья. Наличие и детали заказа подтвердит менеджер.",
       "title": "Concord станок D 652",
       "productType": "бритвенные станки",
       "brand": "Concord",
       "rating": 4.8,
-      "searchText": "concord станок d 652 бритье concord бритвенные станки бритвенный станок concord d 652."
+      "searchText": "concord станок d 652 concord бритвенные станки бритье concord станок d 652 для бритья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -7744,22 +7818,26 @@
       "retailPriceKgs": 350,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110606-02-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110606-02-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110606-02-back.jpg"
+      ],
       "status": "active",
       "id": "prd_f12169c0af17",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110606-02-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 339,
-      "description": "Бритвенный станок Concord KL 90.",
+      "description": "Concord станок KL 90 для бритья. Наличие и детали заказа подтвердит менеджер.",
       "title": "Concord станок KL 90",
       "productType": "бритвенные станки",
       "brand": "Concord",
       "rating": 4.8,
-      "searchText": "concord станок kl 90 бритье concord бритвенные станки бритвенный станок concord kl 90."
+      "searchText": "concord станок kl 90 concord бритвенные станки бритье concord станок kl 90 для бритья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -7836,22 +7914,26 @@
       "retailPriceKgs": 170,
       "category": "Бритье",
       "categoryId": "shaving",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110606-03-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110606-03-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110606-03-back.jpg"
+      ],
       "status": "active",
       "id": "prd_2554a61dc141",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110606-03-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 164,
-      "description": "Бритвенный станок Concord KL 6947.",
+      "description": "Concord станок KL 6947 для бритья. Наличие и детали заказа подтвердит менеджер.",
       "title": "Concord станок KL 6947",
       "productType": "бритвенные станки",
       "brand": "Concord",
       "rating": 4.8,
-      "searchText": "concord станок kl 6947 бритье concord бритвенные станки бритвенный станок concord kl 6947."
+      "searchText": "concord станок kl 6947 concord бритвенные станки бритье concord станок kl 6947 для бритья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -8018,8 +8100,8 @@
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 2595,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dalli/dalli-vollwaschmittel-powder-6kg-card-front.jpg",
         "assets/products/dalli/dalli-vollwaschmittel-powder-6kg-front.jpg",
@@ -8032,21 +8114,27 @@
         "#92968c"
       ],
       "image": "assets/products/dalli/dalli-vollwaschmittel-powder-6kg-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2517,
       "description": "Немецкий стиральный порошок Dalli Vollwaschmittel для светлого и повседневного белья. Большая упаковка 6 кг, около 100 стирок.",
       "title": "Dalli Vollwaschmittel стиральный порошок 6 кг",
       "productType": "стиральный порошок",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli vollwaschmittel стиральный порошок 6 кг товары из германии dalli стиральный порошок немецкий стиральный порошок dalli vollwaschmittel для светлого и повседневного белья. большая упаковка 6 кг, около 100 стирок."
+      "searchText": "dalli vollwaschmittel стиральный порошок 6 кг товары из германии dalli стиральный порошок немецкий стиральный порошок dalli vollwaschmittel для светлого и повседневного белья. большая упаковка 6 кг, около 100 стирок. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 2595,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dalli/dalli-colorwaschmittel-powder-6kg-card-front.jpg",
         "assets/products/dalli/dalli-colorwaschmittel-powder-6kg-front.jpg",
@@ -8059,21 +8147,27 @@
         "#92968c"
       ],
       "image": "assets/products/dalli/dalli-colorwaschmittel-powder-6kg-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2517,
       "description": "Немецкий стиральный порошок Dalli Colorwaschmittel для цветного белья. Большая упаковка 6 кг, около 100 стирок.",
       "title": "Dalli Colorwaschmittel стиральный порошок 6 кг",
       "productType": "стиральный порошок",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli colorwaschmittel стиральный порошок 6 кг товары из германии dalli стиральный порошок немецкий стиральный порошок dalli colorwaschmittel для цветного белья. большая упаковка 6 кг, около 100 стирок."
+      "searchText": "dalli colorwaschmittel стиральный порошок 6 кг товары из германии dalli стиральный порошок немецкий стиральный порошок dalli colorwaschmittel для цветного белья. большая упаковка 6 кг, около 100 стирок. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 2595,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "active",
       "id": "prd_3eb536d5ff28",
@@ -8082,21 +8176,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2517,
       "description": "Универсальный немецкий стиральный порошок Dalli Universal для повседневной стирки. Упаковка 6 кг.",
       "title": "Dalli Universal стиральный порошок 6 кг",
       "productType": "стиральный порошок",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli universal стиральный порошок 6 кг товары из германии dalli стиральный порошок универсальный немецкий стиральный порошок dalli universal для повседневной стирки. упаковка 6 кг."
+      "searchText": "dalli universal стиральный порошок 6 кг товары из германии dalli стиральный порошок универсальный немецкий стиральный порошок dalli universal для повседневной стирки. упаковка 6 кг. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 990,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "active",
       "id": "prd_b23a1bd2b12b",
@@ -8105,21 +8205,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 960,
       "description": "Капсулы Dalli 3in1 Sport & Outdoor для спортивной и повседневной одежды. В упаковке 24 штуки.",
       "title": "Dalli 3in1 Sport & Outdoor капсулы 24 шт",
       "productType": "капсулы для стирки",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli 3in1 sport & outdoor капсулы 24 шт товары из германии dalli капсулы для стирки капсулы dalli 3in1 sport & outdoor для спортивной и повседневной одежды. в упаковке 24 штуки."
+      "searchText": "dalli 3in1 sport & outdoor капсулы 24 шт товары из германии dalli капсулы для стирки капсулы dalli 3in1 sport & outdoor для спортивной и повседневной одежды. в упаковке 24 штуки. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 2395,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg",
         "assets/products/dalli/dalli-colorwaschmittel-gel-5l-front.jpg",
@@ -8132,21 +8238,27 @@
         "#92968c"
       ],
       "image": "assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2323,
       "description": "Немецкий гель Dalli Colorwaschmittel для стирки цветного белья. Большой формат 5 л, рассчитан примерно на 100 стирок.",
       "title": "Dalli Colorwaschmittel гель для стирки 5 л",
       "productType": "гель для стирки",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli colorwaschmittel гель для стирки 5 л товары из германии dalli гель для стирки немецкий гель dalli colorwaschmittel для стирки цветного белья. большой формат 5 л, рассчитан примерно на 100 стирок."
+      "searchText": "dalli colorwaschmittel гель для стирки 5 л товары из германии dalli гель для стирки немецкий гель dalli colorwaschmittel для стирки цветного белья. большой формат 5 л, рассчитан примерно на 100 стирок. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 990,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "active",
       "id": "prd_762c62113ca3",
@@ -8155,21 +8267,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 960,
       "description": "Немецкие капсулы Dalli 3in1 Vollwaschmittel для удобной стирки. В упаковке 24 штуки.",
       "title": "Dalli 3in1 Vollwaschmittel капсулы 24 шт",
       "productType": "капсулы для стирки",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli 3in1 vollwaschmittel капсулы 24 шт товары из германии dalli капсулы для стирки немецкие капсулы dalli 3in1 vollwaschmittel для удобной стирки. в упаковке 24 штуки."
+      "searchText": "dalli 3in1 vollwaschmittel капсулы 24 шт товары из германии dalli капсулы для стирки немецкие капсулы dalli 3in1 vollwaschmittel для удобной стирки. в упаковке 24 штуки. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dash",
       "retailPriceKgs": 2295,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dash/dash-color-frische-caps-box-60-card-front.jpg",
         "assets/products/dash/dash-color-frische-caps-box-60-front.jpg",
@@ -8182,21 +8300,27 @@
         "#92968c"
       ],
       "image": "assets/products/dash/dash-color-frische-caps-box-60-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2226,
       "description": "Капсулы Dash Color Frische 3in1 для цветного белья. Упаковка XXL Pack, 60 капсул.",
       "title": "Dash Color Frische капсулы для стирки 60 шт",
       "productType": "капсулы для стирки",
       "brand": "Dash",
       "rating": 4.8,
-      "searchText": "dash color frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash color frische 3in1 для цветного белья. упаковка xxl pack, 60 капсул."
+      "searchText": "dash color frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash color frische 3in1 для цветного белья. упаковка xxl pack, 60 капсул. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dash",
       "retailPriceKgs": 2295,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg",
         "assets/products/dash/dash-alpen-frische-caps-box-60-front.jpg",
@@ -8209,21 +8333,27 @@
         "#92968c"
       ],
       "image": "assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2226,
       "description": "Капсулы Dash Alpen Frische 3in1 для стирки. Упаковка XXL Pack, 60 капсул.",
       "title": "Dash Alpen Frische капсулы для стирки 60 шт",
       "productType": "капсулы для стирки",
       "brand": "Dash",
       "rating": 4.8,
-      "searchText": "dash alpen frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash alpen frische 3in1 для стирки. упаковка xxl pack, 60 капсул."
+      "searchText": "dash alpen frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash alpen frische 3in1 для стирки. упаковка xxl pack, 60 капсул. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dash",
       "retailPriceKgs": 690,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg",
         "assets/products/dash/dash-color-frische-powder-1-17kg-front.jpg",
@@ -8236,21 +8366,27 @@
         "#92968c"
       ],
       "image": "assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 669,
       "description": "Немецкий стиральный порошок Dash Color Frische для цветного белья. Упаковка 1,17 кг, около 18 стирок.",
       "title": "Dash Color Frische стиральный порошок 1,17 кг",
       "productType": "стиральный порошок",
       "brand": "Dash",
       "rating": 4.8,
-      "searchText": "dash color frische стиральный порошок 1,17 кг товары из германии dash стиральный порошок немецкий стиральный порошок dash color frische для цветного белья. упаковка 1,17 кг, около 18 стирок."
+      "searchText": "dash color frische стиральный порошок 1,17 кг товары из германии dash стиральный порошок немецкий стиральный порошок dash color frische для цветного белья. упаковка 1,17 кг, около 18 стирок. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.Dalli",
       "retailPriceKgs": 990,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_5ab8dc5b190f",
@@ -8259,21 +8395,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 960,
       "description": "G.Dalli: товар для дома и личного ухода. Формат: 24 шт, 24шт.",
       "title": "G.Dalli CAPS (24шт) 3in1 Colorwaschmittel",
       "productType": "товары из германии",
       "brand": "G.Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli caps (24шт) 3in1 colorwaschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 24 шт, 24шт."
+      "searchText": "g.dalli caps (24шт) 3in1 colorwaschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 24 шт, 24шт. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dash",
       "retailPriceKgs": 2195,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dash/dash-alpen-frische-caps-60-card-front.jpg",
         "assets/products/dash/dash-alpen-frische-caps-60-front.jpg",
@@ -8286,21 +8428,27 @@
         "#92968c"
       ],
       "image": "assets/products/dash/dash-alpen-frische-caps-60-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2129,
       "description": "Капсулы Dash Alpen Frische 3in1 для стирки. Пакет 60 капсул.",
       "title": "Dash Alpen Frische капсулы для стирки 60 шт",
       "productType": "капсулы для стирки",
       "brand": "Dash",
       "rating": 4.8,
-      "searchText": "dash alpen frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash alpen frische 3in1 для стирки. пакет 60 капсул."
+      "searchText": "dash alpen frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash alpen frische 3in1 для стирки. пакет 60 капсул. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dash",
       "retailPriceKgs": 2195,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dash/dash-color-frische-caps-60-card-front.jpg",
         "assets/products/dash/dash-color-frische-caps-60-front.jpg",
@@ -8313,21 +8461,27 @@
         "#92968c"
       ],
       "image": "assets/products/dash/dash-color-frische-caps-60-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2129,
       "description": "Капсулы Dash Color Frische 3in1 для цветного белья. Пакет 60 капсул.",
       "title": "Dash Color Frische капсулы для стирки 60 шт",
       "productType": "капсулы для стирки",
       "brand": "Dash",
       "rating": 4.8,
-      "searchText": "dash color frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash color frische 3in1 для цветного белья. пакет 60 капсул."
+      "searchText": "dash color frische капсулы для стирки 60 шт товары из германии dash капсулы для стирки капсулы dash color frische 3in1 для цветного белья. пакет 60 капсул. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.Dalli",
       "retailPriceKgs": 990,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_b8b9722a67e9",
@@ -8336,21 +8490,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 960,
       "description": "G.Dalli: товар для дома и личного ухода. Формат: 24 шт, 24шт.",
       "title": "G.Dalli CAPS (24шт) 3in1 Black waschmittel",
       "productType": "товары из германии",
       "brand": "G.Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli caps (24шт) 3in1 black waschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 24 шт, 24шт."
+      "searchText": "g.dalli caps (24шт) 3in1 black waschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 24 шт, 24шт. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dash",
       "retailPriceKgs": 2090,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg",
         "assets/products/dash/dash-active-frische-gel-3-6l-front.jpg",
@@ -8363,21 +8523,27 @@
         "#92968c"
       ],
       "image": "assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2027,
       "description": "Немецкий гель Dash Active Frische для повседневной стирки. Объем 3,6 л, около 80 стирок.",
       "title": "Dash Active Frische гель для стирки 3,6 л",
       "productType": "гель для стирки",
       "brand": "Dash",
       "rating": 4.8,
-      "searchText": "dash active frische гель для стирки 3,6 л товары из германии dash гель для стирки немецкий гель dash active frische для повседневной стирки. объем 3,6 л, около 80 стирок."
+      "searchText": "dash active frische гель для стирки 3,6 л товары из германии dash гель для стирки немецкий гель dash active frische для повседневной стирки. объем 3,6 л, около 80 стирок. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 650,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dalli/dalli-vollwaschmittel-caps-12-card-front.jpg",
         "assets/products/dalli/dalli-vollwaschmittel-caps-12-front.jpg",
@@ -8390,21 +8556,27 @@
         "#92968c"
       ],
       "image": "assets/products/dalli/dalli-vollwaschmittel-caps-12-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 630,
       "description": "Капсулы Dalli 3in1 Vollwaschmittel для повседневной стирки. В упаковке 12 капсул.",
       "title": "Dalli Vollwaschmittel капсулы для стирки 12 шт",
       "productType": "капсулы для стирки",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli vollwaschmittel капсулы для стирки 12 шт товары из германии dalli капсулы для стирки капсулы dalli 3in1 vollwaschmittel для повседневной стирки. в упаковке 12 капсул."
+      "searchText": "dalli vollwaschmittel капсулы для стирки 12 шт товары из германии dalli капсулы для стирки капсулы dalli 3in1 vollwaschmittel для повседневной стирки. в упаковке 12 капсул. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 650,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dalli/dalli-colorwaschmittel-caps-12-card-front.jpg",
         "assets/products/dalli/dalli-colorwaschmittel-caps-12-front.jpg",
@@ -8417,21 +8589,27 @@
         "#92968c"
       ],
       "image": "assets/products/dalli/dalli-colorwaschmittel-caps-12-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 630,
       "description": "Капсулы Dalli 3in1 Colorwaschmittel для стирки цветного белья. В упаковке 12 капсул.",
       "title": "Dalli Colorwaschmittel капсулы для стирки 12 шт",
       "productType": "капсулы для стирки",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli colorwaschmittel капсулы для стирки 12 шт товары из германии dalli капсулы для стирки капсулы dalli 3in1 colorwaschmittel для стирки цветного белья. в упаковке 12 капсул."
+      "searchText": "dalli colorwaschmittel капсулы для стирки 12 шт товары из германии dalli капсулы для стирки капсулы dalli 3in1 colorwaschmittel для стирки цветного белья. в упаковке 12 капсул. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.Dalli",
       "retailPriceKgs": 395,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Уборка и чистота",
+      "categoryId": "home_cleaning",
       "galleryImages": [],
       "status": "review",
       "id": "prd_16871fd16181",
@@ -8440,21 +8618,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "✨",
       "registeredPriceKgs": 383,
       "description": "G.Dalli: товар для дома и личного ухода. Формат: 1 L, 1L.",
       "title": "G.Dalli моющее ср-во (1L) Apple",
       "productType": "товары из германии",
       "brand": "G.Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli моющее ср-во (1l) apple товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 1 l, 1l."
+      "searchText": "g.dalli моющее ср-во (1l) apple товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 1 l, 1l. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.Dalli",
       "retailPriceKgs": 395,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Уборка и чистота",
+      "categoryId": "home_cleaning",
       "galleryImages": [],
       "status": "review",
       "id": "prd_1f73fb198c77",
@@ -8463,21 +8647,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "✨",
       "registeredPriceKgs": 383,
       "description": "G.Dalli: товар для дома и личного ухода. Формат: 1 L, 1L.",
       "title": "G.Dalli моющее ср-во (1L) Citrus",
       "productType": "товары из германии",
       "brand": "G.Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli моющее ср-во (1l) citrus товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 1 l, 1l."
+      "searchText": "g.dalli моющее ср-во (1l) citrus товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 1 l, 1l. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dash",
       "retailPriceKgs": 2090,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg",
         "assets/products/dash/dash-color-frische-gel-3-6l-front.jpg",
@@ -8490,21 +8680,27 @@
         "#92968c"
       ],
       "image": "assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2027,
       "description": "Немецкий гель Dash Color Frische для цветного белья. Объем 3,6 л, около 80 стирок.",
       "title": "Dash Color Frische гель для стирки 3,6 л",
       "productType": "гель для стирки",
       "brand": "Dash",
       "rating": 4.8,
-      "searchText": "dash color frische гель для стирки 3,6 л товары из германии dash гель для стирки немецкий гель dash color frische для цветного белья. объем 3,6 л, около 80 стирок."
+      "searchText": "dash color frische гель для стирки 3,6 л товары из германии dash гель для стирки немецкий гель dash color frische для цветного белья. объем 3,6 л, около 80 стирок. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dash",
       "retailPriceKgs": 690,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dash/dash-active-frische-gel-1-1l-card-front.jpg",
         "assets/products/dash/dash-active-frische-gel-1-1l-front.jpg",
@@ -8517,21 +8713,27 @@
         "#92968c"
       ],
       "image": "assets/products/dash/dash-active-frische-gel-1-1l-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 669,
       "description": "Немецкий гель Dash Active Frische для повседневной стирки. Объем 1,1 л, около 20 стирок.",
       "title": "Dash Active Frische гель для стирки 1,1 л",
       "productType": "гель для стирки",
       "brand": "Dash",
       "rating": 4.8,
-      "searchText": "dash active frische гель для стирки 1,1 л товары из германии dash гель для стирки немецкий гель dash active frische для повседневной стирки. объем 1,1 л, около 20 стирок."
+      "searchText": "dash active frische гель для стирки 1,1 л товары из германии dash гель для стирки немецкий гель dash active frische для повседневной стирки. объем 1,1 л, около 20 стирок. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.BONUX",
       "retailPriceKgs": 590,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_3846e58314aa",
@@ -8540,21 +8742,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 572,
       "description": "G.BONUX: товар для дома и личного ухода. Формат: 1,485 L, 1,485L.",
       "title": "G.BONUX Gel (1,485L)",
       "productType": "товары из германии",
       "brand": "G.BONUX",
       "rating": 4.8,
-      "searchText": "g.bonux gel (1,485l) товары из германии g.bonux товары из германии g.bonux: товар для дома и личного ухода. формат: 1,485 l, 1,485l."
+      "searchText": "g.bonux gel (1,485l) товары из германии g.bonux товары из германии g.bonux: товар для дома и личного ухода. формат: 1,485 l, 1,485l. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 690,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dalli/dalli-fein-color-gel-1-1l-card-front.jpg",
         "assets/products/dalli/dalli-fein-color-gel-1-1l-front.jpg",
@@ -8567,21 +8775,27 @@
         "#92968c"
       ],
       "image": "assets/products/dalli/dalli-fein-color-gel-1-1l-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 669,
       "description": "Немецкий гель Dalli Fein & Color для деликатной стирки и цветного белья. Объем 1,1 л, около 20 стирок.",
       "title": "Dalli Fein & Color гель для стирки 1,1 л",
       "productType": "гель для стирки",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli fein & color гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli fein & color для деликатной стирки и цветного белья. объем 1,1 л, около 20 стирок."
+      "searchText": "dalli fein & color гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli fein & color для деликатной стирки и цветного белья. объем 1,1 л, около 20 стирок. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.DASH",
       "retailPriceKgs": 2990,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_f3fb1a6b603a",
@@ -8590,21 +8804,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2900,
       "description": "G.DASH: товар для дома и личного ухода. Формат: 3150 мл, 70 стир, 70стир.",
       "title": "G.DASH Гель для стирки (3150 мл)(70стир) Rose",
       "productType": "товары из германии",
       "brand": "G.DASH",
       "rating": 4.8,
-      "searchText": "g.dash гель для стирки (3150 мл)(70стир) rose товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 3150 мл, 70 стир, 70стир."
+      "searchText": "g.dash гель для стирки (3150 мл)(70стир) rose товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 3150 мл, 70 стир, 70стир. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 690,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dalli/dalli-sensitive-gel-1-1l-card-front.jpg",
         "assets/products/dalli/dalli-sensitive-gel-1-1l-front.jpg",
@@ -8617,21 +8837,27 @@
         "#92968c"
       ],
       "image": "assets/products/dalli/dalli-sensitive-gel-1-1l-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 669,
       "description": "Немецкий гель Dalli Sensitive для бережной стирки. Объем 1,1 л, около 20 стирок.",
       "title": "Dalli Sensitive гель для стирки 1,1 л",
       "productType": "гель для стирки",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli sensitive гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli sensitive для бережной стирки. объем 1,1 л, около 20 стирок."
+      "searchText": "dalli sensitive гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli sensitive для бережной стирки. объем 1,1 л, около 20 стирок. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.DASH",
       "retailPriceKgs": 690,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_57c963eeb3d1",
@@ -8640,21 +8866,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 669,
       "description": "G.DASH: товар для дома и личного ухода. Формат: 1.1 L, 20 стир, 1.1L, 20стир.",
       "title": "G.DASH GEL (1.1L)(20стир) Color Frische",
       "productType": "товары из германии",
       "brand": "G.DASH",
       "rating": 4.8,
-      "searchText": "g.dash gel (1.1l)(20стир) color frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 1.1 l, 20 стир, 1.1l, 20стир."
+      "searchText": "g.dash gel (1.1l)(20стир) color frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 1.1 l, 20 стир, 1.1l, 20стир. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 690,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-card-front.jpg",
         "assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-front.jpg",
@@ -8667,21 +8899,27 @@
         "#92968c"
       ],
       "image": "assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 669,
       "description": "Немецкий гель Dalli Vollwaschmittel Frische-glück для повседневной стирки. Объем 1,1 л, около 20 стирок.",
       "title": "Dalli Vollwaschmittel Frische-glück гель для стирки 1,1 л",
       "productType": "гель для стирки",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli vollwaschmittel frische-glück гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli vollwaschmittel frische-glück для повседневной стирки. объем 1,1 л, около 20 стирок."
+      "searchText": "dalli vollwaschmittel frische-glück гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli vollwaschmittel frische-glück для повседневной стирки. объем 1,1 л, около 20 стирок. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "Dalli",
       "retailPriceKgs": 690,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [
         "assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-card-front.jpg",
         "assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-front.jpg",
@@ -8694,21 +8932,27 @@
         "#92968c"
       ],
       "image": "assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-card-front.jpg",
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 669,
       "description": "Немецкий гель Dalli Colorwaschmittel для стирки цветного белья. Объем 1,1 л.",
       "title": "Dalli Colorwaschmittel гель для стирки 1,1 л",
       "productType": "гель для стирки",
       "brand": "Dalli",
       "rating": 4.8,
-      "searchText": "dalli colorwaschmittel гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli colorwaschmittel для стирки цветного белья. объем 1,1 л."
+      "searchText": "dalli colorwaschmittel гель для стирки 1,1 л товары из германии dalli гель для стирки немецкий гель dalli colorwaschmittel для стирки цветного белья. объем 1,1 л. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.DASH",
       "retailPriceKgs": 2690,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_7f021046f71a",
@@ -8717,21 +8961,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2609,
       "description": "G.DASH: товар для дома и личного ухода. Формат: 6 kg, 100 стир, 6kg, 100стир.",
       "title": "G.DASH (6kg)(100стир) Alpen Frische",
       "productType": "товары из германии",
       "brand": "G.DASH",
       "rating": 4.8,
-      "searchText": "g.dash (6kg)(100стир) alpen frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 6 kg, 100 стир, 6kg, 100стир."
+      "searchText": "g.dash (6kg)(100стир) alpen frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 6 kg, 100 стир, 6kg, 100стир. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "1G.DASH",
       "retailPriceKgs": 4400,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_56abfd7d14b5",
@@ -8740,21 +8990,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 4268,
       "description": "1G.DASH: товар для дома и личного ухода. Формат: 1 G, 60 шт.",
       "title": "1G.DASH CAPS (2х60шт+Bonux Gel) 3in1 Alpen Frische",
       "productType": "товары из германии",
       "brand": "1G.DASH",
       "rating": 4.8,
-      "searchText": "1g.dash caps (2х60шт+bonux gel) 3in1 alpen frische товары из германии 1g.dash товары из германии 1g.dash: товар для дома и личного ухода. формат: 1 g, 60 шт."
+      "searchText": "1g.dash caps (2х60шт+bonux gel) 3in1 alpen frische товары из германии 1g.dash товары из германии 1g.dash: товар для дома и личного ухода. формат: 1 g, 60 шт. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.DASH",
       "retailPriceKgs": 2690,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_7a16c6020623",
@@ -8763,21 +9019,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 2609,
       "description": "G.DASH: товар для дома и личного ухода. Формат: 5.5 kg, 110 стир, 5.5kg, 110стир.",
       "title": "G.DASH (5.5kg)(110стир) Alpen Frische",
       "productType": "товары из германии",
       "brand": "G.DASH",
       "rating": 4.8,
-      "searchText": "g.dash (5.5kg)(110стир) alpen frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 5.5 kg, 110 стир, 5.5kg, 110стир."
+      "searchText": "g.dash (5.5kg)(110стир) alpen frische товары из германии g.dash товары из германии g.dash: товар для дома и личного ухода. формат: 5.5 kg, 110 стир, 5.5kg, 110стир. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "1G.DASH",
       "retailPriceKgs": 4400,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_0d8ddf6ba3f3",
@@ -8786,21 +9048,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 4268,
       "description": "1G.DASH: товар для дома и личного ухода. Формат: 1 G, 60 шт.",
       "title": "1G.DASH CAPS (2х60шт+Bonux Gel) 3in1 Color Frische",
       "productType": "товары из германии",
       "brand": "1G.DASH",
       "rating": 4.8,
-      "searchText": "1g.dash caps (2х60шт+bonux gel) 3in1 color frische товары из германии 1g.dash товары из германии 1g.dash: товар для дома и личного ухода. формат: 1 g, 60 шт."
+      "searchText": "1g.dash caps (2х60шт+bonux gel) 3in1 color frische товары из германии 1g.dash товары из германии 1g.dash: товар для дома и личного ухода. формат: 1 g, 60 шт. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.Dalli",
       "retailPriceKgs": 1490,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_4f83a6497ed9",
@@ -8809,21 +9077,27 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 1445,
       "description": "G.Dalli: товар для дома и личного ухода. Формат: 3.12 kg, 48 стир, 3.12kg, 48стир.",
       "title": "G.Dalli (3.12kg)(48стир) Colorwaschmittel",
       "productType": "товары из германии",
       "brand": "G.Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli (3.12kg)(48стир) colorwaschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 3.12 kg, 48 стир, 3.12kg, 48стир."
+      "searchText": "g.dalli (3.12kg)(48стир) colorwaschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 3.12 kg, 48 стир, 3.12kg, 48стир. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
       "badge": "G.Dalli",
       "retailPriceKgs": 1490,
-      "category": "Товары из Германии",
-      "categoryId": "germany",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
       "galleryImages": [],
       "status": "review",
       "id": "prd_6f3abbbe4f6d",
@@ -8832,14 +9106,20 @@
         "#92968c"
       ],
       "image": null,
-      "icon": "🇩🇪",
+      "icon": "🫧",
       "registeredPriceKgs": 1445,
       "description": "G.Dalli: товар для дома и личного ухода. Формат: 3.12 kg, 48 стир, 3.12kg, 48стир.",
       "title": "G.Dalli (3.12kg)(48стир) Vollwaschmittel",
       "productType": "товары из германии",
       "brand": "G.Dalli",
       "rating": 4.8,
-      "searchText": "g.dalli (3.12kg)(48стир) vollwaschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 3.12 kg, 48 стир, 3.12kg, 48стир."
+      "searchText": "g.dalli (3.12kg)(48стир) vollwaschmittel товары из германии g.dalli товары из германии g.dalli: товар для дома и личного ухода. формат: 3.12 kg, 48 стир, 3.12kg, 48стир. европа",
+      "collections": [
+        "europe"
+      ],
+      "collectionLabels": [
+        "Европа"
+      ]
     },
     {
       "unit": "шт",
@@ -9307,22 +9587,26 @@
       "retailPriceKgs": 20,
       "category": "Разное",
       "categoryId": "other",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110510-01-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-01-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-01-back.jpg"
+      ],
       "status": "review",
       "id": "prd_bf0dc63d18a6",
       "tones": [
         "#e4ded2",
         "#a99076"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110510-01-card-front.jpg",
       "icon": "🛍️",
       "registeredPriceKgs": 19,
-      "description": "Пластырь: товар для дома и личного ухода.",
-      "title": "Пластырь Banduff (10)",
-      "productType": "разное",
+      "description": "Пластырь Banduff 10 шт. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Пластырь Banduff 10 шт",
+      "productType": "пластырь",
       "brand": "Пластырь",
       "rating": 4.8,
-      "searchText": "пластырь banduff (10) разное пластырь разное пластырь: товар для дома и личного ухода."
+      "searchText": "пластырь banduff 10 шт пластырь пластырь разное пластырь banduff 10 шт. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -9514,22 +9798,26 @@
       "retailPriceKgs": 120,
       "category": "Разное",
       "categoryId": "other",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/telegram-8767964230-20260619-110510-02-card-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-02-front.jpg",
+        "assets/products/telegram-8767964230-20260619-110510-02-back.jpg"
+      ],
       "status": "review",
       "id": "prd_fbc4a5e759ac",
       "tones": [
         "#e4ded2",
         "#a99076"
       ],
-      "image": null,
+      "image": "assets/products/telegram-8767964230-20260619-110510-02-card-front.jpg",
       "icon": "🛍️",
       "registeredPriceKgs": 116,
-      "description": "Пластырь: товар для дома и личного ухода.",
-      "title": "Пластырь Banduff (50)",
-      "productType": "разное",
+      "description": "Пластырь Banduff 50 шт. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Пластырь Banduff 50 шт",
+      "productType": "пластырь",
       "brand": "Пластырь",
       "rating": 4.8,
-      "searchText": "пластырь banduff (50) разное пластырь разное пластырь: товар для дома и личного ухода."
+      "searchText": "пластырь banduff 50 шт пластырь пластырь разное пластырь banduff 50 шт. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",

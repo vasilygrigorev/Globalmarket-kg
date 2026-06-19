@@ -81,10 +81,10 @@ CATEGORIES = {
         "icon": "🍫",
     },
     "germany": {
-        "title": "Товары из Германии",
+        "title": "Европа",
         "placeholder": "germany",
         "tones": ["#e5e2dc", "#92968c"],
-        "icon": "🇩🇪",
+        "icon": "🇪🇺",
     },
     "other": {
         "title": "Разное",
@@ -129,6 +129,15 @@ KNOWN_BRANDS = [
     "Always",
     "Naturella",
 ]
+
+EUROPE_COLLECTION_BRANDS = {
+    "Dalli",
+    "G.Dalli",
+    "Dash",
+    "G.DASH",
+    "Kamill",
+    "The Pink Stuff",
+}
 
 
 def default_settings():
@@ -237,9 +246,7 @@ def detect_category(raw_group, raw_name):
     name_text = raw_name.lower()
     if "пена для ванны" in name_text or "bath foam" in name_text or "bubble bath" in name_text:
         return "body"
-    if "germany" in text or "germ" in text or "dalli" in text:
-        return "germany"
-    if any(token in text for token in ["порош", "ополас", "ariel", "persil", "lenor", "omo", "comfort", "стир"]):
+    if any(token in text for token in ["порош", "ополас", "ariel", "persil", "lenor", "omo", "comfort", "стир", "waschmittel", "caps"]):
         return "laundry"
     if any(token in text for token in ["моющие", "чист", "fairy", "clean", "уборк"]):
         return "home_cleaning"
@@ -255,7 +262,22 @@ def detect_category(raw_group, raw_name):
         return "shaving"
     if any(token in text for token in ["продукты", "питания"]):
         return "food"
+    if "germany" in text or "germ" in text:
+        return "germany"
     return "other"
+
+
+def detect_collections(category_id, raw_group="", raw_name="", brand=""):
+    text = f"{raw_group} {raw_name}".lower()
+    collections = []
+    if (
+        category_id == "germany"
+        or "germany" in text
+        or "germ" in text
+        or brand in EUROPE_COLLECTION_BRANDS
+    ):
+        collections.append("europe")
+    return collections
 
 
 def product_type(raw_name, category_id):
@@ -931,6 +953,7 @@ def generate_outputs(conn, settings):
         wholesale, retail_raw, retail, registered = price_values(row["base_price_usd"], settings)
         category_id = row["category_id"] or "other"
         category = CATEGORIES.get(category_id, CATEGORIES["other"])
+        collections = detect_collections(category_id, row["raw_group"], row["raw_name"], row["brand"])
         product = {
             "id": row["product_id"],
             "sourceId": row["source_id"],
@@ -939,6 +962,8 @@ def generate_outputs(conn, settings):
             "rawName": row["raw_name"],
             "category": row["category_title"] or category["title"],
             "categoryId": category_id,
+            "collections": collections,
+            "collectionLabels": ["Европа"] if "europe" in collections else [],
             "brand": row["brand"],
             "productType": row["product_type"],
             "unit": row["unit"],
@@ -996,6 +1021,12 @@ def generate_outputs(conn, settings):
         gallery_images = manual.get("galleryImages") or ([image] if image else [])
         retail = int(manual["retailPriceKgs"])
         registered = int(manual.get("registeredPriceKgs", math.floor(retail * 0.97)))
+        collections = manual.get("collections") or detect_collections(
+            category_id,
+            manual.get("sourceGroup", ""),
+            manual.get("rawName", manual["title"]),
+            manual.get("brand", ""),
+        )
         product = {
             "id": manual["id"],
             "sourceId": manual.get("sourceId", "manual"),
@@ -1004,6 +1035,8 @@ def generate_outputs(conn, settings):
             "rawName": manual.get("rawName", manual["title"]),
             "category": manual.get("category") or category["title"],
             "categoryId": category_id,
+            "collections": collections,
+            "collectionLabels": manual.get("collectionLabels") or (["Европа"] if "europe" in collections else []),
             "brand": manual.get("brand", ""),
             "productType": manual.get("productType", ""),
             "unit": manual.get("unit", "шт"),

@@ -17,6 +17,8 @@ const state = {
   query: "",
   label: "",
   favoriteOnly: false,
+  collection: "",
+  collectionLabel: "",
   maxPrice: 0,
   sort: "featured",
   visibleLimit: 60,
@@ -128,7 +130,7 @@ const quickCategoryCards = [
   { title: "Дезодоранты", category: "Дезодоранты", image: "assets/category-cards/category-deodorants.jpg" },
   { title: "Парфюм", category: "Парфюм 5 мл", image: "assets/category-cards/category-perfume.jpg" },
   { title: "Еда", category: "Продукты", image: "assets/category-cards/category-food.jpg" },
-  { title: "Германия", category: "Товары из Германии", image: "assets/category-cards/category-germany.jpg" },
+  { title: "Европа", collection: "europe", image: "assets/category-cards/category-germany.jpg" },
   { title: "Дом", category: "Разное", image: "assets/category-cards/category-home.jpg" },
 ];
 
@@ -652,19 +654,21 @@ async function loadCatalog() {
 
 function renderQuickCategories(catalogCategories) {
   const categories = catalogCategories.length
-    ? catalogCategories
-    : [...new Set(products.map((product) => product.category))].map((title) => ({ title, count: products.filter((product) => product.category === title).length }));
+    ? catalogCategories.filter((category) => category.id !== "germany")
+    : getVisibleCategoryTitles().map((title) => ({ title, count: products.filter((product) => product.category === title).length }));
   menuCategories = categories;
   const countByCategory = new Map(categories.map((category) => [category.title, category.count]));
   quickCategoryGrid.innerHTML = quickCategoryCards
     .map((card) => {
       const count = products.filter((product) => {
         const matchesCategory = !card.category || product.category === card.category;
+        const matchesCollection = !card.collection || productMatchesCollection(product, card.collection);
         const matchesQuery = !card.query || `${product.title} ${product.productType} ${product.description} ${product.searchText}`.toLowerCase().includes(card.query);
-        return matchesCategory && matchesQuery;
+        return matchesCategory && matchesCollection && matchesQuery;
       }).length || countByCategory.get(card.category) || 0;
       const dataAttributes = [
         card.category ? `data-category="${escapeHtml(card.category)}"` : "",
+        card.collection ? `data-collection="${escapeHtml(card.collection)}"` : "",
         card.query ? `data-query="${escapeHtml(card.query)}"` : "",
       ]
         .filter(Boolean)
@@ -680,11 +684,11 @@ function renderQuickCategories(catalogCategories) {
 }
 
 function renderCategories() {
-  const categories = ["Все", ...new Set(products.map((product) => product.category))];
+  const categories = ["Все", ...getVisibleCategoryTitles()];
   categoryFilter.innerHTML = categories
     .map((category) => {
       const count = category === "Все" ? products.length : products.filter((product) => product.category === category).length;
-      return `<button class="filter-chip ${state.category === category ? "active" : ""}" type="button" data-category="${escapeHtml(category)}">
+      return `<button class="filter-chip ${state.category === category && !state.collection ? "active" : ""}" type="button" data-category="${escapeHtml(category)}">
         <span>${category}</span><span>${count}</span>
       </button>`;
     })
@@ -728,6 +732,8 @@ function selectCategory(category) {
   state.category = category;
   state.query = "";
   state.label = "";
+  state.collection = "";
+  state.collectionLabel = "";
   state.visibleLimit = 60;
   searchInput.value = "";
   headerSearchInput.value = "";
@@ -741,6 +747,8 @@ function selectQuery(query, label = "") {
   state.category = "Все";
   state.query = query;
   state.label = label;
+  state.collection = "";
+  state.collectionLabel = "";
   state.visibleLimit = 60;
   searchInput.value = query;
   headerSearchInput.value = query;
@@ -754,9 +762,26 @@ function selectCategoryQuery(category, query, label = "") {
   state.category = category;
   state.query = query;
   state.label = label;
+  state.collection = "";
+  state.collectionLabel = "";
   state.visibleLimit = 60;
   searchInput.value = query;
   headerSearchInput.value = query;
+  renderCategories();
+  renderCategoryMenu();
+  renderCatalogDirectory();
+  renderProducts();
+}
+
+function selectCollection(collection, label = "") {
+  state.category = "Все";
+  state.query = "";
+  state.label = "";
+  state.collection = collection;
+  state.collectionLabel = label || displayCollectionName(collection);
+  state.visibleLimit = 60;
+  searchInput.value = "";
+  headerSearchInput.value = "";
   renderCategories();
   renderCategoryMenu();
   renderCatalogDirectory();
@@ -769,6 +794,9 @@ function renderCatalogDirectory() {
   if (state.category !== "Все") {
     parts.push({ title: displayCategoryName(state.category), category: state.category });
   }
+  if (state.collection) {
+    parts.push({ title: state.collectionLabel || displayCollectionName(state.collection), collection: state.collection });
+  }
   if (state.query) {
     parts.push({ title: state.label || state.query, query: state.query });
   }
@@ -777,7 +805,9 @@ function renderCatalogDirectory() {
       const isCurrent = index === parts.length - 1;
       const attrs = part.query
         ? `data-query="${escapeHtml(part.query)}" data-label="${escapeHtml(part.title)}"`
-        : `data-category="${escapeHtml(part.category)}"`;
+        : part.collection
+          ? `data-collection="${escapeHtml(part.collection)}" data-label="${escapeHtml(part.title)}"`
+          : `data-category="${escapeHtml(part.category)}"`;
       return `<button class="${isCurrent ? "current" : ""}" type="button" ${attrs} ${isCurrent ? 'aria-current="page"' : ""}>${escapeHtml(part.title)}</button>`;
     })
     .join('<span aria-hidden="true">/</span>');
@@ -792,10 +822,37 @@ function displayCategoryName(category) {
     "Зубная гигиена": "Зубы",
     "Парфюм 5 мл": "Парфюм",
     "Продукты": "Еда",
-    "Товары из Германии": "Германия",
+    "Товары из Германии": "Европа",
+    "Европа": "Европа",
     "Разное": "Дом",
   };
   return shortNames[category] || category;
+}
+
+function displayCollectionName(collection) {
+  const names = {
+    europe: "Европа",
+    germany: "Европа",
+  };
+  return names[collection] || collection;
+}
+
+function getVisibleCategoryTitles() {
+  const hiddenLegacyCategoryIds = new Set(["germany"]);
+  const titles = [];
+  products.forEach((product) => {
+    if (hiddenLegacyCategoryIds.has(product.categoryId)) return;
+    if (product.category && !titles.includes(product.category)) titles.push(product.category);
+  });
+  return titles;
+}
+
+function productMatchesCollection(product, collection) {
+  if (!collection) return true;
+  const aliases = collection === "europe" ? ["europe", "germany"] : [collection];
+  const productCollections = product.collections || [];
+  return aliases.some((alias) => productCollections.includes(alias))
+    || (collection === "europe" && (product.categoryId === "germany" || product.category === "Товары из Германии" || product.category === "Европа"));
 }
 
 function getVisibleProducts() {
@@ -803,11 +860,12 @@ function getVisibleProducts() {
   const filtered = products.filter((product) => {
     const matchesFavorite = !state.favoriteOnly || favoriteIds.has(product.id);
     const matchesCategory = state.category === "Все" || product.category === state.category;
+    const matchesCollection = productMatchesCollection(product, state.collection);
     const matchesPrice = productPrice(product) <= state.maxPrice;
     const matchesQuery = `${product.title} ${product.category} ${product.brand} ${product.productType} ${product.description} ${product.searchText}`
       .toLowerCase()
       .includes(normalizedQuery);
-    return matchesFavorite && matchesCategory && matchesPrice && matchesQuery;
+    return matchesFavorite && matchesCategory && matchesCollection && matchesPrice && matchesQuery;
   });
 
   const sorted = filtered.sort((a, b) => {
@@ -816,7 +874,7 @@ function getVisibleProducts() {
     return featuredProductCompare(a, b);
   });
 
-  if (state.sort === "featured" && state.category === "Все" && !normalizedQuery) {
+  if (state.sort === "featured" && state.category === "Все" && !state.collection && !normalizedQuery) {
     return diversifyFeaturedProducts(sorted);
   }
 
@@ -1396,11 +1454,14 @@ categoryFilter.addEventListener("click", (event) => {
 
 quickCategoryGrid.addEventListener("click", (event) => {
   const button = event.target.closest("[data-category]");
+  const collectionButton = event.target.closest("[data-collection]");
   const queryButton = event.target.closest("[data-query]");
-  if (!button && !queryButton) return;
+  if (!button && !collectionButton && !queryButton) return;
   const label = event.target.closest(".quick-category")?.dataset.label || "";
   if (button && queryButton) {
     selectCategoryQuery(button.dataset.category, queryButton.dataset.query, label);
+  } else if (collectionButton) {
+    selectCollection(collectionButton.dataset.collection, label);
   } else if (queryButton) {
     selectQuery(queryButton.dataset.query, label);
   } else {
@@ -1425,6 +1486,8 @@ catalogDirectory?.addEventListener("click", (event) => {
   if (!button) return;
   if (button.dataset.query) {
     selectQuery(button.dataset.query, button.dataset.label || button.dataset.query);
+  } else if (button.dataset.collection) {
+    selectCollection(button.dataset.collection, button.dataset.label || displayCollectionName(button.dataset.collection));
   } else {
     selectCategory(button.dataset.category || "Все");
   }
