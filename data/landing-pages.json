@@ -1,0 +1,363 @@
+{
+  "count": 25,
+  "pages": [
+    {
+      "type": "category",
+      "slug": "laundry",
+      "title": "Стирка и уход за бельем",
+      "path": "/category/laundry/",
+      "url": "https://globalmarket.kg/category/laundry/",
+      "count": 84,
+      "seoTerms": [
+        "порошок",
+        "стиральный порошок",
+        "гель для стирки",
+        "капсулы для стирки",
+        "жидкий порошок",
+        "средство для стирки",
+        "стиральная машина"
+      ],
+      "shown": 34
+    },
+    {
+      "type": "category",
+      "slug": "home_cleaning",
+      "title": "Уборка и чистота",
+      "path": "/category/home_cleaning/",
+      "url": "https://globalmarket.kg/category/home_cleaning/",
+      "count": 11,
+      "seoTerms": [
+        "средство для стекол",
+        "окна",
+        "зеркала",
+        "Айна",
+        "мыломойка",
+        "средство для посуды",
+        "посудомойка",
+        "таблетки для посудомойки",
+        "Fairy"
+      ],
+      "shown": 3
+    },
+    {
+      "type": "category",
+      "slug": "hair",
+      "title": "Уход за волосами",
+      "path": "/category/hair/",
+      "url": "https://globalmarket.kg/category/hair/",
+      "count": 104,
+      "seoTerms": [],
+      "shown": 19
+    },
+    {
+      "type": "category",
+      "slug": "body",
+      "title": "Уход за телом",
+      "path": "/category/body/",
+      "url": "https://globalmarket.kg/category/body/",
+      "count": 54,
+      "seoTerms": [
+        "мыло",
+        "жидкое мыло",
+        "мыло для рук",
+        "хозяйственное мыло"
+      ],
+      "shown": 2
+    },
+    {
+      "type": "category",
+      "slug": "oral",
+      "title": "Зубная гигиена",
+      "path": "/category/oral/",
+      "url": "https://globalmarket.kg/category/oral/",
+      "count": 18,
+      "seoTerms": [],
+      "shown": 0
+    },
+    {
+      "type": "category",
+      "slug": "deodorants",
+      "title": "Дезодоранты",
+      "path": "/category/deodorants/",
+      "url": "https://globalmarket.kg/category/deodorants/",
+      "count": 55,
+      "seoTerms": [
+        "дезодорант",
+        "дезик",
+        "део",
+        "стик",
+        "спрей"
+      ],
+      "shown": 6
+    },
+    {
+      "type": "category",
+      "slug": "shaving",
+      "title": "Бритье",
+      "path": "/category/shaving/",
+      "url": "https://globalmarket.kg/category/shaving/",
+      "count": 37,
+      "seoTerms": [
+        "бритье",
+        "товары для бритья",
+        "запаски",
+        "кассеты",
+        "лезвия",
+        "сменные кассеты",
+        "станки",
+        "бритвы",
+        "одноразовые станки",
+        "пена для бритья",
+        "гель для бритья"
+      ],
+      "shown": 19
+    },
+    {
+      "type": "category",
+      "slug": "perfume",
+      "title": "Парфюм 5 мл",
+      "path": "/category/perfume/",
+      "url": "https://globalmarket.kg/category/perfume/",
+      "count": 3,
+      "seoTerms": [],
+      "shown": 3
+    },
+    {
+      "type": "category",
+      "slug": "food",
+      "title": "Продукты",
+      "path": "/category/food/",
+      "url": "https://globalmarket.kg/category/food/",
+      "count": 6,
+      "seoTerms": [],
+      "shown": 0
+    },
+    {
+      "type": "category",
+      "slug": "other",
+      "title": "Разное",
+      "path": "/category/other/",
+      "url": "https://globalmarket.kg/category/other/",
+      "count": 69,
+      "seoTerms": [
+        "мыло",
+        "жидкое мыло",
+        "мыло для рук",
+        "хозяйственное мыло"
+      ],
+      "shown": 0
+    },
+    {
+      "type": "collection",
+      "slug": "europe",
+      "title": "Европа",
+      "path": "/collection/europe/",
+      "url": "https://globalmarket.kg/collection/europe/",
+      "count": 33,
+      "seoTerms": [
+        "Европа",
+        "Германия",
+        "немецкие товары",
+        "Dalli",
+        "Dash"
+      ],
+      "shown": 17
+    },
+    {
+      "type": "brand",
+      "slug": "concord",
+      "title": "Concord",
+      "path": "/brand/concord/",
+      "url": "https://globalmarket.kg/brand/concord/",
+      "count": 46,
+      "seoTerms": [
+        "Concord",
+        "товары Concord",
+        "Concord купить Бишкек"
+      ],
+      "shown": 3
+    },
+    {
+      "type": "brand",
+      "slug": "gillette",
+      "title": "Gillette",
+      "path": "/brand/gillette/",
+      "url": "https://globalmarket.kg/brand/gillette/",
+      "count": 19,
+      "seoTerms": [
+        "Gillette",
+        "товары Gillette",
+        "Gillette купить Бишкек"
+      ],
+      "shown": 8
+    },
+    {
+      "type": "brand",
+      "slug": "axe",
+      "title": "AXE",
+      "path": "/brand/axe/",
+      "url": "https://globalmarket.kg/brand/axe/",
+      "count": 16,
+      "seoTerms": [
+        "AXE",
+        "товары AXE",
+        "AXE купить Бишкек"
+      ],
+      "shown": 6
+    },
+    {
+      "type": "brand",
+      "slug": "persil",
+      "title": "Persil",
+      "path": "/brand/persil/",
+      "url": "https://globalmarket.kg/brand/persil/",
+      "count": 15,
+      "seoTerms": [
+        "Persil",
+        "товары Persil",
+        "Persil купить Бишкек"
+      ],
+      "shown": 10
+    },
+    {
+      "type": "brand",
+      "slug": "clear",
+      "title": "Clear",
+      "path": "/brand/clear/",
+      "url": "https://globalmarket.kg/brand/clear/",
+      "count": 13,
+      "seoTerms": [
+        "Clear",
+        "товары Clear",
+        "Clear купить Бишкек"
+      ],
+      "shown": 6
+    },
+    {
+      "type": "brand",
+      "slug": "dalli",
+      "title": "Dalli",
+      "path": "/brand/dalli/",
+      "url": "https://globalmarket.kg/brand/dalli/",
+      "count": 12,
+      "seoTerms": [
+        "Dalli",
+        "товары Dalli",
+        "Dalli купить Бишкек"
+      ],
+      "shown": 9
+    },
+    {
+      "type": "brand",
+      "slug": "ariel",
+      "title": "Ariel",
+      "path": "/brand/ariel/",
+      "url": "https://globalmarket.kg/brand/ariel/",
+      "count": 10,
+      "seoTerms": [
+        "Ariel",
+        "товары Ariel",
+        "Ariel купить Бишкек"
+      ],
+      "shown": 3
+    },
+    {
+      "type": "brand",
+      "slug": "gillette-venus",
+      "title": "Gillette Venus",
+      "path": "/brand/gillette-venus/",
+      "url": "https://globalmarket.kg/brand/gillette-venus/",
+      "count": 9,
+      "seoTerms": [
+        "Gillette Venus",
+        "товары Gillette Venus",
+        "Gillette Venus купить Бишкек"
+      ],
+      "shown": 8
+    },
+    {
+      "type": "brand",
+      "slug": "dash",
+      "title": "Dash",
+      "path": "/brand/dash/",
+      "url": "https://globalmarket.kg/brand/dash/",
+      "count": 8,
+      "seoTerms": [
+        "Dash",
+        "товары Dash",
+        "Dash купить Бишкек"
+      ],
+      "shown": 8
+    },
+    {
+      "type": "brand",
+      "slug": "downy",
+      "title": "Downy",
+      "path": "/brand/downy/",
+      "url": "https://globalmarket.kg/brand/downy/",
+      "count": 8,
+      "seoTerms": [
+        "Downy",
+        "товары Downy",
+        "Downy купить Бишкек"
+      ],
+      "shown": 4
+    },
+    {
+      "type": "brand",
+      "slug": "head-shoulders",
+      "title": "Head & Shoulders",
+      "path": "/brand/head-shoulders/",
+      "url": "https://globalmarket.kg/brand/head-shoulders/",
+      "count": 7,
+      "seoTerms": [
+        "Head & Shoulders",
+        "товары Head & Shoulders",
+        "Head & Shoulders купить Бишкек"
+      ],
+      "shown": 6
+    },
+    {
+      "type": "brand",
+      "slug": "herbal-essences",
+      "title": "Herbal Essences",
+      "path": "/brand/herbal-essences/",
+      "url": "https://globalmarket.kg/brand/herbal-essences/",
+      "count": 7,
+      "seoTerms": [
+        "Herbal Essences",
+        "товары Herbal Essences",
+        "Herbal Essences купить Бишкек"
+      ],
+      "shown": 7
+    },
+    {
+      "type": "brand",
+      "slug": "fairy",
+      "title": "Fairy",
+      "path": "/brand/fairy/",
+      "url": "https://globalmarket.kg/brand/fairy/",
+      "count": 2,
+      "seoTerms": [
+        "Fairy",
+        "товары Fairy",
+        "Fairy купить Бишкек"
+      ],
+      "shown": 2
+    },
+    {
+      "type": "brand",
+      "slug": "johnson-s",
+      "title": "Johnson's",
+      "path": "/brand/johnson-s/",
+      "url": "https://globalmarket.kg/brand/johnson-s/",
+      "count": 2,
+      "seoTerms": [
+        "Johnson's",
+        "товары Johnson's",
+        "Johnson's купить Бишкек"
+      ],
+      "shown": 2
+    }
+  ]
+}

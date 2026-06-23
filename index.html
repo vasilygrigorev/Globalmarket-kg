@@ -6,20 +6,51 @@
     <title>Global Market KG - интернет-магазин</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css?v=20260619-europe-photos-product-page" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Global Market KG",
+        "url": "https://globalmarket.kg/",
+        "logo": "https://globalmarket.kg/assets/brand/globalmarket-logo-lockup.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+996706771103",
+          "areaServed": "KG",
+          "availableLanguage": ["ru", "ky"]
+        },
+        "sameAs": []
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Global Market KG",
+        "url": "https://globalmarket.kg/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://globalmarket.kg/?q={search_term_string}#catalog",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
   </head>
   <body>
-    <header class="site-header">
-      <button class="menu-toggle" id="toggleMenu" type="button" aria-label="Открыть категории" aria-expanded="false" aria-controls="categoryMenu">
+    <!-- BEGIN shared-header -->
+    <header class="site-header" data-smart-header>
+      <button class="menu-toggle" id="toggleMenu" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="categoryMenu">
         <span class="menu-icon" aria-hidden="true"></span>
       </button>
-      <a class="brand" href="#top" aria-label="Global Market">
-        <img class="brand-orb" src="assets/brand/globalmarket-tech-orb-tight.jpg" alt="" aria-hidden="true" />
-        <img class="brand-wordmark" src="assets/brand/globalmarket-wordmark.svg" alt="GlobalMarket" />
+      <a class="brand" href="/#top" aria-label="Global Market">
+        <img class="brand-orb" src="/assets/brand/globalmarket-tech-orb-tight.jpg" alt="" aria-hidden="true" />
+        <img class="brand-wordmark" src="/assets/brand/globalmarket-wordmark.svg" alt="GlobalMarket" />
       </a>
       <nav class="main-nav" aria-label="Основная навигация">
-        <a href="#catalog">Каталог</a>
-        <a href="#delivery">Доставка</a>
-        <a href="#checkout">Оплата</a>
+        <a href="/#catalog">Каталог</a>
+        <a href="/#delivery">Доставка</a>
+        <a href="/#checkout">Оплата</a>
       </nav>
       <label class="header-search" aria-label="Поиск по товарам">
         <span aria-hidden="true">⌕</span>
@@ -31,10 +62,11 @@
       <button class="cart-button" id="openCart" type="button" aria-label="Открыть корзину">
         <span class="cart-bag-icon" aria-hidden="true"></span>
         <span class="cart-separator" aria-hidden="true">:</span>
-        <span id="cartCount">0</span>
+        <span id="cartCount" data-cart-count>0</span>
       </button>
-      <nav class="category-menu" id="categoryMenu" aria-label="Категории" hidden></nav>
+      <nav class="category-menu" id="categoryMenu" aria-label="Меню" hidden></nav>
     </header>
+    <!-- END shared-header -->
     <button class="floating-cart-button" id="floatingCart" type="button" aria-label="Открыть корзину" hidden>
       <span class="cart-bag-icon" aria-hidden="true"></span>
       <span id="floatingCartCount">0</span>
@@ -211,6 +243,24 @@
         </form>
       </section>
     </main>
+
+    <!-- BEGIN shared-footer -->
+    <footer class="site-footer" aria-label="Информация о магазине">
+      <div class="site-footer-inner">
+        <a class="footer-brand" href="/#top" aria-label="Global Market KG">
+          <img class="footer-brand-orb" src="/assets/brand/globalmarket-tech-orb-tight.jpg" alt="" aria-hidden="true" />
+          <img class="footer-brand-wordmark" src="/assets/brand/globalmarket-wordmark.svg" alt="GlobalMarket" />
+        </a>
+        <nav class="footer-links" aria-label="Ссылки внизу страницы">
+          <a href="/#catalog">Каталог</a>
+          <a href="/catalog/">Разделы</a>
+          <a href="/#checkout">Оформление</a>
+          <a href="/privacy.html">Политика конфиденциальности</a>
+        </nav>
+        <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
+      </div>
+    </footer>
+    <!-- END shared-footer -->
 
     <aside class="cart-drawer" id="cartDrawer" aria-label="Корзина" aria-hidden="true">
       <div class="drawer-panel">

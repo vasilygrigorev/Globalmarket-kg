@@ -74,7 +74,11 @@ let activeZoomImage = null;
 let recentlyViewedIds = loadRecentlyViewed();
 let favoriteIds = new Set(loadFavorites());
 
-const promoBanners = [
+let siteConfig = {};
+let searchSynonymGroups = [];
+let ignoredSearchDraftTerms = [];
+
+let promoBanners = [
   {
     image: "assets/hero-green-wide-v1.png",
     alt: "Теплая прачечная с растениями и товарами для дома",
@@ -119,7 +123,7 @@ const promoBanners = [
   },
 ];
 
-const quickCategoryCards = [
+let quickCategoryCards = [
   { title: "Стирка", category: "Стирка и уход за бельем", image: "assets/category-cards/category-laundry.jpg" },
   { title: "Чистка", category: "Уборка и чистота", image: "assets/category-cards/category-cleaning.jpg" },
   { title: "Волосы", category: "Уход за волосами", image: "assets/category-cards/category-hair.jpg" },
@@ -208,6 +212,48 @@ function renderHeroBanners() {
   updateHeroBanner();
 }
 
+function isConfigItemActive(item, now = new Date()) {
+  if (item?.active === false) return false;
+
+  const startsAt = item?.startsAt ? new Date(item.startsAt) : null;
+  const endsAt = item?.endsAt ? new Date(item.endsAt) : null;
+
+  if (startsAt && !Number.isNaN(startsAt.getTime()) && startsAt > now) return false;
+  if (endsAt && !Number.isNaN(endsAt.getTime()) && endsAt < now) return false;
+
+  return true;
+}
+
+async function loadSiteConfig() {
+  try {
+    const response = await fetch("data/site-config.json", { cache: "no-store" });
+    if (!response.ok) return;
+    const config = await response.json();
+    siteConfig = config || {};
+    if (Array.isArray(siteConfig.banners) && siteConfig.banners.length) {
+      const activeBanners = siteConfig.banners.filter((banner) => isConfigItemActive(banner));
+      if (activeBanners.length) promoBanners = activeBanners;
+    }
+    if (Array.isArray(siteConfig.quickCategories) && siteConfig.quickCategories.length) {
+      quickCategoryCards = siteConfig.quickCategories;
+    }
+  } catch (error) {
+    console.warn("Не удалось загрузить настройки сайта", error);
+  }
+}
+
+async function loadSearchSynonyms() {
+  try {
+    const response = await fetch("data/search-synonyms.json", { cache: "no-store" });
+    if (!response.ok) return;
+    const config = await response.json();
+    searchSynonymGroups = Array.isArray(config.groups) ? config.groups : [];
+    ignoredSearchDraftTerms = Array.isArray(config.ignoredDraftTerms) ? config.ignoredDraftTerms.map(normalizeSearchValue) : [];
+  } catch (error) {
+    console.warn("Не удалось загрузить словарь поиска", error);
+  }
+}
+
 function updateHeroBanner() {
   if (!heroTrack || !heroDots) return;
   heroTrack.style.transform = `translateX(-${activeHeroIndex * 100}%)`;
@@ -266,10 +312,67 @@ function favoriteIcon(active) {
 }
 
 function productShareUrl(product) {
+  if (hasProductPage(product)) return productPageUrl(product, true);
   const url = new URL(window.location.href);
   url.searchParams.set("product", product.id);
   url.hash = `product-${product.id}`;
   return url.toString();
+}
+
+const translitMap = {
+  а: "a",
+  б: "b",
+  в: "v",
+  г: "g",
+  д: "d",
+  е: "e",
+  ё: "e",
+  ж: "zh",
+  з: "z",
+  и: "i",
+  й: "y",
+  к: "k",
+  л: "l",
+  м: "m",
+  н: "n",
+  о: "o",
+  п: "p",
+  р: "r",
+  с: "s",
+  т: "t",
+  у: "u",
+  ф: "f",
+  х: "h",
+  ц: "ts",
+  ч: "ch",
+  ш: "sh",
+  щ: "sch",
+  ъ: "",
+  ы: "y",
+  ь: "",
+  э: "e",
+  ю: "yu",
+  я: "ya",
+};
+
+function slugifyProductTitle(value) {
+  const translit = String(value || "")
+    .toLowerCase()
+    .replace(/[а-яё]/g, (letter) => translitMap[letter] ?? "");
+  return translit.replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "product";
+}
+
+function hasProductPage(product) {
+  return Boolean(product?.id && product?.retailPriceKgs && hasProductImage(product));
+}
+
+function productPageSlug(product) {
+  return `${slugifyProductTitle(product.title || "product")}-${String(product.id || "").slice(-6)}`;
+}
+
+function productPageUrl(product, absolute = false) {
+  const path = `/product/${productPageSlug(product)}/`;
+  return absolute ? new URL(path, window.location.origin).toString() : path;
 }
 
 function productShareText(product) {
@@ -438,6 +541,63 @@ function recordRecentlyViewed(productId) {
 
 function normalizeText(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function normalizeSearchValue(value) {
+  return normalizeText(value)
+    .toLowerCase()
+    .replace(/ё/g, "е")
+    .replace(/[.,;:!?()[\]{}"']/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function productSearchText(product) {
+  return normalizeSearchValue(
+    [
+      product.title,
+      product.category,
+      product.categoryId,
+      product.brand,
+      product.productType,
+      product.description,
+      product.searchText,
+      ...(product.collections || []),
+    ].join(" "),
+  );
+}
+
+function groupMatchesQuery(group, normalizedQuery) {
+  const aliases = (group.aliases || []).map(normalizeSearchValue).filter(Boolean);
+  return aliases.some((alias) => normalizedQuery.includes(alias));
+}
+
+function productMatchesSynonymGroup(product, group, text) {
+  const categories = group.categories || [];
+  const categoryIds = group.categoryIds || [];
+  const collections = group.collections || [];
+  const brands = group.brands || [];
+  const terms = (group.terms || []).map(normalizeSearchValue).filter(Boolean);
+
+  if (categories.includes(product.category)) return true;
+  if (categoryIds.includes(product.categoryId)) return true;
+  if ((product.collections || []).some((collection) => collections.includes(collection))) return true;
+  if (brands.some((brand) => normalizeSearchValue(product.brand) === normalizeSearchValue(brand))) return true;
+  return terms.some((term) => text.includes(term));
+}
+
+function productMatchesSearchQuery(product, query) {
+  const normalizedQuery = normalizeSearchValue(query);
+  if (!normalizedQuery) return true;
+  if (ignoredSearchDraftTerms.includes(normalizedQuery)) return false;
+
+  const text = productSearchText(product);
+  if (text.includes(normalizedQuery)) return true;
+
+  const queryTerms = normalizedQuery.split(" ").filter(Boolean);
+  if (queryTerms.length > 1 && queryTerms.every((term) => text.includes(term))) return true;
+
+  return searchSynonymGroups.some((group) => groupMatchesQuery(group, normalizedQuery) && productMatchesSynonymGroup(product, group, text));
 }
 
 function titleWithoutFirstMatch(title, value) {
@@ -649,6 +809,7 @@ async function loadCatalog() {
   renderRecentlyViewed();
   renderProducts();
   renderCart();
+  applyCatalogParamsFromUrl();
   openSharedProductFromUrl();
 }
 
@@ -684,6 +845,7 @@ function renderQuickCategories(catalogCategories) {
 }
 
 function renderCategories() {
+  if (!categoryFilter) return;
   const categories = ["Все", ...getVisibleCategoryTitles()];
   categoryFilter.innerHTML = categories
     .map((category) => {
@@ -705,18 +867,30 @@ function renderFavoriteFilter() {
 
 function renderCategoryMenu() {
   if (!categoryMenu) return;
-  const allCategories = [
-    { title: "Все", icon: "⌂", count: products.length },
-    ...menuCategories,
-  ];
-  categoryMenu.innerHTML = allCategories
-    .map((category) => {
-      const title = category.title;
-      return `<button class="${state.category === title ? "active" : ""}" type="button" data-category="${escapeHtml(title)}">
-        <span class="category-menu-icon" aria-hidden="true">${category.icon || "🛍️"}</span>
-        <span class="category-menu-title">${escapeHtml(title === "Все" ? "Все товары" : title)}</span>
-        <span class="category-menu-count">${category.count ?? ""}</span>
-      </button>`;
+  const configuredItems = Array.isArray(siteConfig.menu) && siteConfig.menu.length
+    ? siteConfig.menu
+    : [{ label: "Все товары", category: "Все" }, ...menuCategories.map((category) => ({ label: category.title, category: category.title }))];
+  const countByCategory = new Map(menuCategories.map((category) => [category.title, category.count]));
+  categoryMenu.innerHTML = configuredItems
+    .map((item) => {
+      const count = item.category ? (item.category === "Все" ? products.length : countByCategory.get(item.category)) : "";
+      const isActive = (item.category && state.category === item.category && !state.collection) || (item.collection && state.collection === item.collection);
+      const attributes = [
+        item.category ? `data-category="${escapeHtml(item.category)}"` : "",
+        item.collection ? `data-collection="${escapeHtml(item.collection)}"` : "",
+        item.query ? `data-query="${escapeHtml(item.query)}"` : "",
+        item.label ? `data-label="${escapeHtml(item.label)}"` : "",
+      ]
+        .filter(Boolean)
+        .join(" ");
+      const content = `
+        <span class="category-menu-title">${escapeHtml(item.label || item.title || item.category || "Раздел")}</span>
+        <span class="category-menu-count">${count ?? ""}</span>
+      `;
+      if (item.href) {
+        return `<a class="${isActive ? "active" : ""}" href="${escapeHtml(item.href)}">${content}</a>`;
+      }
+      return `<button class="${isActive ? "active" : ""}" type="button" ${attributes}>${content}</button>`;
     })
     .join("");
 }
@@ -788,6 +962,61 @@ function selectCollection(collection, label = "") {
   renderProducts();
 }
 
+function selectCollectionQuery(collection, query, label = "") {
+  state.category = "Все";
+  state.query = query;
+  state.label = label || query;
+  state.collection = collection;
+  state.collectionLabel = displayCollectionName(collection);
+  state.visibleLimit = 60;
+  searchInput.value = query;
+  headerSearchInput.value = query;
+  renderCategories();
+  renderCategoryMenu();
+  renderCatalogDirectory();
+  renderProducts();
+}
+
+function mergedUrlParams() {
+  const params = new URLSearchParams(window.location.search);
+  const hash = window.location.hash || "";
+  const hashQueryIndex = hash.indexOf("?");
+  if (hashQueryIndex >= 0) {
+    const hashParams = new URLSearchParams(hash.slice(hashQueryIndex + 1));
+    hashParams.forEach((value, key) => {
+      if (!params.has(key)) params.set(key, value);
+    });
+  }
+  return params;
+}
+
+function applyCatalogParamsFromUrl() {
+  const params = mergedUrlParams();
+  const collection = params.get("collection");
+  const category = params.get("category");
+  const query = params.get("q") || params.get("query");
+  const label = params.get("label") || "";
+
+  if (collection && query) {
+    selectCollectionQuery(collection, query, label || query);
+  } else if (collection) {
+    selectCollection(collection, label || displayCollectionName(collection));
+  } else if (category && query) {
+    selectCategoryQuery(category, query, label || query);
+  } else if (category) {
+    selectCategory(category);
+  } else if (query) {
+    selectQuery(query, label || query);
+  } else {
+    return false;
+  }
+
+  if (window.location.hash.includes("catalog")) {
+    document.querySelector("#catalog")?.scrollIntoView({ behavior: "auto" });
+  }
+  return true;
+}
+
 function renderCatalogDirectory() {
   if (!catalogDirectory) return;
   const parts = [{ title: "Главная", category: "Все" }];
@@ -856,15 +1085,13 @@ function productMatchesCollection(product, collection) {
 }
 
 function getVisibleProducts() {
-  const normalizedQuery = state.query.trim().toLowerCase();
+  const normalizedQuery = normalizeSearchValue(state.query);
   const filtered = products.filter((product) => {
     const matchesFavorite = !state.favoriteOnly || favoriteIds.has(product.id);
     const matchesCategory = state.category === "Все" || product.category === state.category;
     const matchesCollection = productMatchesCollection(product, state.collection);
     const matchesPrice = productPrice(product) <= state.maxPrice;
-    const matchesQuery = `${product.title} ${product.category} ${product.brand} ${product.productType} ${product.description} ${product.searchText}`
-      .toLowerCase()
-      .includes(normalizedQuery);
+    const matchesQuery = productMatchesSearchQuery(product, normalizedQuery);
     return matchesFavorite && matchesCategory && matchesCollection && matchesPrice && matchesQuery;
   });
 
@@ -962,16 +1189,20 @@ function renderRecentlyViewed() {
   recentlyViewedRow.innerHTML = recentProducts
     .map((product) => {
       const display = productDisplayParts(product);
+      const href = hasProductPage(product) ? productPageUrl(product) : "";
+      const imageAction = href
+        ? `href="${escapeHtml(href)}" data-product-link="${product.id}"`
+        : `href="#" data-recent-open="${product.id}"`;
       return `
         <article class="recent-product">
-          <button class="recent-product-image" type="button" data-recent-open="${product.id}" aria-label="Открыть ${escapeHtml(product.title)}">
+          <a class="recent-product-image" ${imageAction} aria-label="Открыть ${escapeHtml(product.title)}">
             <img class="${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy">
             <span>${escapeHtml(display.brand)}</span>
-          </button>
-          <button class="recent-product-copy" type="button" data-recent-open="${product.id}">
+          </a>
+          <a class="recent-product-copy" ${imageAction}>
             <strong>${escapeHtml(display.type)}</strong>
             <small>${escapeHtml(display.size || product.unit || "")}</small>
-          </button>
+          </a>
           <div class="recent-product-action">
             <span>${formatPriceHtml(productPrice(product))}</span>
             <button type="button" data-recent-add="${product.id}" aria-label="Добавить ${escapeHtml(product.title)} в корзину">+</button>
@@ -1003,6 +1234,10 @@ function renderProducts() {
     .map((product) => {
       const display = productDisplayParts(product);
       const badges = productBadges(product);
+      const href = hasProductPage(product) ? productPageUrl(product) : "";
+      const cardLink = href
+        ? `href="${escapeHtml(href)}" data-product-link="${product.id}"`
+        : `href="#" data-open-product="${product.id}"`;
       return `
         <article class="product-card">
           <div class="product-visual" style="--tone-a: ${product.tones[0]}; --tone-b: ${product.tones[1]}">
@@ -1013,17 +1248,19 @@ function renderProducts() {
                 ? `<div class="marketing-badges">${badges.map((badge) => `<span>${escapeHtml(badge)}</span>`).join("")}</div>`
                 : ""
             }
-            <img class="product-image ${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy" data-open-product="${product.id}">
+            <a class="product-image-link" ${cardLink} aria-label="Открыть ${escapeHtml(product.title)}">
+              <img class="product-image ${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy">
+            </a>
           </div>
           <div class="product-info">
-            <button class="product-title-button product-copy" type="button" data-open-product="${product.id}">
+            <a class="product-title-button product-copy" ${cardLink}>
               <span class="product-brand-line">${escapeHtml(display.brand)}</span>
               <span class="product-kind-line">
                 <strong>${escapeHtml(display.type)}</strong>
                 ${display.size ? `<span>${escapeHtml(display.size)}</span>` : ""}
               </span>
               <span class="product-variant-line">${escapeHtml(display.variant)}</span>
-            </button>
+            </a>
             <div class="product-meta product-meta-compact">
               <span>${escapeHtml(product.category)}</span>
             </div>
@@ -1173,7 +1410,7 @@ function closeProductModal() {
 }
 
 function openSharedProductFromUrl() {
-  const params = new URLSearchParams(window.location.search);
+  const params = mergedUrlParams();
   const productId = params.get("product") || window.location.hash.replace(/^#product-/, "");
   if (!productId || !products.some((product) => product.id === productId)) return;
   openProductModal(productId);
@@ -1472,13 +1709,21 @@ quickCategoryGrid.addEventListener("click", (event) => {
 
 recentlyViewedRow?.addEventListener("click", (event) => {
   const addButton = event.target.closest("[data-recent-add]");
+  const productLink = event.target.closest("[data-product-link]");
   const openButton = event.target.closest("[data-recent-open]");
   if (addButton) {
     addToCart(addButton.dataset.recentAdd);
     showAddFeedback(addButton);
     return;
   }
-  if (openButton) openProductModal(openButton.dataset.recentOpen);
+  if (productLink) {
+    recordRecentlyViewed(productLink.dataset.productLink);
+    return;
+  }
+  if (openButton) {
+    event.preventDefault();
+    openProductModal(openButton.dataset.recentOpen);
+  }
 });
 
 catalogDirectory?.addEventListener("click", (event) => {
@@ -1505,9 +1750,22 @@ toggleMenuButton?.addEventListener("click", (event) => {
 });
 
 categoryMenu?.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-category]");
+  const link = event.target.closest("a");
+  if (link) {
+    setMenuOpen(false);
+    return;
+  }
+  const button = event.target.closest("[data-category], [data-collection], [data-query]");
   if (!button) return;
-  selectCategory(button.dataset.category);
+  if (button.dataset.query && button.dataset.category) {
+    selectCategoryQuery(button.dataset.category, button.dataset.query, button.dataset.label || button.dataset.query);
+  } else if (button.dataset.query) {
+    selectQuery(button.dataset.query, button.dataset.label || button.dataset.query);
+  } else if (button.dataset.collection) {
+    selectCollection(button.dataset.collection, button.dataset.label || displayCollectionName(button.dataset.collection));
+  } else {
+    selectCategory(button.dataset.category || "Все");
+  }
   setMenuOpen(false);
   document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
 });
@@ -1515,6 +1773,7 @@ categoryMenu?.addEventListener("click", (event) => {
 productGrid.addEventListener("click", (event) => {
   const favoriteButton = event.target.closest("[data-favorite]");
   const button = event.target.closest("[data-add]");
+  const productLink = event.target.closest("[data-product-link]");
   const detailsButton = event.target.closest("[data-open-product]");
   if (favoriteButton) {
     toggleFavorite(favoriteButton.dataset.favorite);
@@ -1525,7 +1784,14 @@ productGrid.addEventListener("click", (event) => {
     showAddFeedback(button);
     return;
   }
-  if (detailsButton) openProductModal(detailsButton.dataset.openProduct);
+  if (productLink) {
+    recordRecentlyViewed(productLink.dataset.productLink);
+    return;
+  }
+  if (detailsButton) {
+    event.preventDefault();
+    openProductModal(detailsButton.dataset.openProduct);
+  }
 });
 
 productModal.addEventListener("click", (event) => {
@@ -1786,11 +2052,16 @@ checkoutForm.addEventListener("submit", (event) => {
   window.location.href = whatsapp;
 });
 
-updateSiteHeaderHeight();
-updateBackToTopButton();
-renderHeroBanners();
-startHeroRotation();
+async function initStorefront() {
+  await loadSiteConfig();
+  await loadSearchSynonyms();
+  updateSiteHeaderHeight();
+  updateBackToTopButton();
+  renderHeroBanners();
+  startHeroRotation();
+  await loadCatalog();
+}
 
-loadCatalog().catch((error) => {
+initStorefront().catch((error) => {
   productGrid.innerHTML = `<p class="empty-cart">${escapeHtml(error.message)}</p>`;
 });

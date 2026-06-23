@@ -1,0 +1,27 @@
+<header class="site-header" data-smart-header>
+  <button class="menu-toggle" id="toggleMenu" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="categoryMenu">
+    <span class="menu-icon" aria-hidden="true"></span>
+  </button>
+  <a class="brand" href="/#top" aria-label="Global Market">
+    <img class="brand-orb" src="/assets/brand/globalmarket-tech-orb-tight.jpg" alt="" aria-hidden="true" />
+    <img class="brand-wordmark" src="/assets/brand/globalmarket-wordmark.svg" alt="GlobalMarket" />
+  </a>
+  <nav class="main-nav" aria-label="Основная навигация">
+    <a href="/#catalog">Каталог</a>
+    <a href="/#delivery">Доставка</a>
+    <a href="/#checkout">Оплата</a>
+  </nav>
+  <label class="header-search" aria-label="Поиск по товарам">
+    <span aria-hidden="true">⌕</span>
+    <input id="headerSearchInput" type="search" placeholder="Найти товар" />
+  </label>
+  <button class="search-toggle" id="toggleSearch" type="button" aria-label="Открыть поиск" aria-expanded="false">
+    <span class="search-icon" aria-hidden="true"></span>
+  </button>
+  <button class="cart-button" id="openCart" type="button" aria-label="Открыть корзину">
+    <span class="cart-bag-icon" aria-hidden="true"></span>
+    <span class="cart-separator" aria-hidden="true">:</span>
+    <span id="cartCount" data-cart-count>0</span>
+  </button>
+  <nav class="category-menu" id="categoryMenu" aria-label="Меню" hidden></nav>
+</header>

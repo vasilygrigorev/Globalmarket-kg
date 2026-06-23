@@ -1,0 +1,90 @@
+{
+  "nav": [
+    { "label": "Каталог", "href": "/#catalog" },
+    { "label": "Доставка", "href": "/#delivery" },
+    { "label": "Оплата", "href": "/#checkout" }
+  ],
+  "menu": [
+    { "label": "Главная", "href": "/#top" },
+    { "label": "Каталог", "href": "/#catalog" },
+    { "label": "Стирка", "category": "Стирка и уход за бельем" },
+    { "label": "Чистка", "category": "Уборка и чистота" },
+    { "label": "Волосы", "category": "Уход за волосами" },
+    { "label": "Тело", "category": "Уход за телом" },
+    { "label": "Бритье", "category": "Бритье" },
+    { "label": "Парфюм", "category": "Парфюм 5 мл" },
+    { "label": "Европа", "collection": "europe" },
+    { "label": "Оформление", "href": "/#checkout" }
+  ],
+  "banners": [
+    {
+      "image": "/assets/hero-green-wide-v1.png",
+      "alt": "Теплая прачечная с растениями и товарами для дома",
+      "eyebrow": "Для дома",
+      "title": "Бытовая химия и уход",
+      "href": "/?category=Уборка%20и%20чистота&label=Чистка#catalog",
+      "active": true
+    },
+    {
+      "image": "/assets/hero-promo-downy-dark.jpg",
+      "alt": "Ополаскиватели Downy в темной синей прачечной",
+      "eyebrow": "Downy",
+      "title": "Свежесть для белья",
+      "href": "/?category=Стирка%20и%20уход%20за%20бельем&query=Downy&label=Downy#catalog",
+      "active": true
+    },
+    {
+      "image": "/assets/hero-promo-clear-dark.jpg",
+      "alt": "Шампуни Clear Men в темной синей ванной",
+      "eyebrow": "Уход за волосами",
+      "title": "Clear Men",
+      "href": "/?category=Уход%20за%20волосами&query=Clear&label=Clear%20Men#catalog",
+      "active": true
+    },
+    {
+      "image": "/assets/hero-promo-dalli-autumn.jpg",
+      "alt": "Средства Dalli на осеннем фоне",
+      "eyebrow": "Dalli",
+      "title": "Стирка для всей семьи",
+      "href": "/?collection=europe&query=Dalli&label=Dalli#catalog",
+      "active": true
+    },
+    {
+      "image": "/assets/hero-promo-dash-green.jpg",
+      "alt": "Средства Dash на зеленом тропическом фоне",
+      "eyebrow": "Dash",
+      "title": "Свежая стирка",
+      "href": "/?collection=europe&query=Dash&label=Dash#catalog",
+      "active": true
+    },
+    {
+      "image": "/assets/hero-promo-pink-stuff.jpg",
+      "alt": "Средства The Pink Stuff на розовом фоне",
+      "eyebrow": "The Pink Stuff",
+      "title": "Чистота и блеск",
+      "href": "/?category=Уборка%20и%20чистота&label=Чистка#catalog",
+      "active": true
+    }
+  ],
+  "quickCategories": [
+    { "title": "Стирка", "category": "Стирка и уход за бельем", "image": "/assets/category-cards/category-laundry.jpg" },
+    { "title": "Чистка", "category": "Уборка и чистота", "image": "/assets/category-cards/category-cleaning.jpg" },
+    { "title": "Волосы", "category": "Уход за волосами", "image": "/assets/category-cards/category-hair.jpg" },
+    { "title": "Тело", "category": "Уход за телом", "image": "/assets/category-cards/category-body.jpg" },
+    { "title": "Кремы", "category": "Уход за телом", "query": "крем", "image": "/assets/category-cards/category-creams.jpg" },
+    { "title": "Зубы", "category": "Зубная гигиена", "image": "/assets/category-cards/category-oral.jpg" },
+    { "title": "Бритье", "category": "Бритье", "image": "/assets/category-cards/category-shaving.jpg" },
+    { "title": "Дезодоранты", "category": "Дезодоранты", "image": "/assets/category-cards/category-deodorants.jpg" },
+    { "title": "Парфюм", "category": "Парфюм 5 мл", "image": "/assets/category-cards/category-perfume.jpg" },
+    { "title": "Еда", "category": "Продукты", "image": "/assets/category-cards/category-food.jpg" },
+    { "title": "Европа", "collection": "europe", "image": "/assets/category-cards/category-germany.jpg" },
+    { "title": "Дом", "category": "Разное", "image": "/assets/category-cards/category-home.jpg" }
+  ],
+  "footerLinks": [
+    { "label": "Каталог", "href": "/#catalog" },
+    { "label": "Разделы", "href": "/catalog/" },
+    { "label": "Оформление", "href": "/#checkout" },
+    { "label": "Политика конфиденциальности", "href": "/privacy.html" }
+  ],
+  "footerText": "Контакты, условия доставки и реквизиты добавим после финального согласования."
+}
