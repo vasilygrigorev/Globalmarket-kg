@@ -6,6 +6,7 @@
 /*.jpg
 /*.jpeg
 /*.webp
+output/
 .playwright-mcp/
 
 # Private/local inventory sources
