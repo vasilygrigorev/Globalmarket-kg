@@ -387,6 +387,56 @@ function productShareText(product) {
     .join("\n");
 }
 
+function managerWhatsappLink(message) {
+  const phone = catalogSettings.manager_whatsapp.replace(/\D/g, "");
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+}
+
+function productShortName(product) {
+  const display = productDisplayParts(product);
+  return `${display.brand} ${display.type}${display.size ? ` ${display.size}` : ""}`.trim();
+}
+
+function productQuestionText(product) {
+  return [
+    "Здравствуйте! Вопрос по товару с сайта Global Market KG.",
+    "",
+    `Товар: ${productShortName(product)}`,
+    `Цена на сайте: ${formatPrice(productPrice(product))}`,
+    `Ссылка: ${productShareUrl(product)}`,
+    "",
+    "Подскажите, пожалуйста, по наличию и деталям.",
+  ].join("\n");
+}
+
+function productQuickOrderText(product) {
+  const customer = state.customer;
+  const lines = [
+    "Быстрый заказ с сайта Global Market KG",
+    "",
+    `Товар: ${productShortName(product)}`,
+    `Количество: 1 ${product.unit || "шт"}`,
+    `Цена: ${formatPrice(productPrice(product))}`,
+    `Ссылка: ${productShareUrl(product)}`,
+  ];
+  if (customer?.name || customer?.phone) {
+    lines.push("", "Клиент:");
+    if (customer.name) lines.push(`Имя: ${customer.name}`);
+    if (customer.phone) lines.push(`Телефон/WhatsApp: ${customer.phone}`);
+  }
+  lines.push("", "Цены и наличие подтверждает менеджер.");
+  return lines.join("\n");
+}
+
+function openProductWhatsapp(productId, mode) {
+  const product = products.find((item) => item.id === productId);
+  if (!product) return;
+  const message = mode === "order" ? productQuickOrderText(product) : productQuestionText(product);
+  const link = managerWhatsappLink(message);
+  const opened = window.open(link, "_blank", "noopener");
+  if (!opened) window.location.href = link;
+}
+
 async function shareProduct(productId, triggerButton) {
   const product = products.find((item) => item.id === productId);
   if (!product) return;
@@ -1390,6 +1440,8 @@ function openProductModal(productId) {
         </div>
         <div class="modal-actions">
           <button class="add-button" type="button" data-modal-add="${product.id}">В корзину</button>
+          <button class="secondary-link wa-button" type="button" data-quick-order="${product.id}">Заказать в 1 клик</button>
+          <button class="secondary-link wa-question" type="button" data-ask-product="${product.id}">Спросить в WhatsApp</button>
           <a class="secondary-link" href="#checkout" id="modalCheckoutLink">К оформлению</a>
         </div>
       </div>
@@ -1828,6 +1880,16 @@ productModal.addEventListener("click", (event) => {
   }
   if (shareButton) {
     shareProduct(shareButton.dataset.shareProduct, shareButton);
+    return;
+  }
+  const quickOrderButton = event.target.closest("[data-quick-order]");
+  if (quickOrderButton) {
+    openProductWhatsapp(quickOrderButton.dataset.quickOrder, "order");
+    return;
+  }
+  const askButton = event.target.closest("[data-ask-product]");
+  if (askButton) {
+    openProductWhatsapp(askButton.dataset.askProduct, "question");
     return;
   }
   if (checkoutLink) closeProductModal();

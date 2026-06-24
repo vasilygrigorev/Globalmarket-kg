@@ -13,6 +13,7 @@ ROOT_FILES = [
     "app.js",
     "styles.css",
     "privacy.html",
+    "404.html",
     "sitemap.xml",
     "robots.txt",
 ]

@@ -101,11 +101,18 @@ def render_page(pages):
   <link rel="icon" href="data:,">
   <meta name="description" content="Категории, подборки и бренды Global Market KG: стирка, чистка, уход, бритье, парфюм, Европа, Dalli, Persil, Gillette, Downy и другие разделы.">
   <link rel="canonical" href="{SITE_URL}/catalog/">
+  <meta property="og:site_name" content="Global Market KG">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Разделы магазина Global Market KG">
   <meta property="og:description" content="Категории, подборки и бренды Global Market KG.">
   <meta property="og:url" content="{SITE_URL}/catalog/">
-  <link rel="stylesheet" href="/styles.css?v=20260619-europe-photos-product-page">
+  <meta property="og:image" content="{SITE_URL}/assets/hero-green-wide-v1.png">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Разделы магазина Global Market KG">
+  <meta name="twitter:description" content="Категории, подборки и бренды Global Market KG.">
+  <meta name="twitter:image" content="{SITE_URL}/assets/hero-green-wide-v1.png">
+  <link rel="stylesheet" href="/styles.css?v=20260624-wa-product-actions">
   <script type="application/ld+json">{json_ld}</script>
   <style>
     body.catalog-index-page {{ margin: 0; padding-top: var(--site-header-height, 58px); background: #f2f3f5; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }}

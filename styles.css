@@ -2123,6 +2123,20 @@ textarea {
   flex-wrap: wrap;
 }
 
+.modal-actions .wa-button {
+  border: 0;
+  color: var(--white);
+  background: #25d366;
+  cursor: pointer;
+}
+
+.modal-actions .wa-question {
+  border: 1px solid #25d366;
+  color: #128c4b;
+  background: rgba(37, 211, 102, 0.08);
+  cursor: pointer;
+}
+
 .modal-favorite-button,
 .modal-share-button {
   min-height: 42px;

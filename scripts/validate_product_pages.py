@@ -89,6 +89,8 @@ def validate_page(page):
         errors.append("missing favorite action")
     if 'data-share' not in html:
         errors.append("missing share action")
+    if "Спросить в WhatsApp" not in html:
+        errors.append("missing WhatsApp question action")
 
     validate_json_ld(page, html, errors)
 

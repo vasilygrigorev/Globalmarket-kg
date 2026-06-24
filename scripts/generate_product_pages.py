@@ -425,6 +425,8 @@ def render_page(product, related, slug, landing_lookup=None):
     display = product_display_parts(product)
     order_text = f"Здравствуйте! Хочу заказать: {title}, цена {money(product.get('retailPriceKgs', 0))} сом."
     whatsapp = f"https://wa.me/996706771103?text={urllib.parse.quote(order_text)}"
+    question_text = f"Здравствуйте! Вопрос по товару: {title}, цена {money(product.get('retailPriceKgs', 0))} сом. {canonical}"
+    whatsapp_question = f"https://wa.me/996706771103?text={urllib.parse.quote(question_text)}"
     json_ld = build_json_ld(product, canonical, images)
     breadcrumb_json_ld = build_breadcrumb_json_ld(product, canonical, links)
     collection_links = links.get("collections") or []
@@ -449,9 +451,13 @@ def render_page(product, related, slug, landing_lookup=None):
           <a class="secondary-action" href="/#checkout" data-checkout>К оформлению</a>
         </div>
         <a class="whatsapp-action" href="{escape(whatsapp)}" rel="noopener">Заказать сразу в WhatsApp</a>
+        <a class="whatsapp-action" href="{escape(whatsapp_question)}" rel="noopener">Спросить в WhatsApp</a>
         """
         if is_in_stock(product)
-        else '<p class="stock-note">Нет в наличии. Посмотрите похожие товары ниже.</p>'
+        else (
+            '<p class="stock-note">Нет в наличии. Посмотрите похожие товары ниже.</p>'
+            f'<a class="whatsapp-action" href="{escape(whatsapp_question)}" rel="noopener">Спросить в WhatsApp</a>'
+        )
     )
     return f"""<!doctype html>
 <html lang="ru">
@@ -462,12 +468,19 @@ def render_page(product, related, slug, landing_lookup=None):
   <link rel="icon" href="data:,">
   <meta name="description" content="{escape(meta_description)}">
   <link rel="canonical" href="{escape(canonical)}">
+  <meta property="og:site_name" content="Global Market KG">
   <meta property="og:type" content="product">
   <meta property="og:title" content="{escape(title)}">
   <meta property="og:description" content="{escape(meta_description)}">
   <meta property="og:url" content="{escape(canonical)}">
   <meta property="og:image" content="{escape(absolute_url(main_image))}">
-  <link rel="stylesheet" href="/styles.css?v=20260619-europe-photos-product-page">
+  <meta property="og:image:alt" content="{escape(title)}">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{escape(title)}">
+  <meta name="twitter:description" content="{escape(meta_description)}">
+  <meta name="twitter:image" content="{escape(absolute_url(main_image))}">
+  <link rel="stylesheet" href="/styles.css?v=20260624-wa-product-actions">
   <script type="application/ld+json">{json_ld}</script>
   <script type="application/ld+json">{breadcrumb_json_ld}</script>
   <style>

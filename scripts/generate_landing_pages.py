@@ -345,11 +345,18 @@ def render_page(target, products, product_page_by_id, all_targets):
   <link rel="icon" href="data:,">
   <meta name="description" content="{escape(description)}">
   <link rel="canonical" href="{escape(canonical)}">
+  <meta property="og:site_name" content="Global Market KG">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{escape(title)}">
   <meta property="og:description" content="{escape(description)}">
   <meta property="og:url" content="{escape(canonical)}">
-  <link rel="stylesheet" href="/styles.css?v=20260619-europe-photos-product-page">
+  <meta property="og:image" content="{SITE_URL}/assets/hero-green-wide-v1.png">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{escape(title)}">
+  <meta name="twitter:description" content="{escape(description)}">
+  <meta name="twitter:image" content="{SITE_URL}/assets/hero-green-wide-v1.png">
+  <link rel="stylesheet" href="/styles.css?v=20260624-wa-product-actions">
   <script type="application/ld+json">{breadcrumb_json_ld(target, canonical)}</script>
   <script type="application/ld+json">{item_list_json_ld(products, product_page_by_id)}</script>
   <style>
