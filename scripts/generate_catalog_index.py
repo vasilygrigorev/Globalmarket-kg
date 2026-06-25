@@ -98,7 +98,10 @@ def render_page(pages):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Разделы магазина | Global Market KG</title>
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/jpeg" href="/assets/brand/globalmarket-tech-orb-tight.jpg">
+  <link rel="apple-touch-icon" href="/assets/brand/globalmarket-tech-orb.jpg">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="description" content="Категории, подборки и бренды Global Market KG: стирка, чистка, уход, бритье, парфюм, Европа, Dalli, Persil, Gillette, Downy и другие разделы.">
   <link rel="canonical" href="{SITE_URL}/catalog/">
   <meta property="og:site_name" content="Global Market KG">

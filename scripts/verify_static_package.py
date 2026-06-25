@@ -14,8 +14,16 @@ REQUIRED_ROOT_FILES = {
     "app.js",
     "styles.css",
     "privacy.html",
+    "404.html",
+    "site.webmanifest",
     "sitemap.xml",
     "robots.txt",
+}
+REQUIRED_ASSET_FILES = {
+    "assets/brand/icon-192.png",
+    "assets/brand/icon-512.png",
+    "assets/brand/globalmarket-tech-orb-tight.jpg",
+    "assets/brand/globalmarket-tech-orb.jpg",
 }
 REQUIRED_DATA_FILES = {
     "public-catalog.json",
@@ -79,6 +87,9 @@ def verify_required_files(package, errors):
     for name in sorted(REQUIRED_DATA_FILES):
         if not (package / "data" / name).is_file():
             fail(errors, f"Missing data file: data/{name}")
+    for rel in sorted(REQUIRED_ASSET_FILES):
+        if not (package / rel).is_file():
+            fail(errors, f"Missing required asset: {rel}")
     for dirname in ("assets", "product", "catalog", "category", "collection", "brand"):
         if not (package / dirname).is_dir():
             fail(errors, f"Missing directory: {dirname}")

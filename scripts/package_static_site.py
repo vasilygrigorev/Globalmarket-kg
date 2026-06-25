@@ -14,6 +14,7 @@ ROOT_FILES = [
     "styles.css",
     "privacy.html",
     "404.html",
+    "site.webmanifest",
     "sitemap.xml",
     "robots.txt",
 ]

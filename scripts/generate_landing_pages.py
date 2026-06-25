@@ -342,7 +342,10 @@ def render_page(target, products, product_page_by_id, all_targets):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{escape(title)} | Global Market KG</title>
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/jpeg" href="/assets/brand/globalmarket-tech-orb-tight.jpg">
+  <link rel="apple-touch-icon" href="/assets/brand/globalmarket-tech-orb.jpg">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="description" content="{escape(description)}">
   <link rel="canonical" href="{escape(canonical)}">
   <meta property="og:site_name" content="Global Market KG">
