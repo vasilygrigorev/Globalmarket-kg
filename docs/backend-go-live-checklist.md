@@ -52,6 +52,20 @@ the function); `service_role` stays server-side in the Pages Function env.
 
 ## Safety: secret scan (run before any commit and before deploy)
 
+For the full safe local backend/admin suite, prefer:
+
+```bash
+python3 scripts/verify_backend_mvp.py
+```
+
+Fast mode while iterating:
+
+```bash
+python3 scripts/verify_backend_mvp.py --skip-package
+```
+
+Manual secret scan commands:
+
 ```bash
 python3 scripts/check_no_secrets.py                      # git-tracked files
 python3 scripts/check_no_secrets.py --package /private/tmp/globalmarket-static-build
