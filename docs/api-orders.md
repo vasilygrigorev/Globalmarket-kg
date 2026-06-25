@@ -4,7 +4,7 @@ Server-side order capture for Global Market KG. Implemented as a Cloudflare
 Pages Function so it runs on the same domain as the static site.
 
 - Code: `functions/api/orders.js`
-- Tests: `functions/api/orders.test.mjs` — `node --test functions/api/orders.test.mjs` (9/9, no network)
+- Tests: `functions/api/orders.test.mjs` (pure logic) + `functions/api/orders.integration.test.mjs` (onRequestPost with mocked fetch/env). Run: `node --test functions/api/orders.test.mjs functions/api/orders.integration.test.mjs` (14/14, no network). Both excluded from the deploy package.
 - Route: `POST /api/orders`
 - Depends on the schema in `supabase/migrations/0001_init_orders_customers.sql`
 - Plan: `docs/backend-mvp-plan.md` · Setup: `docs/supabase-setup.md`
@@ -116,10 +116,29 @@ the same WhatsApp flow — no order is lost from their side.
 
 ## Deploy note
 
-Cloudflare Pages picks up `functions/` from the repo root. The current deploy
-ships a prebuilt static dir (`scripts/package_static_site.py` →
-`/private/tmp/globalmarket-static-build`), which does **not** include
-`functions/`. Codex must adjust the deploy so the Pages Functions are included
-(deploy from the repo with the static output, or copy `functions/` into the
-deploy dir), then set the env vars above. This is the privileged step
-(secrets + deploy) that Claude Code does not perform.
+The deploy package now includes the Pages Functions automatically.
+`scripts/package_static_site.py` copies `functions/` into the deploy dir
+(`/private/tmp/globalmarket-static-build/functions/...`), excluding test/spec
+files. `scripts/verify_static_package.py` checks that
+`functions/api/orders.js` ships and that no `*.test.*` / `*.spec.*` leaks in.
+
+Because the deploy dir contains `functions/api/orders.js`, Cloudflare Pages
+compiles it to the route `POST /api/orders` (directory-mode functions; no
+`_worker.js` override and no `_routes.json` present, so all functions routes are
+active). Deploying the same package dir as today is enough — no extra wiring.
+
+Verified locally without deploying: package contains `functions/api/orders.js`,
+`onRequestPost`/`onRequest` exports present, `node --check` passes, unit tests
+9/9. `wrangler pages functions build` could not run in the sandbox (npm registry
+blocked).
+
+Privileged steps remaining (Codex, on the Mac — secrets + deploy):
+
+1. Optionally validate the bundle: `npx wrangler pages functions build` from the
+   package dir (or repo) to confirm it compiles for the Workers runtime.
+2. Set the env vars above in Cloudflare Pages (Production + Preview).
+3. Deploy the package as usual (`wrangler pages deploy <package-dir>`), then
+   `curl -i https://<preview>/api/orders` with a tiny JSON body to confirm the
+   route responds (expect `503 backend_not_configured` until env is set, then a
+   real `order_id`).
+4. Only after that: wire the `app.js` checkout (snippet above).

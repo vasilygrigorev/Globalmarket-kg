@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import fnmatch
 import shutil
 import subprocess
 from pathlib import Path
@@ -43,15 +44,22 @@ def copy_file(src, dst):
     shutil.copy2(src, dst)
 
 
-def copy_tree(src, dst, exclude_names=None):
+def copy_tree(src, dst, exclude_names=None, exclude_globs=None):
     exclude_names = exclude_names or set()
+    exclude_globs = exclude_globs or set()
     if not src.exists():
         raise FileNotFoundError(src)
     if dst.exists():
         shutil.rmtree(dst)
 
     def ignore(_, names):
-        return {name for name in names if name in exclude_names or name == ".DS_Store"}
+        dropped = set()
+        for name in names:
+            if name in exclude_names or name == ".DS_Store":
+                dropped.add(name)
+            elif any(fnmatch.fnmatch(name, pattern) for pattern in exclude_globs):
+                dropped.add(name)
+        return dropped
 
     shutil.copytree(src, dst, ignore=ignore)
 
@@ -92,6 +100,15 @@ def main():
     copy_tree(ROOT / "collection", output / "collection")
     copy_tree(ROOT / "brand", output / "brand")
 
+    # Cloudflare Pages Functions: ship functions/ so /api/* routes deploy.
+    # Exclude tests/specs and dotfiles — only runtime handlers should ship.
+    if (ROOT / "functions").exists():
+        copy_tree(
+            ROOT / "functions",
+            output / "functions",
+            exclude_globs={"*.test.*", "*.spec.*", "__tests__"},
+        )
+
     if args.include_reports:
         reports_output = output / "outputs"
         for name in (
@@ -116,7 +133,7 @@ def main():
 
     print(f"Package: {output}")
     print(f"Files: {count_files(output)}")
-    print("Included: root public files, data/public-catalog.json, data/site-config.json, data/search-synonyms.json, assets, product pages")
+    print("Included: root public files, data/public-catalog.json, data/site-config.json, data/search-synonyms.json, assets, product pages, Cloudflare Pages functions (tests excluded)")
     if args.include_reports:
         print("Included reports: outputs/site-config-report.md, outputs/product-pages-report.md, outputs/landing-pages-report.md, outputs/landing-pages-validation-report.md, outputs/catalog-index-report.md, outputs/search-synonyms-report.md, outputs/product-pages-validation-report.md, outputs/structured-data-report.md, outputs/internal-links-report.md, outputs/build-manifest.json, outputs/project-stage-report.md")
 

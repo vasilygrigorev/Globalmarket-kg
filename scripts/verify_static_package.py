@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import fnmatch
 import hashlib
 import json
 import sys
@@ -280,6 +281,22 @@ def verify_build_manifest(package, require_reports, catalog, product_pages_manif
             fail(errors, f"build-manifest sha256 mismatch `{name}`")
 
 
+def verify_functions(package, errors):
+    """Cloudflare Pages Functions must ship the orders handler and no test/spec files."""
+    functions_dir = package / "functions"
+    if not functions_dir.is_dir():
+        fail(errors, "Missing functions/ directory (orders API would not deploy)")
+        return
+    if not (functions_dir / "api" / "orders.js").is_file():
+        fail(errors, "Missing functions/api/orders.js in package")
+    for path in functions_dir.rglob("*"):
+        if path.is_file() and (
+            fnmatch.fnmatch(path.name, "*.test.*") or fnmatch.fnmatch(path.name, "*.spec.*")
+        ):
+            rel = path.relative_to(package).as_posix()
+            fail(errors, f"Test/spec file leaked into deploy functions: {rel}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Verify a packaged static Global Market KG deploy directory.")
     parser.add_argument("--package", default=str(DEFAULT_PACKAGE), help="Package directory to verify.")
@@ -296,6 +313,7 @@ def main():
     else:
         verify_required_files(package, errors)
         verify_forbidden_files(package, errors)
+        verify_functions(package, errors)
         catalog = parse_json(package / "data" / "public-catalog.json", errors)
         parse_json(package / "data" / "site-config.json", errors)
         product_pages_manifest = parse_json(package / "data" / "product-pages.json", errors)
