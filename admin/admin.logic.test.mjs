@@ -9,6 +9,7 @@ import {
   money,
   when,
   isConfigured,
+  isAdminSession,
   buildSearchOr,
   isValidStatus,
   friendlyError,
@@ -38,6 +39,14 @@ test("isConfigured requires real url + key", () => {
   assert.equal(isConfigured({ url: "https://x.supabase.co", key: "YOUR-ANON-PUBLIC-KEY" }), false);
   assert.equal(isConfigured({ url: "https://x", key: "k", missing: true }), false);
   assert.equal(isConfigured({}), false);
+});
+
+test("isAdminSession requires explicit app_metadata.is_admin", () => {
+  assert.equal(isAdminSession({ user: { app_metadata: { is_admin: true } } }), true);
+  assert.equal(isAdminSession({ user: { app_metadata: { is_admin: false } } }), false);
+  assert.equal(isAdminSession({ user: { app_metadata: { role: "admin" } } }), false);
+  assert.equal(isAdminSession({ user: {} }), false);
+  assert.equal(isAdminSession(null), false);
 });
 
 test("buildSearchOr sanitizes and returns null when empty", () => {

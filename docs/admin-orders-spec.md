@@ -58,9 +58,11 @@ DB CHECK constraint).
 
 ## Screens (MVP)
 
-1. **Login** — email/password; on success, verify `is_admin` by attempting a
-   1-row `orders` select (empty/allowed = admin; error/empty due to RLS = not
-   admin → show "no access").
+1. **Login** — email/password; on success, the client performs a fast UX guard
+   by checking `session.user.app_metadata.is_admin === true`. If the flag is
+   missing, the page shows "no access" before loading orders. This is only a
+   usability guard; RLS remains the real protection and must still block all
+   reads/writes for non-admin users.
 2. **Orders list** — table: date, customer, phone, city, total, status badge,
    source. Controls: status filter, search box, pagination, refresh.
 3. **Order card** — contact + address, line items (title/qty/price/line total),
@@ -73,6 +75,8 @@ Keep it plain and fast (no framework needed). Mobile-friendly.
 
 - [ ] Only the anon key in the browser; never the service role key.
 - [ ] All reads/writes rely on RLS + `is_admin()`; no RLS bypass in the client.
+- [ ] Admin users have `app_metadata.is_admin = true` in Supabase Auth, so the
+      static UI can show a clear no-access state before querying orders.
 - [ ] `admin/config.js` git-ignored; no keys committed.
 - [ ] Sign-out clears the session; the page shows nothing when logged out.
 - [ ] Consider gating `/admin` behind Cloudflare Access later for defense-in-depth.

@@ -54,6 +54,18 @@
         </form>
       </section>
 
+      <section id="accessView" class="card hidden" style="max-width: 560px; margin: 8vh auto;">
+        <h2 style="margin-top:0;">Нет доступа к заказам</h2>
+        <p class="muted">
+          Пользователь <strong id="accessEmail"></strong> вошёл, но не отмечен как администратор.
+          В Supabase Auth у этого пользователя должен быть флаг <code>app_metadata.is_admin = true</code>.
+        </p>
+        <p class="banner" style="margin-bottom:0;">
+          Данные заказов всё равно защищены правилами RLS на стороне Supabase. Этот экран только заранее
+          показывает понятную причину, почему список заказов не открывается.
+        </p>
+      </section>
+
       <section id="listView" class="hidden">
         <div class="row" style="margin-bottom:12px;">
           <select id="statusFilter">

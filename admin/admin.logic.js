@@ -28,6 +28,11 @@ export function isConfigured({ url, key, missing } = {}) {
   return Boolean(okUrl && okKey);
 }
 
+// Fast client-side guard for the admin UI. RLS remains the real protection.
+export function isAdminSession(session) {
+  return session?.user?.app_metadata?.is_admin === true;
+}
+
 // Build the PostgREST `.or(...)` filter for a phone/name search (or null).
 // Strips characters that would break the or-filter grammar.
 export function buildSearchOr(q) {

@@ -10,6 +10,7 @@ import {
   money,
   when,
   isConfigured,
+  isAdminSession,
   buildSearchOr,
   friendlyError,
   emptyOrdersMessage,
@@ -30,6 +31,7 @@ let supabase = null;
 
 function setView(name) {
   show($("loginView"), name === "login");
+  show($("accessView"), name === "access");
   show($("listView"), name === "list");
   show($("detailView"), name === "detail");
 }
@@ -39,12 +41,17 @@ async function refreshSessionUI() {
   const session = data && data.session;
   $("who").textContent = session ? (session.user.email || "вошли") : "";
   show($("signOut"), Boolean(session));
-  if (session) {
-    setView("list");
-    loadOrders();
-  } else {
+  if (!session) {
     setView("login");
+    return;
   }
+  if (!isAdminSession(session)) {
+    $("accessEmail").textContent = session.user.email || "текущий пользователь";
+    setView("access");
+    return;
+  }
+  setView("list");
+  loadOrders();
 }
 
 async function loadOrders() {
