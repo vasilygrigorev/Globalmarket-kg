@@ -188,6 +188,12 @@ def breadcrumb_json_ld(target, canonical):
                 {
                     "@type": "ListItem",
                     "position": 2,
+                    "name": "Каталог",
+                    "item": f"{SITE_URL}/catalog/",
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
                     "name": target["title"],
                     "item": canonical,
                 },
@@ -327,6 +333,12 @@ def render_page(target, products, product_page_by_id, all_targets):
     terms = seo_terms(target)
     canonical = f"{SITE_URL}{target['path']}"
     catalog_href = target.get("catalogHref") or "/#catalog"
+    share_image = f"{SITE_URL}/assets/hero-green-wide-v1.png"
+    for product in products:
+        img = public_path(product_image(product))
+        if img:
+            share_image = img if img.startswith("http") else f"{SITE_URL}{img}"
+            break
     cards_html = render_cards(products, product_page_by_id)
     context_links_html = render_context_links(target, products, all_targets)
     if not cards_html:
@@ -353,12 +365,12 @@ def render_page(target, products, product_page_by_id, all_targets):
   <meta property="og:title" content="{escape(title)}">
   <meta property="og:description" content="{escape(description)}">
   <meta property="og:url" content="{escape(canonical)}">
-  <meta property="og:image" content="{SITE_URL}/assets/hero-green-wide-v1.png">
+  <meta property="og:image" content="{escape(share_image)}">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(description)}">
-  <meta name="twitter:image" content="{SITE_URL}/assets/hero-green-wide-v1.png">
+  <meta name="twitter:image" content="{escape(share_image)}">
   <link rel="stylesheet" href="/styles.css?v=20260624-wa-product-actions">
   <script type="application/ld+json">{breadcrumb_json_ld(target, canonical)}</script>
   <script type="application/ld+json">{item_list_json_ld(products, product_page_by_id)}</script>
@@ -366,6 +378,10 @@ def render_page(target, products, product_page_by_id, all_targets):
     body.landing-page {{ margin: 0; padding-top: var(--site-header-height, 58px); background: #f2f3f5; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }}
     .landing-main {{ max-width: 1120px; margin: 0 auto; padding: 26px 18px 36px; }}
     .landing-hero {{ display: grid; gap: 14px; padding: 28px 0 22px; }}
+    .breadcrumbs {{ display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 14px; color: #6e6e73; }}
+    .breadcrumbs a {{ color: #515154; text-decoration: none; }}
+    .breadcrumbs a:hover {{ text-decoration: underline; }}
+    .breadcrumbs span[aria-current] {{ color: #1d1d1f; font-weight: 600; }}
     .landing-hero h1 {{ margin: 0; font-size: clamp(34px, 6vw, 62px); font-weight: 300; line-height: 1.05; }}
     .landing-hero p {{ max-width: 720px; margin: 0; color: #636366; font-size: clamp(17px, 2vw, 22px); line-height: 1.45; }}
     .landing-actions {{ display: flex; gap: 10px; flex-wrap: wrap; }}
@@ -404,6 +420,13 @@ def render_page(target, products, product_page_by_id, all_targets):
   {header}
   <main class="landing-main">
     <section class="landing-hero">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a>
+        <span aria-hidden="true">›</span>
+        <a href="/catalog/">Каталог</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">{escape(title)}</span>
+      </nav>
       <p class="eyebrow">Global Market KG</p>
       <h1>{escape(title)}</h1>
       <p>{escape(description)}</p>

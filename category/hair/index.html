@@ -15,12 +15,12 @@
   <meta property="og:title" content="Уход за волосами">
   <meta property="og:description" content="Уход за волосами в Global Market KG. В наличии 104 товаров с ценами в сомах и заказом через WhatsApp.">
   <meta property="og:url" content="https://globalmarket.kg/category/hair/">
-  <meta property="og:image" content="https://globalmarket.kg/assets/hero-green-wide-v1.png">
+  <meta property="og:image" content="https://globalmarket.kg/assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Уход за волосами">
   <meta name="twitter:description" content="Уход за волосами в Global Market KG. В наличии 104 товаров с ценами в сомах и заказом через WhatsApp.">
-  <meta name="twitter:image" content="https://globalmarket.kg/assets/hero-green-wide-v1.png">
+  <meta name="twitter:image" content="https://globalmarket.kg/assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg">
   <link rel="stylesheet" href="/styles.css?v=20260624-wa-product-actions">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -35,6 +35,12 @@
     {
       "@type": "ListItem",
       "position": 2,
+      "name": "Каталог",
+      "item": "https://globalmarket.kg/catalog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Уход за волосами",
       "item": "https://globalmarket.kg/category/hair/"
     }
@@ -164,6 +170,10 @@
     body.landing-page { margin: 0; padding-top: var(--site-header-height, 58px); background: #f2f3f5; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }
     .landing-main { max-width: 1120px; margin: 0 auto; padding: 26px 18px 36px; }
     .landing-hero { display: grid; gap: 14px; padding: 28px 0 22px; }
+    .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 14px; color: #6e6e73; }
+    .breadcrumbs a { color: #515154; text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .breadcrumbs span[aria-current] { color: #1d1d1f; font-weight: 600; }
     .landing-hero h1 { margin: 0; font-size: clamp(34px, 6vw, 62px); font-weight: 300; line-height: 1.05; }
     .landing-hero p { max-width: 720px; margin: 0; color: #636366; font-size: clamp(17px, 2vw, 22px); line-height: 1.45; }
     .landing-actions { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -228,6 +238,13 @@
 </header>
   <main class="landing-main">
     <section class="landing-hero">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a>
+        <span aria-hidden="true">›</span>
+        <a href="/catalog/">Каталог</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Уход за волосами</span>
+      </nav>
       <p class="eyebrow">Global Market KG</p>
       <h1>Уход за волосами</h1>
       <p>Уход за волосами в Global Market KG. В наличии 104 товаров с ценами в сомах и заказом через WhatsApp.</p>

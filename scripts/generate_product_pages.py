@@ -4,6 +4,7 @@ import html
 import json
 import re
 import urllib.parse
+from datetime import date
 from pathlib import Path
 
 
@@ -330,6 +331,8 @@ def build_json_ld(product, canonical, images):
             "url": canonical,
             "priceCurrency": "KGS",
             "price": str(product.get("retailPriceKgs")),
+            "priceValidUntil": f"{date.today().year + 1}-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
             "availability": "https://schema.org/InStock" if is_in_stock(product) else "https://schema.org/OutOfStock",
             "seller": {
                 "@type": "Organization",
