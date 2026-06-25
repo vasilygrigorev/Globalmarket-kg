@@ -50,6 +50,18 @@ the function); `service_role` stays server-side in the Pages Function env.
 > Requires Supabase + Cloudflare dashboard access / secrets. If Claude Code is
 > doing the work, this is the **stop-and-handoff** point — Codex/user set these.
 
+## Safety: secret scan (run before any commit and before deploy)
+
+```bash
+python3 scripts/check_no_secrets.py                      # git-tracked files
+python3 scripts/check_no_secrets.py --package /private/tmp/globalmarket-static-build
+```
+
+Catches accidentally committed/shipped secrets: JWT/Supabase keys, `.env`
+files, a git-committed `admin/config.js`, or a `service_role` value. The PUBLIC
+anon key inside a deployed `admin/config.js` is allowed (package mode only);
+the service_role key is never allowed anywhere. Exit code 1 = stop and fix.
+
 ## 3. Build + preview deploy
 
 - [ ] Build & package (includes `functions/`, excludes tests):

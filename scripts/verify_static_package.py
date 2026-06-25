@@ -3,12 +3,14 @@ import argparse
 import fnmatch
 import hashlib
 import json
+import subprocess
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlparse
 
 
+ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PACKAGE = Path("/private/tmp/globalmarket-static-build")
 REQUIRED_ROOT_FILES = {
     "index.html",
@@ -324,6 +326,18 @@ def verify_admin(package, errors):
         fail(errors, "robots.txt must disallow /admin/")
 
 
+def verify_no_secrets(package, errors):
+    result = subprocess.run(
+        [sys.executable, "scripts/check_no_secrets.py", "--package", str(package)],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        detail = (result.stderr or result.stdout or "secret scan failed").strip()
+        fail(errors, f"Secret scan failed:\n{detail}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Verify a packaged static Global Market KG deploy directory.")
     parser.add_argument("--package", default=str(DEFAULT_PACKAGE), help="Package directory to verify.")
@@ -342,6 +356,7 @@ def main():
         verify_forbidden_files(package, errors)
         verify_functions(package, errors)
         verify_admin(package, errors)
+        verify_no_secrets(package, errors)
         catalog = parse_json(package / "data" / "public-catalog.json", errors)
         parse_json(package / "data" / "site-config.json", errors)
         product_pages_manifest = parse_json(package / "data" / "product-pages.json", errors)
