@@ -153,17 +153,24 @@ compiles it to the route `POST /api/orders` (directory-mode functions; no
 active). Deploying the same package dir as today is enough — no extra wiring.
 
 Verified locally without deploying: package contains `functions/api/orders.js`,
-`onRequestPost`/`onRequest` exports present, `node --check` passes, unit tests
-9/9. `wrangler pages functions build` could not run in the sandbox (npm registry
+`onRequestPost`/`onRequest` exports present, `node --check` passes, and the full
+local suite (`python3 scripts/verify_backend_mvp.py`) is green.
+`wrangler pages functions build` could not run in the sandbox (npm registry
 blocked).
 
-Privileged steps remaining (Codex, on the Mac — secrets + deploy):
+Privileged steps remaining (Codex, on the Mac — secrets + deploy). These follow
+[`backend-go-live-checklist.md`](backend-go-live-checklist.md); use **preview**
+first, not production:
 
 1. Optionally validate the bundle: `npx wrangler pages functions build` from the
    package dir (or repo) to confirm it compiles for the Workers runtime.
-2. Set the env vars above in Cloudflare Pages (Production + Preview).
-3. Deploy the package as usual (`wrangler pages deploy <package-dir>`), then
+2. Set the env vars above in Cloudflare Pages — **Preview** first (Production
+   only at real go-live).
+3. Preview-deploy the package (checklist §3, `--branch shared-layout-preview`);
+   do not production-deploy without an explicit user command. Then
    `curl -i https://<preview>/api/orders` with a tiny JSON body to confirm the
    route responds (expect `503 backend_not_configured` until env is set, then a
    real `order_id`).
-4. Only after that: wire the `app.js` checkout (snippet above).
+4. Only after that: enable the checkout flag (`ordersApi.enabled=true`,
+   checklist §5). The checkout is already wired behind that flag — no code edit
+   needed.

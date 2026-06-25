@@ -59,6 +59,7 @@ the function); `service_role` stays server-side in the Pages Function env.
   vars, admin user, preview deploy, flipping `ordersApi.enabled`, live smoke.
 
 Track progress in the fill-in form: [`backend-go-live-worksheet.md`](backend-go-live-worksheet.md).
+Per-phase checkpoints: [`backend-go-live-dry-run.md`](backend-go-live-dry-run.md).
 Check env/config shape without revealing values:
 `python3 scripts/check_backend_env_shape.py`.
 

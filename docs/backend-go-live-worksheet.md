@@ -8,6 +8,7 @@ Run the safe local preflight first: `python3 scripts/verify_backend_mvp.py`.
 Shape check (no values): `python3 scripts/check_backend_env_shape.py`.
 
 Full step-by-step: [`backend-go-live-checklist.md`](backend-go-live-checklist.md).
+Per-phase checkpoints: [`backend-go-live-dry-run.md`](backend-go-live-dry-run.md).
 
 ## Who does what
 
