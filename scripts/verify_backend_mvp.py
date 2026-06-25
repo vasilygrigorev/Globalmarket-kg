@@ -69,12 +69,18 @@ def main():
                 "-m",
                 "py_compile",
                 "scripts/check_no_secrets.py",
+                "scripts/check_backend_env_shape.py",
+                "scripts/validate_site_config.py",
                 "scripts/package_static_site.py",
                 "scripts/verify_static_package.py",
                 "scripts/verify_backend_mvp.py",
             ],
         ),
         ("Secret scan: git-tracked files", [sys.executable, "scripts/check_no_secrets.py"]),
+        # Informational: reports env/config shape (no values printed). Fails only
+        # on a real leak (service_role in admin/config.js), not on missing env,
+        # so it stays green before go-live.
+        ("Backend env/config shape (informational)", [sys.executable, "scripts/check_backend_env_shape.py"]),
     ]
 
     if not args.skip_package:

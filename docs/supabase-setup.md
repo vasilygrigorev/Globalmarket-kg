@@ -9,7 +9,10 @@ This document describes how to apply the schema. No keys or secrets live in git.
 
 For the full go-live sequence (project → migration → Cloudflare env → preview
 deploy → endpoint smoke test → checkout wiring) see
-[`backend-go-live-checklist.md`](backend-go-live-checklist.md).
+[`backend-go-live-checklist.md`](backend-go-live-checklist.md). Track each step
+in [`backend-go-live-worksheet.md`](backend-go-live-worksheet.md) (yes/no, no
+secret values). Verify env/config shape without revealing values:
+`python3 scripts/check_backend_env_shape.py`.
 
 ## What lives in the repo
 

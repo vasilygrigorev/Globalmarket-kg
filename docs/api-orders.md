@@ -15,7 +15,12 @@ the primary channel — this endpoint only persists the order.
 
 To bring this online, follow the step-by-step
 [`backend-go-live-checklist.md`](backend-go-live-checklist.md) (Supabase →
-Cloudflare env → preview deploy → smoke test → wire checkout).
+Cloudflare env → preview deploy → smoke test → wire checkout), and track it in
+[`backend-go-live-worksheet.md`](backend-go-live-worksheet.md).
+
+**Rollback to WhatsApp-only:** set `ordersApi.enabled=false` in
+`data/site-config.json` (rebuild + redeploy), or remove the Cloudflare env vars
+so this endpoint returns `503` and the checkout falls back automatically.
 
 ## Environment bindings (set in Cloudflare Pages, NEVER in git)
 

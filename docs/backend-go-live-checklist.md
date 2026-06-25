@@ -50,6 +50,22 @@ the function); `service_role` stays server-side in the Pages Function env.
 > Requires Supabase + Cloudflare dashboard access / secrets. If Claude Code is
 > doing the work, this is the **stop-and-handoff** point — Codex/user set these.
 
+## Roles & boundaries
+
+- **Claude Code (no secrets):** code, tests, docs, packaging, the disabled
+  checkout flag, the admin static page, local preflight. **Stops** at anything
+  needing real Supabase/Cloudflare access or secrets.
+- **Codex / user (privileged):** Supabase project + migration, Cloudflare env
+  vars, admin user, preview deploy, flipping `ordersApi.enabled`, live smoke.
+
+Track progress in the fill-in form: [`backend-go-live-worksheet.md`](backend-go-live-worksheet.md).
+Check env/config shape without revealing values:
+`python3 scripts/check_backend_env_shape.py`.
+
+Rollback at any time: set `ordersApi.enabled=false` (rebuild + redeploy) → the
+checkout is WhatsApp-only again; or remove the Cloudflare env vars → `/api/orders`
+returns 503 and the site falls back automatically.
+
 ## Local preflight (run before every commit)
 
 `python3 scripts/verify_backend_mvp.py` is the main local preflight for the
