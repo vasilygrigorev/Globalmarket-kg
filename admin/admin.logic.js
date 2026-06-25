@@ -81,3 +81,43 @@ export function renderOrderRow(o) {
       <td>${esc(o.customer_source)}</td>
     </tr>`;
 }
+
+// Which view to show given the current auth session. Pure (no DOM).
+export function nextView(session) {
+  if (!session) return "login";
+  if (!isAdminSession(session)) return "access";
+  return "list";
+}
+
+export function renderItemsRows(items) {
+  const rows = (items || []).map((it) => `
+    <tr><td>${esc(it.title_snapshot)}</td><td>${esc(it.qty)}</td>
+    <td>${esc(money(it.price_kgs))}</td><td>${esc(money(it.line_total_kgs))}</td></tr>`).join("");
+  return rows || `<tr><td colspan="4" class="muted">Нет строк</td></tr>`;
+}
+
+// Pure HTML for the order detail card (escaped). Event wiring stays in admin.js.
+export function renderOrderDetail(order, items, attr) {
+  const a = (attr && attr[0]) || {};
+  return `
+    <div class="row" style="justify-content:space-between;">
+      <h2 style="margin:0;">${esc(order.customer_name)} · ${esc(order.customer_phone)}</h2>
+      <span class="status">${esc(order.status)}</span>
+    </div>
+    <p class="muted">${esc(when(order.created_at))} · ${esc(order.city)} ${esc(order.region)} ${esc(order.address)}</p>
+    ${order.customer_comment ? `<p>Комментарий клиента: ${esc(order.customer_comment)}</p>` : ""}
+    <table style="margin:10px 0;"><thead><tr><th>Товар</th><th>Кол-во</th><th>Цена</th><th>Сумма</th></tr></thead>
+      <tbody>${renderItemsRows(items)}</tbody></table>
+    <p><strong>Итого: ${esc(money(order.total_kgs))}</strong></p>
+    <p class="muted">Источник: utm_source=${esc(a.utm_source)} / utm_campaign=${esc(a.utm_campaign)} / referrer=${esc(a.referrer)} / ручной=${esc(order.customer_source)} / промокод=${esc(order.promo_code)}</p>
+    <hr style="border:none;border-top:1px solid var(--line);margin:14px 0;" />
+    <div class="row" style="flex-direction:column; align-items:stretch; gap:10px; max-width:520px;">
+      <label>Статус
+        <select id="editStatus">${renderStatusOptions(order.status)}</select>
+      </label>
+      <label>Комментарий менеджера
+        <textarea id="editComment" rows="3">${esc(order.manager_comment || "")}</textarea>
+      </label>
+      <div class="row"><button id="saveOrder" type="button">Сохранить</button><span id="saveMsg" class="muted"></span></div>
+    </div>`;
+}

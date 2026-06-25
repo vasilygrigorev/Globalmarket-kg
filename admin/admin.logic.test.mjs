@@ -16,6 +16,9 @@ import {
   emptyOrdersMessage,
   renderStatusOptions,
   renderOrderRow,
+  nextView,
+  renderItemsRows,
+  renderOrderDetail,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -90,4 +93,35 @@ test("renderOrderRow escapes content and carries data-id", () => {
   assert.match(row, /data-id="o1"/);
   assert.match(row, /&lt;b&gt;Иван&lt;\/b&gt;/);
   assert.match(row, /500 сом/);
+});
+
+test("nextView routes by session + admin flag", () => {
+  assert.equal(nextView(null), "login");
+  assert.equal(nextView({ user: { app_metadata: {} } }), "access");
+  assert.equal(nextView({ user: { app_metadata: { is_admin: false } } }), "access");
+  assert.equal(nextView({ user: { app_metadata: { is_admin: true } } }), "list");
+});
+
+test("renderItemsRows shows empty placeholder or escaped rows", () => {
+  assert.match(renderItemsRows([]), /Нет строк/);
+  const rows = renderItemsRows([{ title_snapshot: "<x>", qty: 2, price_kgs: 100, line_total_kgs: 200 }]);
+  assert.match(rows, /&lt;x&gt;/);
+  assert.match(rows, /200 сом/);
+});
+
+test("renderOrderDetail escapes, totals, status select, empty items", () => {
+  const html = renderOrderDetail(
+    { customer_name: "<i>A</i>", customer_phone: "077", status: "confirmed", total_kgs: 1400,
+      city: "Бишкек", region: "", address: "", customer_comment: "", manager_comment: "x\"y",
+      customer_source: "ig", promo_code: "" },
+    [],
+    [{ utm_source: "instagram" }],
+  );
+  assert.match(html, /&lt;i&gt;A&lt;\/i&gt;/);          // name escaped
+  assert.match(html, /1\D?400 сом/);                    // total
+  assert.match(html, /<option value="confirmed" selected>/); // current status selected
+  assert.match(html, /Нет строк/);                      // empty items
+  assert.match(html, /instagram/);                      // attribution
+  assert.match(html, /id="saveOrder"/);                 // save button present
+  assert.ok(!html.includes('x"y'), "manager_comment must be HTML-escaped");
 });
