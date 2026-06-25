@@ -305,9 +305,11 @@ def verify_admin(package, errors):
     if not admin_dir.is_dir():
         fail(errors, "Missing admin/ directory")
         return
-    for rel in ("admin/index.html", "admin/admin.js"):
+    for rel in ("admin/index.html", "admin/admin.js", "admin/admin.logic.js"):
         if not (package / rel).is_file():
             fail(errors, f"Missing admin runtime file: {rel}")
+    # Note: admin/config.js (PUBLIC anon key only) is intentionally deployed when
+    # the owner provides it — do NOT forbid it here. Templates must not ship.
     forbidden = (
         "admin/config.example.js",
         "admin/config.js.example",
@@ -316,6 +318,12 @@ def verify_admin(package, errors):
     for rel in forbidden:
         if (package / rel).exists():
             fail(errors, f"Forbidden admin config/template leaked into package: {rel}")
+    for path in admin_dir.rglob("*"):
+        if path.is_file() and (
+            fnmatch.fnmatch(path.name, "*.test.*") or fnmatch.fnmatch(path.name, "*.spec.*")
+        ):
+            rel = path.relative_to(package).as_posix()
+            fail(errors, f"Test/spec file leaked into deploy admin: {rel}")
     robots = package / "robots.txt"
     try:
         robots_text = robots.read_text(encoding="utf-8")

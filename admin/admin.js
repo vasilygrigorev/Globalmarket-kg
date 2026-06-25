@@ -13,6 +13,9 @@ import {
   renderOrderRow,
   nextView,
   renderOrderDetail,
+  loadingRowHtml,
+  loginButtonLabel,
+  saveFeedback,
 } from "./admin.logic.js";
 
 const $ = (id) => document.getElementById(id);
@@ -48,7 +51,7 @@ async function refreshSessionUI() {
 
 async function loadOrders() {
   const body = $("ordersBody");
-  body.innerHTML = `<tr><td colspan="7" class="muted" style="padding:16px;">Загрузка…</td></tr>`;
+  body.innerHTML = loadingRowHtml();
   const status = $("statusFilter").value;
   const q = $("search").value;
   let query = supabase
@@ -102,9 +105,17 @@ async function openOrder(id) {
   $("saveOrder").addEventListener("click", () => saveOrder(id));
 }
 
+function setSaveMsg(msg, state, error) {
+  const fb = saveFeedback(state, error);
+  msg.textContent = fb.text;
+  msg.classList.toggle("ok", fb.ok);
+}
+
 async function saveOrder(id) {
   const msg = $("saveMsg");
-  msg.textContent = "Сохранение…";
+  const btn = $("saveOrder");
+  setSaveMsg(msg, "saving");
+  if (btn) btn.disabled = true;
   let error;
   try {
     ({ error } = await supabase
@@ -114,14 +125,17 @@ async function saveOrder(id) {
   } catch (err) {
     error = err;
   }
-  msg.textContent = error ? friendlyError(error) : "Сохранено ✓";
+  if (btn) btn.disabled = false;
+  setSaveMsg(msg, error ? "error" : "done", error);
 }
 
 function wire() {
   $("loginForm").addEventListener("submit", async (e) => {
     e.preventDefault();
     const err = $("loginError");
+    const btn = e.currentTarget.querySelector("button[type='submit']");
     show(err, false);
+    if (btn) { btn.disabled = true; btn.textContent = loginButtonLabel(true); }
     let error;
     try {
       ({ error } = await supabase.auth.signInWithPassword({
@@ -131,6 +145,7 @@ function wire() {
     } catch (ex) {
       error = ex;
     }
+    if (btn) { btn.disabled = false; btn.textContent = loginButtonLabel(false); }
     if (error) { err.textContent = friendlyError(error); show(err, true); return; }
     refreshSessionUI();
   });

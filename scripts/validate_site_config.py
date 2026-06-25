@@ -102,6 +102,22 @@ def validate_link_item(section, index, item, products, warnings, errors):
     return label, matches
 
 
+def validate_orders_api(config, errors):
+    """Guard the checkout backend flag so a bad edit can't silently break go-live."""
+    block = config.get("ordersApi")
+    if block is None:
+        return  # optional block
+    if not isinstance(block, dict):
+        errors.append("ordersApi must be an object")
+        return
+    if "enabled" in block and not isinstance(block["enabled"], bool):
+        errors.append("ordersApi.enabled must be a boolean (true/false, not a string)")
+    endpoint = block.get("endpoint")
+    if endpoint is not None:
+        if not isinstance(endpoint, str) or not endpoint.startswith("/"):
+            errors.append("ordersApi.endpoint must be a local path string starting with '/'")
+
+
 def main():
     config = load_json(CONFIG_PATH)
     catalog = load_json(CATALOG_PATH)
@@ -109,6 +125,8 @@ def main():
     warnings = []
     errors = []
     rows = []
+
+    validate_orders_api(config, errors)
 
     for section in ("banners", "quickCategories", "menu"):
         for index, item in enumerate(config.get(section, [])):

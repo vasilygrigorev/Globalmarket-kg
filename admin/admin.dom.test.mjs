@@ -69,3 +69,10 @@ test("admin page loads config.js (optional) then admin.js as a module", () => {
 test("admin page is noindex (must not be crawled)", () => {
   assert.match(html, /<meta name="robots" content="noindex/i);
 });
+
+test("CSS defines state classes used by JS (.banner, .ok, .hidden)", () => {
+  // saveFeedback() toggles `.ok`; views toggle `.hidden`; errors use `.banner`.
+  for (const cls of [".banner", ".ok", ".hidden"]) {
+    assert.ok(html.includes(cls), `admin/index.html CSS missing ${cls}`);
+  }
+});

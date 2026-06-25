@@ -19,6 +19,9 @@ import {
   nextView,
   renderItemsRows,
   renderOrderDetail,
+  loadingRowHtml,
+  loginButtonLabel,
+  saveFeedback,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -93,6 +96,25 @@ test("renderOrderRow escapes content and carries data-id", () => {
   assert.match(row, /data-id="o1"/);
   assert.match(row, /&lt;b&gt;Иван&lt;\/b&gt;/);
   assert.match(row, /500 сом/);
+});
+
+test("loadingRowHtml uses given colspan and loading text", () => {
+  assert.match(loadingRowHtml(7), /colspan="7"/);
+  assert.match(loadingRowHtml(), /Загрузка/);
+});
+
+test("loginButtonLabel reflects busy state", () => {
+  assert.equal(loginButtonLabel(false), "Войти");
+  assert.equal(loginButtonLabel(true), "Входим…");
+});
+
+test("saveFeedback returns text + ok per state", () => {
+  assert.deepEqual(saveFeedback("saving"), { text: "Сохранение…", ok: false });
+  assert.deepEqual(saveFeedback("done"), { text: "Сохранено ✓", ok: true });
+  const err = saveFeedback("error", { message: "permission denied" });
+  assert.equal(err.ok, false);
+  assert.match(err.text, /прав администратора/);
+  assert.equal(saveFeedback("error").text, "Не удалось сохранить.");
 });
 
 test("nextView routes by session + admin flag", () => {

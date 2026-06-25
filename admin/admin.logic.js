@@ -63,6 +63,26 @@ export function emptyOrdersMessage({ status, q } = {}) {
   return "Заказов пока нет (или у вас нет прав администратора).";
 }
 
+export const LOADING_ROW_TEXT = "Загрузка…";
+
+// Loading placeholder row for the orders table (pure).
+export function loadingRowHtml(colspan = 7) {
+  return `<tr><td colspan="${colspan}" class="muted" style="padding:16px;">${LOADING_ROW_TEXT}</td></tr>`;
+}
+
+// Login submit button label depending on in-flight state (pure).
+export function loginButtonLabel(busy) {
+  return busy ? "Входим…" : "Войти";
+}
+
+// Save-status feedback for the order detail. state: "saving" | "done" | "error".
+// Returns { text, ok } — `ok` drives a green success style.
+export function saveFeedback(state, error) {
+  if (state === "saving") return { text: "Сохранение…", ok: false };
+  if (state === "done") return { text: "Сохранено ✓", ok: true };
+  return { text: friendlyError(error) || "Не удалось сохранить.", ok: false };
+}
+
 export function renderStatusOptions(current) {
   return STATUSES
     .map((s) => `<option value="${s}" ${s === current ? "selected" : ""}>${s}</option>`)

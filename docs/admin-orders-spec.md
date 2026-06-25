@@ -31,6 +31,34 @@ created in `admin.logic.js`, the page loads `config.js` then `admin.js` (module)
 and the page is `noindex`. Run with the rest:
 `node --test functions/api/orders.test.mjs functions/api/orders.integration.test.mjs admin/admin.logic.test.mjs admin/admin.dom.test.mjs`.
 
+## UX states (practical, not decorative)
+
+The admin handles these states with clear text (pure helpers in
+`admin.logic.js`, tested in `admin.logic.test.mjs`):
+
+- **Loading** — orders table shows `loadingRowHtml()` ("Загрузка…") while
+  fetching; order detail shows "Загрузка…".
+- **Login in progress** — submit button shows `loginButtonLabel(true)`
+  ("Входим…") and is disabled during the auth request.
+- **Login error** — `friendlyError()` maps JWT/permission/network errors to
+  readable RU text in the login banner.
+- **Empty list** — `emptyOrdersMessage()` distinguishes "no orders yet / no
+  admin rights" from "nothing matches this filter".
+- **No access** — `nextView()` routes a non-admin session to the access screen
+  (RLS is still the real guard).
+- **Save feedback** — `saveFeedback("saving"|"done"|"error")` returns
+  `{text, ok}`; the save button is disabled during the request and the message
+  turns green (`.ok`) on success.
+
+## Local preflight
+
+`python3 scripts/verify_backend_mvp.py` is the single local preflight: it runs
+the node tests (orders API + admin logic + admin DOM contract), `node --check`
+on the admin JS + smoke script, `py_compile` on the backend/admin Python
+scripts, the git-tracked secret scan, then the static package build + package
+secret scan. Use `--skip-package` for a quick code-only pass. Run it before
+asking Codex to commit. No network/secrets required.
+
 ## Auth & access model
 
 - The admin page is a static page served by Cloudflare Pages, using the Supabase

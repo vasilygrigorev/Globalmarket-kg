@@ -50,6 +50,15 @@ the function); `service_role` stays server-side in the Pages Function env.
 > Requires Supabase + Cloudflare dashboard access / secrets. If Claude Code is
 > doing the work, this is the **stop-and-handoff** point — Codex/user set these.
 
+## Local preflight (run before every commit)
+
+`python3 scripts/verify_backend_mvp.py` is the main local preflight for the
+backend/admin MVP. It runs the node tests (orders API + admin logic + admin DOM
+contract), `node --check` on admin JS + smoke script, `py_compile` on the
+backend/admin scripts, the secret scan, and the static package build + package
+secret scan — no Supabase/Cloudflare/network needed. `--skip-package` does a
+quick code-only pass. A green run is the bar before Codex commits.
+
 ## Safety: secret scan (run before any commit and before deploy)
 
 For the full safe local backend/admin suite, prefer:
@@ -114,7 +123,9 @@ the service_role key is never allowed anywhere. Exit code 1 = stop and fix.
 The checkout is already wired in `app.js` behind a disabled flag — no code change
 needed, just flip it:
 
-- [ ] In `data/site-config.json` set `ordersApi.enabled` to `true`.
+- [ ] In `data/site-config.json` set `ordersApi.enabled` to `true` (must be a
+  JSON boolean — the build's `validate_site_config.py` rejects a string like
+  `"true"` or a non-local `endpoint`).
 - [ ] Bump the asset cache version (`?v=`) so clients pick up the new config/app.
 - [ ] Rebuild + preview deploy + place a real test order from the preview site;
   confirm it saves to Supabase AND WhatsApp still opens. Delete the test row.
