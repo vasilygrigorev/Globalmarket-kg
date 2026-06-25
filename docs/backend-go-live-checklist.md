@@ -8,10 +8,11 @@ and no GitHub push without an explicit user request.
 Related: [`backend-mvp-plan.md`](backend-mvp-plan.md) ·
 [`supabase-setup.md`](supabase-setup.md) · [`api-orders.md`](api-orders.md).
 
-Current state (HEAD `40899b3`): schema migration, `functions/api/orders.js`
-(+ unit & integration tests, 14/14), and the packager that ships `functions/`
-are all committed. Nothing is wired to live checkout yet. The endpoint returns
-`503 backend_not_configured` until the env vars below are set.
+Current state (HEAD `c3246c1`): schema migration, `functions/api/orders.js`
+(+ unit & integration tests, 14/14), deploy-package support for `functions/`,
+disabled checkout wiring, and the static admin skeleton are committed. The
+checkout flag is still off, so WhatsApp-only behavior remains unchanged. The
+endpoint returns `503 backend_not_configured` until the env vars below are set.
 
 ---
 

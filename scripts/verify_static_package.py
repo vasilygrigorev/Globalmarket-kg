@@ -297,6 +297,33 @@ def verify_functions(package, errors):
             fail(errors, f"Test/spec file leaked into deploy functions: {rel}")
 
 
+def verify_admin(package, errors):
+    """Admin page should ship runtime files, but never example/local config."""
+    admin_dir = package / "admin"
+    if not admin_dir.is_dir():
+        fail(errors, "Missing admin/ directory")
+        return
+    for rel in ("admin/index.html", "admin/admin.js"):
+        if not (package / rel).is_file():
+            fail(errors, f"Missing admin runtime file: {rel}")
+    forbidden = (
+        "admin/config.example.js",
+        "admin/config.js.example",
+        "admin/config.local.js",
+    )
+    for rel in forbidden:
+        if (package / rel).exists():
+            fail(errors, f"Forbidden admin config/template leaked into package: {rel}")
+    robots = package / "robots.txt"
+    try:
+        robots_text = robots.read_text(encoding="utf-8")
+    except Exception as exc:
+        fail(errors, f"Cannot read robots.txt for admin check: {exc}")
+        return
+    if "Disallow: /admin/" not in robots_text:
+        fail(errors, "robots.txt must disallow /admin/")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Verify a packaged static Global Market KG deploy directory.")
     parser.add_argument("--package", default=str(DEFAULT_PACKAGE), help="Package directory to verify.")
@@ -314,6 +341,7 @@ def main():
         verify_required_files(package, errors)
         verify_forbidden_files(package, errors)
         verify_functions(package, errors)
+        verify_admin(package, errors)
         catalog = parse_json(package / "data" / "public-catalog.json", errors)
         parse_json(package / "data" / "site-config.json", errors)
         product_pages_manifest = parse_json(package / "data" / "product-pages.json", errors)
