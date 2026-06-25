@@ -105,6 +105,7 @@ def main():
         [
             "User-agent: *",
             "Allow: /",
+            "Disallow: /admin/",
             "",
             f"Sitemap: {BASE_URL}/sitemap.xml",
             "",

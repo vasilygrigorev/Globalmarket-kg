@@ -30,3 +30,6 @@ outputs/
 # Python caches
 __pycache__/
 *.pyc
+
+# Admin local config (Supabase URL + anon key) — never commit
+admin/config.js

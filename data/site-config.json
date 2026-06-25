@@ -1,4 +1,8 @@
 {
+  "ordersApi": {
+    "enabled": false,
+    "endpoint": "/api/orders"
+  },
   "nav": [
     { "label": "Каталог", "href": "/#catalog" },
     { "label": "Доставка", "href": "/#delivery" },

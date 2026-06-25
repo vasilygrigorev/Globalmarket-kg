@@ -1,5 +1,12 @@
 # Admin Orders Page — implementation spec
 
+> STATUS (2026-06-25): BUILT as static files `admin/index.html` + `admin/admin.js`
+> (+ `admin/config.example.js`; real `admin/config.js` is git-ignored). Shipped by
+> the packager, `noindex` + `Disallow: /admin/`. Not functional until a Supabase
+> project exists and `admin/config.js` is filled with the URL + anon key, and an
+> admin user has `app_metadata.is_admin = true`. See go-live checklist §6.
+
+
 Blueprint for the first admin screen of Global Market KG: view and manage
 orders captured by `POST /api/orders`. Build this only after the
 [go-live checklist](backend-go-live-checklist.md) steps 1-4 pass (Supabase

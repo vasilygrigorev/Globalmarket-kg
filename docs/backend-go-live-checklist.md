@@ -82,24 +82,37 @@ the function); `service_role` stays server-side in the Pages Function env.
 - [ ] In Supabase Table Editor confirm a row appeared in `orders` + `order_items`,
   then **delete the SMOKE TEST row**.
 
-## 5. Wire the checkout (only after steps 1-4 pass)
+## 5. Enable the checkout flag (only after steps 1-4 pass)
 
-- [ ] Apply the `app.js` checkout snippet from [`api-orders.md`](api-orders.md)
-  (save-then-WhatsApp, with fallback to WhatsApp-only on any failure).
+The checkout is already wired in `app.js` behind a disabled flag — no code change
+needed, just flip it:
+
+- [ ] In `data/site-config.json` set `ordersApi.enabled` to `true`.
+- [ ] Bump the asset cache version (`?v=`) so clients pick up the new config/app.
 - [ ] Rebuild + preview deploy + place a real test order from the preview site;
-  confirm it saves AND WhatsApp still opens.
-- [ ] Bump the asset cache version (`?v=`) so clients pick up the new `app.js`.
+  confirm it saves to Supabase AND WhatsApp still opens. Delete the test row.
+- [ ] If anything misbehaves, set the flag back to `false` (instant rollback to
+  WhatsApp-only). Details: [`api-orders.md`](api-orders.md).
 
 This is a normal storefront change; Claude Code can do the wiring once the
 endpoint is confirmed working on preview.
 
-## 6. Admin orders page (next milestone)
+## 6. Admin orders page
 
-- [ ] Simple page: list orders, order card, status change, manager comment,
-  search by phone/name, filter by status, view ad source — gated by
-  `public.is_admin()` via Supabase Auth (anon key + signed-in admin).
-  Full blueprint (queries, auth, files, acceptance):
-  [`admin-orders-spec.md`](admin-orders-spec.md).
+The admin page is already built (static files, gated at runtime by Supabase auth
++ RLS): `admin/index.html` + `admin/admin.js`. It ships in the deploy package and
+is `noindex` + `Disallow: /admin/`. Until configured it shows a "not configured"
+banner. To enable:
+
+- [ ] In Supabase, create a manager/owner user and set
+  `app_metadata.is_admin = true` (Auth admin API).
+- [ ] Copy `admin/config.example.js` → `admin/config.js` (git-ignored) and fill
+  `GM_SUPABASE_URL` + the **anon** (publishable) key. Never the service_role key.
+- [ ] Rebuild + preview deploy; open `/admin/`, sign in, confirm the orders list
+  loads and a status change saves. A non-admin must see no order data.
+
+Full blueprint (queries, auth model, acceptance):
+[`admin-orders-spec.md`](admin-orders-spec.md).
 
 ## Rollback
 

@@ -109,6 +109,16 @@ def main():
             exclude_globs={"*.test.*", "*.spec.*", "__tests__"},
         )
 
+    # Admin orders page (static; gated at runtime by Supabase auth + RLS).
+    # Ship index.html + admin.js (+ admin/config.js if the owner created it).
+    # Never ship the *.example.* template.
+    if (ROOT / "admin").exists():
+        copy_tree(
+            ROOT / "admin",
+            output / "admin",
+            exclude_globs={"*.example.*"},
+        )
+
     if args.include_reports:
         reports_output = output / "outputs"
         for name in (

@@ -2099,7 +2099,67 @@ cartDrawer.addEventListener("click", (event) => {
   if (event.target === cartDrawer) setCartOpen(false);
 });
 
-checkoutForm.addEventListener("submit", (event) => {
+function buildOrderPayload(formData, message) {
+  return {
+    customer: {
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      city: formData.get("city"),
+      region: formData.get("region"),
+      address: formData.get("address"),
+      comment: formData.get("comment"),
+    },
+    items: cartEntries().map(({ product, qty }) => ({
+      product_id: product.id,
+      product_slug: hasProductPage(product) ? productPageSlug(product) : "",
+      title: product.title,
+      brand: product.brand,
+      unit: product.unit,
+      qty,
+      price_kgs: productPrice(product),
+      image: product.image,
+    })),
+    attribution: {
+      utm_source: attribution.utm_source,
+      utm_medium: attribution.utm_medium,
+      utm_campaign: attribution.utm_campaign,
+      utm_content: attribution.utm_content,
+      utm_term: attribution.utm_term,
+      referrer: attribution.referrer,
+    },
+    customer_source: formData.get("customerSource"),
+    promo_code: formData.get("promoCode"),
+    consent: { consent_type: "marketing", is_granted: formData.get("marketingConsent") === "yes" },
+    whatsapp_message: message,
+  };
+}
+
+// Optional backend save. Disabled by default via site-config (ordersApi.enabled).
+// Returns the API response on success, or null so the caller falls back to the
+// normal WhatsApp-only flow. Never throws.
+async function saveOrderViaApi(payload) {
+  const cfg = siteConfig.ordersApi || {};
+  if (!cfg.enabled) return null;
+  const endpoint = cfg.endpoint || "/api/orders";
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 6000);
+    const res = await fetch(endpoint, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+    clearTimeout(timer);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data && data.ok ? data : null;
+  } catch {
+    return null;
+  }
+}
+
+checkoutForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   if (!state.cart.size) {
     formStatus.textContent = "Добавьте товары в корзину перед оформлением.";
@@ -2108,7 +2168,10 @@ checkoutForm.addEventListener("submit", (event) => {
   const formData = new FormData(event.currentTarget);
   saveCustomerDraftFromForm(event.currentTarget);
   const message = orderMessage(formData);
-  const whatsapp = `https://wa.me/${catalogSettings.manager_whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
+  let whatsapp = `https://wa.me/${catalogSettings.manager_whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
+  // If the backend is enabled, save the order first; always fall back to WhatsApp.
+  const saved = await saveOrderViaApi(buildOrderPayload(formData, message));
+  if (saved && saved.manager_whatsapp_url) whatsapp = saved.manager_whatsapp_url;
   saveLastOrder();
   formStatus.innerHTML = `Открываем WhatsApp. Если он не открылся, <a href="${whatsapp}" target="_blank" rel="noreferrer">нажмите здесь</a>.`;
   window.location.href = whatsapp;

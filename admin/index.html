@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заказы — админ · Global Market KG</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/jpeg" href="/assets/brand/globalmarket-tech-orb-tight.jpg" />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      :root { color-scheme: light; --ink: #1d1d1f; --muted: #6e6e73; --line: #e2e2e7; --bg: #f2f3f5; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); }
+      header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 2; }
+      header h1 { font-size: 18px; margin: 0; }
+      main { max-width: 1080px; margin: 0 auto; padding: 18px; }
+      .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+      .muted { color: var(--muted); }
+      .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+      input, select, textarea, button { font: inherit; }
+      input, select, textarea { padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+      button { min-height: 40px; padding: 0 14px; border: 0; border-radius: 8px; background: var(--ink); color: #fff; cursor: pointer; }
+      button.secondary { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: top; }
+      th { color: var(--muted); font-weight: 600; }
+      .status { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; border: 1px solid var(--line); }
+      .hidden { display: none !important; }
+      .banner { padding: 12px 14px; border-radius: 10px; background: #fff4f6; border: 1px solid rgba(215,0,21,.25); color: #a3001a; }
+      .ok { background: #eefaf0; border-color: rgba(48,168,92,.3); color: #1c7a3f; }
+      a.back { text-decoration: none; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Global Market KG — заказы</h1>
+      <div class="row">
+        <span id="who" class="muted"></span>
+        <button id="signOut" class="secondary hidden" type="button">Выйти</button>
+      </div>
+    </header>
+    <main>
+      <div id="notConfigured" class="banner hidden">
+        Админка не настроена: добавьте <code>admin/config.js</code> (см. <code>admin/config.example.js</code>) с URL и anon-ключом Supabase.
+      </div>
+
+      <section id="loginView" class="card hidden" style="max-width: 420px; margin: 8vh auto;">
+        <h2 style="margin-top:0;">Вход для менеджера</h2>
+        <form id="loginForm" class="row" style="flex-direction:column; align-items:stretch; gap:10px;">
+          <input id="email" type="email" placeholder="Email" autocomplete="username" required />
+          <input id="password" type="password" placeholder="Пароль" autocomplete="current-password" required />
+          <button type="submit">Войти</button>
+          <p id="loginError" class="banner hidden"></p>
+        </form>
+      </section>
+
+      <section id="listView" class="hidden">
+        <div class="row" style="margin-bottom:12px;">
+          <select id="statusFilter">
+            <option value="">Все статусы</option>
+            <option value="new">new</option>
+            <option value="contacted">contacted</option>
+            <option value="confirmed">confirmed</option>
+            <option value="completed">completed</option>
+            <option value="cancelled">cancelled</option>
+          </select>
+          <input id="search" type="search" placeholder="Поиск по телефону или имени" style="flex:1; min-width:200px;" />
+          <button id="refresh" class="secondary" type="button">Обновить</button>
+        </div>
+        <div class="card" style="padding:0; overflow-x:auto;">
+          <table>
+            <thead>
+              <tr><th>Дата</th><th>Клиент</th><th>Телефон</th><th>Город</th><th>Сумма</th><th>Статус</th><th>Источник</th></tr>
+            </thead>
+            <tbody id="ordersBody"><tr><td colspan="7" class="muted" style="padding:16px;">Загрузка…</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="detailView" class="hidden">
+        <p><a href="#" id="backToList" class="back">← к списку</a></p>
+        <div id="detailBody" class="card"></div>
+      </section>
+    </main>
+
+    <script src="config.js" onerror="window.__gmConfigMissing=true"></script>
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>

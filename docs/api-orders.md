@@ -68,11 +68,27 @@ On failure: `{ "ok": false, "fallback": true, "error": "..." }` with a 5xx/503.
 The frontend must treat any non-`ok` (or network error) as "open WhatsApp as
 today".
 
-## Frontend wiring — to be done by Codex AFTER deploy + test
+## Frontend wiring — DONE, behind a disabled flag
 
-Not wired yet, on purpose: this changes the live checkout, so it should land
-only once the function is deployed and the env vars are set and tested. The
-current `checkoutForm` submit in `app.js` builds `message` and does:
+The checkout is now wired in `app.js` behind a site-config flag, **off by
+default**, so live behaviour is unchanged until it is deliberately enabled:
+
+- `data/site-config.json` → `"ordersApi": { "enabled": false, "endpoint": "/api/orders" }`.
+- On submit, `app.js` builds the order payload (`buildOrderPayload`) and, only if
+  `ordersApi.enabled` is true, calls `saveOrderViaApi` (POST `/api/orders`, 6s
+  timeout). It uses the returned `manager_whatsapp_url` if present, and on ANY
+  failure (disabled, 503, network, non-ok) falls back to the current WhatsApp
+  URL. WhatsApp always opens — no order is lost.
+
+**To enable after go-live (Codex/owner), once Supabase + Cloudflare env are set
+and the endpoint is verified on preview:** set `ordersApi.enabled` to `true` in
+`data/site-config.json`, bump the asset `?v=` version, rebuild, preview-deploy,
+place a real test order, confirm it saves AND WhatsApp opens. No code change
+needed to flip it.
+
+### Reference: the equivalent manual wiring (for context)
+
+The current `checkoutForm` submit in `app.js` builds `message` and does:
 
 ```js
 const whatsapp = `https://wa.me/${...}?text=${encodeURIComponent(message)}`;
