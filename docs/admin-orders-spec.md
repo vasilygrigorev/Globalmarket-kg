@@ -15,6 +15,22 @@ project + migration + Cloudflare env + a verified test order).
 Boundaries: no service-role key in the browser; admin access enforced by RLS
 (`public.is_admin()`); no production deploy / push without user sign-off.
 
+## DOM contract (enforced by tests)
+
+`admin/index.html` must declare these element ids (the admin JS depends on them):
+`who`, `signOut`, `notConfigured`, `loginView`, `loginForm`, `email`,
+`password`, `loginError`, `accessView`, `accessEmail`, `listView`,
+`statusFilter`, `search`, `refresh`, `ordersBody`, `detailView`, `backToList`,
+`detailBody`. The order-detail ids (`editStatus`, `editComment`, `saveOrder`,
+`saveMsg`) are created at runtime by `renderOrderDetail()` in `admin.logic.js`
+and must NOT be hard-coded in the HTML.
+
+`admin/admin.dom.test.mjs` checks this non-network contract: required ids exist,
+every id `admin.js` looks up via `$("…")` is either declared in the HTML or
+created in `admin.logic.js`, the page loads `config.js` then `admin.js` (module),
+and the page is `noindex`. Run with the rest:
+`node --test functions/api/orders.test.mjs functions/api/orders.integration.test.mjs admin/admin.logic.test.mjs admin/admin.dom.test.mjs`.
+
 ## Auth & access model
 
 - The admin page is a static page served by Cloudflare Pages, using the Supabase
