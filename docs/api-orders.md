@@ -13,6 +13,10 @@ The function uses the Supabase **service role** key (server-side only, bypasses
 RLS) to insert rows. The browser never sees that key. WhatsApp ordering stays
 the primary channel — this endpoint only persists the order.
 
+To bring this online, follow the step-by-step
+[`backend-go-live-checklist.md`](backend-go-live-checklist.md) (Supabase →
+Cloudflare env → preview deploy → smoke test → wire checkout).
+
 ## Environment bindings (set in Cloudflare Pages, NEVER in git)
 
 | Variable | Purpose |
