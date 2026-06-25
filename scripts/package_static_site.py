@@ -116,7 +116,7 @@ def main():
         copy_tree(
             ROOT / "admin",
             output / "admin",
-            exclude_globs={"*.example.*"},
+            exclude_globs={"*.example.*", "*.test.*", "*.spec.*"},
         )
 
     if args.include_reports:

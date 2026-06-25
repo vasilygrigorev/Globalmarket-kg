@@ -1,31 +1,30 @@
 // Admin orders page logic. Uses Supabase JS (anon key) + an authenticated admin
 // session. RLS (public.is_admin()) does the real access control — see
 // docs/admin-orders-spec.md. No service-role key is used here.
+//
+// Pure, testable helpers live in admin.logic.js (admin.logic.test.mjs).
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+import {
+  STATUSES,
+  esc,
+  money,
+  when,
+  isConfigured,
+  buildSearchOr,
+  friendlyError,
+  emptyOrdersMessage,
+  renderStatusOptions,
+  renderOrderRow,
+} from "./admin.logic.js";
 
 const $ = (id) => document.getElementById(id);
 const show = (el, on) => el.classList.toggle("hidden", !on);
 
-function esc(value) {
-  return String(value ?? "").replace(/[&<>"']/g, (c) => (
-    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[c]
-  ));
-}
-function money(value) {
-  return `${Math.round(Number(value) || 0).toLocaleString("ru-RU")} сом`;
-}
-function when(ts) {
-  try { return new Date(ts).toLocaleString("ru-RU"); } catch { return ts || ""; }
-}
-
-const STATUSES = ["new", "contacted", "confirmed", "completed", "cancelled"];
-
-const URL_ = window.GM_SUPABASE_URL;
-const KEY_ = window.GM_SUPABASE_ANON_KEY;
-const configured =
-  !window.__gmConfigMissing &&
-  typeof URL_ === "string" && URL_.startsWith("http") && !URL_.includes("YOUR-PROJECT") &&
-  typeof KEY_ === "string" && KEY_ && !KEY_.includes("YOUR-ANON");
+const configured = isConfigured({
+  url: window.GM_SUPABASE_URL,
+  key: window.GM_SUPABASE_ANON_KEY,
+  missing: window.__gmConfigMissing,
+});
 
 let supabase = null;
 
@@ -51,35 +50,32 @@ async function refreshSessionUI() {
 async function loadOrders() {
   const body = $("ordersBody");
   body.innerHTML = `<tr><td colspan="7" class="muted" style="padding:16px;">Загрузка…</td></tr>`;
+  const status = $("statusFilter").value;
+  const q = $("search").value;
   let query = supabase
     .from("orders")
     .select("id,created_at,status,total_kgs,customer_name,customer_phone,city,customer_source")
     .order("created_at", { ascending: false })
     .limit(100);
-  const status = $("statusFilter").value;
   if (status) query = query.eq("status", status);
-  const q = $("search").value.trim();
-  if (q) query = query.or(`customer_phone.ilike.%${q}%,customer_name.ilike.%${q}%`);
+  const orFilter = buildSearchOr(q);
+  if (orFilter) query = query.or(orFilter);
 
-  const { data, error } = await query;
+  let data, error;
+  try {
+    ({ data, error } = await query);
+  } catch (err) {
+    error = err;
+  }
   if (error) {
-    body.innerHTML = `<tr><td colspan="7" class="banner" style="margin:0;">Ошибка или нет доступа: ${esc(error.message)}</td></tr>`;
+    body.innerHTML = `<tr><td colspan="7" class="banner" style="margin:0;">${esc(friendlyError(error))}</td></tr>`;
     return;
   }
   if (!data || data.length === 0) {
-    body.innerHTML = `<tr><td colspan="7" class="muted" style="padding:16px;">Заказов нет (или нет прав администратора).</td></tr>`;
+    body.innerHTML = `<tr><td colspan="7" class="muted" style="padding:16px;">${esc(emptyOrdersMessage({ status, q }))}</td></tr>`;
     return;
   }
-  body.innerHTML = data.map((o) => `
-    <tr data-id="${esc(o.id)}" style="cursor:pointer;">
-      <td>${esc(when(o.created_at))}</td>
-      <td>${esc(o.customer_name)}</td>
-      <td>${esc(o.customer_phone)}</td>
-      <td>${esc(o.city)}</td>
-      <td>${esc(money(o.total_kgs))}</td>
-      <td><span class="status">${esc(o.status)}</span></td>
-      <td>${esc(o.customer_source)}</td>
-    </tr>`).join("");
+  body.innerHTML = data.map(renderOrderRow).join("");
   body.querySelectorAll("tr[data-id]").forEach((tr) => {
     tr.addEventListener("click", () => openOrder(tr.dataset.id));
   });
@@ -89,13 +85,18 @@ async function openOrder(id) {
   setView("detail");
   const box = $("detailBody");
   box.innerHTML = `<p class="muted">Загрузка…</p>`;
-  const [{ data: order, error: e1 }, { data: items }, { data: attr }] = await Promise.all([
-    supabase.from("orders").select("*").eq("id", id).single(),
-    supabase.from("order_items").select("*").eq("order_id", id),
-    supabase.from("marketing_attribution").select("*").eq("order_id", id),
-  ]);
+  let order; let items; let attr; let e1;
+  try {
+    [{ data: order, error: e1 }, { data: items }, { data: attr }] = await Promise.all([
+      supabase.from("orders").select("*").eq("id", id).single(),
+      supabase.from("order_items").select("*").eq("order_id", id),
+      supabase.from("marketing_attribution").select("*").eq("order_id", id),
+    ]);
+  } catch (err) {
+    e1 = err;
+  }
   if (e1 || !order) {
-    box.innerHTML = `<p class="banner" style="margin:0;">Не удалось загрузить заказ: ${esc(e1 && e1.message)}</p>`;
+    box.innerHTML = `<p class="banner" style="margin:0;">${esc(friendlyError(e1) || "Не удалось загрузить заказ.")}</p>`;
     return;
   }
   const a = (attr && attr[0]) || {};
@@ -116,7 +117,7 @@ async function openOrder(id) {
     <hr style="border:none;border-top:1px solid var(--line);margin:14px 0;" />
     <div class="row" style="flex-direction:column; align-items:stretch; gap:10px; max-width:520px;">
       <label>Статус
-        <select id="editStatus">${STATUSES.map((s) => `<option value="${s}" ${s === order.status ? "selected" : ""}>${s}</option>`).join("")}</select>
+        <select id="editStatus">${renderStatusOptions(order.status)}</select>
       </label>
       <label>Комментарий менеджера
         <textarea id="editComment" rows="3">${esc(order.manager_comment || "")}</textarea>
@@ -129,11 +130,16 @@ async function openOrder(id) {
 async function saveOrder(id) {
   const msg = $("saveMsg");
   msg.textContent = "Сохранение…";
-  const { error } = await supabase
-    .from("orders")
-    .update({ status: $("editStatus").value, manager_comment: $("editComment").value })
-    .eq("id", id);
-  msg.textContent = error ? `Ошибка: ${error.message}` : "Сохранено ✓";
+  let error;
+  try {
+    ({ error } = await supabase
+      .from("orders")
+      .update({ status: $("editStatus").value, manager_comment: $("editComment").value })
+      .eq("id", id));
+  } catch (err) {
+    error = err;
+  }
+  msg.textContent = error ? friendlyError(error) : "Сохранено ✓";
 }
 
 function wire() {
@@ -141,11 +147,16 @@ function wire() {
     e.preventDefault();
     const err = $("loginError");
     show(err, false);
-    const { error } = await supabase.auth.signInWithPassword({
-      email: $("email").value.trim(),
-      password: $("password").value,
-    });
-    if (error) { err.textContent = error.message; show(err, true); return; }
+    let error;
+    try {
+      ({ error } = await supabase.auth.signInWithPassword({
+        email: $("email").value.trim(),
+        password: $("password").value,
+      }));
+    } catch (ex) {
+      error = ex;
+    }
+    if (error) { err.textContent = friendlyError(error); show(err, true); return; }
     refreshSessionUI();
   });
   $("signOut").addEventListener("click", async () => { await supabase.auth.signOut(); refreshSessionUI(); });
@@ -160,7 +171,7 @@ function init() {
     show($("notConfigured"), true);
     return;
   }
-  supabase = createClient(URL_, KEY_);
+  supabase = createClient(window.GM_SUPABASE_URL, window.GM_SUPABASE_ANON_KEY);
   wire();
   refreshSessionUI();
 }
