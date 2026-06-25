@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://globalmarket.kg/</loc>
     <lastmod>2026-06-25</lastmod>
@@ -173,515 +173,773 @@
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-110510-06-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/ariel-all-in-1-universal-kapsuly-15-sht-4839ea/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-110510-05-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/ariel-fast-dissolving-kontsentrat-2-5-kg-b70eb3/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/ariel/ariel-fast-dissolving-2-5kg-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/axe-signature-champion-dezodorant-122-ml-d70a52/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/axe/axe-signature-champion-122ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/axe-signature-corporate-dezodorant-122-ml-525852/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/axe/axe-signature-corporate-122ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/axe-signature-gold-temptation-dezodorant-122-ml-91d0d1/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/axe/axe-signature-gold-temptation-122ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/axe-signature-intense-dezodorant-122-ml-4e0c99/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/axe/axe-signature-intense-122ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/axe-signature-maverick-dezodorant-122-ml-5aeafb/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/axe/axe-signature-maverick-122ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/axe-signature-rogue-dezodorant-122-ml-830dcc/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/axe/axe-signature-rogue-122ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/bybozo-sea-breeze-parfyum-5-ml-ze_5ml/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/perfume/bybozo-sea-breeze-5ml-card-front-v2.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/chanel-chance-parfyum-5-ml-ce_5ml/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/perfume/chanel-chance-5ml-card-front-v2.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/clear-anti-hairfall-shampun-600-ml-de072f/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/clear-men-cool-sport-menthol-shampun-600-ml-3d35df/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/clear-men-hair-fall-defence-coffee-shampun-600-ml-27b81e/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-card-front.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/clear-men-legend-by-cr7-shampun-600-ml-50f536/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/clear/clear-men-legend-cr7-600ml-card-front.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/clear-oil-control-shampun-1-l-3564b9/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/clear/clear-oil-control-1l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/clear-soft-and-shiny-shampun-600-ml-ace1e1/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/clear/clear-soft-and-shiny-600ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/concord-stanok-d-652-e592aa/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-110606-01-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/concord-stanok-kl-6947-1dc141/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-110606-03-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/concord-stanok-kl-90-c0af17/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-110606-02-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dalli-colorwaschmittel-gel-dlya-stirki-1-1-l-bdb383/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dalli-colorwaschmittel-gel-dlya-stirki-5-l-f553c4/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dalli-colorwaschmittel-kapsuly-dlya-stirki-12-sht-86dfd8/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dalli/dalli-colorwaschmittel-caps-12-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dalli-colorwaschmittel-stiralnyy-poroshok-6-kg-e36f02/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dalli/dalli-colorwaschmittel-powder-6kg-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dalli-fein-color-gel-dlya-stirki-1-1-l-5f882c/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dalli/dalli-fein-color-gel-1-1l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dalli-sensitive-gel-dlya-stirki-1-1-l-44cf67/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dalli/dalli-sensitive-gel-1-1l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dalli-vollwaschmittel-frische-gl-ck-gel-dlya-stirki-1-1-l-8d3de6/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dalli-vollwaschmittel-kapsuly-dlya-stirki-12-sht-50c31a/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dalli/dalli-vollwaschmittel-caps-12-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dalli-vollwaschmittel-stiralnyy-poroshok-6-kg-c928fc/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dalli/dalli-vollwaschmittel-powder-6kg-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-1-1-l-1e7557/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dash/dash-active-frische-gel-1-1l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-61a578/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dash/dash-alpen-frische-caps-60-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dash-color-frische-gel-dlya-stirki-3-6-l-8a48e0/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-0e3c6a/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dash/dash-color-frische-caps-60-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-f93b3f/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dash/dash-color-frische-caps-box-60-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/dash-color-frische-stiralnyy-poroshok-1-17-kg-7b2cff/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/downy-all-in-one-rose-garden-kontsentrat-1-l-019486/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/downy/downy-concentrate-rose-garden-1l-card-front.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/downy-all-in-one-valley-dew-kontsentrat-1-l-cd22d3/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/downy/downy-concentrate-valley-dew-1l-card-front.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/downy-all-in-one-vanilla-musk-kontsentrat-1-l-67002b/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/downy/downy-concentrate-vanilla-musk-1l-card-front.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/downy-fresh-valley-dew-konditsioner-dlya-belya-1-l-9a68aa/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/downy/downy-fresh-valley-dew-1l-card-front.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/fairy-apple-sredstvo-dlya-posudy-600-ml-f484a9/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-110510-04-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-110510-03-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-blue-pivot-odnorazovye-stanki-5-sht-90808d/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-blue-pivot-5-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-blue3-odnorazovye-stanki-3-sht-3d5965/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-blue3-3-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-blue3-odnorazovye-stanki-8-sht-943ffc/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-blue3-8-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-fusion5-proglide-smennye-kassety-8-sht-ef1689/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-mach3-turbo-smennye-kassety-4-sht-33c857/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-moisturising-gel-dlya-britya-200-ml-ec9c56/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-moisturising-shave-gel-200ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-regular-pena-dlya-britya-200-ml-3316c4/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-foam-original-200ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-sensitive-pena-dlya-britya-200-ml-ee34e8/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-foam-sensitive-200ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-venus-comfortglide-smennye-kassety-2-sht-45dd47/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-venus-comfortglide-stanki-2-sht-cc2aa7/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-venus-simply-basic-odnorazovye-stanki-5-sht-6fcaee/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-venus-simply-odnorazovye-stanki-4-sht-bc2534/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-venus-smooth-sensitive-smennye-kassety-2-sht-08df30/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-venus-smooth-smennye-kassety-4-sht-afb337/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-venus-smooth-smennye-kassety-8-sht-a764f6/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/gillette-venus-smooth-stanok-1-sht-0e25fc/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/head-shoulders-anti-hairfall-shampun-650-ml-79398b/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-110800-03-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/head-shoulders-classic-shampun-400-ml-c29502/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-113508-03-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/head-shoulders-dry-scalp-shampun-400-ml-4568a7/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-113508-04-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/head-shoulders-menthol-shampun-400-ml-33272d/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-113508-02-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/head-shoulders-smooth-silky-shampun-650-ml-02d211/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-110800-04-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/head-shoulders-soothing-scalp-shampun-400-ml-fc6925/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/telegram-8767964230-20260619-113508-01-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/herbal-essences-daily-detox-clean-shampun-400-ml-5c4601/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/herbal-essences-daily-detox-shine-shampun-400-ml-98e318/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/herbal-essences-dazzling-shine-shampun-400-ml-ca161f/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/herbal-essences-hello-hydration-shampun-400-ml-42c98e/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/herbal-essences-ignite-my-colour-shampun-400-ml-9fbe47/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/herbal-essences-love-me-longer-shampun-400-ml-09cec1/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/herbal-essences-tropical-hydration-shampun-400-ml-5d79c1/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/jif-lemon-chistyaschiy-krem-500-ml-118ed3/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/jif/jif-cream-lemon-500ml-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/johnson-s-baby-oil-detskoe-maslo-200-ml-1c7d9c/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/johnson-s-baby-oil-detskoe-maslo-300-ml-8dea63/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/le-labo-another-13-parfyum-5-ml-13_5ml/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/perfume/le-labo-another-13-5ml-card-front-v2.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/persil-high-foam-gel-dlya-stirki-3-l-1-l-6437d0/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/persil-lavender-gel-dlya-stirki-3-l-5036b2/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/persil/persil-lavender-gel-3l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/persil-lavender-gel-dlya-stirki-4-8-l-9c3654/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/persil-rose-gel-dlya-stirki-3-l-1-l-dce862/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/persil-rose-gel-dlya-stirki-3-l-4e94cf/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/persil/persil-rose-gel-3l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/persil-rose-gel-dlya-stirki-4-8-l-c7e746/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/persil/persil-rose-gel-4-8l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/persil-sensitive-gel-dlya-stirki-3-l-8005ce/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/persil/persil-sensitive-gel-3l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/persil-white-flower-gel-dlya-stirki-3-l-1-l-05435f/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/persil-white-flower-gel-dlya-stirki-3-l-e30459/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/persil/persil-white-flower-gel-3l-card-front.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://globalmarket.kg/product/persil-white-flower-gel-dlya-stirki-4-8-l-b9698b/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg</image:loc>
+    </image:image>
   </url>
 </urlset>

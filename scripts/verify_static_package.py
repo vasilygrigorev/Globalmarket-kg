@@ -16,6 +16,7 @@ REQUIRED_ROOT_FILES = {
     "privacy.html",
     "404.html",
     "site.webmanifest",
+    "_headers",
     "sitemap.xml",
     "robots.txt",
 }
