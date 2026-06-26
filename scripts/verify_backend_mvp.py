@@ -64,6 +64,7 @@ def main():
                 "tests/category-tiles.test.mjs",
                 "tests/header-menu.test.mjs",
                 "tests/storefront-layout.test.mjs",
+                "tests/product-pages.test.mjs",
             ],
         ),
         ("Check admin/admin.js syntax", ["node", "--check", "admin/admin.js"]),
