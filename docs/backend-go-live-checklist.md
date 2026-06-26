@@ -155,15 +155,16 @@ The checkout is wired in `app.js` behind `data/site-config.json`:
 - [ ] If anything misbehaves, set the flag back to `false` (instant rollback to
   WhatsApp-only). Details: [`api-orders.md`](api-orders.md).
 
-This is a normal storefront change; Claude Code can do the wiring once the
-endpoint is confirmed working on preview.
+This is now a normal storefront flag/build change. Further edits here should be
+limited to tests, docs, and rollback safety unless the user explicitly approves
+production go-live.
 
 ## 6. Admin orders page
 
-The admin page is already built and tested on Preview (static files, gated at runtime by Supabase auth
-+ RLS): `admin/index.html` + `admin/admin.js`. It ships in the deploy package and
-is `noindex` + `Disallow: /admin/`. Until configured it shows a "not configured"
-banner. To enable:
+The admin page is already built and tested on Preview (static files, gated at
+runtime by Supabase auth + RLS): `admin/index.html` + `admin/admin.js`. It ships
+in the deploy package and is `noindex` + `Disallow: /admin/`. Until configured it
+shows a "not configured" banner. To enable:
 
 - [ ] In Supabase, create a manager/owner user and set
   `app_metadata.is_admin = true` (Auth admin API).
