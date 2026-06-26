@@ -124,18 +124,17 @@ let promoBanners = [
 ];
 
 let quickCategoryCards = [
-  { title: "Стирка", category: "Стирка и уход за бельем", image: "assets/category-cards/category-laundry.jpg" },
-  { title: "Чистка", category: "Уборка и чистота", image: "assets/category-cards/category-cleaning.jpg" },
-  { title: "Волосы", category: "Уход за волосами", image: "assets/category-cards/category-hair.jpg" },
-  { title: "Тело", category: "Уход за телом", image: "assets/category-cards/category-body.jpg" },
-  { title: "Кремы", category: "Уход за телом", query: "крем", image: "assets/category-cards/category-creams.jpg" },
-  { title: "Зубы", category: "Зубная гигиена", image: "assets/category-cards/category-oral.jpg" },
-  { title: "Бритье", category: "Бритье", image: "assets/category-cards/category-shaving.jpg" },
-  { title: "Дезодоранты", category: "Дезодоранты", image: "assets/category-cards/category-deodorants.jpg" },
-  { title: "Парфюм", category: "Парфюм 5 мл", image: "assets/category-cards/category-perfume.jpg" },
-  { title: "Еда", category: "Продукты", image: "assets/category-cards/category-food.jpg" },
-  { title: "Европа", collection: "europe", image: "assets/category-cards/category-germany.jpg" },
-  { title: "Дом", category: "Разное", image: "assets/category-cards/category-home.jpg" },
+  { title: "Стирка", category: "Стирка и уход за бельем", image: "assets/category-cards/category-laundry-new.jpg" },
+  { title: "Детское", category: "Уход за телом", image: "assets/category-cards/category-kids-new.jpg" },
+  { title: "Европа", collection: "europe", image: "assets/category-cards/category-europe-new.jpg" },
+  { title: "Бритье", category: "Бритье", image: "assets/category-cards/category-shaving-new.jpg" },
+  { title: "Дезодоранты", category: "Дезодоранты", image: "assets/category-cards/category-deodorants-new.jpg" },
+  { title: "Волосы", category: "Уход за волосами", image: "assets/category-cards/category-hair-new.jpg" },
+  { title: "Чистка", category: "Уборка и чистота", image: "assets/category-cards/category-cleaning-new.jpg" },
+  { title: "Парфюм", category: "Парфюм 5 мл", image: "assets/category-cards/category-perfume-new.jpg" },
+  { title: "Кремы", category: "Уход за телом", query: "крем", image: "assets/category-cards/category-creams-new.jpg" },
+  { title: "Тело", category: "Уход за телом", image: "assets/category-cards/category-body-new.jpg" },
+  { title: "Зубы", category: "Зубная гигиена", image: "assets/category-cards/category-oral-new.jpg" },
 ];
 
 let activeHeroIndex = 0;
@@ -639,6 +638,13 @@ function productMatchesSynonymGroup(product, group, text) {
 function productMatchesSearchQuery(product, query) {
   const normalizedQuery = normalizeSearchValue(query);
   if (!normalizedQuery) return true;
+  if (normalizedQuery.includes("|")) {
+    return normalizedQuery
+      .split("|")
+      .map((term) => normalizeSearchValue(term))
+      .filter(Boolean)
+      .some((term) => productMatchesSearchQuery(product, term));
+  }
   if (ignoredSearchDraftTerms.includes(normalizedQuery)) return false;
 
   const text = productSearchText(product);
@@ -871,12 +877,7 @@ function renderQuickCategories(catalogCategories) {
   const countByCategory = new Map(categories.map((category) => [category.title, category.count]));
   quickCategoryGrid.innerHTML = quickCategoryCards
     .map((card) => {
-      const count = products.filter((product) => {
-        const matchesCategory = !card.category || product.category === card.category;
-        const matchesCollection = !card.collection || productMatchesCollection(product, card.collection);
-        const matchesQuery = !card.query || `${product.title} ${product.productType} ${product.description} ${product.searchText}`.toLowerCase().includes(card.query);
-        return matchesCategory && matchesCollection && matchesQuery;
-      }).length || countByCategory.get(card.category) || 0;
+      const count = countProductsForShortcut(card, countByCategory);
       const dataAttributes = [
         card.category ? `data-category="${escapeHtml(card.category)}"` : "",
         card.collection ? `data-collection="${escapeHtml(card.collection)}"` : "",
@@ -892,6 +893,20 @@ function renderQuickCategories(catalogCategories) {
     })
     .join("");
   renderCategoryMenu();
+}
+
+function productMatchesShortcut(product, item) {
+  const matchesCategory = !item.category || item.category === "Все" || product.category === item.category;
+  const matchesCollection = !item.collection || productMatchesCollection(product, item.collection);
+  const matchesQuery = !item.query || productMatchesSearchQuery(product, item.query);
+  return matchesCategory && matchesCollection && matchesQuery;
+}
+
+function countProductsForShortcut(item, countByCategory = new Map()) {
+  if (!item.category && !item.collection && !item.query) return "";
+  if (item.category === "Все") return products.length;
+  if (item.category && !item.collection && !item.query) return countByCategory.get(item.category) || 0;
+  return products.filter((product) => productMatchesShortcut(product, item)).length;
 }
 
 function renderCategories() {
@@ -923,7 +938,7 @@ function renderCategoryMenu() {
   const countByCategory = new Map(menuCategories.map((category) => [category.title, category.count]));
   categoryMenu.innerHTML = configuredItems
     .map((item) => {
-      const count = item.category ? (item.category === "Все" ? products.length : countByCategory.get(item.category)) : "";
+      const count = countProductsForShortcut(item, countByCategory);
       const isActive = (item.category && state.category === item.category && !state.collection) || (item.collection && state.collection === item.collection);
       const attributes = [
         item.category ? `data-category="${escapeHtml(item.category)}"` : "",
