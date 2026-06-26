@@ -61,6 +61,7 @@ def main():
                 "tests/rollback.contract.test.mjs",
                 "tests/runner-coverage.test.mjs",
                 "tests/docs-consistency.test.mjs",
+                "tests/category-tiles.test.mjs",
             ],
         ),
         ("Check admin/admin.js syntax", ["node", "--check", "admin/admin.js"]),
