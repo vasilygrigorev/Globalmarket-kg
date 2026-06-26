@@ -41,6 +41,8 @@ PLAYWRIGHT_RUNTIME_DIR=/private/tmp/globalmarket-playwright-runtime npx --yes --
 ## Production Deploy
 
 Production should only happen after explicit approval.
+Before production, use the focused gate checklist:
+[`production-readiness.md`](production-readiness.md).
 
 Build and package without reports:
 

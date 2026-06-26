@@ -8,11 +8,12 @@ and no GitHub push without an explicit user request.
 Related: [`backend-mvp-plan.md`](backend-mvp-plan.md) ·
 [`supabase-setup.md`](supabase-setup.md) · [`api-orders.md`](api-orders.md).
 
-Current state (HEAD `c3246c1`): schema migration, `functions/api/orders.js`
-(+ unit & integration tests, 14/14), deploy-package support for `functions/`,
-disabled checkout wiring, and the static admin skeleton are committed. The
-checkout flag is still off, so WhatsApp-only behavior remains unchanged. The
-endpoint returns `503 backend_not_configured` until the env vars below are set.
+Current state (HEAD `6915bbe`, 2026-06-26): schema migration is applied in
+Supabase, Cloudflare Preview env vars are set, `/api/orders` works on the
+Preview alias, checkout is enabled for the Preview build, and the admin page is
+usable with a Supabase admin user. Production remains untouched. Before
+deploying `globalmarket.kg`, repeat the same env + smoke + rollback checks for
+the **Production** Cloudflare environment.
 
 ---
 
@@ -38,14 +39,16 @@ endpoint returns `503 backend_not_configured` until the env vars below are set.
 ## 2. Cloudflare Pages env vars (secrets — never in git)
 
 Cloudflare dashboard → Pages → `globalmarket-kg` → Settings → Environment
-variables. Add to **Preview** (and later Production) the following:
+variables. Preview is already configured. For production go-live, add/check the
+same variables in **Production**:
 
 - [ ] `SUPABASE_URL` = `https://<project>.supabase.co`
 - [ ] `SUPABASE_SERVICE_ROLE_KEY` = `<service_role secret>`
 - [ ] `MANAGER_WHATSAPP` = `996706771103` (digits only; optional, has a default)
 
-Do not commit these. The browser must only ever see the `anon` key (not used by
-the function); `service_role` stays server-side in the Pages Function env.
+Do not commit these. The browser must only ever see the anon/publishable key
+inside git-ignored `admin/config.js`; `service_role` stays server-side in the
+Pages Function env.
 
 > Requires Supabase + Cloudflare dashboard access / secrets. If Claude Code is
 > doing the work, this is the **stop-and-handoff** point — Codex/user set these.
@@ -56,7 +59,8 @@ the function); `service_role` stays server-side in the Pages Function env.
   checkout flag, the admin static page, local preflight. **Stops** at anything
   needing real Supabase/Cloudflare access or secrets.
 - **Codex / user (privileged):** Supabase project + migration, Cloudflare env
-  vars, admin user, preview deploy, flipping `ordersApi.enabled`, live smoke.
+  vars, admin user, Preview/Production deploys, flipping `ordersApi.enabled`,
+  and live smoke tests.
 
 Track progress in the fill-in form: [`backend-go-live-worksheet.md`](backend-go-live-worksheet.md).
 Per-phase checkpoints: [`backend-go-live-dry-run.md`](backend-go-live-dry-run.md).
@@ -104,7 +108,9 @@ the service_role key is never allowed anywhere. Exit code 1 = stop and fix.
 
 ## 3. Build + preview deploy
 
-- [ ] Build & package (includes `functions/`, excludes tests):
+- [x] Preview has already been deployed and tested.
+- [ ] Rebuild before any new Preview or Production deploy (includes
+  `functions/`, excludes tests):
   ```bash
   PYTHONPYCACHEPREFIX=/private/tmp/pycache-globalmarket \
     python3 scripts/package_static_site.py --include-reports
@@ -137,13 +143,13 @@ the service_role key is never allowed anywhere. Exit code 1 = stop and fix.
 
 ## 5. Enable the checkout flag (only after steps 1-4 pass)
 
-The checkout is already wired in `app.js` behind a disabled flag — no code change
-needed, just flip it:
+The checkout is wired in `app.js` behind `data/site-config.json`:
+`ordersApi.enabled`. It is currently `true` in the Preview-ready branch.
 
-- [ ] In `data/site-config.json` set `ordersApi.enabled` to `true` (must be a
+- [x] In `data/site-config.json` set `ordersApi.enabled` to `true` (must be a
   JSON boolean — the build's `validate_site_config.py` rejects a string like
   `"true"` or a non-local `endpoint`).
-- [ ] Bump the asset cache version (`?v=`) so clients pick up the new config/app.
+- [x] Bump the asset cache version (`?v=`) so clients pick up the new config/app.
 - [ ] Rebuild + preview deploy + place a real test order from the preview site;
   confirm it saves to Supabase AND WhatsApp still opens. Delete the test row.
 - [ ] If anything misbehaves, set the flag back to `false` (instant rollback to
@@ -154,7 +160,7 @@ endpoint is confirmed working on preview.
 
 ## 6. Admin orders page
 
-The admin page is already built (static files, gated at runtime by Supabase auth
+The admin page is already built and tested on Preview (static files, gated at runtime by Supabase auth
 + RLS): `admin/index.html` + `admin/admin.js`. It ships in the deploy package and
 is `noindex` + `Disallow: /admin/`. Until configured it shows a "not configured"
 banner. To enable:

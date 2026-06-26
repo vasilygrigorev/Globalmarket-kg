@@ -119,6 +119,8 @@ git status --short
 ## 5. Production Deploy
 
 Only after explicit user approval.
+For backend/admin production, also complete:
+[`production-readiness.md`](production-readiness.md).
 
 ```bash
 python3 scripts/package_static_site.py
