@@ -63,6 +63,7 @@ def main():
                 "tests/docs-consistency.test.mjs",
                 "tests/category-tiles.test.mjs",
                 "tests/header-menu.test.mjs",
+                "tests/storefront-layout.test.mjs",
             ],
         ),
         ("Check admin/admin.js syntax", ["node", "--check", "admin/admin.js"]),
