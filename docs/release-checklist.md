@@ -127,11 +127,16 @@ python3 scripts/package_static_site.py
 /Users/macmini/.npm/_npx/d77349f55c2be1c0/node_modules/.bin/wrangler pages deploy /private/tmp/globalmarket-static-build --project-name globalmarket-kg --branch main --commit-dirty=true
 ```
 
-Verify production:
+Verify production (static + orders API route):
 
 ```bash
 python3 scripts/check_deployment.py --base-url https://globalmarket.kg
+node scripts/smoke_orders_api.mjs --base-url https://globalmarket.kg
 ```
+
+The `smoke_orders_api.mjs` probe creates no data (expects 400, or 503 if env is
+not set). Full backend verification + the manual checkout test are in
+[`production-readiness.md`](production-readiness.md) §5.
 
 ## 6. Rollback
 
