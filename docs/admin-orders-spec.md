@@ -20,7 +20,8 @@ Boundaries: no service-role key in the browser; admin access enforced by RLS
 `admin/index.html` must declare these element ids (the admin JS depends on them):
 `who`, `signOut`, `notConfigured`, `loginView`, `loginForm`, `email`,
 `password`, `loginError`, `accessView`, `accessEmail`, `listView`,
-`statusFilter`, `search`, `refresh`, `ordersBody`, `detailView`, `backToList`,
+`statusFilter`, `periodFilter`, `search`, `refresh`, `ordersCount`,
+`ordersTotal`, `ordersBody`, `detailView`, `backToList`,
 `detailBody`. The order-detail ids (`editStatus`, `editComment`, `saveOrder`,
 `saveMsg`) are created at runtime by `renderOrderDetail()` in `admin.logic.js`
 and must NOT be hard-coded in the HTML.
@@ -68,7 +69,11 @@ Status & next steps: [`admin-next-steps.md`](admin-next-steps.md).
   `new/contacted/confirmed/completed/cancelled` to match the DB CHECK): Новый,
   Связались, Подтверждён, Выполнен, Отменён. Used in the list, the status badge,
   and the status `<select>`.
-- The order list shows "Показано N заказов" (`#ordersCount`) + a manager hint.
+- The order list shows "Показано N заказов" (`#ordersCount`), "Сумма показанных"
+  (`#ordersTotal`, `ordersTotalText()`), and a manager hint.
+- Filters: status (`#statusFilter`, Russian labels, English values) and date
+  period (`#periodFilter`: Всё время / Сегодня / 7 дней / 30 дней via
+  `sinceForPeriod()` → `created_at >= since`). Plus phone/name search.
 - The order detail shows items + total, then a facts block: Адрес, Комментарий
   клиента, Источник рекламы (`sourceText()`), Промокод, Согласие на акции
   (`consentText()` from `customer_consents`), plus a "Написать клиенту в

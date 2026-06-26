@@ -17,6 +17,8 @@ import {
   loginButtonLabel,
   saveFeedback,
   ordersCountText,
+  ordersTotalText,
+  sinceForPeriod,
 } from "./admin.logic.js";
 
 const $ = (id) => document.getElementById(id);
@@ -55,12 +57,15 @@ async function loadOrders() {
   body.innerHTML = loadingRowHtml();
   const status = $("statusFilter").value;
   const q = $("search").value;
+  const period = $("periodFilter") ? $("periodFilter").value : "";
   let query = supabase
     .from("orders")
     .select("id,created_at,status,total_kgs,customer_name,customer_phone,city,customer_source")
     .order("created_at", { ascending: false })
     .limit(100);
   if (status) query = query.eq("status", status);
+  const since = sinceForPeriod(period);
+  if (since) query = query.gte("created_at", since);
   const orFilter = buildSearchOr(q);
   if (orFilter) query = query.or(orFilter);
 
@@ -71,17 +76,21 @@ async function loadOrders() {
     error = err;
   }
   const count = $("ordersCount");
+  const totalEl = $("ordersTotal");
   if (error) {
     if (count) count.textContent = "";
+    if (totalEl) totalEl.textContent = "";
     body.innerHTML = `<tr><td colspan="7" class="banner" style="margin:0;">${esc(friendlyError(error))}</td></tr>`;
     return;
   }
   if (!data || data.length === 0) {
     if (count) count.textContent = ordersCountText(0);
+    if (totalEl) totalEl.textContent = "";
     body.innerHTML = `<tr><td colspan="7" class="muted" style="padding:16px;">${esc(emptyOrdersMessage({ status, q }))}</td></tr>`;
     return;
   }
   if (count) count.textContent = ordersCountText(data.length);
+  if (totalEl) totalEl.textContent = ordersTotalText(data);
   body.innerHTML = data.map(renderOrderRow).join("");
   body.querySelectorAll("tr[data-id]").forEach((tr) => {
     tr.addEventListener("click", () => openOrder(tr.dataset.id));
@@ -158,6 +167,7 @@ function wire() {
   $("signOut").addEventListener("click", async () => { await supabase.auth.signOut(); refreshSessionUI(); });
   $("refresh").addEventListener("click", loadOrders);
   $("statusFilter").addEventListener("change", loadOrders);
+  $("periodFilter")?.addEventListener("change", loadOrders);
   $("search").addEventListener("keydown", (e) => { if (e.key === "Enter") loadOrders(); });
   $("backToList").addEventListener("click", (e) => { e.preventDefault(); setView("list"); loadOrders(); });
 }

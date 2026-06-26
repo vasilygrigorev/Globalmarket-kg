@@ -38,7 +38,8 @@ const referenced = referencedIds(adminJs);
 
 const REQUIRED = [
   "loginView", "accessView", "listView", "detailView",
-  "ordersBody", "statusFilter", "search", "refresh", "signOut", "ordersCount",
+  "ordersBody", "statusFilter", "periodFilter", "search", "refresh", "signOut",
+  "ordersCount", "ordersTotal",
 ];
 
 test("required view/control ids exist in admin/index.html", () => {
@@ -68,6 +69,17 @@ test("admin page loads config.js (optional) then admin.js as a module", () => {
 
 test("admin page is noindex (must not be crawled)", () => {
   assert.match(html, /<meta name="robots" content="noindex/i);
+});
+
+test("status filter options use Russian labels (values stay English)", () => {
+  assert.match(html, /<option value="new">Новый<\/option>/);
+  assert.match(html, /<option value="cancelled">Отменён<\/option>/);
+});
+
+test("period filter offers all/today/7d/30d", () => {
+  for (const v of ["", "today", "7d", "30d"]) {
+    assert.match(html, new RegExp(`<option value="${v}"`));
+  }
 });
 
 test("admin runtime files never contain a service_role reference (anon-only)", () => {

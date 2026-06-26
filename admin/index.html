@@ -70,15 +70,22 @@
         <div class="row" style="margin-bottom:12px;">
           <select id="statusFilter">
             <option value="">Все статусы</option>
-            <option value="new">new</option>
-            <option value="contacted">contacted</option>
-            <option value="confirmed">confirmed</option>
-            <option value="completed">completed</option>
-            <option value="cancelled">cancelled</option>
+            <option value="new">Новый</option>
+            <option value="contacted">Связались</option>
+            <option value="confirmed">Подтверждён</option>
+            <option value="completed">Выполнен</option>
+            <option value="cancelled">Отменён</option>
+          </select>
+          <select id="periodFilter">
+            <option value="">Всё время</option>
+            <option value="today">Сегодня</option>
+            <option value="7d">7 дней</option>
+            <option value="30d">30 дней</option>
           </select>
           <input id="search" type="search" placeholder="Поиск по телефону или имени" style="flex:1; min-width:200px;" />
           <button id="refresh" class="secondary" type="button">Обновить</button>
           <span id="ordersCount" class="muted"></span>
+          <span id="ordersTotal" class="muted"></span>
         </div>
         <p class="muted" style="margin:0 0 12px; font-size:13px;">Нажмите на строку заказа, чтобы открыть детали и сменить статус.</p>
         <div class="card" style="padding:0; overflow-x:auto;">

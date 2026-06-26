@@ -23,7 +23,8 @@ Preview: `https://shared-layout-preview.globalmarket-kg.pages.dev/admin/`
    the "Нет доступа к заказам" screen shows, and no order data appears.
 4. **List** — orders load newest-first; "Показано N заказов" appears; the hint
    "Нажмите на строку заказа…" is visible.
-   - Status filter narrows the list.
+   - Status filter and date-period filter (Сегодня / 7 дней / 30 дней) narrow
+     the list; "Сумма показанных" updates with the visible orders.
    - Search by phone/name narrows the list; an empty result shows
      "По этому фильтру заказов нет".
 5. **Order detail** — click a row:

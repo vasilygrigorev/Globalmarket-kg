@@ -17,6 +17,31 @@ export function statusLabel(status) {
   return STATUS_LABELS[status] || status || "";
 }
 
+// ISO timestamp for a list date filter, or null for "all" (pure).
+// period: "today" | "7d" | "30d" | "" (all).
+export function sinceForPeriod(period, now = new Date()) {
+  const d = new Date(now.getTime());
+  if (period === "today") {
+    d.setHours(0, 0, 0, 0);
+    return d.toISOString();
+  }
+  if (period === "7d") {
+    d.setDate(d.getDate() - 7);
+    return d.toISOString();
+  }
+  if (period === "30d") {
+    d.setDate(d.getDate() - 30);
+    return d.toISOString();
+  }
+  return null;
+}
+
+// Sum of the currently shown orders (pure).
+export function ordersTotalText(orders) {
+  const sum = (orders || []).reduce((s, o) => s + (Number(o.total_kgs) || 0), 0);
+  return `Сумма показанных: ${money(sum)}`;
+}
+
 // Marketing consent summary from a customer_consents list (pure).
 export function consentText(consents) {
   const list = consents || [];

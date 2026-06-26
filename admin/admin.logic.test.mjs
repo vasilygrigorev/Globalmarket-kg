@@ -27,6 +27,8 @@ import {
   statusLabel,
   consentText,
   sourceText,
+  sinceForPeriod,
+  ordersTotalText,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -120,6 +122,24 @@ test("saveFeedback returns text + ok per state", () => {
   assert.equal(err.ok, false);
   assert.match(err.text, /прав администратора/);
   assert.equal(saveFeedback("error").text, "Не удалось сохранить.");
+});
+
+test("sinceForPeriod returns null for all, ISO for ranges", () => {
+  const now = new Date("2026-06-26T12:00:00Z");
+  assert.equal(sinceForPeriod("", now), null);
+  assert.equal(sinceForPeriod("all", now), null);
+  const d7 = sinceForPeriod("7d", now);
+  assert.equal(d7, new Date("2026-06-19T12:00:00Z").toISOString());
+  const d30 = sinceForPeriod("30d", now);
+  assert.ok(new Date(d30) < new Date(d7));
+  const today = sinceForPeriod("today", now);
+  assert.ok(new Date(today) <= now); // midnight of that day, not in the future
+});
+
+test("ordersTotalText sums total_kgs of shown orders", () => {
+  assert.match(ordersTotalText([{ total_kgs: 100 }, { total_kgs: 250 }]), /350 сом/);
+  assert.match(ordersTotalText([]), /0 сом/);
+  assert.match(ordersTotalText([{ total_kgs: "x" }, { total_kgs: 50 }]), /50 сом/);
 });
 
 test("statusLabel maps to Russian, falls back to raw", () => {
