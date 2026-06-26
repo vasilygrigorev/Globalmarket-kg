@@ -1,6 +1,6 @@
 {
   "ordersApi": {
-    "enabled": false,
+    "enabled": true,
     "endpoint": "/api/orders"
   },
   "nav": [
