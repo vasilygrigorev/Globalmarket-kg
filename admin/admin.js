@@ -16,6 +16,7 @@ import {
   loadingRowHtml,
   loginButtonLabel,
   saveFeedback,
+  ordersCountText,
 } from "./admin.logic.js";
 
 const $ = (id) => document.getElementById(id);
@@ -69,14 +70,18 @@ async function loadOrders() {
   } catch (err) {
     error = err;
   }
+  const count = $("ordersCount");
   if (error) {
+    if (count) count.textContent = "";
     body.innerHTML = `<tr><td colspan="7" class="banner" style="margin:0;">${esc(friendlyError(error))}</td></tr>`;
     return;
   }
   if (!data || data.length === 0) {
+    if (count) count.textContent = ordersCountText(0);
     body.innerHTML = `<tr><td colspan="7" class="muted" style="padding:16px;">${esc(emptyOrdersMessage({ status, q }))}</td></tr>`;
     return;
   }
+  if (count) count.textContent = ordersCountText(data.length);
   body.innerHTML = data.map(renderOrderRow).join("");
   body.querySelectorAll("tr[data-id]").forEach((tr) => {
     tr.addEventListener("click", () => openOrder(tr.dataset.id));
@@ -87,12 +92,13 @@ async function openOrder(id) {
   setView("detail");
   const box = $("detailBody");
   box.innerHTML = `<p class="muted">Загрузка…</p>`;
-  let order; let items; let attr; let e1;
+  let order; let items; let attr; let consents; let e1;
   try {
-    [{ data: order, error: e1 }, { data: items }, { data: attr }] = await Promise.all([
+    [{ data: order, error: e1 }, { data: items }, { data: attr }, { data: consents }] = await Promise.all([
       supabase.from("orders").select("*").eq("id", id).single(),
       supabase.from("order_items").select("*").eq("order_id", id),
       supabase.from("marketing_attribution").select("*").eq("order_id", id),
+      supabase.from("customer_consents").select("*").eq("order_id", id),
     ]);
   } catch (err) {
     e1 = err;
@@ -101,7 +107,7 @@ async function openOrder(id) {
     box.innerHTML = `<p class="banner" style="margin:0;">${esc(friendlyError(e1) || "Не удалось загрузить заказ.")}</p>`;
     return;
   }
-  box.innerHTML = renderOrderDetail(order, items, attr);
+  box.innerHTML = renderOrderDetail(order, items, attr, consents);
   $("saveOrder").addEventListener("click", () => saveOrder(id));
 }
 

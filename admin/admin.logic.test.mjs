@@ -22,6 +22,11 @@ import {
   loadingRowHtml,
   loginButtonLabel,
   saveFeedback,
+  customerWaLink,
+  ordersCountText,
+  statusLabel,
+  consentText,
+  sourceText,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -84,7 +89,7 @@ test("emptyOrdersMessage distinguishes filtered vs empty", () => {
 
 test("renderStatusOptions marks current selected", () => {
   const html = renderStatusOptions("confirmed");
-  assert.match(html, /<option value="confirmed" selected>confirmed<\/option>/);
+  assert.match(html, /<option value="confirmed" selected>Подтверждён<\/option>/);
   assert.equal((html.match(/selected/g) || []).length, 1);
 });
 
@@ -115,6 +120,68 @@ test("saveFeedback returns text + ok per state", () => {
   assert.equal(err.ok, false);
   assert.match(err.text, /прав администратора/);
   assert.equal(saveFeedback("error").text, "Не удалось сохранить.");
+});
+
+test("statusLabel maps to Russian, falls back to raw", () => {
+  assert.equal(statusLabel("new"), "Новый");
+  assert.equal(statusLabel("cancelled"), "Отменён");
+  assert.equal(statusLabel("weird"), "weird");
+  assert.equal(statusLabel(""), "");
+});
+
+test("consentText summarizes consents", () => {
+  assert.equal(consentText([]), "—");
+  assert.equal(consentText(null), "—");
+  assert.equal(consentText([{ is_granted: true }]), "да");
+  assert.equal(consentText([{ is_granted: false }]), "нет");
+});
+
+test("sourceText shows present parts or 'не указан'", () => {
+  assert.equal(sourceText({}, []), "не указан");
+  assert.match(sourceText({}, [{ utm_source: "instagram" }]), /utm_source=instagram/);
+  assert.match(sourceText({ customer_source: "друзья" }, []), /ручной=друзья/);
+});
+
+test("renderOrderDetail shows address, promo, consent, RU status", () => {
+  const html = renderOrderDetail(
+    { customer_name: "A", customer_phone: "0700", status: "confirmed", total_kgs: 100,
+      city: "Бишкек", region: "Чуй", address: "ул. 1", promo_code: "SALE10", customer_comment: "" },
+    [], [{ utm_source: "ig" }], [{ is_granted: true }],
+  );
+  assert.match(html, /Бишкек, Чуй, ул\. 1/);   // joined address
+  assert.match(html, /SALE10/);                 // promo
+  assert.match(html, /Согласие на акции<\/dt><dd>да/); // consent
+  assert.match(html, /class="status">Подтверждён</); // RU status badge
+});
+
+test("customerWaLink builds wa.me from digits or returns empty", () => {
+  assert.equal(customerWaLink("+996 700 12-34-56"), "https://wa.me/996700123456");
+  assert.equal(customerWaLink("0700123456"), "https://wa.me/0700123456");
+  assert.equal(customerWaLink(""), "");
+  assert.equal(customerWaLink(null), "");
+});
+
+test("ordersCountText uses correct Russian plural", () => {
+  assert.equal(ordersCountText(1), "Показано 1 заказ");
+  assert.equal(ordersCountText(2), "Показано 2 заказа");
+  assert.equal(ordersCountText(5), "Показано 5 заказов");
+  assert.equal(ordersCountText(11), "Показано 11 заказов");
+  assert.equal(ordersCountText(21), "Показано 21 заказ");
+  assert.equal(ordersCountText(0), "Показано 0 заказов");
+});
+
+test("renderOrderDetail includes a customer WhatsApp link when phone present", () => {
+  const withPhone = renderOrderDetail(
+    { customer_name: "A", customer_phone: "0700123456", status: "new", total_kgs: 1 },
+    [], [],
+  );
+  assert.match(withPhone, /wa\.me\/0700123456/);
+  assert.match(withPhone, /Написать клиенту в WhatsApp/);
+  const noPhone = renderOrderDetail(
+    { customer_name: "A", customer_phone: "", status: "new", total_kgs: 1 },
+    [], [],
+  );
+  assert.ok(!noPhone.includes("Написать клиенту в WhatsApp"));
 });
 
 test("nextView routes by session + admin flag", () => {

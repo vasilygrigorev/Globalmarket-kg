@@ -59,6 +59,23 @@ scripts, the git-tracked secret scan, then the static package build + package
 secret scan. Use `--skip-package` for a quick code-only pass. Run it before
 asking Codex to commit. No network/secrets required.
 
+Manual smoke steps for the deployed admin: [`admin-manual-check.md`](admin-manual-check.md).
+Status & next steps: [`admin-next-steps.md`](admin-next-steps.md).
+
+## Display details
+
+- Statuses show Russian labels via `statusLabel()` (values stay
+  `new/contacted/confirmed/completed/cancelled` to match the DB CHECK): Новый,
+  Связались, Подтверждён, Выполнен, Отменён. Used in the list, the status badge,
+  and the status `<select>`.
+- The order list shows "Показано N заказов" (`#ordersCount`) + a manager hint.
+- The order detail shows items + total, then a facts block: Адрес, Комментарий
+  клиента, Источник рекламы (`sourceText()`), Промокод, Согласие на акции
+  (`consentText()` from `customer_consents`), plus a "Написать клиенту в
+  WhatsApp" link (`customerWaLink()`).
+- Security: the browser uses only the publishable anon key; a test asserts no
+  `service_role` string appears in any shipped admin file.
+
 ## Auth & access model
 
 - The admin page is a static page served by Cloudflare Pages, using the Supabase

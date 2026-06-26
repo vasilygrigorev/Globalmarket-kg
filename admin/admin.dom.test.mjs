@@ -38,7 +38,7 @@ const referenced = referencedIds(adminJs);
 
 const REQUIRED = [
   "loginView", "accessView", "listView", "detailView",
-  "ordersBody", "statusFilter", "search", "refresh", "signOut",
+  "ordersBody", "statusFilter", "search", "refresh", "signOut", "ordersCount",
 ];
 
 test("required view/control ids exist in admin/index.html", () => {
@@ -68,6 +68,18 @@ test("admin page loads config.js (optional) then admin.js as a module", () => {
 
 test("admin page is noindex (must not be crawled)", () => {
   assert.match(html, /<meta name="robots" content="noindex/i);
+});
+
+test("admin runtime files never contain a service_role reference (anon-only)", () => {
+  // The browser/admin must only ever use the publishable anon key. The service
+  // role key must never appear in any shipped admin file.
+  for (const [name, src] of [["index.html", html], ["admin.js", adminJs], ["admin.logic.js", logicJs]]) {
+    assert.ok(!/service_role/i.test(src), `${name} must not reference service_role`);
+  }
+});
+
+test("admin.js uses the anon key (not a service role) for the Supabase client", () => {
+  assert.match(adminJs, /createClient\(\s*window\.GM_SUPABASE_URL\s*,\s*window\.GM_SUPABASE_ANON_KEY/);
 });
 
 test("CSS defines state classes used by JS (.banner, .ok, .hidden)", () => {

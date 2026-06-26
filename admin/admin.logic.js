@@ -4,6 +4,26 @@
 
 export const STATUSES = ["new", "contacted", "confirmed", "completed", "cancelled"];
 
+// Russian labels for order statuses (values stay English to match the DB CHECK).
+export const STATUS_LABELS = {
+  new: "Новый",
+  contacted: "Связались",
+  confirmed: "Подтверждён",
+  completed: "Выполнен",
+  cancelled: "Отменён",
+};
+
+export function statusLabel(status) {
+  return STATUS_LABELS[status] || status || "";
+}
+
+// Marketing consent summary from a customer_consents list (pure).
+export function consentText(consents) {
+  const list = consents || [];
+  if (!list.length) return "—";
+  return list.some((c) => c && c.is_granted) ? "да" : "нет";
+}
+
 export function esc(value) {
   return String(value ?? "").replace(/[&<>"']/g, (c) => (
     { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[c]
@@ -63,6 +83,23 @@ export function emptyOrdersMessage({ status, q } = {}) {
   return "Заказов пока нет (или у вас нет прав администратора).";
 }
 
+// WhatsApp link to contact the CUSTOMER from the admin (digits only; "" if none).
+export function customerWaLink(phone) {
+  const digits = String(phone || "").replace(/\D/g, "");
+  return digits ? `https://wa.me/${digits}` : "";
+}
+
+// "Показано N заказов" with correct Russian plural (pure).
+export function ordersCountText(n) {
+  const count = Number(n) || 0;
+  const d = count % 10;
+  const dd = count % 100;
+  let word = "заказов";
+  if (d === 1 && dd !== 11) word = "заказ";
+  else if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) word = "заказа";
+  return `Показано ${count} ${word}`;
+}
+
 export const LOADING_ROW_TEXT = "Загрузка…";
 
 // Loading placeholder row for the orders table (pure).
@@ -85,7 +122,7 @@ export function saveFeedback(state, error) {
 
 export function renderStatusOptions(current) {
   return STATUSES
-    .map((s) => `<option value="${s}" ${s === current ? "selected" : ""}>${s}</option>`)
+    .map((s) => `<option value="${s}" ${s === current ? "selected" : ""}>${esc(statusLabel(s))}</option>`)
     .join("");
 }
 
@@ -97,7 +134,7 @@ export function renderOrderRow(o) {
       <td>${esc(o.customer_phone)}</td>
       <td>${esc(o.city)}</td>
       <td>${esc(money(o.total_kgs))}</td>
-      <td><span class="status">${esc(o.status)}</span></td>
+      <td><span class="status">${esc(statusLabel(o.status))}</span></td>
       <td>${esc(o.customer_source)}</td>
     </tr>`;
 }
@@ -116,20 +153,40 @@ export function renderItemsRows(items) {
   return rows || `<tr><td colspan="4" class="muted">Нет строк</td></tr>`;
 }
 
-// Pure HTML for the order detail card (escaped). Event wiring stays in admin.js.
-export function renderOrderDetail(order, items, attr) {
+// Source/attribution one-liner (pure). Shows only the parts that are present.
+export function sourceText(order, attr) {
   const a = (attr && attr[0]) || {};
+  const parts = [];
+  if (a.utm_source) parts.push(`utm_source=${a.utm_source}`);
+  if (a.utm_campaign) parts.push(`utm_campaign=${a.utm_campaign}`);
+  if (a.utm_content) parts.push(`utm_content=${a.utm_content}`);
+  if (a.referrer) parts.push(`referrer=${a.referrer}`);
+  if (order.customer_source) parts.push(`ручной=${order.customer_source}`);
+  return parts.length ? parts.join(" / ") : "не указан";
+}
+
+// Pure HTML for the order detail card (escaped). Event wiring stays in admin.js.
+export function renderOrderDetail(order, items, attr, consents) {
+  const address = [order.city, order.region, order.address].filter(Boolean).join(", ") || "—";
   return `
     <div class="row" style="justify-content:space-between;">
       <h2 style="margin:0;">${esc(order.customer_name)} · ${esc(order.customer_phone)}</h2>
-      <span class="status">${esc(order.status)}</span>
+      <span class="status">${esc(statusLabel(order.status))}</span>
     </div>
-    <p class="muted">${esc(when(order.created_at))} · ${esc(order.city)} ${esc(order.region)} ${esc(order.address)}</p>
-    ${order.customer_comment ? `<p>Комментарий клиента: ${esc(order.customer_comment)}</p>` : ""}
+    <p class="muted">${esc(when(order.created_at))}</p>
+    ${customerWaLink(order.customer_phone)
+      ? `<p><a href="${esc(customerWaLink(order.customer_phone))}" target="_blank" rel="noopener">Написать клиенту в WhatsApp</a></p>`
+      : ""}
     <table style="margin:10px 0;"><thead><tr><th>Товар</th><th>Кол-во</th><th>Цена</th><th>Сумма</th></tr></thead>
       <tbody>${renderItemsRows(items)}</tbody></table>
     <p><strong>Итого: ${esc(money(order.total_kgs))}</strong></p>
-    <p class="muted">Источник: utm_source=${esc(a.utm_source)} / utm_campaign=${esc(a.utm_campaign)} / referrer=${esc(a.referrer)} / ручной=${esc(order.customer_source)} / промокод=${esc(order.promo_code)}</p>
+    <dl class="order-facts" style="display:grid; grid-template-columns:auto 1fr; gap:4px 12px; margin:10px 0;">
+      <dt class="muted">Адрес</dt><dd>${esc(address)}</dd>
+      <dt class="muted">Комментарий клиента</dt><dd>${esc(order.customer_comment || "—")}</dd>
+      <dt class="muted">Источник рекламы</dt><dd>${esc(sourceText(order, attr))}</dd>
+      <dt class="muted">Промокод</dt><dd>${esc(order.promo_code || "—")}</dd>
+      <dt class="muted">Согласие на акции</dt><dd>${esc(consentText(consents))}</dd>
+    </dl>
     <hr style="border:none;border-top:1px solid var(--line);margin:14px 0;" />
     <div class="row" style="flex-direction:column; align-items:stretch; gap:10px; max-width:520px;">
       <label>Статус
