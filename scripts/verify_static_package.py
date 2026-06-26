@@ -334,6 +334,21 @@ def verify_admin(package, errors):
         fail(errors, "robots.txt must disallow /admin/")
 
 
+def verify_no_test_files(package, errors):
+    """Defense-in-depth: no test/spec/dev files anywhere in the deploy package."""
+    for path in package.rglob("*"):
+        if not path.is_file():
+            continue
+        name = path.name
+        if (
+            fnmatch.fnmatch(name, "*.test.*")
+            or fnmatch.fnmatch(name, "*.spec.*")
+            or fnmatch.fnmatch(name, "*.example.*")
+        ):
+            rel = path.relative_to(package).as_posix()
+            fail(errors, f"Test/dev file leaked into deploy package: {rel}")
+
+
 def verify_no_secrets(package, errors):
     result = subprocess.run(
         [sys.executable, "scripts/check_no_secrets.py", "--package", str(package)],
@@ -364,6 +379,7 @@ def main():
         verify_forbidden_files(package, errors)
         verify_functions(package, errors)
         verify_admin(package, errors)
+        verify_no_test_files(package, errors)
         verify_no_secrets(package, errors)
         catalog = parse_json(package / "data" / "public-catalog.json", errors)
         parse_json(package / "data" / "site-config.json", errors)

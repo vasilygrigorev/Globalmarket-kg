@@ -4,7 +4,7 @@
 
 import test from "node:test";
 import assert from "node:assert/strict";
-import { onRequestPost } from "./orders.js";
+import { onRequestPost, onRequest } from "./orders.js";
 
 function makeContext(body, env) {
   return {
@@ -103,4 +103,20 @@ test("502 fallback when orders insert fails", async () => {
   const data = await res.json();
   assert.equal(data.ok, false);
   assert.equal(data.fallback, true);
+});
+
+test("onRequest rejects non-POST methods with 405", async () => {
+  const res = await onRequest({ request: { method: "GET" }, env: FULL_ENV });
+  assert.equal(res.status, 405);
+  const data = await res.json();
+  assert.equal(data.error, "method_not_allowed");
+});
+
+test("400 on invalid JSON body", async () => {
+  installFetchMock({});
+  const ctx = { request: { method: "POST", json: async () => { throw new Error("bad json"); } }, env: FULL_ENV };
+  const res = await onRequestPost(ctx);
+  assert.equal(res.status, 400);
+  const data = await res.json();
+  assert.equal(data.error, "invalid_json");
 });

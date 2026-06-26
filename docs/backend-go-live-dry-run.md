@@ -11,7 +11,9 @@ any of these files — only set/not-set, URLs, order ids.
 - `python3 scripts/check_backend_env_shape.py` runs (env "missing" here is normal).
 - `python3 scripts/check_no_secrets.py` clean; `admin/config.js` is NOT tracked
   (`git check-ignore admin/config.js`).
-- `data/site-config.json` → `ordersApi.enabled` is `false`.
+- `data/site-config.json` → `ordersApi.enabled` is a JSON boolean. It starts
+  `false`; on this preview branch it is now `true` (preview go-live done). For a
+  fresh environment it should be `false` until steps B/C below pass.
 - Package ships `functions/api/orders.js` and `admin/{index.html,admin.js,admin.logic.js}`;
   no `*.test.*` / `*.example.*` in the package.
 

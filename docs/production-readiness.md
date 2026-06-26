@@ -21,7 +21,10 @@ Before deploying to `https://globalmarket.kg`, confirm all items below.
    ```
 
    Required result: all tests pass, package OK, tracked-file secret scan OK,
-   package secret scan OK.
+   package secret scan OK. The node suite includes the checkout contract
+   (`tests/checkout.contract.test.mjs`) and the rollback contract
+   (`tests/rollback.contract.test.mjs`), which assert the WhatsApp-only fallback
+   stays real in code and documented — rollback safe by construction.
 
 2. Cloudflare Pages Production environment variables:
 

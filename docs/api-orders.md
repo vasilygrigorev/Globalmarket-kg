@@ -75,10 +75,11 @@ today".
 
 ## Frontend wiring — DONE, behind a disabled flag
 
-The checkout is now wired in `app.js` behind a site-config flag, **off by
-default**, so live behaviour is unchanged until it is deliberately enabled:
+The checkout is wired in `app.js` behind a site-config flag (`false` by default,
+so live behaviour is unchanged until it is deliberately enabled). On this preview
+branch it is currently `true` (preview go-live done):
 
-- `data/site-config.json` → `"ordersApi": { "enabled": false, "endpoint": "/api/orders" }`.
+- `data/site-config.json` → `"ordersApi": { "enabled": <bool>, "endpoint": "/api/orders" }`.
 - On submit, `app.js` builds the order payload (`buildOrderPayload`) and, only if
   `ordersApi.enabled` is true, calls `saveOrderViaApi` (POST `/api/orders`, 6s
   timeout). It uses the returned `manager_whatsapp_url` if present, and on ANY

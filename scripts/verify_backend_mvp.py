@@ -49,7 +49,7 @@ def main():
 
     steps = [
         (
-            "Node tests: orders API + admin helpers + admin DOM contract",
+            "Node tests: orders API + admin helpers/DOM + checkout contract",
             [
                 "node",
                 "--test",
@@ -57,6 +57,9 @@ def main():
                 "functions/api/orders.integration.test.mjs",
                 "admin/admin.logic.test.mjs",
                 "admin/admin.dom.test.mjs",
+                "tests/checkout.contract.test.mjs",
+                "tests/rollback.contract.test.mjs",
+                "tests/runner-coverage.test.mjs",
             ],
         ),
         ("Check admin/admin.js syntax", ["node", "--check", "admin/admin.js"]),
