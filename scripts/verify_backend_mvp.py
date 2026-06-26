@@ -62,6 +62,7 @@ def main():
                 "tests/runner-coverage.test.mjs",
                 "tests/docs-consistency.test.mjs",
                 "tests/category-tiles.test.mjs",
+                "tests/header-menu.test.mjs",
             ],
         ),
         ("Check admin/admin.js syntax", ["node", "--check", "admin/admin.js"]),
