@@ -44,7 +44,7 @@
       "aliases": ["германия", "немецкий", "немецкое", "germany", "европа"],
       "terms": ["германия", "немецкий", "европа", "dalli", "dash"],
       "landingTerms": ["Европа", "Германия", "немецкие товары", "Dalli", "Dash"],
-      "collections": ["europe", "germany"]
+      "collections": ["europe"]
     },
     {
       "id": "glass-cleaning",
