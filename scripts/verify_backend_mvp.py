@@ -68,6 +68,7 @@ def main():
                 "tests/shared-layout.test.mjs",
                 "tests/search-categories.test.mjs",
                 "tests/banner-carousel.test.mjs",
+                "tests/product-consistency.test.mjs",
             ],
         ),
         ("Check admin/admin.js syntax", ["node", "--check", "admin/admin.js"]),
