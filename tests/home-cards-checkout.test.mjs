@@ -31,6 +31,18 @@ test("home product card carries price, brand/type/volume, image, cart, favorite"
   assert.match(renderProducts, /data-favorite="\$\{product\.id\}"/); // favorite
 });
 
+test("home product card keeps open/details + registration discount text", () => {
+  assert.ok(renderProducts, "renderProducts not found");
+  // Product opens: either a real product page link or an in-app open handler.
+  assert.match(renderProducts, /data-product-link="\$\{product\.id\}"|data-open-product="\$\{product\.id\}"/);
+  // "Подробнее" details control opens the product.
+  assert.match(renderProducts, /data-open-product="\$\{product\.id\}"[^>]*>Подробнее</);
+  // Registration discount note shows both registered and not-yet-registered text.
+  assert.match(renderProducts, /registered-price-note/);
+  assert.match(renderProducts, /Скидка регистрации/);
+  assert.match(renderProducts, /После регистрации/);
+});
+
 test("checkout can be submitted without registration", () => {
   assert.ok(submitHandler, "submit handler not found");
   // Only guard is an empty cart; no registration/login gate blocks submit.

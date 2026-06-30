@@ -39,7 +39,8 @@ browser, no Supabase, no Cloudflare, no secrets.
 - `rollback.contract.test.mjs` — flag boolean, WhatsApp fallback, rollback docs,
   function 503 fallback.
 - `home-cards-checkout.test.mjs` — home card price/brand/type/volume/image/cart/
-  favorite; checkout without registration; UTM/customer fields sent.
+  favorite, product open/details + registration discount text; checkout without
+  registration; UTM/customer fields sent.
 - `category-tiles.test.mjs` — 11 tiles, images exist, real catalog categories.
 - `header-menu.test.mjs` — 11 menu sections = 11 tiles by name; shared menu source.
 - `shared-layout.test.mjs` — header/footer from shared partials (not diverged);
@@ -57,6 +58,9 @@ browser, no Supabase, no Cloudflare, no secrets.
   indexable.
 - `product-consistency.test.mjs` — manifest ↔ catalog data, page price ↔ catalog,
   gallery card/front/back, perfume single card image, page essentials.
+- `gallery-completeness.test.mjs` — catalog-level AGENTS photo contract: no
+  incomplete non-perfume gallery (1–2 images), perfume single card, product.image
+  equals galleryImages[0], multi-image galleries lead with the card image.
 - `seo-consistency.test.mjs` — product+landing canonical/og:url/title vs manifest
   and sitemap; unique product canonicals.
 - `home-seo.test.mjs` — homepage canonical/description, social meta, PWA bits,
@@ -72,4 +76,5 @@ browser, no Supabase, no Cloudflare, no secrets.
 - `scripts/check_no_secrets.py` — JWT/.env/service_role / committed admin config.
 - `scripts/check_backend_env_shape.py` — env/config shape, no values printed.
 - `scripts/verify_static_package.py` — deploy package: required files, no test/dev
-  leaks, functions + admin runtime present, secret scan.
+  leaks, functions + admin runtime present, secret scan, and data/ allowlist (only
+  the five public data files ship — no store.db/products.csv/raw sources leak).

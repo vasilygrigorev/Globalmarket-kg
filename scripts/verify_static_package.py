@@ -108,6 +108,22 @@ def verify_forbidden_files(package, errors):
             fail(errors, f"Forbidden root artifact in package: {rel}")
 
 
+def verify_data_dir_allowlist(package, errors):
+    # The deploy package must ship ONLY the public data files. This catches a
+    # future packager change that copies internal data (store.db, products.csv,
+    # catalog.json, manual_products.json, *.mxl, scan-state files) into data/,
+    # which could leak customer or raw-source data to the public site.
+    data_dir = package / "data"
+    if not data_dir.is_dir():
+        return  # missing required files is reported elsewhere
+    for path in data_dir.rglob("*"):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(data_dir).as_posix()
+        if rel not in REQUIRED_DATA_FILES:
+            fail(errors, f"Unexpected file in package data/: {rel}")
+
+
 def verify_catalog_images(package, catalog, errors):
     missing = []
     for product in catalog.get("products", []):
@@ -377,6 +393,7 @@ def main():
     else:
         verify_required_files(package, errors)
         verify_forbidden_files(package, errors)
+        verify_data_dir_allowlist(package, errors)
         verify_functions(package, errors)
         verify_admin(package, errors)
         verify_no_test_files(package, errors)

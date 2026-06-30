@@ -69,6 +69,7 @@ def main():
                 "tests/search-categories.test.mjs",
                 "tests/banner-carousel.test.mjs",
                 "tests/product-consistency.test.mjs",
+                "tests/gallery-completeness.test.mjs",
                 "tests/home-cards-checkout.test.mjs",
                 "tests/seo-consistency.test.mjs",
                 "tests/home-seo.test.mjs",
