@@ -29,6 +29,18 @@ import {
   sourceText,
   sinceForPeriod,
   ordersTotalText,
+  csvField,
+  ordersToCsv,
+  csvFilename,
+  CSV_COLUMNS,
+  PAGE_SIZE,
+  pageRange,
+  hasMore,
+  moreButtonText,
+  sortColumn,
+  SORT_OPTIONS,
+  DEFAULT_SORT,
+  parseMinAmount,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -233,4 +245,91 @@ test("renderOrderDetail escapes, totals, status select, empty items", () => {
   assert.match(html, /instagram/);                      // attribution
   assert.match(html, /id="saveOrder"/);                 // save button present
   assert.ok(!html.includes('x"y'), "manager_comment must be HTML-escaped");
+});
+
+test("csvField quotes commas/quotes/newlines and defuses formula injection", () => {
+  assert.equal(csvField("plain"), "plain");
+  assert.equal(csvField("a,b"), '"a,b"');
+  assert.equal(csvField('say "hi"'), '"say ""hi"""');
+  assert.equal(csvField("line1\nline2"), '"line1\nline2"');
+  assert.equal(csvField("=SUM(A1)"), "'=SUM(A1)");
+  assert.equal(csvField("+1"), "'+1");
+  assert.equal(csvField(null), "");
+});
+
+test("ordersToCsv emits a BOM, header row, and one data row per order", () => {
+  const csv = ordersToCsv([
+    { created_at: "2026-06-29T10:00:00Z", customer_name: "Иван", customer_phone: "0700",
+      city: "Бишкек", total_kgs: 1499.6, status: "new", customer_source: "ig" },
+  ]);
+  assert.ok(csv.startsWith("﻿"), "should start with UTF-8 BOM");
+  const lines = csv.replace(/^﻿/, "").trimEnd().split("\r\n");
+  assert.equal(lines.length, 2);
+  assert.equal(lines[0], CSV_COLUMNS.map(([, l]) => l).join(","));
+  assert.match(lines[1], /Иван/);
+  assert.match(lines[1], /Новый/);   // status localized
+  assert.match(lines[1], /1500/);    // total rounded, plain number
+});
+
+test("ordersToCsv on empty list returns header only", () => {
+  const csv = ordersToCsv([]).replace(/^﻿/, "").trimEnd();
+  assert.equal(csv, CSV_COLUMNS.map(([, l]) => l).join(","));
+});
+
+test("csvFilename is date-stamped orders-YYYY-MM-DD.csv", () => {
+  assert.equal(csvFilename(new Date("2026-06-29T08:00:00Z")), "orders-2026-06-29.csv");
+  assert.match(csvFilename(), /^orders-\d{4}-\d{2}-\d{2}\.csv$/);
+});
+
+test("pageRange gives inclusive 0-based ranges per page", () => {
+  assert.deepEqual(pageRange(0, 50), [0, 49]);
+  assert.deepEqual(pageRange(1, 50), [50, 99]);
+  assert.deepEqual(pageRange(2, 50), [100, 149]);
+  assert.deepEqual(pageRange(0), [0, PAGE_SIZE - 1]);
+  // defensive: bad input clamps to a valid first page
+  assert.deepEqual(pageRange(-3, 50), [0, 49]);
+  assert.deepEqual(pageRange("x", 0), [0, PAGE_SIZE - 1]);
+});
+
+test("hasMore is true only when a full page came back", () => {
+  assert.equal(hasMore(50, 50), true);
+  assert.equal(hasMore(51, 50), true);
+  assert.equal(hasMore(49, 50), false);
+  assert.equal(hasMore(0, 50), false);
+});
+
+test("moreButtonText reflects busy state", () => {
+  assert.equal(moreButtonText(false), "Показать ещё");
+  assert.equal(moreButtonText(true), "Загрузка…");
+});
+
+test("sortColumn maps known values to safe order specs", () => {
+  assert.deepEqual(sortColumn("created_desc"), { column: "created_at", ascending: false });
+  assert.deepEqual(sortColumn("total_asc"), { column: "total_kgs", ascending: true });
+  assert.deepEqual(sortColumn("name_asc"), { column: "customer_name", ascending: true });
+});
+
+test("sortColumn falls back to default for unknown/empty input", () => {
+  assert.deepEqual(sortColumn(""), SORT_OPTIONS[DEFAULT_SORT]);
+  assert.deepEqual(sortColumn("evil; drop table"), SORT_OPTIONS[DEFAULT_SORT]);
+  assert.deepEqual(sortColumn(undefined), SORT_OPTIONS[DEFAULT_SORT]);
+});
+
+test("every sort option targets a whitelisted column only", () => {
+  const allowed = new Set(["created_at", "total_kgs", "customer_name"]);
+  for (const spec of Object.values(SORT_OPTIONS)) {
+    assert.ok(allowed.has(spec.column), `unexpected sort column ${spec.column}`);
+    assert.equal(typeof spec.ascending, "boolean");
+  }
+});
+
+test("parseMinAmount returns a positive number or null", () => {
+  assert.equal(parseMinAmount(""), null);
+  assert.equal(parseMinAmount(null), null);
+  assert.equal(parseMinAmount("0"), null);
+  assert.equal(parseMinAmount("-5"), null);
+  assert.equal(parseMinAmount("abc"), null);
+  assert.equal(parseMinAmount("1500"), 1500);
+  assert.equal(parseMinAmount("1 500 сом"), 1500);
+  assert.equal(parseMinAmount("99,5"), 99.5);
 });

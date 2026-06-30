@@ -125,6 +125,113 @@ export function ordersCountText(n) {
   return `Показано ${count} ${word}`;
 }
 
+// --- Amount filter (pure) ---
+
+// Parse the "min amount" input into a non-negative number, or null when the
+// field is empty/invalid (so no filter is applied). Accepts comma decimals and
+// strips spaces/currency, so "1 500 сом" -> 1500.
+export function parseMinAmount(value) {
+  if (value == null) return null;
+  const cleaned = String(value).replace(/\s/g, "").replace(",", ".");
+  const m = cleaned.match(/-?\d+(?:\.\d+)?/);
+  if (!m) return null;
+  const n = Number(m[0]);
+  if (!Number.isFinite(n) || n <= 0) return null;
+  return n;
+}
+
+// --- Sorting (pure) ---
+
+// Allowed sort options for the orders list: select value -> server order spec.
+// Only whitelisted columns are accepted, so the value can't inject an arbitrary
+// column into the PostgREST .order() call.
+export const SORT_OPTIONS = {
+  created_desc: { column: "created_at", ascending: false },
+  created_asc: { column: "created_at", ascending: true },
+  total_desc: { column: "total_kgs", ascending: false },
+  total_asc: { column: "total_kgs", ascending: true },
+  name_asc: { column: "customer_name", ascending: true },
+  name_desc: { column: "customer_name", ascending: false },
+};
+
+export const DEFAULT_SORT = "created_desc";
+
+// Resolve a select value to a safe { column, ascending } spec (pure).
+// Unknown/empty values fall back to the default (newest first).
+export function sortColumn(value) {
+  return SORT_OPTIONS[value] || SORT_OPTIONS[DEFAULT_SORT];
+}
+
+// --- Pagination (pure) ---
+
+// How many orders to fetch per page.
+export const PAGE_SIZE = 50;
+
+// Inclusive [from, to] range for a PostgREST .range() call (0-based page).
+export function pageRange(page, size = PAGE_SIZE) {
+  const p = Math.max(0, Math.floor(Number(page) || 0));
+  const s = Math.max(1, Math.floor(Number(size) || PAGE_SIZE));
+  const from = p * s;
+  return [from, from + s - 1];
+}
+
+// A page is "full" when it returned exactly `size` rows, so more may exist.
+export function hasMore(batchCount, size = PAGE_SIZE) {
+  return (Number(batchCount) || 0) >= Math.max(1, Math.floor(Number(size) || PAGE_SIZE));
+}
+
+// Label for the "load more" button, depending on in-flight state (pure).
+export function moreButtonText(busy) {
+  return busy ? "Загрузка…" : "Показать ещё";
+}
+
+// --- CSV export of the shown orders (pure; admin.js feeds it the loaded rows) ---
+
+// Columns exported, in order: [object key, header label].
+export const CSV_COLUMNS = [
+  ["created_at", "Дата"],
+  ["customer_name", "Клиент"],
+  ["customer_phone", "Телефон"],
+  ["city", "Город"],
+  ["total_kgs", "Сумма (сом)"],
+  ["status", "Статус"],
+  ["customer_source", "Источник"],
+];
+
+// Quote one CSV field per RFC 4180: wrap in quotes when it contains a comma,
+// quote, or newline; double any inner quotes. A leading =,+,-,@ is prefixed
+// with a single quote to defuse spreadsheet formula injection.
+export function csvField(value) {
+  let s = String(value ?? "");
+  if (/^[=+\-@]/.test(s)) s = `'${s}`;
+  if (/[",\n\r]/.test(s)) s = `"${s.replace(/"/g, '""')}"`;
+  return s;
+}
+
+// Build a CSV string from the orders currently shown. Dates become a readable
+// local string, status becomes its Russian label, total is a plain number.
+// Returns a header-only CSV when there are no orders. Includes a UTF-8 BOM so
+// Excel opens Cyrillic correctly.
+export function ordersToCsv(orders) {
+  const header = CSV_COLUMNS.map(([, label]) => csvField(label)).join(",");
+  const rows = (orders || []).map((o) =>
+    CSV_COLUMNS.map(([key]) => {
+      if (key === "created_at") return csvField(when(o[key]));
+      if (key === "status") return csvField(statusLabel(o[key]));
+      if (key === "total_kgs") return csvField(Math.round(Number(o[key]) || 0));
+      return csvField(o[key]);
+    }).join(",")
+  );
+  return "﻿" + [header, ...rows].join("\r\n") + "\r\n";
+}
+
+// Timestamped export filename, e.g. orders-2026-06-29.csv (pure).
+export function csvFilename(now = new Date()) {
+  const d = now instanceof Date && !Number.isNaN(now.getTime()) ? now : new Date();
+  const pad = (n) => String(n).padStart(2, "0");
+  return `orders-${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}.csv`;
+}
+
 export const LOADING_ROW_TEXT = "Загрузка…";
 
 // Loading placeholder row for the orders table (pure).

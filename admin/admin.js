@@ -19,10 +19,23 @@ import {
   ordersCountText,
   ordersTotalText,
   sinceForPeriod,
+  ordersToCsv,
+  csvFilename,
+  PAGE_SIZE,
+  pageRange,
+  hasMore,
+  moreButtonText,
+  sortColumn,
+  parseMinAmount,
 } from "./admin.logic.js";
 
 const $ = (id) => document.getElementById(id);
 const show = (el, on) => el.classList.toggle("hidden", !on);
+
+// Orders currently shown in the list — used by the CSV export button.
+let lastOrders = [];
+// Current page index for pagination (reset to 0 on any filter change).
+let page = 0;
 
 const configured = isConfigured({
   url: window.GM_SUPABASE_URL,
@@ -52,20 +65,34 @@ async function refreshSessionUI() {
   if (view === "list") loadOrders();
 }
 
-async function loadOrders() {
+function setMoreButton({ visible, busy }) {
+  const btn = $("loadMore");
+  if (!btn) return;
+  show(btn, visible);
+  btn.disabled = Boolean(busy);
+  btn.textContent = moreButtonText(busy);
+}
+
+async function loadOrders({ append = false } = {}) {
   const body = $("ordersBody");
-  body.innerHTML = loadingRowHtml();
+  if (append) { page += 1; setMoreButton({ visible: true, busy: true }); }
+  else { page = 0; lastOrders = []; body.innerHTML = loadingRowHtml(); setMoreButton({ visible: false, busy: false }); }
+
   const status = $("statusFilter").value;
   const q = $("search").value;
   const period = $("periodFilter") ? $("periodFilter").value : "";
+  const [from, to] = pageRange(page, PAGE_SIZE);
+  const sort = sortColumn($("sortBy") ? $("sortBy").value : "");
   let query = supabase
     .from("orders")
     .select("id,created_at,status,total_kgs,customer_name,customer_phone,city,customer_source")
-    .order("created_at", { ascending: false })
-    .limit(100);
+    .order(sort.column, { ascending: sort.ascending })
+    .range(from, to);
   if (status) query = query.eq("status", status);
   const since = sinceForPeriod(period);
   if (since) query = query.gte("created_at", since);
+  const minAmount = parseMinAmount($("minAmount") ? $("minAmount").value : "");
+  if (minAmount != null) query = query.gte("total_kgs", minAmount);
   const orFilter = buildSearchOr(q);
   if (orFilter) query = query.or(orFilter);
 
@@ -78,23 +105,31 @@ async function loadOrders() {
   const count = $("ordersCount");
   const totalEl = $("ordersTotal");
   if (error) {
+    if (!append) lastOrders = [];
     if (count) count.textContent = "";
     if (totalEl) totalEl.textContent = "";
-    body.innerHTML = `<tr><td colspan="7" class="banner" style="margin:0;">${esc(friendlyError(error))}</td></tr>`;
+    if (!append) body.innerHTML = `<tr><td colspan="7" class="banner" style="margin:0;">${esc(friendlyError(error))}</td></tr>`;
+    setMoreButton({ visible: append, busy: false });
     return;
   }
-  if (!data || data.length === 0) {
+  const batch = data || [];
+  if (!append && batch.length === 0) {
+    lastOrders = [];
     if (count) count.textContent = ordersCountText(0);
     if (totalEl) totalEl.textContent = "";
     body.innerHTML = `<tr><td colspan="7" class="muted" style="padding:16px;">${esc(emptyOrdersMessage({ status, q }))}</td></tr>`;
+    setMoreButton({ visible: false, busy: false });
     return;
   }
-  if (count) count.textContent = ordersCountText(data.length);
-  if (totalEl) totalEl.textContent = ordersTotalText(data);
-  body.innerHTML = data.map(renderOrderRow).join("");
+  lastOrders = append ? lastOrders.concat(batch) : batch;
+  if (count) count.textContent = ordersCountText(lastOrders.length);
+  if (totalEl) totalEl.textContent = ordersTotalText(lastOrders);
+  const rowsHtml = lastOrders.map(renderOrderRow).join("");
+  body.innerHTML = rowsHtml;
   body.querySelectorAll("tr[data-id]").forEach((tr) => {
     tr.addEventListener("click", () => openOrder(tr.dataset.id));
   });
+  setMoreButton({ visible: hasMore(batch.length, PAGE_SIZE), busy: false });
 }
 
 async function openOrder(id) {
@@ -118,6 +153,20 @@ async function openOrder(id) {
   }
   box.innerHTML = renderOrderDetail(order, items, attr, consents);
   $("saveOrder").addEventListener("click", () => saveOrder(id));
+}
+
+function exportOrdersCsv() {
+  if (!lastOrders.length) return;
+  const csv = ordersToCsv(lastOrders);
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = csvFilename();
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
 }
 
 function setSaveMsg(msg, state, error) {
@@ -166,8 +215,12 @@ function wire() {
   });
   $("signOut").addEventListener("click", async () => { await supabase.auth.signOut(); refreshSessionUI(); });
   $("refresh").addEventListener("click", loadOrders);
+  $("exportCsv").addEventListener("click", exportOrdersCsv);
+  $("loadMore").addEventListener("click", () => loadOrders({ append: true }));
   $("statusFilter").addEventListener("change", loadOrders);
   $("periodFilter")?.addEventListener("change", loadOrders);
+  $("sortBy")?.addEventListener("change", loadOrders);
+  $("minAmount")?.addEventListener("keydown", (e) => { if (e.key === "Enter") loadOrders(); });
   $("search").addEventListener("keydown", (e) => { if (e.key === "Enter") loadOrders(); });
   $("backToList").addEventListener("click", (e) => { e.preventDefault(); setView("list"); loadOrders(); });
 }

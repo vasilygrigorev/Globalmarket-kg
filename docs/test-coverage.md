@@ -1,0 +1,75 @@
+# Test coverage — Global Market KG
+
+Local, no-network safety net for the storefront + backend/admin MVP. One command
+runs everything:
+
+```bash
+python3 scripts/verify_backend_mvp.py
+```
+
+It runs the Node contract tests below, `node --check` on the admin/scripts JS,
+`py_compile` on the backend/admin Python, the secret scan (tracked + package),
+and the static package build/verify. `tests/runner-coverage.test.mjs` enforces
+that every `*.test.mjs` is wired into this runner, so nothing is silently skipped.
+
+All tests are contract / DOM / CSS / data checks over committed files — no
+browser, no Supabase, no Cloudflare, no secrets.
+
+## Backend / API (functions/api)
+
+- `orders.test.mjs` — pure order logic: validation, server-side total recompute,
+  attribution/consent normalization, WhatsApp URL building.
+- `orders.integration.test.mjs` — `onRequestPost`/`onRequest` with mocked fetch:
+  503 unconfigured, 400 empty/invalid, insert orchestration, 405, 502 fallback.
+
+## Admin (admin/)
+
+- `admin.logic.test.mjs` — pure helpers (esc/money/when, config + admin-session,
+  search sanitization, status labels, consent/source text, detail render, states,
+  CSV export: field quoting + formula-injection guard, ordersToCsv, csvFilename;
+  pagination: pageRange, hasMore, moreButtonText;
+  sorting: sortColumn whitelist + safe fallback; amount filter: parseMinAmount).
+- `admin.dom.test.mjs` — required ids, HTML↔JS id contract, dynamic detail ids,
+  anon-only (no service_role), CSS state classes.
+
+## Storefront contracts (tests/)
+
+- `checkout.contract.test.mjs` — checkout fields ↔ payload, flag-gated save +
+  WhatsApp fallback, no service_role.
+- `rollback.contract.test.mjs` — flag boolean, WhatsApp fallback, rollback docs,
+  function 503 fallback.
+- `home-cards-checkout.test.mjs` — home card price/brand/type/volume/image/cart/
+  favorite; checkout without registration; UTM/customer fields sent.
+- `category-tiles.test.mjs` — 11 tiles, images exist, real catalog categories.
+- `header-menu.test.mjs` — 11 menu sections = 11 tiles by name; shared menu source.
+- `shared-layout.test.mjs` — header/footer from shared partials (not diverged);
+  footer links; product-page action set.
+- `storefront-layout.test.mjs` — section order (header→banner→strip→grid), fixed
+  header + body offset (no overlap), menu open/close, cart/search present.
+- `banner-carousel.test.mjs` — hero/banner carousel contract.
+- `search-categories.test.mjs` — search UI + synonyms source; synonyms target only
+  real catalog categories/brands/collections; nav targets valid.
+
+## Product pages + SEO (tests/)
+
+- `product-pages.test.mjs` — every product page: og/twitter, favicon/manifest/
+  theme-color, Product + Breadcrumb JSON-LD, WhatsApp order/question, shared menu,
+  indexable.
+- `product-consistency.test.mjs` — manifest ↔ catalog data, page price ↔ catalog,
+  gallery card/front/back, perfume single card image, page essentials.
+- `seo-consistency.test.mjs` — product+landing canonical/og:url/title vs manifest
+  and sitemap; unique product canonicals.
+- `home-seo.test.mjs` — homepage canonical/description, social meta, PWA bits,
+  Organization + WebSite/SearchAction JSON-LD.
+- `robots-sitemap.test.mjs` — robots.txt (Allow, Disallow /admin/, Sitemap) and
+  sitemap.xml shape (urlset + image namespace, homepage/catalog/privacy, URL count).
+
+## Guards (tests/ + scripts/)
+
+- `runner-coverage.test.mjs` — all test files are wired into the preflight.
+- `docs-consistency.test.mjs` — doc script references exist; release/readiness keep
+  the orders-API smoke; env var names consistent.
+- `scripts/check_no_secrets.py` — JWT/.env/service_role / committed admin config.
+- `scripts/check_backend_env_shape.py` — env/config shape, no values printed.
+- `scripts/verify_static_package.py` — deploy package: required files, no test/dev
+  leaks, functions + admin runtime present, secret scan.
