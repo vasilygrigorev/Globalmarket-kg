@@ -16,16 +16,18 @@ Current branch:
 collab/preview-baseline
 ```
 
-Latest local checkpoint before this handoff:
+Latest local checkpoints before this handoff:
 
-- `7228919 Add storefront checkout and SEO contract tests`
+- `6d66c08 Add storefront consistency guardrails`
+- `7059ed7 Add landing-page settings and site-integrity guardrails`
 
 Current state:
 
 - Backend/Supabase/Admin MVP groundwork exists.
 - Checkout can use the backend behind the configured flag and still falls back to WhatsApp.
 - Admin page exists and is covered by local tests.
-- Product pages, landing pages, sitemap, robots, shared header/footer, menu, category strip, SEO, and checkout contracts are covered by `scripts/verify_backend_mvp.py`.
+- Product pages, landing pages, sitemap, robots, shared header/footer, menu, category strip, SEO, checkout, settings, and site integrity are covered by `scripts/verify_backend_mvp.py`.
+- Latest full verifier result from Codex: 158/158 tests passed, static package OK, tracked/package secret scans clean.
 - Do not push or deploy production unless the user explicitly asks.
 
 Known harmless dirty files after a full verification run:
@@ -40,10 +42,11 @@ Do not commit those two unless the task explicitly needs them.
 Before editing, read:
 
 - `AGENTS.md`
-- `docs/project-stage-map.md`
 - `docs/test-coverage.md`
+- `docs/product-photo-rules.md`
+- `docs/import-workflow.md`
+- `docs/catalog-taxonomy.md`
 - `docs/current-tech-improvements.md`
-- `docs/backend-go-live-checklist.md`
 - `/Users/macmini/.codex/shared-state/COLLAB-PROTOCOL.md`
 - `/Users/macmini/.codex/shared-state/handoff.md`
 - `/Users/macmini/.codex/shared-state/tasks.md`
@@ -59,30 +62,37 @@ git branch --show-current
 
 If there are unrelated or conflicting changes, stop and report them.
 
-## Main Task — Storefront Quality Pass
+## Main Task — Catalog Data Quality Guardrails
 
-Make one larger local-only pass over the storefront so future visual/catalog changes are safer.
+Make one larger local-only pass over catalog/product data quality so future Petya photo imports and 1C stock refreshes are less likely to silently break the storefront.
 
 Work in this order:
 
-1. Inspect the current homepage, product-page, category-strip, shared header/footer, menu, and checkout-related tests.
-2. Find 2-4 realistic gaps that can be protected by local no-network tests or small docs updates.
-3. Add tests only where they prevent real regressions. Prefer contract tests that read HTML/CSS/JS/data files over brittle pixel-perfect tests.
-4. If a tiny code/doc fix is required to make an existing behavior consistent, do it narrowly.
-5. Keep all changes local-only and production-safe.
+1. Inspect existing catalog/data tests:
+   - `tests/product-consistency.test.mjs`
+   - `tests/gallery-completeness.test.mjs`
+   - `tests/search-categories.test.mjs`
+   - `tests/settings-contract.test.mjs`
+   - `tests/landing-pages.test.mjs`
+2. Find 2-4 real catalog risks that are not already protected.
+3. Add focused no-network tests and wire them into `scripts/verify_backend_mvp.py`.
+4. Add or update a short doc section only if it helps future Codex/Claude/Petya work.
+5. Keep any code changes tiny and directly tied to a failing or newly protected contract.
 
 Good candidate areas:
 
-- product cards keep the expected action set: add to cart, favorite, product open/details, price, registration discount text;
-- category strip and menu stay aligned with `data/site-config.json`;
-- search synonyms still point to real categories/brands/collections and include user brainstorm words;
-- product pages and homepage keep shared header/footer without drifting;
-- checkout still works without registration and keeps WhatsApp fallback;
-- backend orders API stays disabled/enabled only via config flag and never removes fallback;
-- robots/sitemap/product canonical consistency;
-- package excludes tests and secrets but includes required runtime files.
+- product IDs are unique and stable-looking;
+- product titles are non-empty and not obvious placeholders;
+- retail prices are positive, finite, and within a sane range;
+- active/in-stock products have either a real image/card or are explicitly allowed as placeholder products;
+- every referenced image path in `image`/`galleryImages` exists on disk;
+- product category/categoryId/brand fields are internally consistent enough for filters and landing pages;
+- perfume products follow the one-card-image rule and have 5 ml/travel wording;
+- products with multiple images do not accidentally expose temporary Telegram/contact-sheet/OCR filenames;
+- category/collection/brand landing counts are consistent with the catalog;
+- search synonyms include the user brainstorm terms where appropriate and never point to missing targets.
 
-Do not spend time on perfect design. This task is guardrails, consistency, and small safe fixes.
+Do not try to perfectly fix all catalog content. The goal is guardrails and small obvious fixes, not full merchandising cleanup.
 
 ## Hard Boundaries
 
@@ -97,7 +107,8 @@ Do not:
 - commit service-role keys or screenshots;
 - rewrite the architecture;
 - migrate product catalog to SQL;
-- introduce a new framework;
+- run Petya import automation unless explicitly asked;
+- remap product photos manually unless the task reveals a clear, tiny, safe correction;
 - make large visual redesigns;
 - commit timestamp-only `docs/project-stage-map.md` or date-only `sitemap.xml`.
 
@@ -123,7 +134,7 @@ Suggested message format:
 
 ```bash
 git add <only relevant files>
-git commit -m "Add storefront consistency guardrails"
+git commit -m "Add catalog data quality guardrails"
 ```
 
 If `.git/index.lock` or `.git/HEAD.lock` blocks commit and no git process is running, report the exact blocker for Codex to clear on the Mac. Do not keep retrying blindly.
