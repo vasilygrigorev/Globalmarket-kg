@@ -69,6 +69,11 @@ browser, no Supabase, no Cloudflare, no secrets.
   expose no temp/contact-sheet/OCR/dup filenames.
 - `landing-counts.test.mjs` — category/collection landing `count` equals the
   catalog count for that facet; brand landing pages non-empty with shown ≤ count.
+- `catalog-fields.test.mjs` — per-product field validity: known status
+  (active/review), non-empty searchText/description/brand, rating in 0..5, units
+  non-empty and perfume sold in ml.
+- `search-synonyms-terms.test.mjs` — documented customer-language brainstorm
+  terms stay present, every synonym group is usable, no repeated word in a list.
 - `seo-consistency.test.mjs` — product+landing canonical/og:url/title vs manifest
   and sitemap; unique product canonicals.
 - `home-seo.test.mjs` — homepage canonical/description, social meta, PWA bits,
