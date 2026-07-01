@@ -61,6 +61,14 @@ browser, no Supabase, no Cloudflare, no secrets.
 - `gallery-completeness.test.mjs` — catalog-level AGENTS photo contract: no
   incomplete non-perfume gallery (1–2 images), perfume single card, product.image
   equals galleryImages[0], multi-image galleries lead with the card image.
+- `catalog-data-quality.test.mjs` — product data invariants: unique prd_ ids,
+  real (non-placeholder) titles, sane retail prices, registered ≤ retail, every
+  referenced image exists on disk, categoryId↔category 1:1, perfume 5 ml wording.
+- `catalog-image-hygiene.test.mjs` — gallery filenames end with an approved
+  card-front/front/back (or perfume card-front-vN) suffix, allowed extension, and
+  expose no temp/contact-sheet/OCR/dup filenames.
+- `landing-counts.test.mjs` — category/collection landing `count` equals the
+  catalog count for that facet; brand landing pages non-empty with shown ≤ count.
 - `seo-consistency.test.mjs` — product+landing canonical/og:url/title vs manifest
   and sitemap; unique product canonicals.
 - `home-seo.test.mjs` — homepage canonical/description, social meta, PWA bits,
