@@ -38,3 +38,23 @@ Run before deployment after product-photo changes:
 ```bash
 python3 scripts/verify_product_galleries.py
 ```
+
+## Photo coverage report
+
+After each Petya upload or 1C stock refresh, check how much of the catalog now
+has real product photos:
+
+```bash
+python3 scripts/report_photo_coverage.py          # human-readable
+python3 scripts/report_photo_coverage.py --json    # machine-readable
+```
+
+It prints total products, products with real photos, coverage %, a per-category
+breakdown, the perfume card-only count, and the known card+front-only exceptions.
+As of the latest local run: 97/441 products have real photos (~22%). The gallery
+contract (`scripts/verify_product_galleries.py`) and the coverage assumptions
+(`tests/photo-coverage.test.mjs`) are both wired into
+`scripts/verify_backend_mvp.py`, so a future import that breaks them fails the
+preflight. The card+front-only exception list must stay identical in this doc,
+`AGENTS.md`, `scripts/verify_product_galleries.py`, and
+`scripts/report_photo_coverage.py`.

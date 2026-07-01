@@ -74,6 +74,11 @@ browser, no Supabase, no Cloudflare, no secrets.
   non-empty and perfume sold in ml.
 - `search-synonyms-terms.test.mjs` — documented customer-language brainstorm
   terms stay present, every synonym group is usable, no repeated word in a list.
+- `photo-coverage.test.mjs` — photo coverage math is sane; every photographed
+  product has a valid gallery (perfume=1, others=3 or a known exception); the
+  card+front-only exception list is identical across the gallery verifier, the
+  report script, `docs/product-photo-rules.md`, and `AGENTS.md`; exception ids
+  exist in the catalog.
 - `seo-consistency.test.mjs` — product+landing canonical/og:url/title vs manifest
   and sitemap; unique product canonicals.
 - `home-seo.test.mjs` — homepage canonical/description, social meta, PWA bits,
@@ -100,3 +105,8 @@ browser, no Supabase, no Cloudflare, no secrets.
 - `scripts/verify_static_package.py` — deploy package: required files, no test/dev
   leaks, functions + admin runtime present, secret scan, and data/ allowlist (only
   the five public data files ship — no store.db/products.csv/raw sources leak).
+- `scripts/verify_product_galleries.py` — product gallery contract (card/front/back
+  order, perfume single card, known exceptions), now wired into the preflight.
+- `scripts/report_photo_coverage.py` — deterministic photo-coverage report
+  (total, with photos, %, by category, perfume, exceptions); run manually or
+  `--json`. Syntax-checked in the preflight.
