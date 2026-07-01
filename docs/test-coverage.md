@@ -67,6 +67,15 @@ browser, no Supabase, no Cloudflare, no secrets.
   Organization + WebSite/SearchAction JSON-LD.
 - `robots-sitemap.test.mjs` — robots.txt (Allow, Disallow /admin/, Sitemap) and
   sitemap.xml shape (urlset + image namespace, homepage/catalog/privacy, URL count).
+- `landing-pages.test.mjs` — landing manifest shape: known type + matching path
+  prefix (category/collection/brand), path ends /<slug>/, url = base + path, unique
+  slugs, title/seoTerms/count present, each page generated on disk; category slugs
+  resolve to catalog categoryIds and collection slugs to catalog collections.
+- `site-integrity.test.mjs` — no orphan product pages (disk ↔ manifest both ways),
+  404.html exists + noindex + title, homepage favicon/apple-touch-icon files exist.
+- `settings-contract.test.mjs` — public-catalog `settings` carries the fields the
+  storefront uses (manager_whatsapp, registration discount, free-delivery
+  threshold), values are sane, and agree with data/settings.json.
 
 ## Guards (tests/ + scripts/)
 
