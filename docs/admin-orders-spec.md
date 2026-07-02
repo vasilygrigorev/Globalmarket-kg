@@ -186,3 +186,20 @@ Day-to-day steps a manager takes once the admin is live (no code needed):
 Everything above is client-side over the anon key; RLS (`public.is_admin()`) is
 the real access control. Creating admin users, secrets, and deploy stay
 owner/Codex-only.
+
+## Phone manager workflow
+
+The admin is usable from a phone or small laptop — no separate app needed:
+
+- The page ships a responsive `width=device-width` viewport and stays `noindex`.
+- Filter and action rows wrap, and buttons are at least 40px tall (comfortable
+  tap targets).
+- The orders table keeps a readable minimum width and scrolls horizontally
+  inside its card instead of crushing the seven columns on a narrow screen.
+- The search box and the "amount from" field send mobile keyboards a sensible
+  action hint (search / done).
+- In an order, one tap opens **WhatsApp** or **Позвонить** (the phone dialer);
+  **Копировать сводку** puts a paste-ready order summary on the clipboard.
+
+These affordances are locked by `tests/admin-mobile.test.mjs` so a future edit
+can't silently break phone usability.

@@ -31,6 +31,9 @@ browser, no Supabase, no Cloudflare, no secrets.
   sorting: sortColumn whitelist + safe fallback; amount filter: parseMinAmount).
 - `admin.dom.test.mjs` — required ids, HTML↔JS id contract, dynamic detail ids,
   anon-only (no service_role), CSS state classes.
+- `admin-mobile.test.mjs` — phone/daily-use readiness: responsive viewport, title
+  + noindex, wrapping control rows, ≥40px tap targets, horizontally scrollable
+  orders table with a min width, and mobile keyboard hints on the filter inputs.
 - `admin-workflow.test.mjs` — manager flow: saving updates only status +
   manager_comment (no data loss) scoped to one order; list query selects every
   field the table/CSV render; save button disables during save; order detail

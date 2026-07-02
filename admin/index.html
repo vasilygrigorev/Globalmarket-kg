@@ -21,7 +21,7 @@
       input, select, textarea { padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
       button { min-height: 40px; padding: 0 14px; border: 0; border-radius: 8px; background: var(--ink); color: #fff; cursor: pointer; }
       button.secondary { background: #fff; color: var(--ink); border: 1px solid var(--line); }
-      table { width: 100%; border-collapse: collapse; }
+      table { width: 100%; min-width: 640px; border-collapse: collapse; }
       th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: top; }
       th { color: var(--muted); font-weight: 600; }
       .status { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; border: 1px solid var(--line); }
@@ -90,8 +90,8 @@
             <option value="name_asc">Имя А-Я</option>
             <option value="name_desc">Имя Я-А</option>
           </select>
-          <input id="minAmount" type="number" min="0" inputmode="numeric" placeholder="Сумма от, сом" style="width:140px;" />
-          <input id="search" type="search" placeholder="Поиск по телефону или имени" style="flex:1; min-width:200px;" />
+          <input id="minAmount" type="number" min="0" inputmode="numeric" enterkeyhint="done" placeholder="Сумма от, сом" style="width:140px;" />
+          <input id="search" type="search" enterkeyhint="search" autocomplete="off" placeholder="Поиск по телефону или имени" style="flex:1; min-width:200px;" />
           <button id="refresh" class="secondary" type="button">Обновить</button>
           <button id="resetFilters" class="secondary" type="button">Сбросить фильтры</button>
           <button id="exportCsv" class="secondary" type="button">Экспорт CSV</button>
