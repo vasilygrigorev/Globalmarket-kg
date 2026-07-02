@@ -41,6 +41,7 @@ import {
   SORT_OPTIONS,
   DEFAULT_SORT,
   parseMinAmount,
+  orderSummaryText,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -332,4 +333,39 @@ test("parseMinAmount returns a positive number or null", () => {
   assert.equal(parseMinAmount("1500"), 1500);
   assert.equal(parseMinAmount("1 500 сом"), 1500);
   assert.equal(parseMinAmount("99,5"), 99.5);
+});
+
+test("orderSummaryText builds a WhatsApp-readable summary with present parts", () => {
+  const text = orderSummaryText(
+    { created_at: "2026-06-29T10:00:00Z", customer_name: "Иван", customer_phone: "+996700123456",
+      city: "Бишкек", region: "Чуй", address: "ул. 1", total_kgs: 1400, status: "confirmed",
+      customer_source: "instagram", promo_code: "SALE10", customer_comment: "после 18",
+      manager_comment: "перезвонить" },
+    [
+      { title_snapshot: "Persil гель", qty: 2, line_total_kgs: 1000 },
+      { title_snapshot: "Fairy", qty: 1, line_total_kgs: 400 },
+    ],
+  );
+  assert.match(text, /Клиент: Иван/);
+  assert.match(text, /Телефон: \+996700123456/);
+  assert.match(text, /Адрес: Бишкек, Чуй, ул\. 1/);
+  assert.match(text, /2× Persil гель — 1\D?000 сом/);
+  assert.match(text, /1× Fairy — 400 сом/);
+  assert.match(text, /Итого: 1\D?400 сом/);
+  assert.match(text, /Статус: Подтверждён/);
+  assert.match(text, /Источник: instagram/);
+  assert.match(text, /Промокод: SALE10/);
+  assert.match(text, /Комментарий клиента: после 18/);
+  assert.match(text, /Комментарий менеджера: перезвонить/);
+  assert.ok(!/</.test(text), "summary must be plain text (no HTML)");
+});
+
+test("orderSummaryText skips absent parts and handles no items", () => {
+  const text = orderSummaryText({ customer_name: "A", total_kgs: 0, status: "new" }, []);
+  assert.match(text, /Клиент: A/);
+  assert.match(text, /Итого: 0 сом/);
+  assert.match(text, /Статус: Новый/);
+  assert.ok(!/Телефон:/.test(text), "no phone line when absent");
+  assert.ok(!/Адрес:/.test(text), "no address line when absent");
+  assert.ok(!/Источник:/.test(text), "no source line when absent");
 });

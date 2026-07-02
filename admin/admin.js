@@ -27,6 +27,7 @@ import {
   moreButtonText,
   sortColumn,
   parseMinAmount,
+  orderSummaryText,
 } from "./admin.logic.js";
 
 const $ = (id) => document.getElementById(id);
@@ -153,6 +154,18 @@ async function openOrder(id) {
   }
   box.innerHTML = renderOrderDetail(order, items, attr, consents);
   $("saveOrder").addEventListener("click", () => saveOrder(id));
+  $("copySummary").addEventListener("click", () => copyOrderSummary(order, items));
+}
+
+async function copyOrderSummary(order, items) {
+  const msg = $("copyMsg");
+  const text = orderSummaryText(order, items);
+  try {
+    await navigator.clipboard.writeText(text);
+    if (msg) { msg.textContent = "Скопировано ✓"; msg.classList.add("ok"); }
+  } catch {
+    if (msg) { msg.textContent = "Не удалось скопировать"; msg.classList.remove("ok"); }
+  }
 }
 
 function exportOrdersCsv() {

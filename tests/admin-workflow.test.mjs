@@ -10,7 +10,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { STATUSES, STATUS_LABELS, renderOrderDetail, renderStatusOptions, CSV_COLUMNS } from "../admin/admin.logic.js";
+import { STATUSES, STATUS_LABELS, renderOrderDetail, renderStatusOptions, CSV_COLUMNS, orderSummaryText } from "../admin/admin.logic.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const adminJs = readFileSync(join(ROOT, "admin", "admin.js"), "utf8");
@@ -75,6 +75,17 @@ test("order detail shows customer, WhatsApp, every item row, total, address, and
   assert.match(html, /перезвонить/);                  // manager comment prefilled
   assert.match(html, /id="editComment"/);             // editable manager note
   assert.match(html, /id="saveOrder"/);               // save control
+});
+
+test("order detail offers a copy-summary button that copies plain text via clipboard", () => {
+  const html = renderOrderDetail({ customer_name: "A", status: "new", total_kgs: 100 }, [], [], []);
+  assert.match(html, /id="copySummary"/);              // button exists in detail
+  assert.match(adminJs, /copySummary"\)\.addEventListener/); // wired
+  assert.match(adminJs, /orderSummaryText\(/);          // uses the pure summary helper
+  assert.match(adminJs, /navigator\.clipboard\.writeText/); // copies to clipboard
+  // The summary is read-only plain text — no DB write, no HTML.
+  const summary = orderSummaryText({ customer_name: "A", status: "new", total_kgs: 100 }, []);
+  assert.ok(!/</.test(summary), "summary must be plain text");
 });
 
 test("status set is the stable Russian 5 and all are offered in the detail select", () => {

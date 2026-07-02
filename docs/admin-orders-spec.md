@@ -162,3 +162,26 @@ Keep it plain and fast (no framework needed). Mobile-friendly.
 2. Add `admin/` files; fill `admin/config.js` locally (git-ignored).
 3. Build + preview deploy; test login + list + status change against preview.
 4. Then iterate (filters, pagination polish).
+
+## Manager MVP workflow
+
+Day-to-day steps a manager takes once the admin is live (no code needed):
+
+1. Open `/admin/`, sign in with the manager email/password.
+2. In the list, narrow down with the controls: status filter, period
+   (today / 7d / 30d), minimum amount, sort (newest, amount, name), and the
+   phone/name search box. The counter and "sum of shown" update live.
+3. Use **Показать ещё** to load older orders (50 per page), or **Экспорт CSV**
+   to download the currently shown orders (opens cleanly in Excel).
+4. Click a row to open the order. The detail shows customer name, phone, a
+   one-tap WhatsApp link, delivery address, item lines with prices, total,
+   ad source/attribution, promo code, and marketing consent.
+5. **Копировать сводку** copies a clean, WhatsApp-ready plain-text summary of the
+   order to paste into a chat with the customer or courier.
+6. Set the new **Статус** and add a **Комментарий менеджера**, then **Сохранить**
+   — this updates only the status and manager note, never the customer's data.
+7. Empty states are explicit: "no orders yet" vs "nothing matches this filter".
+
+Everything above is client-side over the anon key; RLS (`public.is_admin()`) is
+the real access control. Creating admin users, secrets, and deploy stay
+owner/Codex-only.

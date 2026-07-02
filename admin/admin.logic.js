@@ -232,6 +232,37 @@ export function csvFilename(now = new Date()) {
   return `orders-${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}.csv`;
 }
 
+// --- Order summary for the manager (plain text, WhatsApp-readable; pure) ---
+
+// Build a clean, copy-pasteable order summary a manager can paste into WhatsApp.
+// Plain text only (no HTML): customer, phone, delivery address, item lines,
+// total, status, source, and comments — skipping any parts that are absent.
+export function orderSummaryText(order, items) {
+  const o = order || {};
+  const lines = [];
+  lines.push(`Заказ${o.created_at ? ` · ${when(o.created_at)}` : ""}`);
+  if (o.customer_name) lines.push(`Клиент: ${o.customer_name}`);
+  if (o.customer_phone) lines.push(`Телефон: ${o.customer_phone}`);
+  const address = [o.city, o.region, o.address].filter(Boolean).join(", ");
+  if (address) lines.push(`Адрес: ${address}`);
+  const rows = (items || []).filter(Boolean);
+  if (rows.length) {
+    lines.push("—");
+    for (const it of rows) {
+      const qty = Number(it.qty) || 0;
+      lines.push(`${qty}× ${it.title_snapshot || ""} — ${money(it.line_total_kgs)}`);
+    }
+  }
+  lines.push("—");
+  lines.push(`Итого: ${money(o.total_kgs)}`);
+  lines.push(`Статус: ${statusLabel(o.status)}`);
+  if (o.customer_source) lines.push(`Источник: ${o.customer_source}`);
+  if (o.promo_code) lines.push(`Промокод: ${o.promo_code}`);
+  if (o.customer_comment) lines.push(`Комментарий клиента: ${o.customer_comment}`);
+  if (o.manager_comment) lines.push(`Комментарий менеджера: ${o.manager_comment}`);
+  return lines.join("\n");
+}
+
 export const LOADING_ROW_TEXT = "Загрузка…";
 
 // Loading placeholder row for the orders table (pure).
@@ -327,6 +358,11 @@ export function renderOrderDetail(order, items, attr, consents) {
       <label>Комментарий менеджера
         <textarea id="editComment" rows="3">${esc(order.manager_comment || "")}</textarea>
       </label>
-      <div class="row"><button id="saveOrder" type="button">Сохранить</button><span id="saveMsg" class="muted"></span></div>
+      <div class="row">
+        <button id="saveOrder" type="button">Сохранить</button>
+        <button id="copySummary" type="button" class="secondary">Копировать сводку</button>
+        <span id="saveMsg" class="muted"></span>
+        <span id="copyMsg" class="muted"></span>
+      </div>
     </div>`;
 }
