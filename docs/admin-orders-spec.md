@@ -50,6 +50,24 @@ The admin handles these states with clear text (pure helpers in
 - **Save feedback** — `saveFeedback("saving"|"done"|"error")` returns
   `{text, ok}`; the save button is disabled during the request and the message
   turns green (`.ok`) on success.
+- **Session lost / expired** — `refreshSessionUI()` reads the session inside a
+  try/catch and, on failure, fails safe to the login view with a `friendlyError`
+  banner instead of a blank screen. `init()` also subscribes to
+  `supabase.auth.onAuthStateChange`, so an expired token, a failed refresh, or a
+  sign-out in another tab re-routes the UI (the `INITIAL_SESSION` event is
+  skipped to avoid loading the list twice on first render).
+
+## Accessibility (keyboard + screen reader)
+
+- Orders-list rows are real controls, not just clickable `<tr>`s:
+  `renderOrderRow()` marks each row `tabindex="0" role="button"` with an
+  `aria-label` naming the status, customer, and total; `loadOrders()` wires a
+  `keydown` handler so **Enter** and **Space** open the focused row exactly like
+  a click (Space calls `preventDefault()` so the page doesn't scroll).
+- The order count reflects the whole filtered result set: the list query passes
+  `{ count: "exact" }` and `ordersMatchingText()` renders "Всего N заказов"
+  (server total, independent of pagination), while "Сумма показанных" stays
+  honestly scoped to the loaded rows.
 
 ## Local preflight
 

@@ -34,6 +34,13 @@ browser, no Supabase, no Cloudflare, no secrets.
 - `admin-mobile.test.mjs` — phone/daily-use readiness: responsive viewport, title
   + noindex, wrapping control rows, ≥40px tap targets, horizontally scrollable
   orders table with a min width, and mobile keyboard hints on the filter inputs.
+- `admin-resilience.test.mjs` — manager-facing robustness + accessibility:
+  order rows are keyboard-operable (focusable, `role="button"`, labelled, opened
+  with Enter/Space); `refreshSessionUI` reads the session inside try/catch and
+  fails safe to the login view; `init` subscribes to `onAuthStateChange` to
+  re-route on expiry/sign-out (skipping INITIAL_SESSION to avoid a double load);
+  the list query requests an exact server-side match count so the "Всего N
+  заказов" total reflects the whole filtered set, not just the loaded page.
 - `admin-package-hygiene.test.mjs` — the deploy packager excludes admin
   example/test/spec files and the package verifier forbids config templates and
   requires the three admin runtime files.

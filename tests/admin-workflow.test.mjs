@@ -40,7 +40,8 @@ test("saving an order updates ONLY status and manager_comment (no data loss)", (
 
 test("the orders list query selects every field the table and CSV export render", () => {
   assert.ok(loadOrders, "loadOrders not found");
-  const sel = loadOrders.match(/\.select\("([^"]+)"\)/);
+  // Tolerates an optional second arg, e.g. .select("cols", { count: "exact" }).
+  const sel = loadOrders.match(/\.select\("([^"]+)"(?:,\s*\{[^}]*\})?\)/);
   assert.ok(sel, "no .select in loadOrders");
   const columns = new Set(sel[1].split(",").map((c) => c.trim()));
   for (const [key] of CSV_COLUMNS) {

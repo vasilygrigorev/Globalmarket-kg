@@ -122,15 +122,30 @@ export function customerTelLink(phone) {
   return `tel:${raw.trim().startsWith("+") ? "+" : ""}${digits}`;
 }
 
-// "Показано N заказов" with correct Russian plural (pure).
-export function ordersCountText(n) {
+// Russian plural for "заказ" (pure): 1 заказ, 2 заказа, 5 заказов.
+export function pluralOrders(n) {
   const count = Number(n) || 0;
   const d = count % 10;
   const dd = count % 100;
-  let word = "заказов";
-  if (d === 1 && dd !== 11) word = "заказ";
-  else if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) word = "заказа";
-  return `Показано ${count} ${word}`;
+  if (d === 1 && dd !== 11) return "заказ";
+  if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) return "заказа";
+  return "заказов";
+}
+
+// "Показано N заказов" — how many rows are currently loaded (pure).
+export function ordersCountText(n) {
+  const count = Number(n) || 0;
+  return `Показано ${count} ${pluralOrders(count)}`;
+}
+
+// "Всего N заказов" from the server-side exact match count (pure).
+// `total` is the count of ALL orders matching the current filter, not just the
+// loaded page, so the manager sees the real size of the result set even while
+// paginating. Returns "" when the count is unknown (null/undefined).
+export function ordersMatchingText(total) {
+  if (total == null) return "";
+  const n = Number(total) || 0;
+  return `Всего ${n} ${pluralOrders(n)}`;
 }
 
 // --- Amount filter (pure) ---
@@ -300,8 +315,12 @@ export function renderStatusOptions(current) {
 }
 
 export function renderOrderRow(o) {
+  // Rows are keyboard-operable: focusable, announced as a button, and opened
+  // with Enter/Space (handler wired in admin.js). The label gives screen-reader
+  // users the key facts without opening the order.
+  const label = `Открыть заказ: ${statusLabel(o.status)}, ${o.customer_name || "без имени"}, ${money(o.total_kgs)}`;
   return `
-    <tr data-id="${esc(o.id)}" style="cursor:pointer;">
+    <tr data-id="${esc(o.id)}" tabindex="0" role="button" aria-label="${esc(label)}" style="cursor:pointer;">
       <td>${esc(when(o.created_at))}</td>
       <td>${esc(o.customer_name)}</td>
       <td>${esc(o.customer_phone)}</td>

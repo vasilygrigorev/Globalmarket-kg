@@ -24,6 +24,7 @@ import {
   saveFeedback,
   customerWaLink,
   ordersCountText,
+  ordersMatchingText,
   statusLabel,
   consentText,
   sourceText,
@@ -203,6 +204,17 @@ test("ordersCountText uses correct Russian plural", () => {
   assert.equal(ordersCountText(11), "Показано 11 заказов");
   assert.equal(ordersCountText(21), "Показано 21 заказ");
   assert.equal(ordersCountText(0), "Показано 0 заказов");
+});
+
+test("ordersMatchingText reports the server-side total, or nothing when unknown", () => {
+  assert.equal(ordersMatchingText(1), "Всего 1 заказ");
+  assert.equal(ordersMatchingText(3), "Всего 3 заказа");
+  assert.equal(ordersMatchingText(42), "Всего 42 заказа");
+  assert.equal(ordersMatchingText(137), "Всего 137 заказов");
+  assert.equal(ordersMatchingText(0), "Всего 0 заказов");
+  // Unknown count (server omitted it) → empty, so the fallback can take over.
+  assert.equal(ordersMatchingText(null), "");
+  assert.equal(ordersMatchingText(undefined), "");
 });
 
 test("renderOrderDetail includes a customer WhatsApp link when phone present", () => {

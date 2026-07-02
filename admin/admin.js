@@ -11,6 +11,7 @@ import {
   friendlyError,
   emptyOrdersMessage,
   renderOrderRow,
+  ordersMatchingText,
   nextView,
   renderOrderDetail,
   loadingRowHtml,
@@ -54,8 +55,19 @@ function setView(name) {
 }
 
 async function refreshSessionUI() {
-  const { data } = await supabase.auth.getSession();
-  const session = data && data.session;
+  let session = null;
+  try {
+    const { data } = await supabase.auth.getSession();
+    session = data && data.session;
+  } catch (err) {
+    // Network/SDK failure while reading the session: fail safe to the login
+    // view with a clear message instead of a blank screen. RLS still protects
+    // the data regardless of what the client shows.
+    setView("login");
+    const box = $("loginError");
+    if (box) { box.textContent = friendlyError(err); show(box, true); }
+    return;
+  }
   $("who").textContent = session ? (session.user.email || "вошли") : "";
   show($("signOut"), Boolean(session));
   const view = nextView(session);
@@ -86,7 +98,7 @@ async function loadOrders({ append = false } = {}) {
   const sort = sortColumn($("sortBy") ? $("sortBy").value : "");
   let query = supabase
     .from("orders")
-    .select("id,created_at,status,total_kgs,customer_name,customer_phone,city,customer_source")
+    .select("id,created_at,status,total_kgs,customer_name,customer_phone,city,customer_source", { count: "exact" })
     .order(sort.column, { ascending: sort.ascending })
     .range(from, to);
   if (status) query = query.eq("status", status);
@@ -97,38 +109,48 @@ async function loadOrders({ append = false } = {}) {
   const orFilter = buildSearchOr(q);
   if (orFilter) query = query.or(orFilter);
 
-  let data, error;
+  let data, error, matchCount;
   try {
-    ({ data, error } = await query);
+    ({ data, error, count: matchCount } = await query);
   } catch (err) {
     error = err;
   }
-  const count = $("ordersCount");
+  const countEl = $("ordersCount");
   const totalEl = $("ordersTotal");
   if (error) {
     if (!append) lastOrders = [];
-    if (count) count.textContent = "";
+    if (countEl) countEl.textContent = "";
     if (totalEl) totalEl.textContent = "";
     if (!append) body.innerHTML = `<tr><td colspan="7" class="banner" style="margin:0;">${esc(friendlyError(error))}</td></tr>`;
     setMoreButton({ visible: append, busy: false });
     return;
   }
   const batch = data || [];
+  // Server-side exact count of ALL orders matching the filter (independent of
+  // pagination); fall back to the loaded count if the server omits it.
+  const setCount = (loaded) => {
+    if (countEl) countEl.textContent = ordersMatchingText(matchCount) || ordersCountText(loaded);
+  };
   if (!append && batch.length === 0) {
     lastOrders = [];
-    if (count) count.textContent = ordersCountText(0);
+    setCount(0);
     if (totalEl) totalEl.textContent = "";
     body.innerHTML = `<tr><td colspan="7" class="muted" style="padding:16px;">${esc(emptyOrdersMessage({ status, q }))}</td></tr>`;
     setMoreButton({ visible: false, busy: false });
     return;
   }
   lastOrders = append ? lastOrders.concat(batch) : batch;
-  if (count) count.textContent = ordersCountText(lastOrders.length);
+  setCount(lastOrders.length);
   if (totalEl) totalEl.textContent = ordersTotalText(lastOrders);
   const rowsHtml = lastOrders.map(renderOrderRow).join("");
   body.innerHTML = rowsHtml;
   body.querySelectorAll("tr[data-id]").forEach((tr) => {
-    tr.addEventListener("click", () => openOrder(tr.dataset.id));
+    const open = () => openOrder(tr.dataset.id);
+    tr.addEventListener("click", open);
+    // Keyboard access: Enter/Space open the focused row like a click.
+    tr.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+    });
   });
   setMoreButton({ visible: hasMore(batch.length, PAGE_SIZE), busy: false });
 }
@@ -267,6 +289,14 @@ function init() {
   }
   supabase = createClient(window.GM_SUPABASE_URL, window.GM_SUPABASE_ANON_KEY);
   wire();
+  // Keep the view in sync when the session changes outside our control: a failed
+  // token refresh, expiry, or a sign-out in another tab routes back to login
+  // instead of leaving a dead screen. The INITIAL_SESSION event is skipped —
+  // the explicit refreshSessionUI() below handles first render (no double load).
+  supabase.auth.onAuthStateChange((event) => {
+    if (event === "INITIAL_SESSION") return;
+    refreshSessionUI();
+  });
   refreshSessionUI();
 }
 
