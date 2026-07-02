@@ -57,6 +57,7 @@ def main():
                 "functions/api/orders.integration.test.mjs",
                 "admin/admin.logic.test.mjs",
                 "admin/admin.dom.test.mjs",
+                "tests/admin-workflow.test.mjs",
                 "tests/checkout.contract.test.mjs",
                 "tests/rollback.contract.test.mjs",
                 "tests/runner-coverage.test.mjs",

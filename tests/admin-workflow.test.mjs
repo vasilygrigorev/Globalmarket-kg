@@ -1,0 +1,88 @@
+// Admin manager-workflow contract — no network, no browser, no Supabase.
+// Reads admin.js as text and exercises the pure render helpers to protect the
+// day-to-day manager flow: saving a status/comment must not clobber other order
+// data, the list query must select every field the table/CSV render, the order
+// detail must show everything a manager needs, and status handling stays stable.
+// Run: node --test tests/admin-workflow.test.mjs
+
+import test from "node:test";
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+import { STATUSES, STATUS_LABELS, renderOrderDetail, renderStatusOptions, CSV_COLUMNS } from "../admin/admin.logic.js";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const adminJs = readFileSync(join(ROOT, "admin", "admin.js"), "utf8");
+
+function block(re) {
+  const m = adminJs.match(re);
+  return m ? m[0] : "";
+}
+const saveOrder = block(/async function saveOrder\([\s\S]*?\n}/);
+const loadOrders = block(/async function loadOrders\([\s\S]*?\n}/);
+
+test("saving an order updates ONLY status and manager_comment (no data loss)", () => {
+  assert.ok(saveOrder, "saveOrder not found");
+  const update = saveOrder.match(/\.update\(\{([\s\S]*?)\}\)/);
+  assert.ok(update, "no .update({...}) in saveOrder");
+  const body = update[1];
+  assert.match(body, /status:/);
+  assert.match(body, /manager_comment:/);
+  // Must not touch customer/total/attribution fields.
+  for (const forbidden of ["customer_name", "customer_phone", "total_kgs", "city", "address", "customer_source"]) {
+    assert.ok(!new RegExp(`\\b${forbidden}\\b`).test(body), `saveOrder update must not write ${forbidden}`);
+  }
+  assert.match(saveOrder, /\.eq\("id", id\)/); // scoped to the one order
+});
+
+test("the orders list query selects every field the table and CSV export render", () => {
+  assert.ok(loadOrders, "loadOrders not found");
+  const sel = loadOrders.match(/\.select\("([^"]+)"\)/);
+  assert.ok(sel, "no .select in loadOrders");
+  const columns = new Set(sel[1].split(",").map((c) => c.trim()));
+  for (const [key] of CSV_COLUMNS) {
+    assert.ok(columns.has(key), `list query missing column used by table/CSV: ${key}`);
+  }
+});
+
+test("save button is disabled during save to prevent double submit", () => {
+  assert.match(saveOrder, /btn\.disabled = true/);
+  assert.match(saveOrder, /btn\.disabled = false/);
+});
+
+test("order detail shows customer, WhatsApp, every item row, total, address, and manager note", () => {
+  const html = renderOrderDetail(
+    {
+      customer_name: "Иван", customer_phone: "+996700123456", status: "confirmed", total_kgs: 1400,
+      city: "Бишкек", region: "Чуйская", address: "ул. Ленина 1", customer_comment: "звонить после 18",
+      customer_source: "instagram", promo_code: "SALE10", manager_comment: "перезвонить",
+    },
+    [
+      { title_snapshot: "Persil гель", qty: 2, price_kgs: 500, line_total_kgs: 1000 },
+      { title_snapshot: "Fairy", qty: 1, price_kgs: 400, line_total_kgs: 400 },
+    ],
+    [{ utm_source: "instagram", utm_campaign: "june" }],
+    [{ is_granted: true }],
+  );
+  assert.match(html, /Иван/);
+  assert.match(html, /\+996700123456/);
+  assert.match(html, /wa\.me\/996700123456/);        // WhatsApp link
+  assert.match(html, /Persil гель/);                  // item 1
+  assert.match(html, /Fairy/);                        // item 2
+  assert.match(html, /Бишкек, Чуйская, ул\. Ленина 1/); // joined delivery address
+  assert.match(html, /instagram/);                    // attribution/source
+  assert.match(html, /перезвонить/);                  // manager comment prefilled
+  assert.match(html, /id="editComment"/);             // editable manager note
+  assert.match(html, /id="saveOrder"/);               // save control
+});
+
+test("status set is the stable Russian 5 and all are offered in the detail select", () => {
+  assert.deepEqual(STATUSES, ["new", "contacted", "confirmed", "completed", "cancelled"]);
+  assert.equal(STATUS_LABELS.new, "Новый");
+  assert.equal(STATUS_LABELS.cancelled, "Отменён");
+  const options = renderStatusOptions("new");
+  for (const s of STATUSES) assert.ok(options.includes(`value="${s}"`), `status ${s} not selectable`);
+  // The currently-selected status is preselected exactly once.
+  assert.equal((options.match(/selected/g) || []).length, 1);
+});

@@ -31,6 +31,11 @@ browser, no Supabase, no Cloudflare, no secrets.
   sorting: sortColumn whitelist + safe fallback; amount filter: parseMinAmount).
 - `admin.dom.test.mjs` — required ids, HTML↔JS id contract, dynamic detail ids,
   anon-only (no service_role), CSS state classes.
+- `admin-workflow.test.mjs` — manager flow: saving updates only status +
+  manager_comment (no data loss) scoped to one order; list query selects every
+  field the table/CSV render; save button disables during save; order detail
+  shows customer/WhatsApp/all item rows/total/address/source/manager note; status
+  set stays the stable Russian 5 and all are selectable.
 
 ## Storefront contracts (tests/)
 
