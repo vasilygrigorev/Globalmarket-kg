@@ -65,6 +65,22 @@ test("registered prices are positive and never above retail", () => {
   assert.deepEqual(bad, [], `bad registered prices: ${bad.slice(0, 8).join(", ")}`);
 });
 
+test("registered price is a real discount within a sane band (1–10%)", () => {
+  // The registration discount is a core selling point; guard that every product
+  // is actually cheaper for registered users and the discount isn't absurd
+  // (catches an import that zeroes the discount or mangles a price).
+  const bad = [];
+  for (const p of products) {
+    const reg = num(p.registeredPriceKgs);
+    const retail = num(p.retailPriceKgs);
+    if (!Number.isFinite(reg) || !Number.isFinite(retail) || retail <= 0) continue; // covered elsewhere
+    if (reg >= retail) { bad.push(`${p.id}: no discount ${reg}/${retail}`); continue; }
+    const pct = (1 - reg / retail) * 100;
+    if (pct < 1 || pct > 10) bad.push(`${p.id}: ${pct.toFixed(1)}%`);
+  }
+  assert.deepEqual(bad, [], `discount out of band: ${bad.slice(0, 8).join(", ")}`);
+});
+
 test("every referenced product image exists on disk", () => {
   const missing = [];
   for (const p of products) {
