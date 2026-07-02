@@ -88,7 +88,8 @@ browser, no Supabase, no Cloudflare, no secrets.
   catalog count for that facet; brand landing pages non-empty with shown ≤ count.
 - `catalog-fields.test.mjs` — per-product field validity: known status
   (active/review), non-empty searchText/description/brand, rating in 0..5, units
-  non-empty and perfume sold in ml.
+  non-empty and perfume sold in ml; searchText is findable by brand, product
+  name, and category (protects catalog search).
 - `search-synonyms-terms.test.mjs` — documented customer-language brainstorm
   terms stay present, every synonym group is usable, no repeated word in a list.
 - `photo-coverage.test.mjs` — photo coverage math is sane; every photographed

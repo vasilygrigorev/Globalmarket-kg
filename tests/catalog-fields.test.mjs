@@ -35,6 +35,23 @@ test("searchText, description, and brand are non-empty", () => {
   assert.deepEqual(bad, [], `empty fields: ${bad.slice(0, 8).join(", ")}`);
 });
 
+test("searchText is findable by brand, product name, and category", () => {
+  // The storefront search matches against searchText; if a future import drops
+  // the brand/title/category from it, that facet silently stops matching.
+  const norm = (s) => String(s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  const bad = [];
+  for (const p of products) {
+    const st = norm(p.searchText);
+    const brand = norm(p.brand);
+    const category = norm(p.category);
+    const titleWords = norm(p.title).split(" ").filter((w) => w.length > 2).slice(0, 2);
+    if (brand && !st.includes(brand)) bad.push(`${p.id}: brand`);
+    if (category && !st.includes(category)) bad.push(`${p.id}: category`);
+    if (titleWords.length && !titleWords.every((w) => st.includes(w))) bad.push(`${p.id}: title`);
+  }
+  assert.deepEqual(bad, [], `searchText not findable: ${bad.slice(0, 8).join(", ")}`);
+});
+
 test("rating is a finite number within 0..5", () => {
   const bad = products
     .filter((p) => {
