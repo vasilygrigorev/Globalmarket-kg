@@ -18,18 +18,18 @@ collab/preview-baseline
 
 Latest local checkpoints before this handoff:
 
-- `4ade484 Add photo coverage workflow guardrails`
 - `0ed6728 Add admin manager workflow guardrails`
-- `d79c0cf Add storefront accessibility guardrails`
+- `aa38f8d Add admin order-summary copy and manager workflow docs`
+- `51ff1ef Add admin call link and reset-filters usability`
+- `8c4c5ee Add admin order item summary helper`
 
 Current state:
 
 - Backend/Supabase/Admin MVP groundwork exists.
 - Checkout can save orders through `/api/orders` when enabled and still falls back to WhatsApp.
-- Admin page exists and has manager workflow guardrails.
-- Storefront a11y guardrails for card/product images are now wired into `scripts/verify_backend_mvp.py`.
+- Admin has manager workflow basics: copy summary, call link, reset filters, status/comment guardrails, item count summary.
 - Current photo coverage baseline: 97 / 441 products = 22.0%.
-- Latest full verifier result from Codex after `d79c0cf`: `Backend/admin MVP verification OK`; package OK; secret scans clean.
+- Latest full verifier result from Codex after `8c4c5ee`: `Backend/admin MVP verification OK`; package OK; secret scans clean.
 - Do not push or deploy production unless the user explicitly asks.
 
 Known harmless dirty files after a full verification run:
@@ -69,42 +69,44 @@ git branch --show-current
 
 If there are unrelated or conflicting changes beyond generated-only `docs/project-stage-map.md` / `sitemap.xml`, stop and report them.
 
-## Main Task — Admin Manager Usability Pass
+## Main Task — Admin Mobile And Daily-Use Readiness Guardrails
 
-Make one larger local-only pass that moves the admin closer to daily manager use without touching live secrets or production.
+Make one larger local-only pass that improves confidence that the manager can use `/admin/` from a phone or small laptop.
 
-Focus on practical workflow, not redesign. The manager should be able to quickly understand and process orders.
+Focus on low-risk usability and testable contracts. Do not redesign broadly.
 
 Work in this order:
 
-1. Inspect current admin UI and helpers:
-   - order list columns;
-   - order detail layout;
-   - status filter/search;
-   - manager comment;
-   - customer/source fields;
-   - any existing copy/export/message helpers.
-2. Add 2-4 small useful admin improvements if they are low-risk.
+1. Inspect current admin layout/CSS and fixture tests:
+   - mobile width behavior;
+   - order table/card readability;
+   - action buttons in order detail;
+   - error/loading/empty states;
+   - copy/call/status/comment controls.
+2. Add 2-4 small, practical improvements only if they are safe.
 3. Add no-network tests for the new behavior and wire them into `scripts/verify_backend_mvp.py`.
 4. Update `docs/admin-orders-spec.md` and/or `docs/test-coverage.md` if behavior changes.
-5. Keep the changes small enough for one coherent commit.
+5. Keep the work one coherent commit.
 
 Good candidate improvements:
 
-- Add or harden a "copy order summary" helper for manager workflow, returning clean WhatsApp-readable text.
-- Add a CSV/export helper for selected/listed orders if not already present, with tests.
-- Make status filter/search behavior testable and stable.
-- Ensure order detail always shows customer name, phone/WhatsApp, source/promo/consent, address/city if present, items, total, status, and manager note.
-- Add a readable "empty filtered result" state distinct from "no orders yet".
-- Add a small admin documentation section: "Manager MVP workflow" with exact steps.
+- Ensure admin action buttons have clear labels/aria labels and remain accessible on mobile.
+- Add or harden a compact mobile detail layout for customer/actions/status.
+- Add a visible "last updated / order created" helper if already available in data.
+- Add a "copy phone" helper if simple and useful, with tests.
+- Add tests that admin package never ships tests/config/example files.
+- Add tests that admin page has `noindex`, title, and required scripts.
+- Add a short "Phone manager workflow" section in docs.
 
 Avoid:
 
-- cosmetic-only redesign;
-- broad CSS rewrites;
 - new dependencies;
-- runtime calls to Supabase in tests;
-- changing auth/security model.
+- broad CSS rewrite;
+- runtime Supabase/network tests;
+- changing auth/security model;
+- touching Cloudflare/Supabase settings;
+- production deploy;
+- generated-only commits.
 
 ## Hard Boundaries
 
@@ -147,7 +149,7 @@ Suggested message:
 
 ```bash
 git add <only relevant files>
-git commit -m "Improve admin manager usability guardrails"
+git commit -m "Add admin mobile readiness guardrails"
 ```
 
 If `.git/index.lock` or `.git/HEAD.lock` blocks commit and no git process is running, report the exact blocker for Codex to clear on the Mac. Do not keep retrying blindly.
@@ -160,6 +162,6 @@ Report clearly:
 - files changed;
 - checks run and whether they passed;
 - dirty files left intentionally uncommitted;
-- which manager workflow improved;
+- which manager/mobile workflow improved;
 - what Codex should do next;
 - whether the next step is Claude-safe or Codex/user-only.
