@@ -52,6 +52,9 @@ browser, no Supabase, no Cloudflare, no secrets.
   footer links; product-page action set.
 - `storefront-layout.test.mjs` — section order (header→banner→strip→grid), fixed
   header + body offset (no overlap), menu open/close, cart/search present.
+- `storefront-a11y.test.mjs` — card images have alt text + lazy loading;
+  favorite/open/add controls carry aria labels; every product page declares
+  lang=ru and gives every image an alt attribute.
 - `banner-carousel.test.mjs` — hero/banner carousel contract.
 - `search-categories.test.mjs` — search UI + synonyms source; synonyms target only
   real catalog categories/brands/collections; nav targets valid.

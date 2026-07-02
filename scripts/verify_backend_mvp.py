@@ -85,6 +85,7 @@ def main():
                 "tests/catalog-fields.test.mjs",
                 "tests/search-synonyms-terms.test.mjs",
                 "tests/photo-coverage.test.mjs",
+                "tests/storefront-a11y.test.mjs",
             ],
         ),
         ("Check admin/admin.js syntax", ["node", "--check", "admin/admin.js"]),
