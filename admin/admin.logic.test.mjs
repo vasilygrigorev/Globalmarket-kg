@@ -43,6 +43,7 @@ import {
   parseMinAmount,
   orderSummaryText,
   customerTelLink,
+  orderItemsSummary,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -386,4 +387,20 @@ test("renderOrderDetail offers both WhatsApp and call links when phone present",
   assert.match(html, /href="https:\/\/wa\.me\/996700123456"/);
   assert.match(html, /href="tel:\+996700123456"/);
   assert.match(html, /Позвонить/);
+});
+
+test("orderItemsSummary counts positions (RU plural) and total quantity", () => {
+  assert.equal(orderItemsSummary([]), "");
+  assert.equal(orderItemsSummary(null), "");
+  assert.equal(orderItemsSummary([{ qty: 2 }]), "1 позиция · 2 шт");
+  assert.equal(orderItemsSummary([{ qty: 2 }, { qty: 1 }]), "2 позиции · 3 шт");
+  assert.equal(orderItemsSummary([{ qty: 1 }, { qty: 1 }, { qty: 1 }, { qty: 1 }, { qty: 1 }]), "5 позиций · 5 шт");
+});
+
+test("orderItemsSummary appears in the order detail and copy summary", () => {
+  const items = [{ title_snapshot: "A", qty: 2, line_total_kgs: 100 }, { title_snapshot: "B", qty: 1, line_total_kgs: 50 }];
+  const html = renderOrderDetail({ customer_name: "X", status: "new", total_kgs: 150 }, items, [], []);
+  assert.match(html, /2 позиции · 3 шт/);
+  const text = orderSummaryText({ customer_name: "X", status: "new", total_kgs: 150 }, items);
+  assert.match(text, /2 позиции · 3 шт/);
 });

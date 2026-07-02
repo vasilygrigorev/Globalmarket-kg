@@ -262,6 +262,8 @@ export function orderSummaryText(order, items) {
     }
   }
   lines.push("—");
+  const itemsLine = orderItemsSummary(rows);
+  if (itemsLine) lines.push(itemsLine);
   lines.push(`Итого: ${money(o.total_kgs)}`);
   lines.push(`Статус: ${statusLabel(o.status)}`);
   if (o.customer_source) lines.push(`Источник: ${o.customer_source}`);
@@ -317,6 +319,21 @@ export function nextView(session) {
   return "list";
 }
 
+// "N позиций · M шт" summary for an order's items, with correct Russian plural
+// for "позиция" (pure). Returns "" for an empty/absent list.
+export function orderItemsSummary(items) {
+  const rows = (items || []).filter(Boolean);
+  if (!rows.length) return "";
+  const positions = rows.length;
+  const qty = rows.reduce((s, it) => s + (Number(it.qty) || 0), 0);
+  const d = positions % 10;
+  const dd = positions % 100;
+  let word = "позиций";
+  if (d === 1 && dd !== 11) word = "позиция";
+  else if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) word = "позиции";
+  return `${positions} ${word} · ${qty} шт`;
+}
+
 export function renderItemsRows(items) {
   const rows = (items || []).map((it) => `
     <tr><td>${esc(it.title_snapshot)}</td><td>${esc(it.qty)}</td>
@@ -353,6 +370,7 @@ export function renderOrderDetail(order, items, attr, consents) {
       : ""}
     <table style="margin:10px 0;"><thead><tr><th>Товар</th><th>Кол-во</th><th>Цена</th><th>Сумма</th></tr></thead>
       <tbody>${renderItemsRows(items)}</tbody></table>
+    ${orderItemsSummary(items) ? `<p class="muted" style="margin:2px 0;">${esc(orderItemsSummary(items))}</p>` : ""}
     <p><strong>Итого: ${esc(money(order.total_kgs))}</strong></p>
     <dl class="order-facts" style="display:grid; grid-template-columns:auto 1fr; gap:4px 12px; margin:10px 0;">
       <dt class="muted">Адрес</dt><dd>${esc(address)}</dd>
