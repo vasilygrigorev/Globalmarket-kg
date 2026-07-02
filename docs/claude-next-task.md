@@ -10,62 +10,71 @@ Project:
 /Users/macmini/Documents/Codex/2026-05-28-new-chat-2
 ```
 
-Current branch:
+Branch:
 
 ```text
 collab/preview-baseline
 ```
 
-Latest local checkpoints before this handoff:
+Recent checkpoints:
 
 - `731d2cb Add Petya perfume card batch`
 - `41c6961 Add admin copy-phone and package hygiene guardrails`
 - `7f5e910 Add catalog discount and searchText guardrails`
+- `d370354 Update Claude Petya photo guardrails handoff`
+- `18878ba Add admin keyboard access, session resilience, and exact order count`
+- `d8444fa Add admin status colour-coding, max-amount filter, and copy-address`
 
-Current state:
+Last Codex verification after `d8444fa`:
 
-- Public catalog has 460 products.
-- Product pages generated: 92.
-- Perfume is special: `categoryId: perfume` uses exactly one public card image, no front/back photos.
-- Perfume coverage is complete: 22 / 22 with card images.
-- Overall current photo coverage report: 92 / 460 = 20.0%.
-- Backend/Supabase/Admin MVP groundwork exists, but production backend release is still user/Codex-gated.
-- Checkout can save orders through `/api/orders` when enabled and still falls back to WhatsApp.
-- Admin manager workflow has copy summary, copy phone, call link, reset filters, status/comment guardrails, package hygiene tests.
-- Last full Codex verification after `7f5e910`: `python3 scripts/verify_backend_mvp.py` OK, 213 tests, package OK, secret scans clean.
+- `python3 scripts/verify_backend_mvp.py` OK.
+- 228 tests pass.
+- `python3 scripts/check_no_secrets.py` clean.
+- `git diff --check` clean.
 
-Do not push or deploy production unless the user explicitly asks.
+Current known harmless dirty files after verification:
 
-Known harmless dirty files after a full verification run:
-
-- `docs/project-stage-map.md` may contain a generated timestamp/report refresh.
+- `docs/project-stage-map.md` generated stage report timestamp/change.
 - `assets/products/telegram-8767964230-20260626-142813-front.jpg`
 - `assets/products/telegram-8767964230-20260626-142813-back.jpg`
 
 The two telegram jpgs are currently unused by `data/public-catalog.json`. Do not commit them unless you prove they are needed.
 
+## Important Direction
+
+Do **not** continue admin UX work in this pass unless a failing test requires a tiny fix.
+
+This task is specifically about Petya/photo/catalog import guardrails.
+
+The goal is to make future photo batches safer and easier to review, especially:
+
+- normal product galleries;
+- perfume card-only items;
+- unused Telegram image leftovers;
+- photo coverage reporting;
+- import rules documentation.
+
 ## Read First
 
-Before editing, read:
+Read these files before editing:
 
 - `AGENTS.md`
+- `docs/product-photo-rules.md`
+- `docs/test-coverage.md`
 - `data/manual_products.json`
 - `data/public-catalog.json`
 - `data/product-pages.json`
-- `docs/product-photo-rules.md`
-- `docs/test-coverage.md`
 - `scripts/report_photo_coverage.py`
 - `scripts/verify_product_galleries.py`
 - `scripts/generate_product_pages.py`
 - `scripts/build_public_catalog.py`
-- `tests/catalog-data-quality.test.mjs`
-- `tests/catalog-fields.test.mjs`
 - `tests/photo-coverage.test.mjs`
 - `tests/catalog-image-hygiene.test.mjs`
+- `tests/catalog-data-quality.test.mjs`
+- `tests/catalog-fields.test.mjs`
 - `/Users/macmini/.codex/shared-state/COLLAB-PROTOCOL.md`
 - `/Users/macmini/.codex/shared-state/handoff.md`
 - `/Users/macmini/.codex/shared-state/tasks.md`
-- `/Users/macmini/.codex/shared-state/decisions.md`
 - `/Users/macmini/.codex/memories/cross-chat-memory/current-focus.md`
 
 Then run:
@@ -75,76 +84,73 @@ git status --short --branch
 git branch --show-current
 ```
 
-If there are unrelated or conflicting changes beyond generated-only `docs/project-stage-map.md` and the two unused telegram jpgs, stop and report them.
+If there are unrelated changes beyond the known harmless dirty files, stop and report them.
 
 ## Main Task — Petya Photo/Perfume Import Guardrails
 
-Make one larger local-only pass that reduces future manual cleanup when the user sends product photos to Petya.
+Make one coherent local-only pass.
 
-Focus on guardrails, reports, and documentation. Do not automate Telegram ingestion yet and do not redesign the site.
+### Part A — Reporting
 
-Work in this order:
+Improve `scripts/report_photo_coverage.py` so it can report, in JSON and human-readable mode if simple:
 
-1. Audit current photo/catalog rules:
-   - normal products must be card/front/back;
-   - perfume must be one card image only;
-   - gallery images must not expose temporary Telegram/OCR/contact-sheet files;
-   - `product.image` must equal the first gallery image;
-   - new perfume prices must include travel-packaging logic only where documented.
-2. Add or harden local tests/reports that catch mistakes from future Petya batches:
-   - perfume items have exactly one `*-card-front.jpg` image;
-   - non-perfume photographed items have exactly 3 gallery images unless documented exception;
-   - no untracked or temporary Telegram image path is referenced in public catalog;
-   - manual perfume products have `5 мл` wording, `unit: "мл"` or equivalent, and reasonable prices;
-   - `registeredPriceKgs` remains a sane 1-10% discount below `retailPriceKgs`;
-   - product pages and sitemap stay in sync after product generation.
-3. If useful, improve `scripts/report_photo_coverage.py` output so it reports:
-   - overall coverage;
-   - perfume coverage;
-   - non-perfume coverage;
-   - incomplete non-perfume galleries;
-   - unused public product images that look like raw Telegram leftovers.
-4. Update docs:
-   - `docs/product-photo-rules.md`
-   - `docs/test-coverage.md`
-   - optionally `docs/claude-next-task.md` only if handing off another task.
-5. Keep changes test-only/report-only/docs-only unless a tiny generator hardening is clearly needed.
+- total product count;
+- products with photos;
+- overall coverage percent;
+- perfume total and perfume with photos;
+- non-perfume total and non-perfume with complete 3-image galleries;
+- incomplete non-perfume galleries;
+- known exceptions;
+- unused files under `assets/products/` that look like raw Telegram leftovers and are not referenced by the public catalog.
 
-Good candidate improvements:
+Do not delete unused files automatically. Report only.
 
-- Add a test that fails if any catalog image path contains `telegram-`, `ocr`, `contact`, `sheet`, `dup`, or lives outside the approved product image structure.
-- Add a test that checks all perfume product images are under `assets/products/perfume/`.
-- Add a test that every generated product page directory has a matching manifest entry and no orphan directories remain.
-- Add a report section for "unused product images" but do not delete files automatically.
-- Document the exact manual rule: if user says perfume is sold, skip; if price is supplied but no card image exists, do not add active product.
+### Part B — Guardrail Tests
 
-Avoid:
+Add or harden tests, preferably reusing existing test files unless a new focused file is cleaner:
 
-- new dependencies;
-- Telegram bot code changes;
-- broad catalog rewrite;
-- runtime Supabase/network tests;
-- touching Cloudflare/Supabase settings;
-- production deploy;
-- committing generated-only timestamp files;
-- changing WhatsApp fallback behavior;
-- adding real secrets or `.env` values;
-- committing `admin/config.js`.
+- perfume products must have exactly one image;
+- perfume image path must live under `assets/products/perfume/`;
+- perfume public image should look like a card image (`card-front` naming);
+- non-perfume photographed products must have either 0 images or exactly 3 gallery images unless they are documented exceptions;
+- no public catalog image path may contain raw/temp words such as `telegram-`, `ocr`, `contact`, `sheet`, `dup`;
+- no public catalog image path may point outside approved public product image folders;
+- product pages must stay in sync with product manifest and no orphan product dirs remain.
 
-## Hard Boundaries
+If you add a new test file, wire it into `scripts/verify_backend_mvp.py`.
+
+### Part C — Documentation
+
+Update docs so future sessions remember the rule:
+
+- `docs/product-photo-rules.md`
+- `docs/test-coverage.md`
+
+Document:
+
+- Petya normal products: expected card/front/back.
+- Petya perfume: card only.
+- If user marks perfume sold, skip active catalog.
+- If user gives a perfume price but no matching card image exists, do not add active product.
+- Do not publish raw Telegram/OCR/contact-sheet files in `galleryImages`.
+- `product.image` must equal the first gallery image.
+
+## Boundaries
 
 Do not:
 
 - push to GitHub;
 - deploy preview or production;
-- change Cloudflare settings;
-- change Supabase settings;
-- add real secrets;
-- rewrite the architecture;
-- migrate product catalog to SQL;
+- change Cloudflare/Supabase settings;
+- add secrets or `.env` values;
+- commit `admin/config.js`;
+- work on admin UX unless required by failing tests;
+- change Telegram bot code;
 - auto-delete product images;
-- auto-map non-divisible Telegram photo groups;
-- commit `docs/project-stage-map.md` unless explicitly refreshing the stage report.
+- auto-map non-divisible Telegram albums;
+- migrate catalog to SQL;
+- change checkout/WhatsApp behavior;
+- commit `docs/project-stage-map.md` unless explicitly asked.
 
 ## Verification
 
@@ -162,11 +168,9 @@ git diff --check
 git status --short --branch
 ```
 
-If you add a new test, wire it into `scripts/verify_backend_mvp.py`.
-
 ## Commit Rule
 
-If the changes are coherent and verified, make one local commit.
+If the work is coherent and verified, make one local commit.
 
 Suggested message:
 
@@ -175,16 +179,16 @@ git add <only relevant files>
 git commit -m "Add Petya photo import guardrails"
 ```
 
-If `.git/index.lock` or `.git/HEAD.lock` blocks commit and no git process is running, report the exact blocker for Codex to clear on the Mac. Do not keep retrying blindly.
+Do not commit the known generated/unused dirty files unless the work intentionally changes them.
 
 ## Handoff Back To Codex
 
-Report clearly:
+Report:
 
-- commit hash if committed;
+- commit hash;
 - files changed;
-- checks run and whether they passed;
-- dirty files left intentionally uncommitted;
-- which photo/import/perfume rule was improved;
-- what Codex should do next;
-- whether the next step is Claude-safe or Codex/user-only.
+- checks run;
+- photo coverage numbers;
+- any unused Telegram files reported;
+- dirty files intentionally left;
+- whether next step is Claude-safe or Codex/user-only.
