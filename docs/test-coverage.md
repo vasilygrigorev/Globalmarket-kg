@@ -96,7 +96,10 @@ browser, no Supabase, no Cloudflare, no secrets.
   categoryId↔category 1:1, perfume 5 ml wording.
 - `catalog-image-hygiene.test.mjs` — gallery filenames end with an approved
   card-front/front/back (or perfume card-front-vN) suffix, allowed extension, and
-  expose no temp/contact-sheet/OCR/dup filenames.
+  expose no temp/contact-sheet/OCR/dup/**telegram-** filenames (raw bot exports);
+  every gallery path lives inside a subfolder of `assets/products/` (never loose
+  at the root); every perfume product image lives under
+  `assets/products/perfume/`.
 - `landing-counts.test.mjs` — category/collection landing `count` equals the
   catalog count for that facet; brand landing pages non-empty with shown ≤ count.
 - `catalog-fields.test.mjs` — per-product field validity: known status
@@ -138,6 +141,15 @@ browser, no Supabase, no Cloudflare, no secrets.
   the five public data files ship — no store.db/products.csv/raw sources leak).
 - `scripts/verify_product_galleries.py` — product gallery contract (card/front/back
   order, perfume single card, known exceptions), now wired into the preflight.
+  Also enforces path hygiene on every photographed product regardless of
+  exception status: no raw/temp filename marker (`telegram-`/`ocr`/`contact`/
+  `sheet`/`dup`), image must live inside a subfolder of `assets/products/`
+  (never loose at the root), and perfume images must live under
+  `assets/products/perfume/`.
 - `scripts/report_photo_coverage.py` — deterministic photo-coverage report
-  (total, with photos, %, by category, perfume, exceptions); run manually or
-  `--json`. Syntax-checked in the preflight.
+  (total, with photos, %, by category, perfume, non-perfume complete-gallery
+  count, known exceptions); run manually or `--json`. Also reports
+  `unused_raw_leftovers`: files under `assets/products/` that look like raw
+  Telegram/OCR/contact-sheet leftovers (same marker set as the gallery
+  verifier) and are not referenced by any product — report-only, nothing is
+  ever deleted automatically. Syntax-checked in the preflight.

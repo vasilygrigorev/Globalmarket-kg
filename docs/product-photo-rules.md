@@ -39,6 +39,35 @@ Run before deployment after product-photo changes:
 python3 scripts/verify_product_galleries.py
 ```
 
+## Petya import rules (path + publish hygiene)
+
+These rules exist because the Telegram photo bot drops raw uploads as loose
+files directly under `assets/products/` (e.g. `telegram-<chat_id>-<timestamp>-
+front.jpg`), and Petya sometimes leaves working files (contact sheets, OCR
+scratch exports) mixed into a brand folder. None of that is ever a finished,
+publishable product photo:
+
+- A published `image` / `galleryImages` path must never contain a raw/temp
+  marker: `telegram-`, `ocr`, `contact`, `sheet`, `dup`. Enforced by
+  `scripts/verify_product_galleries.py` (preflight-gated) and
+  `tests/catalog-image-hygiene.test.mjs`.
+- A published image path must live inside a subfolder of `assets/products/`
+  (e.g. `assets/products/<brand>/...` or `assets/products/perfume/...`) —
+  never loose directly at the `assets/products/` root, which is reserved for
+  unsorted raw uploads awaiting review.
+- Every perfume product image must live specifically under
+  `assets/products/perfume/`.
+- If the user marks a perfume as sold, skip it — do not add or keep it active
+  in the public catalog.
+- If the user gives a perfume price but no matching card image exists yet, do
+  not add an active product. Wait for the card image.
+- `product.image` must always equal `galleryImages[0]`.
+- After each import, run `python3 scripts/report_photo_coverage.py` — the
+  `unused_raw_leftovers` section lists files under `assets/products/` that
+  look like raw Telegram/OCR/contact-sheet leftovers and are not referenced by
+  any product. These are reported only, never deleted automatically; review
+  and clean them up manually once you're sure nothing needs them.
+
 ## Photo coverage report
 
 After each Petya upload or 1C stock refresh, check how much of the catalog now
@@ -50,9 +79,12 @@ python3 scripts/report_photo_coverage.py --json    # machine-readable
 ```
 
 It prints total products, products with real photos, coverage %, a per-category
-breakdown, the perfume card-only count, and the known card+front-only exceptions.
-As of the latest local run: 97/441 products have real photos (~22%). The gallery
-contract (`scripts/verify_product_galleries.py`) and the coverage assumptions
+breakdown, the perfume card-only count, the non-perfume complete-gallery count,
+the known card+front-only exceptions, and unused raw-leftover files under
+`assets/products/` (see "Petya import rules" above). As of the latest local
+run: 92/460 products have real photos (20.0%); perfume is 22/22; non-perfume
+photographed is 70/70 with a complete 3-image gallery. The gallery contract
+(`scripts/verify_product_galleries.py`) and the coverage assumptions
 (`tests/photo-coverage.test.mjs`) are both wired into
 `scripts/verify_backend_mvp.py`, so a future import that breaks them fails the
 preflight. The card+front-only exception list must stay identical in this doc,

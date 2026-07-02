@@ -13,10 +13,12 @@ Usage:
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "data" / "public-catalog.json"
+PRODUCTS_DIR = ROOT / "assets" / "products"
 
 # Card+front-only products deliberately published without a back photo.
 KNOWN_EXCEPTIONS = {
@@ -24,6 +26,38 @@ KNOWN_EXCEPTIONS = {
     "prd_1f1557a2acbb",
     "prd_296bd01a7c1f",
 }
+
+# Filename markers that mean "raw/temporary Telegram upload or derived working
+# file" rather than a finished, publishable product photo (contact sheets, OCR
+# scratch files, duplicate exports). Mirrors the marker list documented in
+# docs/product-photo-rules.md and enforced on published paths by
+# scripts/verify_product_galleries.py / tests/catalog-image-hygiene.test.mjs.
+RAW_LEFTOVER_MARKER = re.compile(r"telegram-|ocr|contact|sheet|dup", re.IGNORECASE)
+
+
+def find_unused_raw_leftovers(products):
+    """Files under assets/products/ that look like raw Telegram/OCR/contact-sheet
+    leftovers and are not referenced by any product's image/galleryImages. Report
+    only — nothing here is ever deleted automatically."""
+    referenced = set()
+    for p in products:
+        for src in [p.get("image"), *(p.get("galleryImages") or [])]:
+            if src:
+                referenced.add(str(src))
+
+    if not PRODUCTS_DIR.exists():
+        return []
+
+    unused = []
+    for path in sorted(PRODUCTS_DIR.rglob("*")):
+        if not path.is_file():
+            continue
+        rel = str(path.relative_to(ROOT))
+        if rel in referenced:
+            continue
+        if RAW_LEFTOVER_MARKER.search(path.name):
+            unused.append(rel)
+    return unused
 
 
 def has_real_photo(product):
@@ -48,13 +82,18 @@ def build_report(products):
             entry["with_photos"] += 1
 
     perfume = [p for p in products if p.get("categoryId") == "perfume"]
+    non_perfume = [p for p in products if p.get("categoryId") != "perfume"]
+    non_perfume_photographed = [p for p in photographed if p.get("categoryId") != "perfume"]
+    non_perfume_complete = [
+        p for p in non_perfume_photographed if len(p.get("galleryImages") or []) == 3
+    ]
     incomplete = []  # non-perfume photographed products without a full 3-image gallery
-    for p in photographed:
-        if p.get("categoryId") == "perfume":
-            continue
+    for p in non_perfume_photographed:
         gallery = p.get("galleryImages") or []
         if len(gallery) != 3 and p.get("id") not in KNOWN_EXCEPTIONS:
             incomplete.append(p.get("id"))
+
+    unused_leftovers = find_unused_raw_leftovers(products)
 
     return {
         "total_products": total,
@@ -63,8 +102,13 @@ def build_report(products):
         "coverage_percent": round(100 * with_photos / total, 1) if total else 0.0,
         "perfume_total": len(perfume),
         "perfume_with_photos": sum(1 for p in perfume if has_real_photo(p)),
+        "non_perfume_total": len(non_perfume),
+        "non_perfume_with_photos": len(non_perfume_photographed),
+        "non_perfume_with_complete_gallery": len(non_perfume_complete),
         "known_exceptions": sorted(KNOWN_EXCEPTIONS),
         "incomplete_non_perfume_galleries": sorted(incomplete),
+        "unused_raw_leftover_count": len(unused_leftovers),
+        "unused_raw_leftovers": unused_leftovers,
         "by_category": {
             cat: by_category[cat] for cat in sorted(by_category)
         },
@@ -78,8 +122,17 @@ def print_human(report):
     print(f"  Without photos:        {report['without_photos']}")
     print(f"  Coverage:              {report['coverage_percent']}%")
     print(f"  Perfume (card only):   {report['perfume_with_photos']}/{report['perfume_total']}")
+    print(
+        "  Non-perfume complete:  "
+        f"{report['non_perfume_with_complete_gallery']}/{report['non_perfume_with_photos']}"
+        f" photographed (of {report['non_perfume_total']} total)"
+    )
     print(f"  Known exceptions:      {len(report['known_exceptions'])}")
     print(f"  Incomplete galleries:  {len(report['incomplete_non_perfume_galleries'])}")
+    print(f"  Unused raw leftovers:  {report['unused_raw_leftover_count']} (assets/products/, not in catalog)")
+    if report["unused_raw_leftovers"]:
+        sample = report["unused_raw_leftovers"][:10]
+        print(f"    sample: {', '.join(sample)}" + (" …" if report["unused_raw_leftover_count"] > 10 else ""))
     print("  By category (with/total):")
     for cat, entry in report["by_category"].items():
         print(f"    {cat}: {entry['with_photos']}/{entry['total']}")

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -12,6 +13,25 @@ KNOWN_EXCEPTIONS = {
     "prd_1f1557a2acbb": "Pantene Damage Repair 600 ml: missing back photo in 2026-06-10 Petya album; user requested publication.",
     "prd_296bd01a7c1f": "Pantene Sheer Volume 600 ml: missing back photo in 2026-06-10 Petya album; user requested publication.",
 }
+
+# Raw/temporary-file markers that must never appear in a PUBLISHED image path —
+# a Telegram export, OCR scratch file, or contact sheet is a working file, not a
+# finished product photo. Mirrors tests/catalog-image-hygiene.test.mjs.
+RAW_LEFTOVER_MARKER = re.compile(r"telegram-|ocr|contact|sheet|dup", re.IGNORECASE)
+
+
+def path_hygiene_issues(pid, title, src):
+    """Guardrails that apply to EVERY published path, including exception
+    products: no raw/temp leftover markers, and the file must live inside an
+    approved subfolder of assets/products/ (never loose at the root, which is
+    reserved for unsorted raw uploads)."""
+    issues = []
+    if RAW_LEFTOVER_MARKER.search(Path(src).name):
+        issues.append(f"{pid} {title}: raw/temp filename marker in published path {src}")
+    rel = src[len("assets/products/"):] if src.startswith("assets/products/") else src
+    if "/" not in rel:
+        issues.append(f"{pid} {title}: image must live in a subfolder of assets/products/, got {src}")
+    return issues
 
 
 def is_real_product_photo(product):
@@ -29,6 +49,16 @@ def check_gallery(product):
     gallery = product.get("galleryImages") or []
     issues = []
 
+    # Path hygiene applies to every photographed product, including documented
+    # completeness exceptions — a raw Telegram/OCR leftover or a loose root-level
+    # file must never be published, no matter how many photos the product has.
+    all_srcs = {str(src) for src in gallery if src}
+    if image:
+        all_srcs.add(str(image))
+    for src in sorted(all_srcs):
+        if src.startswith("assets/products/"):
+            issues.extend(path_hygiene_issues(pid, title, src))
+
     if pid in KNOWN_EXCEPTIONS:
         return issues
 
@@ -40,6 +70,8 @@ def check_gallery(product):
             issues.append(f"{pid} {title}: image must equal galleryImages[0]")
         if "card" not in Path(gallery[0]).stem.lower():
             issues.append(f"{pid} {title}: perfume image should be a card image, got {gallery[0]}")
+        if not str(gallery[0]).startswith("assets/products/perfume/"):
+            issues.append(f"{pid} {title}: perfume image must live under assets/products/perfume/, got {gallery[0]}")
         if not (ROOT / gallery[0]).exists():
             issues.append(f"{pid} {title}: missing file {gallery[0]}")
         return issues
