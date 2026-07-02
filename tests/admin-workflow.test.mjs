@@ -21,6 +21,8 @@ function block(re) {
 }
 const saveOrder = block(/async function saveOrder\([\s\S]*?\n}/);
 const loadOrders = block(/async function loadOrders\([\s\S]*?\n}/);
+const resetFilters = block(/function resetFilters\([\s\S]*?\n}/);
+const indexHtml = readFileSync(join(ROOT, "admin", "index.html"), "utf8");
 
 test("saving an order updates ONLY status and manager_comment (no data loss)", () => {
   assert.ok(saveOrder, "saveOrder not found");
@@ -86,6 +88,16 @@ test("order detail offers a copy-summary button that copies plain text via clipb
   // The summary is read-only plain text — no DB write, no HTML.
   const summary = orderSummaryText({ customer_name: "A", status: "new", total_kgs: 100 }, []);
   assert.ok(!/</.test(summary), "summary must be plain text");
+});
+
+test("reset-filters button clears every filter control and reloads", () => {
+  assert.match(indexHtml, /id="resetFilters"/);            // button exists
+  assert.match(adminJs, /resetFilters"\)\.addEventListener/); // wired
+  assert.ok(resetFilters, "resetFilters() not found");
+  for (const id of ["statusFilter", "periodFilter", "sortBy", "minAmount", "search"]) {
+    assert.ok(resetFilters.includes(`$("${id}")`), `resetFilters must clear ${id}`);
+  }
+  assert.match(resetFilters, /loadOrders\(\)/); // reloads the list
 });
 
 test("status set is the stable Russian 5 and all are offered in the detail select", () => {

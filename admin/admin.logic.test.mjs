@@ -42,6 +42,7 @@ import {
   DEFAULT_SORT,
   parseMinAmount,
   orderSummaryText,
+  customerTelLink,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -368,4 +369,21 @@ test("orderSummaryText skips absent parts and handles no items", () => {
   assert.ok(!/Телефон:/.test(text), "no phone line when absent");
   assert.ok(!/Адрес:/.test(text), "no address line when absent");
   assert.ok(!/Источник:/.test(text), "no source line when absent");
+});
+
+test("customerTelLink builds a tel: link, keeping a leading +", () => {
+  assert.equal(customerTelLink("+996 700 12-34-56"), "tel:+996700123456");
+  assert.equal(customerTelLink("0700123456"), "tel:0700123456");
+  assert.equal(customerTelLink(""), "");
+  assert.equal(customerTelLink(null), "");
+});
+
+test("renderOrderDetail offers both WhatsApp and call links when phone present", () => {
+  const html = renderOrderDetail(
+    { customer_name: "A", customer_phone: "+996700123456", status: "new", total_kgs: 100 },
+    [], [], [],
+  );
+  assert.match(html, /href="https:\/\/wa\.me\/996700123456"/);
+  assert.match(html, /href="tel:\+996700123456"/);
+  assert.match(html, /Позвонить/);
 });

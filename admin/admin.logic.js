@@ -114,6 +114,14 @@ export function customerWaLink(phone) {
   return digits ? `https://wa.me/${digits}` : "";
 }
 
+// tel: link to call the customer (keeps a leading +; "" when no digits).
+export function customerTelLink(phone) {
+  const raw = String(phone || "");
+  const digits = raw.replace(/\D/g, "");
+  if (!digits) return "";
+  return `tel:${raw.trim().startsWith("+") ? "+" : ""}${digits}`;
+}
+
 // "Показано N заказов" with correct Russian plural (pure).
 export function ordersCountText(n) {
   const count = Number(n) || 0;
@@ -338,7 +346,10 @@ export function renderOrderDetail(order, items, attr, consents) {
     </div>
     <p class="muted">${esc(when(order.created_at))}</p>
     ${customerWaLink(order.customer_phone)
-      ? `<p><a href="${esc(customerWaLink(order.customer_phone))}" target="_blank" rel="noopener">Написать клиенту в WhatsApp</a></p>`
+      ? `<p class="row" style="gap:14px;">
+          <a href="${esc(customerWaLink(order.customer_phone))}" target="_blank" rel="noopener">Написать клиенту в WhatsApp</a>
+          <a href="${esc(customerTelLink(order.customer_phone))}">Позвонить</a>
+        </p>`
       : ""}
     <table style="margin:10px 0;"><thead><tr><th>Товар</th><th>Кол-во</th><th>Цена</th><th>Сумма</th></tr></thead>
       <tbody>${renderItemsRows(items)}</tbody></table>

@@ -168,6 +168,15 @@ async function copyOrderSummary(order, items) {
   }
 }
 
+function resetFilters() {
+  $("statusFilter").value = "";
+  if ($("periodFilter")) $("periodFilter").value = "";
+  if ($("sortBy")) $("sortBy").value = "created_desc";
+  if ($("minAmount")) $("minAmount").value = "";
+  $("search").value = "";
+  loadOrders();
+}
+
 function exportOrdersCsv() {
   if (!lastOrders.length) return;
   const csv = ordersToCsv(lastOrders);
@@ -228,6 +237,7 @@ function wire() {
   });
   $("signOut").addEventListener("click", async () => { await supabase.auth.signOut(); refreshSessionUI(); });
   $("refresh").addEventListener("click", loadOrders);
+  $("resetFilters").addEventListener("click", resetFilters);
   $("exportCsv").addEventListener("click", exportOrdersCsv);
   $("loadMore").addEventListener("click", () => loadOrders({ append: true }));
   $("statusFilter").addEventListener("change", loadOrders);

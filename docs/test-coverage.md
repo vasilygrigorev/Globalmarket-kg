@@ -35,8 +35,9 @@ browser, no Supabase, no Cloudflare, no secrets.
   manager_comment (no data loss) scoped to one order; list query selects every
   field the table/CSV render; save button disables during save; order detail
   shows customer/WhatsApp/all item rows/total/address/source/manager note; a
-  copy-summary button copies a plain-text order summary via the clipboard; status
-  set stays the stable Russian 5 and all are selectable.
+  copy-summary button copies a plain-text order summary via the clipboard;
+  detail offers WhatsApp + tel: call links; reset-filters clears every control and
+  reloads; status set stays the stable Russian 5 and all are selectable.
 
 ## Storefront contracts (tests/)
 

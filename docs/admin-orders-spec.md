@@ -171,11 +171,12 @@ Day-to-day steps a manager takes once the admin is live (no code needed):
 2. In the list, narrow down with the controls: status filter, period
    (today / 7d / 30d), minimum amount, sort (newest, amount, name), and the
    phone/name search box. The counter and "sum of shown" update live.
+   **Сбросить фильтры** clears every control back to defaults in one click.
 3. Use **Показать ещё** to load older orders (50 per page), or **Экспорт CSV**
    to download the currently shown orders (opens cleanly in Excel).
-4. Click a row to open the order. The detail shows customer name, phone, a
-   one-tap WhatsApp link, delivery address, item lines with prices, total,
-   ad source/attribution, promo code, and marketing consent.
+4. Click a row to open the order. The detail shows customer name, phone,
+   one-tap **WhatsApp** and **Позвонить** (tel:) links, delivery address, item
+   lines with prices, total, ad source/attribution, promo code, and consent.
 5. **Копировать сводку** copies a clean, WhatsApp-ready plain-text summary of the
    order to paste into a chat with the customer or courier.
 6. Set the new **Статус** and add a **Комментарий менеджера**, then **Сохранить**
