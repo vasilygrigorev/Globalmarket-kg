@@ -18,18 +18,18 @@ collab/preview-baseline
 
 Latest local checkpoints before this handoff:
 
-- `534fcb5 Add catalog field and synonym term guardrails`
-- `4303bf6 Update Claude photo coverage handoff`
 - `4ade484 Add photo coverage workflow guardrails`
+- `0ed6728 Add admin manager workflow guardrails`
+- `d79c0cf Add storefront accessibility guardrails`
 
 Current state:
 
 - Backend/Supabase/Admin MVP groundwork exists.
 - Checkout can save orders through `/api/orders` when enabled and still falls back to WhatsApp.
-- Admin page exists and is covered by local tests.
-- Product/photo/catalog guardrails are now in the verifier.
+- Admin page exists and has manager workflow guardrails.
+- Storefront a11y guardrails for card/product images are now wired into `scripts/verify_backend_mvp.py`.
 - Current photo coverage baseline: 97 / 441 products = 22.0%.
-- Latest full verifier result from Codex after `4ade484`: `Backend/admin MVP verification OK`; package OK; secret scans clean.
+- Latest full verifier result from Codex after `d79c0cf`: `Backend/admin MVP verification OK`; package OK; secret scans clean.
 - Do not push or deploy production unless the user explicitly asks.
 
 Known harmless dirty files after a full verification run:
@@ -48,13 +48,12 @@ Before editing, read:
 - `docs/admin-orders-spec.md`
 - `docs/api-orders.md`
 - `docs/backend-go-live-checklist.md`
-- `docs/backend-go-live-dry-run.md`
 - `admin/index.html`
 - `admin/admin.js`
 - `admin/admin.logic.js`
 - `tests/admin.logic.test.mjs`
 - `tests/admin.dom.test.mjs`
-- `tests/checkout.contract.test.mjs`
+- `tests/admin-workflow.test.mjs`
 - `/Users/macmini/.codex/shared-state/COLLAB-PROTOCOL.md`
 - `/Users/macmini/.codex/shared-state/handoff.md`
 - `/Users/macmini/.codex/shared-state/tasks.md`
@@ -70,37 +69,42 @@ git branch --show-current
 
 If there are unrelated or conflicting changes beyond generated-only `docs/project-stage-map.md` / `sitemap.xml`, stop and report them.
 
-## Main Task — Admin Manager Workflow Guardrails
+## Main Task — Admin Manager Usability Pass
 
-Make one larger local-only pass that helps turn the admin area from "technical MVP" into "manager can safely process orders" without touching live secrets or production.
+Make one larger local-only pass that moves the admin closer to daily manager use without touching live secrets or production.
+
+Focus on practical workflow, not redesign. The manager should be able to quickly understand and process orders.
 
 Work in this order:
 
-1. Inspect the current admin order flow:
-   - login / not configured / no access states;
-   - orders list;
-   - order detail;
-   - status changes;
+1. Inspect current admin UI and helpers:
+   - order list columns;
+   - order detail layout;
+   - status filter/search;
    - manager comment;
-   - empty/error states;
-   - checkout payload expectations.
-2. Identify 3-5 concrete manager-workflow contracts worth protecting with no-network tests.
-3. Add focused tests and wire them into `scripts/verify_backend_mvp.py`.
-4. Update admin docs/spec/checklist only where useful for future Codex/Claude/user work.
-5. Keep UI/code edits small. Prefer pure helper tests or fixture DOM tests over broad redesign.
+   - customer/source fields;
+   - any existing copy/export/message helpers.
+2. Add 2-4 small useful admin improvements if they are low-risk.
+3. Add no-network tests for the new behavior and wire them into `scripts/verify_backend_mvp.py`.
+4. Update `docs/admin-orders-spec.md` and/or `docs/test-coverage.md` if behavior changes.
+5. Keep the changes small enough for one coherent commit.
 
-Good candidate guardrails:
+Good candidate improvements:
 
-- Admin status labels and allowed status transitions remain stable.
-- Manager comment is rendered safely and can be saved without losing existing order data.
-- Order detail includes customer, phone/WhatsApp, items, total, delivery note, attribution/source fields, and manager note area.
-- Order list has readable empty states for "no orders" and "no matching orders".
-- Checkout/backend contract still sends customer/source/promo/consent fields expected by admin.
-- Admin never exposes service-role key or server-only config.
-- Admin package includes only `admin/index.html`, `admin/admin.js`, `admin/admin.logic.js`, and not tests/config examples/secrets.
-- Docs clearly define what manager can do in MVP and what stays Codex/user-only.
+- Add or harden a "copy order summary" helper for manager workflow, returning clean WhatsApp-readable text.
+- Add a CSV/export helper for selected/listed orders if not already present, with tests.
+- Make status filter/search behavior testable and stable.
+- Ensure order detail always shows customer name, phone/WhatsApp, source/promo/consent, address/city if present, items, total, status, and manager note.
+- Add a readable "empty filtered result" state distinct from "no orders yet".
+- Add a small admin documentation section: "Manager MVP workflow" with exact steps.
 
-Avoid cosmetic redesign. The goal is safety and workflow confidence, not perfect UI.
+Avoid:
+
+- cosmetic-only redesign;
+- broad CSS rewrites;
+- new dependencies;
+- runtime calls to Supabase in tests;
+- changing auth/security model.
 
 ## Hard Boundaries
 
@@ -143,7 +147,7 @@ Suggested message:
 
 ```bash
 git add <only relevant files>
-git commit -m "Add admin manager workflow guardrails"
+git commit -m "Improve admin manager usability guardrails"
 ```
 
 If `.git/index.lock` or `.git/HEAD.lock` blocks commit and no git process is running, report the exact blocker for Codex to clear on the Mac. Do not keep retrying blindly.
@@ -156,6 +160,6 @@ Report clearly:
 - files changed;
 - checks run and whether they passed;
 - dirty files left intentionally uncommitted;
-- whether admin MVP moved closer to manager use;
+- which manager workflow improved;
 - what Codex should do next;
 - whether the next step is Claude-safe or Codex/user-only.
