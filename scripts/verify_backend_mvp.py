@@ -59,6 +59,7 @@ def main():
                 "admin/admin.dom.test.mjs",
                 "tests/admin-workflow.test.mjs",
                 "tests/admin-mobile.test.mjs",
+                "tests/admin-package-hygiene.test.mjs",
                 "tests/checkout.contract.test.mjs",
                 "tests/rollback.contract.test.mjs",
                 "tests/runner-coverage.test.mjs",

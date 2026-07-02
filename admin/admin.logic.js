@@ -366,6 +366,7 @@ export function renderOrderDetail(order, items, attr, consents) {
       ? `<p class="row" style="gap:14px;">
           <a href="${esc(customerWaLink(order.customer_phone))}" target="_blank" rel="noopener">Написать клиенту в WhatsApp</a>
           <a href="${esc(customerTelLink(order.customer_phone))}">Позвонить</a>
+          <button id="copyPhone" type="button" class="secondary">Копировать телефон</button>
         </p>`
       : ""}
     <table style="margin:10px 0;"><thead><tr><th>Товар</th><th>Кол-во</th><th>Цена</th><th>Сумма</th></tr></thead>

@@ -199,7 +199,8 @@ The admin is usable from a phone or small laptop — no separate app needed:
 - The search box and the "amount from" field send mobile keyboards a sensible
   action hint (search / done).
 - In an order, one tap opens **WhatsApp** or **Позвонить** (the phone dialer);
-  **Копировать сводку** puts a paste-ready order summary on the clipboard.
+  **Копировать телефон** copies just the number and **Копировать сводку** puts a
+  paste-ready order summary on the clipboard.
 
 These affordances are locked by `tests/admin-mobile.test.mjs` so a future edit
 can't silently break phone usability.

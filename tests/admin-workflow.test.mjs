@@ -90,6 +90,13 @@ test("order detail offers a copy-summary button that copies plain text via clipb
   assert.ok(!/</.test(summary), "summary must be plain text");
 });
 
+test("order detail offers a copy-phone button wired to the clipboard", () => {
+  const html = renderOrderDetail({ customer_name: "A", customer_phone: "+996700123456", status: "new", total_kgs: 100 }, [], [], []);
+  assert.match(html, /id="copyPhone"/);                  // button present when phone exists
+  assert.match(adminJs, /copyPhone/);                    // wired in admin.js
+  assert.match(adminJs, /navigator\.clipboard\.writeText/); // copies via clipboard
+});
+
 test("reset-filters button clears every filter control and reloads", () => {
   assert.match(indexHtml, /id="resetFilters"/);            // button exists
   assert.match(adminJs, /resetFilters"\)\.addEventListener/); // wired

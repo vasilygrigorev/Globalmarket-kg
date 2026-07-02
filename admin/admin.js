@@ -155,6 +155,18 @@ async function openOrder(id) {
   box.innerHTML = renderOrderDetail(order, items, attr, consents);
   $("saveOrder").addEventListener("click", () => saveOrder(id));
   $("copySummary").addEventListener("click", () => copyOrderSummary(order, items));
+  const phoneBtn = $("copyPhone");
+  if (phoneBtn) phoneBtn.addEventListener("click", () => copyToClipboard(order.customer_phone, "Телефон скопирован ✓"));
+}
+
+async function copyToClipboard(text, okText) {
+  const msg = $("copyMsg");
+  try {
+    await navigator.clipboard.writeText(String(text || ""));
+    if (msg) { msg.textContent = okText; msg.classList.add("ok"); }
+  } catch {
+    if (msg) { msg.textContent = "Не удалось скопировать"; msg.classList.remove("ok"); }
+  }
 }
 
 async function copyOrderSummary(order, items) {
