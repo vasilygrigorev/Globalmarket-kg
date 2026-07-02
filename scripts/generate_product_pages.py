@@ -140,8 +140,10 @@ def select_product(products):
 
 def related_products(product, products):
     related = []
+    seen = {product.get("id")}
     for candidate in products:
-        if candidate.get("id") == product.get("id"):
+        candidate_id = candidate.get("id")
+        if candidate_id in seen:
             continue
         if candidate.get("categoryId") != product.get("categoryId"):
             continue
@@ -150,7 +152,22 @@ def related_products(product, products):
         if not product_images(candidate):
             continue
         related.append(candidate)
+        seen.add(candidate_id)
     related.sort(key=lambda item: (0 if "europe" in (item.get("collections") or []) else 1, item.get("title", "")))
+    if len(related) < 4:
+        fallback = []
+        for candidate in products:
+            candidate_id = candidate.get("id")
+            if candidate_id in seen:
+                continue
+            if not is_in_stock(candidate):
+                continue
+            if not product_images(candidate):
+                continue
+            fallback.append(candidate)
+            seen.add(candidate_id)
+        fallback.sort(key=lambda item: (0 if item.get("categoryId") == "perfume" else 1, item.get("title", "")))
+        related.extend(fallback[: 4 - len(related)])
     return related[:24]
 
 

@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 86,
+  "count": 92,
   "pages": [
     {
       "id": "prd_c5f3a1dce862",
@@ -16,7 +16,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_165eafb70eb3",
@@ -31,7 +31,7 @@
       "retailPriceKgs": 1595,
       "image": "/assets/products/ariel/ariel-fast-dissolving-2-5kg-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_77e4cc05435f",
@@ -46,7 +46,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_f19e014e94cf",
@@ -61,7 +61,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-rose-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_9df7a08005ce",
@@ -76,7 +76,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-sensitive-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_1f9a545036b2",
@@ -91,37 +91,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-lavender-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
-    },
-    {
-      "id": "prd_2acd534839ea",
-      "slug": "ariel-all-in-1-universal-kapsuly-15-sht-4839ea",
-      "path": "/product/ariel-all-in-1-universal-kapsuly-15-sht-4839ea/",
-      "url": "https://globalmarket.kg/product/ariel-all-in-1-universal-kapsuly-15-sht-4839ea/",
-      "title": "Ariel All in 1 Universal капсулы 15 шт",
-      "brand": "Ariel",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
-      "collections": [],
-      "retailPriceKgs": 895,
-      "image": "/assets/products/telegram-8767964230-20260619-110510-05-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 24
-    },
-    {
-      "id": "prd_bd8fab362271",
-      "slug": "ariel-all-in-1-color-kapsuly-15-sht-362271",
-      "path": "/product/ariel-all-in-1-color-kapsuly-15-sht-362271/",
-      "url": "https://globalmarket.kg/product/ariel-all-in-1-color-kapsuly-15-sht-362271/",
-      "title": "Ariel All in 1 Color капсулы 15 шт",
-      "brand": "Ariel",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
-      "collections": [],
-      "retailPriceKgs": 895,
-      "image": "/assets/products/telegram-8767964230-20260619-110510-06-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_682eb8c7e746",
@@ -136,7 +106,7 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-rose-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_4180ad019486",
@@ -151,7 +121,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/downy/downy-concentrate-rose-garden-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_b0bf34e30459",
@@ -166,7 +136,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-white-flower-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_894a7f6437d0",
@@ -181,7 +151,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_0e763c9c3654",
@@ -196,7 +166,7 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_f0d3a0b9698b",
@@ -211,7 +181,7 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_71d2d567002b",
@@ -226,7 +196,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/downy/downy-concentrate-vanilla-musk-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_e9b3349a68aa",
@@ -241,7 +211,7 @@
       "retailPriceKgs": 595,
       "image": "/assets/products/downy/downy-fresh-valley-dew-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_060cfccd22d3",
@@ -256,7 +226,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/downy/downy-concentrate-valley-dew-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 14
     },
     {
       "id": "prd_9174d6118ed3",
@@ -271,127 +241,7 @@
       "retailPriceKgs": 550,
       "image": "/assets/products/jif/jif-cream-lemon-500ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 2
-    },
-    {
-      "id": "prd_c980a01a8dba",
-      "slug": "fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba",
-      "path": "/product/fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba/",
-      "url": "https://globalmarket.kg/product/fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba/",
-      "title": "Fairy Lavender средство для посуды 600 мл",
-      "brand": "Fairy",
-      "category": "Уборка и чистота",
-      "categoryId": "home_cleaning",
-      "collections": [],
-      "retailPriceKgs": 450,
-      "image": "/assets/products/telegram-8767964230-20260619-110510-03-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 2
-    },
-    {
-      "id": "prd_43bb60f484a9",
-      "slug": "fairy-apple-sredstvo-dlya-posudy-600-ml-f484a9",
-      "path": "/product/fairy-apple-sredstvo-dlya-posudy-600-ml-f484a9/",
-      "url": "https://globalmarket.kg/product/fairy-apple-sredstvo-dlya-posudy-600-ml-f484a9/",
-      "title": "Fairy Apple средство для посуды 600 мл",
-      "brand": "Fairy",
-      "category": "Уборка и чистота",
-      "categoryId": "home_cleaning",
-      "collections": [],
-      "retailPriceKgs": 450,
-      "image": "/assets/products/telegram-8767964230-20260619-110510-04-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 2
-    },
-    {
-      "id": "prd_9499434568a7",
-      "slug": "head-shoulders-dry-scalp-shampun-400-ml-4568a7",
-      "path": "/product/head-shoulders-dry-scalp-shampun-400-ml-4568a7/",
-      "url": "https://globalmarket.kg/product/head-shoulders-dry-scalp-shampun-400-ml-4568a7/",
-      "title": "Head & Shoulders Dry Scalp шампунь 400 мл",
-      "brand": "Head & Shoulders",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 495,
-      "image": "/assets/products/telegram-8767964230-20260619-113508-04-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 18
-    },
-    {
-      "id": "prd_b2586efc6925",
-      "slug": "head-shoulders-soothing-scalp-shampun-400-ml-fc6925",
-      "path": "/product/head-shoulders-soothing-scalp-shampun-400-ml-fc6925/",
-      "url": "https://globalmarket.kg/product/head-shoulders-soothing-scalp-shampun-400-ml-fc6925/",
-      "title": "Head & Shoulders Soothing Scalp шампунь 400 мл",
-      "brand": "Head & Shoulders",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 495,
-      "image": "/assets/products/telegram-8767964230-20260619-113508-01-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 18
-    },
-    {
-      "id": "prd_6280c4c29502",
-      "slug": "head-shoulders-classic-shampun-400-ml-c29502",
-      "path": "/product/head-shoulders-classic-shampun-400-ml-c29502/",
-      "url": "https://globalmarket.kg/product/head-shoulders-classic-shampun-400-ml-c29502/",
-      "title": "Head & Shoulders Classic шампунь 400 мл",
-      "brand": "Head & Shoulders",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 495,
-      "image": "/assets/products/telegram-8767964230-20260619-113508-03-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 18
-    },
-    {
-      "id": "prd_20736a33272d",
-      "slug": "head-shoulders-menthol-shampun-400-ml-33272d",
-      "path": "/product/head-shoulders-menthol-shampun-400-ml-33272d/",
-      "url": "https://globalmarket.kg/product/head-shoulders-menthol-shampun-400-ml-33272d/",
-      "title": "Head & Shoulders Menthol шампунь 400 мл",
-      "brand": "Head & Shoulders",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 495,
-      "image": "/assets/products/telegram-8767964230-20260619-113508-02-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 18
-    },
-    {
-      "id": "prd_2563a902d211",
-      "slug": "head-shoulders-smooth-silky-shampun-650-ml-02d211",
-      "path": "/product/head-shoulders-smooth-silky-shampun-650-ml-02d211/",
-      "url": "https://globalmarket.kg/product/head-shoulders-smooth-silky-shampun-650-ml-02d211/",
-      "title": "Head & Shoulders Smooth & Silky шампунь 650 мл",
-      "brand": "Head & Shoulders",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 795,
-      "image": "/assets/products/telegram-8767964230-20260619-110800-04-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 18
-    },
-    {
-      "id": "prd_d8023f79398b",
-      "slug": "head-shoulders-anti-hairfall-shampun-650-ml-79398b",
-      "path": "/product/head-shoulders-anti-hairfall-shampun-650-ml-79398b/",
-      "url": "https://globalmarket.kg/product/head-shoulders-anti-hairfall-shampun-650-ml-79398b/",
-      "title": "Head & Shoulders Anti-Hairfall шампунь 650 мл",
-      "brand": "Head & Shoulders",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 795,
-      "image": "/assets/products/telegram-8767964230-20260619-110800-03-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 4
     },
     {
       "id": "prd_8d15b250f536",
@@ -406,7 +256,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_516bdfde072f",
@@ -421,7 +271,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_160ca842c98e",
@@ -436,7 +286,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_83037f3d35df",
@@ -451,7 +301,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_a4eb0f5d79c1",
@@ -466,7 +316,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_4a32663564b9",
@@ -481,7 +331,7 @@
       "retailPriceKgs": 1190,
       "image": "/assets/products/clear/clear-oil-control-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_bfda1a27b81e",
@@ -496,7 +346,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-card-front.png",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_77afdc5c4601",
@@ -511,7 +361,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_65a3b809cec1",
@@ -526,7 +376,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_3922b6ace1e1",
@@ -541,7 +391,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-soft-and-shiny-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_4a753298e318",
@@ -556,7 +406,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_b05450ca161f",
@@ -571,7 +421,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_47adee9fbe47",
@@ -586,7 +436,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 12
     },
     {
       "id": "prd_0b8a7c8dea63",
@@ -601,7 +451,7 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 1
+      "relatedCount": 4
     },
     {
       "id": "prd_96fe6b1c7d9c",
@@ -616,7 +466,7 @@
       "retailPriceKgs": 295,
       "image": "/assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 1
+      "relatedCount": 4
     },
     {
       "id": "prd_e616d7830dcc",
@@ -721,7 +571,7 @@
       "retailPriceKgs": 2490,
       "image": "/assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_477c3cbc2534",
@@ -736,7 +586,7 @@
       "retailPriceKgs": 230,
       "image": "/assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_7de0af90808d",
@@ -751,7 +601,7 @@
       "retailPriceKgs": 250,
       "image": "/assets/products/gillette/gillette-blue-pivot-5-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_e166f2ec9c56",
@@ -766,7 +616,7 @@
       "retailPriceKgs": 395,
       "image": "/assets/products/gillette/gillette-moisturising-shave-gel-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_debb27afb337",
@@ -781,7 +631,7 @@
       "retailPriceKgs": 850,
       "image": "/assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_e993df33c857",
@@ -796,7 +646,7 @@
       "retailPriceKgs": 890,
       "image": "/assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_45a4eda764f6",
@@ -811,7 +661,7 @@
       "retailPriceKgs": 1595,
       "image": "/assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_0fffb16fcaee",
@@ -826,7 +676,7 @@
       "retailPriceKgs": 250,
       "image": "/assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_94f09d0e25fc",
@@ -841,7 +691,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_08168d08df30",
@@ -856,7 +706,7 @@
       "retailPriceKgs": 590,
       "image": "/assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_a91e8f943ffc",
@@ -871,7 +721,7 @@
       "retailPriceKgs": 650,
       "image": "/assets/products/gillette/gillette-blue3-8-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_cbc7943d5965",
@@ -886,7 +736,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_26f86cee34e8",
@@ -901,7 +751,7 @@
       "retailPriceKgs": 295,
       "image": "/assets/products/gillette/gillette-foam-sensitive-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_13a9f6cc2aa7",
@@ -916,7 +766,7 @@
       "retailPriceKgs": 890,
       "image": "/assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_bd1e6c3316c4",
@@ -931,7 +781,7 @@
       "retailPriceKgs": 295,
       "image": "/assets/products/gillette/gillette-foam-original-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_b26c0045dd47",
@@ -946,52 +796,7 @@
       "retailPriceKgs": 650,
       "image": "/assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 18
-    },
-    {
-      "id": "prd_13dbf4e592aa",
-      "slug": "concord-stanok-d-652-e592aa",
-      "path": "/product/concord-stanok-d-652-e592aa/",
-      "url": "https://globalmarket.kg/product/concord-stanok-d-652-e592aa/",
-      "title": "Concord станок D 652",
-      "brand": "Concord",
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "retailPriceKgs": 450,
-      "image": "/assets/products/telegram-8767964230-20260619-110606-01-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 18
-    },
-    {
-      "id": "prd_f12169c0af17",
-      "slug": "concord-stanok-kl-90-c0af17",
-      "path": "/product/concord-stanok-kl-90-c0af17/",
-      "url": "https://globalmarket.kg/product/concord-stanok-kl-90-c0af17/",
-      "title": "Concord станок KL 90",
-      "brand": "Concord",
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "retailPriceKgs": 350,
-      "image": "/assets/products/telegram-8767964230-20260619-110606-02-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 18
-    },
-    {
-      "id": "prd_2554a61dc141",
-      "slug": "concord-stanok-kl-6947-1dc141",
-      "path": "/product/concord-stanok-kl-6947-1dc141/",
-      "url": "https://globalmarket.kg/product/concord-stanok-kl-6947-1dc141/",
-      "title": "Concord станок KL 6947",
-      "brand": "Concord",
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "retailPriceKgs": 170,
-      "image": "/assets/products/telegram-8767964230-20260619-110606-03-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 18
+      "relatedCount": 15
     },
     {
       "id": "prd_3e6fdfc928fc",
@@ -1000,15 +805,15 @@
       "url": "https://globalmarket.kg/product/dalli-vollwaschmittel-stiralnyy-poroshok-6-kg-c928fc/",
       "title": "Dalli Vollwaschmittel стиральный порошок 6 кг",
       "brand": "Dalli",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 2595,
       "image": "/assets/products/dalli/dalli-vollwaschmittel-powder-6kg-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_4b7604e36f02",
@@ -1017,15 +822,15 @@
       "url": "https://globalmarket.kg/product/dalli-colorwaschmittel-stiralnyy-poroshok-6-kg-e36f02/",
       "title": "Dalli Colorwaschmittel стиральный порошок 6 кг",
       "brand": "Dalli",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 2595,
       "image": "/assets/products/dalli/dalli-colorwaschmittel-powder-6kg-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_06e5daf553c4",
@@ -1034,15 +839,15 @@
       "url": "https://globalmarket.kg/product/dalli-colorwaschmittel-gel-dlya-stirki-5-l-f553c4/",
       "title": "Dalli Colorwaschmittel гель для стирки 5 л",
       "brand": "Dalli",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 2395,
       "image": "/assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_4db8a0f93b3f",
@@ -1051,15 +856,15 @@
       "url": "https://globalmarket.kg/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-f93b3f/",
       "title": "Dash Color Frische капсулы для стирки 60 шт",
       "brand": "Dash",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 2295,
       "image": "/assets/products/dash/dash-color-frische-caps-box-60-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_6d023c2652c2",
@@ -1068,15 +873,15 @@
       "url": "https://globalmarket.kg/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/",
       "title": "Dash Alpen Frische капсулы для стирки 60 шт",
       "brand": "Dash",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 2295,
       "image": "/assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_6ac15f7b2cff",
@@ -1085,15 +890,15 @@
       "url": "https://globalmarket.kg/product/dash-color-frische-stiralnyy-poroshok-1-17-kg-7b2cff/",
       "title": "Dash Color Frische стиральный порошок 1,17 кг",
       "brand": "Dash",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 690,
       "image": "/assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_ac041a61a578",
@@ -1102,15 +907,15 @@
       "url": "https://globalmarket.kg/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-61a578/",
       "title": "Dash Alpen Frische капсулы для стирки 60 шт",
       "brand": "Dash",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 2195,
       "image": "/assets/products/dash/dash-alpen-frische-caps-60-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_33a2990e3c6a",
@@ -1119,15 +924,15 @@
       "url": "https://globalmarket.kg/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-0e3c6a/",
       "title": "Dash Color Frische капсулы для стирки 60 шт",
       "brand": "Dash",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 2195,
       "image": "/assets/products/dash/dash-color-frische-caps-60-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_3fd39e5d8314",
@@ -1136,15 +941,15 @@
       "url": "https://globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/",
       "title": "Dash Active Frische гель для стирки 3,6 л",
       "brand": "Dash",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 2090,
       "image": "/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_f027d150c31a",
@@ -1153,15 +958,15 @@
       "url": "https://globalmarket.kg/product/dalli-vollwaschmittel-kapsuly-dlya-stirki-12-sht-50c31a/",
       "title": "Dalli Vollwaschmittel капсулы для стирки 12 шт",
       "brand": "Dalli",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 650,
       "image": "/assets/products/dalli/dalli-vollwaschmittel-caps-12-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_7ac05b86dfd8",
@@ -1170,15 +975,15 @@
       "url": "https://globalmarket.kg/product/dalli-colorwaschmittel-kapsuly-dlya-stirki-12-sht-86dfd8/",
       "title": "Dalli Colorwaschmittel капсулы для стирки 12 шт",
       "brand": "Dalli",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 650,
       "image": "/assets/products/dalli/dalli-colorwaschmittel-caps-12-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_96f0268a48e0",
@@ -1187,15 +992,15 @@
       "url": "https://globalmarket.kg/product/dash-color-frische-gel-dlya-stirki-3-6-l-8a48e0/",
       "title": "Dash Color Frische гель для стирки 3,6 л",
       "brand": "Dash",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 2090,
       "image": "/assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_ebd75b1e7557",
@@ -1204,15 +1009,15 @@
       "url": "https://globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-1-1-l-1e7557/",
       "title": "Dash Active Frische гель для стирки 1,1 л",
       "brand": "Dash",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 690,
       "image": "/assets/products/dash/dash-active-frische-gel-1-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_50de525f882c",
@@ -1221,15 +1026,15 @@
       "url": "https://globalmarket.kg/product/dalli-fein-color-gel-dlya-stirki-1-1-l-5f882c/",
       "title": "Dalli Fein & Color гель для стирки 1,1 л",
       "brand": "Dalli",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 690,
       "image": "/assets/products/dalli/dalli-fein-color-gel-1-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_6c3fa744cf67",
@@ -1238,15 +1043,15 @@
       "url": "https://globalmarket.kg/product/dalli-sensitive-gel-dlya-stirki-1-1-l-44cf67/",
       "title": "Dalli Sensitive гель для стирки 1,1 л",
       "brand": "Dalli",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 690,
       "image": "/assets/products/dalli/dalli-sensitive-gel-1-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_48a2b18d3de6",
@@ -1255,15 +1060,15 @@
       "url": "https://globalmarket.kg/product/dalli-vollwaschmittel-frische-gl-ck-gel-dlya-stirki-1-1-l-8d3de6/",
       "title": "Dalli Vollwaschmittel Frische-glück гель для стирки 1,1 л",
       "brand": "Dalli",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 690,
       "image": "/assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_539a47bdb383",
@@ -1272,15 +1077,15 @@
       "url": "https://globalmarket.kg/product/dalli-colorwaschmittel-gel-dlya-stirki-1-1-l-bdb383/",
       "title": "Dalli Colorwaschmittel гель для стирки 1,1 л",
       "brand": "Dalli",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
+      "category": "Товары из Германии",
+      "categoryId": "germany",
       "collections": [
         "europe"
       ],
       "retailPriceKgs": 690,
       "image": "/assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 24
+      "relatedCount": 16
     },
     {
       "id": "prd_perfume_bybozo_sea_breeze_5ml",
@@ -1295,7 +1100,7 @@
       "retailPriceKgs": 995,
       "image": "/assets/products/perfume/bybozo-sea-breeze-5ml-card-front-v2.jpg",
       "imageCount": 1,
-      "relatedCount": 2
+      "relatedCount": 21
     },
     {
       "id": "prd_perfume_chanel_chance_5ml",
@@ -1310,7 +1115,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/perfume/chanel-chance-5ml-card-front-v2.jpg",
       "imageCount": 1,
-      "relatedCount": 2
+      "relatedCount": 21
     },
     {
       "id": "prd_perfume_le_labo_another_13_5ml",
@@ -1325,7 +1130,292 @@
       "retailPriceKgs": 2245,
       "image": "/assets/products/perfume/le-labo-another-13-5ml-card-front-v2.jpg",
       "imageCount": 1,
-      "relatedCount": 2
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_attar_capella_5ml",
+      "slug": "attar-collection-capella-parfyum-5-ml-la_5ml",
+      "path": "/product/attar-collection-capella-parfyum-5-ml-la_5ml/",
+      "url": "https://globalmarket.kg/product/attar-collection-capella-parfyum-5-ml-la_5ml/",
+      "title": "Attar Collection Capella парфюм 5 мл",
+      "brand": "Attar Collection",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 800,
+      "image": "/assets/products/perfume/attar-capella-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_attar_annabella_5ml",
+      "slug": "attar-collection-annabella-parfyum-5-ml-la_5ml",
+      "path": "/product/attar-collection-annabella-parfyum-5-ml-la_5ml/",
+      "url": "https://globalmarket.kg/product/attar-collection-annabella-parfyum-5-ml-la_5ml/",
+      "title": "Attar Collection Annabella парфюм 5 мл",
+      "brand": "Attar Collection",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 800,
+      "image": "/assets/products/perfume/attar-annabella-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_attar_musk_kashmir_extract_5ml",
+      "slug": "attar-collection-musk-kashmir-extract-parfyum-5-ml-ct_5ml",
+      "path": "/product/attar-collection-musk-kashmir-extract-parfyum-5-ml-ct_5ml/",
+      "url": "https://globalmarket.kg/product/attar-collection-musk-kashmir-extract-parfyum-5-ml-ct_5ml/",
+      "title": "Attar Collection Musk Kashmir Extract парфюм 5 мл",
+      "brand": "Attar Collection",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 1200,
+      "image": "/assets/products/perfume/attar-musk-kashmir-extract-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_attar_second_skin_extract_5ml",
+      "slug": "attar-collection-second-skin-extract-parfyum-5-ml-ct_5ml",
+      "path": "/product/attar-collection-second-skin-extract-parfyum-5-ml-ct_5ml/",
+      "url": "https://globalmarket.kg/product/attar-collection-second-skin-extract-parfyum-5-ml-ct_5ml/",
+      "title": "Attar Collection Second Skin Extract парфюм 5 мл",
+      "brand": "Attar Collection",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 1200,
+      "image": "/assets/products/perfume/attar-second-skin-extract-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_chloe_cedrus_5ml",
+      "slug": "chlo-cedrus-parfyum-5-ml-us_5ml",
+      "path": "/product/chlo-cedrus-parfyum-5-ml-us_5ml/",
+      "url": "https://globalmarket.kg/product/chlo-cedrus-parfyum-5-ml-us_5ml/",
+      "title": "Chloé Cedrus парфюм 5 мл",
+      "brand": "Chloé",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 1200,
+      "image": "/assets/products/perfume/chloe-cedrus-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_chloe_lavanda_5ml",
+      "slug": "chlo-lavanda-parfyum-5-ml-da_5ml",
+      "path": "/product/chlo-lavanda-parfyum-5-ml-da_5ml/",
+      "url": "https://globalmarket.kg/product/chlo-lavanda-parfyum-5-ml-da_5ml/",
+      "title": "Chloé Lavanda парфюм 5 мл",
+      "brand": "Chloé",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 1100,
+      "image": "/assets/products/perfume/chloe-lavanda-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_attar_azora_5ml",
+      "slug": "attar-collection-azora-parfyum-5-ml-ra_5ml",
+      "path": "/product/attar-collection-azora-parfyum-5-ml-ra_5ml/",
+      "url": "https://globalmarket.kg/product/attar-collection-azora-parfyum-5-ml-ra_5ml/",
+      "title": "Attar Collection Azora парфюм 5 мл",
+      "brand": "Attar Collection",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 800,
+      "image": "/assets/products/perfume/attar-azora-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_attar_musk_kashmir_5ml",
+      "slug": "attar-collection-musk-kashmir-parfyum-5-ml-ir_5ml",
+      "path": "/product/attar-collection-musk-kashmir-parfyum-5-ml-ir_5ml/",
+      "url": "https://globalmarket.kg/product/attar-collection-musk-kashmir-parfyum-5-ml-ir_5ml/",
+      "title": "Attar Collection Musk Kashmir парфюм 5 мл",
+      "brand": "Attar Collection",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 800,
+      "image": "/assets/products/perfume/attar-musk-kashmir-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_attar_sierra_5ml",
+      "slug": "attar-collection-sierra-parfyum-5-ml-ra_5ml",
+      "path": "/product/attar-collection-sierra-parfyum-5-ml-ra_5ml/",
+      "url": "https://globalmarket.kg/product/attar-collection-sierra-parfyum-5-ml-ra_5ml/",
+      "title": "Attar Collection Sierra парфюм 5 мл",
+      "brand": "Attar Collection",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 800,
+      "image": "/assets/products/perfume/attar-sierra-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_chanel_coco_mademoiselle_5ml",
+      "slug": "chanel-coco-mademoiselle-parfyum-5-ml-le_5ml",
+      "path": "/product/chanel-coco-mademoiselle-parfyum-5-ml-le_5ml/",
+      "url": "https://globalmarket.kg/product/chanel-coco-mademoiselle-parfyum-5-ml-le_5ml/",
+      "title": "Chanel Coco Mademoiselle парфюм 5 мл",
+      "brand": "Chanel",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 1200,
+      "image": "/assets/products/perfume/chanel-coco-mademoiselle-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_chanel_chance_eau_fraiche_5ml",
+      "slug": "chanel-chance-eau-fra-che-parfyum-5-ml-he_5ml",
+      "path": "/product/chanel-chance-eau-fra-che-parfyum-5-ml-he_5ml/",
+      "url": "https://globalmarket.kg/product/chanel-chance-eau-fra-che-parfyum-5-ml-he_5ml/",
+      "title": "Chanel Chance Eau Fraîche парфюм 5 мл",
+      "brand": "Chanel",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 1100,
+      "image": "/assets/products/perfume/chanel-chance-eau-fraiche-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_giorgio_armani_acqua_di_gioia_5ml",
+      "slug": "giorgio-armani-acqua-di-gioia-parfyum-5-ml-ia_5ml",
+      "path": "/product/giorgio-armani-acqua-di-gioia-parfyum-5-ml-ia_5ml/",
+      "url": "https://globalmarket.kg/product/giorgio-armani-acqua-di-gioia-parfyum-5-ml-ia_5ml/",
+      "title": "Giorgio Armani Acqua di Gioia парфюм 5 мл",
+      "brand": "Giorgio Armani",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 850,
+      "image": "/assets/products/perfume/giorgio-armani-acqua-di-gioia-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_versace_versense_5ml",
+      "slug": "versace-versense-parfyum-5-ml-se_5ml",
+      "path": "/product/versace-versense-parfyum-5-ml-se_5ml/",
+      "url": "https://globalmarket.kg/product/versace-versense-parfyum-5-ml-se_5ml/",
+      "title": "Versace Versense парфюм 5 мл",
+      "brand": "Versace",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 550,
+      "image": "/assets/products/perfume/versace-versense-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_chanel_chance_eau_tendre_5ml",
+      "slug": "chanel-chance-eau-tendre-parfyum-5-ml-re_5ml",
+      "path": "/product/chanel-chance-eau-tendre-parfyum-5-ml-re_5ml/",
+      "url": "https://globalmarket.kg/product/chanel-chance-eau-tendre-parfyum-5-ml-re_5ml/",
+      "title": "Chanel Chance Eau Tendre парфюм 5 мл",
+      "brand": "Chanel",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 1100,
+      "image": "/assets/products/perfume/chanel-chance-eau-tendre-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_parfums_de_marly_delina_exclusif_5ml",
+      "slug": "parfums-de-marly-delina-exclusif-parfyum-5-ml-if_5ml",
+      "path": "/product/parfums-de-marly-delina-exclusif-parfyum-5-ml-if_5ml/",
+      "url": "https://globalmarket.kg/product/parfums-de-marly-delina-exclusif-parfyum-5-ml-if_5ml/",
+      "title": "Parfums de Marly Delina Exclusif парфюм 5 мл",
+      "brand": "Parfums de Marly",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 850,
+      "image": "/assets/products/perfume/parfums-de-marly-delina-exclusif-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_victorias_secret_bombshell_5ml",
+      "slug": "victoria-s-secret-bombshell-parfyum-5-ml-ll_5ml",
+      "path": "/product/victoria-s-secret-bombshell-parfyum-5-ml-ll_5ml/",
+      "url": "https://globalmarket.kg/product/victoria-s-secret-bombshell-parfyum-5-ml-ll_5ml/",
+      "title": "Victoria's Secret Bombshell парфюм 5 мл",
+      "brand": "Victoria's Secret",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 800,
+      "image": "/assets/products/perfume/victorias-secret-bombshell-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_yves_saint_laurent_libre_5ml",
+      "slug": "yves-saint-laurent-libre-parfyum-5-ml-re_5ml",
+      "path": "/product/yves-saint-laurent-libre-parfyum-5-ml-re_5ml/",
+      "url": "https://globalmarket.kg/product/yves-saint-laurent-libre-parfyum-5-ml-re_5ml/",
+      "title": "Yves Saint Laurent Libre парфюм 5 мл",
+      "brand": "Yves Saint Laurent",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 950,
+      "image": "/assets/products/perfume/yves-saint-laurent-libre-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_chanel_chance_eau_splendide_5ml",
+      "slug": "chanel-chance-eau-splendide-parfyum-5-ml-de_5ml",
+      "path": "/product/chanel-chance-eau-splendide-parfyum-5-ml-de_5ml/",
+      "url": "https://globalmarket.kg/product/chanel-chance-eau-splendide-parfyum-5-ml-de_5ml/",
+      "title": "Chanel Chance Eau Splendide парфюм 5 мл",
+      "brand": "Chanel",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 1450,
+      "image": "/assets/products/perfume/chanel-chance-eau-splendide-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
+    },
+    {
+      "id": "prd_perfume_burberry_goddess_5ml",
+      "slug": "burberry-goddess-parfyum-5-ml-ss_5ml",
+      "path": "/product/burberry-goddess-parfyum-5-ml-ss_5ml/",
+      "url": "https://globalmarket.kg/product/burberry-goddess-parfyum-5-ml-ss_5ml/",
+      "title": "Burberry Goddess парфюм 5 мл",
+      "brand": "Burberry",
+      "category": "Парфюм 5 мл",
+      "categoryId": "perfume",
+      "collections": [],
+      "retailPriceKgs": 850,
+      "image": "/assets/products/perfume/burberry-goddess-5ml-card-front.jpg",
+      "imageCount": 1,
+      "relatedCount": 21
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "count": 25,
+  "count": 24,
   "pages": [
     {
       "type": "category",
@@ -7,7 +7,7 @@
       "title": "Стирка и уход за бельем",
       "path": "/category/laundry/",
       "url": "https://globalmarket.kg/category/laundry/",
-      "count": 84,
+      "count": 53,
       "seoTerms": [
         "порошок",
         "стиральный порошок",
@@ -17,7 +17,7 @@
         "средство для стирки",
         "стиральная машина"
       ],
-      "shown": 34
+      "shown": 15
     },
     {
       "type": "category",
@@ -25,7 +25,7 @@
       "title": "Уборка и чистота",
       "path": "/category/home_cleaning/",
       "url": "https://globalmarket.kg/category/home_cleaning/",
-      "count": 11,
+      "count": 9,
       "seoTerms": [
         "средство для стекол",
         "окна",
@@ -37,7 +37,7 @@
         "таблетки для посудомойки",
         "Fairy"
       ],
-      "shown": 3
+      "shown": 1
     },
     {
       "type": "category",
@@ -47,7 +47,7 @@
       "url": "https://globalmarket.kg/category/hair/",
       "count": 104,
       "seoTerms": [],
-      "shown": 19
+      "shown": 13
     },
     {
       "type": "category",
@@ -110,7 +110,7 @@
         "пена для бритья",
         "гель для бритья"
       ],
-      "shown": 19
+      "shown": 16
     },
     {
       "type": "category",
@@ -118,9 +118,9 @@
       "title": "Парфюм 5 мл",
       "path": "/category/perfume/",
       "url": "https://globalmarket.kg/category/perfume/",
-      "count": 3,
+      "count": 22,
       "seoTerms": [],
-      "shown": 3
+      "shown": 22
     },
     {
       "type": "category",
@@ -153,7 +153,7 @@
       "title": "Европа",
       "path": "/collection/europe/",
       "url": "https://globalmarket.kg/collection/europe/",
-      "count": 33,
+      "count": 34,
       "seoTerms": [
         "Европа",
         "Германия",
@@ -162,20 +162,6 @@
         "Dash"
       ],
       "shown": 17
-    },
-    {
-      "type": "brand",
-      "slug": "concord",
-      "title": "Concord",
-      "path": "/brand/concord/",
-      "url": "https://globalmarket.kg/brand/concord/",
-      "count": 46,
-      "seoTerms": [
-        "Concord",
-        "товары Concord",
-        "Concord купить Бишкек"
-      ],
-      "shown": 3
     },
     {
       "type": "brand",
@@ -249,20 +235,6 @@
     },
     {
       "type": "brand",
-      "slug": "ariel",
-      "title": "Ariel",
-      "path": "/brand/ariel/",
-      "url": "https://globalmarket.kg/brand/ariel/",
-      "count": 10,
-      "seoTerms": [
-        "Ariel",
-        "товары Ariel",
-        "Ariel купить Бишкек"
-      ],
-      "shown": 3
-    },
-    {
-      "type": "brand",
       "slug": "gillette-venus",
       "title": "Gillette Venus",
       "path": "/brand/gillette-venus/",
@@ -305,17 +277,17 @@
     },
     {
       "type": "brand",
-      "slug": "head-shoulders",
-      "title": "Head & Shoulders",
-      "path": "/brand/head-shoulders/",
-      "url": "https://globalmarket.kg/brand/head-shoulders/",
+      "slug": "attar-collection",
+      "title": "Attar Collection",
+      "path": "/brand/attar-collection/",
+      "url": "https://globalmarket.kg/brand/attar-collection/",
       "count": 7,
       "seoTerms": [
-        "Head & Shoulders",
-        "товары Head & Shoulders",
-        "Head & Shoulders купить Бишкек"
+        "Attar Collection",
+        "товары Attar Collection",
+        "Attar Collection купить Бишкек"
       ],
-      "shown": 6
+      "shown": 7
     },
     {
       "type": "brand",
@@ -333,15 +305,29 @@
     },
     {
       "type": "brand",
-      "slug": "fairy",
-      "title": "Fairy",
-      "path": "/brand/fairy/",
-      "url": "https://globalmarket.kg/brand/fairy/",
+      "slug": "chanel",
+      "title": "Chanel",
+      "path": "/brand/chanel/",
+      "url": "https://globalmarket.kg/brand/chanel/",
+      "count": 5,
+      "seoTerms": [
+        "Chanel",
+        "товары Chanel",
+        "Chanel купить Бишкек"
+      ],
+      "shown": 5
+    },
+    {
+      "type": "brand",
+      "slug": "chlo",
+      "title": "Chloé",
+      "path": "/brand/chlo/",
+      "url": "https://globalmarket.kg/brand/chlo/",
       "count": 2,
       "seoTerms": [
-        "Fairy",
-        "товары Fairy",
-        "Fairy купить Бишкек"
+        "Chloé",
+        "товары Chloé",
+        "Chloé купить Бишкек"
       ],
       "shown": 2
     },
