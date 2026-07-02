@@ -100,3 +100,12 @@ test("CSS defines state classes used by JS (.banner, .ok, .hidden)", () => {
     assert.ok(html.includes(cls), `admin/index.html CSS missing ${cls}`);
   }
 });
+
+test("CSS defines a colour for every status class emitted by admin.logic.js", () => {
+  // statusClass() in admin.logic.js maps each status to "status-<name>";
+  // every one of those classes must actually be styled, or badges render as
+  // plain default buttons/text with no visual differentiation.
+  for (const cls of [".status-new", ".status-contacted", ".status-confirmed", ".status-completed", ".status-cancelled"]) {
+    assert.ok(html.includes(cls), `admin/index.html CSS missing ${cls}`);
+  }
+});

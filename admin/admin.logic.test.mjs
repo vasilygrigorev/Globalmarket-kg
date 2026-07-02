@@ -42,9 +42,12 @@ import {
   SORT_OPTIONS,
   DEFAULT_SORT,
   parseMinAmount,
+  parseMaxAmount,
   orderSummaryText,
+  orderAddressText,
   customerTelLink,
   orderItemsSummary,
+  statusClass,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -187,7 +190,7 @@ test("renderOrderDetail shows address, promo, consent, RU status", () => {
   assert.match(html, /Бишкек, Чуй, ул\. 1/);   // joined address
   assert.match(html, /SALE10/);                 // promo
   assert.match(html, /Согласие на акции<\/dt><dd>да/); // consent
-  assert.match(html, /class="status">Подтверждён</); // RU status badge
+  assert.match(html, /class="status status-confirmed">Подтверждён</); // RU status badge, colour-coded
 });
 
 test("customerWaLink builds wa.me from digits or returns empty", () => {
@@ -347,6 +350,29 @@ test("parseMinAmount returns a positive number or null", () => {
   assert.equal(parseMinAmount("1500"), 1500);
   assert.equal(parseMinAmount("1 500 сом"), 1500);
   assert.equal(parseMinAmount("99,5"), 99.5);
+});
+
+test("parseMaxAmount parses the same way as parseMinAmount", () => {
+  assert.equal(parseMaxAmount(""), null);
+  assert.equal(parseMaxAmount("0"), null);
+  assert.equal(parseMaxAmount("abc"), null);
+  assert.equal(parseMaxAmount("3000"), 3000);
+  assert.equal(parseMaxAmount("2 000 сом"), 2000);
+});
+
+test("statusClass maps every status to a distinct CSS class, unknown falls back to new", () => {
+  const classes = STATUSES.map(statusClass);
+  assert.equal(new Set(classes).size, STATUSES.length, "each status must have a distinct class");
+  for (const c of classes) assert.match(c, /^status-/);
+  assert.equal(statusClass("bogus"), "status-new");
+  assert.equal(statusClass(undefined), "status-new");
+});
+
+test("orderAddressText joins city/region/address, empty when none given", () => {
+  assert.equal(orderAddressText({ city: "Бишкек", region: "Чуйская", address: "ул. Ленина 1" }), "Бишкек, Чуйская, ул. Ленина 1");
+  assert.equal(orderAddressText({ city: "Ош" }), "Ош");
+  assert.equal(orderAddressText({}), "");
+  assert.equal(orderAddressText(null), "");
 });
 
 test("orderSummaryText builds a WhatsApp-readable summary with present parts", () => {

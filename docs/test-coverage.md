@@ -28,9 +28,11 @@ browser, no Supabase, no Cloudflare, no secrets.
   search sanitization, status labels, consent/source text, detail render, states,
   CSV export: field quoting + formula-injection guard, ordersToCsv, csvFilename;
   pagination: pageRange, hasMore, moreButtonText;
-  sorting: sortColumn whitelist + safe fallback; amount filter: parseMinAmount).
+  sorting: sortColumn whitelist + safe fallback; amount filter: parseMinAmount,
+  parseMaxAmount; statusClass colour mapping (distinct class per status, unknown
+  falls back to "new"); orderAddressText (shared address join, empty when none)).
 - `admin.dom.test.mjs` — required ids, HTML↔JS id contract, dynamic detail ids,
-  anon-only (no service_role), CSS state classes.
+  anon-only (no service_role), CSS state classes, CSS status-colour classes.
 - `admin-mobile.test.mjs` — phone/daily-use readiness: responsive viewport, title
   + noindex, wrapping control rows, ≥40px tap targets, horizontally scrollable
   orders table with a min width, and mobile keyboard hints on the filter inputs.
@@ -50,8 +52,11 @@ browser, no Supabase, no Cloudflare, no secrets.
   shows customer/WhatsApp/all item rows/total/address/source/manager note; a
   copy-summary button copies a plain-text order summary via the clipboard;
   detail offers WhatsApp + tel: call links and a positions/quantity summary
-  ("N позиций · M шт"); reset-filters clears every control and reloads; status set
-  stays the stable Russian 5 and all are selectable.
+  ("N позиций · M шт"); a copy-address button (only when an address exists) uses
+  the shared `orderAddressText`; the list query supports a max-amount filter
+  (`.lte("total_kgs", maxAmount)`) alongside min-amount; reset-filters clears
+  every control (incl. maxAmount) and reloads; status set stays the stable
+  Russian 5 and all are selectable.
 
 ## Storefront contracts (tests/)
 

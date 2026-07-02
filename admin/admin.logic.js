@@ -17,6 +17,21 @@ export function statusLabel(status) {
   return STATUS_LABELS[status] || status || "";
 }
 
+// CSS class per status, so the list/detail "pill" is colour-coded instead of
+// uniform grey — a manager scans the list faster when new/cancelled stand out.
+// Colours are defined in admin/index.html; unknown statuses fall back to "new".
+export const STATUS_CLASSES = {
+  new: "status-new",
+  contacted: "status-contacted",
+  confirmed: "status-confirmed",
+  completed: "status-completed",
+  cancelled: "status-cancelled",
+};
+
+export function statusClass(status) {
+  return STATUS_CLASSES[status] || "status-new";
+}
+
 // ISO timestamp for a list date filter, or null for "all" (pure).
 // period: "today" | "7d" | "30d" | "" (all).
 export function sinceForPeriod(period, now = new Date()) {
@@ -150,10 +165,10 @@ export function ordersMatchingText(total) {
 
 // --- Amount filter (pure) ---
 
-// Parse the "min amount" input into a non-negative number, or null when the
+// Parse a positive number out of an amount-filter input, or null when the
 // field is empty/invalid (so no filter is applied). Accepts comma decimals and
-// strips spaces/currency, so "1 500 сом" -> 1500.
-export function parseMinAmount(value) {
+// strips spaces/currency, so "1 500 сом" -> 1500. Shared by min/max amount.
+function parsePositiveAmount(value) {
   if (value == null) return null;
   const cleaned = String(value).replace(/\s/g, "").replace(",", ".");
   const m = cleaned.match(/-?\d+(?:\.\d+)?/);
@@ -161,6 +176,14 @@ export function parseMinAmount(value) {
   const n = Number(m[0]);
   if (!Number.isFinite(n) || n <= 0) return null;
   return n;
+}
+
+export function parseMinAmount(value) {
+  return parsePositiveAmount(value);
+}
+
+export function parseMaxAmount(value) {
+  return parsePositiveAmount(value);
 }
 
 // --- Sorting (pure) ---
@@ -257,6 +280,13 @@ export function csvFilename(now = new Date()) {
 
 // --- Order summary for the manager (plain text, WhatsApp-readable; pure) ---
 
+// Joined delivery address (city, region, street), or "" when none given (pure).
+// Shared by the summary text and the order-detail card so both agree on format.
+export function orderAddressText(order) {
+  const o = order || {};
+  return [o.city, o.region, o.address].filter(Boolean).join(", ");
+}
+
 // Build a clean, copy-pasteable order summary a manager can paste into WhatsApp.
 // Plain text only (no HTML): customer, phone, delivery address, item lines,
 // total, status, source, and comments — skipping any parts that are absent.
@@ -266,7 +296,7 @@ export function orderSummaryText(order, items) {
   lines.push(`Заказ${o.created_at ? ` · ${when(o.created_at)}` : ""}`);
   if (o.customer_name) lines.push(`Клиент: ${o.customer_name}`);
   if (o.customer_phone) lines.push(`Телефон: ${o.customer_phone}`);
-  const address = [o.city, o.region, o.address].filter(Boolean).join(", ");
+  const address = orderAddressText(o);
   if (address) lines.push(`Адрес: ${address}`);
   const rows = (items || []).filter(Boolean);
   if (rows.length) {
@@ -326,7 +356,7 @@ export function renderOrderRow(o) {
       <td>${esc(o.customer_phone)}</td>
       <td>${esc(o.city)}</td>
       <td>${esc(money(o.total_kgs))}</td>
-      <td><span class="status">${esc(statusLabel(o.status))}</span></td>
+      <td><span class="status ${statusClass(o.status)}">${esc(statusLabel(o.status))}</span></td>
       <td>${esc(o.customer_source)}</td>
     </tr>`;
 }
@@ -374,11 +404,12 @@ export function sourceText(order, attr) {
 
 // Pure HTML for the order detail card (escaped). Event wiring stays in admin.js.
 export function renderOrderDetail(order, items, attr, consents) {
-  const address = [order.city, order.region, order.address].filter(Boolean).join(", ") || "—";
+  const addressText = orderAddressText(order);
+  const address = addressText || "—";
   return `
     <div class="row" style="justify-content:space-between;">
       <h2 style="margin:0;">${esc(order.customer_name)} · ${esc(order.customer_phone)}</h2>
-      <span class="status">${esc(statusLabel(order.status))}</span>
+      <span class="status ${statusClass(order.status)}">${esc(statusLabel(order.status))}</span>
     </div>
     <p class="muted">${esc(when(order.created_at))}</p>
     ${customerWaLink(order.customer_phone)
@@ -393,7 +424,9 @@ export function renderOrderDetail(order, items, attr, consents) {
     ${orderItemsSummary(items) ? `<p class="muted" style="margin:2px 0;">${esc(orderItemsSummary(items))}</p>` : ""}
     <p><strong>Итого: ${esc(money(order.total_kgs))}</strong></p>
     <dl class="order-facts" style="display:grid; grid-template-columns:auto 1fr; gap:4px 12px; margin:10px 0;">
-      <dt class="muted">Адрес</dt><dd>${esc(address)}</dd>
+      <dt class="muted">Адрес</dt><dd>${esc(address)}${addressText
+        ? ` <button id="copyAddress" type="button" class="secondary" style="min-height:26px; padding:0 10px; font-size:12px; vertical-align:middle;">Копировать</button>`
+        : ""}</dd>
       <dt class="muted">Комментарий клиента</dt><dd>${esc(order.customer_comment || "—")}</dd>
       <dt class="muted">Источник рекламы</dt><dd>${esc(sourceText(order, attr))}</dd>
       <dt class="muted">Промокод</dt><dd>${esc(order.promo_code || "—")}</dd>

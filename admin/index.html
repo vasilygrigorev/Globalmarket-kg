@@ -25,6 +25,12 @@
       th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: top; }
       th { color: var(--muted); font-weight: 600; }
       .status { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; border: 1px solid var(--line); }
+      /* Status colour-coding so the list is scannable at a glance (see admin/admin.logic.js statusClass). */
+      .status-new { background: #eef2ff; border-color: #c7d2fe; color: #3346d1; }
+      .status-contacted { background: #fff8e6; border-color: #f5d998; color: #8a6400; }
+      .status-confirmed { background: #e6f7ff; border-color: #a8e0f5; color: #0f6e94; }
+      .status-completed { background: #eefaf0; border-color: #bfe8cc; color: #1c7a3f; }
+      .status-cancelled { background: #fff4f6; border-color: #f3c0c9; color: #a3001a; }
       .hidden { display: none !important; }
       .banner { padding: 12px 14px; border-radius: 10px; background: #fff4f6; border: 1px solid rgba(215,0,21,.25); color: #a3001a; }
       .ok { background: #eefaf0; border-color: rgba(48,168,92,.3); color: #1c7a3f; }
@@ -91,6 +97,7 @@
             <option value="name_desc">Имя Я-А</option>
           </select>
           <input id="minAmount" type="number" min="0" inputmode="numeric" enterkeyhint="done" placeholder="Сумма от, сом" style="width:140px;" />
+          <input id="maxAmount" type="number" min="0" inputmode="numeric" enterkeyhint="done" placeholder="Сумма до, сом" style="width:140px;" />
           <input id="search" type="search" enterkeyhint="search" autocomplete="off" placeholder="Поиск по телефону или имени" style="flex:1; min-width:200px;" />
           <button id="refresh" class="secondary" type="button">Обновить</button>
           <button id="resetFilters" class="secondary" type="button">Сбросить фильтры</button>

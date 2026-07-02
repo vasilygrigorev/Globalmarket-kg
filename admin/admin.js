@@ -28,7 +28,9 @@ import {
   moreButtonText,
   sortColumn,
   parseMinAmount,
+  parseMaxAmount,
   orderSummaryText,
+  orderAddressText,
 } from "./admin.logic.js";
 
 const $ = (id) => document.getElementById(id);
@@ -106,6 +108,8 @@ async function loadOrders({ append = false } = {}) {
   if (since) query = query.gte("created_at", since);
   const minAmount = parseMinAmount($("minAmount") ? $("minAmount").value : "");
   if (minAmount != null) query = query.gte("total_kgs", minAmount);
+  const maxAmount = parseMaxAmount($("maxAmount") ? $("maxAmount").value : "");
+  if (maxAmount != null) query = query.lte("total_kgs", maxAmount);
   const orFilter = buildSearchOr(q);
   if (orFilter) query = query.or(orFilter);
 
@@ -179,6 +183,8 @@ async function openOrder(id) {
   $("copySummary").addEventListener("click", () => copyOrderSummary(order, items));
   const phoneBtn = $("copyPhone");
   if (phoneBtn) phoneBtn.addEventListener("click", () => copyToClipboard(order.customer_phone, "Телефон скопирован ✓"));
+  const addressBtn = $("copyAddress");
+  if (addressBtn) addressBtn.addEventListener("click", () => copyToClipboard(orderAddressText(order), "Адрес скопирован ✓"));
 }
 
 async function copyToClipboard(text, okText) {
@@ -207,6 +213,7 @@ function resetFilters() {
   if ($("periodFilter")) $("periodFilter").value = "";
   if ($("sortBy")) $("sortBy").value = "created_desc";
   if ($("minAmount")) $("minAmount").value = "";
+  if ($("maxAmount")) $("maxAmount").value = "";
   $("search").value = "";
   loadOrders();
 }
@@ -278,6 +285,7 @@ function wire() {
   $("periodFilter")?.addEventListener("change", loadOrders);
   $("sortBy")?.addEventListener("change", loadOrders);
   $("minAmount")?.addEventListener("keydown", (e) => { if (e.key === "Enter") loadOrders(); });
+  $("maxAmount")?.addEventListener("keydown", (e) => { if (e.key === "Enter") loadOrders(); });
   $("search").addEventListener("keydown", (e) => { if (e.key === "Enter") loadOrders(); });
   $("backToList").addEventListener("click", (e) => { e.preventDefault(); setView("list"); loadOrders(); });
 }

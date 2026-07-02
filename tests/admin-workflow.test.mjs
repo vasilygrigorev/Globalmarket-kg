@@ -10,7 +10,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { STATUSES, STATUS_LABELS, renderOrderDetail, renderStatusOptions, CSV_COLUMNS, orderSummaryText } from "../admin/admin.logic.js";
+import { STATUSES, STATUS_LABELS, renderOrderDetail, renderStatusOptions, CSV_COLUMNS, orderSummaryText, orderAddressText } from "../admin/admin.logic.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const adminJs = readFileSync(join(ROOT, "admin", "admin.js"), "utf8");
@@ -102,10 +102,34 @@ test("reset-filters button clears every filter control and reloads", () => {
   assert.match(indexHtml, /id="resetFilters"/);            // button exists
   assert.match(adminJs, /resetFilters"\)\.addEventListener/); // wired
   assert.ok(resetFilters, "resetFilters() not found");
-  for (const id of ["statusFilter", "periodFilter", "sortBy", "minAmount", "search"]) {
+  for (const id of ["statusFilter", "periodFilter", "sortBy", "minAmount", "maxAmount", "search"]) {
     assert.ok(resetFilters.includes(`$("${id}")`), `resetFilters must clear ${id}`);
   }
   assert.match(resetFilters, /loadOrders\(\)/); // reloads the list
+});
+
+test("the orders list query supports a max-amount filter alongside min-amount", () => {
+  assert.match(loadOrders, /parseMaxAmount\(/);
+  assert.match(loadOrders, /\.lte\("total_kgs", *maxAmount\)/);
+  assert.match(indexHtml, /id="maxAmount"/); // input exists in the filter row
+});
+
+test("order detail offers a copy-address button wired to the clipboard", () => {
+  const html = renderOrderDetail(
+    { customer_name: "A", status: "new", total_kgs: 100, city: "Ош", address: "ул. Мира 5" }, [], [], [],
+  );
+  assert.match(html, /id="copyAddress"/);                  // button present when address exists
+  assert.match(adminJs, /copyAddress/);                    // wired in admin.js
+  assert.match(adminJs, /orderAddressText\(order\)/);       // reuses the shared address helper
+  // No button when there is no address to copy.
+  const noAddress = renderOrderDetail({ customer_name: "A", status: "new", total_kgs: 100 }, [], [], []);
+  assert.ok(!noAddress.includes('id="copyAddress"'));
+});
+
+test("orderAddressText is the single source of truth for the joined address", () => {
+  const order = { city: "Ош", region: "Ошская", address: "ул. Мира 5" };
+  const html = renderOrderDetail({ ...order, customer_name: "A", status: "new", total_kgs: 100 }, [], [], []);
+  assert.match(html, new RegExp(orderAddressText(order).replace(/\./g, "\\.")));
 });
 
 test("status set is the stable Russian 5 and all are offered in the detail select", () => {

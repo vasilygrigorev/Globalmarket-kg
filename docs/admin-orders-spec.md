@@ -86,16 +86,25 @@ Status & next steps: [`admin-next-steps.md`](admin-next-steps.md).
 - Statuses show Russian labels via `statusLabel()` (values stay
   `new/contacted/confirmed/completed/cancelled` to match the DB CHECK): Новый,
   Связались, Подтверждён, Выполнен, Отменён. Used in the list, the status badge,
-  and the status `<select>`.
-- The order list shows "Показано N заказов" (`#ordersCount`), "Сумма показанных"
-  (`#ordersTotal`, `ordersTotalText()`), and a manager hint.
-- Filters: status (`#statusFilter`, Russian labels, English values) and date
+  and the status `<select>`. The badge is also colour-coded via `statusClass()`
+  (`status-new`/`status-contacted`/`status-confirmed`/`status-completed`/
+  `status-cancelled`, styled in `admin/index.html`) so the manager can scan the
+  list without reading every label; an unknown status falls back to the "new"
+  colour.
+- The order list shows "Показано N заказов" (`#ordersCount`, or "Всего N
+  заказов" — `ordersMatchingText()` — from the server's exact match count when
+  available), "Сумма показанных" (`#ordersTotal`, `ordersTotalText()`,
+  intentionally scoped to only the loaded rows), and a manager hint.
+- Filters: status (`#statusFilter`, Russian labels, English values), date
   period (`#periodFilter`: Всё время / Сегодня / 7 дней / 30 дней via
-  `sinceForPeriod()` → `created_at >= since`). Plus phone/name search.
-- The order detail shows items + total, then a facts block: Адрес, Комментарий
-  клиента, Источник рекламы (`sourceText()`), Промокод, Согласие на акции
-  (`consentText()` from `customer_consents`), plus a "Написать клиенту в
-  WhatsApp" link (`customerWaLink()`).
+  `sinceForPeriod()` → `created_at >= since`), amount range (`#minAmount` /
+  `#maxAmount`, parsed by `parseMinAmount()` / `parseMaxAmount()` →
+  `.gte`/`.lte("total_kgs", …)`), and phone/name search.
+- The order detail shows items + total, then a facts block: Адрес (with a
+  "Копировать" button when an address is present, using the shared
+  `orderAddressText()`), Комментарий клиента, Источник рекламы (`sourceText()`),
+  Промокод, Согласие на акции (`consentText()` from `customer_consents`), plus a
+  "Написать клиенту в WhatsApp" link (`customerWaLink()`).
 - Security: the browser uses only the publishable anon key; a test asserts no
   `service_role` string appears in any shipped admin file.
 
