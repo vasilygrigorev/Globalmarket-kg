@@ -563,11 +563,11 @@ def render_page(product, related, slug, landing_lookup=None):
     .related {{ margin-top: 28px; }}
     .related h2 {{ font-size: 26px; }}
     .related-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }}
-    .related-card {{ background: #fff; border-radius: 14px; padding: 10px; display: grid; gap: 8px; }}
+    .related-card {{ overflow: hidden; background: #fff; border-radius: 14px; display: grid; grid-template-rows: auto 1fr auto; gap: 8px; }}
     .related-card {{ color: inherit; text-decoration: none; }}
-    .related-card img {{ width: 100%; border-radius: 10px; aspect-ratio: 1 / 1; object-fit: cover; }}
-    .related-card strong {{ font-size: 14px; }}
-    .related-card span {{ font-weight: 800; }}
+    .related-card img {{ display: block; width: 100%; border-radius: 0; aspect-ratio: 1 / 1; object-fit: cover; }}
+    .related-card strong {{ padding: 0 10px; font-size: 14px; }}
+    .related-card span {{ padding: 0 10px 10px; font-weight: 800; }}
     body.product-page .site-header {{ z-index: 20; }}
     .site-footer {{ margin: 32px auto 0; padding: 28px 18px calc(32px + env(safe-area-inset-bottom)); color: #636366; background: #fff; border-top: 1px solid #e4e4e7; }}
     .site-footer-inner {{ display: grid; gap: 18px; max-width: 980px; margin: 0 auto; }}
