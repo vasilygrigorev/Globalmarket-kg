@@ -53,7 +53,7 @@ def render_items(items):
           <strong>{escape(item.get('title'))}</strong>
           <span>{int(item.get('count') or 0)} товаров</span>
         </a>
-        """
+        """.rstrip("\n ") + "\n"
         for item in items
     )
 

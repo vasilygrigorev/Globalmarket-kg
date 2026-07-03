@@ -80,6 +80,55 @@ def price_html(value):
     return f'{money(value)} <span class="som-sign">с</span>'
 
 
+def has_product_image(product):
+    # Presence-only check (not existence-on-disk) to mirror hasProductImage() in
+    # app.js exactly, since that's what the "Хит" badge rule keys off there.
+    return bool(product.get("image") or product.get("galleryImages"))
+
+
+def product_badges(product):
+    """Marketing badges shown bottom-left of a product tile. Mirrors
+    productBadges() in app.js — keep both in sync (parity is asserted by
+    tests/catalog-badges-parity.test.mjs)."""
+    badges = []
+    if product.get("categoryId") == "perfume" or product.get("brand") == "Concord":
+        badges.append("Новинка")
+    if has_product_image(product) and float(product.get("rating") or 0) >= 4.8:
+        badges.append("Хит")
+    retail = float(product.get("retailPriceKgs") or 0)
+    if 0 < retail <= 500:
+        badges.append("Выгодно")
+    return badges[:2]
+
+
+def has_discount(product):
+    """A manual promo discount is active (data/discounts.json ->
+    discountPercent/originalPriceKgs on the catalog). Mirrors hasDiscount() in
+    app.js."""
+    discount_percent = product.get("discountPercent") or 0
+    original = product.get("originalPriceKgs") or 0
+    retail = product.get("retailPriceKgs") or 0
+    return discount_percent > 0 and original > retail
+
+
+def discount_badge_html(product):
+    """'-XX%' badge shown bottom-right of a product tile when a discount is
+    active. Mirrors discountBadgeHtml() in app.js."""
+    if not has_discount(product):
+        return ""
+    return f'<span class="discount-badge">-{int(product["discountPercent"])}%</span>'
+
+
+def price_with_discount_html(product):
+    """Current (retail) price, with the crossed-out original price alongside
+    it when a discount is active. Mirrors priceWithDiscountHtml() in app.js."""
+    current = price_html(product.get("retailPriceKgs", 0))
+    if not has_discount(product):
+        return f'<span class="price">{current}</span>'
+    original = price_html(product["originalPriceKgs"])
+    return f'<span class="price-group"><span class="price">{current}</span><span class="price-original">{original}</span></span>'
+
+
 def load_partial(path):
     return path.read_text(encoding="utf-8").strip()
 
@@ -408,26 +457,85 @@ def render_gallery(images, title):
     return f'<div class="gallery-thumbs" aria-label="Фотографии товара">{items}</div>'
 
 
+def product_tile_html(product, extra_class=""):
+    """One catalog-style tile: brand pill, like button, marketing + discount
+    badges, image, title/type/variant, category, description, price (with
+    strikethrough original when discounted), add-to-cart. Matches the home
+    page .product-card markup (renderProducts() in app.js) exactly, reusing
+    the same styles.css classes, so a tile looks identical wherever it
+    appears — home grid, "Похожие товары", or a landing page grid. The like
+    button/add-to-cart button carry the real product id in data-favorite /
+    data-add so the page's embedded script can wire them up the same way the
+    home page does (see wireGridCardInteractions() below)."""
+    images = product_images(product)
+    if not images:
+        return ""
+    image = images[0]
+    slug = product_slug(product)
+    href = f"/product/{escape(slug)}/"
+    display = product_display_parts(product)
+    badges = product_badges(product)
+    tones = product.get("tones") or ["#f4f4f6", "#ffffff"]
+    tone_a = escape(tones[0] if len(tones) > 0 else "#f4f4f6")
+    tone_b = escape(tones[1] if len(tones) > 1 else tone_a)
+    product_id = escape(product.get("id"))
+    badges_html = (
+        f'<div class="marketing-badges">{"".join(f"<span>{escape(b)}</span>" for b in badges)}</div>'
+        if badges
+        else ""
+    )
+    size_html = f'<span>{escape(display["size"])}</span>' if display["size"] else ""
+    # rstrip each line: badges_html/discount_badge_html can be "" for a given
+    # product, which would otherwise leave an indentation-only line behind
+    # (fails git diff --check's trailing-whitespace guard).
+    return "\n".join(line.rstrip() for line in f"""
+            <article class="product-card {extra_class}">
+              <div class="product-visual" style="--tone-a: {tone_a}; --tone-b: {tone_b}">
+                <span class="placeholder-brand">{escape(product.get("brand") or "GM")}</span>
+                <button class="favorite-button" type="button" data-favorite="{product_id}" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                {badges_html}
+                {discount_badge_html(product)}
+                <a class="product-image-link" href="{href}" data-product-link="{product_id}" aria-label="Открыть {escape(product.get("title"))}">
+                  <img class="product-image" src="/{escape(image)}" alt="{escape(product.get("title"))}" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="{href}" data-product-link="{product_id}">
+                  <span class="product-brand-line">{escape(display["brand"])}</span>
+                  <span class="product-kind-line">
+                    <strong>{escape(display["type"])}</strong>
+                    {size_html}
+                  </span>
+                  <span class="product-variant-line">{escape(display["variant"])}</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>{escape(product.get("category"))}</span>
+                </div>
+                <p>{escape(product.get("description"))}</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    {price_with_discount_html(product)}
+                    <button class="add-button compact-add-button" type="button" data-add="{product_id}" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: {price_html(product.get("registeredPriceKgs", 0))}</span>
+                </div>
+              </div>
+            </article>
+    """.splitlines())
+
+
 def render_related(products):
     if not products:
         return ""
-    cards = []
-    for product in products:
-        image = product_images(product)[0]
-        slug = product_slug(product)
-        cards.append(
-            f"""
-            <a class="related-card" href="/product/{escape(slug)}/">
-              <img src="/{escape(image)}" alt="{escape(product.get('title'))}" loading="lazy">
-              <strong>{escape(product.get('title'))}</strong>
-              <span>{price_html(product.get('retailPriceKgs', 0))}</span>
-            </a>
-            """
-        )
+    cards = "".join(product_tile_html(product) for product in products)
+    if not cards:
+        return ""
     return f"""
     <section class="related">
       <h2>Похожие товары</h2>
-      <div class="related-grid">{''.join(cards)}</div>
+      <div class="related-grid">{cards}</div>
     </section>
     """
 
@@ -562,12 +670,11 @@ def render_page(product, related, slug, landing_lookup=None):
     .stock-note {{ padding: 14px; border-radius: 12px; background: #f1f1f1; color: #555; }}
     .related {{ margin-top: 28px; }}
     .related h2 {{ font-size: 26px; }}
-    .related-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }}
-    .related-card {{ overflow: hidden; background: #fff; border-radius: 14px; display: grid; grid-template-rows: auto 1fr auto; gap: 8px; }}
-    .related-card {{ color: inherit; text-decoration: none; }}
-    .related-card img {{ display: block; width: 100%; border-radius: 0; aspect-ratio: 1 / 1; object-fit: cover; }}
-    .related-card strong {{ padding: 0 10px; font-size: 14px; }}
-    .related-card span {{ padding: 0 10px 10px; font-weight: 800; }}
+    /* Cards inside .related-grid reuse the shared .product-card rules from
+       styles.css (loaded above) so they render identically to home-page
+       catalog cards — same brand pill, like button, badges, price, add
+       button. Only the grid container itself is defined here. */
+    .related-grid {{ display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }}
     body.product-page .site-header {{ z-index: 20; }}
     .site-footer {{ margin: 32px auto 0; padding: 28px 18px calc(32px + env(safe-area-inset-bottom)); color: #636366; background: #fff; border-top: 1px solid #e4e4e7; }}
     .site-footer-inner {{ display: grid; gap: 18px; max-width: 980px; margin: 0 auto; }}
@@ -642,8 +749,8 @@ def render_page(product, related, slug, landing_lookup=None):
         </div>
         <p class="description">{escape(description)}</p>
         <div class="price-box">
-          <span>Ваша цена</span>
-          <strong class="price">{price_html(product.get("retailPriceKgs", 0))}</strong>
+          <span>Ваша цена{f" · скидка {int(product['discountPercent'])}%" if has_discount(product) else ""}</span>
+          <strong>{price_with_discount_html(product)}</strong>
           <small>Скидка регистрации: 3%</small>
         </div>
         <dl class="specs">
@@ -735,6 +842,58 @@ def render_page(product, related, slug, landing_lookup=None):
       button.setAttribute("aria-pressed", String(active));
       button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
     }}
+
+    // "Похожие товары" cards are full catalog tiles (same markup as the home
+    // page) with a real product id in data-favorite/data-add, unlike this
+    // page's own singular data-favorite/data-add-cart buttons (which always
+    // refer to `product`). Handled separately via delegation on .related-grid
+    // so the two mechanisms never collide.
+    function syncGridFavoriteButtons() {{
+      const ids = new Set(readJson(favoritesKey, []));
+      document.querySelectorAll(".related-grid [data-favorite]").forEach((button) => {{
+        const active = ids.has(button.dataset.favorite);
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+        button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
+      }});
+    }}
+
+    document.querySelector(".related-grid")?.addEventListener("click", (event) => {{
+      const favoriteButton = event.target.closest("[data-favorite]");
+      const addButton = event.target.closest("[data-add]");
+      const productLink = event.target.closest("[data-product-link]");
+      if (favoriteButton) {{
+        const id = favoriteButton.dataset.favorite;
+        const ids = new Set(readJson(favoritesKey, []));
+        if (ids.has(id)) ids.delete(id);
+        else ids.add(id);
+        localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
+        syncGridFavoriteButtons();
+        return;
+      }}
+      if (addButton) {{
+        const id = addButton.dataset.add;
+        const rows = readJson(cartKey, []);
+        const index = rows.findIndex((row) => row[0] === id);
+        if (index >= 0) rows[index][1] = Number(rows[index][1] || 0) + 1;
+        else rows.push([id, 1]);
+        localStorage.setItem(cartKey, JSON.stringify(rows));
+        updateCartCount();
+        addButton.classList.add("added");
+        const originalLabel = addButton.textContent;
+        window.setTimeout(() => {{
+          addButton.classList.remove("added");
+          addButton.textContent = originalLabel;
+        }}, 900);
+        addButton.textContent = "Добавлено";
+        return;
+      }}
+      if (productLink) {{
+        const ids = readJson(recentlyViewedKey, []);
+        const next = [productLink.dataset.productLink, ...ids.filter((id) => id !== productLink.dataset.productLink)].slice(0, 20);
+        localStorage.setItem(recentlyViewedKey, JSON.stringify(next));
+      }}
+    }});
 
     function setMenuOpen(isOpen) {{
       if (!categoryMenu || !toggleMenuButton) return;
@@ -835,6 +994,7 @@ def render_page(product, related, slug, landing_lookup=None):
     }});
 
     updateFavoriteButton();
+    syncGridFavoriteButtons();
     updateCartCount();
     recordRecentlyViewed();
     renderMenu();

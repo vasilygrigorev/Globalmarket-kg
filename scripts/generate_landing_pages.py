@@ -204,22 +204,197 @@ def breadcrumb_json_ld(target, canonical):
     )
 
 
+def has_product_image(product):
+    # Presence-only check (not existence-on-disk) to mirror hasProductImage()
+    # in app.js, since that's what the "Хит" badge rule keys off there.
+    return bool(product.get("image") or product.get("galleryImages"))
+
+
+def product_badges(product):
+    """Marketing badges shown bottom-left of a product tile. Mirrors
+    productBadges() in app.js and product_badges() in
+    scripts/generate_product_pages.py — keep all three in sync (parity is
+    asserted by tests/catalog-badges-parity.test.mjs)."""
+    badges = []
+    if product.get("categoryId") == "perfume" or product.get("brand") == "Concord":
+        badges.append("Новинка")
+    if has_product_image(product) and float(product.get("rating") or 0) >= 4.8:
+        badges.append("Хит")
+    retail = float(product.get("retailPriceKgs") or 0)
+    if 0 < retail <= 500:
+        badges.append("Выгодно")
+    return badges[:2]
+
+
+def has_discount(product):
+    """A manual promo discount is active (data/discounts.json ->
+    discountPercent/originalPriceKgs on the catalog). Mirrors hasDiscount() in
+    app.js."""
+    discount_percent = product.get("discountPercent") or 0
+    original = product.get("originalPriceKgs") or 0
+    retail = product.get("retailPriceKgs") or 0
+    return discount_percent > 0 and original > retail
+
+
+def discount_badge_html(product):
+    if not has_discount(product):
+        return ""
+    return f'<span class="discount-badge">-{int(product["discountPercent"])}%</span>'
+
+
+def price_with_discount_html(product):
+    current = price_html(product.get("retailPriceKgs", 0))
+    if not has_discount(product):
+        return f'<span class="price">{current}</span>'
+    original = price_html(product["originalPriceKgs"])
+    return f'<span class="price-group"><span class="price">{current}</span><span class="price-original">{original}</span></span>'
+
+
+def product_size(title):
+    text = str(title or "").replace(",", ".")
+    combo = re.search(
+        r"(?:^|\s)(\d+(?:\.\d+)?\s*(?:мл|ml|л|l|кг|kg|г|g)\s*\+\s*\d+(?:\.\d+)?\s*(?:мл|ml|л|l|кг|kg|г|g))(?:\s|$)",
+        text,
+        re.I,
+    )
+    single = re.search(r"(?:^|\s)(\d+(?:\.\d+)?\s*(?:мл|ml|л|l|кг|kg|г|g|шт))(?:\s|$)", text, re.I)
+    value = combo or single
+    if not value:
+        return ""
+    return (
+        value.group(1)
+        .replace(".", ",")
+        .replace("ml", "мл")
+        .replace("ML", "мл")
+        .replace("kg", "кг")
+        .replace("KG", "кг")
+    )
+
+
+def display_product_type(product):
+    # Mirrors display_product_type() in scripts/generate_product_pages.py.
+    product_type = product.get("productType") or ""
+    category = product.get("category") or "товар"
+    title = product.get("title") or ""
+    lower = f"{product_type} {category} {title}".lower()
+    if "ополаскив" in lower or "кондиционер для белья" in lower:
+        return "ополаскиватель"
+    if "гель для стирки" in lower:
+        return "гель для стирки"
+    if "порош" in lower:
+        return "стиральный порошок"
+    if "шамп" in lower:
+        return "шампунь"
+    if "гель для бритья" in lower:
+        return "гель для бритья"
+    if "пена для бритья" in lower:
+        return "пена для бритья"
+    if "запас" in lower or "кассет" in lower:
+        return "кассеты для станка"
+    if "станок" in lower:
+        return "станок для бритья"
+    if "парфюм" in lower:
+        return "парфюм на разлив"
+    return product_type or category
+
+
+def strip_first(text, needle):
+    text = str(text or "").strip()
+    needle = str(needle or "").strip()
+    if not text or not needle:
+        return text
+    pattern = re.compile(re.escape(needle), re.I)
+    return pattern.sub("", text, count=1).strip(" -·,")
+
+
+def product_display_parts(product):
+    # Mirrors product_display_parts() in scripts/generate_product_pages.py and
+    # productDisplayParts() in app.js.
+    brand = product.get("brand") or "Global Market"
+    product_type = display_product_type(product)
+    size = product_size(product.get("title"))
+    variant = product.get("title") or ""
+    for part in (brand, product.get("productType"), product_type, size):
+        variant = strip_first(variant, part)
+    variant = re.sub(r"\d+(?:[.,]\d+)?\s*(?:мл|ml|л|l|кг|kg|г|g|шт)", "", variant, flags=re.I)
+    variant = re.sub(r"\s+", " ", variant.replace("(", " ").replace(")", " ")).strip(" -·,")
+    if not variant or variant.lower() == brand.lower():
+        variant = (product.get("description") or product.get("title") or "").split(".")[0]
+    return {"brand": brand, "type": product_type, "size": size, "variant": variant}
+
+
+def product_tile_html(product, href):
+    """One catalog-style tile: brand pill, like button, marketing + discount
+    badges, image, title/type/variant, category, description, price (with
+    strikethrough original when discounted), add-to-cart. Matches the home
+    page .product-card markup (renderProducts() in app.js) and
+    scripts/generate_product_pages.py's product_tile_html() exactly, reusing
+    the same styles.css classes."""
+    image = public_path(product_image(product))
+    if not image:
+        return ""
+    display = product_display_parts(product)
+    badges = product_badges(product)
+    tones = product.get("tones") or ["#f4f4f6", "#ffffff"]
+    tone_a = escape(tones[0] if len(tones) > 0 else "#f4f4f6")
+    tone_b = escape(tones[1] if len(tones) > 1 else tone_a)
+    product_id = escape(product.get("id"))
+    badges_html = (
+        f'<div class="marketing-badges">{"".join(f"<span>{escape(b)}</span>" for b in badges)}</div>'
+        if badges
+        else ""
+    )
+    size_html = f'<span>{escape(display["size"])}</span>' if display["size"] else ""
+    # rstrip each line: badges_html/discount_badge_html can be "" for a given
+    # product, which would otherwise leave an indentation-only line behind
+    # (fails git diff --check's trailing-whitespace guard).
+    return "\n".join(line.rstrip() for line in f"""
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: {tone_a}; --tone-b: {tone_b}">
+                <span class="placeholder-brand">{escape(product.get("brand") or "GM")}</span>
+                <button class="favorite-button" type="button" data-favorite="{product_id}" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                {badges_html}
+                {discount_badge_html(product)}
+                <a class="product-image-link" href="{escape(href)}" data-product-link="{product_id}" aria-label="Открыть {escape(product.get("title"))}">
+                  <img class="product-image" src="{escape(image)}" alt="{escape(product.get("title"))}" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="{escape(href)}" data-product-link="{product_id}">
+                  <span class="product-brand-line">{escape(display["brand"])}</span>
+                  <span class="product-kind-line">
+                    <strong>{escape(display["type"])}</strong>
+                    {size_html}
+                  </span>
+                  <span class="product-variant-line">{escape(display["variant"])}</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>{escape(product.get("category"))}</span>
+                </div>
+                <p>{escape(product.get("description"))}</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    {price_with_discount_html(product)}
+                    <button class="add-button compact-add-button" type="button" data-add="{product_id}" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: {price_html(product.get("registeredPriceKgs", 0))}</span>
+                </div>
+              </div>
+            </article>
+    """.splitlines())
+
+
 def render_cards(products, product_page_by_id):
     cards = []
     for product in products[:36]:
         page = product_page_by_id.get(product.get("id"))
-        image = public_path(product_image(product))
-        if not page or not image:
+        if not page:
             continue
-        cards.append(
-            f"""
-            <a class="landing-card" href="{escape(page['path'])}">
-              <img src="{escape(image)}" alt="{escape(product.get('title'))}" loading="lazy">
-              <strong>{escape(product.get('title'))}</strong>
-              <span>{price_html(product.get('retailPriceKgs', 0))}</span>
-            </a>
-            """
-        )
+        card = product_tile_html(product, page["path"])
+        if card:
+            cards.append(card)
     return "".join(cards)
 
 
@@ -256,7 +431,7 @@ def link_card(target, count):
         <strong>{escape(target.get('title'))}</strong>
         <span>{int(count)} товаров</span>
       </a>
-    """
+    """.rstrip("\n ") + "\n"
 
 
 def render_context_links(target, products, all_targets):
@@ -392,11 +567,11 @@ def render_page(target, products, product_page_by_id, all_targets):
     .landing-copy p {{ margin: 0; color: #515154; font-size: 16px; line-height: 1.5; }}
     .landing-terms {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }}
     .landing-terms span {{ display: inline-flex; min-height: 30px; align-items: center; padding: 0 10px; border: 1px solid #e2e2e7; border-radius: 999px; color: #3a3a3c; background: #f8f8f9; font-size: 14px; }}
+    /* Cards inside .landing-grid reuse the shared .product-card rules from
+       styles.css (loaded above) so they render identically to home-page
+       catalog cards — same brand pill, like button, badges, price, add
+       button. Only the grid container itself is defined here. */
     .landing-grid {{ display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }}
-    .landing-card {{ display: grid; gap: 9px; min-width: 0; padding: 10px; border-radius: 14px; color: inherit; background: #fff; text-decoration: none; }}
-    .landing-card img {{ width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; }}
-    .landing-card strong {{ font-size: 14px; line-height: 1.25; }}
-    .landing-card span {{ font-size: 18px; font-weight: 850; }}
     .landing-empty {{ grid-column: 1 / -1; padding: 18px; border-radius: 14px; background: #fff; color: #515154; }}
     .landing-empty p {{ margin: 0 0 12px; font-size: 16px; line-height: 1.45; }}
     .landing-empty a {{ color: #111; font-weight: 800; }}
@@ -445,6 +620,139 @@ def render_page(target, products, product_page_by_id, all_targets):
     {context_links_html}
   </main>
   {footer}
+  <script>
+    const cartKey = "globalMarketCartDraft";
+    const favoritesKey = "globalMarketFavorites";
+    const recentlyViewedKey = "globalMarketRecentlyViewed";
+    const categoryMenu = document.querySelector("#categoryMenu");
+    const toggleMenuButton = document.querySelector("#toggleMenu");
+    const smartHeader = document.querySelector("[data-smart-header]");
+
+    function readJson(key, fallback) {{
+      try {{
+        return JSON.parse(localStorage.getItem(key) || "null") ?? fallback;
+      }} catch (_) {{
+        return fallback;
+      }}
+    }}
+
+    function updateCartCount() {{
+      const rows = readJson(cartKey, []);
+      const count = rows.reduce((sum, row) => sum + Number(row[1] || 0), 0);
+      document.querySelectorAll("[data-cart-count]").forEach((item) => {{
+        item.textContent = String(count);
+      }});
+    }}
+
+    // Product tiles carry a real id in data-favorite/data-add (see
+    // scripts/generate_landing_pages.py product_tile_html()) — same contract
+    // as the home page's renderProducts() in app.js and the "Похожие товары"
+    // grid in scripts/generate_product_pages.py.
+    function syncGridFavoriteButtons() {{
+      const ids = new Set(readJson(favoritesKey, []));
+      document.querySelectorAll(".landing-grid [data-favorite]").forEach((button) => {{
+        const active = ids.has(button.dataset.favorite);
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+        button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
+      }});
+    }}
+
+    document.querySelector(".landing-grid")?.addEventListener("click", (event) => {{
+      const favoriteButton = event.target.closest("[data-favorite]");
+      const addButton = event.target.closest("[data-add]");
+      const productLink = event.target.closest("[data-product-link]");
+      if (favoriteButton) {{
+        const id = favoriteButton.dataset.favorite;
+        const ids = new Set(readJson(favoritesKey, []));
+        if (ids.has(id)) ids.delete(id);
+        else ids.add(id);
+        localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
+        syncGridFavoriteButtons();
+        return;
+      }}
+      if (addButton) {{
+        const id = addButton.dataset.add;
+        const rows = readJson(cartKey, []);
+        const index = rows.findIndex((row) => row[0] === id);
+        if (index >= 0) rows[index][1] = Number(rows[index][1] || 0) + 1;
+        else rows.push([id, 1]);
+        localStorage.setItem(cartKey, JSON.stringify(rows));
+        updateCartCount();
+        addButton.classList.add("added");
+        const originalLabel = addButton.textContent;
+        window.setTimeout(() => {{
+          addButton.classList.remove("added");
+          addButton.textContent = originalLabel;
+        }}, 900);
+        addButton.textContent = "Добавлено";
+        return;
+      }}
+      if (productLink) {{
+        const ids = readJson(recentlyViewedKey, []);
+        const next = [productLink.dataset.productLink, ...ids.filter((id) => id !== productLink.dataset.productLink)].slice(0, 20);
+        localStorage.setItem(recentlyViewedKey, JSON.stringify(next));
+      }}
+    }});
+
+    function setMenuOpen(isOpen) {{
+      if (!categoryMenu || !toggleMenuButton) return;
+      categoryMenu.hidden = !isOpen;
+      toggleMenuButton.setAttribute("aria-expanded", String(isOpen));
+      if (isOpen) smartHeader?.classList.remove("header-hidden");
+    }}
+
+    async function renderMenu() {{
+      if (!categoryMenu) return;
+      try {{
+        const response = await fetch("/data/site-config.json", {{ cache: "no-store" }});
+        if (!response.ok) throw new Error("config");
+        const config = await response.json();
+        const items = Array.isArray(config.menu) ? config.menu : [];
+        const catalogHref = (item) => {{
+          if (item.href) return item.href;
+          const params = new URLSearchParams();
+          if (item.collection) params.set("collection", item.collection);
+          if (item.category) params.set("category", item.category);
+          if (item.query) params.set("query", item.query);
+          if (item.label) params.set("label", item.label);
+          const query = params.toString();
+          return query ? `/?${{query}}#catalog` : "/#catalog";
+        }};
+        categoryMenu.innerHTML = items
+          .map((item) => {{
+            const href = catalogHref(item);
+            return `<a href="${{href}}"><span class="category-menu-title">${{item.label || "Раздел"}}</span></a>`;
+          }})
+          .join("");
+      }} catch (_) {{
+        categoryMenu.innerHTML = '<a href="/#catalog"><span class="category-menu-title">Каталог</span></a>';
+      }}
+    }}
+
+    toggleMenuButton?.addEventListener("click", (event) => {{
+      event.stopPropagation();
+      setMenuOpen(Boolean(categoryMenu?.hidden));
+    }});
+
+    document.addEventListener("click", (event) => {{
+      if (categoryMenu?.hidden) return;
+      if (event.target.closest("#categoryMenu") || event.target.closest("#toggleMenu")) return;
+      setMenuOpen(false);
+    }});
+
+    document.querySelector("#openCart")?.addEventListener("click", () => {{
+      window.location.href = "/#checkout";
+    }});
+
+    document.querySelector("#toggleSearch")?.addEventListener("click", () => {{
+      window.location.href = "/#catalog";
+    }});
+
+    syncGridFavoriteButtons();
+    updateCartCount();
+    renderMenu();
+  </script>
 </body>
 </html>
 """
