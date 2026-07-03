@@ -1,16 +1,19 @@
 # Claude Next Task
 
-> **STATUS: DONE (2026-07-03).** This task (release-readiness sweep) is
-> complete — 4 commits, full suite 240/240. See
-> `/Users/macmini/.codex/shared-state/handoff.md` (top entry) for the exact
-> commits and what changed. Codex: replace this file's body with the next
-> task when ready.
+Use this as the next large handoff prompt for Claude Code.
 
-Use this file as the next large handoff prompt for Claude Code.
+## Goal
 
-## Context
+Stop adding broad new features. Prepare the project for final handoff / production decision.
 
-Project:
+The user says it is time to finish the project. Your task is to make one final local-only release-closure pass:
+
+- confirm the branch is technically ready for a preview/production decision;
+- remove or document remaining non-production blockers;
+- make the next Codex/user-only steps painfully clear;
+- do not start another open-ended improvement cycle.
+
+## Project
 
 ```text
 /Users/macmini/Documents/Codex/2026-05-28-new-chat-2
@@ -22,213 +25,194 @@ Branch:
 collab/preview-baseline
 ```
 
-Latest verified commits:
+Latest reviewed commits:
 
-- `569e747 Add Petya photo import guardrails`
-- `c4e3a27 Remove 273 unused raw Telegram/contact-sheet product photo leftovers`
-- `d38e7a1 Refresh production-readiness baseline for the go-live handoff`
+- `5a817e8 Add admin and checkout release-readiness guardrails`
+- `52c3f88 Harden storefront SEO and shared-block consistency checks`
+- `c140340 Document release-readiness sweep tests in test-coverage.md`
+- `c43a97a Update production readiness handoff`
+- `a5e3a7d Mark release-readiness sweep task as done`
 
-Codex verification after `d38e7a1`:
+Codex verification after `a5e3a7d`:
 
 - `python3 scripts/verify_backend_mvp.py` OK.
 - `python3 scripts/check_no_secrets.py` clean.
 - `git diff --check` clean.
-- `python3 scripts/report_photo_coverage.py --json`:
-  - total products: 460
-  - products with photos: 92
-  - photo coverage: 20.0%
-  - perfume: 22/22 with photos
-  - non-perfume complete galleries: 70
-  - unused raw Telegram leftovers: 0
 
 Known harmless dirty files after verification:
 
-- `docs/project-stage-map.md` generated timestamp-only stage report change.
+- `docs/project-stage-map.md` generated progress timestamp/report refresh.
 - `sitemap.xml` generated date-only `lastmod` refresh.
 
-Do not commit those two files unless your task intentionally changes them.
+Do not commit those two files unless your task intentionally makes a final generated-output refresh.
 
-## Expanded Authority
+## Authority
 
-Claude may now work more autonomously on local code quality and release-readiness.
+You may make local commits if the changes are coherent and verified.
 
 Allowed:
 
-- make coherent local commits without waiting for Codex after each small change;
-- make several related commits in one session if each commit is clean and named clearly;
-- edit storefront, admin, docs, tests, scripts, generators, and static packaging when the task requires it;
-- add contract tests and verification steps;
-- run all local checks repeatedly;
-- create or update local reports under `outputs/`;
-- update this handoff file when finished;
-- update shared handoff notes if useful.
+- docs cleanup;
+- tests/verification guardrails;
+- local release checklist improvements;
+- small bug fixes discovered by tests;
+- local packaging verification;
+- updating this handoff when done.
 
-Still not allowed:
+Still blocked:
 
 - no GitHub push;
-- no Cloudflare production deploy;
-- no preview deploy unless the user explicitly asks;
-- no Supabase/Cloudflare setting changes;
-- no secrets, tokens, env values, or `admin/config.js` commits;
-- no destructive deletion of user source photos outside already verified unused generated leftovers;
-- no SQL migration against live Supabase;
-- no billing/domain/DNS changes;
-- no large architecture rewrite.
+- no Cloudflare preview/production deploy;
+- no Supabase/Cloudflare dashboard changes;
+- no secrets/env/admin-config commits;
+- no live SQL migrations;
+- no domain/DNS/billing changes;
+- no new architecture or new feature track;
+- no visual redesign.
 
-If a task needs one of those blocked actions, stop and write the exact next action for Codex/user.
+If the remaining step is blocked by one of those items, stop and write the exact instruction for Codex/user.
 
 ## Read First
 
 Read:
 
 - `AGENTS.md`
-- `/Users/macmini/.codex/shared-state/COLLAB-PROTOCOL.md`
 - `/Users/macmini/.codex/shared-state/handoff.md`
 - `/Users/macmini/.codex/shared-state/tasks.md`
 - `/Users/macmini/.codex/memories/cross-chat-memory/current-focus.md`
 - `docs/production-readiness.md`
+- `docs/backend-go-live-checklist.md`
+- `docs/api-orders.md`
 - `docs/test-coverage.md`
 - `docs/product-photo-rules.md`
-- `docs/api-orders.md`
-- `docs/backend-go-live-checklist.md`
-- `docs/catalog-taxonomy.md`
-- `data/site-config.json`
-- `data/public-catalog.json`
 - `scripts/verify_backend_mvp.py`
+- `scripts/package_static_site.py`
+- `scripts/check_deployment.py`
+- `scripts/smoke_orders_api.mjs`
 
 Start with:
 
 ```bash
 git status --short --branch
-git log --oneline -8
+git log --oneline -12
 ```
 
-If there are unexpected dirty files beyond `docs/project-stage-map.md` and `sitemap.xml`, inspect them before editing.
+If there are unexpected dirty files beyond `docs/project-stage-map.md` and `sitemap.xml`, inspect and report before editing.
 
-## Main Task — Release-Readiness Sweep For Storefront + Admin + Petya
+## Main Task — Final Release Closure
 
-Make a broad but safe local pass that prepares the current branch for the next preview/production decision.
+### Part A — Final Local Audit
 
-### Part A — Admin Acceptance Guardrails
+Run or inspect enough to answer:
 
-Goal: make sure the admin can really be used by the owner/manager without silently breaking.
+- Does the storefront build/package pass?
+- Does admin/order backend contract pass locally?
+- Does checkout still have WhatsApp fallback?
+- Does package exclude tests, secrets, and admin-only unsafe files?
+- Are product galleries valid?
+- Are internal links valid?
+- Are generated product pages and sitemap consistent?
+- Is `admin/config.js` untracked/local-only and not packaged incorrectly?
 
-Add or harden tests/docs for:
+If this is already covered by existing verification, do not duplicate much code. Summarize the evidence in docs.
 
-- orders list loads with backend API enabled;
-- empty/error/loading states are visible and understandable;
-- filters work together without losing order count;
-- copy phone / copy address / call link behavior remains covered;
-- keyboard access for core admin controls remains covered;
-- admin must not expose service-role keys or raw config secrets;
-- admin package includes only intended admin files.
+### Part B — Production Decision Checklist
 
-Prefer contract tests over fragile browser UI tests unless a browser check is clearly worth it.
+Update `docs/production-readiness.md` or `docs/backend-go-live-checklist.md` so the next human/Codex action is a short checklist, not a research project.
 
-### Part B — Checkout + Orders API Contract
+It must clearly separate:
 
-Goal: keep WhatsApp flow working while backend orders are introduced.
+1. **Ready locally**
+   - branch name;
+   - latest commit;
+   - tests green;
+   - package builds;
+   - WhatsApp fallback works by code contract.
 
-Add or harden tests/docs for:
+2. **Requires user/Codex production action**
+   - Cloudflare Production env vars;
+   - Supabase admin user confirmation;
+   - production deploy command;
+   - live smoke tests;
+   - GitHub push/merge decision.
 
-- checkout still works without registration;
-- checkout still falls back to WhatsApp if backend API is unavailable;
-- UTM/source fields keep flowing into order payload/message;
-- order payload shape matches `docs/api-orders.md`;
-- no duplicate order submission on quick repeated clicks, if current code already has a guard or can get one safely;
-- backend API flag state is documented clearly.
+3. **Not blocking launch**
+   - photo coverage is 92/460 and ongoing;
+   - content polish can continue after launch;
+   - reviews/chatbot/CRM can be future phases.
 
-Do not remove WhatsApp fallback.
+4. **Rollback**
+   - restore previous Cloudflare deployment;
+   - or turn off orders API flag / remove env vars so checkout falls back to WhatsApp.
 
-### Part C — Storefront Release Polish Without Redesign
+### Part C — Create A One-Page Owner Handoff
 
-Goal: reduce obvious regressions before preview.
+Create or update a short file:
 
-Check and minimally improve, only if low-risk:
+```text
+docs/final-owner-handoff.md
+```
 
-- header/menu/footer are shared through `data/site-config.json` and generated pages use the shared blocks;
-- mobile category tiles and menu section names stay in sync;
-- product pages have valid canonical/OG/Product JSON-LD;
-- product pages have working back/home/catalog paths;
-- related products do not show broken image paths;
-- sitemap/catalog/product pages remain internally consistent.
+Audience: non-technical owner.
 
-Do not start a visual redesign. Add guardrails and small fixes only.
+Include:
 
-### Part D — Photo/1C/Petya Continuity
+- what is ready now;
+- what still needs to be done to publish;
+- what will happen after a customer orders;
+- what the admin can currently do;
+- what Petya currently does and does not do;
+- what not to touch without Codex/user approval;
+- next 3 practical steps.
 
-Goal: make future Petya photo and 1C batches easier to continue.
+Keep it concise and in Russian.
 
-Update docs/tests/scripts only where useful:
+### Part D — Freeze The Next Work List
 
-- document the perfume card-only rule and normal product card/front/back rule;
-- document that 1C parentheses often mean weight/volume/wash count, e.g. `Dalli (100)` means 100 washes;
-- ensure photo coverage report remains useful after new batches;
-- ensure no raw Telegram/contact/OCR images enter public gallery paths.
+Update `docs/claude-next-task.md` at the end of your work to say either:
 
-### Part E — Production-Readiness Status
+- `STATUS: READY FOR CODEX/USER PRODUCTION STEPS`, if no more Claude-safe blockers remain; or
+- a single sharply-scoped remaining Claude-safe task, if you find one real blocker.
 
-Update one concise document, preferably `docs/production-readiness.md` or `docs/backend-go-live-checklist.md`, with:
-
-- what is ready locally;
-- what still needs Codex/user-only action;
-- exact next gated steps before production:
-  - commit if needed;
-  - preview deploy;
-  - live admin smoke;
-  - live checkout/order smoke;
-  - user approval;
-  - production deploy/push.
-
-Do not claim production is ready unless live checks have actually happened.
+Do not invent five new tasks. We are closing.
 
 ## Verification
 
 Before finishing, run:
 
 ```bash
-node --check app.js
-node --check admin/admin.js
-node --check admin/admin.logic.js
-python3 scripts/verify_product_galleries.py
-python3 scripts/report_photo_coverage.py --json
 python3 scripts/verify_backend_mvp.py
 python3 scripts/check_no_secrets.py
 git diff --check
 git status --short --branch
 ```
 
-If you add a new test, wire it into `scripts/verify_backend_mvp.py`.
+If you changed scripts/tests, also run targeted syntax/test checks as appropriate.
 
 ## Commit Rules
 
-You may make local commits.
+You may make one local commit for the closure docs/guardrails.
 
-Rules:
-
-- commit only coherent, verified changes;
-- do not commit `docs/project-stage-map.md` or `sitemap.xml` unless intentionally changed;
-- do not commit secrets or env/config files;
-- write short factual commit messages.
-
-Suggested commit themes:
+Suggested message:
 
 ```bash
-git commit -m "Add admin and checkout release-readiness guardrails"
-git commit -m "Harden storefront SEO and shared-block consistency checks"
-git commit -m "Update production readiness handoff"
+git commit -m "Add final owner handoff and production closure checklist"
 ```
 
-Use only the messages that match actual work.
+Do not commit:
+
+- secrets;
+- `admin/config.js`;
+- `.env`;
+- generated-only `docs/project-stage-map.md` / `sitemap.xml` unless intentionally part of final generated refresh.
 
 ## Handoff Back To Codex
 
-When finished, report:
+Report:
 
-- commits made;
+- commit hash, if committed;
 - files changed;
 - checks run;
-- any dirty files left intentionally;
-- what is now safer than before;
-- what remains Codex/user-only;
-- whether the next task is Claude-safe.
+- whether there are any Claude-safe blockers left;
+- exact Codex/user-only next step to publish;
+- dirty files intentionally left.
