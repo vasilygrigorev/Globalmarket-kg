@@ -72,6 +72,36 @@ test("perfume products keep a single card image", () => {
   assert.deepEqual(bad, [], `perfume not single card image: ${bad.join(", ")}`);
 });
 
+test("related-product cards link to real pages and reference images that exist on disk", () => {
+  // render_related() in scripts/generate_product_pages.py emits
+  // <a class="related-card" href="/product/<slug>/"><img src="/<image>">.
+  // Text-only checks elsewhere ("related|Похож" present) wouldn't catch a
+  // related card pointing at a deleted image or a non-existent product page.
+  const bad = [];
+  let checked = 0;
+  for (const e of pages) {
+    const file = join(ROOT, "product", e.slug, "index.html");
+    if (!existsSync(file)) continue;
+    const html = readFileSync(file, "utf8");
+    const section = html.match(/<section class="related">[\s\S]*?<\/section>/);
+    if (!section) continue; // some products may have no related items
+    const cards = [...section[0].matchAll(/<a class="related-card" href="([^"]+)">\s*<img src="([^"]+)"/g)];
+    for (const [, href, src] of cards) {
+      checked += 1;
+      const relatedSlug = (href.match(/^\/product\/([^/]+)\/$/) || [])[1];
+      if (!relatedSlug) { bad.push(`${e.slug}: bad related href ${href}`); continue; }
+      if (!existsSync(join(ROOT, "product", relatedSlug, "index.html"))) {
+        bad.push(`${e.slug}: related link to missing page ${relatedSlug}`);
+      }
+      if (!existsSync(join(ROOT, src.replace(/^\/+/, "")))) {
+        bad.push(`${e.slug}: related image missing on disk ${src}`);
+      }
+    }
+  }
+  assert.ok(checked > 0, "no related-product cards found to check");
+  assert.deepEqual(bad, [], `broken related-product cards: ${bad.slice(0, 8).join(", ")}`);
+});
+
 test("each product page has canonical, Product JSON-LD, price, related, and order/oos", () => {
   const bad = [];
   for (const e of pages) {

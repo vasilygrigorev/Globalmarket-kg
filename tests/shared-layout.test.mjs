@@ -19,6 +19,10 @@ const footerPartial = read("partials/footer.html");
 const indexHtml = read("index.html");
 
 const FOOTER_LINKS = ["/#catalog", "/catalog/", "/#checkout", "/privacy.html"];
+// Header nav links must be absolute (leading "/") — a bare "#top" would only
+// scroll within the current page instead of navigating home when clicked from
+// a nested page like /product/<slug>/ or /category/<slug>/.
+const HEADER_LINKS = ["/#top", "/#catalog", "/#delivery", "/#checkout"];
 
 function productPages() {
   const dir = join(ROOT, "product");
@@ -78,6 +82,36 @@ test("every product page has the consistent action set", () => {
     const bad = pages.filter((p) => !fn(p.html)).map((p) => p.slug);
     assert.deepEqual(bad, [], `product pages missing ${name}: ${bad.slice(0, 5).join(", ")}`);
   }
+});
+
+test("header partial's home/catalog/delivery/checkout links are absolute, not bare fragments", () => {
+  for (const link of HEADER_LINKS) {
+    assert.ok(headerPartial.includes(`href="${link}"`), `header partial missing absolute link ${link}`);
+  }
+  // Catches a regression like href="#top" that would silently break "go home"
+  // navigation from any page nested under /product/, /category/, /catalog/.
+  const bareFragment = headerPartial.match(/href="#(top|catalog|delivery|checkout)"/);
+  assert.equal(bareFragment, null, `header partial has a relative fragment link that breaks nested-page navigation: ${bareFragment && bareFragment[0]}`);
+});
+
+test("product/category/catalog pages carry the same absolute header links (home is always reachable)", () => {
+  const samples = [
+    ["product page", productPages()[0]?.html],
+    ["category page", read("category/laundry/index.html")],
+    ["catalog page", read("catalog/index.html")],
+  ];
+  for (const [label, html] of samples) {
+    assert.ok(html, `missing sample: ${label}`);
+    for (const link of HEADER_LINKS) {
+      assert.ok(html.includes(`href="${link}"`), `${label} missing absolute header link ${link}`);
+    }
+  }
+});
+
+test("the data-back button falls back to an absolute catalog path when there is no history", () => {
+  const gen = read("scripts/generate_product_pages.py");
+  assert.match(gen, /if \(history\.length > 1\) history\.back\(\);/);
+  assert.match(gen, /window\.location\.href = "\/#catalog";/);
 });
 
 test("footer with logo + catalog/checkout/policy on home and product pages", () => {

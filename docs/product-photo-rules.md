@@ -67,6 +67,10 @@ publishable product photo:
   look like raw Telegram/OCR/contact-sheet leftovers and are not referenced by
   any product. These are reported only, never deleted automatically; review
   and clean them up manually once you're sure nothing needs them.
+- Old 1C product names carry weight/volume/wash-count hints in parentheses
+  (e.g. `Dalli (100)` means about 100 washes, not 100 pieces) — see
+  [`import-workflow.md`](import-workflow.md) for the full parsing rule before
+  turning a parenthesized number into a published quantity.
 
 ## Photo coverage report
 
