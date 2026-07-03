@@ -35,10 +35,12 @@ Last Codex verification after `d8444fa`:
 Current known harmless dirty files after verification:
 
 - `docs/project-stage-map.md` generated stage report timestamp/change.
-- `assets/products/telegram-8767964230-20260626-142813-front.jpg`
-- `assets/products/telegram-8767964230-20260626-142813-back.jpg`
+- `sitemap.xml` generated `lastmod` date-only refresh.
 
-The two telegram jpgs are currently unused by `data/public-catalog.json`. Do not commit them unless you prove they are needed.
+Note: the two unused telegram jpgs previously listed here (`telegram-8767964230-
+20260626-142813-front.jpg` / `-back.jpg`) were removed with the rest of the raw
+Telegram leftovers in `569e747` + the follow-up cleanup — see
+`shared-state/handoff.md` / `cross-chat-memory/current-focus.md` for details.
 
 ## Important Direction
 
