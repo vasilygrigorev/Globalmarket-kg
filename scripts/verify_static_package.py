@@ -56,6 +56,12 @@ FORBIDDEN_ROOT_SUFFIXES = {
     ".csv",
     ".db",
 }
+FORBIDDEN_RAW_ASSET_MARKERS = (
+    "telegram-",
+    "contact-sheet",
+    "ocr",
+    "dup",
+)
 
 
 def fail(errors, message):
@@ -106,6 +112,21 @@ def verify_forbidden_files(package, errors):
             fail(errors, f"Forbidden path in package: {rel}")
         if path.parent == package and path.suffix.lower() in FORBIDDEN_ROOT_SUFFIXES:
             fail(errors, f"Forbidden root artifact in package: {rel}")
+
+
+def verify_no_raw_product_assets(package, errors):
+    products_dir = package / "assets" / "products"
+    if not products_dir.exists():
+        return
+    for path in products_dir.rglob("*"):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(package).as_posix()
+        lower_name = path.name.lower()
+        if any(marker in lower_name for marker in FORBIDDEN_RAW_ASSET_MARKERS):
+            fail(errors, f"Raw/temp product asset leaked into package: {rel}")
+        if path.parent == products_dir:
+            fail(errors, f"Loose product asset leaked into package root: {rel}")
 
 
 def verify_data_dir_allowlist(package, errors):
@@ -393,6 +414,7 @@ def main():
     else:
         verify_required_files(package, errors)
         verify_forbidden_files(package, errors)
+        verify_no_raw_product_assets(package, errors)
         verify_data_dir_allowlist(package, errors)
         verify_functions(package, errors)
         verify_admin(package, errors)

@@ -36,6 +36,13 @@ ASSET_EXCLUDES = {
     "telegram_uploads",
 }
 
+ASSET_EXCLUDE_GLOBS = {
+    "telegram-*",
+    "*contact-sheet*",
+    "*ocr*",
+    "*dup*",
+}
+
 
 def copy_file(src, dst):
     if not src.exists():
@@ -93,7 +100,12 @@ def main():
     for name in DATA_FILES:
         copy_file(ROOT / "data" / name, data_output / name)
 
-    copy_tree(ROOT / "assets", output / "assets", exclude_names=ASSET_EXCLUDES)
+    copy_tree(
+        ROOT / "assets",
+        output / "assets",
+        exclude_names=ASSET_EXCLUDES,
+        exclude_globs=ASSET_EXCLUDE_GLOBS,
+    )
     copy_tree(ROOT / "product", output / "product")
     copy_tree(ROOT / "catalog", output / "catalog")
     copy_tree(ROOT / "category", output / "category")

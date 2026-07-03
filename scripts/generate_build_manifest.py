@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import fnmatch
 import hashlib
 import json
 from datetime import datetime, timezone
@@ -32,6 +33,13 @@ PUBLIC_ASSET_EXCLUDES = {
     "telegram_uploads",
 }
 
+PUBLIC_ASSET_EXCLUDE_GLOBS = {
+    "telegram-*",
+    "*contact-sheet*",
+    "*ocr*",
+    "*dup*",
+}
+
 
 def sha256(path):
     digest = hashlib.sha256()
@@ -59,8 +67,9 @@ def sitemap_count(path):
     }
 
 
-def count_files(path, exclude_dir_names=None):
+def count_files(path, exclude_dir_names=None, exclude_globs=None):
     exclude_dir_names = exclude_dir_names or set()
+    exclude_globs = exclude_globs or set()
     if not path.exists():
         return 0
     total = 0
@@ -69,6 +78,8 @@ def count_files(path, exclude_dir_names=None):
             continue
         relative_parts = item.relative_to(path).parts
         if any(part in exclude_dir_names for part in relative_parts):
+            continue
+        if any(fnmatch.fnmatch(item.name, pattern) for pattern in exclude_globs):
             continue
         total += 1
     return total
@@ -98,7 +109,7 @@ def build_manifest():
             "productsWithImages": sum(1 for product in products if product.get("image") or product.get("galleryImages")),
             "productPages": len(pages),
             "landingPages": len(landing_pages.get("pages") or []),
-            "assetsFiles": count_files(ROOT / "assets", PUBLIC_ASSET_EXCLUDES),
+            "assetsFiles": count_files(ROOT / "assets", PUBLIC_ASSET_EXCLUDES, PUBLIC_ASSET_EXCLUDE_GLOBS),
             "publicProductFiles": count_files(ROOT / "product"),
             **sitemap,
         },
