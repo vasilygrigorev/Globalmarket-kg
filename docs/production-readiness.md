@@ -1,14 +1,30 @@
 # Production readiness — Global Market KG
 
-Status: 2026-06-26, branch `collab/preview-baseline`.
+Status: 2026-07-03, branch `collab/preview-baseline`.
 
 Preview backend/admin is working. Production is not deployed from this branch
-yet.
+yet. `origin/main` is 66 commits behind this branch — nothing has been pushed
+to GitHub either. Both a production deploy and a `git push` are privileged,
+user-gated steps; neither has happened.
 
 ## Current committed baseline
 
-- `640ef49` — admin order details and manager workflow polish.
-- `6915bbe` — orders API enabled in the Preview-ready static build.
+- `c4e3a27` — removed 273 unused raw Telegram/contact-sheet leftovers.
+- `569e747` — Petya photo/perfume import guardrails (path hygiene, coverage
+  report, docs).
+- `d8444fa` — admin status colour-coding, max-amount filter, copy-address.
+- `18878ba` — admin keyboard access, session resilience, exact order count.
+
+Local preflight (`python3 scripts/verify_backend_mvp.py`) is green at this
+commit: node suite passes, package/secret scans clean, `git diff --check`
+clean. `python3 scripts/check_backend_env_shape.py` confirms `admin/config.js`
+is present locally (anon key only) but `SUPABASE_URL` /
+`SUPABASE_SERVICE_ROLE_KEY` are not set in this shell's env — that's expected;
+they live in Cloudflare, not here.
+
+Known content gap, independent of the technical launch: only 92/460 products
+(20.0%) have real photos (`python3 scripts/report_photo_coverage.py`). This
+does not block a technical go-live — it's a separate, ongoing content task.
 
 ## Do not skip
 
