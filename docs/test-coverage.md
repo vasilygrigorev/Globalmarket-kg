@@ -42,7 +42,11 @@ browser, no Supabase, no Cloudflare, no secrets.
   fails safe to the login view; `init` subscribes to `onAuthStateChange` to
   re-route on expiry/sign-out (skipping INITIAL_SESSION to avoid a double load);
   the list query requests an exact server-side match count so the "Всего N
-  заказов" total reflects the whole filtered set, not just the loaded page.
+  заказов" total reflects the whole filtered set, not just the loaded page;
+  when the backend IS configured, `init()` proceeds past the not-configured
+  gate to create a real Supabase client and load the session/orders (protects
+  "orders list loads with a configured backend" — not just the not-configured
+  banner path).
 - `admin-package-hygiene.test.mjs` — the deploy packager excludes admin
   example/test/spec files and the package verifier forbids config templates and
   requires the three admin runtime files.
@@ -56,12 +60,24 @@ browser, no Supabase, no Cloudflare, no secrets.
   the shared `orderAddressText`; the list query supports a max-amount filter
   (`.lte("total_kgs", maxAmount)`) alongside min-amount; reset-filters clears
   every control (incl. maxAmount) and reloads; status set stays the stable
-  Russian 5 and all are selectable.
+  Russian 5 and all are selectable; every active filter (status/period/min/max
+  amount/search) reassigns `query = query.<method>(...)` onto the SAME query
+  object, so filters compose as AND instead of a later branch silently
+  discarding earlier ones.
 
 ## Storefront contracts (tests/)
 
 - `checkout.contract.test.mjs` — checkout fields ↔ payload, flag-gated save +
-  WhatsApp fallback, no service_role.
+  WhatsApp fallback, no service_role; checkout submit does not gate on
+  `state.customer` (works without registration — only pricing changes); a
+  `checkoutSubmitting` guard + disabled submit button prevent a duplicate
+  `/api/orders` POST from a quick double-click/tap, reset in a `finally` even
+  if saving throws; `buildOrderPayload`'s customer/item field names are each
+  read by `functions/api/orders.js` (`customer.<field>` / `raw.<field>`),
+  locking the client payload shape to the server contract; `docs/api-orders.md`
+  no longer documents the unused `customer.whatsapp` field (phone doubles as
+  the WhatsApp contact — see the doc's "Known gap" note on the `customers`
+  table not being written yet).
 - `rollback.contract.test.mjs` — flag boolean, WhatsApp fallback, rollback docs,
   function 503 fallback.
 - `home-cards-checkout.test.mjs` — home card price/brand/type/volume/image/cart/
@@ -70,7 +86,12 @@ browser, no Supabase, no Cloudflare, no secrets.
 - `category-tiles.test.mjs` — 11 tiles, images exist, real catalog categories.
 - `header-menu.test.mjs` — 11 menu sections = 11 tiles by name; shared menu source.
 - `shared-layout.test.mjs` — header/footer from shared partials (not diverged);
-  footer links; product-page action set.
+  footer links; product-page action set; header home/catalog/delivery/checkout
+  links are absolute (`/#top` etc, not a bare `#top`) both in the partial and
+  on sampled product/category/catalog pages, so "go home" keeps working from a
+  page nested under `/product/`, `/category/`, `/catalog/`; the `data-back`
+  button's generated JS falls back to an absolute `/#catalog` when there is no
+  browser history to go back to.
 - `storefront-layout.test.mjs` — section order (header→banner→strip→grid), fixed
   header + body offset (no overlap), menu open/close, cart/search present.
 - `storefront-a11y.test.mjs` — card images have alt text + lazy loading;
@@ -86,7 +107,12 @@ browser, no Supabase, no Cloudflare, no secrets.
   theme-color, Product + Breadcrumb JSON-LD, WhatsApp order/question, shared menu,
   indexable.
 - `product-consistency.test.mjs` — manifest ↔ catalog data, page price ↔ catalog,
-  gallery card/front/back, perfume single card image, page essentials.
+  gallery card/front/back, perfume single card image, page essentials; every
+  related-product card (`render_related()` in
+  `scripts/generate_product_pages.py`) links to a product page that actually
+  exists on disk AND references an image that actually exists on disk — a
+  text-only "related section is present" check would miss a related card
+  pointing at a deleted product or image.
 - `gallery-completeness.test.mjs` — catalog-level AGENTS photo contract: no
   incomplete non-perfume gallery (1–2 images), perfume single card, product.image
   equals galleryImages[0], multi-image galleries lead with the card image.
