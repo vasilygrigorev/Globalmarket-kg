@@ -19,6 +19,12 @@
     <priority>0.2</priority>
   </url>
   <url>
+    <loc>https://globalmarket.kg/brand/arm-hammer/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/brand/attar-collection/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -169,6 +175,51 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://globalmarket.kg/assets/products/ariel/ariel-fast-dissolving-2-5kg-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/arm-hammer-essentials-coconut-geranium-dezodorant-71-g-72dda7/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/arm-hammer-essentials-juniper-berry-dezodorant-71-g-9835c9/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/arm-hammer-essentials-rosemary-lavender-dezodorant-71-g-bb1789/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/arm-hammer-ultra-max-fresh-dezodorant-stik-28-g-c7128f/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/arm-hammer-ultra-max-powder-fresh-dezodorant-stik-28-g-ac7d15/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -577,6 +628,15 @@
     </image:image>
   </url>
   <url>
+    <loc>https://globalmarket.kg/product/dove-advanced-care-pear-aloe-vera-sprey-antiperspirant-250-ml-668843/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/product/downy-all-in-one-rose-garden-kontsentrat-1-l-019486/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -601,6 +661,33 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://globalmarket.kg/assets/products/downy/downy-fresh-valley-dew-1l-card-front.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/gillette-antiperspirant-arctic-ice-gel-dezodorant-70-ml-d81ef8/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/gillette-antiperspirant-cool-wave-gel-dezodorant-70-ml-0ab49d/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/gillette-antiperspirant-power-rush-gel-dezodorant-70-ml-409c9c/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>

@@ -2305,5 +2305,158 @@
       "2026-06-16: фото из Petya, группа 14; опубликовано по контракту card/front/back.",
       "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 14)."
     ]
+  },
+  "prd_ded7b0409c9c": {
+    "brand": "Gillette",
+    "category_id": "deodorants",
+    "clean_title": "Gillette Antiperspirant Power Rush гель-дезодорант 70 мл",
+    "description": "Гель-антиперспирант Gillette Power Rush с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Категория исправлена с «Бритье» на «Дезодоранты» — по фото это гель-антиперспирант, не средство для бритья."
+    ],
+    "product_type": "гель-дезодорант",
+    "short_title": "Gillette Power Rush 70 мл"
+  },
+  "prd_081404d81ef8": {
+    "brand": "Gillette",
+    "category_id": "deodorants",
+    "clean_title": "Gillette Antiperspirant Arctic Ice гель-дезодорант 70 мл",
+    "description": "Гель-антиперспирант Gillette Arctic Ice с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Категория исправлена с «Бритье» на «Дезодоранты» — по фото это гель-антиперспирант, не средство для бритья."
+    ],
+    "product_type": "гель-дезодорант",
+    "short_title": "Gillette Arctic Ice 70 мл"
+  },
+  "prd_a9ee2b0ab49d": {
+    "brand": "Gillette",
+    "category_id": "deodorants",
+    "clean_title": "Gillette Antiperspirant Cool Wave гель-дезодорант 70 мл",
+    "description": "Гель-антиперспирант Gillette Cool Wave с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Категория исправлена с «Бритье» на «Дезодоранты» — по фото это гель-антиперспирант, не средство для бритья."
+    ],
+    "product_type": "гель-дезодорант",
+    "short_title": "Gillette Cool Wave 70 мл"
+  },
+  "prd_d3c195668843": {
+    "brand": "Dove",
+    "category_id": "body",
+    "clean_title": "Dove Advanced Care Pear & Aloe Vera спрей-антиперспирант 250 мл",
+    "description": "Спрей-антиперспирант Dove Advanced Care с ароматом груши и алоэ вера, тройным увлажнением и защитой до 72 часов. Объём 250 мл.",
+    "galleryImages": [
+      "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
+      "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-front.jpg",
+      "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме."
+    ],
+    "product_type": "спрей-антиперспирант",
+    "short_title": "Dove Pear & Aloe Vera 250 мл"
+  },
+  "prd_7c7e94c7128f": {
+    "brand": "Arm & Hammer",
+    "category_id": "deodorants",
+    "clean_title": "Arm & Hammer Ultra Max Fresh дезодорант-стик 28 г",
+    "description": "Твёрдый дезодорант-антиперспирант Arm & Hammer Ultra Max с ароматом Fresh. Вес 28 г (1.0 oz).",
+    "galleryImages": [
+      "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-back.jpg"
+    ],
+    "image": "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Сопоставлено методом исключения вместе с Powder Fresh (два похожих товара 1С «STICK Fresh» / «STICK Powder Fresh», два фото с разными подписями на упаковке)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Arm & Hammer Ultra Max Fresh 28 г"
+  },
+  "prd_e40df5ac7d15": {
+    "brand": "Arm & Hammer",
+    "category_id": "deodorants",
+    "clean_title": "Arm & Hammer Ultra Max Powder Fresh дезодорант-стик 28 г",
+    "description": "Твёрдый дезодорант-антиперспирант Arm & Hammer Ultra Max с ароматом Powder Fresh. Вес 28 г (1.0 oz).",
+    "galleryImages": [
+      "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-back.jpg"
+    ],
+    "image": "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Сопоставлено методом исключения вместе с Fresh (два похожих товара 1С «STICK Fresh» / «STICK Powder Fresh», два фото с разными подписями на упаковке)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Arm & Hammer Ultra Max Powder Fresh 28 г"
+  },
+  "prd_16599c72dda7": {
+    "brand": "Arm & Hammer",
+    "category_id": "deodorants",
+    "clean_title": "Arm & Hammer Essentials Coconut Geranium дезодорант 71 г",
+    "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Coconut Geranium. Вес 2.5 oz (71 г).",
+    "galleryImages": [
+      "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-back.jpg"
+    ],
+    "image": "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. В 1С товар назван просто «Coconut»; на фото аромат «Coconut Geranium» — единственный кокосовый вариант в остатках, сопоставлено уверенно."
+    ],
+    "product_type": "дезодорант",
+    "short_title": "Arm & Hammer Coconut Geranium 71 г"
+  },
+  "prd_e6202bbb1789": {
+    "brand": "Arm & Hammer",
+    "category_id": "deodorants",
+    "clean_title": "Arm & Hammer Essentials Rosemary Lavender дезодорант 71 г",
+    "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Rosemary Lavender. Вес 2.5 oz (71 г).",
+    "galleryImages": [
+      "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-back.jpg"
+    ],
+    "image": "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Отличается от похожего товара 1С «STICK Fresh Widestick Rosemary» (без лаванды, другой формат) — сопоставлено по точному совпадению аромата на фото."
+    ],
+    "product_type": "дезодорант",
+    "short_title": "Arm & Hammer Rosemary Lavender 71 г"
+  },
+  "prd_bc63389835c9": {
+    "brand": "Arm & Hammer",
+    "category_id": "deodorants",
+    "clean_title": "Arm & Hammer Essentials Juniper Berry дезодорант 71 г",
+    "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Juniper Berry. Вес 2.5 oz (71 г).",
+    "galleryImages": [
+      "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-back.jpg"
+    ],
+    "image": "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме."
+    ],
+    "product_type": "дезодорант",
+    "short_title": "Arm & Hammer Juniper Berry 71 г"
   }
 }

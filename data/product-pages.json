@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 88,
+  "count": 97,
   "pages": [
     {
       "id": "prd_c5f3a1dce862",
@@ -439,6 +439,21 @@
       "relatedCount": 4
     },
     {
+      "id": "prd_d3c195668843",
+      "slug": "dove-advanced-care-pear-aloe-vera-sprey-antiperspirant-250-ml-668843",
+      "path": "/product/dove-advanced-care-pear-aloe-vera-sprey-antiperspirant-250-ml-668843/",
+      "url": "https://globalmarket.kg/product/dove-advanced-care-pear-aloe-vera-sprey-antiperspirant-250-ml-668843/",
+      "title": "Dove Advanced Care Pear & Aloe Vera спрей-антиперспирант 250 мл",
+      "brand": "Dove",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 4
+    },
+    {
       "id": "prd_96fe6b1c7d9c",
       "slug": "johnson-s-baby-oil-detskoe-maslo-200-ml-1c7d9c",
       "path": "/product/johnson-s-baby-oil-detskoe-maslo-200-ml-1c7d9c/",
@@ -454,6 +469,126 @@
       "relatedCount": 4
     },
     {
+      "id": "prd_a9ee2b0ab49d",
+      "slug": "gillette-antiperspirant-cool-wave-gel-dezodorant-70-ml-0ab49d",
+      "path": "/product/gillette-antiperspirant-cool-wave-gel-dezodorant-70-ml-0ab49d/",
+      "url": "https://globalmarket.kg/product/gillette-antiperspirant-cool-wave-gel-dezodorant-70-ml-0ab49d/",
+      "title": "Gillette Antiperspirant Cool Wave гель-дезодорант 70 мл",
+      "brand": "Gillette",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 13
+    },
+    {
+      "id": "prd_ded7b0409c9c",
+      "slug": "gillette-antiperspirant-power-rush-gel-dezodorant-70-ml-409c9c",
+      "path": "/product/gillette-antiperspirant-power-rush-gel-dezodorant-70-ml-409c9c/",
+      "url": "https://globalmarket.kg/product/gillette-antiperspirant-power-rush-gel-dezodorant-70-ml-409c9c/",
+      "title": "Gillette Antiperspirant Power Rush гель-дезодорант 70 мл",
+      "brand": "Gillette",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 13
+    },
+    {
+      "id": "prd_081404d81ef8",
+      "slug": "gillette-antiperspirant-arctic-ice-gel-dezodorant-70-ml-d81ef8",
+      "path": "/product/gillette-antiperspirant-arctic-ice-gel-dezodorant-70-ml-d81ef8/",
+      "url": "https://globalmarket.kg/product/gillette-antiperspirant-arctic-ice-gel-dezodorant-70-ml-d81ef8/",
+      "title": "Gillette Antiperspirant Arctic Ice гель-дезодорант 70 мл",
+      "brand": "Gillette",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 13
+    },
+    {
+      "id": "prd_bc63389835c9",
+      "slug": "arm-hammer-essentials-juniper-berry-dezodorant-71-g-9835c9",
+      "path": "/product/arm-hammer-essentials-juniper-berry-dezodorant-71-g-9835c9/",
+      "url": "https://globalmarket.kg/product/arm-hammer-essentials-juniper-berry-dezodorant-71-g-9835c9/",
+      "title": "Arm & Hammer Essentials Juniper Berry дезодорант 71 г",
+      "brand": "Arm & Hammer",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 490,
+      "image": "/assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 13
+    },
+    {
+      "id": "prd_16599c72dda7",
+      "slug": "arm-hammer-essentials-coconut-geranium-dezodorant-71-g-72dda7",
+      "path": "/product/arm-hammer-essentials-coconut-geranium-dezodorant-71-g-72dda7/",
+      "url": "https://globalmarket.kg/product/arm-hammer-essentials-coconut-geranium-dezodorant-71-g-72dda7/",
+      "title": "Arm & Hammer Essentials Coconut Geranium дезодорант 71 г",
+      "brand": "Arm & Hammer",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 490,
+      "image": "/assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 13
+    },
+    {
+      "id": "prd_e6202bbb1789",
+      "slug": "arm-hammer-essentials-rosemary-lavender-dezodorant-71-g-bb1789",
+      "path": "/product/arm-hammer-essentials-rosemary-lavender-dezodorant-71-g-bb1789/",
+      "url": "https://globalmarket.kg/product/arm-hammer-essentials-rosemary-lavender-dezodorant-71-g-bb1789/",
+      "title": "Arm & Hammer Essentials Rosemary Lavender дезодорант 71 г",
+      "brand": "Arm & Hammer",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 490,
+      "image": "/assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 13
+    },
+    {
+      "id": "prd_7c7e94c7128f",
+      "slug": "arm-hammer-ultra-max-fresh-dezodorant-stik-28-g-c7128f",
+      "path": "/product/arm-hammer-ultra-max-fresh-dezodorant-stik-28-g-c7128f/",
+      "url": "https://globalmarket.kg/product/arm-hammer-ultra-max-fresh-dezodorant-stik-28-g-c7128f/",
+      "title": "Arm & Hammer Ultra Max Fresh дезодорант-стик 28 г",
+      "brand": "Arm & Hammer",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 250,
+      "image": "/assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 13
+    },
+    {
+      "id": "prd_e40df5ac7d15",
+      "slug": "arm-hammer-ultra-max-powder-fresh-dezodorant-stik-28-g-ac7d15",
+      "path": "/product/arm-hammer-ultra-max-powder-fresh-dezodorant-stik-28-g-ac7d15/",
+      "url": "https://globalmarket.kg/product/arm-hammer-ultra-max-powder-fresh-dezodorant-stik-28-g-ac7d15/",
+      "title": "Arm & Hammer Ultra Max Powder Fresh дезодорант-стик 28 г",
+      "brand": "Arm & Hammer",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 250,
+      "image": "/assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 13
+    },
+    {
       "id": "prd_e616d7830dcc",
       "slug": "axe-signature-rogue-dezodorant-122-ml-830dcc",
       "path": "/product/axe-signature-rogue-dezodorant-122-ml-830dcc/",
@@ -466,7 +601,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-rogue-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 5
+      "relatedCount": 13
     },
     {
       "id": "prd_e74e6e5aeafb",
@@ -481,7 +616,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-maverick-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 5
+      "relatedCount": 13
     },
     {
       "id": "prd_84707e91d0d1",
@@ -496,7 +631,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-gold-temptation-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 5
+      "relatedCount": 13
     },
     {
       "id": "prd_e79bae4e0c99",
@@ -511,7 +646,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-intense-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 5
+      "relatedCount": 13
     },
     {
       "id": "prd_8b110a525852",
@@ -526,7 +661,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-corporate-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 5
+      "relatedCount": 13
     },
     {
       "id": "prd_17547dd70a52",
@@ -541,7 +676,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-champion-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 5
+      "relatedCount": 13
     },
     {
       "id": "prd_08eb2cef1689",

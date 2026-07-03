@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T10:00:10.799030+00:00",
+  "generatedAt": "2026-07-03T13:09:56.404200+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -39,13 +39,13 @@
     {
       "id": "deodorants",
       "title": "Дезодоранты",
-      "count": 65,
+      "count": 68,
       "icon": "💜"
     },
     {
       "id": "shaving",
       "title": "Бритье",
-      "count": 57,
+      "count": 54,
       "icon": "🪒"
     },
     {
@@ -5050,6 +5050,35 @@
       "categoryId": "body",
       "collections": [],
       "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
+        "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-front.jpg",
+        "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_d3c195668843",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
+      "icon": "🌸",
+      "registeredPriceKgs": 436,
+      "description": "Спрей-антиперспирант Dove Advanced Care с ароматом груши и алоэ вера, тройным увлажнением и защитой до 72 часов. Объём 250 мл.",
+      "title": "Dove Advanced Care Pear & Aloe Vera спрей-антиперспирант 250 мл",
+      "productType": "спрей-антиперспирант",
+      "brand": "Dove",
+      "rating": 4.8,
+      "searchText": "dove advanced care pear & aloe vera спрей-антиперспирант 250 мл уход за телом dove спрей-антиперспирант спрей-антиперспирант dove advanced care с ароматом груши и алоэ вера, тройным увлажнением и защитой до 72 часов. объём 250 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Dove",
+      "retailPriceKgs": 450,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "collectionLabels": [],
       "galleryImages": [],
       "status": "review",
       "id": "prd_07e3d025b33c",
@@ -5166,31 +5195,6 @@
       "brand": "Dove",
       "rating": 4.8,
       "searchText": "dove body spray (250) passion уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
-    },
-    {
-      "unit": "шт",
-      "badge": "Dove",
-      "retailPriceKgs": 450,
-      "category": "Уход за телом",
-      "categoryId": "body",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_d3c195668843",
-      "tones": [
-        "#f2d9c7",
-        "#c7876a"
-      ],
-      "image": null,
-      "icon": "🌸",
-      "registeredPriceKgs": 436,
-      "description": "Dove: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "Dove Body Spray (250) Pear",
-      "productType": "уход за телом",
-      "brand": "Dove",
-      "rating": 4.8,
-      "searchText": "dove body spray (250) pear уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
     },
     {
       "unit": "шт",
@@ -7202,6 +7206,93 @@
     },
     {
       "unit": "шт",
+      "badge": "Gillette",
+      "retailPriceKgs": 450,
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
+        "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-front.jpg",
+        "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_a9ee2b0ab49d",
+      "tones": [
+        "#e1d8f3",
+        "#8e78bd"
+      ],
+      "image": "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
+      "icon": "💜",
+      "registeredPriceKgs": 436,
+      "description": "Гель-антиперспирант Gillette Cool Wave с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+      "title": "Gillette Antiperspirant Cool Wave гель-дезодорант 70 мл",
+      "productType": "гель-дезодорант",
+      "brand": "Gillette",
+      "rating": 4.8,
+      "searchText": "gillette antiperspirant cool wave гель-дезодорант 70 мл дезодоранты gillette гель-дезодорант гель-антиперспирант gillette cool wave с защитой от запаха и пота до 48 часов. объём 70 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Gillette",
+      "retailPriceKgs": 450,
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
+        "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-front.jpg",
+        "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_ded7b0409c9c",
+      "tones": [
+        "#e1d8f3",
+        "#8e78bd"
+      ],
+      "image": "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
+      "icon": "💜",
+      "registeredPriceKgs": 436,
+      "description": "Гель-антиперспирант Gillette Power Rush с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+      "title": "Gillette Antiperspirant Power Rush гель-дезодорант 70 мл",
+      "productType": "гель-дезодорант",
+      "brand": "Gillette",
+      "rating": 4.8,
+      "searchText": "gillette antiperspirant power rush гель-дезодорант 70 мл дезодоранты gillette гель-дезодорант гель-антиперспирант gillette power rush с защитой от запаха и пота до 48 часов. объём 70 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Gillette",
+      "retailPriceKgs": 450,
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
+        "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-front.jpg",
+        "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_081404d81ef8",
+      "tones": [
+        "#e1d8f3",
+        "#8e78bd"
+      ],
+      "image": "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
+      "icon": "💜",
+      "registeredPriceKgs": 436,
+      "description": "Гель-антиперспирант Gillette Arctic Ice с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+      "title": "Gillette Antiperspirant Arctic Ice гель-дезодорант 70 мл",
+      "productType": "гель-дезодорант",
+      "brand": "Gillette",
+      "rating": 4.8,
+      "searchText": "gillette antiperspirant arctic ice гель-дезодорант 70 мл дезодоранты gillette гель-дезодорант гель-антиперспирант gillette arctic ice с защитой от запаха и пота до 48 часов. объём 70 мл."
+    },
+    {
+      "unit": "шт",
       "badge": "Rexona",
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
@@ -7227,53 +7318,32 @@
     },
     {
       "unit": "шт",
-      "badge": "ARM",
+      "badge": "Arm & Hammer",
       "retailPriceKgs": 490,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
+        "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-front.jpg",
+        "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_bc63389835c9",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 475,
-      "description": "ARM: дезодорант для ежедневной свежести. Формат: 70 g, 70g.",
-      "title": "ARM & HAMMER (70g) STICK Juniper Berry",
+      "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Juniper Berry. Вес 2.5 oz (71 г).",
+      "title": "Arm & Hammer Essentials Juniper Berry дезодорант 71 г",
       "productType": "дезодорант",
-      "brand": "ARM",
+      "brand": "Arm & Hammer",
       "rating": 4.8,
-      "searchText": "arm & hammer (70g) stick juniper berry дезодоранты arm дезодорант arm: дезодорант для ежедневной свежести. формат: 70 g, 70g."
-    },
-    {
-      "unit": "шт",
-      "badge": "0ARM",
-      "retailPriceKgs": 490,
-      "category": "Дезодоранты",
-      "categoryId": "deodorants",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_e6202bbb1789",
-      "tones": [
-        "#e1d8f3",
-        "#8e78bd"
-      ],
-      "image": null,
-      "icon": "💜",
-      "registeredPriceKgs": 475,
-      "description": "0ARM: дезодорант для ежедневной свежести. Формат: 70 g, 70g.",
-      "title": "0ARM & HAMMER (70g) STICK Fresh Lavender Rosemary",
-      "productType": "дезодорант",
-      "brand": "0ARM",
-      "rating": 4.8,
-      "searchText": "0arm & hammer (70g) stick fresh lavender rosemary дезодоранты 0arm дезодорант 0arm: дезодорант для ежедневной свежести. формат: 70 g, 70g."
+      "searchText": "arm & hammer essentials juniper berry дезодорант 71 г дезодоранты arm & hammer дезодорант дезодорант arm & hammer essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. аромат juniper berry. вес 2.5 oz (71 г)."
     },
     {
       "unit": "шт",
@@ -7302,28 +7372,61 @@
     },
     {
       "unit": "шт",
-      "badge": "ARM",
+      "badge": "Arm & Hammer",
       "retailPriceKgs": 490,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
+        "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-front.jpg",
+        "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_16599c72dda7",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 475,
-      "description": "ARM: дезодорант для ежедневной свежести. Формат: 70 g, 70g.",
-      "title": "ARM & HAMMER (70g) STICK Coconut",
+      "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Coconut Geranium. Вес 2.5 oz (71 г).",
+      "title": "Arm & Hammer Essentials Coconut Geranium дезодорант 71 г",
       "productType": "дезодорант",
-      "brand": "ARM",
+      "brand": "Arm & Hammer",
       "rating": 4.8,
-      "searchText": "arm & hammer (70g) stick coconut дезодоранты arm дезодорант arm: дезодорант для ежедневной свежести. формат: 70 g, 70g."
+      "searchText": "arm & hammer essentials coconut geranium дезодорант 71 г дезодоранты arm & hammer дезодорант дезодорант arm & hammer essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. аромат coconut geranium. вес 2.5 oz (71 г)."
+    },
+    {
+      "unit": "шт",
+      "badge": "Arm & Hammer",
+      "retailPriceKgs": 490,
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
+        "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-front.jpg",
+        "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_e6202bbb1789",
+      "tones": [
+        "#e1d8f3",
+        "#8e78bd"
+      ],
+      "image": "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
+      "icon": "💜",
+      "registeredPriceKgs": 475,
+      "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Rosemary Lavender. Вес 2.5 oz (71 г).",
+      "title": "Arm & Hammer Essentials Rosemary Lavender дезодорант 71 г",
+      "productType": "дезодорант",
+      "brand": "Arm & Hammer",
+      "rating": 4.8,
+      "searchText": "arm & hammer essentials rosemary lavender дезодорант 71 г дезодоранты arm & hammer дезодорант дезодорант arm & hammer essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. аромат rosemary lavender. вес 2.5 oz (71 г)."
     },
     {
       "unit": "шт",
@@ -7552,53 +7655,61 @@
     },
     {
       "unit": "шт",
-      "badge": "ARM",
+      "badge": "Arm & Hammer",
       "retailPriceKgs": 250,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
+        "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-front.jpg",
+        "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_7c7e94c7128f",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 242,
-      "description": "ARM: дезодорант для ежедневной свежести. Формат: 30 g, 30g.",
-      "title": "ARM & HAMMER (30g) STICK Fresh",
-      "productType": "дезодорант",
-      "brand": "ARM",
+      "description": "Твёрдый дезодорант-антиперспирант Arm & Hammer Ultra Max с ароматом Fresh. Вес 28 г (1.0 oz).",
+      "title": "Arm & Hammer Ultra Max Fresh дезодорант-стик 28 г",
+      "productType": "дезодорант-стик",
+      "brand": "Arm & Hammer",
       "rating": 4.8,
-      "searchText": "arm & hammer (30g) stick fresh дезодоранты arm дезодорант arm: дезодорант для ежедневной свежести. формат: 30 g, 30g."
+      "searchText": "arm & hammer ultra max fresh дезодорант-стик 28 г дезодоранты arm & hammer дезодорант-стик твёрдый дезодорант-антиперспирант arm & hammer ultra max с ароматом fresh. вес 28 г (1.0 oz)."
     },
     {
       "unit": "шт",
-      "badge": "ARM",
+      "badge": "Arm & Hammer",
       "retailPriceKgs": 250,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
+        "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-front.jpg",
+        "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_e40df5ac7d15",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 242,
-      "description": "ARM: дезодорант для ежедневной свежести. Формат: 30 g, 30g.",
-      "title": "ARM & HAMMER (30g) STICK Powder Fresh",
-      "productType": "дезодорант",
-      "brand": "ARM",
+      "description": "Твёрдый дезодорант-антиперспирант Arm & Hammer Ultra Max с ароматом Powder Fresh. Вес 28 г (1.0 oz).",
+      "title": "Arm & Hammer Ultra Max Powder Fresh дезодорант-стик 28 г",
+      "productType": "дезодорант-стик",
+      "brand": "Arm & Hammer",
       "rating": 4.8,
-      "searchText": "arm & hammer (30g) stick powder fresh дезодоранты arm дезодорант arm: дезодорант для ежедневной свежести. формат: 30 g, 30g."
+      "searchText": "arm & hammer ultra max powder fresh дезодорант-стик 28 г дезодоранты arm & hammer дезодорант-стик твёрдый дезодорант-антиперспирант arm & hammer ultra max с ароматом powder fresh. вес 28 г (1.0 oz)."
     },
     {
       "unit": "шт",
@@ -8966,31 +9077,6 @@
       "collections": [],
       "collectionLabels": [],
       "galleryImages": [],
-      "status": "review",
-      "id": "prd_a9ee2b0ab49d",
-      "tones": [
-        "#d8e1e7",
-        "#667d8c"
-      ],
-      "image": null,
-      "icon": "🪒",
-      "registeredPriceKgs": 436,
-      "description": "Gillette: товар для бритья и ухода. Формат: 70 мл.",
-      "title": "Gillette CLEAR GEL (70 мл) Cool Wave",
-      "productType": "гель для бритья",
-      "brand": "Gillette",
-      "rating": 4.8,
-      "searchText": "gillette clear gel (70 мл) cool wave бритье gillette гель для бритья gillette: товар для бритья и ухода. формат: 70 мл."
-    },
-    {
-      "unit": "шт",
-      "badge": "Gillette",
-      "retailPriceKgs": 450,
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
       "status": "active",
       "id": "prd_1dfaa90e937f",
       "tones": [
@@ -9164,56 +9250,6 @@
       "brand": "Gillette",
       "rating": 4.8,
       "searchText": "6 venus запаски (6) delux smooth бритье gillette сменные кассеты для бритья gillette: товар для бритья и ухода."
-    },
-    {
-      "unit": "шт",
-      "badge": "Gillette",
-      "retailPriceKgs": 450,
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_ded7b0409c9c",
-      "tones": [
-        "#d8e1e7",
-        "#667d8c"
-      ],
-      "image": null,
-      "icon": "🪒",
-      "registeredPriceKgs": 436,
-      "description": "Gillette: товар для бритья и ухода. Формат: 70 мл.",
-      "title": "Gillette CLEAR GEL (70 мл) Power Rush",
-      "productType": "гель для бритья",
-      "brand": "Gillette",
-      "rating": 4.8,
-      "searchText": "gillette clear gel (70 мл) power rush бритье gillette гель для бритья gillette: товар для бритья и ухода. формат: 70 мл."
-    },
-    {
-      "unit": "шт",
-      "badge": "Gillette",
-      "retailPriceKgs": 450,
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_081404d81ef8",
-      "tones": [
-        "#d8e1e7",
-        "#667d8c"
-      ],
-      "image": null,
-      "icon": "🪒",
-      "registeredPriceKgs": 436,
-      "description": "Gillette: товар для бритья и ухода. Формат: 70 мл.",
-      "title": "Gillette CLEAR GEL (70 мл) Arctic Ice",
-      "productType": "гель для бритья",
-      "brand": "Gillette",
-      "rating": 4.8,
-      "searchText": "gillette clear gel (70 мл) arctic ice бритье gillette гель для бритья gillette: товар для бритья и ухода. формат: 70 мл."
     },
     {
       "unit": "шт",
