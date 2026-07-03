@@ -1,6 +1,6 @@
 # Production readiness — Global Market KG
 
-Status: 2026-07-03, branch `collab/preview-baseline`, commit `5182231`.
+Status: 2026-07-03, branch `collab/preview-baseline`, commit `d1df9ff`.
 
 This is the short decision checklist. For exact commands, use
 [`backend-go-live-checklist.md`](backend-go-live-checklist.md) (privileged
@@ -33,17 +33,37 @@ summary for the owner).
   `tests/rollback.contract.test.mjs`.
 - `git diff --check`: clean (no trailing-whitespace/whitespace-error issues).
 
-## 2. Requires user/Codex production action
+## 2. Production status after first deploy
+
+Production has now been deployed once from the final package:
+
+- `https://globalmarket.kg` passes `scripts/check_deployment.py`.
+- Live catalog data loads correctly: 460 products, 92 product pages,
+  24 landing pages, 119 sitemap URLs.
+- `/api/orders` route is deployed and reachable.
+- Current API probe result: `503 backend_not_configured`.
+
+This is expected because Production currently has `SUPABASE_URL` and
+`MANAGER_WHATSAPP`, but **does not yet have**
+`SUPABASE_SERVICE_ROLE_KEY`.
+
+Customer impact: checkout still falls back to WhatsApp. Orders are not lost,
+but they will not be saved into Supabase/admin until the service-role secret is
+added to Production and the full smoke test passes.
+
+## 3. Requires user/Codex production action
 
 Nothing further is Claude-safe here — every remaining item needs dashboard
 access, secrets, or an explicit deploy/push decision:
 
 1. **Cloudflare Pages Production environment variables** — `SUPABASE_URL`,
    `SUPABASE_SERVICE_ROLE_KEY` (secret), `MANAGER_WHATSAPP` (optional).
-   Preview already has these; Production does not.
+   Production now has `SUPABASE_URL` and `MANAGER_WHATSAPP`; still missing:
+   `SUPABASE_SERVICE_ROLE_KEY`.
 2. **Supabase admin user** — confirm an owner/manager user exists with
    `app_metadata.is_admin = true` for the Production admin login.
-3. **Production deploy** (direct `wrangler` upload, not GitHub-triggered):
+3. **Production deploy** (already done once; repeat after adding the missing
+   secret only if Cloudflare requires a redeploy for the env change):
    ```bash
    python3 scripts/package_static_site.py
    wrangler pages deploy /private/tmp/globalmarket-static-build \
@@ -65,7 +85,7 @@ access, secrets, or an explicit deploy/push decision:
 
 Full step-by-step with exact commands: `backend-go-live-checklist.md`.
 
-## 3. Not blocking launch
+## 4. Not blocking launch
 
 These are real, known, and intentionally deferred — none of them stop a
 technical go-live:
@@ -84,7 +104,7 @@ technical go-live:
 - General visual/content polish can continue after launch without touching
   the backend contract.
 
-## 4. Rollback
+## 5. Rollback
 
 Fast, non-destructive, no code change needed:
 
