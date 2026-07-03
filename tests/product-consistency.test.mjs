@@ -73,10 +73,12 @@ test("perfume products keep a single card image", () => {
 });
 
 test("related-product cards link to real pages and reference images that exist on disk", () => {
-  // render_related() in scripts/generate_product_pages.py emits
-  // <a class="related-card" href="/product/<slug>/"><img src="/<image>">.
-  // Text-only checks elsewhere ("related|Похож" present) wouldn't catch a
-  // related card pointing at a deleted image or a non-existent product page.
+  // render_related() / product_tile_html() in scripts/generate_product_pages.py
+  // emit full .product-card tiles (same as the home page): the image link
+  // carries href="/product/<slug>/" and the <img class="product-image">
+  // carries the src. Text-only checks elsewhere ("related|Похож" present)
+  // wouldn't catch a related card pointing at a deleted image or a
+  // non-existent product page.
   const bad = [];
   let checked = 0;
   for (const e of pages) {
@@ -85,7 +87,7 @@ test("related-product cards link to real pages and reference images that exist o
     const html = readFileSync(file, "utf8");
     const section = html.match(/<section class="related">[\s\S]*?<\/section>/);
     if (!section) continue; // some products may have no related items
-    const cards = [...section[0].matchAll(/<a class="related-card" href="([^"]+)">\s*<img src="([^"]+)"/g)];
+    const cards = [...section[0].matchAll(/<a class="product-image-link" href="([^"]+)"[^>]*>\s*<img class="product-image" src="([^"]+)"/g)];
     for (const [, href, src] of cards) {
       checked += 1;
       const relatedSlug = (href.match(/^\/product\/([^/]+)\/$/) || [])[1];

@@ -24,7 +24,10 @@ const saveApi = block(/async function saveOrderViaApi\([\s\S]*?\n}/);
 
 test("home product card carries price, brand/type/volume, image, cart, favorite", () => {
   assert.ok(renderProducts, "renderProducts not found");
-  assert.match(renderProducts, /formatPriceHtml\(productPrice\(product\)\)/); // price
+  // Price rendering goes through priceWithDiscountHtml(), which itself calls
+  // formatPriceHtml(productPrice(product)) and adds a strikethrough original
+  // price when a manual promo discount is active (data/discounts.json).
+  assert.match(renderProducts, /priceWithDiscountHtml\(product\)/); // price
   assert.match(renderProducts, /productDisplayParts|display\.(brand|type|size)/); // brand/type/volume
   assert.match(renderProducts, /productCardImage\(product\)/); // image
   assert.match(renderProducts, /data-add="\$\{product\.id\}"/); // add-to-cart

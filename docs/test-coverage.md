@@ -83,6 +83,24 @@ browser, no Supabase, no Cloudflare, no secrets.
 - `home-cards-checkout.test.mjs` — home card price/brand/type/volume/image/cart/
   favorite, product open/details + registration discount text; checkout without
   registration; UTM/customer fields sent.
+- `catalog-badges-parity.test.mjs` — the marketing-badge rules (Новинка/Хит/
+  Выгодно) and the manual promo-discount rules (hasDiscount, the `-XX%` badge
+  shape) stay in sync across the three places a product tile is rendered:
+  `app.js` (home page), `scripts/generate_product_pages.py` ("Похожие
+  товары"), and `scripts/generate_landing_pages.py` (category/brand/collection
+  grids). Exists because those three renderers drifted apart before — this
+  locks the rules so a future edit to only one copy fails here instead of
+  silently drifting again.
+- `catalog-discount-system.test.mjs` — `data/discounts.json` shape (id ->
+  1-89% map) and that every id in it exists in the catalog; every discounted
+  product's `originalPriceKgs` is math-consistent with `discountPercent`
+  (`retail / (1 - pct/100)`, and always strictly greater than the current
+  price); a product absent from `discounts.json` never carries stale discount
+  fields; Persil Rose гель для стирки 3 л + 1 л (`prd_c5f3a1dce862`) carries
+  the current -20% promo; `scripts/import_stock.py` loads discounts and runs
+  BOTH the 1C/DB and manual-product loops through `apply_discount()`;
+  `scripts/build_public_catalog.py` carries both fields to the public
+  catalog.
 - `category-tiles.test.mjs` — 11 tiles, images exist, real catalog categories.
 - `header-menu.test.mjs` — 11 menu sections = 11 tiles by name; shared menu source.
 - `shared-layout.test.mjs` — header/footer from shared partials (not diverged);

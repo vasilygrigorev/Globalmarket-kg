@@ -75,6 +75,8 @@ def main():
                 "tests/product-consistency.test.mjs",
                 "tests/gallery-completeness.test.mjs",
                 "tests/home-cards-checkout.test.mjs",
+                "tests/catalog-badges-parity.test.mjs",
+                "tests/catalog-discount-system.test.mjs",
                 "tests/seo-consistency.test.mjs",
                 "tests/home-seo.test.mjs",
                 "tests/robots-sitemap.test.mjs",
