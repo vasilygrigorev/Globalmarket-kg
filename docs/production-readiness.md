@@ -1,6 +1,6 @@
 # Production readiness — Global Market KG
 
-Status: 2026-07-03, branch `collab/preview-baseline`, commit `4d3e750`.
+Status: 2026-07-03, branch `collab/preview-baseline`, commit `5182231`.
 
 This is the short decision checklist. For exact commands, use
 [`backend-go-live-checklist.md`](backend-go-live-checklist.md) (privileged
@@ -9,8 +9,8 @@ summary for the owner).
 
 ## 1. Ready locally
 
-- Branch: `collab/preview-baseline`. Latest commit: `4d3e750` (this file's
-  status commit is the next one on top).
+- Branch: `collab/preview-baseline`. Latest closure commit:
+  `5182231 Add final owner handoff and production closure checklist`.
 - Full local test suite: **240/240 green**
   (`python3 scripts/verify_backend_mvp.py`).
 - Static package builds clean: 633 files, 0 build/package errors, internal
