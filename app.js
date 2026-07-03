@@ -1286,6 +1286,34 @@ function productBadges(product) {
   return badges.slice(0, 2);
 }
 
+// A manual promo discount (data/discounts.json -> discountPercent/originalPriceKgs on
+// the catalog, never a redesign of the real price): both fields must be present and
+// positive, and the "was" price must actually be higher than the current one.
+function hasDiscount(product) {
+  return (
+    Number(product.discountPercent || 0) > 0 &&
+    Number(product.originalPriceKgs || 0) > Number(product.retailPriceKgs || 0)
+  );
+}
+
+function discountBadgeHtml(product) {
+  if (!hasDiscount(product)) return "";
+  return `<span class="discount-badge">-${Math.round(product.discountPercent)}%</span>`;
+}
+
+// Current price, with the crossed-out original price alongside it when a promo
+// discount is active. Falls back to the plain price otherwise.
+function priceWithDiscountHtml(product) {
+  const current = formatPriceHtml(productPrice(product));
+  if (!hasDiscount(product)) return `<span class="price">${current}</span>`;
+  return `
+    <span class="price-group">
+      <span class="price">${current}</span>
+      <span class="price-original">${formatPriceHtml(product.originalPriceKgs)}</span>
+    </span>
+  `;
+}
+
 function renderProducts() {
   const visibleProducts = getVisibleProducts();
   const pageProducts = visibleProducts.slice(0, state.visibleLimit);
@@ -1313,6 +1341,7 @@ function renderProducts() {
                 ? `<div class="marketing-badges">${badges.map((badge) => `<span>${escapeHtml(badge)}</span>`).join("")}</div>`
                 : ""
             }
+            ${discountBadgeHtml(product)}
             <a class="product-image-link" ${cardLink} aria-label="Открыть ${escapeHtml(product.title)}">
               <img class="product-image ${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy">
             </a>
@@ -1332,7 +1361,7 @@ function renderProducts() {
             <p>${escapeHtml(product.description)}</p>
             <div class="price-stack">
               <div class="price-action-row">
-                <span class="price">${formatPriceHtml(productPrice(product))}</span>
+                ${priceWithDiscountHtml(product)}
                 <button class="add-button compact-add-button" type="button" data-add="${product.id}" aria-label="Добавить в корзину">В корзину</button>
               </div>
               <span class="registered-price-note">${
@@ -1437,8 +1466,11 @@ function openProductModal(productId) {
         </div>
         <p>${escapeHtml(product.description)}</p>
         <div class="modal-price-box">
-          <span>${isRegisteredCustomer() ? "Ваша цена" : "Цена"}</span>
-          <strong>${formatPriceHtml(productPrice(product))}</strong>
+          <span>${isRegisteredCustomer() ? "Ваша цена" : "Цена"}${hasDiscount(product) ? ` · скидка ${Math.round(product.discountPercent)}%` : ""}</span>
+          <strong>
+            ${formatPriceHtml(productPrice(product))}
+            ${hasDiscount(product) ? `<span class="price-original">${formatPriceHtml(product.originalPriceKgs)}</span>` : ""}
+          </strong>
           <small>${
             isRegisteredCustomer()
               ? `Скидка регистрации: ${catalogSettings.default_registered_discount_percent}%`

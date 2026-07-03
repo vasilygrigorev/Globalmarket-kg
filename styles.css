@@ -1318,6 +1318,23 @@ textarea {
   line-height: 1.1;
 }
 
+/* Manual promo discount (data/discounts.json): bottom-right corner of the tile,
+   the one spot the brand pill / like button / Хит-style badges don't use. */
+.discount-badge {
+  position: absolute;
+  z-index: 3;
+  right: 8px;
+  bottom: 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  color: #fff;
+  background: #d70015;
+  box-shadow: 0 5px 16px rgba(215, 0, 21, 0.28);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
 .product-info {
   display: grid;
   gap: 8px;
@@ -1442,6 +1459,21 @@ textarea {
   font-weight: 850;
   color: var(--ink);
   letter-spacing: 0;
+}
+
+.price-group {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.price-original {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.08em;
 }
 
 .som-sign {
@@ -2666,6 +2698,13 @@ textarea {
   .marketing-badges span {
     padding: 2px 6px;
     font-size: 9px;
+  }
+
+  .discount-badge {
+    right: 7px;
+    bottom: 7px;
+    padding: 2px 6px;
+    font-size: 10px;
   }
 
   .product-info {
