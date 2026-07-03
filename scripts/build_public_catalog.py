@@ -34,6 +34,8 @@ PUBLIC_PRODUCT_FIELDS = [
     "productType",
     "brand",
     "rating",
+    "discountPercent",
+    "originalPriceKgs",
 ]
 
 

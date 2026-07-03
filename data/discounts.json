@@ -1,0 +1,6 @@
+{
+  "_readme": "Manual promo-discount overrides. 'discounts' maps product id -> discount percent (1-90). To add/change/remove a discount on any product: edit the 'discounts' map below, then re-run the site build (scripts/import_stock.py or the full generation pipeline). This does NOT touch retailPriceKgs/registeredPriceKgs — it only adds a derived, crossed-out 'original price' shown next to the current price, and a '-XX%' badge on the product tile. Documented in docs/discount-system.md.",
+  "discounts": {
+    "prd_c5f3a1dce862": 20
+  }
+}

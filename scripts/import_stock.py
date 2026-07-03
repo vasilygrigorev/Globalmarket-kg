@@ -22,6 +22,7 @@ REVIEW_CSV_PATH = ROOT / "outputs" / "catalog_review.csv"
 REVIEW_XLSX_PATH = ROOT / "outputs" / "catalog_review.xlsx"
 SETTINGS_PATH = ROOT / "data" / "settings.json"
 MANUAL_PRODUCTS_PATH = ROOT / "data" / "manual_products.json"
+DISCOUNTS_PATH = ROOT / "data" / "discounts.json"
 
 EXCLUDED_GROUPS = {"18 x Germ 2"}
 
@@ -929,6 +930,39 @@ def load_manual_products():
     return active_products
 
 
+def load_discounts():
+    """Manual promo-discount overrides: {product id: percent}. See data/discounts.json
+    and docs/discount-system.md. Missing file / bad shape -> no discounts (safe default)."""
+    if not DISCOUNTS_PATH.exists():
+        return {}
+    payload = json.loads(DISCOUNTS_PATH.read_text(encoding="utf-8"))
+    raw = payload.get("discounts", {}) if isinstance(payload, dict) else {}
+    discounts = {}
+    for product_id, percent in raw.items():
+        pct = int(percent)
+        if 0 < pct < 90:
+            discounts[product_id] = pct
+    return discounts
+
+
+def apply_discount(product, discounts):
+    """Add discountPercent + a derived, crossed-out originalPriceKgs when this
+    product id has a manual promo discount. retailPriceKgs/registeredPriceKgs are
+    never changed by this — the current price stays the real, already-discounted
+    price; originalPriceKgs is purely a display-only 'was' price computed
+    backwards from it, so it always renders strictly higher than the current price."""
+    pct = discounts.get(product.get("id"))
+    if not pct:
+        return product
+    retail = int(product.get("retailPriceKgs") or 0)
+    if retail <= 0:
+        return product
+    original = round(retail / (1 - pct / 100))
+    product["discountPercent"] = pct
+    product["originalPriceKgs"] = max(original, retail + 1)
+    return product
+
+
 def generate_outputs(conn, settings):
     rows = conn.execute(
         """
@@ -947,6 +981,7 @@ def generate_outputs(conn, settings):
         """
     ).fetchall()
 
+    discounts = load_discounts()
     products = []
     review_rows = []
     for row in rows:
@@ -991,7 +1026,7 @@ def generate_outputs(conn, settings):
                 ]
             ),
         }
-        products.append(product)
+        products.append(apply_discount(product, discounts))
         review_rows.append(
             {
                 "review_status": row["status"],
@@ -1064,7 +1099,7 @@ def generate_outputs(conn, settings):
                 ]
             ),
         }
-        products.append(product)
+        products.append(apply_discount(product, discounts))
         review_rows.append(
             {
                 "review_status": product["status"],
