@@ -130,12 +130,11 @@
     .stock-note { padding: 14px; border-radius: 12px; background: #f1f1f1; color: #555; }
     .related { margin-top: 28px; }
     .related h2 { font-size: 26px; }
-    .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .related-card { overflow: hidden; background: #fff; border-radius: 14px; display: grid; grid-template-rows: auto 1fr auto; gap: 8px; }
-    .related-card { color: inherit; text-decoration: none; }
-    .related-card img { display: block; width: 100%; border-radius: 0; aspect-ratio: 1 / 1; object-fit: cover; }
-    .related-card strong { padding: 0 10px; font-size: 14px; }
-    .related-card span { padding: 0 10px 10px; font-weight: 800; }
+    /* Cards inside .related-grid reuse the shared .product-card rules from
+       styles.css (loaded above) so they render identically to home-page
+       catalog cards — same brand pill, like button, badges, price, add
+       button. Only the grid container itself is defined here. */
+    .related-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
     body.product-page .site-header { z-index: 20; }
     .site-footer { margin: 32px auto 0; padding: 28px 18px calc(32px + env(safe-area-inset-bottom)); color: #636366; background: #fff; border-top: 1px solid #e4e4e7; }
     .site-footer-inner { display: grid; gap: 18px; max-width: 980px; margin: 0 auto; }
@@ -242,7 +241,7 @@
         <p class="description">Брендовый парфюм Chloé Lavanda в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
         <div class="price-box">
           <span>Ваша цена</span>
-          <strong class="price">1 100 <span class="som-sign">с</span></strong>
+          <strong><span class="price">1 100 <span class="som-sign">с</span></span></strong>
           <small>Скидка регистрации: 3%</small>
         </div>
         <dl class="specs">
@@ -267,132 +266,741 @@
     <section class="related">
       <h2>Похожие товары</h2>
       <div class="related-grid">
-            <a class="related-card" href="/product/attar-collection-annabella-parfyum-5-ml-la_5ml/">
-              <img src="/assets/products/perfume/attar-annabella-5ml-card-front.jpg" alt="Attar Collection Annabella парфюм 5 мл" loading="lazy">
-              <strong>Attar Collection Annabella парфюм 5 мл</strong>
-              <span>800 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/attar-collection-azora-parfyum-5-ml-ra_5ml/">
-              <img src="/assets/products/perfume/attar-azora-5ml-card-front.jpg" alt="Attar Collection Azora парфюм 5 мл" loading="lazy">
-              <strong>Attar Collection Azora парфюм 5 мл</strong>
-              <span>800 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/attar-collection-capella-parfyum-5-ml-la_5ml/">
-              <img src="/assets/products/perfume/attar-capella-5ml-card-front.jpg" alt="Attar Collection Capella парфюм 5 мл" loading="lazy">
-              <strong>Attar Collection Capella парфюм 5 мл</strong>
-              <span>800 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/attar-collection-musk-kashmir-extract-parfyum-5-ml-ct_5ml/">
-              <img src="/assets/products/perfume/attar-musk-kashmir-extract-5ml-card-front.jpg" alt="Attar Collection Musk Kashmir Extract парфюм 5 мл" loading="lazy">
-              <strong>Attar Collection Musk Kashmir Extract парфюм 5 мл</strong>
-              <span>1 200 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/attar-collection-musk-kashmir-parfyum-5-ml-ir_5ml/">
-              <img src="/assets/products/perfume/attar-musk-kashmir-5ml-card-front.jpg" alt="Attar Collection Musk Kashmir парфюм 5 мл" loading="lazy">
-              <strong>Attar Collection Musk Kashmir парфюм 5 мл</strong>
-              <span>800 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/attar-collection-second-skin-extract-parfyum-5-ml-ct_5ml/">
-              <img src="/assets/products/perfume/attar-second-skin-extract-5ml-card-front.jpg" alt="Attar Collection Second Skin Extract парфюм 5 мл" loading="lazy">
-              <strong>Attar Collection Second Skin Extract парфюм 5 мл</strong>
-              <span>1 200 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/attar-collection-sierra-parfyum-5-ml-ra_5ml/">
-              <img src="/assets/products/perfume/attar-sierra-5ml-card-front.jpg" alt="Attar Collection Sierra парфюм 5 мл" loading="lazy">
-              <strong>Attar Collection Sierra парфюм 5 мл</strong>
-              <span>800 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/burberry-goddess-parfyum-5-ml-ss_5ml/">
-              <img src="/assets/products/perfume/burberry-goddess-5ml-card-front.jpg" alt="Burberry Goddess парфюм 5 мл" loading="lazy">
-              <strong>Burberry Goddess парфюм 5 мл</strong>
-              <span>850 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/bybozo-sea-breeze-parfyum-5-ml-ze_5ml/">
-              <img src="/assets/products/perfume/bybozo-sea-breeze-5ml-card-front-v2.jpg" alt="Bybozo Sea Breeze парфюм 5 мл" loading="lazy">
-              <strong>Bybozo Sea Breeze парфюм 5 мл</strong>
-              <span>995 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/chanel-chance-eau-fra-che-parfyum-5-ml-he_5ml/">
-              <img src="/assets/products/perfume/chanel-chance-eau-fraiche-5ml-card-front.jpg" alt="Chanel Chance Eau Fraîche парфюм 5 мл" loading="lazy">
-              <strong>Chanel Chance Eau Fraîche парфюм 5 мл</strong>
-              <span>1 100 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/chanel-chance-eau-splendide-parfyum-5-ml-de_5ml/">
-              <img src="/assets/products/perfume/chanel-chance-eau-splendide-5ml-card-front.jpg" alt="Chanel Chance Eau Splendide парфюм 5 мл" loading="lazy">
-              <strong>Chanel Chance Eau Splendide парфюм 5 мл</strong>
-              <span>1 450 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/chanel-chance-eau-tendre-parfyum-5-ml-re_5ml/">
-              <img src="/assets/products/perfume/chanel-chance-eau-tendre-5ml-card-front.jpg" alt="Chanel Chance Eau Tendre парфюм 5 мл" loading="lazy">
-              <strong>Chanel Chance Eau Tendre парфюм 5 мл</strong>
-              <span>1 100 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/chanel-chance-parfyum-5-ml-ce_5ml/">
-              <img src="/assets/products/perfume/chanel-chance-5ml-card-front-v2.jpg" alt="Chanel Chance парфюм 5 мл" loading="lazy">
-              <strong>Chanel Chance парфюм 5 мл</strong>
-              <span>895 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/chanel-coco-mademoiselle-parfyum-5-ml-le_5ml/">
-              <img src="/assets/products/perfume/chanel-coco-mademoiselle-5ml-card-front.jpg" alt="Chanel Coco Mademoiselle парфюм 5 мл" loading="lazy">
-              <strong>Chanel Coco Mademoiselle парфюм 5 мл</strong>
-              <span>1 200 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/chlo-cedrus-parfyum-5-ml-us_5ml/">
-              <img src="/assets/products/perfume/chloe-cedrus-5ml-card-front.jpg" alt="Chloé Cedrus парфюм 5 мл" loading="lazy">
-              <strong>Chloé Cedrus парфюм 5 мл</strong>
-              <span>1 200 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/giorgio-armani-acqua-di-gioia-parfyum-5-ml-ia_5ml/">
-              <img src="/assets/products/perfume/giorgio-armani-acqua-di-gioia-5ml-card-front.jpg" alt="Giorgio Armani Acqua di Gioia парфюм 5 мл" loading="lazy">
-              <strong>Giorgio Armani Acqua di Gioia парфюм 5 мл</strong>
-              <span>850 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/le-labo-another-13-parfyum-5-ml-13_5ml/">
-              <img src="/assets/products/perfume/le-labo-another-13-5ml-card-front-v2.jpg" alt="Le Labo Another 13 парфюм 5 мл" loading="lazy">
-              <strong>Le Labo Another 13 парфюм 5 мл</strong>
-              <span>2 245 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/parfums-de-marly-delina-exclusif-parfyum-5-ml-if_5ml/">
-              <img src="/assets/products/perfume/parfums-de-marly-delina-exclusif-5ml-card-front.jpg" alt="Parfums de Marly Delina Exclusif парфюм 5 мл" loading="lazy">
-              <strong>Parfums de Marly Delina Exclusif парфюм 5 мл</strong>
-              <span>850 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/versace-versense-parfyum-5-ml-se_5ml/">
-              <img src="/assets/products/perfume/versace-versense-5ml-card-front.jpg" alt="Versace Versense парфюм 5 мл" loading="lazy">
-              <strong>Versace Versense парфюм 5 мл</strong>
-              <span>550 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/victoria-s-secret-bombshell-parfyum-5-ml-ll_5ml/">
-              <img src="/assets/products/perfume/victorias-secret-bombshell-5ml-card-front.jpg" alt="Victoria&#x27;s Secret Bombshell парфюм 5 мл" loading="lazy">
-              <strong>Victoria&#x27;s Secret Bombshell парфюм 5 мл</strong>
-              <span>800 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/yves-saint-laurent-libre-parfyum-5-ml-re_5ml/">
-              <img src="/assets/products/perfume/yves-saint-laurent-libre-5ml-card-front.jpg" alt="Yves Saint Laurent Libre парфюм 5 мл" loading="lazy">
-              <strong>Yves Saint Laurent Libre парфюм 5 мл</strong>
-              <span>950 <span class="som-sign">с</span></span>
-            </a>
-            </div>
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Attar Collection</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_attar_annabella_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/attar-collection-annabella-parfyum-5-ml-la_5ml/" data-product-link="prd_perfume_attar_annabella_5ml" aria-label="Открыть Attar Collection Annabella парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/attar-annabella-5ml-card-front.jpg" alt="Attar Collection Annabella парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/attar-collection-annabella-parfyum-5-ml-la_5ml/" data-product-link="prd_perfume_attar_annabella_5ml">
+                  <span class="product-brand-line">Attar Collection</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Annabella парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Attar Collection Annabella в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">800 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_attar_annabella_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 776 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Attar Collection</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_attar_azora_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/attar-collection-azora-parfyum-5-ml-ra_5ml/" data-product-link="prd_perfume_attar_azora_5ml" aria-label="Открыть Attar Collection Azora парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/attar-azora-5ml-card-front.jpg" alt="Attar Collection Azora парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/attar-collection-azora-parfyum-5-ml-ra_5ml/" data-product-link="prd_perfume_attar_azora_5ml">
+                  <span class="product-brand-line">Attar Collection</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Azora парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Attar Collection Azora в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">800 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_attar_azora_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 776 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Attar Collection</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_attar_capella_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/attar-collection-capella-parfyum-5-ml-la_5ml/" data-product-link="prd_perfume_attar_capella_5ml" aria-label="Открыть Attar Collection Capella парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/attar-capella-5ml-card-front.jpg" alt="Attar Collection Capella парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/attar-collection-capella-parfyum-5-ml-la_5ml/" data-product-link="prd_perfume_attar_capella_5ml">
+                  <span class="product-brand-line">Attar Collection</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Capella парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Attar Collection Capella в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">800 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_attar_capella_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 776 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Attar Collection</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_attar_musk_kashmir_extract_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/attar-collection-musk-kashmir-extract-parfyum-5-ml-ct_5ml/" data-product-link="prd_perfume_attar_musk_kashmir_extract_5ml" aria-label="Открыть Attar Collection Musk Kashmir Extract парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/attar-musk-kashmir-extract-5ml-card-front.jpg" alt="Attar Collection Musk Kashmir Extract парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/attar-collection-musk-kashmir-extract-parfyum-5-ml-ct_5ml/" data-product-link="prd_perfume_attar_musk_kashmir_extract_5ml">
+                  <span class="product-brand-line">Attar Collection</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Musk Kashmir Extract парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Attar Collection Musk Kashmir Extract в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 200 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_attar_musk_kashmir_extract_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 164 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Attar Collection</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_attar_musk_kashmir_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/attar-collection-musk-kashmir-parfyum-5-ml-ir_5ml/" data-product-link="prd_perfume_attar_musk_kashmir_5ml" aria-label="Открыть Attar Collection Musk Kashmir парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/attar-musk-kashmir-5ml-card-front.jpg" alt="Attar Collection Musk Kashmir парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/attar-collection-musk-kashmir-parfyum-5-ml-ir_5ml/" data-product-link="prd_perfume_attar_musk_kashmir_5ml">
+                  <span class="product-brand-line">Attar Collection</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Musk Kashmir парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Attar Collection Musk Kashmir в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">800 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_attar_musk_kashmir_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 776 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Attar Collection</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_attar_second_skin_extract_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/attar-collection-second-skin-extract-parfyum-5-ml-ct_5ml/" data-product-link="prd_perfume_attar_second_skin_extract_5ml" aria-label="Открыть Attar Collection Second Skin Extract парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/attar-second-skin-extract-5ml-card-front.jpg" alt="Attar Collection Second Skin Extract парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/attar-collection-second-skin-extract-parfyum-5-ml-ct_5ml/" data-product-link="prd_perfume_attar_second_skin_extract_5ml">
+                  <span class="product-brand-line">Attar Collection</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Second Skin Extract парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Attar Collection Second Skin Extract в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 200 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_attar_second_skin_extract_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 164 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Attar Collection</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_attar_sierra_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/attar-collection-sierra-parfyum-5-ml-ra_5ml/" data-product-link="prd_perfume_attar_sierra_5ml" aria-label="Открыть Attar Collection Sierra парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/attar-sierra-5ml-card-front.jpg" alt="Attar Collection Sierra парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/attar-collection-sierra-parfyum-5-ml-ra_5ml/" data-product-link="prd_perfume_attar_sierra_5ml">
+                  <span class="product-brand-line">Attar Collection</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Sierra парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Attar Collection Sierra в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">800 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_attar_sierra_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 776 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Burberry</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_burberry_goddess_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/burberry-goddess-parfyum-5-ml-ss_5ml/" data-product-link="prd_perfume_burberry_goddess_5ml" aria-label="Открыть Burberry Goddess парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/burberry-goddess-5ml-card-front.jpg" alt="Burberry Goddess парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/burberry-goddess-parfyum-5-ml-ss_5ml/" data-product-link="prd_perfume_burberry_goddess_5ml">
+                  <span class="product-brand-line">Burberry</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Goddess парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Burberry Goddess в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">850 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_burberry_goddess_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 824 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Bybozo</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_bybozo_sea_breeze_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/bybozo-sea-breeze-parfyum-5-ml-ze_5ml/" data-product-link="prd_perfume_bybozo_sea_breeze_5ml" aria-label="Открыть Bybozo Sea Breeze парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/bybozo-sea-breeze-5ml-card-front-v2.jpg" alt="Bybozo Sea Breeze парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/bybozo-sea-breeze-parfyum-5-ml-ze_5ml/" data-product-link="prd_perfume_bybozo_sea_breeze_5ml">
+                  <span class="product-brand-line">Bybozo</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Sea Breeze парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Bybozo Sea Breeze в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">995 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_bybozo_sea_breeze_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 965 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chanel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chanel_chance_eau_fraiche_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chanel-chance-eau-fra-che-parfyum-5-ml-he_5ml/" data-product-link="prd_perfume_chanel_chance_eau_fraiche_5ml" aria-label="Открыть Chanel Chance Eau Fraîche парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chanel-chance-eau-fraiche-5ml-card-front.jpg" alt="Chanel Chance Eau Fraîche парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chanel-chance-eau-fra-che-parfyum-5-ml-he_5ml/" data-product-link="prd_perfume_chanel_chance_eau_fraiche_5ml">
+                  <span class="product-brand-line">Chanel</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Chance Eau Fraîche парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chanel Chance Eau Fraîche в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 100 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chanel_chance_eau_fraiche_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 067 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chanel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chanel_chance_eau_splendide_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chanel-chance-eau-splendide-parfyum-5-ml-de_5ml/" data-product-link="prd_perfume_chanel_chance_eau_splendide_5ml" aria-label="Открыть Chanel Chance Eau Splendide парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chanel-chance-eau-splendide-5ml-card-front.jpg" alt="Chanel Chance Eau Splendide парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chanel-chance-eau-splendide-parfyum-5-ml-de_5ml/" data-product-link="prd_perfume_chanel_chance_eau_splendide_5ml">
+                  <span class="product-brand-line">Chanel</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Chance Eau Splendide парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chanel Chance Eau Splendide в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 450 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chanel_chance_eau_splendide_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 406 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chanel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chanel_chance_eau_tendre_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chanel-chance-eau-tendre-parfyum-5-ml-re_5ml/" data-product-link="prd_perfume_chanel_chance_eau_tendre_5ml" aria-label="Открыть Chanel Chance Eau Tendre парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chanel-chance-eau-tendre-5ml-card-front.jpg" alt="Chanel Chance Eau Tendre парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chanel-chance-eau-tendre-parfyum-5-ml-re_5ml/" data-product-link="prd_perfume_chanel_chance_eau_tendre_5ml">
+                  <span class="product-brand-line">Chanel</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Chance Eau Tendre парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chanel Chance Eau Tendre в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 100 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chanel_chance_eau_tendre_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 067 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chanel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chanel_chance_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chanel-chance-parfyum-5-ml-ce_5ml/" data-product-link="prd_perfume_chanel_chance_5ml" aria-label="Открыть Chanel Chance парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chanel-chance-5ml-card-front-v2.jpg" alt="Chanel Chance парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chanel-chance-parfyum-5-ml-ce_5ml/" data-product-link="prd_perfume_chanel_chance_5ml">
+                  <span class="product-brand-line">Chanel</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Chance парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chanel Chance в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">895 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chanel_chance_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 868 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chanel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chanel_coco_mademoiselle_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chanel-coco-mademoiselle-parfyum-5-ml-le_5ml/" data-product-link="prd_perfume_chanel_coco_mademoiselle_5ml" aria-label="Открыть Chanel Coco Mademoiselle парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chanel-coco-mademoiselle-5ml-card-front.jpg" alt="Chanel Coco Mademoiselle парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chanel-coco-mademoiselle-parfyum-5-ml-le_5ml/" data-product-link="prd_perfume_chanel_coco_mademoiselle_5ml">
+                  <span class="product-brand-line">Chanel</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Coco Mademoiselle парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chanel Coco Mademoiselle в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 200 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chanel_coco_mademoiselle_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 164 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chloé</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chloe_cedrus_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chlo-cedrus-parfyum-5-ml-us_5ml/" data-product-link="prd_perfume_chloe_cedrus_5ml" aria-label="Открыть Chloé Cedrus парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chloe-cedrus-5ml-card-front.jpg" alt="Chloé Cedrus парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chlo-cedrus-parfyum-5-ml-us_5ml/" data-product-link="prd_perfume_chloe_cedrus_5ml">
+                  <span class="product-brand-line">Chloé</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Cedrus парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chloé Cedrus в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 200 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chloe_cedrus_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 164 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Giorgio Armani</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_giorgio_armani_acqua_di_gioia_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/giorgio-armani-acqua-di-gioia-parfyum-5-ml-ia_5ml/" data-product-link="prd_perfume_giorgio_armani_acqua_di_gioia_5ml" aria-label="Открыть Giorgio Armani Acqua di Gioia парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/giorgio-armani-acqua-di-gioia-5ml-card-front.jpg" alt="Giorgio Armani Acqua di Gioia парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/giorgio-armani-acqua-di-gioia-parfyum-5-ml-ia_5ml/" data-product-link="prd_perfume_giorgio_armani_acqua_di_gioia_5ml">
+                  <span class="product-brand-line">Giorgio Armani</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Acqua di Gioia парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Giorgio Armani Acqua di Gioia в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">850 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_giorgio_armani_acqua_di_gioia_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 824 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Le Labo</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_le_labo_another_13_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/le-labo-another-13-parfyum-5-ml-13_5ml/" data-product-link="prd_perfume_le_labo_another_13_5ml" aria-label="Открыть Le Labo Another 13 парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/le-labo-another-13-5ml-card-front-v2.jpg" alt="Le Labo Another 13 парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/le-labo-another-13-parfyum-5-ml-13_5ml/" data-product-link="prd_perfume_le_labo_another_13_5ml">
+                  <span class="product-brand-line">Le Labo</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Another 13 парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Le Labo Another 13 в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 245 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_le_labo_another_13_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 177 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Parfums de Marly</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_parfums_de_marly_delina_exclusif_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/parfums-de-marly-delina-exclusif-parfyum-5-ml-if_5ml/" data-product-link="prd_perfume_parfums_de_marly_delina_exclusif_5ml" aria-label="Открыть Parfums de Marly Delina Exclusif парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/parfums-de-marly-delina-exclusif-5ml-card-front.jpg" alt="Parfums de Marly Delina Exclusif парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/parfums-de-marly-delina-exclusif-parfyum-5-ml-if_5ml/" data-product-link="prd_perfume_parfums_de_marly_delina_exclusif_5ml">
+                  <span class="product-brand-line">Parfums de Marly</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Delina Exclusif парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Parfums de Marly Delina Exclusif в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">850 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_parfums_de_marly_delina_exclusif_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 824 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Versace</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_versace_versense_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/versace-versense-parfyum-5-ml-se_5ml/" data-product-link="prd_perfume_versace_versense_5ml" aria-label="Открыть Versace Versense парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/versace-versense-5ml-card-front.jpg" alt="Versace Versense парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/versace-versense-parfyum-5-ml-se_5ml/" data-product-link="prd_perfume_versace_versense_5ml">
+                  <span class="product-brand-line">Versace</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Versense парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Versace Versense в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">550 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_versace_versense_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 533 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Victoria&#x27;s Secret</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_victorias_secret_bombshell_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/victoria-s-secret-bombshell-parfyum-5-ml-ll_5ml/" data-product-link="prd_perfume_victorias_secret_bombshell_5ml" aria-label="Открыть Victoria&#x27;s Secret Bombshell парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/victorias-secret-bombshell-5ml-card-front.jpg" alt="Victoria&#x27;s Secret Bombshell парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/victoria-s-secret-bombshell-parfyum-5-ml-ll_5ml/" data-product-link="prd_perfume_victorias_secret_bombshell_5ml">
+                  <span class="product-brand-line">Victoria&#x27;s Secret</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Bombshell парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Victoria&#x27;s Secret Bombshell в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">800 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_victorias_secret_bombshell_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 776 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Yves Saint Laurent</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_yves_saint_laurent_libre_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/yves-saint-laurent-libre-parfyum-5-ml-re_5ml/" data-product-link="prd_perfume_yves_saint_laurent_libre_5ml" aria-label="Открыть Yves Saint Laurent Libre парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/yves-saint-laurent-libre-5ml-card-front.jpg" alt="Yves Saint Laurent Libre парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/yves-saint-laurent-libre-parfyum-5-ml-re_5ml/" data-product-link="prd_perfume_yves_saint_laurent_libre_5ml">
+                  <span class="product-brand-line">Yves Saint Laurent</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Libre парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Yves Saint Laurent Libre в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">950 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_yves_saint_laurent_libre_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 921 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+</div>
     </section>
     
     <nav class="bottom-page-actions" aria-label="Навигация по странице">
@@ -486,6 +1094,58 @@
       button.setAttribute("aria-pressed", String(active));
       button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
     }
+
+    // "Похожие товары" cards are full catalog tiles (same markup as the home
+    // page) with a real product id in data-favorite/data-add, unlike this
+    // page's own singular data-favorite/data-add-cart buttons (which always
+    // refer to `product`). Handled separately via delegation on .related-grid
+    // so the two mechanisms never collide.
+    function syncGridFavoriteButtons() {
+      const ids = new Set(readJson(favoritesKey, []));
+      document.querySelectorAll(".related-grid [data-favorite]").forEach((button) => {
+        const active = ids.has(button.dataset.favorite);
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+        button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
+      });
+    }
+
+    document.querySelector(".related-grid")?.addEventListener("click", (event) => {
+      const favoriteButton = event.target.closest("[data-favorite]");
+      const addButton = event.target.closest("[data-add]");
+      const productLink = event.target.closest("[data-product-link]");
+      if (favoriteButton) {
+        const id = favoriteButton.dataset.favorite;
+        const ids = new Set(readJson(favoritesKey, []));
+        if (ids.has(id)) ids.delete(id);
+        else ids.add(id);
+        localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
+        syncGridFavoriteButtons();
+        return;
+      }
+      if (addButton) {
+        const id = addButton.dataset.add;
+        const rows = readJson(cartKey, []);
+        const index = rows.findIndex((row) => row[0] === id);
+        if (index >= 0) rows[index][1] = Number(rows[index][1] || 0) + 1;
+        else rows.push([id, 1]);
+        localStorage.setItem(cartKey, JSON.stringify(rows));
+        updateCartCount();
+        addButton.classList.add("added");
+        const originalLabel = addButton.textContent;
+        window.setTimeout(() => {
+          addButton.classList.remove("added");
+          addButton.textContent = originalLabel;
+        }, 900);
+        addButton.textContent = "Добавлено";
+        return;
+      }
+      if (productLink) {
+        const ids = readJson(recentlyViewedKey, []);
+        const next = [productLink.dataset.productLink, ...ids.filter((id) => id !== productLink.dataset.productLink)].slice(0, 20);
+        localStorage.setItem(recentlyViewedKey, JSON.stringify(next));
+      }
+    });
 
     function setMenuOpen(isOpen) {
       if (!categoryMenu || !toggleMenuButton) return;
@@ -586,6 +1246,7 @@
     });
 
     updateFavoriteButton();
+    syncGridFavoriteButtons();
     updateCartCount();
     recordRecentlyViewed();
     renderMenu();

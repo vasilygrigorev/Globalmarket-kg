@@ -65,8 +65,8 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Товары из Германии",
-      "item": "https://globalmarket.kg/?category=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%D1%8B%20%D0%B8%D0%B7%20%D0%93%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D0%B8%D0%B8#catalog"
+      "name": "Европа",
+      "item": "https://globalmarket.kg/?category=%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D0%B0#catalog"
     },
     {
       "@type": "ListItem",
@@ -132,12 +132,11 @@
     .stock-note { padding: 14px; border-radius: 12px; background: #f1f1f1; color: #555; }
     .related { margin-top: 28px; }
     .related h2 { font-size: 26px; }
-    .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .related-card { overflow: hidden; background: #fff; border-radius: 14px; display: grid; grid-template-rows: auto 1fr auto; gap: 8px; }
-    .related-card { color: inherit; text-decoration: none; }
-    .related-card img { display: block; width: 100%; border-radius: 0; aspect-ratio: 1 / 1; object-fit: cover; }
-    .related-card strong { padding: 0 10px; font-size: 14px; }
-    .related-card span { padding: 0 10px 10px; font-weight: 800; }
+    /* Cards inside .related-grid reuse the shared .product-card rules from
+       styles.css (loaded above) so they render identically to home-page
+       catalog cards — same brand pill, like button, badges, price, add
+       button. Only the grid container itself is defined here. */
+    .related-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
     body.product-page .site-header { z-index: 20; }
     .site-footer { margin: 32px auto 0; padding: 28px 18px calc(32px + env(safe-area-inset-bottom)); color: #636366; background: #fff; border-top: 1px solid #e4e4e7; }
     .site-footer-inner { display: grid; gap: 18px; max-width: 980px; margin: 0 auto; }
@@ -256,12 +255,12 @@
         <p class="description">Капсулы Dash Color Frische 3in1 для цветного белья. Упаковка XXL Pack, 60 капсул.</p>
         <div class="price-box">
           <span>Ваша цена</span>
-          <strong class="price">2 295 <span class="som-sign">с</span></strong>
+          <strong><span class="price">2 295 <span class="som-sign">с</span></span></strong>
           <small>Скидка регистрации: 3%</small>
         </div>
         <dl class="specs">
           <div><dt>Бренд</dt><dd><a href="/brand/dash/">Dash (Германия)</a></dd></div>
-          <div><dt>Категория</dt><dd>Товары из Германии</dd></div>
+          <div><dt>Категория</dt><dd>Европа</dd></div>
           <div><dt>Тип товара</dt><dd>капсулы для стирки</dd></div>
           <div><dt>Единица</dt><dd>шт</dd></div>
           <div><dt>Подборка</dt><dd><a href="/collection/europe/">Европа</a></dd></div>
@@ -281,102 +280,566 @@
     <section class="related">
       <h2>Похожие товары</h2>
       <div class="related-grid">
-            <a class="related-card" href="/product/dalli-colorwaschmittel-gel-dlya-stirki-1-1-l-bdb383/">
-              <img src="/assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-card-front.jpg" alt="Dalli Colorwaschmittel гель для стирки 1,1 л" loading="lazy">
-              <strong>Dalli Colorwaschmittel гель для стирки 1,1 л</strong>
-              <span>690 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dalli-colorwaschmittel-gel-dlya-stirki-5-l-f553c4/">
-              <img src="/assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg" alt="Dalli Colorwaschmittel гель для стирки 5 л" loading="lazy">
-              <strong>Dalli Colorwaschmittel гель для стирки 5 л</strong>
-              <span>2 395 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dalli-colorwaschmittel-kapsuly-dlya-stirki-12-sht-86dfd8/">
-              <img src="/assets/products/dalli/dalli-colorwaschmittel-caps-12-card-front.jpg" alt="Dalli Colorwaschmittel капсулы для стирки 12 шт" loading="lazy">
-              <strong>Dalli Colorwaschmittel капсулы для стирки 12 шт</strong>
-              <span>650 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dalli-colorwaschmittel-stiralnyy-poroshok-6-kg-e36f02/">
-              <img src="/assets/products/dalli/dalli-colorwaschmittel-powder-6kg-card-front.jpg" alt="Dalli Colorwaschmittel стиральный порошок 6 кг" loading="lazy">
-              <strong>Dalli Colorwaschmittel стиральный порошок 6 кг</strong>
-              <span>2 595 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dalli-fein-color-gel-dlya-stirki-1-1-l-5f882c/">
-              <img src="/assets/products/dalli/dalli-fein-color-gel-1-1l-card-front.jpg" alt="Dalli Fein &amp; Color гель для стирки 1,1 л" loading="lazy">
-              <strong>Dalli Fein &amp; Color гель для стирки 1,1 л</strong>
-              <span>690 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dalli-sensitive-gel-dlya-stirki-1-1-l-44cf67/">
-              <img src="/assets/products/dalli/dalli-sensitive-gel-1-1l-card-front.jpg" alt="Dalli Sensitive гель для стирки 1,1 л" loading="lazy">
-              <strong>Dalli Sensitive гель для стирки 1,1 л</strong>
-              <span>690 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dalli-vollwaschmittel-frische-gl-ck-gel-dlya-stirki-1-1-l-8d3de6/">
-              <img src="/assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-card-front.jpg" alt="Dalli Vollwaschmittel Frische-glück гель для стирки 1,1 л" loading="lazy">
-              <strong>Dalli Vollwaschmittel Frische-glück гель для стирки 1,1 л</strong>
-              <span>690 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dalli-vollwaschmittel-kapsuly-dlya-stirki-12-sht-50c31a/">
-              <img src="/assets/products/dalli/dalli-vollwaschmittel-caps-12-card-front.jpg" alt="Dalli Vollwaschmittel капсулы для стирки 12 шт" loading="lazy">
-              <strong>Dalli Vollwaschmittel капсулы для стирки 12 шт</strong>
-              <span>650 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dalli-vollwaschmittel-stiralnyy-poroshok-6-kg-c928fc/">
-              <img src="/assets/products/dalli/dalli-vollwaschmittel-powder-6kg-card-front.jpg" alt="Dalli Vollwaschmittel стиральный порошок 6 кг" loading="lazy">
-              <strong>Dalli Vollwaschmittel стиральный порошок 6 кг</strong>
-              <span>2 595 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dash-active-frische-gel-dlya-stirki-1-1-l-1e7557/">
-              <img src="/assets/products/dash/dash-active-frische-gel-1-1l-card-front.jpg" alt="Dash Active Frische гель для стирки 1,1 л" loading="lazy">
-              <strong>Dash Active Frische гель для стирки 1,1 л</strong>
-              <span>690 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/">
-              <img src="/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg" alt="Dash Active Frische гель для стирки 3,6 л" loading="lazy">
-              <strong>Dash Active Frische гель для стирки 3,6 л</strong>
-              <span>2 090 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/">
-              <img src="/assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg" alt="Dash Alpen Frische капсулы для стирки 60 шт" loading="lazy">
-              <strong>Dash Alpen Frische капсулы для стирки 60 шт</strong>
-              <span>2 295 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-61a578/">
-              <img src="/assets/products/dash/dash-alpen-frische-caps-60-card-front.jpg" alt="Dash Alpen Frische капсулы для стирки 60 шт" loading="lazy">
-              <strong>Dash Alpen Frische капсулы для стирки 60 шт</strong>
-              <span>2 195 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dash-color-frische-gel-dlya-stirki-3-6-l-8a48e0/">
-              <img src="/assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg" alt="Dash Color Frische гель для стирки 3,6 л" loading="lazy">
-              <strong>Dash Color Frische гель для стирки 3,6 л</strong>
-              <span>2 090 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-0e3c6a/">
-              <img src="/assets/products/dash/dash-color-frische-caps-60-card-front.jpg" alt="Dash Color Frische капсулы для стирки 60 шт" loading="lazy">
-              <strong>Dash Color Frische капсулы для стирки 60 шт</strong>
-              <span>2 195 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="related-card" href="/product/dash-color-frische-stiralnyy-poroshok-1-17-kg-7b2cff/">
-              <img src="/assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg" alt="Dash Color Frische стиральный порошок 1,17 кг" loading="lazy">
-              <strong>Dash Color Frische стиральный порошок 1,17 кг</strong>
-              <span>690 <span class="som-sign">с</span></span>
-            </a>
-            </div>
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_539a47bdb383" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-colorwaschmittel-gel-dlya-stirki-1-1-l-bdb383/" data-product-link="prd_539a47bdb383" aria-label="Открыть Dalli Colorwaschmittel гель для стирки 1,1 л">
+                  <img class="product-image" src="/assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-card-front.jpg" alt="Dalli Colorwaschmittel гель для стирки 1,1 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-colorwaschmittel-gel-dlya-stirki-1-1-l-bdb383/" data-product-link="prd_539a47bdb383">
+                  <span class="product-brand-line">Dalli</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>1,1 л</span>
+                  </span>
+                  <span class="product-variant-line">Colorwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий гель Dalli Colorwaschmittel для стирки цветного белья. Объем 1,1 л.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">690 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_539a47bdb383" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 669 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_06e5daf553c4" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-colorwaschmittel-gel-dlya-stirki-5-l-f553c4/" data-product-link="prd_06e5daf553c4" aria-label="Открыть Dalli Colorwaschmittel гель для стирки 5 л">
+                  <img class="product-image" src="/assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg" alt="Dalli Colorwaschmittel гель для стирки 5 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-colorwaschmittel-gel-dlya-stirki-5-l-f553c4/" data-product-link="prd_06e5daf553c4">
+                  <span class="product-brand-line">Dalli</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>5 л</span>
+                  </span>
+                  <span class="product-variant-line">Colorwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий гель Dalli Colorwaschmittel для стирки цветного белья. Большой формат 5 л, рассчитан примерно на 100 стирок.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 395 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_06e5daf553c4" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 323 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_7ac05b86dfd8" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-colorwaschmittel-kapsuly-dlya-stirki-12-sht-86dfd8/" data-product-link="prd_7ac05b86dfd8" aria-label="Открыть Dalli Colorwaschmittel капсулы для стирки 12 шт">
+                  <img class="product-image" src="/assets/products/dalli/dalli-colorwaschmittel-caps-12-card-front.jpg" alt="Dalli Colorwaschmittel капсулы для стирки 12 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-colorwaschmittel-kapsuly-dlya-stirki-12-sht-86dfd8/" data-product-link="prd_7ac05b86dfd8">
+                  <span class="product-brand-line">Dalli</span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                    <span>12 шт</span>
+                  </span>
+                  <span class="product-variant-line">Colorwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Капсулы Dalli 3in1 Colorwaschmittel для стирки цветного белья. В упаковке 12 капсул.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">650 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_7ac05b86dfd8" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 630 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_4b7604e36f02" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-colorwaschmittel-stiralnyy-poroshok-6-kg-e36f02/" data-product-link="prd_4b7604e36f02" aria-label="Открыть Dalli Colorwaschmittel стиральный порошок 6 кг">
+                  <img class="product-image" src="/assets/products/dalli/dalli-colorwaschmittel-powder-6kg-card-front.jpg" alt="Dalli Colorwaschmittel стиральный порошок 6 кг" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-colorwaschmittel-stiralnyy-poroshok-6-kg-e36f02/" data-product-link="prd_4b7604e36f02">
+                  <span class="product-brand-line">Dalli</span>
+                  <span class="product-kind-line">
+                    <strong>стиральный порошок</strong>
+                    <span>6 кг</span>
+                  </span>
+                  <span class="product-variant-line">Colorwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий стиральный порошок Dalli Colorwaschmittel для цветного белья. Большая упаковка 6 кг, около 100 стирок.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 595 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_4b7604e36f02" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 517 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_50de525f882c" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-fein-color-gel-dlya-stirki-1-1-l-5f882c/" data-product-link="prd_50de525f882c" aria-label="Открыть Dalli Fein &amp; Color гель для стирки 1,1 л">
+                  <img class="product-image" src="/assets/products/dalli/dalli-fein-color-gel-1-1l-card-front.jpg" alt="Dalli Fein &amp; Color гель для стирки 1,1 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-fein-color-gel-dlya-stirki-1-1-l-5f882c/" data-product-link="prd_50de525f882c">
+                  <span class="product-brand-line">Dalli</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>1,1 л</span>
+                  </span>
+                  <span class="product-variant-line">Fein &amp; Color</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий гель Dalli Fein &amp; Color для деликатной стирки и цветного белья. Объем 1,1 л, около 20 стирок.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">690 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_50de525f882c" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 669 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_6c3fa744cf67" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-sensitive-gel-dlya-stirki-1-1-l-44cf67/" data-product-link="prd_6c3fa744cf67" aria-label="Открыть Dalli Sensitive гель для стирки 1,1 л">
+                  <img class="product-image" src="/assets/products/dalli/dalli-sensitive-gel-1-1l-card-front.jpg" alt="Dalli Sensitive гель для стирки 1,1 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-sensitive-gel-dlya-stirki-1-1-l-44cf67/" data-product-link="prd_6c3fa744cf67">
+                  <span class="product-brand-line">Dalli</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>1,1 л</span>
+                  </span>
+                  <span class="product-variant-line">Sensitive</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий гель Dalli Sensitive для бережной стирки. Объем 1,1 л, около 20 стирок.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">690 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_6c3fa744cf67" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 669 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_48a2b18d3de6" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-vollwaschmittel-frische-gl-ck-gel-dlya-stirki-1-1-l-8d3de6/" data-product-link="prd_48a2b18d3de6" aria-label="Открыть Dalli Vollwaschmittel Frische-glück гель для стирки 1,1 л">
+                  <img class="product-image" src="/assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-card-front.jpg" alt="Dalli Vollwaschmittel Frische-glück гель для стирки 1,1 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-vollwaschmittel-frische-gl-ck-gel-dlya-stirki-1-1-l-8d3de6/" data-product-link="prd_48a2b18d3de6">
+                  <span class="product-brand-line">Dalli</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>1,1 л</span>
+                  </span>
+                  <span class="product-variant-line">Vollwaschmittel Frische-glück</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий гель Dalli Vollwaschmittel Frische-glück для повседневной стирки. Объем 1,1 л, около 20 стирок.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">690 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_48a2b18d3de6" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 669 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_f027d150c31a" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-vollwaschmittel-kapsuly-dlya-stirki-12-sht-50c31a/" data-product-link="prd_f027d150c31a" aria-label="Открыть Dalli Vollwaschmittel капсулы для стирки 12 шт">
+                  <img class="product-image" src="/assets/products/dalli/dalli-vollwaschmittel-caps-12-card-front.jpg" alt="Dalli Vollwaschmittel капсулы для стирки 12 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-vollwaschmittel-kapsuly-dlya-stirki-12-sht-50c31a/" data-product-link="prd_f027d150c31a">
+                  <span class="product-brand-line">Dalli</span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                    <span>12 шт</span>
+                  </span>
+                  <span class="product-variant-line">Vollwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Капсулы Dalli 3in1 Vollwaschmittel для повседневной стирки. В упаковке 12 капсул.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">650 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_f027d150c31a" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 630 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_3e6fdfc928fc" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-vollwaschmittel-stiralnyy-poroshok-6-kg-c928fc/" data-product-link="prd_3e6fdfc928fc" aria-label="Открыть Dalli Vollwaschmittel стиральный порошок 6 кг">
+                  <img class="product-image" src="/assets/products/dalli/dalli-vollwaschmittel-powder-6kg-card-front.jpg" alt="Dalli Vollwaschmittel стиральный порошок 6 кг" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-vollwaschmittel-stiralnyy-poroshok-6-kg-c928fc/" data-product-link="prd_3e6fdfc928fc">
+                  <span class="product-brand-line">Dalli</span>
+                  <span class="product-kind-line">
+                    <strong>стиральный порошок</strong>
+                    <span>6 кг</span>
+                  </span>
+                  <span class="product-variant-line">Vollwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий стиральный порошок Dalli Vollwaschmittel для светлого и повседневного белья. Большая упаковка 6 кг, около 100 стирок.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 595 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_3e6fdfc928fc" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 517 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_ebd75b1e7557" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-active-frische-gel-dlya-stirki-1-1-l-1e7557/" data-product-link="prd_ebd75b1e7557" aria-label="Открыть Dash Active Frische гель для стирки 1,1 л">
+                  <img class="product-image" src="/assets/products/dash/dash-active-frische-gel-1-1l-card-front.jpg" alt="Dash Active Frische гель для стирки 1,1 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-active-frische-gel-dlya-stirki-1-1-l-1e7557/" data-product-link="prd_ebd75b1e7557">
+                  <span class="product-brand-line">Dash</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>1,1 л</span>
+                  </span>
+                  <span class="product-variant-line">Active Frische</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий гель Dash Active Frische для повседневной стирки. Объем 1,1 л, около 20 стирок.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">690 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_ebd75b1e7557" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 669 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_3fd39e5d8314" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/" data-product-link="prd_3fd39e5d8314" aria-label="Открыть Dash Active Frische гель для стирки 3,6 л">
+                  <img class="product-image" src="/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg" alt="Dash Active Frische гель для стирки 3,6 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/" data-product-link="prd_3fd39e5d8314">
+                  <span class="product-brand-line">Dash</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>3,6 л</span>
+                  </span>
+                  <span class="product-variant-line">Active Frische</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий гель Dash Active Frische для повседневной стирки. Объем 3,6 л, около 80 стирок.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 090 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_3fd39e5d8314" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 027 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_6d023c2652c2" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/" data-product-link="prd_6d023c2652c2" aria-label="Открыть Dash Alpen Frische капсулы для стирки 60 шт">
+                  <img class="product-image" src="/assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg" alt="Dash Alpen Frische капсулы для стирки 60 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/" data-product-link="prd_6d023c2652c2">
+                  <span class="product-brand-line">Dash</span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                    <span>60 шт</span>
+                  </span>
+                  <span class="product-variant-line">Alpen Frische</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Капсулы Dash Alpen Frische 3in1 для стирки. Упаковка XXL Pack, 60 капсул.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 295 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_6d023c2652c2" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 226 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_ac041a61a578" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-61a578/" data-product-link="prd_ac041a61a578" aria-label="Открыть Dash Alpen Frische капсулы для стирки 60 шт">
+                  <img class="product-image" src="/assets/products/dash/dash-alpen-frische-caps-60-card-front.jpg" alt="Dash Alpen Frische капсулы для стирки 60 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-61a578/" data-product-link="prd_ac041a61a578">
+                  <span class="product-brand-line">Dash</span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                    <span>60 шт</span>
+                  </span>
+                  <span class="product-variant-line">Alpen Frische</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Капсулы Dash Alpen Frische 3in1 для стирки. Пакет 60 капсул.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 195 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_ac041a61a578" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 129 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_96f0268a48e0" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-color-frische-gel-dlya-stirki-3-6-l-8a48e0/" data-product-link="prd_96f0268a48e0" aria-label="Открыть Dash Color Frische гель для стирки 3,6 л">
+                  <img class="product-image" src="/assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg" alt="Dash Color Frische гель для стирки 3,6 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-color-frische-gel-dlya-stirki-3-6-l-8a48e0/" data-product-link="prd_96f0268a48e0">
+                  <span class="product-brand-line">Dash</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>3,6 л</span>
+                  </span>
+                  <span class="product-variant-line">Color Frische</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий гель Dash Color Frische для цветного белья. Объем 3,6 л, около 80 стирок.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 090 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_96f0268a48e0" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 027 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_33a2990e3c6a" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-0e3c6a/" data-product-link="prd_33a2990e3c6a" aria-label="Открыть Dash Color Frische капсулы для стирки 60 шт">
+                  <img class="product-image" src="/assets/products/dash/dash-color-frische-caps-60-card-front.jpg" alt="Dash Color Frische капсулы для стирки 60 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-0e3c6a/" data-product-link="prd_33a2990e3c6a">
+                  <span class="product-brand-line">Dash</span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                    <span>60 шт</span>
+                  </span>
+                  <span class="product-variant-line">Color Frische</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Капсулы Dash Color Frische 3in1 для цветного белья. Пакет 60 капсул.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 195 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_33a2990e3c6a" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 129 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_6ac15f7b2cff" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-color-frische-stiralnyy-poroshok-1-17-kg-7b2cff/" data-product-link="prd_6ac15f7b2cff" aria-label="Открыть Dash Color Frische стиральный порошок 1,17 кг">
+                  <img class="product-image" src="/assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg" alt="Dash Color Frische стиральный порошок 1,17 кг" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-color-frische-stiralnyy-poroshok-1-17-kg-7b2cff/" data-product-link="prd_6ac15f7b2cff">
+                  <span class="product-brand-line">Dash</span>
+                  <span class="product-kind-line">
+                    <strong>стиральный порошок</strong>
+                    <span>1,17 кг</span>
+                  </span>
+                  <span class="product-variant-line">Color Frische</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкий стиральный порошок Dash Color Frische для цветного белья. Упаковка 1,17 кг, около 18 стирок.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">690 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_6ac15f7b2cff" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 669 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+</div>
     </section>
     
     <nav class="bottom-page-actions" aria-label="Навигация по странице">
@@ -470,6 +933,58 @@
       button.setAttribute("aria-pressed", String(active));
       button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
     }
+
+    // "Похожие товары" cards are full catalog tiles (same markup as the home
+    // page) with a real product id in data-favorite/data-add, unlike this
+    // page's own singular data-favorite/data-add-cart buttons (which always
+    // refer to `product`). Handled separately via delegation on .related-grid
+    // so the two mechanisms never collide.
+    function syncGridFavoriteButtons() {
+      const ids = new Set(readJson(favoritesKey, []));
+      document.querySelectorAll(".related-grid [data-favorite]").forEach((button) => {
+        const active = ids.has(button.dataset.favorite);
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+        button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
+      });
+    }
+
+    document.querySelector(".related-grid")?.addEventListener("click", (event) => {
+      const favoriteButton = event.target.closest("[data-favorite]");
+      const addButton = event.target.closest("[data-add]");
+      const productLink = event.target.closest("[data-product-link]");
+      if (favoriteButton) {
+        const id = favoriteButton.dataset.favorite;
+        const ids = new Set(readJson(favoritesKey, []));
+        if (ids.has(id)) ids.delete(id);
+        else ids.add(id);
+        localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
+        syncGridFavoriteButtons();
+        return;
+      }
+      if (addButton) {
+        const id = addButton.dataset.add;
+        const rows = readJson(cartKey, []);
+        const index = rows.findIndex((row) => row[0] === id);
+        if (index >= 0) rows[index][1] = Number(rows[index][1] || 0) + 1;
+        else rows.push([id, 1]);
+        localStorage.setItem(cartKey, JSON.stringify(rows));
+        updateCartCount();
+        addButton.classList.add("added");
+        const originalLabel = addButton.textContent;
+        window.setTimeout(() => {
+          addButton.classList.remove("added");
+          addButton.textContent = originalLabel;
+        }, 900);
+        addButton.textContent = "Добавлено";
+        return;
+      }
+      if (productLink) {
+        const ids = readJson(recentlyViewedKey, []);
+        const next = [productLink.dataset.productLink, ...ids.filter((id) => id !== productLink.dataset.productLink)].slice(0, 20);
+        localStorage.setItem(recentlyViewedKey, JSON.stringify(next));
+      }
+    });
 
     function setMenuOpen(isOpen) {
       if (!categoryMenu || !toggleMenuButton) return;
@@ -570,6 +1085,7 @@
     });
 
     updateFavoriteButton();
+    syncGridFavoriteButtons();
     updateCartCount();
     recordRecentlyViewed();
     renderMenu();

@@ -7,7 +7,7 @@
       "title": "Стирка и уход за бельем",
       "path": "/category/laundry/",
       "url": "https://globalmarket.kg/category/laundry/",
-      "count": 53,
+      "count": 55,
       "seoTerms": [
         "порошок",
         "стиральный порошок",
@@ -17,7 +17,7 @@
         "средство для стирки",
         "стиральная машина"
       ],
-      "shown": 15
+      "shown": 14
     },
     {
       "type": "category",
@@ -25,7 +25,7 @@
       "title": "Уборка и чистота",
       "path": "/category/home_cleaning/",
       "url": "https://globalmarket.kg/category/home_cleaning/",
-      "count": 9,
+      "count": 10,
       "seoTerms": [
         "средство для стекол",
         "окна",
@@ -45,7 +45,7 @@
       "title": "Уход за волосами",
       "path": "/category/hair/",
       "url": "https://globalmarket.kg/category/hair/",
-      "count": 104,
+      "count": 103,
       "seoTerms": [],
       "shown": 13
     },
@@ -55,7 +55,7 @@
       "title": "Уход за телом",
       "path": "/category/body/",
       "url": "https://globalmarket.kg/category/body/",
-      "count": 54,
+      "count": 85,
       "seoTerms": [
         "мыло",
         "жидкое мыло",
@@ -70,7 +70,7 @@
       "title": "Зубная гигиена",
       "path": "/category/oral/",
       "url": "https://globalmarket.kg/category/oral/",
-      "count": 18,
+      "count": 26,
       "seoTerms": [],
       "shown": 0
     },
@@ -80,7 +80,7 @@
       "title": "Дезодоранты",
       "path": "/category/deodorants/",
       "url": "https://globalmarket.kg/category/deodorants/",
-      "count": 55,
+      "count": 65,
       "seoTerms": [
         "дезодорант",
         "дезик",
@@ -96,7 +96,7 @@
       "title": "Бритье",
       "path": "/category/shaving/",
       "url": "https://globalmarket.kg/category/shaving/",
-      "count": 37,
+      "count": 57,
       "seoTerms": [
         "бритье",
         "товары для бритья",
@@ -110,7 +110,7 @@
         "пена для бритья",
         "гель для бритья"
       ],
-      "shown": 16
+      "shown": 13
     },
     {
       "type": "category",
@@ -153,7 +153,7 @@
       "title": "Европа",
       "path": "/collection/europe/",
       "url": "https://globalmarket.kg/collection/europe/",
-      "count": 34,
+      "count": 32,
       "seoTerms": [
         "Европа",
         "Германия",
@@ -169,13 +169,13 @@
       "title": "Gillette",
       "path": "/brand/gillette/",
       "url": "https://globalmarket.kg/brand/gillette/",
-      "count": 19,
+      "count": 33,
       "seoTerms": [
         "Gillette",
         "товары Gillette",
         "Gillette купить Бишкек"
       ],
-      "shown": 8
+      "shown": 6
     },
     {
       "type": "brand",
@@ -235,20 +235,6 @@
     },
     {
       "type": "brand",
-      "slug": "gillette-venus",
-      "title": "Gillette Venus",
-      "path": "/brand/gillette-venus/",
-      "url": "https://globalmarket.kg/brand/gillette-venus/",
-      "count": 9,
-      "seoTerms": [
-        "Gillette Venus",
-        "товары Gillette Venus",
-        "Gillette Venus купить Бишкек"
-      ],
-      "shown": 8
-    },
-    {
-      "type": "brand",
       "slug": "dash",
       "title": "Dash",
       "path": "/brand/dash/",
@@ -263,17 +249,17 @@
     },
     {
       "type": "brand",
-      "slug": "downy",
-      "title": "Downy",
-      "path": "/brand/downy/",
-      "url": "https://globalmarket.kg/brand/downy/",
+      "slug": "gillette-venus",
+      "title": "Gillette Venus",
+      "path": "/brand/gillette-venus/",
+      "url": "https://globalmarket.kg/brand/gillette-venus/",
       "count": 8,
       "seoTerms": [
-        "Downy",
-        "товары Downy",
-        "Downy купить Бишкек"
+        "Gillette Venus",
+        "товары Gillette Venus",
+        "Gillette Venus купить Бишкек"
       ],
-      "shown": 4
+      "shown": 7
     },
     {
       "type": "brand",
@@ -302,6 +288,20 @@
         "Herbal Essences купить Бишкек"
       ],
       "shown": 7
+    },
+    {
+      "type": "brand",
+      "slug": "downy",
+      "title": "Downy",
+      "path": "/brand/downy/",
+      "url": "https://globalmarket.kg/brand/downy/",
+      "count": 6,
+      "seoTerms": [
+        "Downy",
+        "товары Downy",
+        "Downy купить Бишкек"
+      ],
+      "shown": 3
     },
     {
       "type": "brand",

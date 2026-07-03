@@ -106,11 +106,11 @@
     .landing-copy p { margin: 0; color: #515154; font-size: 16px; line-height: 1.5; }
     .landing-terms { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .landing-terms span { display: inline-flex; min-height: 30px; align-items: center; padding: 0 10px; border: 1px solid #e2e2e7; border-radius: 999px; color: #3a3a3c; background: #f8f8f9; font-size: 14px; }
+    /* Cards inside .landing-grid reuse the shared .product-card rules from
+       styles.css (loaded above) so they render identically to home-page
+       catalog cards — same brand pill, like button, badges, price, add
+       button. Only the grid container itself is defined here. */
     .landing-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-    .landing-card { display: grid; gap: 9px; min-width: 0; padding: 10px; border-radius: 14px; color: inherit; background: #fff; text-decoration: none; }
-    .landing-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; }
-    .landing-card strong { font-size: 14px; line-height: 1.25; }
-    .landing-card span { font-size: 18px; font-weight: 850; }
     .landing-empty { grid-column: 1 / -1; padding: 18px; border-radius: 14px; background: #fff; color: #515154; }
     .landing-empty p { margin: 0 0 12px; font-size: 16px; line-height: 1.45; }
     .landing-empty a { color: #111; font-weight: 800; }
@@ -181,42 +181,216 @@
     </section>
     <section class="landing-grid" aria-label="Clear">
       
-            <a class="landing-card" href="/product/clear-anti-hairfall-shampun-600-ml-de072f/">
-              <img src="/assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg" alt="Clear Anti-Hairfall шампунь 600 мл" loading="lazy">
-              <strong>Clear Anti-Hairfall шампунь 600 мл</strong>
-              <span>795 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/clear-men-cool-sport-menthol-shampun-600-ml-3d35df/">
-              <img src="/assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png" alt="Clear Men Cool Sport Menthol шампунь 600 мл" loading="lazy">
-              <strong>Clear Men Cool Sport Menthol шампунь 600 мл</strong>
-              <span>795 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/clear-men-hair-fall-defence-coffee-shampun-600-ml-27b81e/">
-              <img src="/assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-card-front.png" alt="Clear Men Hair Fall Defence Coffee шампунь 600 мл" loading="lazy">
-              <strong>Clear Men Hair Fall Defence Coffee шампунь 600 мл</strong>
-              <span>795 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/clear-men-legend-by-cr7-shampun-600-ml-50f536/">
-              <img src="/assets/products/clear/clear-men-legend-cr7-600ml-card-front.png" alt="Clear Men Legend by CR7 шампунь 600 мл" loading="lazy">
-              <strong>Clear Men Legend by CR7 шампунь 600 мл</strong>
-              <span>795 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/clear-oil-control-shampun-1-l-3564b9/">
-              <img src="/assets/products/clear/clear-oil-control-1l-card-front.jpg" alt="Clear Oil Control шампунь 1 л" loading="lazy">
-              <strong>Clear Oil Control шампунь 1 л</strong>
-              <span>1 190 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/clear-soft-and-shiny-shampun-600-ml-ace1e1/">
-              <img src="/assets/products/clear/clear-soft-and-shiny-600ml-card-front.jpg" alt="Clear Soft and Shiny шампунь 600 мл" loading="lazy">
-              <strong>Clear Soft and Shiny шампунь 600 мл</strong>
-              <span>795 <span class="som-sign">с</span></span>
-            </a>
-            
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f4d5df; --tone-b: #b66f91">
+                <span class="placeholder-brand">Clear</span>
+                <button class="favorite-button" type="button" data-favorite="prd_516bdfde072f" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/clear-anti-hairfall-shampun-600-ml-de072f/" data-product-link="prd_516bdfde072f" aria-label="Открыть Clear Anti-Hairfall шампунь 600 мл">
+                  <img class="product-image" src="/assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg" alt="Clear Anti-Hairfall шампунь 600 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/clear-anti-hairfall-shampun-600-ml-de072f/" data-product-link="prd_516bdfde072f">
+                  <span class="product-brand-line">Clear</span>
+                  <span class="product-kind-line">
+                    <strong>шампунь</strong>
+                    <span>600 мл</span>
+                  </span>
+                  <span class="product-variant-line">Anti-Hairfall</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за волосами</span>
+                </div>
+                <p>Шампунь Clear Anti-Hairfall против перхоти, объём 600 мл. Scalp Care Shampoo с ginger root / корнем имбиря и 3 Zero Tech: dandruff, itch, grease.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">795 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_516bdfde072f" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 771 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f4d5df; --tone-b: #b66f91">
+                <span class="placeholder-brand">Clear</span>
+                <button class="favorite-button" type="button" data-favorite="prd_83037f3d35df" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/clear-men-cool-sport-menthol-shampun-600-ml-3d35df/" data-product-link="prd_83037f3d35df" aria-label="Открыть Clear Men Cool Sport Menthol шампунь 600 мл">
+                  <img class="product-image" src="/assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png" alt="Clear Men Cool Sport Menthol шампунь 600 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/clear-men-cool-sport-menthol-shampun-600-ml-3d35df/" data-product-link="prd_83037f3d35df">
+                  <span class="product-brand-line">Clear</span>
+                  <span class="product-kind-line">
+                    <strong>шампунь</strong>
+                    <span>600 мл</span>
+                  </span>
+                  <span class="product-variant-line">Men Cool Sport Menthol</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за волосами</span>
+                </div>
+                <p>Мужской шампунь Clear Men Cool Sport Menthol против перхоти, объём 600 мл. Формула с ментолом и заявленным 10x Deep Refreshing Effect для выраженного ощущения свежести. Штрихкод: 6221155120587.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">795 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_83037f3d35df" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 771 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f4d5df; --tone-b: #b66f91">
+                <span class="placeholder-brand">Clear</span>
+                <button class="favorite-button" type="button" data-favorite="prd_bfda1a27b81e" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/clear-men-hair-fall-defence-coffee-shampun-600-ml-27b81e/" data-product-link="prd_bfda1a27b81e" aria-label="Открыть Clear Men Hair Fall Defence Coffee шампунь 600 мл">
+                  <img class="product-image" src="/assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-card-front.png" alt="Clear Men Hair Fall Defence Coffee шампунь 600 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/clear-men-hair-fall-defence-coffee-shampun-600-ml-27b81e/" data-product-link="prd_bfda1a27b81e">
+                  <span class="product-brand-line">Clear</span>
+                  <span class="product-kind-line">
+                    <strong>шампунь</strong>
+                    <span>600 мл</span>
+                  </span>
+                  <span class="product-variant-line">Men Hair Fall Defence Coffee</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за волосами</span>
+                </div>
+                <p>Мужской шампунь Clear Men Hair Fall Defence Coffee против перхоти, объём 600 мл. На лицевой этикетке указано with Coffee Beans, на задней - Hair Fall Defence и 3 Zero Tech: dandruff, itch, grease. Штрихкод: 6221155088262.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">795 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_bfda1a27b81e" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 771 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f4d5df; --tone-b: #b66f91">
+                <span class="placeholder-brand">Clear</span>
+                <button class="favorite-button" type="button" data-favorite="prd_8d15b250f536" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/clear-men-legend-by-cr7-shampun-600-ml-50f536/" data-product-link="prd_8d15b250f536" aria-label="Открыть Clear Men Legend by CR7 шампунь 600 мл">
+                  <img class="product-image" src="/assets/products/clear/clear-men-legend-cr7-600ml-card-front.png" alt="Clear Men Legend by CR7 шампунь 600 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/clear-men-legend-by-cr7-shampun-600-ml-50f536/" data-product-link="prd_8d15b250f536">
+                  <span class="product-brand-line">Clear</span>
+                  <span class="product-kind-line">
+                    <strong>шампунь</strong>
+                    <span>600 мл</span>
+                  </span>
+                  <span class="product-variant-line">Men Legend by CR7</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за волосами</span>
+                </div>
+                <p>Мужской шампунь Clear Men Legend by CR7 против перхоти, объём 600 мл. На этикетке указана линейка Legend by CR7 и компонент natural sea salt / натуральная морская соль. Штрихкод: 6221155081546.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">795 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_8d15b250f536" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 771 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f4d5df; --tone-b: #b66f91">
+                <span class="placeholder-brand">Clear</span>
+                <button class="favorite-button" type="button" data-favorite="prd_4a32663564b9" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/clear-oil-control-shampun-1-l-3564b9/" data-product-link="prd_4a32663564b9" aria-label="Открыть Clear Oil Control шампунь 1 л">
+                  <img class="product-image" src="/assets/products/clear/clear-oil-control-1l-card-front.jpg" alt="Clear Oil Control шампунь 1 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/clear-oil-control-shampun-1-l-3564b9/" data-product-link="prd_4a32663564b9">
+                  <span class="product-brand-line">Clear</span>
+                  <span class="product-kind-line">
+                    <strong>шампунь</strong>
+                    <span>1 л</span>
+                  </span>
+                  <span class="product-variant-line">Oil Control</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за волосами</span>
+                </div>
+                <p>Шампунь Clear Oil Control против перхоти, объём 1 л. Формула для контроля жирности кожи головы с лаймовой свежестью, заявлена свежесть до 28 дней и комплекс 10x Super Vitamin.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 190 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_4a32663564b9" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 154 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f4d5df; --tone-b: #b66f91">
+                <span class="placeholder-brand">Clear</span>
+                <button class="favorite-button" type="button" data-favorite="prd_3922b6ace1e1" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/clear-soft-and-shiny-shampun-600-ml-ace1e1/" data-product-link="prd_3922b6ace1e1" aria-label="Открыть Clear Soft and Shiny шампунь 600 мл">
+                  <img class="product-image" src="/assets/products/clear/clear-soft-and-shiny-600ml-card-front.jpg" alt="Clear Soft and Shiny шампунь 600 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/clear-soft-and-shiny-shampun-600-ml-ace1e1/" data-product-link="prd_3922b6ace1e1">
+                  <span class="product-brand-line">Clear</span>
+                  <span class="product-kind-line">
+                    <strong>шампунь</strong>
+                    <span>600 мл</span>
+                  </span>
+                  <span class="product-variant-line">Soft and Shiny</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за волосами</span>
+                </div>
+                <p>Шампунь Clear Soft and Shiny против перхоти, объём 600 мл. Scalp Care Shampoo с silk proteins / протеинами шёлка и 3 Zero Tech: dandruff, itch, grease.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">795 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_3922b6ace1e1" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 771 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
     </section>
     <div class="landing-related-links">
         <section class="landing-link-section" aria-label="Разделы товаров">
@@ -226,12 +400,12 @@
         <strong>Уход за волосами</strong>
         <span>11 товаров</span>
       </a>
-    
+
       <a class="landing-link-card" href="/category/home_cleaning/">
         <strong>Уборка и чистота</strong>
         <span>2 товаров</span>
       </a>
-    </div>
+</div>
         </section>
         </div>
   </main>
@@ -250,5 +424,138 @@
     <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
   </div>
 </footer>
+  <script>
+    const cartKey = "globalMarketCartDraft";
+    const favoritesKey = "globalMarketFavorites";
+    const recentlyViewedKey = "globalMarketRecentlyViewed";
+    const categoryMenu = document.querySelector("#categoryMenu");
+    const toggleMenuButton = document.querySelector("#toggleMenu");
+    const smartHeader = document.querySelector("[data-smart-header]");
+
+    function readJson(key, fallback) {
+      try {
+        return JSON.parse(localStorage.getItem(key) || "null") ?? fallback;
+      } catch (_) {
+        return fallback;
+      }
+    }
+
+    function updateCartCount() {
+      const rows = readJson(cartKey, []);
+      const count = rows.reduce((sum, row) => sum + Number(row[1] || 0), 0);
+      document.querySelectorAll("[data-cart-count]").forEach((item) => {
+        item.textContent = String(count);
+      });
+    }
+
+    // Product tiles carry a real id in data-favorite/data-add (see
+    // scripts/generate_landing_pages.py product_tile_html()) — same contract
+    // as the home page's renderProducts() in app.js and the "Похожие товары"
+    // grid in scripts/generate_product_pages.py.
+    function syncGridFavoriteButtons() {
+      const ids = new Set(readJson(favoritesKey, []));
+      document.querySelectorAll(".landing-grid [data-favorite]").forEach((button) => {
+        const active = ids.has(button.dataset.favorite);
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+        button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
+      });
+    }
+
+    document.querySelector(".landing-grid")?.addEventListener("click", (event) => {
+      const favoriteButton = event.target.closest("[data-favorite]");
+      const addButton = event.target.closest("[data-add]");
+      const productLink = event.target.closest("[data-product-link]");
+      if (favoriteButton) {
+        const id = favoriteButton.dataset.favorite;
+        const ids = new Set(readJson(favoritesKey, []));
+        if (ids.has(id)) ids.delete(id);
+        else ids.add(id);
+        localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
+        syncGridFavoriteButtons();
+        return;
+      }
+      if (addButton) {
+        const id = addButton.dataset.add;
+        const rows = readJson(cartKey, []);
+        const index = rows.findIndex((row) => row[0] === id);
+        if (index >= 0) rows[index][1] = Number(rows[index][1] || 0) + 1;
+        else rows.push([id, 1]);
+        localStorage.setItem(cartKey, JSON.stringify(rows));
+        updateCartCount();
+        addButton.classList.add("added");
+        const originalLabel = addButton.textContent;
+        window.setTimeout(() => {
+          addButton.classList.remove("added");
+          addButton.textContent = originalLabel;
+        }, 900);
+        addButton.textContent = "Добавлено";
+        return;
+      }
+      if (productLink) {
+        const ids = readJson(recentlyViewedKey, []);
+        const next = [productLink.dataset.productLink, ...ids.filter((id) => id !== productLink.dataset.productLink)].slice(0, 20);
+        localStorage.setItem(recentlyViewedKey, JSON.stringify(next));
+      }
+    });
+
+    function setMenuOpen(isOpen) {
+      if (!categoryMenu || !toggleMenuButton) return;
+      categoryMenu.hidden = !isOpen;
+      toggleMenuButton.setAttribute("aria-expanded", String(isOpen));
+      if (isOpen) smartHeader?.classList.remove("header-hidden");
+    }
+
+    async function renderMenu() {
+      if (!categoryMenu) return;
+      try {
+        const response = await fetch("/data/site-config.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("config");
+        const config = await response.json();
+        const items = Array.isArray(config.menu) ? config.menu : [];
+        const catalogHref = (item) => {
+          if (item.href) return item.href;
+          const params = new URLSearchParams();
+          if (item.collection) params.set("collection", item.collection);
+          if (item.category) params.set("category", item.category);
+          if (item.query) params.set("query", item.query);
+          if (item.label) params.set("label", item.label);
+          const query = params.toString();
+          return query ? `/?${query}#catalog` : "/#catalog";
+        };
+        categoryMenu.innerHTML = items
+          .map((item) => {
+            const href = catalogHref(item);
+            return `<a href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
+          })
+          .join("");
+      } catch (_) {
+        categoryMenu.innerHTML = '<a href="/#catalog"><span class="category-menu-title">Каталог</span></a>';
+      }
+    }
+
+    toggleMenuButton?.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setMenuOpen(Boolean(categoryMenu?.hidden));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (categoryMenu?.hidden) return;
+      if (event.target.closest("#categoryMenu") || event.target.closest("#toggleMenu")) return;
+      setMenuOpen(false);
+    });
+
+    document.querySelector("#openCart")?.addEventListener("click", () => {
+      window.location.href = "/#checkout";
+    });
+
+    document.querySelector("#toggleSearch")?.addEventListener("click", () => {
+      window.location.href = "/#catalog";
+    });
+
+    syncGridFavoriteButtons();
+    updateCartCount();
+    renderMenu();
+  </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 92,
+  "count": 88,
   "pages": [
     {
       "id": "prd_c5f3a1dce862",
@@ -16,7 +16,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_165eafb70eb3",
@@ -31,7 +31,7 @@
       "retailPriceKgs": 1595,
       "image": "/assets/products/ariel/ariel-fast-dissolving-2-5kg-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_77e4cc05435f",
@@ -46,7 +46,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_f19e014e94cf",
@@ -61,7 +61,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-rose-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_9df7a08005ce",
@@ -76,7 +76,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-sensitive-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_1f9a545036b2",
@@ -91,7 +91,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-lavender-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_682eb8c7e746",
@@ -106,7 +106,7 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-rose-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_4180ad019486",
@@ -121,7 +121,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/downy/downy-concentrate-rose-garden-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_b0bf34e30459",
@@ -136,7 +136,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-white-flower-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_894a7f6437d0",
@@ -151,7 +151,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_0e763c9c3654",
@@ -166,7 +166,7 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_f0d3a0b9698b",
@@ -181,7 +181,7 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_71d2d567002b",
@@ -196,7 +196,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/downy/downy-concentrate-vanilla-musk-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_e9b3349a68aa",
@@ -211,22 +211,7 @@
       "retailPriceKgs": 595,
       "image": "/assets/products/downy/downy-fresh-valley-dew-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 14
-    },
-    {
-      "id": "prd_060cfccd22d3",
-      "slug": "downy-all-in-one-valley-dew-kontsentrat-1-l-cd22d3",
-      "path": "/product/downy-all-in-one-valley-dew-kontsentrat-1-l-cd22d3/",
-      "url": "https://globalmarket.kg/product/downy-all-in-one-valley-dew-kontsentrat-1-l-cd22d3/",
-      "title": "Downy All-in-One Valley Dew концентрат 1 л",
-      "brand": "Downy",
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
-      "collections": [],
-      "retailPriceKgs": 795,
-      "image": "/assets/products/downy/downy-concentrate-valley-dew-1l-card-front.png",
-      "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 13
     },
     {
       "id": "prd_9174d6118ed3",
@@ -244,36 +229,6 @@
       "relatedCount": 4
     },
     {
-      "id": "prd_8d15b250f536",
-      "slug": "clear-men-legend-by-cr7-shampun-600-ml-50f536",
-      "path": "/product/clear-men-legend-by-cr7-shampun-600-ml-50f536/",
-      "url": "https://globalmarket.kg/product/clear-men-legend-by-cr7-shampun-600-ml-50f536/",
-      "title": "Clear Men Legend by CR7 шампунь 600 мл",
-      "brand": "Clear",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 795,
-      "image": "/assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
-      "imageCount": 3,
-      "relatedCount": 12
-    },
-    {
-      "id": "prd_516bdfde072f",
-      "slug": "clear-anti-hairfall-shampun-600-ml-de072f",
-      "path": "/product/clear-anti-hairfall-shampun-600-ml-de072f/",
-      "url": "https://globalmarket.kg/product/clear-anti-hairfall-shampun-600-ml-de072f/",
-      "title": "Clear Anti-Hairfall шампунь 600 мл",
-      "brand": "Clear",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 795,
-      "image": "/assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 12
-    },
-    {
       "id": "prd_160ca842c98e",
       "slug": "herbal-essences-hello-hydration-shampun-400-ml-42c98e",
       "path": "/product/herbal-essences-hello-hydration-shampun-400-ml-42c98e/",
@@ -289,17 +244,17 @@
       "relatedCount": 12
     },
     {
-      "id": "prd_83037f3d35df",
-      "slug": "clear-men-cool-sport-menthol-shampun-600-ml-3d35df",
-      "path": "/product/clear-men-cool-sport-menthol-shampun-600-ml-3d35df/",
-      "url": "https://globalmarket.kg/product/clear-men-cool-sport-menthol-shampun-600-ml-3d35df/",
-      "title": "Clear Men Cool Sport Menthol шампунь 600 мл",
+      "id": "prd_8d15b250f536",
+      "slug": "clear-men-legend-by-cr7-shampun-600-ml-50f536",
+      "path": "/product/clear-men-legend-by-cr7-shampun-600-ml-50f536/",
+      "url": "https://globalmarket.kg/product/clear-men-legend-by-cr7-shampun-600-ml-50f536/",
+      "title": "Clear Men Legend by CR7 шампунь 600 мл",
       "brand": "Clear",
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
       "retailPriceKgs": 795,
-      "image": "/assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png",
+      "image": "/assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
       "imageCount": 3,
       "relatedCount": 12
     },
@@ -315,36 +270,6 @@
       "collections": [],
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 12
-    },
-    {
-      "id": "prd_4a32663564b9",
-      "slug": "clear-oil-control-shampun-1-l-3564b9",
-      "path": "/product/clear-oil-control-shampun-1-l-3564b9/",
-      "url": "https://globalmarket.kg/product/clear-oil-control-shampun-1-l-3564b9/",
-      "title": "Clear Oil Control шампунь 1 л",
-      "brand": "Clear",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 1190,
-      "image": "/assets/products/clear/clear-oil-control-1l-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 12
-    },
-    {
-      "id": "prd_bfda1a27b81e",
-      "slug": "clear-men-hair-fall-defence-coffee-shampun-600-ml-27b81e",
-      "path": "/product/clear-men-hair-fall-defence-coffee-shampun-600-ml-27b81e/",
-      "url": "https://globalmarket.kg/product/clear-men-hair-fall-defence-coffee-shampun-600-ml-27b81e/",
-      "title": "Clear Men Hair Fall Defence Coffee шампунь 600 мл",
-      "brand": "Clear",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 795,
-      "image": "/assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-card-front.png",
       "imageCount": 3,
       "relatedCount": 12
     },
@@ -375,21 +300,6 @@
       "collections": [],
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 12
-    },
-    {
-      "id": "prd_3922b6ace1e1",
-      "slug": "clear-soft-and-shiny-shampun-600-ml-ace1e1",
-      "path": "/product/clear-soft-and-shiny-shampun-600-ml-ace1e1/",
-      "url": "https://globalmarket.kg/product/clear-soft-and-shiny-shampun-600-ml-ace1e1/",
-      "title": "Clear Soft and Shiny шампунь 600 мл",
-      "brand": "Clear",
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "retailPriceKgs": 795,
-      "image": "/assets/products/clear/clear-soft-and-shiny-600ml-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 12
     },
@@ -435,6 +345,81 @@
       "collections": [],
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_516bdfde072f",
+      "slug": "clear-anti-hairfall-shampun-600-ml-de072f",
+      "path": "/product/clear-anti-hairfall-shampun-600-ml-de072f/",
+      "url": "https://globalmarket.kg/product/clear-anti-hairfall-shampun-600-ml-de072f/",
+      "title": "Clear Anti-Hairfall шампунь 600 мл",
+      "brand": "Clear",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 795,
+      "image": "/assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_83037f3d35df",
+      "slug": "clear-men-cool-sport-menthol-shampun-600-ml-3d35df",
+      "path": "/product/clear-men-cool-sport-menthol-shampun-600-ml-3d35df/",
+      "url": "https://globalmarket.kg/product/clear-men-cool-sport-menthol-shampun-600-ml-3d35df/",
+      "title": "Clear Men Cool Sport Menthol шампунь 600 мл",
+      "brand": "Clear",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 795,
+      "image": "/assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png",
+      "imageCount": 3,
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_bfda1a27b81e",
+      "slug": "clear-men-hair-fall-defence-coffee-shampun-600-ml-27b81e",
+      "path": "/product/clear-men-hair-fall-defence-coffee-shampun-600-ml-27b81e/",
+      "url": "https://globalmarket.kg/product/clear-men-hair-fall-defence-coffee-shampun-600-ml-27b81e/",
+      "title": "Clear Men Hair Fall Defence Coffee шампунь 600 мл",
+      "brand": "Clear",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 795,
+      "image": "/assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-card-front.png",
+      "imageCount": 3,
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_3922b6ace1e1",
+      "slug": "clear-soft-and-shiny-shampun-600-ml-ace1e1",
+      "path": "/product/clear-soft-and-shiny-shampun-600-ml-ace1e1/",
+      "url": "https://globalmarket.kg/product/clear-soft-and-shiny-shampun-600-ml-ace1e1/",
+      "title": "Clear Soft and Shiny шампунь 600 мл",
+      "brand": "Clear",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 795,
+      "image": "/assets/products/clear/clear-soft-and-shiny-600ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_4a32663564b9",
+      "slug": "clear-oil-control-shampun-1-l-3564b9",
+      "path": "/product/clear-oil-control-shampun-1-l-3564b9/",
+      "url": "https://globalmarket.kg/product/clear-oil-control-shampun-1-l-3564b9/",
+      "title": "Clear Oil Control шампунь 1 л",
+      "brand": "Clear",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 1190,
+      "image": "/assets/products/clear/clear-oil-control-1l-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 12
     },
@@ -571,7 +556,37 @@
       "retailPriceKgs": 2490,
       "image": "/assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 15
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_e166f2ec9c56",
+      "slug": "gillette-moisturising-gel-dlya-britya-200-ml-ec9c56",
+      "path": "/product/gillette-moisturising-gel-dlya-britya-200-ml-ec9c56/",
+      "url": "https://globalmarket.kg/product/gillette-moisturising-gel-dlya-britya-200-ml-ec9c56/",
+      "title": "Gillette Moisturising гель для бритья 200 мл",
+      "brand": "Gillette",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 400,
+      "image": "/assets/products/gillette/gillette-moisturising-shave-gel-200ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_debb27afb337",
+      "slug": "gillette-venus-smooth-smennye-kassety-4-sht-afb337",
+      "path": "/product/gillette-venus-smooth-smennye-kassety-4-sht-afb337/",
+      "url": "https://globalmarket.kg/product/gillette-venus-smooth-smennye-kassety-4-sht-afb337/",
+      "title": "Gillette Venus Smooth сменные кассеты 4 шт",
+      "brand": "Gillette Venus",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
     },
     {
       "id": "prd_477c3cbc2534",
@@ -586,52 +601,37 @@
       "retailPriceKgs": 230,
       "image": "/assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 15
+      "relatedCount": 12
     },
     {
-      "id": "prd_7de0af90808d",
-      "slug": "gillette-blue-pivot-odnorazovye-stanki-5-sht-90808d",
-      "path": "/product/gillette-blue-pivot-odnorazovye-stanki-5-sht-90808d/",
-      "url": "https://globalmarket.kg/product/gillette-blue-pivot-odnorazovye-stanki-5-sht-90808d/",
-      "title": "Gillette Blue Pivot одноразовые станки 5 шт",
+      "id": "prd_26f86cee34e8",
+      "slug": "gillette-sensitive-pena-dlya-britya-200-ml-ee34e8",
+      "path": "/product/gillette-sensitive-pena-dlya-britya-200-ml-ee34e8/",
+      "url": "https://globalmarket.kg/product/gillette-sensitive-pena-dlya-britya-200-ml-ee34e8/",
+      "title": "Gillette Sensitive пена для бритья 200 мл",
       "brand": "Gillette",
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 250,
-      "image": "/assets/products/gillette/gillette-blue-pivot-5-raw-card-front.jpg",
+      "retailPriceKgs": 350,
+      "image": "/assets/products/gillette/gillette-foam-sensitive-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 15
+      "relatedCount": 12
     },
     {
-      "id": "prd_e166f2ec9c56",
-      "slug": "gillette-moisturising-gel-dlya-britya-200-ml-ec9c56",
-      "path": "/product/gillette-moisturising-gel-dlya-britya-200-ml-ec9c56/",
-      "url": "https://globalmarket.kg/product/gillette-moisturising-gel-dlya-britya-200-ml-ec9c56/",
-      "title": "Gillette Moisturising гель для бритья 200 мл",
+      "id": "prd_bd1e6c3316c4",
+      "slug": "gillette-regular-pena-dlya-britya-200-ml-3316c4",
+      "path": "/product/gillette-regular-pena-dlya-britya-200-ml-3316c4/",
+      "url": "https://globalmarket.kg/product/gillette-regular-pena-dlya-britya-200-ml-3316c4/",
+      "title": "Gillette Regular пена для бритья 200 мл",
       "brand": "Gillette",
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 395,
-      "image": "/assets/products/gillette/gillette-moisturising-shave-gel-200ml-card-front.jpg",
+      "retailPriceKgs": 350,
+      "image": "/assets/products/gillette/gillette-foam-original-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 15
-    },
-    {
-      "id": "prd_debb27afb337",
-      "slug": "gillette-venus-smooth-smennye-kassety-4-sht-afb337",
-      "path": "/product/gillette-venus-smooth-smennye-kassety-4-sht-afb337/",
-      "url": "https://globalmarket.kg/product/gillette-venus-smooth-smennye-kassety-4-sht-afb337/",
-      "title": "Gillette Venus Smooth сменные кассеты 4 шт",
-      "brand": "Gillette Venus",
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "retailPriceKgs": 850,
-      "image": "/assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 15
+      "relatedCount": 12
     },
     {
       "id": "prd_e993df33c857",
@@ -646,22 +646,7 @@
       "retailPriceKgs": 890,
       "image": "/assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 15
-    },
-    {
-      "id": "prd_45a4eda764f6",
-      "slug": "gillette-venus-smooth-smennye-kassety-8-sht-a764f6",
-      "path": "/product/gillette-venus-smooth-smennye-kassety-8-sht-a764f6/",
-      "url": "https://globalmarket.kg/product/gillette-venus-smooth-smennye-kassety-8-sht-a764f6/",
-      "title": "Gillette Venus Smooth сменные кассеты 8 шт",
-      "brand": "Gillette Venus",
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "retailPriceKgs": 1595,
-      "image": "/assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 15
+      "relatedCount": 12
     },
     {
       "id": "prd_0fffb16fcaee",
@@ -676,7 +661,22 @@
       "retailPriceKgs": 250,
       "image": "/assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 15
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_45a4eda764f6",
+      "slug": "gillette-venus-smooth-smennye-kassety-8-sht-a764f6",
+      "path": "/product/gillette-venus-smooth-smennye-kassety-8-sht-a764f6/",
+      "url": "https://globalmarket.kg/product/gillette-venus-smooth-smennye-kassety-8-sht-a764f6/",
+      "title": "Gillette Venus Smooth сменные кассеты 8 шт",
+      "brand": "Gillette Venus",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 1595,
+      "image": "/assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
     },
     {
       "id": "prd_94f09d0e25fc",
@@ -691,7 +691,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 15
+      "relatedCount": 12
     },
     {
       "id": "prd_08168d08df30",
@@ -706,22 +706,7 @@
       "retailPriceKgs": 590,
       "image": "/assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 15
-    },
-    {
-      "id": "prd_a91e8f943ffc",
-      "slug": "gillette-blue3-odnorazovye-stanki-8-sht-943ffc",
-      "path": "/product/gillette-blue3-odnorazovye-stanki-8-sht-943ffc/",
-      "url": "https://globalmarket.kg/product/gillette-blue3-odnorazovye-stanki-8-sht-943ffc/",
-      "title": "Gillette Blue3 одноразовые станки 8 шт",
-      "brand": "Gillette",
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "retailPriceKgs": 650,
-      "image": "/assets/products/gillette/gillette-blue3-8-raw-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 15
+      "relatedCount": 12
     },
     {
       "id": "prd_cbc7943d5965",
@@ -736,52 +721,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 15
-    },
-    {
-      "id": "prd_26f86cee34e8",
-      "slug": "gillette-sensitive-pena-dlya-britya-200-ml-ee34e8",
-      "path": "/product/gillette-sensitive-pena-dlya-britya-200-ml-ee34e8/",
-      "url": "https://globalmarket.kg/product/gillette-sensitive-pena-dlya-britya-200-ml-ee34e8/",
-      "title": "Gillette Sensitive пена для бритья 200 мл",
-      "brand": "Gillette",
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "retailPriceKgs": 295,
-      "image": "/assets/products/gillette/gillette-foam-sensitive-200ml-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 15
-    },
-    {
-      "id": "prd_13a9f6cc2aa7",
-      "slug": "gillette-venus-comfortglide-stanki-2-sht-cc2aa7",
-      "path": "/product/gillette-venus-comfortglide-stanki-2-sht-cc2aa7/",
-      "url": "https://globalmarket.kg/product/gillette-venus-comfortglide-stanki-2-sht-cc2aa7/",
-      "title": "Gillette Venus Comfortglide станки 2 шт",
-      "brand": "Gillette Venus",
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "retailPriceKgs": 890,
-      "image": "/assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 15
-    },
-    {
-      "id": "prd_bd1e6c3316c4",
-      "slug": "gillette-regular-pena-dlya-britya-200-ml-3316c4",
-      "path": "/product/gillette-regular-pena-dlya-britya-200-ml-3316c4/",
-      "url": "https://globalmarket.kg/product/gillette-regular-pena-dlya-britya-200-ml-3316c4/",
-      "title": "Gillette Regular пена для бритья 200 мл",
-      "brand": "Gillette",
-      "category": "Бритье",
-      "categoryId": "shaving",
-      "collections": [],
-      "retailPriceKgs": 295,
-      "image": "/assets/products/gillette/gillette-foam-original-200ml-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 15
+      "relatedCount": 12
     },
     {
       "id": "prd_b26c0045dd47",
@@ -796,7 +736,7 @@
       "retailPriceKgs": 650,
       "image": "/assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 15
+      "relatedCount": 12
     },
     {
       "id": "prd_3e6fdfc928fc",
@@ -805,7 +745,7 @@
       "url": "https://globalmarket.kg/product/dalli-vollwaschmittel-stiralnyy-poroshok-6-kg-c928fc/",
       "title": "Dalli Vollwaschmittel стиральный порошок 6 кг",
       "brand": "Dalli",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -822,7 +762,7 @@
       "url": "https://globalmarket.kg/product/dalli-colorwaschmittel-stiralnyy-poroshok-6-kg-e36f02/",
       "title": "Dalli Colorwaschmittel стиральный порошок 6 кг",
       "brand": "Dalli",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -839,7 +779,7 @@
       "url": "https://globalmarket.kg/product/dalli-colorwaschmittel-gel-dlya-stirki-5-l-f553c4/",
       "title": "Dalli Colorwaschmittel гель для стирки 5 л",
       "brand": "Dalli",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -856,7 +796,7 @@
       "url": "https://globalmarket.kg/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-f93b3f/",
       "title": "Dash Color Frische капсулы для стирки 60 шт",
       "brand": "Dash",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -867,30 +807,13 @@
       "relatedCount": 16
     },
     {
-      "id": "prd_6d023c2652c2",
-      "slug": "dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2",
-      "path": "/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/",
-      "url": "https://globalmarket.kg/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/",
-      "title": "Dash Alpen Frische капсулы для стирки 60 шт",
-      "brand": "Dash",
-      "category": "Товары из Германии",
-      "categoryId": "germany",
-      "collections": [
-        "europe"
-      ],
-      "retailPriceKgs": 2295,
-      "image": "/assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 16
-    },
-    {
       "id": "prd_6ac15f7b2cff",
       "slug": "dash-color-frische-stiralnyy-poroshok-1-17-kg-7b2cff",
       "path": "/product/dash-color-frische-stiralnyy-poroshok-1-17-kg-7b2cff/",
       "url": "https://globalmarket.kg/product/dash-color-frische-stiralnyy-poroshok-1-17-kg-7b2cff/",
       "title": "Dash Color Frische стиральный порошок 1,17 кг",
       "brand": "Dash",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -901,13 +824,30 @@
       "relatedCount": 16
     },
     {
+      "id": "prd_6d023c2652c2",
+      "slug": "dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2",
+      "path": "/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/",
+      "url": "https://globalmarket.kg/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/",
+      "title": "Dash Alpen Frische капсулы для стирки 60 шт",
+      "brand": "Dash",
+      "category": "Европа",
+      "categoryId": "germany",
+      "collections": [
+        "europe"
+      ],
+      "retailPriceKgs": 2295,
+      "image": "/assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 16
+    },
+    {
       "id": "prd_ac041a61a578",
       "slug": "dash-alpen-frische-kapsuly-dlya-stirki-60-sht-61a578",
       "path": "/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-61a578/",
       "url": "https://globalmarket.kg/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-61a578/",
       "title": "Dash Alpen Frische капсулы для стирки 60 шт",
       "brand": "Dash",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -924,7 +864,7 @@
       "url": "https://globalmarket.kg/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-0e3c6a/",
       "title": "Dash Color Frische капсулы для стирки 60 шт",
       "brand": "Dash",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -935,30 +875,13 @@
       "relatedCount": 16
     },
     {
-      "id": "prd_3fd39e5d8314",
-      "slug": "dash-active-frische-gel-dlya-stirki-3-6-l-5d8314",
-      "path": "/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/",
-      "url": "https://globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/",
-      "title": "Dash Active Frische гель для стирки 3,6 л",
-      "brand": "Dash",
-      "category": "Товары из Германии",
-      "categoryId": "germany",
-      "collections": [
-        "europe"
-      ],
-      "retailPriceKgs": 2090,
-      "image": "/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg",
-      "imageCount": 3,
-      "relatedCount": 16
-    },
-    {
       "id": "prd_f027d150c31a",
       "slug": "dalli-vollwaschmittel-kapsuly-dlya-stirki-12-sht-50c31a",
       "path": "/product/dalli-vollwaschmittel-kapsuly-dlya-stirki-12-sht-50c31a/",
       "url": "https://globalmarket.kg/product/dalli-vollwaschmittel-kapsuly-dlya-stirki-12-sht-50c31a/",
       "title": "Dalli Vollwaschmittel капсулы для стирки 12 шт",
       "brand": "Dalli",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -975,7 +898,7 @@
       "url": "https://globalmarket.kg/product/dalli-colorwaschmittel-kapsuly-dlya-stirki-12-sht-86dfd8/",
       "title": "Dalli Colorwaschmittel капсулы для стирки 12 шт",
       "brand": "Dalli",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -986,13 +909,30 @@
       "relatedCount": 16
     },
     {
+      "id": "prd_3fd39e5d8314",
+      "slug": "dash-active-frische-gel-dlya-stirki-3-6-l-5d8314",
+      "path": "/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/",
+      "url": "https://globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/",
+      "title": "Dash Active Frische гель для стирки 3,6 л",
+      "brand": "Dash",
+      "category": "Европа",
+      "categoryId": "germany",
+      "collections": [
+        "europe"
+      ],
+      "retailPriceKgs": 2090,
+      "image": "/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 16
+    },
+    {
       "id": "prd_96f0268a48e0",
       "slug": "dash-color-frische-gel-dlya-stirki-3-6-l-8a48e0",
       "path": "/product/dash-color-frische-gel-dlya-stirki-3-6-l-8a48e0/",
       "url": "https://globalmarket.kg/product/dash-color-frische-gel-dlya-stirki-3-6-l-8a48e0/",
       "title": "Dash Color Frische гель для стирки 3,6 л",
       "brand": "Dash",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -1009,7 +949,7 @@
       "url": "https://globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-1-1-l-1e7557/",
       "title": "Dash Active Frische гель для стирки 1,1 л",
       "brand": "Dash",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -1026,7 +966,7 @@
       "url": "https://globalmarket.kg/product/dalli-fein-color-gel-dlya-stirki-1-1-l-5f882c/",
       "title": "Dalli Fein & Color гель для стирки 1,1 л",
       "brand": "Dalli",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -1043,7 +983,7 @@
       "url": "https://globalmarket.kg/product/dalli-sensitive-gel-dlya-stirki-1-1-l-44cf67/",
       "title": "Dalli Sensitive гель для стирки 1,1 л",
       "brand": "Dalli",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -1060,7 +1000,7 @@
       "url": "https://globalmarket.kg/product/dalli-vollwaschmittel-frische-gl-ck-gel-dlya-stirki-1-1-l-8d3de6/",
       "title": "Dalli Vollwaschmittel Frische-glück гель для стирки 1,1 л",
       "brand": "Dalli",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"
@@ -1077,7 +1017,7 @@
       "url": "https://globalmarket.kg/product/dalli-colorwaschmittel-gel-dlya-stirki-1-1-l-bdb383/",
       "title": "Dalli Colorwaschmittel гель для стирки 1,1 л",
       "brand": "Dalli",
-      "category": "Товары из Германии",
+      "category": "Европа",
       "categoryId": "germany",
       "collections": [
         "europe"

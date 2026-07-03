@@ -100,11 +100,11 @@
     .landing-copy p { margin: 0; color: #515154; font-size: 16px; line-height: 1.5; }
     .landing-terms { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .landing-terms span { display: inline-flex; min-height: 30px; align-items: center; padding: 0 10px; border: 1px solid #e2e2e7; border-radius: 999px; color: #3a3a3c; background: #f8f8f9; font-size: 14px; }
+    /* Cards inside .landing-grid reuse the shared .product-card rules from
+       styles.css (loaded above) so they render identically to home-page
+       catalog cards — same brand pill, like button, badges, price, add
+       button. Only the grid container itself is defined here. */
     .landing-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-    .landing-card { display: grid; gap: 9px; min-width: 0; padding: 10px; border-radius: 14px; color: inherit; background: #fff; text-decoration: none; }
-    .landing-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; }
-    .landing-card strong { font-size: 14px; line-height: 1.25; }
-    .landing-card span { font-size: 18px; font-weight: 850; }
     .landing-empty { grid-column: 1 / -1; padding: 18px; border-radius: 14px; background: #fff; color: #515154; }
     .landing-empty p { margin: 0 0 12px; font-size: 16px; line-height: 1.45; }
     .landing-empty a { color: #111; font-weight: 800; }
@@ -175,36 +175,181 @@
     </section>
     <section class="landing-grid" aria-label="Chanel">
       
-            <a class="landing-card" href="/product/chanel-chance-eau-fra-che-parfyum-5-ml-he_5ml/">
-              <img src="/assets/products/perfume/chanel-chance-eau-fraiche-5ml-card-front.jpg" alt="Chanel Chance Eau Fraîche парфюм 5 мл" loading="lazy">
-              <strong>Chanel Chance Eau Fraîche парфюм 5 мл</strong>
-              <span>1 100 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/chanel-chance-eau-splendide-parfyum-5-ml-de_5ml/">
-              <img src="/assets/products/perfume/chanel-chance-eau-splendide-5ml-card-front.jpg" alt="Chanel Chance Eau Splendide парфюм 5 мл" loading="lazy">
-              <strong>Chanel Chance Eau Splendide парфюм 5 мл</strong>
-              <span>1 450 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/chanel-chance-eau-tendre-parfyum-5-ml-re_5ml/">
-              <img src="/assets/products/perfume/chanel-chance-eau-tendre-5ml-card-front.jpg" alt="Chanel Chance Eau Tendre парфюм 5 мл" loading="lazy">
-              <strong>Chanel Chance Eau Tendre парфюм 5 мл</strong>
-              <span>1 100 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/chanel-chance-parfyum-5-ml-ce_5ml/">
-              <img src="/assets/products/perfume/chanel-chance-5ml-card-front-v2.jpg" alt="Chanel Chance парфюм 5 мл" loading="lazy">
-              <strong>Chanel Chance парфюм 5 мл</strong>
-              <span>895 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/chanel-coco-mademoiselle-parfyum-5-ml-le_5ml/">
-              <img src="/assets/products/perfume/chanel-coco-mademoiselle-5ml-card-front.jpg" alt="Chanel Coco Mademoiselle парфюм 5 мл" loading="lazy">
-              <strong>Chanel Coco Mademoiselle парфюм 5 мл</strong>
-              <span>1 200 <span class="som-sign">с</span></span>
-            </a>
-            
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chanel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chanel_chance_eau_fraiche_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chanel-chance-eau-fra-che-parfyum-5-ml-he_5ml/" data-product-link="prd_perfume_chanel_chance_eau_fraiche_5ml" aria-label="Открыть Chanel Chance Eau Fraîche парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chanel-chance-eau-fraiche-5ml-card-front.jpg" alt="Chanel Chance Eau Fraîche парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chanel-chance-eau-fra-che-parfyum-5-ml-he_5ml/" data-product-link="prd_perfume_chanel_chance_eau_fraiche_5ml">
+                  <span class="product-brand-line">Chanel</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Chance Eau Fraîche парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chanel Chance Eau Fraîche в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 100 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chanel_chance_eau_fraiche_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 067 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chanel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chanel_chance_eau_splendide_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chanel-chance-eau-splendide-parfyum-5-ml-de_5ml/" data-product-link="prd_perfume_chanel_chance_eau_splendide_5ml" aria-label="Открыть Chanel Chance Eau Splendide парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chanel-chance-eau-splendide-5ml-card-front.jpg" alt="Chanel Chance Eau Splendide парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chanel-chance-eau-splendide-parfyum-5-ml-de_5ml/" data-product-link="prd_perfume_chanel_chance_eau_splendide_5ml">
+                  <span class="product-brand-line">Chanel</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Chance Eau Splendide парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chanel Chance Eau Splendide в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 450 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chanel_chance_eau_splendide_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 406 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chanel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chanel_chance_eau_tendre_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chanel-chance-eau-tendre-parfyum-5-ml-re_5ml/" data-product-link="prd_perfume_chanel_chance_eau_tendre_5ml" aria-label="Открыть Chanel Chance Eau Tendre парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chanel-chance-eau-tendre-5ml-card-front.jpg" alt="Chanel Chance Eau Tendre парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chanel-chance-eau-tendre-parfyum-5-ml-re_5ml/" data-product-link="prd_perfume_chanel_chance_eau_tendre_5ml">
+                  <span class="product-brand-line">Chanel</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Chance Eau Tendre парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chanel Chance Eau Tendre в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 100 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chanel_chance_eau_tendre_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 067 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chanel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chanel_chance_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chanel-chance-parfyum-5-ml-ce_5ml/" data-product-link="prd_perfume_chanel_chance_5ml" aria-label="Открыть Chanel Chance парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chanel-chance-5ml-card-front-v2.jpg" alt="Chanel Chance парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chanel-chance-parfyum-5-ml-ce_5ml/" data-product-link="prd_perfume_chanel_chance_5ml">
+                  <span class="product-brand-line">Chanel</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Chance парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chanel Chance в travel-формате 5 мл. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp. Отправка в одноразовой защищенной упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">895 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chanel_chance_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 868 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
+                <span class="placeholder-brand">Chanel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_perfume_chanel_coco_mademoiselle_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/chanel-coco-mademoiselle-parfyum-5-ml-le_5ml/" data-product-link="prd_perfume_chanel_coco_mademoiselle_5ml" aria-label="Открыть Chanel Coco Mademoiselle парфюм 5 мл">
+                  <img class="product-image" src="/assets/products/perfume/chanel-coco-mademoiselle-5ml-card-front.jpg" alt="Chanel Coco Mademoiselle парфюм 5 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/chanel-coco-mademoiselle-parfyum-5-ml-le_5ml/" data-product-link="prd_perfume_chanel_coco_mademoiselle_5ml">
+                  <span class="product-brand-line">Chanel</span>
+                  <span class="product-kind-line">
+                    <strong>парфюм на разлив</strong>
+                    <span>5 мл</span>
+                  </span>
+                  <span class="product-variant-line">Coco Mademoiselle парфюм</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Парфюм 5 мл</span>
+                </div>
+                <p>Брендовый парфюм Chanel Coco Mademoiselle в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может быть зафиксирован на видео и отправлен клиенту в WhatsApp.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 200 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_chanel_coco_mademoiselle_5ml" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 1 164 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
     </section>
     <div class="landing-related-links">
         <section class="landing-link-section" aria-label="Разделы товаров">
@@ -214,7 +359,7 @@
         <strong>Парфюм 5 мл</strong>
         <span>5 товаров</span>
       </a>
-    </div>
+</div>
         </section>
         </div>
   </main>
@@ -233,5 +378,138 @@
     <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
   </div>
 </footer>
+  <script>
+    const cartKey = "globalMarketCartDraft";
+    const favoritesKey = "globalMarketFavorites";
+    const recentlyViewedKey = "globalMarketRecentlyViewed";
+    const categoryMenu = document.querySelector("#categoryMenu");
+    const toggleMenuButton = document.querySelector("#toggleMenu");
+    const smartHeader = document.querySelector("[data-smart-header]");
+
+    function readJson(key, fallback) {
+      try {
+        return JSON.parse(localStorage.getItem(key) || "null") ?? fallback;
+      } catch (_) {
+        return fallback;
+      }
+    }
+
+    function updateCartCount() {
+      const rows = readJson(cartKey, []);
+      const count = rows.reduce((sum, row) => sum + Number(row[1] || 0), 0);
+      document.querySelectorAll("[data-cart-count]").forEach((item) => {
+        item.textContent = String(count);
+      });
+    }
+
+    // Product tiles carry a real id in data-favorite/data-add (see
+    // scripts/generate_landing_pages.py product_tile_html()) — same contract
+    // as the home page's renderProducts() in app.js and the "Похожие товары"
+    // grid in scripts/generate_product_pages.py.
+    function syncGridFavoriteButtons() {
+      const ids = new Set(readJson(favoritesKey, []));
+      document.querySelectorAll(".landing-grid [data-favorite]").forEach((button) => {
+        const active = ids.has(button.dataset.favorite);
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+        button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
+      });
+    }
+
+    document.querySelector(".landing-grid")?.addEventListener("click", (event) => {
+      const favoriteButton = event.target.closest("[data-favorite]");
+      const addButton = event.target.closest("[data-add]");
+      const productLink = event.target.closest("[data-product-link]");
+      if (favoriteButton) {
+        const id = favoriteButton.dataset.favorite;
+        const ids = new Set(readJson(favoritesKey, []));
+        if (ids.has(id)) ids.delete(id);
+        else ids.add(id);
+        localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
+        syncGridFavoriteButtons();
+        return;
+      }
+      if (addButton) {
+        const id = addButton.dataset.add;
+        const rows = readJson(cartKey, []);
+        const index = rows.findIndex((row) => row[0] === id);
+        if (index >= 0) rows[index][1] = Number(rows[index][1] || 0) + 1;
+        else rows.push([id, 1]);
+        localStorage.setItem(cartKey, JSON.stringify(rows));
+        updateCartCount();
+        addButton.classList.add("added");
+        const originalLabel = addButton.textContent;
+        window.setTimeout(() => {
+          addButton.classList.remove("added");
+          addButton.textContent = originalLabel;
+        }, 900);
+        addButton.textContent = "Добавлено";
+        return;
+      }
+      if (productLink) {
+        const ids = readJson(recentlyViewedKey, []);
+        const next = [productLink.dataset.productLink, ...ids.filter((id) => id !== productLink.dataset.productLink)].slice(0, 20);
+        localStorage.setItem(recentlyViewedKey, JSON.stringify(next));
+      }
+    });
+
+    function setMenuOpen(isOpen) {
+      if (!categoryMenu || !toggleMenuButton) return;
+      categoryMenu.hidden = !isOpen;
+      toggleMenuButton.setAttribute("aria-expanded", String(isOpen));
+      if (isOpen) smartHeader?.classList.remove("header-hidden");
+    }
+
+    async function renderMenu() {
+      if (!categoryMenu) return;
+      try {
+        const response = await fetch("/data/site-config.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("config");
+        const config = await response.json();
+        const items = Array.isArray(config.menu) ? config.menu : [];
+        const catalogHref = (item) => {
+          if (item.href) return item.href;
+          const params = new URLSearchParams();
+          if (item.collection) params.set("collection", item.collection);
+          if (item.category) params.set("category", item.category);
+          if (item.query) params.set("query", item.query);
+          if (item.label) params.set("label", item.label);
+          const query = params.toString();
+          return query ? `/?${query}#catalog` : "/#catalog";
+        };
+        categoryMenu.innerHTML = items
+          .map((item) => {
+            const href = catalogHref(item);
+            return `<a href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
+          })
+          .join("");
+      } catch (_) {
+        categoryMenu.innerHTML = '<a href="/#catalog"><span class="category-menu-title">Каталог</span></a>';
+      }
+    }
+
+    toggleMenuButton?.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setMenuOpen(Boolean(categoryMenu?.hidden));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (categoryMenu?.hidden) return;
+      if (event.target.closest("#categoryMenu") || event.target.closest("#toggleMenu")) return;
+      setMenuOpen(false);
+    });
+
+    document.querySelector("#openCart")?.addEventListener("click", () => {
+      window.location.href = "/#checkout";
+    });
+
+    document.querySelector("#toggleSearch")?.addEventListener("click", () => {
+      window.location.href = "/#catalog";
+    });
+
+    syncGridFavoriteButtons();
+    updateCartCount();
+    renderMenu();
+  </script>
 </body>
 </html>

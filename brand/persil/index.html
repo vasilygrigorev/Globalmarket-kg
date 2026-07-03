@@ -130,11 +130,11 @@
     .landing-copy p { margin: 0; color: #515154; font-size: 16px; line-height: 1.5; }
     .landing-terms { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .landing-terms span { display: inline-flex; min-height: 30px; align-items: center; padding: 0 10px; border: 1px solid #e2e2e7; border-radius: 999px; color: #3a3a3c; background: #f8f8f9; font-size: 14px; }
+    /* Cards inside .landing-grid reuse the shared .product-card rules from
+       styles.css (loaded above) so they render identically to home-page
+       catalog cards — same brand pill, like button, badges, price, add
+       button. Only the grid container itself is defined here. */
     .landing-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-    .landing-card { display: grid; gap: 9px; min-width: 0; padding: 10px; border-radius: 14px; color: inherit; background: #fff; text-decoration: none; }
-    .landing-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; }
-    .landing-card strong { font-size: 14px; line-height: 1.25; }
-    .landing-card span { font-size: 18px; font-weight: 850; }
     .landing-empty { grid-column: 1 / -1; padding: 18px; border-radius: 14px; background: #fff; color: #515154; }
     .landing-empty p { margin: 0 0 12px; font-size: 16px; line-height: 1.45; }
     .landing-empty a { color: #111; font-weight: 800; }
@@ -205,66 +205,356 @@
     </section>
     <section class="landing-grid" aria-label="Persil">
       
-            <a class="landing-card" href="/product/persil-high-foam-gel-dlya-stirki-3-l-1-l-6437d0/">
-              <img src="/assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg" alt="Persil High Foam гель для стирки 3 л + 1 л" loading="lazy">
-              <strong>Persil High Foam гель для стирки 3 л + 1 л</strong>
-              <span>2 595 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/persil-lavender-gel-dlya-stirki-3-l-5036b2/">
-              <img src="/assets/products/persil/persil-lavender-gel-3l-card-front.jpg" alt="Persil Lavender гель для стирки 3 л" loading="lazy">
-              <strong>Persil Lavender гель для стирки 3 л</strong>
-              <span>2 090 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/persil-lavender-gel-dlya-stirki-4-8-l-9c3654/">
-              <img src="/assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg" alt="Persil Lavender гель для стирки 4,8 л" loading="lazy">
-              <strong>Persil Lavender гель для стирки 4,8 л</strong>
-              <span>3 200 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/persil-rose-gel-dlya-stirki-3-l-4e94cf/">
-              <img src="/assets/products/persil/persil-rose-gel-3l-card-front.jpg" alt="Persil Rose гель для стирки 3 л" loading="lazy">
-              <strong>Persil Rose гель для стирки 3 л</strong>
-              <span>2 090 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/persil-rose-gel-dlya-stirki-3-l-1-l-dce862/">
-              <img src="/assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg" alt="Persil Rose гель для стирки 3 л + 1 л" loading="lazy">
-              <strong>Persil Rose гель для стирки 3 л + 1 л</strong>
-              <span>2 595 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/persil-rose-gel-dlya-stirki-4-8-l-c7e746/">
-              <img src="/assets/products/persil/persil-rose-gel-4-8l-card-front.jpg" alt="Persil Rose гель для стирки 4,8 л" loading="lazy">
-              <strong>Persil Rose гель для стирки 4,8 л</strong>
-              <span>3 200 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/persil-sensitive-gel-dlya-stirki-3-l-8005ce/">
-              <img src="/assets/products/persil/persil-sensitive-gel-3l-card-front.jpg" alt="Persil Sensitive гель для стирки 3 л" loading="lazy">
-              <strong>Persil Sensitive гель для стирки 3 л</strong>
-              <span>2 090 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/persil-white-flower-gel-dlya-stirki-3-l-e30459/">
-              <img src="/assets/products/persil/persil-white-flower-gel-3l-card-front.jpg" alt="Persil White Flower гель для стирки 3 л" loading="lazy">
-              <strong>Persil White Flower гель для стирки 3 л</strong>
-              <span>2 090 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/persil-white-flower-gel-dlya-stirki-3-l-1-l-05435f/">
-              <img src="/assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg" alt="Persil White Flower гель для стирки 3 л + 1 л" loading="lazy">
-              <strong>Persil White Flower гель для стирки 3 л + 1 л</strong>
-              <span>2 595 <span class="som-sign">с</span></span>
-            </a>
-            
-            <a class="landing-card" href="/product/persil-white-flower-gel-dlya-stirki-4-8-l-b9698b/">
-              <img src="/assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg" alt="Persil White Flower гель для стирки 4,8 л" loading="lazy">
-              <strong>Persil White Flower гель для стирки 4,8 л</strong>
-              <span>3 200 <span class="som-sign">с</span></span>
-            </a>
-            
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Persil</span>
+                <button class="favorite-button" type="button" data-favorite="prd_894a7f6437d0" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/persil-high-foam-gel-dlya-stirki-3-l-1-l-6437d0/" data-product-link="prd_894a7f6437d0" aria-label="Открыть Persil High Foam гель для стирки 3 л + 1 л">
+                  <img class="product-image" src="/assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg" alt="Persil High Foam гель для стирки 3 л + 1 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/persil-high-foam-gel-dlya-stirki-3-l-1-l-6437d0/" data-product-link="prd_894a7f6437d0">
+                  <span class="product-brand-line">Persil</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>3 л + 1 л</span>
+                  </span>
+                  <span class="product-variant-line">High Foam</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Гель для стирки Persil High Foam для свежести и чистоты белья. Большой формат 3 л + 1 л.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 595 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_894a7f6437d0" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 517 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Persil</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1f9a545036b2" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/persil-lavender-gel-dlya-stirki-3-l-5036b2/" data-product-link="prd_1f9a545036b2" aria-label="Открыть Persil Lavender гель для стирки 3 л">
+                  <img class="product-image" src="/assets/products/persil/persil-lavender-gel-3l-card-front.jpg" alt="Persil Lavender гель для стирки 3 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/persil-lavender-gel-dlya-stirki-3-l-5036b2/" data-product-link="prd_1f9a545036b2">
+                  <span class="product-brand-line">Persil</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>3 л</span>
+                  </span>
+                  <span class="product-variant-line">Lavender</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Гель Persil Lavender для стирки белья с ароматом лаванды. Объем 3 л.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 090 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1f9a545036b2" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 027 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Persil</span>
+                <button class="favorite-button" type="button" data-favorite="prd_0e763c9c3654" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/persil-lavender-gel-dlya-stirki-4-8-l-9c3654/" data-product-link="prd_0e763c9c3654" aria-label="Открыть Persil Lavender гель для стирки 4,8 л">
+                  <img class="product-image" src="/assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg" alt="Persil Lavender гель для стирки 4,8 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/persil-lavender-gel-dlya-stirki-4-8-l-9c3654/" data-product-link="prd_0e763c9c3654">
+                  <span class="product-brand-line">Persil</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>4,8 л</span>
+                  </span>
+                  <span class="product-variant-line">Lavender</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Гель Persil Lavender для стирки белья с ароматом лаванды. Большой объем 4,8 л.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">3 200 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_0e763c9c3654" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 3 104 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Persil</span>
+                <button class="favorite-button" type="button" data-favorite="prd_f19e014e94cf" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/persil-rose-gel-dlya-stirki-3-l-4e94cf/" data-product-link="prd_f19e014e94cf" aria-label="Открыть Persil Rose гель для стирки 3 л">
+                  <img class="product-image" src="/assets/products/persil/persil-rose-gel-3l-card-front.jpg" alt="Persil Rose гель для стирки 3 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/persil-rose-gel-dlya-stirki-3-l-4e94cf/" data-product-link="prd_f19e014e94cf">
+                  <span class="product-brand-line">Persil</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>3 л</span>
+                  </span>
+                  <span class="product-variant-line">Rose</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Гель для стирки Persil Rose для повседневного ухода за бельем. Объем 3 л.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 090 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_f19e014e94cf" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 027 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Persil</span>
+                <button class="favorite-button" type="button" data-favorite="prd_c5f3a1dce862" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+                <span class="discount-badge">-20%</span>
+                <a class="product-image-link" href="/product/persil-rose-gel-dlya-stirki-3-l-1-l-dce862/" data-product-link="prd_c5f3a1dce862" aria-label="Открыть Persil Rose гель для стирки 3 л + 1 л">
+                  <img class="product-image" src="/assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg" alt="Persil Rose гель для стирки 3 л + 1 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/persil-rose-gel-dlya-stirki-3-l-1-l-dce862/" data-product-link="prd_c5f3a1dce862">
+                  <span class="product-brand-line">Persil</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>3 л + 1 л</span>
+                  </span>
+                  <span class="product-variant-line">Rose</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Гель для стирки Persil Rose с ароматом розы. Формат 3 л + 1 л для повседневной стирки белья.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price-group"><span class="price">2 595 <span class="som-sign">с</span></span><span class="price-original">3 244 <span class="som-sign">с</span></span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_c5f3a1dce862" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 517 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Persil</span>
+                <button class="favorite-button" type="button" data-favorite="prd_682eb8c7e746" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/persil-rose-gel-dlya-stirki-4-8-l-c7e746/" data-product-link="prd_682eb8c7e746" aria-label="Открыть Persil Rose гель для стирки 4,8 л">
+                  <img class="product-image" src="/assets/products/persil/persil-rose-gel-4-8l-card-front.jpg" alt="Persil Rose гель для стирки 4,8 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/persil-rose-gel-dlya-stirki-4-8-l-c7e746/" data-product-link="prd_682eb8c7e746">
+                  <span class="product-brand-line">Persil</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>4,8 л</span>
+                  </span>
+                  <span class="product-variant-line">Rose</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Гель Persil Rose для стирки белья с ароматом розы. Большой объем 4,8 л.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">3 200 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_682eb8c7e746" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 3 104 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Persil</span>
+                <button class="favorite-button" type="button" data-favorite="prd_9df7a08005ce" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/persil-sensitive-gel-dlya-stirki-3-l-8005ce/" data-product-link="prd_9df7a08005ce" aria-label="Открыть Persil Sensitive гель для стирки 3 л">
+                  <img class="product-image" src="/assets/products/persil/persil-sensitive-gel-3l-card-front.jpg" alt="Persil Sensitive гель для стирки 3 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/persil-sensitive-gel-dlya-stirki-3-l-8005ce/" data-product-link="prd_9df7a08005ce">
+                  <span class="product-brand-line">Persil</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>3 л</span>
+                  </span>
+                  <span class="product-variant-line">Sensitive</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Гель Persil Sensitive для бережной стирки и ежедневного ухода за бельем. Объем 3 л.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 090 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_9df7a08005ce" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 027 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Persil</span>
+                <button class="favorite-button" type="button" data-favorite="prd_b0bf34e30459" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/persil-white-flower-gel-dlya-stirki-3-l-e30459/" data-product-link="prd_b0bf34e30459" aria-label="Открыть Persil White Flower гель для стирки 3 л">
+                  <img class="product-image" src="/assets/products/persil/persil-white-flower-gel-3l-card-front.jpg" alt="Persil White Flower гель для стирки 3 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/persil-white-flower-gel-dlya-stirki-3-l-e30459/" data-product-link="prd_b0bf34e30459">
+                  <span class="product-brand-line">Persil</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>3 л</span>
+                  </span>
+                  <span class="product-variant-line">White Flower</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Гель Persil White Flower для стирки белья с цветочным ароматом. Объем 3 л.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 090 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_b0bf34e30459" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 027 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Persil</span>
+                <button class="favorite-button" type="button" data-favorite="prd_77e4cc05435f" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/persil-white-flower-gel-dlya-stirki-3-l-1-l-05435f/" data-product-link="prd_77e4cc05435f" aria-label="Открыть Persil White Flower гель для стирки 3 л + 1 л">
+                  <img class="product-image" src="/assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg" alt="Persil White Flower гель для стирки 3 л + 1 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/persil-white-flower-gel-dlya-stirki-3-l-1-l-05435f/" data-product-link="prd_77e4cc05435f">
+                  <span class="product-brand-line">Persil</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>3 л + 1 л</span>
+                  </span>
+                  <span class="product-variant-line">White Flower</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Гель для стирки Persil White Flower с цветочным ароматом. Формат 3 л + 1 л удобен для семейного запаса.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 595 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_77e4cc05435f" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 2 517 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Persil</span>
+                <button class="favorite-button" type="button" data-favorite="prd_f0d3a0b9698b" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/persil-white-flower-gel-dlya-stirki-4-8-l-b9698b/" data-product-link="prd_f0d3a0b9698b" aria-label="Открыть Persil White Flower гель для стирки 4,8 л">
+                  <img class="product-image" src="/assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg" alt="Persil White Flower гель для стирки 4,8 л" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/persil-white-flower-gel-dlya-stirki-4-8-l-b9698b/" data-product-link="prd_f0d3a0b9698b">
+                  <span class="product-brand-line">Persil</span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                    <span>4,8 л</span>
+                  </span>
+                  <span class="product-variant-line">White Flower</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Гель Persil White Flower для стирки белья с цветочным ароматом. Большой объем 4,8 л.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">3 200 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_f0d3a0b9698b" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">После регистрации: 3 104 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
     </section>
     <div class="landing-related-links">
         <section class="landing-link-section" aria-label="Разделы товаров">
@@ -274,7 +564,7 @@
         <strong>Стирка и уход за бельем</strong>
         <span>15 товаров</span>
       </a>
-    </div>
+</div>
         </section>
         </div>
   </main>
@@ -293,5 +583,138 @@
     <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
   </div>
 </footer>
+  <script>
+    const cartKey = "globalMarketCartDraft";
+    const favoritesKey = "globalMarketFavorites";
+    const recentlyViewedKey = "globalMarketRecentlyViewed";
+    const categoryMenu = document.querySelector("#categoryMenu");
+    const toggleMenuButton = document.querySelector("#toggleMenu");
+    const smartHeader = document.querySelector("[data-smart-header]");
+
+    function readJson(key, fallback) {
+      try {
+        return JSON.parse(localStorage.getItem(key) || "null") ?? fallback;
+      } catch (_) {
+        return fallback;
+      }
+    }
+
+    function updateCartCount() {
+      const rows = readJson(cartKey, []);
+      const count = rows.reduce((sum, row) => sum + Number(row[1] || 0), 0);
+      document.querySelectorAll("[data-cart-count]").forEach((item) => {
+        item.textContent = String(count);
+      });
+    }
+
+    // Product tiles carry a real id in data-favorite/data-add (see
+    // scripts/generate_landing_pages.py product_tile_html()) — same contract
+    // as the home page's renderProducts() in app.js and the "Похожие товары"
+    // grid in scripts/generate_product_pages.py.
+    function syncGridFavoriteButtons() {
+      const ids = new Set(readJson(favoritesKey, []));
+      document.querySelectorAll(".landing-grid [data-favorite]").forEach((button) => {
+        const active = ids.has(button.dataset.favorite);
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+        button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
+      });
+    }
+
+    document.querySelector(".landing-grid")?.addEventListener("click", (event) => {
+      const favoriteButton = event.target.closest("[data-favorite]");
+      const addButton = event.target.closest("[data-add]");
+      const productLink = event.target.closest("[data-product-link]");
+      if (favoriteButton) {
+        const id = favoriteButton.dataset.favorite;
+        const ids = new Set(readJson(favoritesKey, []));
+        if (ids.has(id)) ids.delete(id);
+        else ids.add(id);
+        localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
+        syncGridFavoriteButtons();
+        return;
+      }
+      if (addButton) {
+        const id = addButton.dataset.add;
+        const rows = readJson(cartKey, []);
+        const index = rows.findIndex((row) => row[0] === id);
+        if (index >= 0) rows[index][1] = Number(rows[index][1] || 0) + 1;
+        else rows.push([id, 1]);
+        localStorage.setItem(cartKey, JSON.stringify(rows));
+        updateCartCount();
+        addButton.classList.add("added");
+        const originalLabel = addButton.textContent;
+        window.setTimeout(() => {
+          addButton.classList.remove("added");
+          addButton.textContent = originalLabel;
+        }, 900);
+        addButton.textContent = "Добавлено";
+        return;
+      }
+      if (productLink) {
+        const ids = readJson(recentlyViewedKey, []);
+        const next = [productLink.dataset.productLink, ...ids.filter((id) => id !== productLink.dataset.productLink)].slice(0, 20);
+        localStorage.setItem(recentlyViewedKey, JSON.stringify(next));
+      }
+    });
+
+    function setMenuOpen(isOpen) {
+      if (!categoryMenu || !toggleMenuButton) return;
+      categoryMenu.hidden = !isOpen;
+      toggleMenuButton.setAttribute("aria-expanded", String(isOpen));
+      if (isOpen) smartHeader?.classList.remove("header-hidden");
+    }
+
+    async function renderMenu() {
+      if (!categoryMenu) return;
+      try {
+        const response = await fetch("/data/site-config.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("config");
+        const config = await response.json();
+        const items = Array.isArray(config.menu) ? config.menu : [];
+        const catalogHref = (item) => {
+          if (item.href) return item.href;
+          const params = new URLSearchParams();
+          if (item.collection) params.set("collection", item.collection);
+          if (item.category) params.set("category", item.category);
+          if (item.query) params.set("query", item.query);
+          if (item.label) params.set("label", item.label);
+          const query = params.toString();
+          return query ? `/?${query}#catalog` : "/#catalog";
+        };
+        categoryMenu.innerHTML = items
+          .map((item) => {
+            const href = catalogHref(item);
+            return `<a href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
+          })
+          .join("");
+      } catch (_) {
+        categoryMenu.innerHTML = '<a href="/#catalog"><span class="category-menu-title">Каталог</span></a>';
+      }
+    }
+
+    toggleMenuButton?.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setMenuOpen(Boolean(categoryMenu?.hidden));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (categoryMenu?.hidden) return;
+      if (event.target.closest("#categoryMenu") || event.target.closest("#toggleMenu")) return;
+      setMenuOpen(false);
+    });
+
+    document.querySelector("#openCart")?.addEventListener("click", () => {
+      window.location.href = "/#checkout";
+    });
+
+    document.querySelector("#toggleSearch")?.addEventListener("click", () => {
+      window.location.href = "/#catalog";
+    });
+
+    syncGridFavoriteButtons();
+    updateCartCount();
+    renderMenu();
+  </script>
 </body>
 </html>
