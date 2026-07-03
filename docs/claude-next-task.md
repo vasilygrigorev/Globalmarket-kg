@@ -1,5 +1,11 @@
 # Claude Next Task
 
+> **STATUS: DONE (2026-07-03).** This task (release-readiness sweep) is
+> complete — 4 commits, full suite 240/240. See
+> `/Users/macmini/.codex/shared-state/handoff.md` (top entry) for the exact
+> commits and what changed. Codex: replace this file's body with the next
+> task when ready.
+
 Use this file as the next large handoff prompt for Claude Code.
 
 ## Context
