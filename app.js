@@ -2174,22 +2174,36 @@ async function saveOrderViaApi(payload) {
   }
 }
 
+// Guards against a duplicate /api/orders submission from a quick double-click
+// or double-tap while the async save is still in flight (the button stays
+// enabled visually only for as long as the network round trip takes).
+let checkoutSubmitting = false;
+
 checkoutForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+  if (checkoutSubmitting) return;
   if (!state.cart.size) {
     formStatus.textContent = "Добавьте товары в корзину перед оформлением.";
     return;
   }
-  const formData = new FormData(event.currentTarget);
-  saveCustomerDraftFromForm(event.currentTarget);
-  const message = orderMessage(formData);
-  let whatsapp = `https://wa.me/${catalogSettings.manager_whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
-  // If the backend is enabled, save the order first; always fall back to WhatsApp.
-  const saved = await saveOrderViaApi(buildOrderPayload(formData, message));
-  if (saved && saved.manager_whatsapp_url) whatsapp = saved.manager_whatsapp_url;
-  saveLastOrder();
-  formStatus.innerHTML = `Открываем WhatsApp. Если он не открылся, <a href="${whatsapp}" target="_blank" rel="noreferrer">нажмите здесь</a>.`;
-  window.location.href = whatsapp;
+  checkoutSubmitting = true;
+  const submitButton = event.currentTarget.querySelector("button[type='submit']");
+  if (submitButton) submitButton.disabled = true;
+  try {
+    const formData = new FormData(event.currentTarget);
+    saveCustomerDraftFromForm(event.currentTarget);
+    const message = orderMessage(formData);
+    let whatsapp = `https://wa.me/${catalogSettings.manager_whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
+    // If the backend is enabled, save the order first; always fall back to WhatsApp.
+    const saved = await saveOrderViaApi(buildOrderPayload(formData, message));
+    if (saved && saved.manager_whatsapp_url) whatsapp = saved.manager_whatsapp_url;
+    saveLastOrder();
+    formStatus.innerHTML = `Открываем WhatsApp. Если он не открылся, <a href="${whatsapp}" target="_blank" rel="noreferrer">нажмите здесь</a>.`;
+    window.location.href = whatsapp;
+  } finally {
+    checkoutSubmitting = false;
+    if (submitButton) submitButton.disabled = false;
+  }
 });
 
 async function initStorefront() {

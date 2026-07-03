@@ -13,6 +13,14 @@ The function uses the Supabase **service role** key (server-side only, bypasses
 RLS) to insert rows. The browser never sees that key. WhatsApp ordering stays
 the primary channel — this endpoint only persists the order.
 
+**Known gap:** the migration defines a `customers` table (with its own
+`whatsapp` column, separate from an order's `customer_phone`), but
+`onRequestPost` in `functions/api/orders.js` never inserts or upserts into it —
+today every order only writes `orders` + `order_items` (+ optional
+`marketing_attribution` / `customer_consents`). A returning-customer
+lookup/history feature would need that upsert added; it is not in scope for
+the current MVP.
+
 To bring this online, follow the step-by-step
 [`backend-go-live-checklist.md`](backend-go-live-checklist.md) (Supabase →
 Cloudflare env → preview deploy → smoke test → wire checkout), and track it in
@@ -43,7 +51,11 @@ returns `503 {ok:false, fallback:true}` so the site keeps working
 ```jsonc
 POST /api/orders
 {
-  "customer": { "name": "...", "phone": "...", "whatsapp": "...",
+  // customer.phone doubles as the WhatsApp contact number (see admin
+  // customerWaLink()/customerTelLink() in admin/admin.logic.js) — there is no
+  // separate customer.whatsapp field; normalizeOrderPayload() in
+  // functions/api/orders.js only reads name/phone/city/region/address/comment.
+  "customer": { "name": "...", "phone": "...",
                 "city": "...", "region": "...", "address": "...", "comment": "..." },
   "items": [
     { "product_id": "prd_…", "product_slug": "…", "title": "…", "brand": "…",

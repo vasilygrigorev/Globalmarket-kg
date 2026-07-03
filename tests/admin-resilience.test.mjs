@@ -68,6 +68,20 @@ test("init subscribes to auth state changes to re-route on expiry/sign-out", () 
   assert.match(init, /INITIAL_SESSION/, "initial event must be de-duplicated");
 });
 
+test("when the backend is configured, init() proceeds past the gate to a real client + session load", () => {
+  const gate = init.match(/if \(!configured\) \{[\s\S]*?\n {2}\}/);
+  assert.ok(gate, "not-configured gate not found");
+  assert.match(gate[0], /return;/, "not-configured must return early so it never falls through");
+  // Everything after the gate only runs when configured === true: a real
+  // Supabase client is created and the session (which loads the orders list
+  // via refreshSessionUI -> loadOrders) is fetched. If a future edit moved the
+  // early return outside the `if`, this would catch the admin silently never
+  // loading orders even when the backend IS configured.
+  const afterGate = init.slice(init.indexOf(gate[0]) + gate[0].length);
+  assert.match(afterGate, /createClient\(window\.GM_SUPABASE_URL, window\.GM_SUPABASE_ANON_KEY\)/);
+  assert.match(afterGate, /refreshSessionUI\(\)/, "configured path must load the session/orders");
+});
+
 // --- 3. Accurate count across pagination ---
 
 test("loadOrders asks the server for an exact match count", () => {

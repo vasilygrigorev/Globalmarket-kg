@@ -114,6 +114,23 @@ test("the orders list query supports a max-amount filter alongside min-amount", 
   assert.match(indexHtml, /id="maxAmount"/); // input exists in the filter row
 });
 
+test("every active filter chains onto the same query, so filters combine instead of overriding each other", () => {
+  // Each branch must reassign `query = query.<method>(...)`. If a future edit
+  // ever built a fresh `supabase.from("orders")...` inside one of these
+  // branches instead of extending `query`, that filter would silently drop
+  // every filter applied before it (e.g. status + search would stop combining).
+  const branches = [
+    /if \(status\) query = query\.eq\("status", status\);/,
+    /if \(since\) query = query\.gte\("created_at", since\);/,
+    /if \(minAmount != null\) query = query\.gte\("total_kgs", minAmount\);/,
+    /if \(maxAmount != null\) query = query\.lte\("total_kgs", maxAmount\);/,
+    /if \(orFilter\) query = query\.or\(orFilter\);/,
+  ];
+  for (const re of branches) {
+    assert.match(loadOrders, re, `filter branch not chained onto the shared query: ${re}`);
+  }
+});
+
 test("order detail offers a copy-address button wired to the clipboard", () => {
   const html = renderOrderDetail(
     { customer_name: "A", status: "new", total_kgs: 100, city: "Ош", address: "ул. Мира 5" }, [], [], [],
