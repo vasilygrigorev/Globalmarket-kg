@@ -133,6 +133,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://globalmarket.kg/brand/yc/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/category/body/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1225,6 +1231,15 @@
     </image:image>
   </url>
   <url>
+    <loc>https://globalmarket.kg/product/skin-doctor-sunblock-60-summer-solntsezaschitnyy-krem-200-ml-c489e2/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/product/versace-versense-parfyum-5-ml-se_5ml/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1240,6 +1255,33 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://globalmarket.kg/assets/products/perfume/victorias-secret-bombshell-5ml-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/yc-sunscreen-uv-protection-spf50-solntsezaschitnyy-krem-100-g-ff5c3e/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/yc/yc-sunscreen-spf50-100g-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/yc-sunscreen-uv-protection-spf70-solntsezaschitnyy-krem-100-g-a08461/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/yc-white-sunscreen-spray-spf50-solntsezaschitnyy-sprey-150-ml-935040/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
