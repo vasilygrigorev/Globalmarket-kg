@@ -121,6 +121,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://globalmarket.kg/brand/pantene/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/brand/persil/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1114,6 +1120,24 @@
     </image:image>
   </url>
   <url>
+    <loc>https://globalmarket.kg/product/pantene-damage-repair-shampun-600-ml-a2acbb/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/pantene-sheer-volume-shampun-600-ml-1a7c1f/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/pantene/pantene-sheer-volume-600ml-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/product/parfums-de-marly-delina-exclusif-parfyum-5-ml-if_5ml/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1237,6 +1261,15 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://globalmarket.kg/assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/tresemm-clean-replenish-shampun-828-ml-d4b317/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/tresemme/tresemme-clean-replenish-828ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>

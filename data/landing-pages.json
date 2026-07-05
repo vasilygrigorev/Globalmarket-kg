@@ -1,5 +1,5 @@
 {
-  "count": 31,
+  "count": 32,
   "pages": [
     {
       "type": "category",
@@ -25,7 +25,7 @@
       "title": "Уборка и чистота",
       "path": "/category/home_cleaning/",
       "url": "https://globalmarket.kg/category/home_cleaning/",
-      "count": 10,
+      "count": 9,
       "seoTerms": [
         "средство для стекол",
         "окна",
@@ -45,9 +45,9 @@
       "title": "Уход за волосами",
       "path": "/category/hair/",
       "url": "https://globalmarket.kg/category/hair/",
-      "count": 103,
+      "count": 104,
       "seoTerms": [],
-      "shown": 23
+      "shown": 26
     },
     {
       "type": "category",
@@ -204,6 +204,20 @@
         "AXE купить Бишкек"
       ],
       "shown": 6
+    },
+    {
+      "type": "brand",
+      "slug": "pantene",
+      "title": "Pantene",
+      "path": "/brand/pantene/",
+      "url": "https://globalmarket.kg/brand/pantene/",
+      "count": 15,
+      "seoTerms": [
+        "Pantene",
+        "товары Pantene",
+        "Pantene купить Бишкек"
+      ],
+      "shown": 2
     },
     {
       "type": "brand",

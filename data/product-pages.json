@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 122,
+  "count": 125,
   "pages": [
     {
       "id": "prd_c5f3a1dce862",
@@ -346,7 +346,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_b2586efc6925",
@@ -361,7 +361,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_6280c4c29502",
@@ -376,7 +376,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_20736a33272d",
@@ -391,7 +391,37 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_1f1557a2acbb",
+      "slug": "pantene-damage-repair-shampun-600-ml-a2acbb",
+      "path": "/product/pantene-damage-repair-shampun-600-ml-a2acbb/",
+      "url": "https://globalmarket.kg/product/pantene-damage-repair-shampun-600-ml-a2acbb/",
+      "title": "Pantene Damage Repair шампунь 600 мл",
+      "brand": "Pantene",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg",
+      "imageCount": 2,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_296bd01a7c1f",
+      "slug": "pantene-sheer-volume-shampun-600-ml-1a7c1f",
+      "path": "/product/pantene-sheer-volume-shampun-600-ml-1a7c1f/",
+      "url": "https://globalmarket.kg/product/pantene-sheer-volume-shampun-600-ml-1a7c1f/",
+      "title": "Pantene Sheer Volume шампунь 600 мл",
+      "brand": "Pantene",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/pantene/pantene-sheer-volume-600ml-card-front.jpg",
+      "imageCount": 2,
+      "relatedCount": 24
     },
     {
       "id": "prd_e165f2a765a7",
@@ -406,7 +436,7 @@
       "retailPriceKgs": 750,
       "image": "/assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_160ca842c98e",
@@ -421,7 +451,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_2563a902d211",
@@ -436,7 +466,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_8d15b250f536",
@@ -451,7 +481,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_a4eb0f5d79c1",
@@ -466,7 +496,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_77afdc5c4601",
@@ -481,7 +511,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_65a3b809cec1",
@@ -496,7 +526,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_4a753298e318",
@@ -511,7 +541,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_b05450ca161f",
@@ -526,7 +556,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_47adee9fbe47",
@@ -541,7 +571,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_516bdfde072f",
@@ -556,7 +586,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_d8023f79398b",
@@ -571,7 +601,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_83037f3d35df",
@@ -586,7 +616,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_bfda1a27b81e",
@@ -601,7 +631,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-card-front.png",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_3922b6ace1e1",
@@ -616,7 +646,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-soft-and-shiny-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_4a32663564b9",
@@ -631,7 +661,7 @@
       "retailPriceKgs": 1190,
       "image": "/assets/products/clear/clear-oil-control-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_f724e0973fa5",
@@ -646,7 +676,7 @@
       "retailPriceKgs": 750,
       "image": "/assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_5c4dde48386b",
@@ -661,7 +691,7 @@
       "retailPriceKgs": 750,
       "image": "/assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
     },
     {
       "id": "prd_fc72d049dab9",
@@ -676,7 +706,22 @@
       "retailPriceKgs": 750,
       "image": "/assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_432b62d4b317",
+      "slug": "tresemm-clean-replenish-shampun-828-ml-d4b317",
+      "path": "/product/tresemm-clean-replenish-shampun-828-ml-d4b317/",
+      "url": "https://globalmarket.kg/product/tresemm-clean-replenish-shampun-828-ml-d4b317/",
+      "title": "TRESemmé Clean & Replenish шампунь 828 мл",
+      "brand": "TRESemmé",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/tresemme/tresemme-clean-replenish-828ml-card-front.jpg",
+      "imageCount": 2,
+      "relatedCount": 24
     },
     {
       "id": "prd_cc2d1fc489e2",

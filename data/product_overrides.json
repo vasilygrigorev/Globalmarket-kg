@@ -420,20 +420,21 @@
     "unit": "600 мл"
   },
   "prd_1f1557a2acbb": {
-    "badge": "Pantene",
     "brand": "Pantene",
-    "category": "Уход за волосами",
-    "categoryId": "hair-care",
     "description": "Шампунь Pantene Pro-V Damage Repair для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg",
       "assets/products/pantene/pantene-damage-repair-600ml-front.jpg"
     ],
     "image": "assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg",
-    "productType": "шампунь",
-    "searchText": "pantene damage repair шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v damage repair для ежедневного ухода за волосами. формат: 600 мл.",
-    "title": "Pantene Damage Repair шампунь 600 мл",
-    "unit": "600 мл"
+    "unit": "600 мл",
+    "clean_title": "Pantene Damage Repair шампунь 600 мл",
+    "short_title": "Pantene Damage Repair 600 мл",
+    "category_id": "hair",
+    "product_type": "шампунь",
+    "notes": [
+      "2026-07-05: fixed a legacy camelCase override schema bug — this entry used productType/categoryId/title instead of product_type/category_id/clean_title, so scripts/apply_product_overrides.py silently skipped it (its required-field check needs the snake_case keys) and this product showed no photo at all despite having a real card-front+front pair on disk since 2026-06-09/10. No back photo exists anywhere; still a documented card+front-only exception."
+    ]
   },
   "prd_1f9a545036b2": {
     "brand": "Persil",
@@ -534,20 +535,21 @@
     "short_title": "Gillette Mach3 8 шт"
   },
   "prd_296bd01a7c1f": {
-    "badge": "Pantene",
     "brand": "Pantene",
-    "category": "Уход за волосами",
-    "categoryId": "hair-care",
     "description": "Шампунь Pantene Pro-V Sheer Volume для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-sheer-volume-600ml-card-front.jpg",
       "assets/products/pantene/pantene-sheer-volume-600ml-front.jpg"
     ],
     "image": "assets/products/pantene/pantene-sheer-volume-600ml-card-front.jpg",
-    "productType": "шампунь",
-    "searchText": "pantene sheer volume шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v sheer volume для ежедневного ухода за волосами. формат: 600 мл.",
-    "title": "Pantene Sheer Volume шампунь 600 мл",
-    "unit": "600 мл"
+    "unit": "600 мл",
+    "clean_title": "Pantene Sheer Volume шампунь 600 мл",
+    "short_title": "Pantene Sheer Volume 600 мл",
+    "category_id": "hair",
+    "product_type": "шампунь",
+    "notes": [
+      "2026-07-05: fixed a legacy camelCase override schema bug — this entry used productType/categoryId/title instead of product_type/category_id/clean_title, so scripts/apply_product_overrides.py silently skipped it (its required-field check needs the snake_case keys) and this product showed no photo at all despite having a real card-front+front pair on disk since 2026-06-09/10. No back photo exists anywhere; still a documented card+front-only exception."
+    ]
   },
   "prd_2aacb9eafb42": {
     "brand": "Gillette",
@@ -737,7 +739,6 @@
   },
   "prd_432b62d4b317": {
     "brand": "TRESemmé",
-    "categoryId": "hair",
     "description": "Шампунь TRESemmé Clean & Replenish 3-в-1 для очищения, ухода и распутывания волос. Объём 828 мл, с pro vitamin C и green tea.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-clean-replenish-828ml-card-front.jpg",
@@ -745,10 +746,13 @@
     ],
     "image": "assets/products/tresemme/tresemme-clean-replenish-828ml-card-front.jpg",
     "notes": [
-      "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first."
+      "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first.",
+      "2026-07-05: fixed a legacy camelCase override schema bug — this entry used productType/categoryId/title instead of product_type/category_id/clean_title, so scripts/apply_product_overrides.py silently skipped it (its required-field check needs the snake_case keys) and this product showed no photo at all despite having a real card-front+front pair on disk since 2026-06-09/10. No back photo exists anywhere; still a documented card+front-only exception."
     ],
-    "productType": "шампунь",
-    "title": "TRESemmé Clean & Replenish шампунь 828 мл"
+    "clean_title": "TRESemmé Clean & Replenish шампунь 828 мл",
+    "short_title": "TRESemmé Clean & Replenish 828 мл",
+    "category_id": "hair",
+    "product_type": "шампунь"
   },
   "prd_43bb60f484a9": {
     "brand": "Fairy",

@@ -18,11 +18,22 @@ const products = JSON.parse(read("data/public-catalog.json")).products || [];
 const isPerfume = (p) => p.categoryId === "perfume" || p.category === "Парфюм 5 мл";
 const gallery = (p) => p.galleryImages || [];
 
+// Same documented card+front-only exceptions as scripts/verify_product_galleries.py
+// (single source of truth for the id list — see tests/photo-coverage.test.mjs for
+// the cross-file id-sync check). Without this, a fixed/newly-applied 2-image
+// override for a known exception fails here even though it is the intended,
+// documented state.
+const KNOWN_EXCEPTIONS = new Set(
+  (read("scripts/verify_product_galleries.py").match(/prd_[0-9a-f]{12}/g) || [])
+);
+
 test("non-perfume products have either no gallery or a full card/front/back set", () => {
   // Length 1 or 2 means a photographed product is missing front and/or back —
-  // exactly the silent-incomplete case the AGENTS contract forbids.
+  // exactly the silent-incomplete case the AGENTS contract forbids, unless it
+  // is a documented exception.
   const bad = products
     .filter((p) => !isPerfume(p))
+    .filter((p) => !KNOWN_EXCEPTIONS.has(p.id))
     .filter((p) => {
       const n = gallery(p).length;
       return n === 1 || n === 2;
