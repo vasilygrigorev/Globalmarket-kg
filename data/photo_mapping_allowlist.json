@@ -1,0 +1,19 @@
+{
+  "known_hidden_photo_overrides": {
+    "prd_060cfccd22d3": "Existing pre-guard case: old Downy Valley Dew 1 l photo override is attached to a product that is currently hidden from the public catalog after a stock import. Review before remapping.",
+    "prd_7cf735f59b18": "Existing pre-guard case: old TRESemme Color photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
+    "prd_7de0af90808d": "Existing pre-guard case: old Gillette Blue Pivot 5 photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
+    "prd_8ecb44018700": "Existing pre-guard case: old Sunsilk Smooth & Manageable photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
+    "prd_b72b872b2b7d": "Existing pre-guard case: old Sunsilk Soft & Smooth photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
+    "prd_bdfdfa2b110e": "Existing pre-guard case: old Sunsilk Anti-Dandruff Healthy Strong photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
+    "prd_dbf6cb3b3a0e": "Existing pre-guard case: old TRESemme Rich Moisture photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
+    "prd_e82e0719de28": "Existing pre-guard case: old Sunsilk Black Shine photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
+    "prd_a91e8f943ffc": "Existing pre-guard case: old Gillette Blue3 8 photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
+    "prd_13a9f6cc2aa7": "Existing pre-guard case: old Gillette Venus Comfortglide 2 photo override is currently hidden from the public catalog after a stock import. Review before remapping."
+  },
+  "known_external_override_ids": {
+    "prd_perfume_bybozo_sea_breeze_5ml": "Manual perfume product lives in data/manual_products.json, not the 1C products table.",
+    "prd_perfume_chanel_chance_5ml": "Manual perfume product lives in data/manual_products.json, not the 1C products table.",
+    "prd_perfume_le_labo_another_13_5ml": "Manual perfume product lives in data/manual_products.json, not the 1C products table."
+  }
+}

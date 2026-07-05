@@ -94,23 +94,32 @@ Do not place it in Уход за волосами even if 1C group is "Шамп�
 
 ## Identity Rule
 
-The daily `.mxl` report contains a numeric 1C item code. The existing store was first created from raw names, so the current import still preserves identity by normalized raw name and stores the 1C code as metadata.
+The daily `.mxl` report contains a numeric 1C item code. That code is the
+preferred product identity for MXL imports: names, scents, spelling and extra
+descriptions may change, but the 1C item code is treated as the stable product
+unit.
 
-Current identity:
+Current identity for `.mxl`:
+
+```text
+source_key = numeric_1c_item_code
+```
+
+Compatibility rule for older imported products:
+
+```text
+if source_code already exists in store.db:
+  reuse that existing source_id/product_id
+else:
+  create source_id = src_1c_<source_code>
+```
+
+Fallback for old `.xls` files with no 1C item code:
 
 ```text
 source_key = normalized_raw_name
 ```
 
-Additional metadata:
-
-```text
-source_code = numeric_1c_item_code
-```
-
-Future improvement:
-
-- Reconcile existing products to `source_code`
 - Add barcode
 - Add external GUID
 - Add manual matching screen for renamed products

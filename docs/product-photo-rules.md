@@ -39,6 +39,33 @@ Run before deployment after product-photo changes:
 python3 scripts/verify_product_galleries.py
 ```
 
+## Stock import photo-mapping guard
+
+1C stock imports can change the raw product name. Regular imported
+`product_id` values are derived from that raw name, so a renamed 1C row can
+create a new storefront product while the older product with finished photos
+falls out of the public catalog. The image files are not deleted, but the photo
+mapping can look "lost" on the site.
+
+After every stock import, run:
+
+```bash
+python3 scripts/audit_photo_mapping_integrity.py --strict
+```
+
+The script checks `data/product_overrides.json` against the current product
+database, manual perfume products, and the public catalog. Existing historical
+hidden photo mappings are documented in `data/photo_mapping_allowlist.json`;
+new suspected lost mappings fail in strict mode when a hidden photographed
+override has a similar current storefront product without photos. Missing
+photographed overrides also fail unless they are known external/manual products.
+Review, remap, or explicitly allowlist each case with a reason.
+
+If the guard fails, do not blindly copy photos to the newest similar product.
+First compare brand, product type, volume/weight/count, fragrance/variant, and
+front/back/card photos. Products like razors vs replacement cartridges or
+different bottle sizes must be treated as separate products.
+
 ## Petya import rules (path + publish hygiene)
 
 These rules exist because the Telegram photo bot drops raw uploads as loose

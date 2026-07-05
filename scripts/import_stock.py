@@ -174,7 +174,17 @@ def slugify(value):
     return value or "item"
 
 
-def source_id(raw_name):
+def normalize_source_code(source_code):
+    value = normalize_spaces(source_code or "")
+    if not value:
+        return ""
+    return re.sub(r"[^a-z0-9]+", "", value.lower())
+
+
+def source_id(raw_name, source_code=None):
+    code = normalize_source_code(source_code)
+    if code:
+        return f"src_1c_{code}"
     digest = hashlib.sha1(raw_name.strip().lower().encode("utf-8")).hexdigest()[:12]
     return f"src_{digest}"
 
@@ -529,8 +539,8 @@ def read_mxl_stock(source_path):
                 warnings.append(f"{raw_name}: сумма {amount} не совпадает с себестоимость*количество {expected_amount}")
             products.append(
                 {
-                    "source_id": source_id(raw_name),
-                    "source_code": marker.group(1),
+                    "source_id": source_id(raw_name, marker.group(1)),
+                    "source_code": normalize_source_code(marker.group(1)),
                     "raw_name": raw_name,
                     "raw_group": current_group or "Без группы",
                     "unit": unit,
@@ -688,6 +698,35 @@ def connect_db():
     return conn
 
 
+def resolve_import_source_id(conn, item):
+    """Prefer the stable 1C item code while preserving existing photographed rows.
+
+    Older imports used a raw-name hash as source_id. When a 1C name changes,
+    the same item code can otherwise create a new product and leave the old
+    photo/title override hidden. If this code is already known, keep the older
+    source_id, preferring the row that already has a product image.
+    """
+    source_code = normalize_source_code(item.get("source_code"))
+    if not source_code:
+        return item["source_id"]
+    existing = conn.execute(
+        """
+        select sp.source_id
+        from source_products sp
+        left join products p on p.source_id = sp.source_id
+        where sp.source_code = ?
+        order by
+          case when p.image_id is not null and p.image_id != '' then 0 else 1 end,
+          case when sp.stock_quantity > 0 then 0 else 1 end,
+          coalesce(sp.last_imported_at, '') desc,
+          sp.source_id
+        limit 1
+        """,
+        (source_code,),
+    ).fetchone()
+    return existing["source_id"] if existing else item["source_id"]
+
+
 def import_to_db(conn, data, settings, source_path):
     now = datetime.now(timezone.utc).isoformat()
     source_bytes = source_path.read_bytes()
@@ -726,6 +765,8 @@ def import_to_db(conn, data, settings, source_path):
     products_new = 0
     products_updated = 0
     for item in data["products"]:
+        item["source_code"] = normalize_source_code(item.get("source_code"))
+        item["source_id"] = resolve_import_source_id(conn, item)
         item_hash = hashlib.sha1(json.dumps(item, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
         conn.execute(
             """
