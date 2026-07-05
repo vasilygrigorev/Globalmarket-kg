@@ -6,31 +6,22 @@ confidence. Nothing here has been added to `data/product_overrides.json`
 or moved into a published `assets/products/<brand>/` folder. Raw files are
 left in place under `assets/products/` — do not delete.
 
-## 2026-07-05 — `telegram-8767964230-20260626-142813-next-2-03-*`
+## RESOLVED 2026-07-05 — `telegram-8767964230-20260626-142813-next-2-03-*`
 
-3 files: `-card-front.jpg`, `-front.jpg`, `-back.jpg`.
+Was ambiguous (back-label barcode read "YC852"/SPF50, but the tube design
+showed UV60+ — see reasoning below, kept for the record). User confirmed
+directly: **UV50 = YC852, UV60 = YC853**. Published as YC Sunscreen SPF60
+100g (`prd_8f967f2becb0`, source_code 2912), moved/renamed to
+`assets/products/yc/yc-sunscreen-spf60-100g-*.jpg`, added to
+`data/product_overrides.json`.
 
-- Front (`-front.jpg` / `-card-front.jpg`, same tube design): YC blue-design
-  tube, "WITH UV 60+ UVA+UVB", "NET WT. 100 g."
-- Back (`-back.jpg`): printed code "YC852", barcode digits
-  `8859362511882` — **byte-for-byte identical code/barcode** to the
-  already-published `assets/products/yc/yc-sunscreen-spf50-100g-back.jpg`
-  (YC-852, confirmed SPF50, source_code 2913), including the same
-  "MFD.08/2024 002 / EXP.08/2029" stamp (only the last batch digits differ:
-  1908 vs 1938). But the surrounding ingredient/description text differs
-  between the two "YC852" back photos, and the SPF50 tube design (green)
-  looks nothing like this SPF60/blue tube.
-- **Conclusion: internally inconsistent.** The back label of this file
-  cannot be trusted as the real barcode for this specific tube — it appears
-  to reuse the YC-852 back-label asset while the front shows a UV60+
-  design. By elimination this is most likely **YC-853 SPF60 100g**
-  (1C source_code 2912, `С/З YC (YC-853)SPF60 (100gr)`, stock qty 286,
-  currently no photo) since that is the only other 100g YC item in stock
-  with a matching SPF/format and no existing photo — but this is a guess,
-  not a confirmed barcode read.
-- **Action: not published.** Needs either a clearer/legible barcode photo
-  or manual confirmation before it can be mapped to `prd_8f967f2becb0`
-  (source_code 2912).
+Original reasoning while unresolved: front tube design showed "WITH UV
+60+ UVA+UVB", but the back photo's printed code "YC852" and barcode digits
+`8859362511882` were byte-for-byte identical to the already-published
+YC-852 SPF50 back photo (same MFD/EXP stamp, differing only in the last
+batch digits). The back label was apparently not a reliable per-SKU photo
+(looked reused/templated), so identity had to come from the user rather
+than the barcode.
 
 ## 2026-07-05 — `telegram-989425384-20260703-160531-{01,02}-*`
 

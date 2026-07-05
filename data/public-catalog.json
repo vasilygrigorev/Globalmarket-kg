@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T14:57:20.799986+00:00",
+  "generatedAt": "2026-07-05T15:31:51.522064+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -4573,6 +4573,35 @@
       "collections": [],
       "collectionLabels": [],
       "galleryImages": [
+        "assets/products/yc/yc-sunscreen-spf60-100g-card-front.jpg",
+        "assets/products/yc/yc-sunscreen-spf60-100g-front.jpg",
+        "assets/products/yc/yc-sunscreen-spf60-100g-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_8f967f2becb0",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": "assets/products/yc/yc-sunscreen-spf60-100g-card-front.jpg",
+      "icon": "🌸",
+      "registeredPriceKgs": 291,
+      "description": "Солнцезащитный крем YC Sunscreen UV Protection с SPF60, витамином E и B3, алоэ вера. Объём 100 г.",
+      "title": "YC Sunscreen UV Protection SPF60 солнцезащитный крем 100 г",
+      "productType": "солнцезащитный крем",
+      "brand": "YC",
+      "rating": 4.8,
+      "searchText": "yc sunscreen uv protection spf60 солнцезащитный крем 100 г уход за телом yc солнцезащитный крем солнцезащитный крем yc sunscreen uv protection с spf60, витамином e и b3, алоэ вера. объём 100 г."
+    },
+    {
+      "unit": "шт",
+      "badge": "YC",
+      "retailPriceKgs": 300,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
         "assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg",
         "assets/products/yc/yc-sunscreen-spf70-100g-front.jpg",
         "assets/products/yc/yc-sunscreen-spf70-100g-back.jpg"
@@ -4592,31 +4621,6 @@
       "brand": "YC",
       "rating": 4.8,
       "searchText": "yc sunscreen uv protection spf70 солнцезащитный крем 100 г уход за телом yc солнцезащитный крем солнцезащитный крем yc sunscreen uv protection с spf70, витамином e и b3, алоэ вера. объём 100 г."
-    },
-    {
-      "unit": "шт",
-      "badge": "С",
-      "retailPriceKgs": 300,
-      "category": "Уход за телом",
-      "categoryId": "body",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_8f967f2becb0",
-      "tones": [
-        "#f2d9c7",
-        "#c7876a"
-      ],
-      "image": null,
-      "icon": "🌸",
-      "registeredPriceKgs": 291,
-      "description": "С: средство для ухода за кожей и ежедневной гигиены. Формат: 100 g.",
-      "title": "С/З YC (YC-853)SPF60 (100gr)",
-      "productType": "уход за телом",
-      "brand": "С",
-      "rating": 4.8,
-      "searchText": "с/з yc (yc-853)spf60 (100gr) уход за телом с уход за телом с: средство для ухода за кожей и ежедневной гигиены. формат: 100 g."
     },
     {
       "unit": "шт",

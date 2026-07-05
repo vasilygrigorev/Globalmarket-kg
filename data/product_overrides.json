@@ -1572,6 +1572,24 @@
     ],
     "unit": "шт"
   },
+  "prd_8f967f2becb0": {
+    "brand": "YC",
+    "category_id": "body",
+    "clean_title": "YC Sunscreen UV Protection SPF60 солнцезащитный крем 100 г",
+    "description": "Солнцезащитный крем YC Sunscreen UV Protection с SPF60, витамином E и B3, алоэ вера. Объём 100 г.",
+    "galleryImages": [
+      "assets/products/yc/yc-sunscreen-spf60-100g-card-front.jpg",
+      "assets/products/yc/yc-sunscreen-spf60-100g-front.jpg",
+      "assets/products/yc/yc-sunscreen-spf60-100g-back.jpg"
+    ],
+    "image": "assets/products/yc/yc-sunscreen-spf60-100g-card-front.jpg",
+    "notes": [
+      "2026-07-05: фото из новой партии Пети (telegram-8767964230-20260626-142813-next-2-03); изначально штрихкод на фото читался как YC852 (совпадал по коду с уже опубликованным SPF50), что противоречило дизайну тюбика UV60+. Пользователь подтвердил напрямую: UV50 = YC852, UV60 = YC853 (совпадает с 1C кодом 2912, С/З YC (YC-853)SPF60 (100gr))."
+    ],
+    "product_type": "солнцезащитный крем",
+    "short_title": "YC Sunscreen SPF60 100 г",
+    "unit": "100 г"
+  },
   "prd_9046c923ee8d": {
     "brand": "Dove",
     "category_id": "body",

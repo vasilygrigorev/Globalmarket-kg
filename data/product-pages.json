@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 121,
+  "count": 122,
   "pages": [
     {
       "id": "prd_c5f3a1dce862",
@@ -691,7 +691,7 @@
       "retailPriceKgs": 550,
       "image": "/assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 6
+      "relatedCount": 7
     },
     {
       "id": "prd_b1d27dff5c3e",
@@ -706,7 +706,22 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/yc/yc-sunscreen-spf50-100g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 6
+      "relatedCount": 7
+    },
+    {
+      "id": "prd_8f967f2becb0",
+      "slug": "yc-sunscreen-uv-protection-spf60-solntsezaschitnyy-krem-100-g-2becb0",
+      "path": "/product/yc-sunscreen-uv-protection-spf60-solntsezaschitnyy-krem-100-g-2becb0/",
+      "url": "https://globalmarket.kg/product/yc-sunscreen-uv-protection-spf60-solntsezaschitnyy-krem-100-g-2becb0/",
+      "title": "YC Sunscreen UV Protection SPF60 солнцезащитный крем 100 г",
+      "brand": "YC",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 300,
+      "image": "/assets/products/yc/yc-sunscreen-spf60-100g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 7
     },
     {
       "id": "prd_f50077a08461",
@@ -721,7 +736,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 6
+      "relatedCount": 7
     },
     {
       "id": "prd_45b58a935040",
@@ -736,7 +751,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 6
+      "relatedCount": 7
     },
     {
       "id": "prd_0b8a7c8dea63",
@@ -751,7 +766,7 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 6
+      "relatedCount": 7
     },
     {
       "id": "prd_d3c195668843",
@@ -766,7 +781,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 6
+      "relatedCount": 7
     },
     {
       "id": "prd_96fe6b1c7d9c",
@@ -781,7 +796,7 @@
       "retailPriceKgs": 295,
       "image": "/assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 6
+      "relatedCount": 7
     },
     {
       "id": "prd_a9ee2b0ab49d",
