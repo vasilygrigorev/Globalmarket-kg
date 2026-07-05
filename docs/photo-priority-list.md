@@ -1,48 +1,14 @@
 # Photo priority list
 
-Snapshot after the 2026-07-05 exception audit. Run
-`python3 scripts/report_photo_coverage.py` for a fresh number any time —
+Snapshot after commit `b26262c` (legacy override schema normalization). Run
+`python3 scripts/report_photo_coverage.py` (or
+`python3 scripts/report_photo_priority.py`) for a fresh number any time —
 this file is a snapshot, not a live report.
 
-Current coverage: **125/529 = 23.6%** (up from 122/529 before this pass —
-see "Priority 0" below, no new photography involved).
-
-## Priority 0 — fix before shooting anything new (no camera needed)
-
-Found while auditing the 3 documented card+front-only exceptions: **23
-more products** have a `data/product_overrides.json` entry that
-`scripts/apply_product_overrides.py` silently skips, because the entry
-uses a legacy camelCase schema (`productType`/`categoryId`/`title`)
-instead of the snake_case keys the apply script actually requires
-(`clean_title`/`product_type`/`category_id`/`description`/`brand`). These
-products show **no photo at all** on the site even though several of them
-already have real photos sitting on disk (confirmed for the TRESemmé
-lines — card-front/front/back files exist under `assets/products/tresemme/`
-dated 2026-06-09).
-
-Affected brands: TRESemmé (2 more, plus 1 already allowlisted-hidden),
-Pantene (5), Lenor (8 perfume-for-laundry variants), Sunsilk (4, already
-allowlisted-hidden). Full id list is reproducible with:
-
-```bash
-python3 - <<'EOF'
-import json
-d = json.loads(open("data/product_overrides.json", encoding="utf-8").read())
-required = ("clean_title", "description", "brand", "product_type")
-for pid, v in d.items():
-    if any(k not in v for k in required) and not pid.startswith("prd_perfume_"):
-        print(pid, v.get("brand"), v.get("title"))
-EOF
-```
-
-**This is higher-value than any new shooting**: fixing the schema for
-these ~23 entries (converting the same way the 3 exceptions in this
-commit were fixed — see `data/product_overrides.json` notes on
-`prd_432b62d4b317` for the exact pattern) could restore photos for
-products that already have them, before spending any new photography time.
-Left out of this pass on purpose — it touches ~20+ live products in one
-sweep and deserves its own reviewed commit rather than being bundled into
-a "known 3 exceptions" audit.
+Current coverage: **142/529 = 26.8%** (up from 125/529 — that jump was the
+23-entry schema fix in `b26262c`, not new photography; see
+`docs/claude-next-task.md` history for that story). From here on, closing
+the gap needs real new photos.
 
 ## Priority 1 — category gaps (0% or near-0% coverage)
 
@@ -50,17 +16,18 @@ a "known 3 exceptions" audit.
 |---|---|---|---|
 | Зубная гигиена (oral care) | 26 | 0 | 0% |
 | Продукты (food) | 6 | 0 | 0% |
-| Уборка и чистота (cleaning) | 9 | 2 | 22% |
-| Разное (misc) | 69 | 2 | 3% |
 | Уход за телом (body) | 85 | 8 | 9% |
+| Разное (misc) | 75 | 8 | 11% |
+| Уборка и чистота (cleaning) | 9 | 2 | 22% |
 
-Oral care and food are fully unphotographed categories — worth a
+Oral care and food are still fully unphotographed categories — worth a
 dedicated Petya shooting session rather than one-off requests.
 
 ## Priority 2 — top 20 in-stock products with no photo, by stock value (USD)
 
 Ranked by `stock_amount_usd` (quantity × cost) — these are the products
-where a missing photo most likely costs real sales.
+where a missing photo most likely costs real sales. Unchanged from the
+previous snapshot (none of these were touched by the schema fix).
 
 | Value (USD) | Category | Raw 1C name |
 |---|---|---|
@@ -86,8 +53,8 @@ where a missing photo most likely costs real sales.
 | 912.60 | Бритье | Shaving GEL Fusion (200) Moinsture |
 
 Note: two rows are marked `status=active already` — these are visible on
-the storefront right now with a placeholder icon instead of a real photo
-(not blocked by the Priority 0 bug; nobody has photographed them yet).
+the storefront right now with a placeholder icon instead of a real photo;
+nobody has photographed them yet (unrelated to any schema bug).
 
 ## Priority 3 — products waiting on exactly one missing photo
 
@@ -99,7 +66,9 @@ published exceptions (not blocked, but a reshoot would complete them):
 - `prd_296bd01a7c1f` — Pantene Sheer Volume шампунь 600 мл — missing **back**.
 
 Not yet published, need one more `card-front` photo each (see
-`docs/pending-photo-review.md` for full detail):
+`docs/pending-photo-review.md` for full detail — these are the 6 raw
+`assets/products/telegram-989425384-20260703-160531-*` leftovers,
+untouched):
 
 - Dove go fresh Apple & White Tea, 250 мл (`prd_f23090eb2627`).
 - Dove Advanced Care Original, 250 мл (`prd_b8b5bfec07e5`).
@@ -120,3 +89,6 @@ Not yet published, need one more `card-front` photo each (see
    Volume 600 мл — сейчас на сайте только карточка + перёд.
 4. **Третье фото (card-front) для 2 товаров Dove**: Apple & White Tea и
    Advanced Care Original, 250 мл — см. `docs/pending-photo-review.md`.
+
+Готовый текст для пересылки Пете/менеджеру теперь есть отдельно в
+`docs/petya-shooting-request.md`.

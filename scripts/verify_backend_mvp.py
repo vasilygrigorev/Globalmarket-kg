@@ -114,6 +114,7 @@ def main():
                 "scripts/verify_backend_mvp.py",
                 "scripts/verify_product_galleries.py",
                 "scripts/report_photo_coverage.py",
+                "scripts/report_photo_priority.py",
                 "scripts/audit_photo_mapping_integrity.py",
                 "scripts/report_raw_photo_groups.py",
                 "scripts/check_override_schema.py",

@@ -218,3 +218,8 @@ browser, no Supabase, no Cloudflare, no secrets.
   manual perfume entries (`prd_perfume_*`, which live in
   `data/manual_products.json` instead) are exempt. Wired into the preflight
   (non-`--strict`; exits non-zero on any real hit).
+- `scripts/report_photo_priority.py` — small human-facing report (not a
+  guardrail, always exits 0): overall coverage, the 5 lowest-coverage
+  categories, and the top 20 in-stock/no-photo products by stock value in
+  one place, backing `docs/photo-priority-list.md` and
+  `docs/petya-shooting-request.md`. Syntax-checked in the preflight only.
