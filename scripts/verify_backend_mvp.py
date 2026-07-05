@@ -68,6 +68,7 @@ def main():
                 "tests/category-tiles.test.mjs",
                 "tests/header-menu.test.mjs",
                 "tests/storefront-layout.test.mjs",
+                "tests/fresh-products.test.mjs",
                 "tests/product-pages.test.mjs",
                 "tests/shared-layout.test.mjs",
                 "tests/search-categories.test.mjs",

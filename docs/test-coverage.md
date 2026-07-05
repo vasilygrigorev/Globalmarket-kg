@@ -110,8 +110,18 @@ browser, no Supabase, no Cloudflare, no secrets.
   page nested under `/product/`, `/category/`, `/catalog/`; the `data-back`
   button's generated JS falls back to an absolute `/#catalog` when there is no
   browser history to go back to.
-- `storefront-layout.test.mjs` — section order (header→banner→strip→grid), fixed
-  header + body offset (no overlap), menu open/close, cart/search present.
+- `storefront-layout.test.mjs` — section order (header→banner→strip→grid→fresh
+  products), fixed header + body offset (no overlap), menu open/close,
+  cart/search present.
+- `fresh-products.test.mjs` — the "Свежие товары" mobile-homepage strip:
+  `#freshProducts`/`#freshProductsRow` sit between the category strip and the
+  product grid; `renderFreshProducts()`/`freshProducts()` source from the
+  catalog (not localStorage) and prefer real photos + the Новинка badge with a
+  max-2-per-category/brand diversity cap; add-to-cart from a fresh card never
+  force-opens the cart drawer; mobile CSS hides `.quick-category-grid`
+  (tiles no longer take vertical space) while keeping `.catalog-directory` and
+  the fresh-products styling visible; the header menu (`#categoryMenu`) still
+  exists as the category-access path this task intentionally left unchanged.
 - `storefront-a11y.test.mjs` — card images have alt text + lazy loading;
   favorite/open/add controls carry aria labels; every product page declares
   lang=ru and gives every image an alt attribute.

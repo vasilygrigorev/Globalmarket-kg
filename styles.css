@@ -941,6 +941,63 @@ h2 {
   transform: translateY(-1px) rotate(45deg);
 }
 
+/* "Свежие товары" reuses the .recent-product card family (same size/behavior);
+   only the section wrapper and the badge are new. */
+.fresh-products {
+  padding: 22px clamp(18px, 4vw, 56px) 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.fresh-products[hidden] {
+  display: none;
+}
+
+.fresh-products-heading {
+  margin-bottom: 14px;
+}
+
+.fresh-products-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.fresh-products-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fresh-products-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Bottom-right, not top-right: the brand pill already owns the top-left
+   corner of this same narrow (~82-104px) card, and there isn't room for two
+   pills side by side up there without them overlapping. */
+.fresh-product-badge {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  max-width: calc(100% - 10px);
+  overflow: hidden;
+  padding: 2px 6px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(20, 20, 22, 0.78);
+  font-size: 9px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .service-strip article {
   display: flex;
   flex-direction: column;
@@ -2475,22 +2532,15 @@ textarea {
 
   .quick-categories {
     display: block;
-    padding: 8px 0 10px 8px;
+    padding: 6px 0 2px 8px;
     background: var(--surface);
     border-bottom: 1px solid var(--line);
   }
 
+  /* Category tiles move to the header menu on mobile so the strip under the
+     banner is "Свежие товары" instead — the catalog directory breadcrumb
+     above it stays, so category access is never fully lost. */
   .quick-category-grid {
-    display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 0 8px 2px 0;
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
-  }
-
-  .quick-category-grid::-webkit-scrollbar {
     display: none;
   }
 
@@ -2527,6 +2577,25 @@ textarea {
     margin: 0 4px 7px;
     padding: 0;
     font-size: 11px;
+  }
+
+  .fresh-products {
+    padding: 16px 0 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .fresh-products-heading {
+    padding: 0 16px;
+    margin-bottom: 10px;
+  }
+
+  .fresh-products-heading h2 {
+    font-size: 21px;
+  }
+
+  .fresh-products-row {
+    gap: 8px;
+    padding: 0 16px 0;
   }
 
   .recently-viewed {

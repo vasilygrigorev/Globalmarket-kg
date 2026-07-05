@@ -36,6 +36,12 @@ test("category strip section is present under the banner", () => {
   assert.ok(at('class="quick-categories"') > at('class="hero"'));
 });
 
+test("fresh products strip sits between the category strip and the product grid", () => {
+  assert.match(html, /id="freshProducts"/);
+  assert.ok(at('id="quickCategoryGrid"') < at('id="freshProducts"'));
+  assert.ok(at('id="freshProducts"') < at('id="productGrid"'));
+});
+
 test("fixed header + body offset prevents header overlapping the banner", () => {
   // Header is fixed; body is padded by the header height so content isn't hidden.
   assert.match(css, /\.site-header\s*\{[^}]*position:\s*fixed/s);

@@ -34,6 +34,8 @@ const quickCategoryGrid = document.querySelector("#quickCategoryGrid");
 const catalogDirectory = document.querySelector("#catalogDirectory");
 const recentlyViewedSection = document.querySelector("#recentlyViewed");
 const recentlyViewedRow = document.querySelector("#recentlyViewedRow");
+const freshProductsSection = document.querySelector("#freshProducts");
+const freshProductsRow = document.querySelector("#freshProductsRow");
 const priceRange = document.querySelector("#priceRange");
 const priceOutput = document.querySelector("#priceOutput");
 const sortSelect = document.querySelector("#sortSelect");
@@ -862,6 +864,7 @@ async function loadCatalog() {
   renderCategories();
   renderCatalogDirectory();
   renderFavoriteFilter();
+  renderFreshProducts();
   renderRecentlyViewed();
   renderProducts();
   renderCart();
@@ -1236,6 +1239,89 @@ function diversifyProductGroup(sortedProducts) {
   }
 
   return result;
+}
+
+// Deterministic "Свежие товары" pick: active products, preferring a real photo
+// and the Новинка badge, then rating, capped at 2 per category/brand so the
+// strip doesn't turn into 10 near-identical items from one line.
+function freshProducts(limit = 16) {
+  const eligible = products.filter((product) => product.status === "active");
+  const ranked = eligible.slice().sort((a, b) => {
+    const imageScore = Number(hasProductImage(b)) - Number(hasProductImage(a));
+    if (imageScore) return imageScore;
+    const badgeScore = Number(productBadges(b).includes("Новинка")) - Number(productBadges(a).includes("Новинка"));
+    if (badgeScore) return badgeScore;
+    const ratingScore = Number(b.rating || 0) - Number(a.rating || 0);
+    if (ratingScore) return ratingScore;
+    return a.title.localeCompare(b.title, "ru");
+  });
+
+  const maxPerCategory = 2;
+  const maxPerBrand = 2;
+  const categoryCounts = new Map();
+  const brandCounts = new Map();
+  const picked = [];
+
+  for (const product of ranked) {
+    if (picked.length >= limit) break;
+    const categoryKey = product.categoryId || product.category || "other";
+    const brandKey = product.brand || product.title;
+    if ((categoryCounts.get(categoryKey) || 0) >= maxPerCategory) continue;
+    if ((brandCounts.get(brandKey) || 0) >= maxPerBrand) continue;
+    picked.push(product);
+    categoryCounts.set(categoryKey, (categoryCounts.get(categoryKey) || 0) + 1);
+    brandCounts.set(brandKey, (brandCounts.get(brandKey) || 0) + 1);
+  }
+
+  if (picked.length < limit) {
+    const usedIds = new Set(picked.map((product) => product.id));
+    for (const product of ranked) {
+      if (picked.length >= limit) break;
+      if (usedIds.has(product.id)) continue;
+      picked.push(product);
+      usedIds.add(product.id);
+    }
+  }
+
+  return picked;
+}
+
+function renderFreshProducts() {
+  if (!freshProductsSection || !freshProductsRow) return;
+  const items = freshProducts();
+  freshProductsSection.hidden = items.length === 0;
+  if (!items.length) {
+    freshProductsRow.innerHTML = "";
+    return;
+  }
+
+  freshProductsRow.innerHTML = items
+    .map((product) => {
+      const display = productDisplayParts(product);
+      const badges = productBadges(product);
+      const href = hasProductPage(product) ? productPageUrl(product) : "";
+      const imageAction = href
+        ? `href="${escapeHtml(href)}" data-product-link="${product.id}"`
+        : `href="#" data-fresh-open="${product.id}"`;
+      return `
+        <article class="fresh-product recent-product">
+          <a class="recent-product-image" ${imageAction} aria-label="Открыть ${escapeHtml(product.title)}">
+            ${badges.length ? `<div class="fresh-product-badge">${escapeHtml(badges[0])}</div>` : ""}
+            <img class="${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy">
+            <span>${escapeHtml(display.brand)}</span>
+          </a>
+          <a class="recent-product-copy" ${imageAction}>
+            <strong>${escapeHtml(display.type)}</strong>
+            <small>${escapeHtml(display.size || product.unit || "")}</small>
+          </a>
+          <div class="recent-product-action">
+            <span>${formatPriceHtml(productPrice(product))}</span>
+            <button type="button" data-fresh-add="${product.id}" aria-label="Добавить ${escapeHtml(product.title)} в корзину">+</button>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
 }
 
 function renderRecentlyViewed() {
@@ -1822,6 +1908,25 @@ recentlyViewedRow?.addEventListener("click", (event) => {
   if (openButton) {
     event.preventDefault();
     openProductModal(openButton.dataset.recentOpen);
+  }
+});
+
+freshProductsRow?.addEventListener("click", (event) => {
+  const addButton = event.target.closest("[data-fresh-add]");
+  const productLink = event.target.closest("[data-product-link]");
+  const openButton = event.target.closest("[data-fresh-open]");
+  if (addButton) {
+    addToCart(addButton.dataset.freshAdd);
+    showAddFeedback(addButton);
+    return;
+  }
+  if (productLink) {
+    recordRecentlyViewed(productLink.dataset.productLink);
+    return;
+  }
+  if (openButton) {
+    event.preventDefault();
+    openProductModal(openButton.dataset.freshOpen);
   }
 });
 
