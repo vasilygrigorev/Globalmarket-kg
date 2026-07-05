@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 97,
+  "count": 117,
   "pages": [
     {
       "id": "prd_c5f3a1dce862",
@@ -16,7 +16,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
     },
     {
       "id": "prd_165eafb70eb3",
@@ -31,7 +31,7 @@
       "retailPriceKgs": 1595,
       "image": "/assets/products/ariel/ariel-fast-dissolving-2-5kg-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
     },
     {
       "id": "prd_77e4cc05435f",
@@ -46,7 +46,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
     },
     {
       "id": "prd_f19e014e94cf",
@@ -61,7 +61,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-rose-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
     },
     {
       "id": "prd_9df7a08005ce",
@@ -76,7 +76,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-sensitive-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
     },
     {
       "id": "prd_1f9a545036b2",
@@ -91,7 +91,22 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-lavender-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
+    },
+    {
+      "id": "prd_2acd534839ea",
+      "slug": "ariel-all-in-1-universal-kapsuly-15-sht-4839ea",
+      "path": "/product/ariel-all-in-1-universal-kapsuly-15-sht-4839ea/",
+      "url": "https://globalmarket.kg/product/ariel-all-in-1-universal-kapsuly-15-sht-4839ea/",
+      "title": "Ariel All in 1 Universal капсулы 15 шт",
+      "brand": "Ariel",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/ariel/ariel-all-in-1-universal-caps-15-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 19
     },
     {
       "id": "prd_682eb8c7e746",
@@ -106,7 +121,22 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-rose-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
+    },
+    {
+      "id": "prd_bd8fab362271",
+      "slug": "ariel-all-in-1-color-kapsuly-15-sht-362271",
+      "path": "/product/ariel-all-in-1-color-kapsuly-15-sht-362271/",
+      "url": "https://globalmarket.kg/product/ariel-all-in-1-color-kapsuly-15-sht-362271/",
+      "title": "Ariel All in 1 Color капсулы 15 шт",
+      "brand": "Ariel",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 19
     },
     {
       "id": "prd_4180ad019486",
@@ -121,7 +151,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/downy/downy-concentrate-rose-garden-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
     },
     {
       "id": "prd_b0bf34e30459",
@@ -136,7 +166,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-white-flower-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
     },
     {
       "id": "prd_894a7f6437d0",
@@ -151,7 +181,52 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
+    },
+    {
+      "id": "prd_cc0deb97f256",
+      "slug": "comfort-flora-soft-konditsioner-dlya-belya-1-l-97f256",
+      "path": "/product/comfort-flora-soft-konditsioner-dlya-belya-1-l-97f256/",
+      "url": "https://globalmarket.kg/product/comfort-flora-soft-konditsioner-dlya-belya-1-l-97f256/",
+      "title": "Comfort Flora Soft кондиционер для белья 1 л",
+      "brand": "Comfort",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 595,
+      "image": "/assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 19
+    },
+    {
+      "id": "prd_79ae12d5e324",
+      "slug": "comfort-spring-konditsioner-dlya-belya-1-l-d5e324",
+      "path": "/product/comfort-spring-konditsioner-dlya-belya-1-l-d5e324/",
+      "url": "https://globalmarket.kg/product/comfort-spring-konditsioner-dlya-belya-1-l-d5e324/",
+      "title": "Comfort Spring кондиционер для белья 1 л",
+      "brand": "Comfort",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 595,
+      "image": "/assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 19
+    },
+    {
+      "id": "prd_fd5eee161942",
+      "slug": "comfort-blue-love-kontsentrat-dlya-belya-1-5-l-161942",
+      "path": "/product/comfort-blue-love-kontsentrat-dlya-belya-1-5-l-161942/",
+      "url": "https://globalmarket.kg/product/comfort-blue-love-kontsentrat-dlya-belya-1-5-l-161942/",
+      "title": "Comfort Blue Love концентрат для белья 1,5 л",
+      "brand": "Comfort",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 1290,
+      "image": "/assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 19
     },
     {
       "id": "prd_0e763c9c3654",
@@ -166,7 +241,22 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
+    },
+    {
+      "id": "prd_733c019c32a5",
+      "slug": "comfort-iris-jasmine-kontsentrat-dlya-belya-1-5-l-9c32a5",
+      "path": "/product/comfort-iris-jasmine-kontsentrat-dlya-belya-1-5-l-9c32a5/",
+      "url": "https://globalmarket.kg/product/comfort-iris-jasmine-kontsentrat-dlya-belya-1-5-l-9c32a5/",
+      "title": "Comfort Iris & Jasmine концентрат для белья 1,5 л",
+      "brand": "Comfort",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 1290,
+      "image": "/assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 19
     },
     {
       "id": "prd_f0d3a0b9698b",
@@ -181,7 +271,7 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
     },
     {
       "id": "prd_71d2d567002b",
@@ -196,7 +286,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/downy/downy-concentrate-vanilla-musk-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
     },
     {
       "id": "prd_e9b3349a68aa",
@@ -211,7 +301,7 @@
       "retailPriceKgs": 595,
       "image": "/assets/products/downy/downy-fresh-valley-dew-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 19
     },
     {
       "id": "prd_9174d6118ed3",
@@ -229,6 +319,96 @@
       "relatedCount": 4
     },
     {
+      "id": "prd_c980a01a8dba",
+      "slug": "fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba",
+      "path": "/product/fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba/",
+      "url": "https://globalmarket.kg/product/fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba/",
+      "title": "Fairy Lavender средство для посуды 600 мл",
+      "brand": "Fairy",
+      "category": "Уборка и чистота",
+      "categoryId": "home_cleaning",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 4
+    },
+    {
+      "id": "prd_9499434568a7",
+      "slug": "head-shoulders-dry-scalp-shampun-400-ml-4568a7",
+      "path": "/product/head-shoulders-dry-scalp-shampun-400-ml-4568a7/",
+      "url": "https://globalmarket.kg/product/head-shoulders-dry-scalp-shampun-400-ml-4568a7/",
+      "title": "Head & Shoulders Dry Scalp шампунь 400 мл",
+      "brand": "Head & Shoulders",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 495,
+      "image": "/assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 22
+    },
+    {
+      "id": "prd_b2586efc6925",
+      "slug": "head-shoulders-soothing-scalp-shampun-400-ml-fc6925",
+      "path": "/product/head-shoulders-soothing-scalp-shampun-400-ml-fc6925/",
+      "url": "https://globalmarket.kg/product/head-shoulders-soothing-scalp-shampun-400-ml-fc6925/",
+      "title": "Head & Shoulders Soothing Scalp шампунь 400 мл",
+      "brand": "Head & Shoulders",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 495,
+      "image": "/assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 22
+    },
+    {
+      "id": "prd_6280c4c29502",
+      "slug": "head-shoulders-classic-shampun-400-ml-c29502",
+      "path": "/product/head-shoulders-classic-shampun-400-ml-c29502/",
+      "url": "https://globalmarket.kg/product/head-shoulders-classic-shampun-400-ml-c29502/",
+      "title": "Head & Shoulders Classic шампунь 400 мл",
+      "brand": "Head & Shoulders",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 495,
+      "image": "/assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 22
+    },
+    {
+      "id": "prd_20736a33272d",
+      "slug": "head-shoulders-menthol-shampun-400-ml-33272d",
+      "path": "/product/head-shoulders-menthol-shampun-400-ml-33272d/",
+      "url": "https://globalmarket.kg/product/head-shoulders-menthol-shampun-400-ml-33272d/",
+      "title": "Head & Shoulders Menthol шампунь 400 мл",
+      "brand": "Head & Shoulders",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 495,
+      "image": "/assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 22
+    },
+    {
+      "id": "prd_e165f2a765a7",
+      "slug": "dove-straight-silky-shampun-680-ml-a765a7",
+      "path": "/product/dove-straight-silky-shampun-680-ml-a765a7/",
+      "url": "https://globalmarket.kg/product/dove-straight-silky-shampun-680-ml-a765a7/",
+      "title": "Dove Straight & Silky шампунь 680 мл",
+      "brand": "Dove",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 750,
+      "image": "/assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 22
+    },
+    {
       "id": "prd_160ca842c98e",
       "slug": "herbal-essences-hello-hydration-shampun-400-ml-42c98e",
       "path": "/product/herbal-essences-hello-hydration-shampun-400-ml-42c98e/",
@@ -241,7 +421,22 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
+    },
+    {
+      "id": "prd_2563a902d211",
+      "slug": "head-shoulders-smooth-silky-shampun-650-ml-02d211",
+      "path": "/product/head-shoulders-smooth-silky-shampun-650-ml-02d211/",
+      "url": "https://globalmarket.kg/product/head-shoulders-smooth-silky-shampun-650-ml-02d211/",
+      "title": "Head & Shoulders Smooth & Silky шампунь 650 мл",
+      "brand": "Head & Shoulders",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 795,
+      "image": "/assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 22
     },
     {
       "id": "prd_8d15b250f536",
@@ -256,7 +451,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
     },
     {
       "id": "prd_a4eb0f5d79c1",
@@ -271,7 +466,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
     },
     {
       "id": "prd_77afdc5c4601",
@@ -286,7 +481,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
     },
     {
       "id": "prd_65a3b809cec1",
@@ -301,7 +496,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
     },
     {
       "id": "prd_4a753298e318",
@@ -316,7 +511,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
     },
     {
       "id": "prd_b05450ca161f",
@@ -331,7 +526,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
     },
     {
       "id": "prd_47adee9fbe47",
@@ -346,7 +541,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
     },
     {
       "id": "prd_516bdfde072f",
@@ -361,7 +556,22 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-anti-hairfall-ginger-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
+    },
+    {
+      "id": "prd_d8023f79398b",
+      "slug": "head-shoulders-anti-hairfall-shampun-650-ml-79398b",
+      "path": "/product/head-shoulders-anti-hairfall-shampun-650-ml-79398b/",
+      "url": "https://globalmarket.kg/product/head-shoulders-anti-hairfall-shampun-650-ml-79398b/",
+      "title": "Head & Shoulders Anti-Hairfall шампунь 650 мл",
+      "brand": "Head & Shoulders",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 795,
+      "image": "/assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 22
     },
     {
       "id": "prd_83037f3d35df",
@@ -376,7 +586,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
     },
     {
       "id": "prd_bfda1a27b81e",
@@ -391,7 +601,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-men-hair-fall-defence-coffee-600ml-card-front.png",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
     },
     {
       "id": "prd_3922b6ace1e1",
@@ -406,7 +616,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/clear/clear-soft-and-shiny-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
     },
     {
       "id": "prd_4a32663564b9",
@@ -421,7 +631,52 @@
       "retailPriceKgs": 1190,
       "image": "/assets/products/clear/clear-oil-control-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 22
+    },
+    {
+      "id": "prd_f724e0973fa5",
+      "slug": "dove-nourishing-oil-care-shampun-680-ml-973fa5",
+      "path": "/product/dove-nourishing-oil-care-shampun-680-ml-973fa5/",
+      "url": "https://globalmarket.kg/product/dove-nourishing-oil-care-shampun-680-ml-973fa5/",
+      "title": "Dove Nourishing Oil Care шампунь 680 мл",
+      "brand": "Dove",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 750,
+      "image": "/assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 22
+    },
+    {
+      "id": "prd_5c4dde48386b",
+      "slug": "dove-hair-fall-rescue-shampun-680-ml-48386b",
+      "path": "/product/dove-hair-fall-rescue-shampun-680-ml-48386b/",
+      "url": "https://globalmarket.kg/product/dove-hair-fall-rescue-shampun-680-ml-48386b/",
+      "title": "Dove Hair Fall Rescue шампунь 680 мл",
+      "brand": "Dove",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 750,
+      "image": "/assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 22
+    },
+    {
+      "id": "prd_fc72d049dab9",
+      "slug": "dove-intensive-repair-shampun-680-ml-49dab9",
+      "path": "/product/dove-intensive-repair-shampun-680-ml-49dab9/",
+      "url": "https://globalmarket.kg/product/dove-intensive-repair-shampun-680-ml-49dab9/",
+      "title": "Dove Intensive Repair шампунь 680 мл",
+      "brand": "Dove",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 750,
+      "image": "/assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 22
     },
     {
       "id": "prd_0b8a7c8dea63",
@@ -691,7 +946,7 @@
       "retailPriceKgs": 2490,
       "image": "/assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_e166f2ec9c56",
@@ -706,7 +961,7 @@
       "retailPriceKgs": 400,
       "image": "/assets/products/gillette/gillette-moisturising-shave-gel-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_debb27afb337",
@@ -721,7 +976,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_477c3cbc2534",
@@ -736,7 +991,7 @@
       "retailPriceKgs": 230,
       "image": "/assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_26f86cee34e8",
@@ -751,7 +1006,7 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/gillette/gillette-foam-sensitive-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_bd1e6c3316c4",
@@ -766,7 +1021,7 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/gillette/gillette-foam-original-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_e993df33c857",
@@ -781,7 +1036,7 @@
       "retailPriceKgs": 890,
       "image": "/assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_0fffb16fcaee",
@@ -796,7 +1051,7 @@
       "retailPriceKgs": 250,
       "image": "/assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_45a4eda764f6",
@@ -811,7 +1066,7 @@
       "retailPriceKgs": 1595,
       "image": "/assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_94f09d0e25fc",
@@ -826,7 +1081,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_08168d08df30",
@@ -841,7 +1096,7 @@
       "retailPriceKgs": 590,
       "image": "/assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_cbc7943d5965",
@@ -856,7 +1111,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
     },
     {
       "id": "prd_b26c0045dd47",
@@ -871,7 +1126,22 @@
       "retailPriceKgs": 650,
       "image": "/assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 13
+    },
+    {
+      "id": "prd_13dbf4e592aa",
+      "slug": "concord-stanok-d-652-e592aa",
+      "path": "/product/concord-stanok-d-652-e592aa/",
+      "url": "https://globalmarket.kg/product/concord-stanok-d-652-e592aa/",
+      "title": "Concord станок D 652",
+      "brand": "Concord",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 13
     },
     {
       "id": "prd_3e6fdfc928fc",
@@ -1161,6 +1431,36 @@
       "image": "/assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 16
+    },
+    {
+      "id": "prd_bf0dc63d18a6",
+      "slug": "plastyr-banduff-10-sht-3d18a6",
+      "path": "/product/plastyr-banduff-10-sht-3d18a6/",
+      "url": "https://globalmarket.kg/product/plastyr-banduff-10-sht-3d18a6/",
+      "title": "Пластырь Banduff 10 шт",
+      "brand": "Пластырь",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 20,
+      "image": "/assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 4
+    },
+    {
+      "id": "prd_fbc4a5e759ac",
+      "slug": "plastyr-banduff-50-sht-e759ac",
+      "path": "/product/plastyr-banduff-50-sht-e759ac/",
+      "url": "https://globalmarket.kg/product/plastyr-banduff-50-sht-e759ac/",
+      "title": "Пластырь Banduff 50 шт",
+      "brand": "Пластырь",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 120,
+      "image": "/assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 4
     },
     {
       "id": "prd_perfume_bybozo_sea_breeze_5ml",

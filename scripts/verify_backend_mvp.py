@@ -91,6 +91,7 @@ def main():
                 "tests/import-stock-identity.test.mjs",
                 "tests/search-synonyms-terms.test.mjs",
                 "tests/photo-coverage.test.mjs",
+                "tests/photo-cleanup-guard.test.mjs",
                 "tests/storefront-a11y.test.mjs",
             ],
         ),

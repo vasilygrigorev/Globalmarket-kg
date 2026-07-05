@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T13:09:56.404200+00:00",
+  "generatedAt": "2026-07-05T14:08:45.494210+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -408,14 +408,18 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/ariel/ariel-all-in-1-universal-caps-15-card-front.jpg",
+        "assets/products/ariel/ariel-all-in-1-universal-caps-15-front.jpg",
+        "assets/products/ariel/ariel-all-in-1-universal-caps-15-back.jpg"
+      ],
       "status": "active",
       "id": "prd_2acd534839ea",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/ariel/ariel-all-in-1-universal-caps-15-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 868,
       "description": "Капсулы Ariel All in 1 Universal для удобной стирки. В упаковке 15 штук.",
@@ -537,14 +541,18 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg",
+        "assets/products/ariel/ariel-all-in-1-color-caps-15-front.jpg",
+        "assets/products/ariel/ariel-all-in-1-color-caps-15-back.jpg"
+      ],
       "status": "active",
       "id": "prd_bd8fab362271",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 868,
       "description": "Капсулы Ariel All in 1 Color для стирки цветного белья. В упаковке 15 штук.",
@@ -1024,22 +1032,26 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-card-front.jpg",
+        "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-front.jpg",
+        "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_cc0deb97f256",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 577,
-      "description": "Comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 1 L, 1L.",
-      "title": "Comfort (Конд.д/белья) (1L) Flora Soft",
+      "description": "Comfort Flora Soft кондиционер для белья 1 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Comfort Flora Soft кондиционер для белья 1 л",
       "productType": "кондиционер для белья",
       "brand": "Comfort",
       "rating": 4.8,
-      "searchText": "comfort (конд.д/белья) (1l) flora soft стирка и уход за бельем comfort кондиционер для белья comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 1 l, 1l."
+      "searchText": "comfort flora soft кондиционер для белья 1 л стирка и уход за бельем comfort кондиционер для белья comfort flora soft кондиционер для белья 1 л для мягкости и свежести белья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1049,22 +1061,26 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-card-front.jpg",
+        "assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-front.jpg",
+        "assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_79ae12d5e324",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 577,
-      "description": "Comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 1 L, 1L.",
-      "title": "Comfort (Конд.д/белья) (1L) Spring",
+      "description": "Comfort Spring кондиционер для белья 1 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Comfort Spring кондиционер для белья 1 л",
       "productType": "кондиционер для белья",
       "brand": "Comfort",
       "rating": 4.8,
-      "searchText": "comfort (конд.д/белья) (1l) spring стирка и уход за бельем comfort кондиционер для белья comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 1 l, 1l."
+      "searchText": "comfort spring кондиционер для белья 1 л стирка и уход за бельем comfort кондиционер для белья comfort spring кондиционер для белья 1 л для мягкости и свежести белья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1118,28 +1134,32 @@
     },
     {
       "unit": "шт",
-      "badge": "0Comfort",
+      "badge": "Comfort",
       "retailPriceKgs": 1290,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-card-front.jpg",
+        "assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-front.jpg",
+        "assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_fd5eee161942",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 1251,
-      "description": "0Comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 1.5 L, 1.5L.",
-      "title": "0Comfort концентр.(Конд.д/белья) (1.5L) Blue Love",
+      "description": "Comfort Blue Love концентрат для белья 1,5 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Comfort Blue Love концентрат для белья 1,5 л",
       "productType": "кондиционер для белья",
-      "brand": "0Comfort",
+      "brand": "Comfort",
       "rating": 4.8,
-      "searchText": "0comfort концентр.(конд.д/белья) (1.5l) blue love стирка и уход за бельем 0comfort кондиционер для белья 0comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 1.5 l, 1.5l."
+      "searchText": "comfort blue love концентрат для белья 1,5 л стирка и уход за бельем comfort кондиционер для белья comfort blue love концентрат для белья 1,5 л для мягкости и свежести белья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1272,28 +1292,32 @@
     },
     {
       "unit": "шт",
-      "badge": "2Comfort",
+      "badge": "Comfort",
       "retailPriceKgs": 1290,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-card-front.jpg",
+        "assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-front.jpg",
+        "assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_733c019c32a5",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 1251,
-      "description": "2Comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 1.5 L, 1.5L.",
-      "title": "2Comfort концентр.(Конд.д/белья) (1.5L) Iris Jasmin",
+      "description": "Comfort Iris & Jasmine концентрат для белья 1,5 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Comfort Iris & Jasmine концентрат для белья 1,5 л",
       "productType": "кондиционер для белья",
-      "brand": "2Comfort",
+      "brand": "Comfort",
       "rating": 4.8,
-      "searchText": "2comfort концентр.(конд.д/белья) (1.5l) iris jasmin стирка и уход за бельем 2comfort кондиционер для белья 2comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 1.5 l, 1.5l."
+      "searchText": "comfort iris & jasmine концентрат для белья 1,5 л стирка и уход за бельем comfort кондиционер для белья comfort iris & jasmine концентрат для белья 1,5 л для мягкости и свежести белья. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -1669,14 +1693,18 @@
       "categoryId": "home_cleaning",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-card-front.jpg",
+        "assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-front.jpg",
+        "assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-back.jpg"
+      ],
       "status": "active",
       "id": "prd_c980a01a8dba",
       "tones": [
         "#d7eadf",
         "#6aa58f"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-card-front.jpg",
       "icon": "✨",
       "registeredPriceKgs": 436,
       "description": "Средство Fairy Lavender для мытья посуды с ароматом лаванды. Объем 600 мл.",
@@ -1769,14 +1797,18 @@
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-card-front.jpg",
+        "assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-front.jpg",
+        "assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-back.jpg"
+      ],
       "status": "active",
       "id": "prd_9499434568a7",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Шампунь Head & Shoulders Dry Scalp для ухода за кожей головы и волосами. Объем 400 мл.",
@@ -1794,14 +1826,18 @@
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-card-front.jpg",
+        "assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-front.jpg",
+        "assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-back.jpg"
+      ],
       "status": "active",
       "id": "prd_b2586efc6925",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Шампунь Head & Shoulders Soothing Scalp для мягкого ежедневного ухода. Объем 400 мл.",
@@ -1844,14 +1880,18 @@
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-card-front.jpg",
+        "assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-front.jpg",
+        "assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-back.jpg"
+      ],
       "status": "active",
       "id": "prd_6280c4c29502",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Классический шампунь Head & Shoulders для ежедневного ухода за волосами. Объем 400 мл.",
@@ -1944,14 +1984,18 @@
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-card-front.jpg",
+        "assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-front.jpg",
+        "assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-back.jpg"
+      ],
       "status": "active",
       "id": "prd_20736a33272d",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 480,
       "description": "Шампунь Head & Shoulders Menthol для ощущения свежести и ежедневного ухода. Объем 400 мл.",
@@ -2419,22 +2463,26 @@
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
+        "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-front.jpg",
+        "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_e165f2a765a7",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
-      "description": "Dove: средство для ухода за волосами на каждый день.",
-      "title": "Dove Шамп.(680) Straight & Silky",
+      "description": "Dove Straight & Silky шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Dove Straight & Silky шампунь 680 мл",
       "productType": "шампунь",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove шамп.(680) straight & silky уход за волосами dove шампунь dove: средство для ухода за волосами на каждый день."
+      "searchText": "dove straight & silky шампунь 680 мл уход за волосами dove шампунь dove straight & silky шампунь 680 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -2548,14 +2596,18 @@
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
+        "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-front.jpg",
+        "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-back.jpg"
+      ],
       "status": "active",
       "id": "prd_2563a902d211",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 771,
       "description": "Шампунь Head & Shoulders Smooth & Silky для гладкости волос. Большой объем 650 мл.",
@@ -2855,14 +2907,18 @@
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
+        "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-front.jpg",
+        "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-back.jpg"
+      ],
       "status": "active",
       "id": "prd_d8023f79398b",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 771,
       "description": "Шампунь Head & Shoulders Anti-Hairfall для ежедневного ухода за волосами. Объем 650 мл.",
@@ -3221,22 +3277,26 @@
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
+        "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-front.jpg",
+        "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_f724e0973fa5",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
-      "description": "Dove: средство для ухода за волосами на каждый день.",
-      "title": "Dove Шамп.(680) Nourish Oil",
+      "description": "Dove Nourishing Oil Care шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Dove Nourishing Oil Care шампунь 680 мл",
       "productType": "шампунь",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove шамп.(680) nourish oil уход за волосами dove шампунь dove: средство для ухода за волосами на каждый день."
+      "searchText": "dove nourishing oil care шампунь 680 мл уход за волосами dove шампунь dove nourishing oil care шампунь 680 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -3421,22 +3481,26 @@
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
+        "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-front.jpg",
+        "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_5c4dde48386b",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
-      "description": "Dove: средство для ухода за волосами на каждый день.",
-      "title": "Dove Шамп.(680) Hair Fall",
+      "description": "Dove Hair Fall Rescue шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Dove Hair Fall Rescue шампунь 680 мл",
       "productType": "шампунь",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove шамп.(680) hair fall уход за волосами dove шампунь dove: средство для ухода за волосами на каждый день."
+      "searchText": "dove hair fall rescue шампунь 680 мл уход за волосами dove шампунь dove hair fall rescue шампунь 680 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -3596,22 +3660,26 @@
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
+        "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-front.jpg",
+        "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_fc72d049dab9",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
-      "description": "Dove: средство для ухода за волосами на каждый день.",
-      "title": "Dove Шамп.(680) Intensive Repair",
+      "description": "Dove Intensive Repair шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Dove Intensive Repair шампунь 680 мл",
       "productType": "шампунь",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove шамп.(680) intensive repair уход за волосами dove шампунь dove: средство для ухода за волосами на каждый день."
+      "searchText": "dove intensive repair шампунь 680 мл уход за волосами dove шампунь dove intensive repair шампунь 680 мл для ухода за волосами. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -10295,14 +10363,18 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-card-front.jpg",
+        "assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-front.jpg",
+        "assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-back.jpg"
+      ],
       "status": "active",
       "id": "prd_13dbf4e592aa",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 436,
       "description": "Бритвенный станок Concord D 652.",
@@ -11962,22 +12034,26 @@
       "categoryId": "other",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-card-front.jpg",
+        "assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-front.jpg",
+        "assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_bf0dc63d18a6",
       "tones": [
         "#e4ded2",
         "#a99076"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-card-front.jpg",
       "icon": "🛍️",
       "registeredPriceKgs": 19,
-      "description": "Пластырь: товар для дома и личного ухода.",
-      "title": "Пластырь Banduff (10)",
-      "productType": "разное",
+      "description": "Пластырь Banduff 10 шт. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Пластырь Banduff 10 шт",
+      "productType": "пластырь",
       "brand": "Пластырь",
       "rating": 4.8,
-      "searchText": "пластырь banduff (10) разное пластырь разное пластырь: товар для дома и личного ухода."
+      "searchText": "пластырь banduff 10 шт разное пластырь пластырь пластырь banduff 10 шт. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",
@@ -12212,22 +12288,26 @@
       "categoryId": "other",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-card-front.jpg",
+        "assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-front.jpg",
+        "assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_fbc4a5e759ac",
       "tones": [
         "#e4ded2",
         "#a99076"
       ],
-      "image": null,
+      "image": "assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-card-front.jpg",
       "icon": "🛍️",
       "registeredPriceKgs": 116,
-      "description": "Пластырь: товар для дома и личного ухода.",
-      "title": "Пластырь Banduff (50)",
-      "productType": "разное",
+      "description": "Пластырь Banduff 50 шт. Наличие и детали заказа подтвердит менеджер.",
+      "title": "Пластырь Banduff 50 шт",
+      "productType": "пластырь",
       "brand": "Пластырь",
       "rating": 4.8,
-      "searchText": "пластырь banduff (50) разное пластырь разное пластырь: товар для дома и личного ухода."
+      "searchText": "пластырь banduff 50 шт разное пластырь пластырь пластырь banduff 50 шт. наличие и детали заказа подтвердит менеджер."
     },
     {
       "unit": "шт",

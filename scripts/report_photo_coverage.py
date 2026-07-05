@@ -18,6 +18,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "data" / "public-catalog.json"
+OVERRIDES_PATH = ROOT / "data" / "product_overrides.json"
+MANUAL_PRODUCTS_PATH = ROOT / "data" / "manual_products.json"
 PRODUCTS_DIR = ROOT / "assets" / "products"
 
 # Card+front-only products deliberately published without a back photo.
@@ -35,15 +37,51 @@ KNOWN_EXCEPTIONS = {
 RAW_LEFTOVER_MARKER = re.compile(r"telegram-|ocr|contact|sheet|dup", re.IGNORECASE)
 
 
+def load_json(path, default):
+    if not path.exists():
+        return default
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def override_referenced_paths():
+    """Every image/galleryImages path in data/product_overrides.json and
+    data/manual_products.json, regardless of whether that product is currently
+    visible in public-catalog.json. A stock refresh can zero out a product's
+    quantity and drop it from the public catalog while its override still holds
+    the real, correct photo — that product must not look "unused" just because
+    it is temporarily out of stock or hidden."""
+    referenced = set()
+
+    overrides = load_json(OVERRIDES_PATH, {})
+    entries = overrides.get("products", overrides) if isinstance(overrides, dict) else overrides
+    if isinstance(entries, dict):
+        entries = entries.values()
+    for entry in entries or []:
+        for src in [entry.get("image"), *(entry.get("galleryImages") or [])]:
+            if src:
+                referenced.add(str(src))
+
+    manual = load_json(MANUAL_PRODUCTS_PATH, {})
+    manual_products = manual.get("products", manual if isinstance(manual, list) else [])
+    for entry in manual_products or []:
+        for src in [entry.get("image"), *(entry.get("galleryImages") or [])]:
+            if src:
+                referenced.add(str(src))
+
+    return referenced
+
+
 def find_unused_raw_leftovers(products):
     """Files under assets/products/ that look like raw Telegram/OCR/contact-sheet
-    leftovers and are not referenced by any product's image/galleryImages. Report
-    only — nothing here is ever deleted automatically."""
+    leftovers and are not referenced by any product's image/galleryImages,
+    including products currently hidden or out of stock. Report only — nothing
+    here is ever deleted automatically."""
     referenced = set()
     for p in products:
         for src in [p.get("image"), *(p.get("galleryImages") or [])]:
             if src:
                 referenced.add(str(src))
+    referenced |= override_referenced_paths()
 
     if not PRODUCTS_DIR.exists():
         return []

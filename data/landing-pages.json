@@ -1,5 +1,5 @@
 {
-  "count": 25,
+  "count": 30,
   "pages": [
     {
       "type": "category",
@@ -17,7 +17,7 @@
         "средство для стирки",
         "стиральная машина"
       ],
-      "shown": 14
+      "shown": 20
     },
     {
       "type": "category",
@@ -37,7 +37,7 @@
         "таблетки для посудомойки",
         "Fairy"
       ],
-      "shown": 1
+      "shown": 2
     },
     {
       "type": "category",
@@ -47,7 +47,7 @@
       "url": "https://globalmarket.kg/category/hair/",
       "count": 103,
       "seoTerms": [],
-      "shown": 13
+      "shown": 23
     },
     {
       "type": "category",
@@ -110,7 +110,7 @@
         "пена для бритья",
         "гель для бритья"
       ],
-      "shown": 13
+      "shown": 14
     },
     {
       "type": "category",
@@ -145,7 +145,7 @@
         "мыло для рук",
         "хозяйственное мыло"
       ],
-      "shown": 0
+      "shown": 2
     },
     {
       "type": "collection",
@@ -162,6 +162,20 @@
         "Dash"
       ],
       "shown": 17
+    },
+    {
+      "type": "brand",
+      "slug": "dove",
+      "title": "Dove",
+      "path": "/brand/dove/",
+      "url": "https://globalmarket.kg/brand/dove/",
+      "count": 39,
+      "seoTerms": [
+        "Dove",
+        "товары Dove",
+        "Dove купить Бишкек"
+      ],
+      "shown": 5
     },
     {
       "type": "brand",
@@ -235,6 +249,20 @@
     },
     {
       "type": "brand",
+      "slug": "ariel",
+      "title": "Ariel",
+      "path": "/brand/ariel/",
+      "url": "https://globalmarket.kg/brand/ariel/",
+      "count": 10,
+      "seoTerms": [
+        "Ariel",
+        "товары Ariel",
+        "Ariel купить Бишкек"
+      ],
+      "shown": 3
+    },
+    {
+      "type": "brand",
       "slug": "dash",
       "title": "Dash",
       "path": "/brand/dash/",
@@ -274,6 +302,20 @@
         "Attar Collection купить Бишкек"
       ],
       "shown": 7
+    },
+    {
+      "type": "brand",
+      "slug": "head-shoulders",
+      "title": "Head & Shoulders",
+      "path": "/brand/head-shoulders/",
+      "url": "https://globalmarket.kg/brand/head-shoulders/",
+      "count": 7,
+      "seoTerms": [
+        "Head & Shoulders",
+        "товары Head & Shoulders",
+        "Head & Shoulders купить Бишкек"
+      ],
+      "shown": 6
     },
     {
       "type": "brand",
@@ -330,6 +372,34 @@
         "Chanel купить Бишкек"
       ],
       "shown": 5
+    },
+    {
+      "type": "brand",
+      "slug": "comfort",
+      "title": "Comfort",
+      "path": "/brand/comfort/",
+      "url": "https://globalmarket.kg/brand/comfort/",
+      "count": 5,
+      "seoTerms": [
+        "Comfort",
+        "товары Comfort",
+        "Comfort купить Бишкек"
+      ],
+      "shown": 4
+    },
+    {
+      "type": "brand",
+      "slug": "section",
+      "title": "Пластырь",
+      "path": "/brand/section/",
+      "url": "https://globalmarket.kg/brand/section/",
+      "count": 3,
+      "seoTerms": [
+        "Пластырь",
+        "товары Пластырь",
+        "Пластырь купить Бишкек"
+      ],
+      "shown": 2
     },
     {
       "type": "brand",

@@ -66,6 +66,25 @@ First compare brand, product type, volume/weight/count, fragrance/variant, and
 front/back/card photos. Products like razors vs replacement cartridges or
 different bottle sizes must be treated as separate products.
 
+Do not delete old Telegram/product image files only because they are not
+referenced by the current rebuilt catalog. Before cleanup, compare against
+`data/product_overrides.json`, manual products, and previously published
+catalog/photo mappings. A stock refresh or title change can temporarily hide a
+photographed product while the photos are still the correct source of truth for
+that item. If unsure, move files to a reviewed archive or leave them in place;
+never remove historical card/front/back assets until
+`scripts/audit_photo_mapping_integrity.py --strict` and
+`scripts/verify_product_galleries.py` are both clean after the remap.
+
+`scripts/report_photo_coverage.py`'s "unused raw leftover" scan (the report a
+prior cleanup, commit `c4e3a27`, used to justify deleting 273 files) now
+cross-checks `data/product_overrides.json` and `data/manual_products.json` in
+addition to the live public catalog, so a product that is merely out of stock
+no longer makes its real photo look unused. `tests/photo-cleanup-guard.test.mjs`
+locks this in — it reproduces the exact out-of-stock scenario and fails if the
+cross-check regresses. Still: `unused_raw_leftovers` is a report, not a
+deletion tool. Never pipe it into `rm` without a human review pass first.
+
 ## Petya import rules (path + publish hygiene)
 
 These rules exist because the Telegram photo bot drops raw uploads as loose

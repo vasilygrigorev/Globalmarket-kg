@@ -50,6 +50,41 @@
     "product_type": "гель для стирки",
     "short_title": "Dalli Color Gel 5 л"
   },
+  "prd_081404d81ef8": {
+    "brand": "Gillette",
+    "category_id": "deodorants",
+    "clean_title": "Gillette Antiperspirant Arctic Ice гель-дезодорант 70 мл",
+    "description": "Гель-антиперспирант Gillette Arctic Ice с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Категория исправлена с «Бритье» на «Дезодоранты» — по фото это гель-антиперспирант, не средство для бритья."
+    ],
+    "product_type": "гель-дезодорант",
+    "short_title": "Gillette Arctic Ice 70 мл"
+  },
+  "prd_08168d08df30": {
+    "brand": "Gillette Venus",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Smooth Sensitive сменные кассеты 2 шт",
+    "description": "Сменные кассеты Gillette Venus Smooth Sensitive с Aloe для чувствительной кожи. В упаковке 2 штуки.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg",
+      "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-front.jpg",
+      "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya late batch, группа 3; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-151313, группа 3)."
+    ],
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Venus Smooth Sensitive 2 шт"
+  },
   "prd_08d0ec5be51d": {
     "brand": "Palmolive",
     "category_id": "body",
@@ -63,18 +98,18 @@
     "category_id": "shaving",
     "clean_title": "Gillette Fusion5 ProGlide сменные кассеты 8 шт",
     "description": "Сменные кассеты Gillette Fusion5 ProGlide для гладкого и комфортного бритья. В упаковке 8 штук.",
-    "product_type": "сменные кассеты для бритья",
-    "short_title": "Fusion5 ProGlide 8 шт",
-    "image": "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg",
     "galleryImages": [
       "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg",
       "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-front.jpg",
       "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-back.jpg"
     ],
+    "image": "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg",
     "notes": [
       "2026-06-16: фото из Petya late batch, группа 2; опубликовано по контракту card/front/back.",
       "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-151334, группа 2)."
-    ]
+    ],
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Fusion5 ProGlide 8 шт"
   },
   "prd_096618ced7c1": {
     "brand": "TRESemmé",
@@ -92,23 +127,33 @@
     "productType": "шампунь",
     "title": "TRESemmé Volume шампунь 828 мл"
   },
+  "prd_0a8f4b1bdcb6": {
+    "brand": "Cussons",
+    "category_id": "body",
+    "clean_title": "Cussons пена для ванны Magnolia 500 мл",
+    "description": "Пена для ванны Cussons Magnolia для ароматной ванны и ухода за телом. Объем 500 мл.",
+    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком.",
+    "product_type": "пена для ванны",
+    "short_title": "Cussons Magnolia 500 мл",
+    "unit": "500 мл"
+  },
   "prd_0b8a7c8dea63": {
     "brand": "Johnson's",
     "category_id": "body",
     "clean_title": "Johnson's Baby Oil детское масло 300 мл",
     "description": "Детское масло Johnson's Baby Oil для ухода за кожей. Объем 300 мл.",
-    "product_type": "масло для тела",
-    "short_title": "Johnson's Baby Oil 300 мл",
-    "image": "assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
     "galleryImages": [
       "assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
       "assets/products/johnsons/johnsons-baby-oil-300ml-raw-front.jpg",
       "assets/products/johnsons/johnsons-baby-oil-300ml-raw-back.jpg"
     ],
+    "image": "assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
     "notes": [
       "2026-06-16: фото из Petya, группа 15; опубликовано по контракту card/front/back.",
       "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 15)."
-    ]
+    ],
+    "product_type": "масло для тела",
+    "short_title": "Johnson's Baby Oil 300 мл"
   },
   "prd_0ca6f45c5726": {
     "brand": "Dove",
@@ -153,6 +198,24 @@
     "title": "Lenor Sandalwood & Eucalyptus парфюм для белья 155 г",
     "unit": "155 г"
   },
+  "prd_0fffb16fcaee": {
+    "brand": "Gillette Venus",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Simply Basic одноразовые станки 5 шт",
+    "description": "Одноразовые станки Gillette Venus Simply Basic для мягкого бритья. В упаковке 5 штук.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
+      "assets/products/gillette/gillette-venus-simply-basic-5-raw-front.jpg",
+      "assets/products/gillette/gillette-venus-simply-basic-5-raw-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 13; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 13)."
+    ],
+    "product_type": "бритвенные станки",
+    "short_title": "Venus Simply Basic 5 шт"
+  },
   "prd_1069ca7c0367": {
     "brand": "Gillette",
     "category_id": "shaving",
@@ -160,6 +223,74 @@
     "description": "Сменные кассеты Gillette Fusion для комфортного бритья. В упаковке 8 штук.",
     "product_type": "сменные кассеты для бритья",
     "short_title": "Gillette Fusion 8 шт"
+  },
+  "prd_13a9f6cc2aa7": {
+    "brand": "Gillette Venus",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Comfortglide станки 2 шт",
+    "description": "Женские станки Gillette Venus Comfortglide с увлажняющими полосками для мягкого скольжения.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-card-front.jpg",
+      "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-front.jpg",
+      "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya album telegram-8767964230-20260616-152629, группа 1; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-152629, группа 1)."
+    ],
+    "product_type": "бритвенные станки",
+    "short_title": "Venus Comfortglide 2 шт"
+  },
+  "prd_13dbf4e592aa": {
+    "brand": "Concord",
+    "category_id": "shaving",
+    "clean_title": "Concord станок D 652",
+    "description": "Бритвенный станок Concord D 652.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-card-front.jpg",
+      "assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-front.jpg",
+      "assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110606-01-card-front.jpg.",
+    "product_type": "бритвенные станки",
+    "short_title": "Concord D 652"
+  },
+  "prd_160ca842c98e": {
+    "brand": "Herbal Essences",
+    "category_id": "hair",
+    "clean_title": "Herbal Essences Hello Hydration шампунь 400 мл",
+    "description": "Шампунь Herbal Essences Hello Hydration с coconut extract для сухих волос.",
+    "galleryImages": [
+      "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-card-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-back.jpg"
+    ],
+    "image": "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 8; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 8)."
+    ],
+    "product_type": "шампунь",
+    "short_title": "Hello Hydration 400 мл"
+  },
+  "prd_16599c72dda7": {
+    "brand": "Arm & Hammer",
+    "category_id": "deodorants",
+    "clean_title": "Arm & Hammer Essentials Coconut Geranium дезодорант 71 г",
+    "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Coconut Geranium. Вес 2.5 oz (71 г).",
+    "galleryImages": [
+      "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-back.jpg"
+    ],
+    "image": "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. В 1С товар назван просто «Coconut»; на фото аромат «Coconut Geranium» — единственный кокосовый вариант в остатках, сопоставлено уверенно."
+    ],
+    "product_type": "дезодорант",
+    "short_title": "Arm & Hammer Coconut Geranium 71 г"
   },
   "prd_165eafb70eb3": {
     "brand": "Ariel",
@@ -255,6 +386,14 @@
     "title": "Lenor Gold Orchid парфюм для белья 210 г",
     "unit": "210 г"
   },
+  "prd_1b9ccd33f502": {
+    "brand": "Gillette Venus",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus станки 2 шт",
+    "description": "Женские бритвенные станки Gillette Venus для мягкого бритья. В упаковке 2 штуки.",
+    "product_type": "бритвенные станки",
+    "short_title": "Venus станки 2 шт"
+  },
   "prd_1dfaa90e937f": {
     "brand": "Gillette",
     "category_id": "shaving",
@@ -318,6 +457,13 @@
     "category_id": "hair",
     "clean_title": "Head & Shoulders Menthol шампунь 400 мл",
     "description": "Шампунь Head & Shoulders Menthol для ощущения свежести и ежедневного ухода. Объем 400 мл.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-card-front.jpg",
+      "assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-front.jpg",
+      "assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-113508-02-card-front.jpg.",
     "product_type": "шампунь",
     "short_title": "H&S Menthol 400 мл"
   },
@@ -329,13 +475,36 @@
     "product_type": "мыло",
     "short_title": "Dove Anti-Stress 106 г"
   },
+  "prd_2554a61dc141": {
+    "brand": "Concord",
+    "category_id": "shaving",
+    "clean_title": "Concord станок KL 6947",
+    "description": "Бритвенный станок Concord KL 6947.",
+    "product_type": "бритвенные станки",
+    "short_title": "Concord KL 6947"
+  },
   "prd_2563a902d211": {
     "brand": "Head & Shoulders",
     "category_id": "hair",
     "clean_title": "Head & Shoulders Smooth & Silky шампунь 650 мл",
     "description": "Шампунь Head & Shoulders Smooth & Silky для гладкости волос. Большой объем 650 мл.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
+      "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-front.jpg",
+      "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-04-card-front.jpg.",
     "product_type": "шампунь",
     "short_title": "H&S Smooth & Silky 650 мл"
+  },
+  "prd_25cf348e359f": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette ProGlide Power сменные кассеты 8 шт",
+    "description": "Сменные кассеты Gillette ProGlide Power для гладкого бритья. В упаковке 8 штук.",
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "ProGlide Power кассеты 8 шт"
   },
   "prd_26f86cee34e8": {
     "brand": "Gillette",
@@ -380,13 +549,36 @@
     "title": "Pantene Sheer Volume шампунь 600 мл",
     "unit": "600 мл"
   },
+  "prd_2aacb9eafb42": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Turbo станок 1 шт",
+    "description": "Бритвенный станок Gillette Turbo для ежедневного бритья. В упаковке 1 штука.",
+    "product_type": "бритвенные станки",
+    "short_title": "Turbo станок 1 шт"
+  },
   "prd_2acd534839ea": {
     "brand": "Ariel",
     "category_id": "laundry",
     "clean_title": "Ariel All in 1 Universal капсулы 15 шт",
     "description": "Капсулы Ariel All in 1 Universal для удобной стирки. В упаковке 15 штук.",
+    "galleryImages": [
+      "assets/products/ariel/ariel-all-in-1-universal-caps-15-card-front.jpg",
+      "assets/products/ariel/ariel-all-in-1-universal-caps-15-front.jpg",
+      "assets/products/ariel/ariel-all-in-1-universal-caps-15-back.jpg"
+    ],
+    "image": "assets/products/ariel/ariel-all-in-1-universal-caps-15-card-front.jpg",
+    "notes": "2026-07-05: restored historical photos from git commit d8df3e after raw Telegram cleanup removed previously published image files; moved to stable assets/products/ariel paths.",
     "product_type": "капсулы для стирки",
     "short_title": "Ariel Universal 15 шт"
+  },
+  "prd_2db0e4603cd6": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Mach3 станки 2 шт",
+    "description": "Бритвенные станки Gillette Mach3 для ежедневного бритья. В упаковке 2 штуки.",
+    "product_type": "бритвенные станки",
+    "short_title": "Mach3 станки 2 шт"
   },
   "prd_311be4dd4930": {
     "badge": "Lenor",
@@ -429,6 +621,14 @@
     ],
     "product_type": "капсулы для стирки",
     "short_title": "Dash Color Frische 60 шт"
+  },
+  "prd_372edd4baa26": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Mach3 станок 1 шт",
+    "description": "Бритвенный станок Gillette Mach3 для ежедневного бритья. В упаковке 1 штука.",
+    "product_type": "бритвенные станки",
+    "short_title": "Mach3 станок 1 шт"
   },
   "prd_3922b6ace1e1": {
     "brand": "Clear",
@@ -525,6 +725,16 @@
     "product_type": "концентрированный кондиционер для белья",
     "short_title": "Downy Rose Garden 1 л"
   },
+  "prd_41aae31f87a5": {
+    "brand": "Cussons",
+    "category_id": "body",
+    "clean_title": "Cussons пена для ванны Marshmallow 500 мл",
+    "description": "Пена для ванны Cussons Marshmallow для ароматной ванны и ухода за телом. Объем 500 мл.",
+    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком.",
+    "product_type": "пена для ванны",
+    "short_title": "Cussons Marshmallow 500 мл",
+    "unit": "500 мл"
+  },
   "prd_432b62d4b317": {
     "brand": "TRESemmé",
     "categoryId": "hair",
@@ -548,23 +758,59 @@
     "product_type": "средство для посуды",
     "short_title": "Fairy Apple 600 мл"
   },
+  "prd_45a4eda764f6": {
+    "brand": "Gillette Venus",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Smooth сменные кассеты 8 шт",
+    "description": "Сменные кассеты Gillette Venus Smooth для женского станка. В упаковке 8 штук.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
+      "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-front.jpg",
+      "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya late batch, группа 1; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-151313, группа 1)."
+    ],
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Venus Smooth 8 шт"
+  },
   "prd_477c3cbc2534": {
     "brand": "Gillette Venus",
     "category_id": "shaving",
     "clean_title": "Gillette Venus Simply одноразовые станки 4 шт",
     "description": "Одноразовые станки Gillette Venus Simply для мягкого бритья. В упаковке 4 штуки.",
-    "product_type": "бритвенные станки",
-    "short_title": "Venus Simply 4 шт",
-    "image": "assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
     "galleryImages": [
       "assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
       "assets/products/gillette/gillette-venus-simply-4-raw-front.jpg",
       "assets/products/gillette/gillette-venus-simply-4-raw-back.jpg"
     ],
+    "image": "assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
     "notes": [
       "2026-06-16: фото из Petya, группа 12; опубликовано по контракту card/front/back.",
       "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 12)."
-    ]
+    ],
+    "product_type": "бритвенные станки",
+    "short_title": "Venus Simply 4 шт"
+  },
+  "prd_47adee9fbe47": {
+    "brand": "Herbal Essences",
+    "category_id": "hair",
+    "clean_title": "Herbal Essences Ignite My Colour шампунь 400 мл",
+    "description": "Шампунь Herbal Essences Ignite My Colour с rose extract для окрашенных волос.",
+    "galleryImages": [
+      "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-back.jpg"
+    ],
+    "image": "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 5; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 5)."
+    ],
+    "product_type": "шампунь",
+    "short_title": "Ignite My Colour 400 мл"
   },
   "prd_481ff75cc07b": {
     "brand": "Clear",
@@ -602,6 +848,24 @@
     "notes": "Фото получены через Telegram-бота Петя 2026-06-09 альбомом из 3 изображений: карточка товара, лицевая сторона, оборотная сторона. На лицевой этикетке: Clear Anti-Dandruff Shampoo Oil Control / Régulateur de Sébum, freshness up to 28 days, 10x Super Vitamin. На оборотной стороне: Oil Control, Anti-Dandruff Active, 10x Super Vitamin, Lime Essence, Min. Net Vol. 1L, Unilever, штрихкод визуально 6292089179073 требует ручной проверки. В 1С товар в наличии написан с ошибкой как `Clear Шампунь (L) (1л)Oil Cantrol`; считать это тем же товаром Clear Oil Control 1 л при будущих обновлениях.",
     "product_type": "шампунь против перхоти",
     "short_title": "Clear Oil Control 1 л"
+  },
+  "prd_4a753298e318": {
+    "brand": "Herbal Essences",
+    "category_id": "hair",
+    "clean_title": "Herbal Essences Daily Detox Shine шампунь 400 мл",
+    "description": "Шампунь Herbal Essences Daily Detox Shine с white tea и mint essences для тусклых волос.",
+    "galleryImages": [
+      "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-card-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-back.jpg"
+    ],
+    "image": "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 9; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 9)."
+    ],
+    "product_type": "шампунь",
+    "short_title": "Daily Detox Shine 400 мл"
   },
   "prd_4b7604e36f02": {
     "brand": "Dalli",
@@ -753,6 +1017,14 @@
     "title": "Pantene Daily Care шампунь 600 мл",
     "unit": "600 мл"
   },
+  "prd_57922054f500": {
+    "brand": "Concord",
+    "category_id": "shaving",
+    "clean_title": "Concord Bikini станки 3 шт",
+    "description": "Станки Concord Bikini для ухода и бритья. В упаковке 3 штуки.",
+    "product_type": "бритвенные станки",
+    "short_title": "Concord Bikini 3 шт"
+  },
   "prd_594869df277e": {
     "badge": "Lenor",
     "brand": "Lenor",
@@ -769,6 +1041,28 @@
     "productType": "парфюм для белья",
     "title": "Lenor Jasmine & White Cedar парфюм для белья 155 г",
     "unit": "155 г"
+  },
+  "prd_5c4dde48386b": {
+    "brand": "Dove",
+    "category_id": "hair",
+    "clean_title": "Dove Hair Fall Rescue шампунь 680 мл",
+    "description": "Dove Hair Fall Rescue шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
+      "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-front.jpg",
+      "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-07-card-front.jpg.",
+    "product_type": "шампунь"
+  },
+  "prd_5dffa1268ed0": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette 7 O'Clock лезвия",
+    "description": "Сменные лезвия Gillette 7 O'Clock для классического бритья.",
+    "product_type": "сменные лезвия для бритья",
+    "short_title": "7 O'Clock лезвия"
   },
   "prd_5faaff6cf17c": {
     "badge": "Pantene",
@@ -787,6 +1081,14 @@
     "title": "Pantene Moisture Renewal шампунь 600 мл",
     "unit": "600 мл"
   },
+  "prd_608815c5bf7d": {
+    "brand": "Queen",
+    "category_id": "shaving",
+    "clean_title": "Queen Lady Razor станки 5 шт",
+    "description": "Женские одноразовые станки Queen Lady Razor. В упаковке 5 штук.",
+    "product_type": "бритвенные станки",
+    "short_title": "Queen Lady Razor 5 шт"
+  },
   "prd_61419534b959": {
     "brand": "Dove",
     "category_id": "body",
@@ -800,8 +1102,41 @@
     "category_id": "hair",
     "clean_title": "Head & Shoulders Classic шампунь 400 мл",
     "description": "Классический шампунь Head & Shoulders для ежедневного ухода за волосами. Объем 400 мл.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-card-front.jpg",
+      "assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-front.jpg",
+      "assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-113508-03-card-front.jpg.",
     "product_type": "шампунь",
     "short_title": "H&S Classic 400 мл"
+  },
+  "prd_64e168d8fa9d": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Fusion станки 2 шт",
+    "description": "Бритвенные станки Gillette Fusion для комфортного бритья. В упаковке 2 штуки.",
+    "product_type": "бритвенные станки",
+    "short_title": "Fusion станки 2 шт"
+  },
+  "prd_65a3b809cec1": {
+    "brand": "Herbal Essences",
+    "category_id": "hair",
+    "clean_title": "Herbal Essences Love Me Longer шампунь 400 мл",
+    "description": "Шампунь Herbal Essences Love Me Longer с pomegranate essences и berry scent для поврежденных волос.",
+    "galleryImages": [
+      "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-back.jpg"
+    ],
+    "image": "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 6; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 6)."
+    ],
+    "product_type": "шампунь",
+    "short_title": "Love Me Longer 400 мл"
   },
   "prd_682eb8c7e746": {
     "brand": "Persil",
@@ -897,6 +1232,28 @@
     "product_type": "концентрированный кондиционер для белья",
     "short_title": "Downy Vanilla & Musk 1 л"
   },
+  "prd_733c019c32a5": {
+    "brand": "Comfort",
+    "category_id": "laundry",
+    "clean_title": "Comfort Iris & Jasmine концентрат для белья 1,5 л",
+    "description": "Comfort Iris & Jasmine концентрат для белья 1,5 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-card-front.jpg",
+      "assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-front.jpg",
+      "assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-114945-04-card-front.jpg.",
+    "product_type": "кондиционер для белья"
+  },
+  "prd_73d8df62caba": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette ProGlide сменные кассеты 4 шт",
+    "description": "Сменные кассеты Gillette ProGlide для гладкого бритья. В упаковке 4 штуки.",
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "ProGlide кассеты 4 шт"
+  },
   "prd_762c62113ca3": {
     "brand": "Dalli",
     "category_id": "germany",
@@ -905,23 +1262,51 @@
     "product_type": "капсулы для стирки",
     "short_title": "Dalli Vollwaschmittel 24 шт"
   },
+  "prd_76fa6e266408": {
+    "brand": "Cussons",
+    "category_id": "body",
+    "clean_title": "Cussons пена для ванны Apricot 500 мл",
+    "description": "Пена для ванны Cussons Apricot для ароматной ванны и ухода за телом. Объем 500 мл.",
+    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком.",
+    "product_type": "пена для ванны",
+    "short_title": "Cussons Apricot 500 мл",
+    "unit": "500 мл"
+  },
+  "prd_77afdc5c4601": {
+    "brand": "Herbal Essences",
+    "category_id": "hair",
+    "clean_title": "Herbal Essences Daily Detox Clean шампунь 400 мл",
+    "description": "Шампунь Herbal Essences Daily Detox Clean с golden raspberry и mint essences для всех типов волос.",
+    "galleryImages": [
+      "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-card-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-back.jpg"
+    ],
+    "image": "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 4; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 4)."
+    ],
+    "product_type": "шампунь",
+    "short_title": "Daily Detox Clean 400 мл"
+  },
   "prd_77e4cc05435f": {
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil White Flower гель для стирки 3 л + 1 л",
     "description": "Гель для стирки Persil White Flower с цветочным ароматом. Формат 3 л + 1 л удобен для семейного запаса.",
-    "product_type": "гель для стирки",
-    "short_title": "Persil White Flower 3 л + 1 л",
-    "image": "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg",
     "galleryImages": [
       "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg",
       "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-front.jpg",
       "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-back.jpg"
     ],
+    "image": "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg",
     "notes": [
       "2026-06-16: фото из Petya, группа 1; опубликовано по контракту card/front/back.",
       "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 1)."
-    ]
+    ],
+    "product_type": "гель для стирки",
+    "short_title": "Persil White Flower 3 л + 1 л"
   },
   "prd_7868779e689e": {
     "brand": "Colgate",
@@ -930,6 +1315,20 @@
     "description": "Зубная паста Colgate Cool Stripe в удобном формате Pump. Объем 100 мл.",
     "product_type": "зубная паста",
     "short_title": "Colgate Cool Stripe 100 мл"
+  },
+  "prd_79ae12d5e324": {
+    "brand": "Comfort",
+    "category_id": "laundry",
+    "clean_title": "Comfort Spring кондиционер для белья 1 л",
+    "description": "Comfort Spring кондиционер для белья 1 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-card-front.jpg",
+      "assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-front.jpg",
+      "assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-114945-01-card-front.jpg.",
+    "product_type": "кондиционер для белья"
   },
   "prd_7ac05b86dfd8": {
     "brand": "Dalli",
@@ -948,6 +1347,23 @@
     "product_type": "капсулы для стирки",
     "short_title": "Dalli Color Caps 12 шт"
   },
+  "prd_7c7e94c7128f": {
+    "brand": "Arm & Hammer",
+    "category_id": "deodorants",
+    "clean_title": "Arm & Hammer Ultra Max Fresh дезодорант-стик 28 г",
+    "description": "Твёрдый дезодорант-антиперспирант Arm & Hammer Ultra Max с ароматом Fresh. Вес 28 г (1.0 oz).",
+    "galleryImages": [
+      "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-back.jpg"
+    ],
+    "image": "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Сопоставлено методом исключения вместе с Powder Fresh (два похожих товара 1С «STICK Fresh» / «STICK Powder Fresh», два фото с разными подписями на упаковке)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Arm & Hammer Ultra Max Fresh 28 г"
+  },
   "prd_7cf735f59b18": {
     "brand": "TRESemmé",
     "categoryId": "hair",
@@ -964,23 +1380,41 @@
     "productType": "шампунь",
     "title": "TRESemmé Color шампунь 828 мл"
   },
+  "prd_7da6b6d3a85f": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette FlexBall станок + 4 кассеты",
+    "description": "Набор Gillette FlexBall: бритвенный станок и 4 сменные кассеты.",
+    "product_type": "бритвенные станки",
+    "short_title": "FlexBall + 4 кассеты"
+  },
   "prd_7de0af90808d": {
     "brand": "Gillette",
     "category_id": "shaving",
     "clean_title": "Gillette Blue Pivot одноразовые станки 5 шт",
     "description": "Одноразовые станки Gillette Blue Pivot для комфортного бритья. В упаковке 5 штук.",
-    "product_type": "бритвенные станки",
-    "short_title": "Blue Pivot 5 шт",
-    "image": "assets/products/gillette/gillette-blue-pivot-5-raw-card-front.jpg",
     "galleryImages": [
       "assets/products/gillette/gillette-blue-pivot-5-raw-card-front.jpg",
       "assets/products/gillette/gillette-blue-pivot-5-raw-front.jpg",
       "assets/products/gillette/gillette-blue-pivot-5-raw-back.jpg"
     ],
+    "image": "assets/products/gillette/gillette-blue-pivot-5-raw-card-front.jpg",
     "notes": [
       "2026-06-16: фото из Petya, группа 11; опубликовано по контракту card/front/back.",
       "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 11)."
-    ]
+    ],
+    "product_type": "бритвенные станки",
+    "short_title": "Blue Pivot 5 шт"
+  },
+  "prd_7ea551495133": {
+    "brand": "Cussons",
+    "category_id": "body",
+    "clean_title": "Cussons пена для ванны Apple 500 мл",
+    "description": "Пена для ванны Cussons Apple для ароматной ванны и ухода за телом. Объем 500 мл.",
+    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком.",
+    "product_type": "пена для ванны",
+    "short_title": "Cussons Apple 500 мл",
+    "unit": "500 мл"
   },
   "prd_83037f3d35df": {
     "brand": "Clear",
@@ -1025,6 +1459,24 @@
     "product_type": "гель для душа",
     "short_title": "Dove Nourishing 750 мл"
   },
+  "prd_894a7f6437d0": {
+    "brand": "Persil",
+    "category_id": "laundry",
+    "clean_title": "Persil High Foam гель для стирки 3 л + 1 л",
+    "description": "Гель для стирки Persil High Foam для свежести и чистоты белья. Большой формат 3 л + 1 л.",
+    "galleryImages": [
+      "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
+      "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-front.jpg",
+      "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-back.jpg"
+    ],
+    "image": "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 3; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 3)."
+    ],
+    "product_type": "гель для стирки",
+    "short_title": "Persil High Foam 3 л + 1 л"
+  },
   "prd_8b110a525852": {
     "brand": "AXE",
     "category_id": "deodorants",
@@ -1035,6 +1487,16 @@
     "product_type": "дезодорант 0% газа",
     "short_title": "AXE Corporate 122 мл",
     "unit": "122 мл"
+  },
+  "prd_8b31b49260e5": {
+    "brand": "Cussons",
+    "category_id": "body",
+    "clean_title": "Cussons пена для ванны Paradise Fruits 500 мл",
+    "description": "Пена для ванны Cussons Paradise Fruits для ароматной ванны и ухода за телом. Объем 500 мл.",
+    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком.",
+    "product_type": "пена для ванны",
+    "short_title": "Cussons Paradise Fruits 500 мл",
+    "unit": "500 мл"
   },
   "prd_8b7fb5c9a8b4": {
     "brand": "Head & Shoulders",
@@ -1127,8 +1589,33 @@
     "category_id": "hair",
     "clean_title": "Head & Shoulders Dry Scalp шампунь 400 мл",
     "description": "Шампунь Head & Shoulders Dry Scalp для ухода за кожей головы и волосами. Объем 400 мл.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-card-front.jpg",
+      "assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-front.jpg",
+      "assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-113508-04-card-front.jpg.",
     "product_type": "шампунь",
     "short_title": "H&S Dry Scalp 400 мл"
+  },
+  "prd_94f09d0e25fc": {
+    "brand": "Gillette Venus",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Smooth станок 1 шт",
+    "description": "Женский станок Gillette Venus Smooth с 3 лезвиями для гладкого бритья.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
+      "assets/products/gillette/gillette-venus-smooth-razor-1-raw-front.jpg",
+      "assets/products/gillette/gillette-venus-smooth-razor-1-raw-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya album telegram-8767964230-20260616-152629, группа 3; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-152629, группа 3)."
+    ],
+    "product_type": "бритвенные станки",
+    "short_title": "Venus Smooth 1 шт"
   },
   "prd_96f0268a48e0": {
     "brand": "Dash",
@@ -1146,6 +1633,24 @@
     ],
     "product_type": "гель для стирки",
     "short_title": "Dash Color Frische 3,6 л"
+  },
+  "prd_96fe6b1c7d9c": {
+    "brand": "Johnson's",
+    "category_id": "body",
+    "clean_title": "Johnson's Baby Oil детское масло 200 мл",
+    "description": "Детское масло Johnson's Baby Oil для ухода за кожей. Объем 200 мл.",
+    "galleryImages": [
+      "assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
+      "assets/products/johnsons/johnsons-baby-oil-200ml-raw-front.jpg",
+      "assets/products/johnsons/johnsons-baby-oil-200ml-raw-back.jpg"
+    ],
+    "image": "assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 14; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 14)."
+    ],
+    "product_type": "масло для тела",
+    "short_title": "Johnson's Baby Oil 200 мл"
   },
   "prd_9caa2a2540d9": {
     "brand": "Concord",
@@ -1180,6 +1685,32 @@
     "product_type": "гель для душа",
     "short_title": "Dove Calming 750 мл"
   },
+  "prd_a4eb0f5d79c1": {
+    "brand": "Herbal Essences",
+    "category_id": "hair",
+    "clean_title": "Herbal Essences Tropical Hydration шампунь 400 мл",
+    "description": "Шампунь Herbal Essences Tropical Hydration с тропическим ароматом для увлажнения волос.",
+    "galleryImages": [
+      "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-back.jpg"
+    ],
+    "image": "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 7; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 7)."
+    ],
+    "product_type": "шампунь",
+    "short_title": "Tropical Hydration 400 мл"
+  },
+  "prd_a5b0ca7fb277": {
+    "brand": "Queen",
+    "category_id": "shaving",
+    "clean_title": "Queen Lady Razor станки 5 шт картон",
+    "description": "Женские одноразовые станки Queen Lady Razor. В упаковке 5 штук.",
+    "product_type": "бритвенные станки",
+    "short_title": "Queen Lady Razor 5 шт"
+  },
   "prd_a73cd2e23d8f": {
     "brand": "Rexona",
     "category_id": "deodorants",
@@ -1187,6 +1718,41 @@
     "description": "Мужской спрей-дезодорант Rexona Antibacterial для ежедневной свежести. Объем 200 мл.",
     "product_type": "дезодорант",
     "short_title": "Rexona Men Antibacterial 200 мл"
+  },
+  "prd_a91e8f943ffc": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Blue3 одноразовые станки 8 шт",
+    "description": "Одноразовые станки Gillette Blue3 Comfort для комфортного бритья. В упаковке 8 штук.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-blue3-8-raw-card-front.jpg",
+      "assets/products/gillette/gillette-blue3-8-raw-front.jpg",
+      "assets/products/gillette/gillette-blue3-8-raw-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-blue3-8-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 1; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145927, группа 1)."
+    ],
+    "product_type": "бритвенные станки",
+    "short_title": "Blue3 8 шт"
+  },
+  "prd_a9ee2b0ab49d": {
+    "brand": "Gillette",
+    "category_id": "deodorants",
+    "clean_title": "Gillette Antiperspirant Cool Wave гель-дезодорант 70 мл",
+    "description": "Гель-антиперспирант Gillette Cool Wave с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Категория исправлена с «Бритье» на «Дезодоранты» — по фото это гель-антиперспирант, не средство для бритья."
+    ],
+    "product_type": "гель-дезодорант",
+    "short_title": "Gillette Cool Wave 70 мл"
   },
   "prd_ac041a61a578": {
     "brand": "Dash",
@@ -1212,6 +1778,24 @@
     "description": "Шампунь Dove Oil Therapy для мягкого ухода за волосами. Объем 600 мл.",
     "product_type": "шампунь",
     "short_title": "Dove Oil Therapy 600 мл"
+  },
+  "prd_b05450ca161f": {
+    "brand": "Herbal Essences",
+    "category_id": "hair",
+    "clean_title": "Herbal Essences Dazzling Shine шампунь 400 мл",
+    "description": "Шампунь Herbal Essences Dazzling Shine с lime essences для всех типов волос.",
+    "galleryImages": [
+      "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-card-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-front.jpg",
+      "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-back.jpg"
+    ],
+    "image": "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 10; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 10)."
+    ],
+    "product_type": "шампунь",
+    "short_title": "Dazzling Shine 400 мл"
   },
   "prd_b0bf34e30459": {
     "brand": "Persil",
@@ -1243,8 +1827,41 @@
     "category_id": "hair",
     "clean_title": "Head & Shoulders Soothing Scalp шампунь 400 мл",
     "description": "Шампунь Head & Shoulders Soothing Scalp для мягкого ежедневного ухода. Объем 400 мл.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-card-front.jpg",
+      "assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-front.jpg",
+      "assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-113508-01-card-front.jpg.",
     "product_type": "шампунь",
     "short_title": "H&S Soothing Scalp 400 мл"
+  },
+  "prd_b26c0045dd47": {
+    "brand": "Gillette Venus",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Comfortglide сменные кассеты 2 шт",
+    "description": "Сменные кассеты Gillette Venus Comfortglide с гелевыми полосками. В упаковке 2 штуки.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg",
+      "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-front.jpg",
+      "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya album telegram-8767964230-20260616-152629, группа 2; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-152629, группа 2)."
+    ],
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Venus Comfortglide 2 шт"
+  },
+  "prd_b4de7de6e9d9": {
+    "brand": "Gillette Venus",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Ocean станки 3 шт",
+    "description": "Женские бритвенные станки Gillette Venus Ocean для мягкого бритья. В упаковке 3 штуки.",
+    "product_type": "бритвенные станки",
+    "short_title": "Venus Ocean 3 шт"
   },
   "prd_b63755a295b7": {
     "brand": "Rexona",
@@ -1284,6 +1901,23 @@
     ],
     "unit": "шт"
   },
+  "prd_bc63389835c9": {
+    "brand": "Arm & Hammer",
+    "category_id": "deodorants",
+    "clean_title": "Arm & Hammer Essentials Juniper Berry дезодорант 71 г",
+    "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Juniper Berry. Вес 2.5 oz (71 г).",
+    "galleryImages": [
+      "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-back.jpg"
+    ],
+    "image": "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме."
+    ],
+    "product_type": "дезодорант",
+    "short_title": "Arm & Hammer Juniper Berry 71 г"
+  },
   "prd_bd1e6c3316c4": {
     "brand": "Gillette",
     "category_id": "shaving",
@@ -1300,6 +1934,13 @@
     "category_id": "laundry",
     "clean_title": "Ariel All in 1 Color капсулы 15 шт",
     "description": "Капсулы Ariel All in 1 Color для стирки цветного белья. В упаковке 15 штук.",
+    "galleryImages": [
+      "assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg",
+      "assets/products/ariel/ariel-all-in-1-color-caps-15-front.jpg",
+      "assets/products/ariel/ariel-all-in-1-color-caps-15-back.jpg"
+    ],
+    "image": "assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg",
+    "notes": "2026-07-05: restored historical photos from git commit d8df3e after raw Telegram cleanup removed previously published image files; moved to stable assets/products/ariel paths.",
     "product_type": "капсулы для стирки",
     "short_title": "Ariel Color 15 шт"
   },
@@ -1333,6 +1974,20 @@
     ],
     "unit": "шт"
   },
+  "prd_bf0dc63d18a6": {
+    "brand": "Пластырь",
+    "category_id": "other",
+    "clean_title": "Пластырь Banduff 10 шт",
+    "description": "Пластырь Banduff 10 шт. Наличие и детали заказа подтвердит менеджер.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-card-front.jpg",
+      "assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-front.jpg",
+      "assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110510-01-card-front.jpg.",
+    "product_type": "пластырь"
+  },
   "prd_bfda1a27b81e": {
     "brand": "Clear",
     "category_id": "hair",
@@ -1351,23 +2006,31 @@
     "product_type": "мужской шампунь против перхоти",
     "short_title": "Clear Hair Fall Defence Coffee 600 мл"
   },
+  "prd_c14277b95788": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Sensitive гель для бритья 200 мл",
+    "description": "Гель для бритья Gillette Sensitive для комфортного скольжения и ухода за чувствительной кожей. Объем 200 мл.",
+    "product_type": "гель для бритья",
+    "short_title": "Gillette Sensitive гель 200 мл"
+  },
   "prd_c5f3a1dce862": {
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil Rose гель для стирки 3 л + 1 л",
     "description": "Гель для стирки Persil Rose с ароматом розы. Формат 3 л + 1 л для повседневной стирки белья.",
+    "galleryImages": [
+      "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
+      "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-front.jpg",
+      "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-back.jpg"
+    ],
+    "image": "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
     "notes": [
       "2026-06-16: фото из Petya, группа 2; опубликовано по контракту card/front/back.",
       "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 2)."
     ],
     "product_type": "гель для стирки",
-    "short_title": "Persil Rose 3 л + 1 л",
-    "image": "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
-      "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-front.jpg",
-      "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-back.jpg"
-    ]
+    "short_title": "Persil Rose 3 л + 1 л"
   },
   "prd_c7fa1b548b6d": {
     "brand": "Bharmal",
@@ -1382,8 +2045,47 @@
     "category_id": "home_cleaning",
     "clean_title": "Fairy Lavender средство для посуды 600 мл",
     "description": "Средство Fairy Lavender для мытья посуды с ароматом лаванды. Объем 600 мл.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-card-front.jpg",
+      "assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-front.jpg",
+      "assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110510-03-card-front.jpg.",
     "product_type": "средство для посуды",
     "short_title": "Fairy Lavender 600 мл"
+  },
+  "prd_cbc7943d5965": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Blue3 одноразовые станки 3 шт",
+    "description": "Одноразовые станки Gillette Blue3 Comfort для комфортного бритья. В упаковке 3 штуки.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
+      "assets/products/gillette/gillette-blue3-3-raw-front.jpg",
+      "assets/products/gillette/gillette-blue3-3-raw-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya, группа 2; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145927, группа 2)."
+    ],
+    "product_type": "бритвенные станки",
+    "short_title": "Blue3 3 шт"
+  },
+  "prd_cc0deb97f256": {
+    "brand": "Comfort",
+    "category_id": "laundry",
+    "clean_title": "Comfort Flora Soft кондиционер для белья 1 л",
+    "description": "Comfort Flora Soft кондиционер для белья 1 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-card-front.jpg",
+      "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-front.jpg",
+      "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-114945-02-card-front.jpg.",
+    "product_type": "кондиционер для белья"
   },
   "prd_d0bc9026f5ab": {
     "badge": "Pantene",
@@ -1420,6 +2122,23 @@
     "title": "Lenor Spring Awakening парфюм для белья 155 г",
     "unit": "155 г"
   },
+  "prd_d3c195668843": {
+    "brand": "Dove",
+    "category_id": "body",
+    "clean_title": "Dove Advanced Care Pear & Aloe Vera спрей-антиперспирант 250 мл",
+    "description": "Спрей-антиперспирант Dove Advanced Care с ароматом груши и алоэ вера, тройным увлажнением и защитой до 72 часов. Объём 250 мл.",
+    "galleryImages": [
+      "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
+      "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-front.jpg",
+      "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме."
+    ],
+    "product_type": "спрей-антиперспирант",
+    "short_title": "Dove Pear & Aloe Vera 250 мл"
+  },
   "prd_d4772abe72eb": {
     "brand": "Fairy",
     "category_id": "home_cleaning",
@@ -1441,6 +2160,13 @@
     "category_id": "hair",
     "clean_title": "Head & Shoulders Anti-Hairfall шампунь 650 мл",
     "description": "Шампунь Head & Shoulders Anti-Hairfall для ежедневного ухода за волосами. Объем 650 мл.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
+      "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-front.jpg",
+      "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-03-card-front.jpg.",
     "product_type": "шампунь",
     "short_title": "H&S Anti-Hairfall 650 мл"
   },
@@ -1524,6 +2250,55 @@
     "product_type": "мыло",
     "short_title": "Acne мыло 100 г"
   },
+  "prd_debb27afb337": {
+    "brand": "Gillette Venus",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Smooth сменные кассеты 4 шт",
+    "description": "Сменные кассеты Gillette Venus Smooth для женского станка. В упаковке 4 штуки.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
+      "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-front.jpg",
+      "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya late batch, группа 2; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-151313, группа 2)."
+    ],
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Venus Smooth 4 шт"
+  },
+  "prd_ded7b0409c9c": {
+    "brand": "Gillette",
+    "category_id": "deodorants",
+    "clean_title": "Gillette Antiperspirant Power Rush гель-дезодорант 70 мл",
+    "description": "Гель-антиперспирант Gillette Power Rush с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-front.jpg",
+      "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Категория исправлена с «Бритье» на «Дезодоранты» — по фото это гель-антиперспирант, не средство для бритья."
+    ],
+    "product_type": "гель-дезодорант",
+    "short_title": "Gillette Power Rush 70 мл"
+  },
+  "prd_e165f2a765a7": {
+    "brand": "Dove",
+    "category_id": "hair",
+    "clean_title": "Dove Straight & Silky шампунь 680 мл",
+    "description": "Dove Straight & Silky шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
+      "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-front.jpg",
+      "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-06-card-front.jpg.",
+    "product_type": "шампунь"
+  },
   "prd_e166f2ec9c56": {
     "brand": "Gillette",
     "category_id": "shaving",
@@ -1535,6 +2310,31 @@
     "short_title": "Gillette Moisturising 200 мл",
     "unit": "200 мл"
   },
+  "prd_e1803d878dc1": {
+    "brand": "Lazer",
+    "category_id": "shaving",
+    "clean_title": "Lazer Petals-3 женские станки 4 шт",
+    "description": "Женские бритвенные станки Lazer Petals-3. В упаковке 4 штуки.",
+    "product_type": "бритвенные станки",
+    "short_title": "Lazer Petals-3 4 шт"
+  },
+  "prd_e40df5ac7d15": {
+    "brand": "Arm & Hammer",
+    "category_id": "deodorants",
+    "clean_title": "Arm & Hammer Ultra Max Powder Fresh дезодорант-стик 28 г",
+    "description": "Твёрдый дезодорант-антиперспирант Arm & Hammer Ultra Max с ароматом Powder Fresh. Вес 28 г (1.0 oz).",
+    "galleryImages": [
+      "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-back.jpg"
+    ],
+    "image": "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Сопоставлено методом исключения вместе с Fresh (два похожих товара 1С «STICK Fresh» / «STICK Powder Fresh», два фото с разными подписями на упаковке)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Arm & Hammer Ultra Max Powder Fresh 28 г"
+  },
   "prd_e616d7830dcc": {
     "brand": "AXE",
     "category_id": "deodorants",
@@ -1545,6 +2345,23 @@
     "product_type": "дезодорант 0% газа",
     "short_title": "AXE Rogue 122 мл",
     "unit": "122 мл"
+  },
+  "prd_e6202bbb1789": {
+    "brand": "Arm & Hammer",
+    "category_id": "deodorants",
+    "clean_title": "Arm & Hammer Essentials Rosemary Lavender дезодорант 71 г",
+    "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Rosemary Lavender. Вес 2.5 oz (71 г).",
+    "galleryImages": [
+      "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-front.jpg",
+      "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-back.jpg"
+    ],
+    "image": "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
+    "notes": [
+      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Отличается от похожего товара 1С «STICK Fresh Widestick Rosemary» (без лаванды, другой формат) — сопоставлено по точному совпадению аромата на фото."
+    ],
+    "product_type": "дезодорант",
+    "short_title": "Arm & Hammer Rosemary Lavender 71 г"
   },
   "prd_e74e6e5aeafb": {
     "brand": "AXE",
@@ -1604,6 +2421,24 @@
     ],
     "unit": "шт"
   },
+  "prd_e993df33c857": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Mach3 Turbo сменные кассеты 4 шт",
+    "description": "Сменные кассеты Gillette Mach3 Turbo для классического чистого бритья. В упаковке 4 штуки.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
+      "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-front.jpg",
+      "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
+    "notes": [
+      "2026-06-16: фото из Petya late batch, группа 1; опубликовано по контракту card/front/back.",
+      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-151334, группа 1)."
+    ],
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Mach3 Turbo 4 шт"
+  },
   "prd_e9b3349a68aa": {
     "brand": "Downy",
     "category_id": "laundry",
@@ -1622,6 +2457,16 @@
     "product_type": "кондиционер для белья",
     "short_title": "Downy Fresh Valley Dew 1 л"
   },
+  "prd_eb2cd134029c": {
+    "brand": "Cussons",
+    "category_id": "body",
+    "clean_title": "Cussons пена для ванны Space Candy 500 мл",
+    "description": "Пена для ванны Cussons Space Candy для ароматной ванны и ухода за телом. Объем 500 мл.",
+    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком.",
+    "product_type": "пена для ванны",
+    "short_title": "Cussons Space Candy 500 мл",
+    "unit": "500 мл"
+  },
   "prd_ebd75b1e7557": {
     "brand": "Dash",
     "category_id": "germany",
@@ -1638,6 +2483,23 @@
     ],
     "product_type": "гель для стирки",
     "short_title": "Dash Active Frische 1,1 л"
+  },
+  "prd_ebe1f3c5ba87": {
+    "brand": "Gillette Venus",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Breeze сменные кассеты 4 шт",
+    "description": "Сменные кассеты Gillette Venus Breeze для женского бритвенного станка. В упаковке 4 штуки. Наличие и цену нужно подтвердить у менеджера.",
+    "notes": "2026-06-15: скрыто с витрины из-за явной ошибки 1C: base_price_usd=561.8 при соседних Venus 5-14 USD.",
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Venus Breeze кассеты 4 шт"
+  },
+  "prd_ee71c0ae6200": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Mach3 сменные кассеты 2 шт",
+    "description": "Сменные кассеты Gillette Mach3 для ежедневного бритья. В упаковке 2 штуки.",
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Mach3 кассеты 2 шт"
   },
   "prd_f027d150c31a": {
     "brand": "Dalli",
@@ -1673,6 +2535,14 @@
     "product_type": "гель для стирки",
     "short_title": "Persil White Flower 4,8 л"
   },
+  "prd_f12169c0af17": {
+    "brand": "Concord",
+    "category_id": "shaving",
+    "clean_title": "Concord станок KL 90",
+    "description": "Бритвенный станок Concord KL 90.",
+    "product_type": "бритвенные станки",
+    "short_title": "Concord KL 90"
+  },
   "prd_f1688401cd5f": {
     "brand": "Fa",
     "category_id": "deodorants",
@@ -1697,6 +2567,62 @@
     ],
     "product_type": "гель для стирки",
     "short_title": "Persil Rose 3 л"
+  },
+  "prd_f724e0973fa5": {
+    "brand": "Dove",
+    "category_id": "hair",
+    "clean_title": "Dove Nourishing Oil Care шампунь 680 мл",
+    "description": "Dove Nourishing Oil Care шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
+      "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-front.jpg",
+      "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-01-card-front.jpg.",
+    "product_type": "шампунь"
+  },
+  "prd_fbc4a5e759ac": {
+    "brand": "Пластырь",
+    "category_id": "other",
+    "clean_title": "Пластырь Banduff 50 шт",
+    "description": "Пластырь Banduff 50 шт. Наличие и детали заказа подтвердит менеджер.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-card-front.jpg",
+      "assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-front.jpg",
+      "assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110510-02-card-front.jpg.",
+    "product_type": "пластырь"
+  },
+  "prd_fc72d049dab9": {
+    "brand": "Dove",
+    "category_id": "hair",
+    "clean_title": "Dove Intensive Repair шампунь 680 мл",
+    "description": "Dove Intensive Repair шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
+      "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-front.jpg",
+      "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-02-card-front.jpg.",
+    "product_type": "шампунь"
+  },
+  "prd_fd5eee161942": {
+    "brand": "Comfort",
+    "category_id": "laundry",
+    "clean_title": "Comfort Blue Love концентрат для белья 1,5 л",
+    "description": "Comfort Blue Love концентрат для белья 1,5 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+    "galleryImages": [
+      "assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-card-front.jpg",
+      "assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-front.jpg",
+      "assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-back.jpg"
+    ],
+    "image": "assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-114945-03-card-front.jpg.",
+    "product_type": "кондиционер для белья"
   },
   "prd_perfume_bybozo_sea_breeze_5ml": {
     "badge": "Bybozo",
@@ -1742,721 +2668,5 @@
     "searchText": "le labo another 13 парфюм 5 мл парфюм 5 мл le labo another 13 парфюм на разлив брендовый парфюм travel формат оригинальный аромат 5 мл",
     "title": "Le Labo Another 13 парфюм 5 мл",
     "unit": "5 мл"
-  },
-  "prd_c14277b95788": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette Sensitive гель для бритья 200 мл",
-    "short_title": "Gillette Sensitive гель 200 мл",
-    "description": "Гель для бритья Gillette Sensitive для комфортного скольжения и ухода за чувствительной кожей. Объем 200 мл.",
-    "product_type": "гель для бритья"
-  },
-  "prd_debb27afb337": {
-    "brand": "Gillette Venus",
-    "category_id": "shaving",
-    "clean_title": "Gillette Venus Smooth сменные кассеты 4 шт",
-    "short_title": "Venus Smooth 4 шт",
-    "description": "Сменные кассеты Gillette Venus Smooth для женского станка. В упаковке 4 штуки.",
-    "product_type": "сменные кассеты для бритья",
-    "image": "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
-      "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-front.jpg",
-      "assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya late batch, группа 2; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-151313, группа 2)."
-    ]
-  },
-  "prd_ebe1f3c5ba87": {
-    "brand": "Gillette Venus",
-    "category_id": "shaving",
-    "clean_title": "Gillette Venus Breeze сменные кассеты 4 шт",
-    "short_title": "Venus Breeze кассеты 4 шт",
-    "description": "Сменные кассеты Gillette Venus Breeze для женского бритвенного станка. В упаковке 4 штуки. Наличие и цену нужно подтвердить у менеджера.",
-    "product_type": "сменные кассеты для бритья",
-    "notes": "2026-06-15: скрыто с витрины из-за явной ошибки 1C: base_price_usd=561.8 при соседних Venus 5-14 USD."
-  },
-  "prd_e993df33c857": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette Mach3 Turbo сменные кассеты 4 шт",
-    "short_title": "Mach3 Turbo 4 шт",
-    "description": "Сменные кассеты Gillette Mach3 Turbo для классического чистого бритья. В упаковке 4 штуки.",
-    "product_type": "сменные кассеты для бритья",
-    "image": "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
-      "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-front.jpg",
-      "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya late batch, группа 1; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-151334, группа 1)."
-    ]
-  },
-  "prd_45a4eda764f6": {
-    "brand": "Gillette Venus",
-    "category_id": "shaving",
-    "clean_title": "Gillette Venus Smooth сменные кассеты 8 шт",
-    "short_title": "Venus Smooth 8 шт",
-    "description": "Сменные кассеты Gillette Venus Smooth для женского станка. В упаковке 8 штук.",
-    "product_type": "сменные кассеты для бритья",
-    "image": "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
-      "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-front.jpg",
-      "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya late batch, группа 1; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-151313, группа 1)."
-    ]
-  },
-  "prd_0fffb16fcaee": {
-    "brand": "Gillette Venus",
-    "category_id": "shaving",
-    "clean_title": "Gillette Venus Simply Basic одноразовые станки 5 шт",
-    "short_title": "Venus Simply Basic 5 шт",
-    "description": "Одноразовые станки Gillette Venus Simply Basic для мягкого бритья. В упаковке 5 штук.",
-    "product_type": "бритвенные станки",
-    "image": "assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
-      "assets/products/gillette/gillette-venus-simply-basic-5-raw-front.jpg",
-      "assets/products/gillette/gillette-venus-simply-basic-5-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 13; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 13)."
-    ]
-  },
-  "prd_2aacb9eafb42": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette Turbo станок 1 шт",
-    "short_title": "Turbo станок 1 шт",
-    "description": "Бритвенный станок Gillette Turbo для ежедневного бритья. В упаковке 1 штука.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_94f09d0e25fc": {
-    "brand": "Gillette Venus",
-    "category_id": "shaving",
-    "clean_title": "Gillette Venus Smooth станок 1 шт",
-    "short_title": "Venus Smooth 1 шт",
-    "description": "Женский станок Gillette Venus Smooth с 3 лезвиями для гладкого бритья.",
-    "product_type": "бритвенные станки",
-    "image": "assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
-      "assets/products/gillette/gillette-venus-smooth-razor-1-raw-front.jpg",
-      "assets/products/gillette/gillette-venus-smooth-razor-1-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya album telegram-8767964230-20260616-152629, группа 3; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-152629, группа 3)."
-    ]
-  },
-  "prd_1b9ccd33f502": {
-    "brand": "Gillette Venus",
-    "category_id": "shaving",
-    "clean_title": "Gillette Venus станки 2 шт",
-    "short_title": "Venus станки 2 шт",
-    "description": "Женские бритвенные станки Gillette Venus для мягкого бритья. В упаковке 2 штуки.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_a91e8f943ffc": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette Blue3 одноразовые станки 8 шт",
-    "short_title": "Blue3 8 шт",
-    "description": "Одноразовые станки Gillette Blue3 Comfort для комфортного бритья. В упаковке 8 штук.",
-    "product_type": "бритвенные станки",
-    "image": "assets/products/gillette/gillette-blue3-8-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/gillette/gillette-blue3-8-raw-card-front.jpg",
-      "assets/products/gillette/gillette-blue3-8-raw-front.jpg",
-      "assets/products/gillette/gillette-blue3-8-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 1; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145927, группа 1)."
-    ]
-  },
-  "prd_08168d08df30": {
-    "brand": "Gillette Venus",
-    "category_id": "shaving",
-    "clean_title": "Gillette Venus Smooth Sensitive сменные кассеты 2 шт",
-    "short_title": "Venus Smooth Sensitive 2 шт",
-    "description": "Сменные кассеты Gillette Venus Smooth Sensitive с Aloe для чувствительной кожи. В упаковке 2 штуки.",
-    "product_type": "сменные кассеты для бритья",
-    "image": "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg",
-      "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-front.jpg",
-      "assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya late batch, группа 3; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-151313, группа 3)."
-    ]
-  },
-  "prd_cbc7943d5965": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette Blue3 одноразовые станки 3 шт",
-    "short_title": "Blue3 3 шт",
-    "description": "Одноразовые станки Gillette Blue3 Comfort для комфортного бритья. В упаковке 3 штуки.",
-    "product_type": "бритвенные станки",
-    "image": "assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
-      "assets/products/gillette/gillette-blue3-3-raw-front.jpg",
-      "assets/products/gillette/gillette-blue3-3-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 2; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145927, группа 2)."
-    ]
-  },
-  "prd_13a9f6cc2aa7": {
-    "brand": "Gillette Venus",
-    "category_id": "shaving",
-    "clean_title": "Gillette Venus Comfortglide станки 2 шт",
-    "short_title": "Venus Comfortglide 2 шт",
-    "description": "Женские станки Gillette Venus Comfortglide с увлажняющими полосками для мягкого скольжения.",
-    "product_type": "бритвенные станки",
-    "image": "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-card-front.jpg",
-      "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-front.jpg",
-      "assets/products/gillette/gillette-venus-comfortglide-razor-2-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya album telegram-8767964230-20260616-152629, группа 1; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-152629, группа 1)."
-    ]
-  },
-  "prd_b26c0045dd47": {
-    "brand": "Gillette Venus",
-    "category_id": "shaving",
-    "clean_title": "Gillette Venus Comfortglide сменные кассеты 2 шт",
-    "short_title": "Venus Comfortglide 2 шт",
-    "description": "Сменные кассеты Gillette Venus Comfortglide с гелевыми полосками. В упаковке 2 штуки.",
-    "product_type": "сменные кассеты для бритья",
-    "image": "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg",
-      "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-front.jpg",
-      "assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya album telegram-8767964230-20260616-152629, группа 2; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-152629, группа 2)."
-    ]
-  },
-  "prd_ee71c0ae6200": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette Mach3 сменные кассеты 2 шт",
-    "short_title": "Mach3 кассеты 2 шт",
-    "description": "Сменные кассеты Gillette Mach3 для ежедневного бритья. В упаковке 2 штуки.",
-    "product_type": "сменные кассеты для бритья"
-  },
-  "prd_2db0e4603cd6": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette Mach3 станки 2 шт",
-    "short_title": "Mach3 станки 2 шт",
-    "description": "Бритвенные станки Gillette Mach3 для ежедневного бритья. В упаковке 2 штуки.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_25cf348e359f": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette ProGlide Power сменные кассеты 8 шт",
-    "short_title": "ProGlide Power кассеты 8 шт",
-    "description": "Сменные кассеты Gillette ProGlide Power для гладкого бритья. В упаковке 8 штук.",
-    "product_type": "сменные кассеты для бритья"
-  },
-  "prd_7da6b6d3a85f": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette FlexBall станок + 4 кассеты",
-    "short_title": "FlexBall + 4 кассеты",
-    "description": "Набор Gillette FlexBall: бритвенный станок и 4 сменные кассеты.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_b4de7de6e9d9": {
-    "brand": "Gillette Venus",
-    "category_id": "shaving",
-    "clean_title": "Gillette Venus Ocean станки 3 шт",
-    "short_title": "Venus Ocean 3 шт",
-    "description": "Женские бритвенные станки Gillette Venus Ocean для мягкого бритья. В упаковке 3 штуки.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_5dffa1268ed0": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette 7 O'Clock лезвия",
-    "short_title": "7 O'Clock лезвия",
-    "description": "Сменные лезвия Gillette 7 O'Clock для классического бритья.",
-    "product_type": "сменные лезвия для бритья"
-  },
-  "prd_e1803d878dc1": {
-    "brand": "Lazer",
-    "category_id": "shaving",
-    "clean_title": "Lazer Petals-3 женские станки 4 шт",
-    "short_title": "Lazer Petals-3 4 шт",
-    "description": "Женские бритвенные станки Lazer Petals-3. В упаковке 4 штуки.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_64e168d8fa9d": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette Fusion станки 2 шт",
-    "short_title": "Fusion станки 2 шт",
-    "description": "Бритвенные станки Gillette Fusion для комфортного бритья. В упаковке 2 штуки.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_a5b0ca7fb277": {
-    "brand": "Queen",
-    "category_id": "shaving",
-    "clean_title": "Queen Lady Razor станки 5 шт картон",
-    "short_title": "Queen Lady Razor 5 шт",
-    "description": "Женские одноразовые станки Queen Lady Razor. В упаковке 5 штук.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_57922054f500": {
-    "brand": "Concord",
-    "category_id": "shaving",
-    "clean_title": "Concord Bikini станки 3 шт",
-    "short_title": "Concord Bikini 3 шт",
-    "description": "Станки Concord Bikini для ухода и бритья. В упаковке 3 штуки.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_608815c5bf7d": {
-    "brand": "Queen",
-    "category_id": "shaving",
-    "clean_title": "Queen Lady Razor станки 5 шт",
-    "short_title": "Queen Lady Razor 5 шт",
-    "description": "Женские одноразовые станки Queen Lady Razor. В упаковке 5 штук.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_f12169c0af17": {
-    "brand": "Concord",
-    "category_id": "shaving",
-    "clean_title": "Concord станок KL 90",
-    "short_title": "Concord KL 90",
-    "description": "Бритвенный станок Concord KL 90.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_13dbf4e592aa": {
-    "brand": "Concord",
-    "category_id": "shaving",
-    "clean_title": "Concord станок D 652",
-    "short_title": "Concord D 652",
-    "description": "Бритвенный станок Concord D 652.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_2554a61dc141": {
-    "brand": "Concord",
-    "category_id": "shaving",
-    "clean_title": "Concord станок KL 6947",
-    "short_title": "Concord KL 6947",
-    "description": "Бритвенный станок Concord KL 6947.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_372edd4baa26": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette Mach3 станок 1 шт",
-    "short_title": "Mach3 станок 1 шт",
-    "description": "Бритвенный станок Gillette Mach3 для ежедневного бритья. В упаковке 1 штука.",
-    "product_type": "бритвенные станки"
-  },
-  "prd_73d8df62caba": {
-    "brand": "Gillette",
-    "category_id": "shaving",
-    "clean_title": "Gillette ProGlide сменные кассеты 4 шт",
-    "short_title": "ProGlide кассеты 4 шт",
-    "description": "Сменные кассеты Gillette ProGlide для гладкого бритья. В упаковке 4 штуки.",
-    "product_type": "сменные кассеты для бритья"
-  },
-  "prd_41aae31f87a5": {
-    "brand": "Cussons",
-    "category_id": "body",
-    "clean_title": "Cussons пена для ванны Marshmallow 500 мл",
-    "short_title": "Cussons Marshmallow 500 мл",
-    "description": "Пена для ванны Cussons Marshmallow для ароматной ванны и ухода за телом. Объем 500 мл.",
-    "product_type": "пена для ванны",
-    "unit": "500 мл",
-    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком."
-  },
-  "prd_8b31b49260e5": {
-    "brand": "Cussons",
-    "category_id": "body",
-    "clean_title": "Cussons пена для ванны Paradise Fruits 500 мл",
-    "short_title": "Cussons Paradise Fruits 500 мл",
-    "description": "Пена для ванны Cussons Paradise Fruits для ароматной ванны и ухода за телом. Объем 500 мл.",
-    "product_type": "пена для ванны",
-    "unit": "500 мл",
-    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком."
-  },
-  "prd_eb2cd134029c": {
-    "brand": "Cussons",
-    "category_id": "body",
-    "clean_title": "Cussons пена для ванны Space Candy 500 мл",
-    "short_title": "Cussons Space Candy 500 мл",
-    "description": "Пена для ванны Cussons Space Candy для ароматной ванны и ухода за телом. Объем 500 мл.",
-    "product_type": "пена для ванны",
-    "unit": "500 мл",
-    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком."
-  },
-  "prd_7ea551495133": {
-    "brand": "Cussons",
-    "category_id": "body",
-    "clean_title": "Cussons пена для ванны Apple 500 мл",
-    "short_title": "Cussons Apple 500 мл",
-    "description": "Пена для ванны Cussons Apple для ароматной ванны и ухода за телом. Объем 500 мл.",
-    "product_type": "пена для ванны",
-    "unit": "500 мл",
-    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком."
-  },
-  "prd_76fa6e266408": {
-    "brand": "Cussons",
-    "category_id": "body",
-    "clean_title": "Cussons пена для ванны Apricot 500 мл",
-    "short_title": "Cussons Apricot 500 мл",
-    "description": "Пена для ванны Cussons Apricot для ароматной ванны и ухода за телом. Объем 500 мл.",
-    "product_type": "пена для ванны",
-    "unit": "500 мл",
-    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком."
-  },
-  "prd_0a8f4b1bdcb6": {
-    "brand": "Cussons",
-    "category_id": "body",
-    "clean_title": "Cussons пена для ванны Magnolia 500 мл",
-    "short_title": "Cussons Magnolia 500 мл",
-    "description": "Пена для ванны Cussons Magnolia для ароматной ванны и ухода за телом. Объем 500 мл.",
-    "product_type": "пена для ванны",
-    "unit": "500 мл",
-    "notes": "2026-06-15: перенесено из волос в уход за телом; raw 1C group Шампуни Бальзамы ошибочно сбивает категорию, но название пена для ванны является более сильным признаком."
-  },
-  "prd_894a7f6437d0": {
-    "brand": "Persil",
-    "category_id": "laundry",
-    "clean_title": "Persil High Foam гель для стирки 3 л + 1 л",
-    "short_title": "Persil High Foam 3 л + 1 л",
-    "description": "Гель для стирки Persil High Foam для свежести и чистоты белья. Большой формат 3 л + 1 л.",
-    "product_type": "гель для стирки",
-    "image": "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
-      "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-front.jpg",
-      "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 3; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 3)."
-    ]
-  },
-  "prd_77afdc5c4601": {
-    "brand": "Herbal Essences",
-    "category_id": "hair",
-    "clean_title": "Herbal Essences Daily Detox Clean шампунь 400 мл",
-    "short_title": "Daily Detox Clean 400 мл",
-    "description": "Шампунь Herbal Essences Daily Detox Clean с golden raspberry и mint essences для всех типов волос.",
-    "product_type": "шампунь",
-    "image": "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-card-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-daily-detox-clean-400ml-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 4; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 4)."
-    ]
-  },
-  "prd_47adee9fbe47": {
-    "brand": "Herbal Essences",
-    "category_id": "hair",
-    "clean_title": "Herbal Essences Ignite My Colour шампунь 400 мл",
-    "short_title": "Ignite My Colour 400 мл",
-    "description": "Шампунь Herbal Essences Ignite My Colour с rose extract для окрашенных волос.",
-    "product_type": "шампунь",
-    "image": "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-card-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-ignite-my-colour-400ml-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 5; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 5)."
-    ]
-  },
-  "prd_65a3b809cec1": {
-    "brand": "Herbal Essences",
-    "category_id": "hair",
-    "clean_title": "Herbal Essences Love Me Longer шампунь 400 мл",
-    "short_title": "Love Me Longer 400 мл",
-    "description": "Шампунь Herbal Essences Love Me Longer с pomegranate essences и berry scent для поврежденных волос.",
-    "product_type": "шампунь",
-    "image": "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-card-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-love-me-longer-400ml-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 6; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 6)."
-    ]
-  },
-  "prd_a4eb0f5d79c1": {
-    "brand": "Herbal Essences",
-    "category_id": "hair",
-    "clean_title": "Herbal Essences Tropical Hydration шампунь 400 мл",
-    "short_title": "Tropical Hydration 400 мл",
-    "description": "Шампунь Herbal Essences Tropical Hydration с тропическим ароматом для увлажнения волос.",
-    "product_type": "шампунь",
-    "image": "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-card-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-tropical-hydration-400ml-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 7; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 7)."
-    ]
-  },
-  "prd_160ca842c98e": {
-    "brand": "Herbal Essences",
-    "category_id": "hair",
-    "clean_title": "Herbal Essences Hello Hydration шампунь 400 мл",
-    "short_title": "Hello Hydration 400 мл",
-    "description": "Шампунь Herbal Essences Hello Hydration с coconut extract для сухих волос.",
-    "product_type": "шампунь",
-    "image": "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-card-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-hello-hydration-400ml-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 8; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 8)."
-    ]
-  },
-  "prd_4a753298e318": {
-    "brand": "Herbal Essences",
-    "category_id": "hair",
-    "clean_title": "Herbal Essences Daily Detox Shine шампунь 400 мл",
-    "short_title": "Daily Detox Shine 400 мл",
-    "description": "Шампунь Herbal Essences Daily Detox Shine с white tea и mint essences для тусклых волос.",
-    "product_type": "шампунь",
-    "image": "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-card-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-daily-detox-shine-400ml-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 9; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 9)."
-    ]
-  },
-  "prd_b05450ca161f": {
-    "brand": "Herbal Essences",
-    "category_id": "hair",
-    "clean_title": "Herbal Essences Dazzling Shine шампунь 400 мл",
-    "short_title": "Dazzling Shine 400 мл",
-    "description": "Шампунь Herbal Essences Dazzling Shine с lime essences для всех типов волос.",
-    "product_type": "шампунь",
-    "image": "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-card-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-front.jpg",
-      "assets/products/herbal-essences/herbal-essences-dazzling-shine-400ml-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 10; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 10)."
-    ]
-  },
-  "prd_96fe6b1c7d9c": {
-    "brand": "Johnson's",
-    "category_id": "body",
-    "clean_title": "Johnson's Baby Oil детское масло 200 мл",
-    "short_title": "Johnson's Baby Oil 200 мл",
-    "description": "Детское масло Johnson's Baby Oil для ухода за кожей. Объем 200 мл.",
-    "product_type": "масло для тела",
-    "image": "assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
-    "galleryImages": [
-      "assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
-      "assets/products/johnsons/johnsons-baby-oil-200ml-raw-front.jpg",
-      "assets/products/johnsons/johnsons-baby-oil-200ml-raw-back.jpg"
-    ],
-    "notes": [
-      "2026-06-16: фото из Petya, группа 14; опубликовано по контракту card/front/back.",
-      "2026-06-16: заменены публичные изображения на оригиналы Telegram без обработки (telegram-8767964230-20260616-145700, группа 14)."
-    ]
-  },
-  "prd_ded7b0409c9c": {
-    "brand": "Gillette",
-    "category_id": "deodorants",
-    "clean_title": "Gillette Antiperspirant Power Rush гель-дезодорант 70 мл",
-    "description": "Гель-антиперспирант Gillette Power Rush с защитой от запаха и пота до 48 часов. Объём 70 мл.",
-    "galleryImages": [
-      "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
-      "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-front.jpg",
-      "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-back.jpg"
-    ],
-    "image": "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
-    "notes": [
-      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Категория исправлена с «Бритье» на «Дезодоранты» — по фото это гель-антиперспирант, не средство для бритья."
-    ],
-    "product_type": "гель-дезодорант",
-    "short_title": "Gillette Power Rush 70 мл"
-  },
-  "prd_081404d81ef8": {
-    "brand": "Gillette",
-    "category_id": "deodorants",
-    "clean_title": "Gillette Antiperspirant Arctic Ice гель-дезодорант 70 мл",
-    "description": "Гель-антиперспирант Gillette Arctic Ice с защитой от запаха и пота до 48 часов. Объём 70 мл.",
-    "galleryImages": [
-      "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
-      "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-front.jpg",
-      "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-back.jpg"
-    ],
-    "image": "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
-    "notes": [
-      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Категория исправлена с «Бритье» на «Дезодоранты» — по фото это гель-антиперспирант, не средство для бритья."
-    ],
-    "product_type": "гель-дезодорант",
-    "short_title": "Gillette Arctic Ice 70 мл"
-  },
-  "prd_a9ee2b0ab49d": {
-    "brand": "Gillette",
-    "category_id": "deodorants",
-    "clean_title": "Gillette Antiperspirant Cool Wave гель-дезодорант 70 мл",
-    "description": "Гель-антиперспирант Gillette Cool Wave с защитой от запаха и пота до 48 часов. Объём 70 мл.",
-    "galleryImages": [
-      "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
-      "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-front.jpg",
-      "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-back.jpg"
-    ],
-    "image": "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
-    "notes": [
-      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Категория исправлена с «Бритье» на «Дезодоранты» — по фото это гель-антиперспирант, не средство для бритья."
-    ],
-    "product_type": "гель-дезодорант",
-    "short_title": "Gillette Cool Wave 70 мл"
-  },
-  "prd_d3c195668843": {
-    "brand": "Dove",
-    "category_id": "body",
-    "clean_title": "Dove Advanced Care Pear & Aloe Vera спрей-антиперспирант 250 мл",
-    "description": "Спрей-антиперспирант Dove Advanced Care с ароматом груши и алоэ вера, тройным увлажнением и защитой до 72 часов. Объём 250 мл.",
-    "galleryImages": [
-      "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
-      "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-front.jpg",
-      "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-back.jpg"
-    ],
-    "image": "assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
-    "notes": [
-      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме."
-    ],
-    "product_type": "спрей-антиперспирант",
-    "short_title": "Dove Pear & Aloe Vera 250 мл"
-  },
-  "prd_7c7e94c7128f": {
-    "brand": "Arm & Hammer",
-    "category_id": "deodorants",
-    "clean_title": "Arm & Hammer Ultra Max Fresh дезодорант-стик 28 г",
-    "description": "Твёрдый дезодорант-антиперспирант Arm & Hammer Ultra Max с ароматом Fresh. Вес 28 г (1.0 oz).",
-    "galleryImages": [
-      "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
-      "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-front.jpg",
-      "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-back.jpg"
-    ],
-    "image": "assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
-    "notes": [
-      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Сопоставлено методом исключения вместе с Powder Fresh (два похожих товара 1С «STICK Fresh» / «STICK Powder Fresh», два фото с разными подписями на упаковке)."
-    ],
-    "product_type": "дезодорант-стик",
-    "short_title": "Arm & Hammer Ultra Max Fresh 28 г"
-  },
-  "prd_e40df5ac7d15": {
-    "brand": "Arm & Hammer",
-    "category_id": "deodorants",
-    "clean_title": "Arm & Hammer Ultra Max Powder Fresh дезодорант-стик 28 г",
-    "description": "Твёрдый дезодорант-антиперспирант Arm & Hammer Ultra Max с ароматом Powder Fresh. Вес 28 г (1.0 oz).",
-    "galleryImages": [
-      "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
-      "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-front.jpg",
-      "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-back.jpg"
-    ],
-    "image": "assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
-    "notes": [
-      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Сопоставлено методом исключения вместе с Fresh (два похожих товара 1С «STICK Fresh» / «STICK Powder Fresh», два фото с разными подписями на упаковке)."
-    ],
-    "product_type": "дезодорант-стик",
-    "short_title": "Arm & Hammer Ultra Max Powder Fresh 28 г"
-  },
-  "prd_16599c72dda7": {
-    "brand": "Arm & Hammer",
-    "category_id": "deodorants",
-    "clean_title": "Arm & Hammer Essentials Coconut Geranium дезодорант 71 г",
-    "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Coconut Geranium. Вес 2.5 oz (71 г).",
-    "galleryImages": [
-      "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
-      "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-front.jpg",
-      "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-back.jpg"
-    ],
-    "image": "assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
-    "notes": [
-      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. В 1С товар назван просто «Coconut»; на фото аромат «Coconut Geranium» — единственный кокосовый вариант в остатках, сопоставлено уверенно."
-    ],
-    "product_type": "дезодорант",
-    "short_title": "Arm & Hammer Coconut Geranium 71 г"
-  },
-  "prd_e6202bbb1789": {
-    "brand": "Arm & Hammer",
-    "category_id": "deodorants",
-    "clean_title": "Arm & Hammer Essentials Rosemary Lavender дезодорант 71 г",
-    "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Rosemary Lavender. Вес 2.5 oz (71 г).",
-    "galleryImages": [
-      "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
-      "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-front.jpg",
-      "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-back.jpg"
-    ],
-    "image": "assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
-    "notes": [
-      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме. Отличается от похожего товара 1С «STICK Fresh Widestick Rosemary» (без лаванды, другой формат) — сопоставлено по точному совпадению аромата на фото."
-    ],
-    "product_type": "дезодорант",
-    "short_title": "Arm & Hammer Rosemary Lavender 71 г"
-  },
-  "prd_bc63389835c9": {
-    "brand": "Arm & Hammer",
-    "category_id": "deodorants",
-    "clean_title": "Arm & Hammer Essentials Juniper Berry дезодорант 71 г",
-    "description": "Дезодорант Arm & Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Juniper Berry. Вес 2.5 oz (71 г).",
-    "galleryImages": [
-      "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
-      "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-front.jpg",
-      "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-back.jpg"
-    ],
-    "image": "assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
-    "notes": [
-      "2026-07-03: фото из Telegram-партии Петя 20260626-142813-next-2 (сегодняшняя выгрузка 33 фото); товар уверенно опознан по фото; ручная раскладка card-front/front/back по порядку в альбоме."
-    ],
-    "product_type": "дезодорант",
-    "short_title": "Arm & Hammer Juniper Berry 71 г"
   }
 }
