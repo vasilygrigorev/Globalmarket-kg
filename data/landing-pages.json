@@ -1,5 +1,5 @@
 {
-  "count": 32,
+  "count": 34,
   "pages": [
     {
       "type": "category",
@@ -17,7 +17,7 @@
         "средство для стирки",
         "стиральная машина"
       ],
-      "shown": 20
+      "shown": 28
     },
     {
       "type": "category",
@@ -45,9 +45,9 @@
       "title": "Уход за волосами",
       "path": "/category/hair/",
       "url": "https://globalmarket.kg/category/hair/",
-      "count": 104,
+      "count": 98,
       "seoTerms": [],
-      "shown": 26
+      "shown": 29
     },
     {
       "type": "category",
@@ -138,14 +138,14 @@
       "title": "Разное",
       "path": "/category/other/",
       "url": "https://globalmarket.kg/category/other/",
-      "count": 69,
+      "count": 75,
       "seoTerms": [
         "мыло",
         "жидкое мыло",
         "мыло для рук",
         "хозяйственное мыло"
       ],
-      "shown": 2
+      "shown": 8
     },
     {
       "type": "collection",
@@ -217,7 +217,7 @@
         "товары Pantene",
         "Pantene купить Бишкек"
       ],
-      "shown": 2
+      "shown": 8
     },
     {
       "type": "brand",
@@ -274,6 +274,20 @@
         "Ariel купить Бишкек"
       ],
       "shown": 3
+    },
+    {
+      "type": "brand",
+      "slug": "lenor",
+      "title": "Lenor",
+      "path": "/brand/lenor/",
+      "url": "https://globalmarket.kg/brand/lenor/",
+      "count": 10,
+      "seoTerms": [
+        "Lenor",
+        "товары Lenor",
+        "Lenor купить Бишкек"
+      ],
+      "shown": 8
     },
     {
       "type": "brand",
@@ -398,6 +412,20 @@
         "Comfort",
         "товары Comfort",
         "Comfort купить Бишкек"
+      ],
+      "shown": 4
+    },
+    {
+      "type": "brand",
+      "slug": "tresemm",
+      "title": "TRESemmé",
+      "path": "/brand/tresemm/",
+      "url": "https://globalmarket.kg/brand/tresemm/",
+      "count": 4,
+      "seoTerms": [
+        "TRESemmé",
+        "товары TRESemmé",
+        "TRESemmé купить Бишкек"
       ],
       "shown": 4
     },

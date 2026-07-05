@@ -1,8 +1,98 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 125,
+  "count": 142,
   "pages": [
+    {
+      "id": "prd_d0bc9026f5ab",
+      "slug": "pantene-smooth-silky-shampun-600-ml-26f5ab",
+      "path": "/product/pantene-smooth-silky-shampun-600-ml-26f5ab/",
+      "url": "https://globalmarket.kg/product/pantene-smooth-silky-shampun-600-ml-26f5ab/",
+      "title": "Pantene Smooth & Silky шампунь 600 мл",
+      "brand": "Pantene",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 7
+    },
+    {
+      "id": "prd_1e0cb301d44d",
+      "slug": "pantene-goodbye-frizz-shampun-600-ml-01d44d",
+      "path": "/product/pantene-goodbye-frizz-shampun-600-ml-01d44d/",
+      "url": "https://globalmarket.kg/product/pantene-goodbye-frizz-shampun-600-ml-01d44d/",
+      "title": "Pantene Goodbye Frizz шампунь 600 мл",
+      "brand": "Pantene",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 7
+    },
+    {
+      "id": "prd_5faaff6cf17c",
+      "slug": "pantene-moisture-renewal-shampun-600-ml-6cf17c",
+      "path": "/product/pantene-moisture-renewal-shampun-600-ml-6cf17c/",
+      "url": "https://globalmarket.kg/product/pantene-moisture-renewal-shampun-600-ml-6cf17c/",
+      "title": "Pantene Moisture Renewal шампунь 600 мл",
+      "brand": "Pantene",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 7
+    },
+    {
+      "id": "prd_572ed90689d1",
+      "slug": "pantene-daily-care-shampun-600-ml-0689d1",
+      "path": "/product/pantene-daily-care-shampun-600-ml-0689d1/",
+      "url": "https://globalmarket.kg/product/pantene-daily-care-shampun-600-ml-0689d1/",
+      "title": "Pantene Daily Care шампунь 600 мл",
+      "brand": "Pantene",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 7
+    },
+    {
+      "id": "prd_dce1df68b778",
+      "slug": "pantene-anti-hair-fall-shampun-600-ml-68b778",
+      "path": "/product/pantene-anti-hair-fall-shampun-600-ml-68b778/",
+      "url": "https://globalmarket.kg/product/pantene-anti-hair-fall-shampun-600-ml-68b778/",
+      "title": "Pantene Anti Hair Fall шампунь 600 мл",
+      "brand": "Pantene",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 7
+    },
+    {
+      "id": "prd_da9eaa7d3675",
+      "slug": "pantene-anti-dandruff-shampun-600-ml-7d3675",
+      "path": "/product/pantene-anti-dandruff-shampun-600-ml-7d3675/",
+      "url": "https://globalmarket.kg/product/pantene-anti-dandruff-shampun-600-ml-7d3675/",
+      "title": "Pantene Anti-Dandruff шампунь 600 мл",
+      "brand": "Pantene",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 7
+    },
     {
       "id": "prd_c5f3a1dce862",
       "slug": "persil-rose-gel-dlya-stirki-3-l-1-l-dce862",
@@ -16,7 +106,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_165eafb70eb3",
@@ -31,7 +121,7 @@
       "retailPriceKgs": 1595,
       "image": "/assets/products/ariel/ariel-fast-dissolving-2-5kg-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_77e4cc05435f",
@@ -46,7 +136,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_f19e014e94cf",
@@ -61,7 +151,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-rose-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_9df7a08005ce",
@@ -76,7 +166,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-sensitive-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_1f9a545036b2",
@@ -91,7 +181,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-lavender-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_2acd534839ea",
@@ -106,7 +196,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/ariel/ariel-all-in-1-universal-caps-15-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_682eb8c7e746",
@@ -121,7 +211,7 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-rose-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_bd8fab362271",
@@ -136,7 +226,52 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_19a727030e6b",
+      "slug": "lenor-gold-orchid-parfyum-dlya-belya-210-g-030e6b",
+      "path": "/product/lenor-gold-orchid-parfyum-dlya-belya-210-g-030e6b/",
+      "url": "https://globalmarket.kg/product/lenor-gold-orchid-parfyum-dlya-belya-210-g-030e6b/",
+      "title": "Lenor Gold Orchid парфюм для белья 210 г",
+      "brand": "Lenor",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 750,
+      "image": "/assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_594869df277e",
+      "slug": "lenor-jasmine-white-cedar-parfyum-dlya-belya-155-g-df277e",
+      "path": "/product/lenor-jasmine-white-cedar-parfyum-dlya-belya-155-g-df277e/",
+      "url": "https://globalmarket.kg/product/lenor-jasmine-white-cedar-parfyum-dlya-belya-155-g-df277e/",
+      "title": "Lenor Jasmine & White Cedar парфюм для белья 155 г",
+      "brand": "Lenor",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_d0f02fd7d3b0",
+      "slug": "lenor-spring-awakening-parfyum-dlya-belya-155-g-d7d3b0",
+      "path": "/product/lenor-spring-awakening-parfyum-dlya-belya-155-g-d7d3b0/",
+      "url": "https://globalmarket.kg/product/lenor-spring-awakening-parfyum-dlya-belya-155-g-d7d3b0/",
+      "title": "Lenor Spring Awakening парфюм для белья 155 г",
+      "brand": "Lenor",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
     },
     {
       "id": "prd_4180ad019486",
@@ -151,7 +286,7 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/downy/downy-concentrate-rose-garden-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_b0bf34e30459",
@@ -166,7 +301,22 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/persil/persil-white-flower-gel-3l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_1710ac102a49",
+      "slug": "lenor-dreamy-jasmine-parfyum-dlya-belya-155-g-102a49",
+      "path": "/product/lenor-dreamy-jasmine-parfyum-dlya-belya-155-g-102a49/",
+      "url": "https://globalmarket.kg/product/lenor-dreamy-jasmine-parfyum-dlya-belya-155-g-102a49/",
+      "title": "Lenor Dreamy Jasmine парфюм для белья 155 г",
+      "brand": "Lenor",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
     },
     {
       "id": "prd_894a7f6437d0",
@@ -181,7 +331,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_cc0deb97f256",
@@ -196,7 +346,7 @@
       "retailPriceKgs": 595,
       "image": "/assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_79ae12d5e324",
@@ -211,7 +361,37 @@
       "retailPriceKgs": 595,
       "image": "/assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_40d21a2a86d6",
+      "slug": "lenor-northern-solstice-parfyum-dlya-belya-155-g-2a86d6",
+      "path": "/product/lenor-northern-solstice-parfyum-dlya-belya-155-g-2a86d6/",
+      "url": "https://globalmarket.kg/product/lenor-northern-solstice-parfyum-dlya-belya-155-g-2a86d6/",
+      "title": "Lenor Northern Solstice парфюм для белья 155 г",
+      "brand": "Lenor",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_0fb16d2a0b60",
+      "slug": "lenor-sandalwood-eucalyptus-parfyum-dlya-belya-155-g-2a0b60",
+      "path": "/product/lenor-sandalwood-eucalyptus-parfyum-dlya-belya-155-g-2a0b60/",
+      "url": "https://globalmarket.kg/product/lenor-sandalwood-eucalyptus-parfyum-dlya-belya-155-g-2a0b60/",
+      "title": "Lenor Sandalwood & Eucalyptus парфюм для белья 155 г",
+      "brand": "Lenor",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
     },
     {
       "id": "prd_fd5eee161942",
@@ -226,7 +406,7 @@
       "retailPriceKgs": 1290,
       "image": "/assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_0e763c9c3654",
@@ -241,7 +421,7 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_733c019c32a5",
@@ -256,7 +436,22 @@
       "retailPriceKgs": 1290,
       "image": "/assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_311be4dd4930",
+      "slug": "lenor-fresh-parfyum-dlya-belya-155-g-dd4930",
+      "path": "/product/lenor-fresh-parfyum-dlya-belya-155-g-dd4930/",
+      "url": "https://globalmarket.kg/product/lenor-fresh-parfyum-dlya-belya-155-g-dd4930/",
+      "title": "Lenor Fresh парфюм для белья 155 г",
+      "brand": "Lenor",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/lenor/lenor-fresh-155g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
     },
     {
       "id": "prd_f0d3a0b9698b",
@@ -271,7 +466,7 @@
       "retailPriceKgs": 3200,
       "image": "/assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_71d2d567002b",
@@ -286,7 +481,22 @@
       "retailPriceKgs": 795,
       "image": "/assets/products/downy/downy-concentrate-vanilla-musk-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_56516b8b34c7",
+      "slug": "lenor-cool-cotton-parfyum-dlya-belya-155-g-8b34c7",
+      "path": "/product/lenor-cool-cotton-parfyum-dlya-belya-155-g-8b34c7/",
+      "url": "https://globalmarket.kg/product/lenor-cool-cotton-parfyum-dlya-belya-155-g-8b34c7/",
+      "title": "Lenor Cool Cotton парфюм для белья 155 г",
+      "brand": "Lenor",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
     },
     {
       "id": "prd_e9b3349a68aa",
@@ -301,7 +511,7 @@
       "retailPriceKgs": 595,
       "image": "/assets/products/downy/downy-fresh-valley-dew-1l-card-front.png",
       "imageCount": 3,
-      "relatedCount": 19
+      "relatedCount": 24
     },
     {
       "id": "prd_9174d6118ed3",
@@ -679,6 +889,21 @@
       "relatedCount": 24
     },
     {
+      "id": "prd_01077bb33667",
+      "slug": "tresemm-silky-smooth-shampun-828-ml-b33667",
+      "path": "/product/tresemm-silky-smooth-shampun-828-ml-b33667/",
+      "url": "https://globalmarket.kg/product/tresemm-silky-smooth-shampun-828-ml-b33667/",
+      "title": "TRESemmé Silky & Smooth шампунь 828 мл",
+      "brand": "TRESemmé",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/tresemme/tresemme-smooth-silky-828ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
       "id": "prd_5c4dde48386b",
       "slug": "dove-hair-fall-rescue-shampun-680-ml-48386b",
       "path": "/product/dove-hair-fall-rescue-shampun-680-ml-48386b/",
@@ -721,6 +946,36 @@
       "retailPriceKgs": 695,
       "image": "/assets/products/tresemme/tresemme-clean-replenish-828ml-card-front.jpg",
       "imageCount": 2,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_096618ced7c1",
+      "slug": "tresemm-volume-shampun-828-ml-ced7c1",
+      "path": "/product/tresemm-volume-shampun-828-ml-ced7c1/",
+      "url": "https://globalmarket.kg/product/tresemm-volume-shampun-828-ml-ced7c1/",
+      "title": "TRESemmé Volume шампунь 828 мл",
+      "brand": "TRESemmé",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_4cf797e1e1b4",
+      "slug": "tresemm-curl-hydration-shampun-828-ml-e1e1b4",
+      "path": "/product/tresemm-curl-hydration-shampun-828-ml-e1e1b4/",
+      "url": "https://globalmarket.kg/product/tresemm-curl-hydration-shampun-828-ml-e1e1b4/",
+      "title": "TRESemmé Curl Hydration шампунь 828 мл",
+      "brand": "TRESemmé",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 695,
+      "image": "/assets/products/tresemme/tresemme-curl-hydration-828ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -1565,7 +1820,7 @@
       "retailPriceKgs": 20,
       "image": "/assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 4
+      "relatedCount": 7
     },
     {
       "id": "prd_fbc4a5e759ac",
@@ -1580,7 +1835,7 @@
       "retailPriceKgs": 120,
       "image": "/assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 4
+      "relatedCount": 7
     },
     {
       "id": "prd_perfume_bybozo_sea_breeze_5ml",

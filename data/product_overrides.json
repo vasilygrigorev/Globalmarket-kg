@@ -1,7 +1,6 @@
 {
   "prd_01077bb33667": {
     "brand": "TRESemmé",
-    "categoryId": "hair",
     "description": "Шампунь TRESemmé Silky & Smooth для гладкости и блеска волос. Объём 828 мл, формула с argan oleo blend.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-smooth-silky-828ml-card-front.jpg",
@@ -10,10 +9,12 @@
     ],
     "image": "assets/products/tresemme/tresemme-smooth-silky-828ml-card-front.jpg",
     "notes": [
-      "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first."
+      "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "шампунь",
-    "title": "TRESemmé Silky & Smooth шампунь 828 мл"
+    "clean_title": "TRESemmé Silky & Smooth шампунь 828 мл",
+    "product_type": "шампунь",
+    "category_id": "hair"
   },
   "prd_060cfccd22d3": {
     "brand": "Downy",
@@ -113,7 +114,6 @@
   },
   "prd_096618ced7c1": {
     "brand": "TRESemmé",
-    "categoryId": "hair",
     "description": "Шампунь TRESemmé Volume для придания объёма волосам. Объём 828 мл, формула с collagen & peptide complex.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
@@ -122,10 +122,12 @@
     ],
     "image": "assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
     "notes": [
-      "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first."
+      "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "шампунь",
-    "title": "TRESemmé Volume шампунь 828 мл"
+    "clean_title": "TRESemmé Volume шампунь 828 мл",
+    "product_type": "шампунь",
+    "category_id": "hair"
   },
   "prd_0a8f4b1bdcb6": {
     "brand": "Cussons",
@@ -192,11 +194,12 @@
     "image": "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg",
     "notes": [
       "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract.",
-      "Back label may show minor packaging/weight variation; do not use back-photo OCR as source of product title/weight without manual check."
+      "Back label may show minor packaging/weight variation; do not use back-photo OCR as source of product title/weight without manual check.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "парфюм для белья",
-    "title": "Lenor Sandalwood & Eucalyptus парфюм для белья 155 г",
-    "unit": "155 г"
+    "unit": "155 г",
+    "clean_title": "Lenor Sandalwood & Eucalyptus парфюм для белья 155 г",
+    "product_type": "парфюм для белья"
   },
   "prd_0fffb16fcaee": {
     "brand": "Gillette Venus",
@@ -320,11 +323,12 @@
     ],
     "image": "assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg",
     "notes": [
-      "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract."
+      "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "парфюм для белья",
-    "title": "Lenor Dreamy Jasmine парфюм для белья 155 г",
-    "unit": "155 г"
+    "unit": "155 г",
+    "clean_title": "Lenor Dreamy Jasmine парфюм для белья 155 г",
+    "product_type": "парфюм для белья"
   },
   "prd_175203a1119f": {
     "brand": "Oral-B",
@@ -380,11 +384,12 @@
     ],
     "image": "assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg",
     "notes": [
-      "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract."
+      "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "парфюм для белья",
-    "title": "Lenor Gold Orchid парфюм для белья 210 г",
-    "unit": "210 г"
+    "unit": "210 г",
+    "clean_title": "Lenor Gold Orchid парфюм для белья 210 г",
+    "product_type": "парфюм для белья"
   },
   "prd_1b9ccd33f502": {
     "brand": "Gillette Venus",
@@ -406,7 +411,6 @@
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
-    "categoryId": "hair-care",
     "description": "Шампунь Pantene Pro-V Goodbye Frizz для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
@@ -414,10 +418,14 @@
       "assets/products/pantene/pantene-goodbye-frizz-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
-    "productType": "шампунь",
     "searchText": "pantene goodbye frizz шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v goodbye frizz для ежедневного ухода за волосами. формат: 600 мл.",
-    "title": "Pantene Goodbye Frizz шампунь 600 мл",
-    "unit": "600 мл"
+    "unit": "600 мл",
+    "clean_title": "Pantene Goodbye Frizz шампунь 600 мл",
+    "product_type": "шампунь",
+    "category_id": "hair-care",
+    "notes": [
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
+    ]
   },
   "prd_1f1557a2acbb": {
     "brand": "Pantene",
@@ -593,11 +601,12 @@
     ],
     "image": "assets/products/lenor/lenor-fresh-155g-card-front.jpg",
     "notes": [
-      "Telegram album 20260610 Lenor Fresh photos manually mapped; public gallery follows card/front/back contract."
+      "Telegram album 20260610 Lenor Fresh photos manually mapped; public gallery follows card/front/back contract.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "парфюм для белья",
-    "title": "Lenor Fresh парфюм для белья 155 г",
-    "unit": "155 г"
+    "unit": "155 г",
+    "clean_title": "Lenor Fresh парфюм для белья 155 г",
+    "product_type": "парфюм для белья"
   },
   "prd_323fb137e76a": {
     "brand": "Old Spice",
@@ -703,11 +712,12 @@
     ],
     "image": "assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg",
     "notes": [
-      "Telegram album 20260610 Lenor Northern Solstice photos mapped from correct 3-photo set; public gallery follows card/front/back contract."
+      "Telegram album 20260610 Lenor Northern Solstice photos mapped from correct 3-photo set; public gallery follows card/front/back contract.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "парфюм для белья",
-    "title": "Lenor Northern Solstice парфюм для белья 155 г",
-    "unit": "155 г"
+    "unit": "155 г",
+    "clean_title": "Lenor Northern Solstice парфюм для белья 155 г",
+    "product_type": "парфюм для белья"
   },
   "prd_4180ad019486": {
     "brand": "Downy",
@@ -910,7 +920,6 @@
     "badge": "TRESemme",
     "brand": "TRESemmé",
     "category": "Уход за волосами",
-    "categoryId": "hair",
     "description": "Шампунь TRESemmé Curl Hydration для увлажнения и ухода за кудрявыми волосами. Объём 828 мл, заявлено до 7x более увлажнённых локонов.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-curl-hydration-828ml-card-front.jpg",
@@ -921,20 +930,22 @@
     "id": "prd_4cf797e1e1b4",
     "image": "assets/products/tresemme/tresemme-curl-hydration-828ml-card-front.jpg",
     "notes": [
-      "User confirmed product is in stock despite latest 1C stock_quantity=0; publish with Telegram album 20260609 TRESemmé photos."
+      "User confirmed product is in stock despite latest 1C stock_quantity=0; publish with Telegram album 20260609 TRESemmé photos.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 577,
     "retailPriceKgs": 595,
     "searchText": "tresemmé curl hydration шампунь 828 мл tresemmé шампунь шампунь tresemmé curl hydration для увлажнения и ухода за кудрявыми волосами. объём 828 мл, заявлено до 7x более увлажнённых локонов. уход за волосами",
     "status": "review",
-    "title": "TRESemmé Curl Hydration шампунь 828 мл",
     "tones": [
       "#d7eadf",
       "#6aa58f"
     ],
-    "unit": "шт"
+    "unit": "шт",
+    "clean_title": "TRESemmé Curl Hydration шампунь 828 мл",
+    "product_type": "шампунь",
+    "category_id": "hair"
   },
   "prd_4db8a0f93b3f": {
     "brand": "Dash",
@@ -1016,17 +1027,17 @@
     ],
     "image": "assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg",
     "notes": [
-      "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract."
+      "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "парфюм для белья",
-    "title": "Lenor Cool Cotton парфюм для белья 155 г",
-    "unit": "155 г"
+    "unit": "155 г",
+    "clean_title": "Lenor Cool Cotton парфюм для белья 155 г",
+    "product_type": "парфюм для белья"
   },
   "prd_572ed90689d1": {
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
-    "categoryId": "hair-care",
     "description": "Шампунь Pantene Pro-V Daily Care для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
@@ -1034,10 +1045,14 @@
       "assets/products/pantene/pantene-daily-care-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
-    "productType": "шампунь",
     "searchText": "pantene daily care шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v daily care для ежедневного ухода за волосами. формат: 600 мл.",
-    "title": "Pantene Daily Care шампунь 600 мл",
-    "unit": "600 мл"
+    "unit": "600 мл",
+    "clean_title": "Pantene Daily Care шампунь 600 мл",
+    "product_type": "шампунь",
+    "category_id": "hair-care",
+    "notes": [
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
+    ]
   },
   "prd_57922054f500": {
     "brand": "Concord",
@@ -1058,11 +1073,12 @@
     ],
     "image": "assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg",
     "notes": [
-      "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract."
+      "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "парфюм для белья",
-    "title": "Lenor Jasmine & White Cedar парфюм для белья 155 г",
-    "unit": "155 г"
+    "unit": "155 г",
+    "clean_title": "Lenor Jasmine & White Cedar парфюм для белья 155 г",
+    "product_type": "парфюм для белья"
   },
   "prd_5c4dde48386b": {
     "brand": "Dove",
@@ -1090,7 +1106,6 @@
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
-    "categoryId": "hair-care",
     "description": "Шампунь Pantene Pro-V Moisture Renewal для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
@@ -1098,10 +1113,14 @@
       "assets/products/pantene/pantene-moisture-renewal-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
-    "productType": "шампунь",
     "searchText": "pantene moisture renewal шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v moisture renewal для ежедневного ухода за волосами. формат: 600 мл.",
-    "title": "Pantene Moisture Renewal шампунь 600 мл",
-    "unit": "600 мл"
+    "unit": "600 мл",
+    "clean_title": "Pantene Moisture Renewal шампунь 600 мл",
+    "product_type": "шампунь",
+    "category_id": "hair-care",
+    "notes": [
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
+    ]
   },
   "prd_608815c5bf7d": {
     "brand": "Queen",
@@ -1388,7 +1407,6 @@
   },
   "prd_7cf735f59b18": {
     "brand": "TRESemmé",
-    "categoryId": "hair",
     "description": "Шампунь TRESemmé Revitalized Color для окрашенных волос. Объём 828 мл, формула с hibiscus essence для яркости и блеска.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-color-828ml-card-front.jpg",
@@ -1397,10 +1415,12 @@
     ],
     "image": "assets/products/tresemme/tresemme-color-828ml-card-front.jpg",
     "notes": [
-      "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first."
+      "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "шампунь",
-    "title": "TRESemmé Color шампунь 828 мл"
+    "clean_title": "TRESemmé Color шампунь 828 мл",
+    "product_type": "шампунь",
+    "category_id": "hair"
   },
   "prd_7da6b6d3a85f": {
     "brand": "Gillette",
@@ -1550,7 +1570,6 @@
     "badge": "Sunsilk",
     "brand": "Sunsilk",
     "category": "Уход за волосами",
-    "categoryId": "hair",
     "description": "Шампунь Sunsilk Smooth & Manageable для более послушных и гладких волос. Объём 625 мл, формула с argan oil, elastin и vitamin C.",
     "galleryImages": [
       "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-card-front.jpg",
@@ -1561,20 +1580,22 @@
     "id": "prd_8ecb44018700",
     "image": "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-card-front.jpg",
     "notes": [
-      "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products."
+      "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 674,
     "retailPriceKgs": 695,
     "searchText": "sunsilk smooth & manageable шампунь 625 мл sunsilk шампунь шампунь sunsilk smooth & manageable для более послушных и гладких волос. объём 625 мл, формула с argan oil, elastin и vitamin c. уход за волосами",
     "status": "review",
-    "title": "Sunsilk Smooth & Manageable шампунь 625 мл",
     "tones": [
       "#f5a4c5",
       "#d84991"
     ],
-    "unit": "шт"
+    "unit": "шт",
+    "clean_title": "Sunsilk Smooth & Manageable шампунь 625 мл",
+    "product_type": "шампунь",
+    "category_id": "hair"
   },
   "prd_8f967f2becb0": {
     "brand": "YC",
@@ -1934,7 +1955,6 @@
     "badge": "Sunsilk",
     "brand": "Sunsilk",
     "category": "Уход за волосами",
-    "categoryId": "hair",
     "description": "Шампунь Sunsilk Soft & Smooth для мягкости и гладкости волос. Объём 625 мл, формула с light natural oil, cashmere keratin и vitamin E.",
     "galleryImages": [
       "assets/products/sunsilk/sunsilk-soft-smooth-625ml-card-front.jpg",
@@ -1945,20 +1965,22 @@
     "id": "prd_b72b872b2b7d",
     "image": "assets/products/sunsilk/sunsilk-soft-smooth-625ml-card-front.jpg",
     "notes": [
-      "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products."
+      "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 674,
     "retailPriceKgs": 695,
     "searchText": "sunsilk soft & smooth шампунь 625 мл sunsilk шампунь шампунь sunsilk soft & smooth для мягкости и гладкости волос. объём 625 мл, формула с light natural oil, cashmere keratin и vitamin e. уход за волосами",
     "status": "review",
-    "title": "Sunsilk Soft & Smooth шампунь 625 мл",
     "tones": [
       "#f4c94d",
       "#c48922"
     ],
-    "unit": "шт"
+    "unit": "шт",
+    "clean_title": "Sunsilk Soft & Smooth шампунь 625 мл",
+    "product_type": "шампунь",
+    "category_id": "hair"
   },
   "prd_bc63389835c9": {
     "brand": "Arm & Hammer",
@@ -2007,7 +2029,6 @@
     "badge": "Sunsilk",
     "brand": "Sunsilk",
     "category": "Уход за волосами",
-    "categoryId": "hair",
     "description": "Шампунь Sunsilk Anti-Dandruff Healthy Strong против перхоти. Объём 625 мл, формула с tea tree oil, aloe vera и ginseng.",
     "galleryImages": [
       "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-card-front.jpg",
@@ -2018,20 +2039,22 @@
     "id": "prd_bdfdfa2b110e",
     "image": "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-card-front.jpg",
     "notes": [
-      "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products."
+      "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 674,
     "retailPriceKgs": 695,
     "searchText": "sunsilk anti-dandruff healthy strong шампунь 625 мл sunsilk шампунь шампунь sunsilk anti-dandruff healthy strong против перхоти. объём 625 мл, формула с tea tree oil, aloe vera и ginseng. уход за волосами",
     "status": "review",
-    "title": "Sunsilk Anti-Dandruff Healthy Strong шампунь 625 мл",
     "tones": [
       "#d7e8ff",
       "#5c94d6"
     ],
-    "unit": "шт"
+    "unit": "шт",
+    "clean_title": "Sunsilk Anti-Dandruff Healthy Strong шампунь 625 мл",
+    "product_type": "шампунь",
+    "category_id": "hair"
   },
   "prd_bf0dc63d18a6": {
     "brand": "Пластырь",
@@ -2168,7 +2191,6 @@
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
-    "categoryId": "hair-care",
     "description": "Шампунь Pantene Pro-V Smooth & Silky для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
@@ -2176,10 +2198,14 @@
       "assets/products/pantene/pantene-smooth-silky-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
-    "productType": "шампунь",
     "searchText": "pantene smooth & silky шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v smooth & silky для ежедневного ухода за волосами. формат: 600 мл.",
-    "title": "Pantene Smooth & Silky шампунь 600 мл",
-    "unit": "600 мл"
+    "unit": "600 мл",
+    "clean_title": "Pantene Smooth & Silky шампунь 600 мл",
+    "product_type": "шампунь",
+    "category_id": "hair-care",
+    "notes": [
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
+    ]
   },
   "prd_d0f02fd7d3b0": {
     "badge": "Lenor",
@@ -2193,11 +2219,12 @@
     "image": "assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg",
     "notes": [
       "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract.",
-      "Back label may show minor packaging/weight variation; do not use back-photo OCR as source of product title/weight without manual check."
+      "Back label may show minor packaging/weight variation; do not use back-photo OCR as source of product title/weight without manual check.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "парфюм для белья",
-    "title": "Lenor Spring Awakening парфюм для белья 155 г",
-    "unit": "155 г"
+    "unit": "155 г",
+    "clean_title": "Lenor Spring Awakening парфюм для белья 155 г",
+    "product_type": "парфюм для белья"
   },
   "prd_d3c195668843": {
     "brand": "Dove",
@@ -2251,7 +2278,6 @@
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
-    "categoryId": "hair-care",
     "description": "Шампунь Pantene Pro-V Anti-Dandruff для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
@@ -2259,16 +2285,19 @@
       "assets/products/pantene/pantene-anti-dandruff-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
-    "productType": "шампунь",
     "searchText": "pantene anti-dandruff шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v anti-dandruff для ежедневного ухода за волосами. формат: 600 мл.",
-    "title": "Pantene Anti-Dandruff шампунь 600 мл",
-    "unit": "600 мл"
+    "unit": "600 мл",
+    "clean_title": "Pantene Anti-Dandruff шампунь 600 мл",
+    "product_type": "шампунь",
+    "category_id": "hair-care",
+    "notes": [
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
+    ]
   },
   "prd_dbf6cb3b3a0e": {
     "badge": "TRESemme",
     "brand": "TRESemmé",
     "category": "Уход за волосами",
-    "categoryId": "hair",
     "description": "Шампунь TRESemmé Rich Moisture для питания и увлажнения волос. Объём 828 мл, формула с hyaluronic plex.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-rich-moisture-828ml-card-front.jpg",
@@ -2279,26 +2308,27 @@
     "id": "prd_dbf6cb3b3a0e",
     "image": "assets/products/tresemme/tresemme-rich-moisture-828ml-card-front.jpg",
     "notes": [
-      "User confirmed product is in stock despite latest 1C stock_quantity=0; publish with Telegram album 20260609 TRESemmé photos."
+      "User confirmed product is in stock despite latest 1C stock_quantity=0; publish with Telegram album 20260609 TRESemmé photos.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 674,
     "retailPriceKgs": 695,
     "searchText": "tresemmé rich moisture шампунь 828 мл tresemmé шампунь шампунь tresemmé rich moisture для питания и увлажнения волос. объём 828 мл, формула с hyaluronic plex. уход за волосами",
     "status": "review",
-    "title": "TRESemmé Rich Moisture шампунь 828 мл",
     "tones": [
       "#f3ddaa",
       "#9a762c"
     ],
-    "unit": "шт"
+    "unit": "шт",
+    "clean_title": "TRESemmé Rich Moisture шампунь 828 мл",
+    "product_type": "шампунь",
+    "category_id": "hair"
   },
   "prd_dce1df68b778": {
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
-    "categoryId": "hair-care",
     "description": "Шампунь Pantene Pro-V Anti Hair Fall для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
@@ -2306,10 +2336,14 @@
       "assets/products/pantene/pantene-anti-hair-fall-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
-    "productType": "шампунь",
     "searchText": "pantene anti hair fall шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v anti hair fall для ежедневного ухода за волосами. формат: 600 мл.",
-    "title": "Pantene Anti Hair Fall шампунь 600 мл",
-    "unit": "600 мл"
+    "unit": "600 мл",
+    "clean_title": "Pantene Anti Hair Fall шампунь 600 мл",
+    "product_type": "шампунь",
+    "category_id": "hair-care",
+    "notes": [
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
+    ]
   },
   "prd_dd48efde24f0": {
     "brand": "Concord",
@@ -2472,7 +2506,6 @@
     "badge": "Sunsilk",
     "brand": "Sunsilk",
     "category": "Уход за волосами",
-    "categoryId": "hair",
     "description": "Шампунь Sunsilk Black Shine для блеска тёмных волос. Объём 625 мл, формула с henna, oil, pearl и vitamin E.",
     "galleryImages": [
       "assets/products/sunsilk/sunsilk-black-shine-625ml-card-front.jpg",
@@ -2483,20 +2516,22 @@
     "id": "prd_e82e0719de28",
     "image": "assets/products/sunsilk/sunsilk-black-shine-625ml-card-front.jpg",
     "notes": [
-      "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products."
+      "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products.",
+      "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "productType": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 674,
     "retailPriceKgs": 695,
     "searchText": "sunsilk black shine шампунь 625 мл sunsilk шампунь шампунь sunsilk black shine для блеска тёмных волос. объём 625 мл, формула с henna, oil, pearl и vitamin e. уход за волосами",
     "status": "review",
-    "title": "Sunsilk Black Shine шампунь 625 мл",
     "tones": [
       "#251f28",
       "#c13e99"
     ],
-    "unit": "шт"
+    "unit": "шт",
+    "clean_title": "Sunsilk Black Shine шампунь 625 мл",
+    "product_type": "шампунь",
+    "category_id": "hair"
   },
   "prd_e993df33c857": {
     "brand": "Gillette",

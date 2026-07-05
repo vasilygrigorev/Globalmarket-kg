@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T15:59:13.532835+00:00",
+  "generatedAt": "2026-07-05T16:17:49.123854+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -21,7 +21,7 @@
     {
       "id": "hair",
       "title": "Уход за волосами",
-      "count": 104,
+      "count": 98,
       "icon": "🧴"
     },
     {
@@ -69,11 +69,185 @@
     {
       "id": "other",
       "title": "Разное",
-      "count": 69,
+      "count": 75,
       "icon": "🛍️"
     }
   ],
   "products": [
+    {
+      "unit": "шт",
+      "badge": "Pantene",
+      "retailPriceKgs": 895,
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-smooth-silky-600ml-front.jpg",
+        "assets/products/pantene/pantene-smooth-silky-600ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_d0bc9026f5ab",
+      "tones": [
+        "#e4ded2",
+        "#a99076"
+      ],
+      "image": "assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
+      "icon": "🛍️",
+      "registeredPriceKgs": 868,
+      "description": "Шампунь Pantene Pro-V Smooth & Silky для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Smooth & Silky шампунь 600 мл",
+      "productType": "шампунь",
+      "brand": "Pantene",
+      "rating": 4.8,
+      "searchText": "pantene smooth & silky шампунь 600 мл разное pantene шампунь шампунь pantene pro-v smooth & silky для ежедневного ухода за волосами. формат: 600 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Pantene",
+      "retailPriceKgs": 895,
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-goodbye-frizz-600ml-front.jpg",
+        "assets/products/pantene/pantene-goodbye-frizz-600ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_1e0cb301d44d",
+      "tones": [
+        "#e4ded2",
+        "#a99076"
+      ],
+      "image": "assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
+      "icon": "🛍️",
+      "registeredPriceKgs": 868,
+      "description": "Шампунь Pantene Pro-V Goodbye Frizz для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Goodbye Frizz шампунь 600 мл",
+      "productType": "шампунь",
+      "brand": "Pantene",
+      "rating": 4.8,
+      "searchText": "pantene goodbye frizz шампунь 600 мл разное pantene шампунь шампунь pantene pro-v goodbye frizz для ежедневного ухода за волосами. формат: 600 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Pantene",
+      "retailPriceKgs": 895,
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-moisture-renewal-600ml-front.jpg",
+        "assets/products/pantene/pantene-moisture-renewal-600ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_5faaff6cf17c",
+      "tones": [
+        "#e4ded2",
+        "#a99076"
+      ],
+      "image": "assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
+      "icon": "🛍️",
+      "registeredPriceKgs": 868,
+      "description": "Шампунь Pantene Pro-V Moisture Renewal для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Moisture Renewal шампунь 600 мл",
+      "productType": "шампунь",
+      "brand": "Pantene",
+      "rating": 4.8,
+      "searchText": "pantene moisture renewal шампунь 600 мл разное pantene шампунь шампунь pantene pro-v moisture renewal для ежедневного ухода за волосами. формат: 600 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Pantene",
+      "retailPriceKgs": 895,
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-daily-care-600ml-front.jpg",
+        "assets/products/pantene/pantene-daily-care-600ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_572ed90689d1",
+      "tones": [
+        "#e4ded2",
+        "#a99076"
+      ],
+      "image": "assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
+      "icon": "🛍️",
+      "registeredPriceKgs": 868,
+      "description": "Шампунь Pantene Pro-V Daily Care для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Daily Care шампунь 600 мл",
+      "productType": "шампунь",
+      "brand": "Pantene",
+      "rating": 4.8,
+      "searchText": "pantene daily care шампунь 600 мл разное pantene шампунь шампунь pantene pro-v daily care для ежедневного ухода за волосами. формат: 600 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Pantene",
+      "retailPriceKgs": 895,
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-anti-hair-fall-600ml-front.jpg",
+        "assets/products/pantene/pantene-anti-hair-fall-600ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_dce1df68b778",
+      "tones": [
+        "#e4ded2",
+        "#a99076"
+      ],
+      "image": "assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
+      "icon": "🛍️",
+      "registeredPriceKgs": 868,
+      "description": "Шампунь Pantene Pro-V Anti Hair Fall для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Anti Hair Fall шампунь 600 мл",
+      "productType": "шампунь",
+      "brand": "Pantene",
+      "rating": 4.8,
+      "searchText": "pantene anti hair fall шампунь 600 мл разное pantene шампунь шампунь pantene pro-v anti hair fall для ежедневного ухода за волосами. формат: 600 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Pantene",
+      "retailPriceKgs": 895,
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
+        "assets/products/pantene/pantene-anti-dandruff-600ml-front.jpg",
+        "assets/products/pantene/pantene-anti-dandruff-600ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_da9eaa7d3675",
+      "tones": [
+        "#e4ded2",
+        "#a99076"
+      ],
+      "image": "assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
+      "icon": "🛍️",
+      "registeredPriceKgs": 868,
+      "description": "Шампунь Pantene Pro-V Anti-Dandruff для ежедневного ухода за волосами. Формат: 600 мл.",
+      "title": "Pantene Anti-Dandruff шампунь 600 мл",
+      "productType": "шампунь",
+      "brand": "Pantene",
+      "rating": 4.8,
+      "searchText": "pantene anti-dandruff шампунь 600 мл разное pantene шампунь шампунь pantene pro-v anti-dandruff для ежедневного ухода за волосами. формат: 600 мл."
+    },
     {
       "unit": "шт",
       "badge": "Persil",
@@ -645,22 +819,26 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg",
+        "assets/products/lenor/lenor-gold-orchid-210g-front.jpg",
+        "assets/products/lenor/lenor-gold-orchid-210g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_19a727030e6b",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 727,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 210 g, 210g.",
-      "title": "Lenor Parfume (210g) Gold Orchid",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Gold Orchid. Формат: 210 г.",
+      "title": "Lenor Gold Orchid парфюм для белья 210 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (210g) gold orchid стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 210 g, 210g."
+      "searchText": "lenor gold orchid парфюм для белья 210 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: gold orchid. формат: 210 г."
     },
     {
       "unit": "шт",
@@ -695,22 +873,26 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg",
+        "assets/products/lenor/lenor-jasmine-white-cedar-155g-front.jpg",
+        "assets/products/lenor/lenor-jasmine-white-cedar-155g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_594869df277e",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) White Cedar",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Jasmine & White Cedar. Формат: 155 г.",
+      "title": "Lenor Jasmine & White Cedar парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) white cedar стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor jasmine & white cedar парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: jasmine & white cedar. формат: 155 г."
     },
     {
       "unit": "шт",
@@ -820,22 +1002,26 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg",
+        "assets/products/lenor/lenor-spring-awakening-155g-front.jpg",
+        "assets/products/lenor/lenor-spring-awakening-155g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_d0f02fd7d3b0",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Spring",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Spring Awakening. Формат: 155 г.",
+      "title": "Lenor Spring Awakening парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) spring стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor spring awakening парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: spring awakening. формат: 155 г."
     },
     {
       "unit": "шт",
@@ -953,22 +1139,26 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg",
+        "assets/products/lenor/lenor-dreamy-jasmine-155g-front.jpg",
+        "assets/products/lenor/lenor-dreamy-jasmine-155g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_1710ac102a49",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Dreamy Jasmine",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Dreamy Jasmine. Формат: 155 г.",
+      "title": "Lenor Dreamy Jasmine парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) dreamy jasmine стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor dreamy jasmine парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: dreamy jasmine. формат: 155 г."
     },
     {
       "unit": "шт",
@@ -1090,22 +1280,26 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg",
+        "assets/products/lenor/lenor-northern-solstice-155g-front.jpg",
+        "assets/products/lenor/lenor-northern-solstice-155g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_40d21a2a86d6",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Northern Solstice",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Northern Solstice. Формат: 155 г.",
+      "title": "Lenor Northern Solstice парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) northern solstice стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor northern solstice парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: northern solstice. формат: 155 г."
     },
     {
       "unit": "шт",
@@ -1115,22 +1309,26 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg",
+        "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-front.jpg",
+        "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_0fb16d2a0b60",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Sandal Wood",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Sandalwood & Eucalyptus. Формат: 155 г.",
+      "title": "Lenor Sandalwood & Eucalyptus парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) sandal wood стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor sandalwood & eucalyptus парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: sandalwood & eucalyptus. формат: 155 г."
     },
     {
       "unit": "шт",
@@ -1352,22 +1550,26 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/lenor/lenor-fresh-155g-card-front.jpg",
+        "assets/products/lenor/lenor-fresh-155g-front.jpg",
+        "assets/products/lenor/lenor-fresh-155g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_311be4dd4930",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-fresh-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Fresh",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Fresh. Формат: 155 г.",
+      "title": "Lenor Fresh парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) fresh стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor fresh парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: fresh. формат: 155 г."
     },
     {
       "unit": "шт",
@@ -1485,22 +1687,26 @@
       "categoryId": "laundry",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg",
+        "assets/products/lenor/lenor-cool-cotton-155g-front.jpg",
+        "assets/products/lenor/lenor-cool-cotton-155g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_56516b8b34c7",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 674,
-      "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 155 g, 155g.",
-      "title": "Lenor Parfume (155g) Cool Cotton",
-      "productType": "кондиционер для белья",
+      "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Cool Cotton. Формат: 155 г.",
+      "title": "Lenor Cool Cotton парфюм для белья 155 г",
+      "productType": "парфюм для белья",
       "brand": "Lenor",
       "rating": 4.8,
-      "searchText": "lenor parfume (155g) cool cotton стирка и уход за бельем lenor кондиционер для белья lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 155 g, 155g."
+      "searchText": "lenor cool cotton парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: cool cotton. формат: 155 г."
     },
     {
       "unit": "шт",
@@ -1982,31 +2188,6 @@
     },
     {
       "unit": "шт",
-      "badge": "Pantene",
-      "retailPriceKgs": 895,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_d0bc9026f5ab",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Smooth Silky",
-      "productType": "шампунь",
-      "brand": "Pantene",
-      "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) smooth silky уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
-    },
-    {
-      "unit": "шт",
       "badge": "LUX",
       "retailPriceKgs": 450,
       "category": "Уход за волосами",
@@ -2029,31 +2210,6 @@
       "brand": "LUX",
       "rating": 4.8,
       "searchText": "lux гельдуш (500 мл) orchid уход за волосами lux уход за волосами lux: средство для ухода за волосами на каждый день. формат: 500 мл."
-    },
-    {
-      "unit": "шт",
-      "badge": "Pantene",
-      "retailPriceKgs": 895,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_1e0cb301d44d",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Good Bye",
-      "productType": "шампунь",
-      "brand": "Pantene",
-      "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) good bye уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
       "unit": "шт",
@@ -2113,31 +2269,6 @@
     },
     {
       "unit": "шт",
-      "badge": "Pantene",
-      "retailPriceKgs": 895,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_5faaff6cf17c",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Moisture",
-      "productType": "шампунь",
-      "brand": "Pantene",
-      "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) moisture уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
-    },
-    {
-      "unit": "шт",
       "badge": "LUX",
       "retailPriceKgs": 450,
       "category": "Уход за волосами",
@@ -2164,31 +2295,6 @@
     {
       "unit": "шт",
       "badge": "Pantene",
-      "retailPriceKgs": 895,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_572ed90689d1",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Daily Care",
-      "productType": "шампунь",
-      "brand": "Pantene",
-      "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) daily care уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
-    },
-    {
-      "unit": "шт",
-      "badge": "Pantene",
       "retailPriceKgs": 350,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2210,31 +2316,6 @@
       "brand": "Pantene",
       "rating": 4.8,
       "searchText": "pantene конд. (220)collogen уход за волосами pantene уход за волосами pantene: средство для ухода за волосами на каждый день."
-    },
-    {
-      "unit": "шт",
-      "badge": "Pantene",
-      "retailPriceKgs": 895,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_dce1df68b778",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Anti Hair Fall",
-      "productType": "шампунь",
-      "brand": "Pantene",
-      "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) anti hair fall уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
       "unit": "шт",
@@ -2410,31 +2491,6 @@
       "brand": "H&S",
       "rating": 4.8,
       "searchText": "h&s шампунь pump (450) active protect уход за волосами h&s шампунь h&s: средство для ухода за волосами на каждый день."
-    },
-    {
-      "unit": "шт",
-      "badge": "Pantene",
-      "retailPriceKgs": 895,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_da9eaa7d3675",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 868,
-      "description": "Pantene: средство для ухода за волосами на каждый день. Формат: 600 ml, 600ml.",
-      "title": "Pantene Шамп.Arab (600ml) Anti Dandruff",
-      "productType": "шампунь",
-      "brand": "Pantene",
-      "rating": 4.8,
-      "searchText": "pantene шамп.arab (600ml) anti dandruff уход за волосами pantene шампунь pantene: средство для ухода за волосами на каждый день. формат: 600 ml, 600ml."
     },
     {
       "unit": "шт",
@@ -3431,28 +3487,32 @@
     },
     {
       "unit": "шт",
-      "badge": "TRESemme",
+      "badge": "TRESemmé",
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/tresemme/tresemme-smooth-silky-828ml-card-front.jpg",
+        "assets/products/tresemme/tresemme-smooth-silky-828ml-front.jpg",
+        "assets/products/tresemme/tresemme-smooth-silky-828ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_01077bb33667",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/tresemme/tresemme-smooth-silky-828ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "TRESemme: средство для ухода за волосами на каждый день.",
-      "title": "TRESemme Шамп.(828) Smooth Silki",
+      "description": "Шампунь TRESemmé Silky & Smooth для гладкости и блеска волос. Объём 828 мл, формула с argan oleo blend.",
+      "title": "TRESemmé Silky & Smooth шампунь 828 мл",
       "productType": "шампунь",
-      "brand": "TRESemme",
+      "brand": "TRESemmé",
       "rating": 4.8,
-      "searchText": "tresemme шамп.(828) smooth silki уход за волосами tresemme шампунь tresemme: средство для ухода за волосами на каждый день."
+      "searchText": "tresemmé silky & smooth шампунь 828 мл уход за волосами tresemmé шампунь шампунь tresemmé silky & smooth для гладкости и блеска волос. объём 828 мл, формула с argan oleo blend."
     },
     {
       "unit": "шт",
@@ -3889,31 +3949,6 @@
     },
     {
       "unit": "шт",
-      "badge": "TRESemme",
-      "retailPriceKgs": 695,
-      "category": "Уход за волосами",
-      "categoryId": "hair",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_096618ced7c1",
-      "tones": [
-        "#f4d5df",
-        "#b66f91"
-      ],
-      "image": null,
-      "icon": "🧴",
-      "registeredPriceKgs": 674,
-      "description": "TRESemme: средство для ухода за волосами на каждый день.",
-      "title": "TRESemme Шамп.(828) Volume",
-      "productType": "шампунь",
-      "brand": "TRESemme",
-      "rating": 4.8,
-      "searchText": "tresemme шамп.(828) volume уход за волосами tresemme шампунь tresemme: средство для ухода за волосами на каждый день."
-    },
-    {
-      "unit": "шт",
       "badge": "TRESemmé",
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
@@ -3939,6 +3974,35 @@
       "brand": "TRESemmé",
       "rating": 4.8,
       "searchText": "tresemmé clean & replenish шампунь 828 мл уход за волосами tresemmé шампунь шампунь tresemmé clean & replenish 3-в-1 для очищения, ухода и распутывания волос. объём 828 мл, с pro vitamin c и green tea."
+    },
+    {
+      "unit": "шт",
+      "badge": "TRESemmé",
+      "retailPriceKgs": 695,
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
+        "assets/products/tresemme/tresemme-volume-828ml-front.jpg",
+        "assets/products/tresemme/tresemme-volume-828ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_096618ced7c1",
+      "tones": [
+        "#f4d5df",
+        "#b66f91"
+      ],
+      "image": "assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
+      "icon": "🧴",
+      "registeredPriceKgs": 674,
+      "description": "Шампунь TRESemmé Volume для придания объёма волосам. Объём 828 мл, формула с collagen & peptide complex.",
+      "title": "TRESemmé Volume шампунь 828 мл",
+      "productType": "шампунь",
+      "brand": "TRESemmé",
+      "rating": 4.8,
+      "searchText": "tresemmé volume шампунь 828 мл уход за волосами tresemmé шампунь шампунь tresemmé volume для придания объёма волосам. объём 828 мл, формула с collagen & peptide complex."
     },
     {
       "unit": "шт",
@@ -4017,28 +4081,32 @@
     },
     {
       "unit": "шт",
-      "badge": "TRESemme",
+      "badge": "TRESemmé",
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/tresemme/tresemme-curl-hydration-828ml-card-front.jpg",
+        "assets/products/tresemme/tresemme-curl-hydration-828ml-front.jpg",
+        "assets/products/tresemme/tresemme-curl-hydration-828ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_4cf797e1e1b4",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/tresemme/tresemme-curl-hydration-828ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 674,
-      "description": "TRESemme: средство для ухода за волосами на каждый день.",
-      "title": "TRESemme Шамп.(828) Curl Hydration",
+      "description": "Шампунь TRESemmé Curl Hydration для увлажнения и ухода за кудрявыми волосами. Объём 828 мл, заявлено до 7x более увлажнённых локонов.",
+      "title": "TRESemmé Curl Hydration шампунь 828 мл",
       "productType": "шампунь",
-      "brand": "TRESemme",
+      "brand": "TRESemmé",
       "rating": 4.8,
-      "searchText": "tresemme шамп.(828) curl hydration уход за волосами tresemme шампунь tresemme: средство для ухода за волосами на каждый день."
+      "searchText": "tresemmé curl hydration шампунь 828 мл уход за волосами tresemmé шампунь шампунь tresemmé curl hydration для увлажнения и ухода за кудрявыми волосами. объём 828 мл, заявлено до 7x более увлажнённых локонов."
     },
     {
       "unit": "шт",

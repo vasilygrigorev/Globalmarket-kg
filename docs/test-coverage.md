@@ -206,3 +206,15 @@ browser, no Supabase, no Cloudflare, no secrets.
   triple is not proof the three photos are the same product. `--strict`
   (wired into the preflight) fails only on a brand-new undocumented group;
   never deletes or moves files.
+- `scripts/check_override_schema.py` + `override-schema-guard.test.mjs` —
+  catches the 2026-07-05 incident class where a `data/product_overrides.json`
+  entry carries a photo (`image`/`galleryImages`) but uses legacy camelCase
+  fields (`productType`/`categoryId`/`title`) instead of the snake_case keys
+  `scripts/apply_product_overrides.py` actually requires
+  (`clean_title`/`description`/`brand`/`product_type`) — such an entry is
+  silently skipped by the apply script and its photo never reaches the
+  storefront, with no error anywhere. Only entries carrying a photo are
+  checked (a photo-less entry missing fields has nothing to silently lose);
+  manual perfume entries (`prd_perfume_*`, which live in
+  `data/manual_products.json` instead) are exempt. Wired into the preflight
+  (non-`--strict`; exits non-zero on any real hit).
