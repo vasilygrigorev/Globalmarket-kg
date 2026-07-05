@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T14:08:45.494210+00:00",
+  "generatedAt": "2026-07-05T14:57:20.799986+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -4458,28 +4458,32 @@
     },
     {
       "unit": "шт",
-      "badge": "С",
+      "badge": "Skin Doctor",
       "retailPriceKgs": 550,
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg",
+        "assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-front.jpg",
+        "assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_cc2d1fc489e2",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 533,
-      "description": "С: средство для ухода за кожей и ежедневной гигиены. Формат: 200 ml, 200ml.",
-      "title": "С/З DS (SD-091)SPF60(200ml) Summer",
-      "productType": "уход за телом",
-      "brand": "С",
+      "description": "Солнцезащитный крем Skin Doctor Sunblock 60 Summer с коллагеном и витамином E, защита до 8 часов. Объём 200 мл.",
+      "title": "Skin Doctor Sunblock 60 Summer солнцезащитный крем 200 мл",
+      "productType": "солнцезащитный крем",
+      "brand": "Skin Doctor",
       "rating": 4.8,
-      "searchText": "с/з ds (sd-091)spf60(200ml) summer уход за телом с уход за телом с: средство для ухода за кожей и ежедневной гигиены. формат: 200 ml, 200ml."
+      "searchText": "skin doctor sunblock 60 summer солнцезащитный крем 200 мл уход за телом skin doctor солнцезащитный крем солнцезащитный крем skin doctor sunblock 60 summer с коллагеном и витамином e, защита до 8 часов. объём 200 мл."
     },
     {
       "unit": "шт",
@@ -4533,28 +4537,61 @@
     },
     {
       "unit": "шт",
-      "badge": "С",
+      "badge": "YC",
       "retailPriceKgs": 300,
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/yc/yc-sunscreen-spf50-100g-card-front.jpg",
+        "assets/products/yc/yc-sunscreen-spf50-100g-front.jpg",
+        "assets/products/yc/yc-sunscreen-spf50-100g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_b1d27dff5c3e",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/yc/yc-sunscreen-spf50-100g-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 291,
-      "description": "С: средство для ухода за кожей и ежедневной гигиены. Формат: 100 g.",
-      "title": "С/З YC (YC-852)SPF50 (100gr)",
-      "productType": "уход за телом",
-      "brand": "С",
+      "description": "Солнцезащитный крем YC Sunscreen UV Protection с SPF50, витамином E и B3, алоэ вера. Объём 100 г.",
+      "title": "YC Sunscreen UV Protection SPF50 солнцезащитный крем 100 г",
+      "productType": "солнцезащитный крем",
+      "brand": "YC",
       "rating": 4.8,
-      "searchText": "с/з yc (yc-852)spf50 (100gr) уход за телом с уход за телом с: средство для ухода за кожей и ежедневной гигиены. формат: 100 g."
+      "searchText": "yc sunscreen uv protection spf50 солнцезащитный крем 100 г уход за телом yc солнцезащитный крем солнцезащитный крем yc sunscreen uv protection с spf50, витамином e и b3, алоэ вера. объём 100 г."
+    },
+    {
+      "unit": "шт",
+      "badge": "YC",
+      "retailPriceKgs": 300,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg",
+        "assets/products/yc/yc-sunscreen-spf70-100g-front.jpg",
+        "assets/products/yc/yc-sunscreen-spf70-100g-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_f50077a08461",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": "assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg",
+      "icon": "🌸",
+      "registeredPriceKgs": 291,
+      "description": "Солнцезащитный крем YC Sunscreen UV Protection с SPF70, витамином E и B3, алоэ вера. Объём 100 г.",
+      "title": "YC Sunscreen UV Protection SPF70 солнцезащитный крем 100 г",
+      "productType": "солнцезащитный крем",
+      "brand": "YC",
+      "rating": 4.8,
+      "searchText": "yc sunscreen uv protection spf70 солнцезащитный крем 100 г уход за телом yc солнцезащитный крем солнцезащитный крем yc sunscreen uv protection с spf70, витамином e и b3, алоэ вера. объём 100 г."
     },
     {
       "unit": "шт",
@@ -4583,28 +4620,32 @@
     },
     {
       "unit": "шт",
-      "badge": "С",
-      "retailPriceKgs": 300,
+      "badge": "YC",
+      "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_f50077a08461",
+      "galleryImages": [
+        "assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg",
+        "assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-front.jpg",
+        "assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_45b58a935040",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg",
       "icon": "🌸",
-      "registeredPriceKgs": 291,
-      "description": "С: средство для ухода за кожей и ежедневной гигиены. Формат: 100 g.",
-      "title": "С/З YC (YC-854)SPF70 (100gr)",
-      "productType": "уход за телом",
-      "brand": "С",
+      "registeredPriceKgs": 436,
+      "description": "Солнцезащитный спрей YC White Sunscreen Spray с SPF50, быстро впитывается, для лица и тела. Объём 150 мл.",
+      "title": "YC White Sunscreen Spray SPF50 солнцезащитный спрей 150 мл",
+      "productType": "солнцезащитный спрей",
+      "brand": "YC",
       "rating": 4.8,
-      "searchText": "с/з yc (yc-854)spf70 (100gr) уход за телом с уход за телом с: средство для ухода за кожей и ежедневной гигиены. формат: 100 g."
+      "searchText": "yc white sunscreen spray spf50 солнцезащитный спрей 150 мл уход за телом yc солнцезащитный спрей солнцезащитный спрей yc white sunscreen spray с spf50, быстро впитывается, для лица и тела. объём 150 мл."
     },
     {
       "unit": "шт",
@@ -4655,31 +4696,6 @@
       "brand": "С",
       "rating": 4.8,
       "searchText": "с/з yc (yc-915)spf50 (150ml) blue уход за телом с уход за телом с: средство для ухода за кожей и ежедневной гигиены. формат: 150 ml, 150ml."
-    },
-    {
-      "unit": "шт",
-      "badge": "С",
-      "retailPriceKgs": 450,
-      "category": "Уход за телом",
-      "categoryId": "body",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_45b58a935040",
-      "tones": [
-        "#f2d9c7",
-        "#c7876a"
-      ],
-      "image": null,
-      "icon": "🌸",
-      "registeredPriceKgs": 436,
-      "description": "С: средство для ухода за кожей и ежедневной гигиены. Формат: 150 ml, 150ml.",
-      "title": "С/З YC (YC-916)SPF50 (150ml) Yellow",
-      "productType": "уход за телом",
-      "brand": "С",
-      "rating": 4.8,
-      "searchText": "с/з yc (yc-916)spf50 (150ml) yellow уход за телом с уход за телом с: средство для ухода за кожей и ежедневной гигиены. формат: 150 ml, 150ml."
     },
     {
       "unit": "шт",

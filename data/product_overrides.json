@@ -776,6 +776,24 @@
     "product_type": "сменные кассеты для бритья",
     "short_title": "Venus Smooth 8 шт"
   },
+  "prd_45b58a935040": {
+    "brand": "YC",
+    "category_id": "body",
+    "clean_title": "YC White Sunscreen Spray SPF50 солнцезащитный спрей 150 мл",
+    "description": "Солнцезащитный спрей YC White Sunscreen Spray с SPF50, быстро впитывается, для лица и тела. Объём 150 мл.",
+    "galleryImages": [
+      "assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg",
+      "assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-front.jpg",
+      "assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-back.jpg"
+    ],
+    "image": "assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg",
+    "notes": [
+      "2026-07-05: фото из новой партии Пети; товар опознан по штрихкоду YC916 на фото баллона (совпадает с 1C кодом 2919, С/З YC (YC-916)SPF50 (150ml) Yellow). На упаковке продукт называется White Sunscreen Spray — это название формулы, а не противоречие цвету по 1C; код штрихкода однозначно определяет позицию."
+    ],
+    "product_type": "солнцезащитный спрей",
+    "short_title": "YC White Spray SPF50 150 мл",
+    "unit": "150 мл"
+  },
   "prd_477c3cbc2534": {
     "brand": "Gillette Venus",
     "category_id": "shaving",
@@ -1814,6 +1832,25 @@
     "product_type": "гель для стирки",
     "short_title": "Persil White Flower 3 л"
   },
+  "prd_b1d27dff5c3e": {
+    "brand": "YC",
+    "category_id": "body",
+    "clean_title": "YC Sunscreen UV Protection SPF50 солнцезащитный крем 100 г",
+    "description": "Солнцезащитный крем YC Sunscreen UV Protection с SPF50, витамином E и B3, алоэ вера. Объём 100 г.",
+    "galleryImages": [
+      "assets/products/yc/yc-sunscreen-spf50-100g-card-front.jpg",
+      "assets/products/yc/yc-sunscreen-spf50-100g-front.jpg",
+      "assets/products/yc/yc-sunscreen-spf50-100g-back.jpg"
+    ],
+    "image": "assets/products/yc/yc-sunscreen-spf50-100g-card-front.jpg",
+    "notes": [
+      "2026-07-05: фото из новой партии Пети; товар опознан по штрихкоду YC852 на фото тюбика (совпадает с 1C кодом 2913, С/З YC (YC-852)SPF50 (100gr)).",
+      "2026-07-05: файлы изначально лежали в assets/products/skin-doctor/ под неверным именем skin-doctor-sunblock-spf60-170g-*; по факту это YC SPF50 100g, перенесено и переименовано в assets/products/yc/."
+    ],
+    "product_type": "солнцезащитный крем",
+    "short_title": "YC Sunscreen SPF50 100 г",
+    "unit": "100 г"
+  },
   "prd_b23a1bd2b12b": {
     "brand": "Dalli",
     "category_id": "germany",
@@ -2086,6 +2123,24 @@
     "image": "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-card-front.jpg",
     "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-114945-02-card-front.jpg.",
     "product_type": "кондиционер для белья"
+  },
+  "prd_cc2d1fc489e2": {
+    "brand": "Skin Doctor",
+    "category_id": "body",
+    "clean_title": "Skin Doctor Sunblock 60 Summer солнцезащитный крем 200 мл",
+    "description": "Солнцезащитный крем Skin Doctor Sunblock 60 Summer с коллагеном и витамином E, защита до 8 часов. Объём 200 мл.",
+    "galleryImages": [
+      "assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg",
+      "assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-front.jpg",
+      "assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-back.jpg"
+    ],
+    "image": "assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg",
+    "notes": [
+      "2026-07-05: фото из новой партии Пети; товар уверенно опознан по уникальному сочетанию SPF60 + 200 мл + Summer (совпадает с 1C кодом 777, С/З DS (SD-091)SPF60(200ml) Summer); бренд DS = Skin Doctor подтверждён надписью на упаковке."
+    ],
+    "product_type": "солнцезащитный крем",
+    "short_title": "Skin Doctor Summer 200 мл",
+    "unit": "200 мл"
   },
   "prd_d0bc9026f5ab": {
     "badge": "Pantene",
@@ -2567,6 +2622,24 @@
     ],
     "product_type": "гель для стирки",
     "short_title": "Persil Rose 3 л"
+  },
+  "prd_f50077a08461": {
+    "brand": "YC",
+    "category_id": "body",
+    "clean_title": "YC Sunscreen UV Protection SPF70 солнцезащитный крем 100 г",
+    "description": "Солнцезащитный крем YC Sunscreen UV Protection с SPF70, витамином E и B3, алоэ вера. Объём 100 г.",
+    "galleryImages": [
+      "assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg",
+      "assets/products/yc/yc-sunscreen-spf70-100g-front.jpg",
+      "assets/products/yc/yc-sunscreen-spf70-100g-back.jpg"
+    ],
+    "image": "assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg",
+    "notes": [
+      "2026-07-05: фото из новой партии Пети; товар опознан по штрихкоду YC854 на фото тюбика (совпадает с 1C кодом 2916, С/З YC (YC-854)SPF70 (100gr))."
+    ],
+    "product_type": "солнцезащитный крем",
+    "short_title": "YC Sunscreen SPF70 100 г",
+    "unit": "100 г"
   },
   "prd_f724e0973fa5": {
     "brand": "Dove",

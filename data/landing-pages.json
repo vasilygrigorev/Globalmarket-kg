@@ -1,5 +1,5 @@
 {
-  "count": 30,
+  "count": 31,
   "pages": [
     {
       "type": "category",
@@ -62,7 +62,7 @@
         "мыло для рук",
         "хозяйственное мыло"
       ],
-      "shown": 3
+      "shown": 7
     },
     {
       "type": "category",
@@ -386,6 +386,20 @@
         "Comfort купить Бишкек"
       ],
       "shown": 4
+    },
+    {
+      "type": "brand",
+      "slug": "yc",
+      "title": "YC",
+      "path": "/brand/yc/",
+      "url": "https://globalmarket.kg/brand/yc/",
+      "count": 3,
+      "seoTerms": [
+        "YC",
+        "товары YC",
+        "YC купить Бишкек"
+      ],
+      "shown": 3
     },
     {
       "type": "brand",

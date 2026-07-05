@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 117,
+  "count": 121,
   "pages": [
     {
       "id": "prd_c5f3a1dce862",
@@ -679,6 +679,66 @@
       "relatedCount": 22
     },
     {
+      "id": "prd_cc2d1fc489e2",
+      "slug": "skin-doctor-sunblock-60-summer-solntsezaschitnyy-krem-200-ml-c489e2",
+      "path": "/product/skin-doctor-sunblock-60-summer-solntsezaschitnyy-krem-200-ml-c489e2/",
+      "url": "https://globalmarket.kg/product/skin-doctor-sunblock-60-summer-solntsezaschitnyy-krem-200-ml-c489e2/",
+      "title": "Skin Doctor Sunblock 60 Summer солнцезащитный крем 200 мл",
+      "brand": "Skin Doctor",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 550,
+      "image": "/assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 6
+    },
+    {
+      "id": "prd_b1d27dff5c3e",
+      "slug": "yc-sunscreen-uv-protection-spf50-solntsezaschitnyy-krem-100-g-ff5c3e",
+      "path": "/product/yc-sunscreen-uv-protection-spf50-solntsezaschitnyy-krem-100-g-ff5c3e/",
+      "url": "https://globalmarket.kg/product/yc-sunscreen-uv-protection-spf50-solntsezaschitnyy-krem-100-g-ff5c3e/",
+      "title": "YC Sunscreen UV Protection SPF50 солнцезащитный крем 100 г",
+      "brand": "YC",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 300,
+      "image": "/assets/products/yc/yc-sunscreen-spf50-100g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 6
+    },
+    {
+      "id": "prd_f50077a08461",
+      "slug": "yc-sunscreen-uv-protection-spf70-solntsezaschitnyy-krem-100-g-a08461",
+      "path": "/product/yc-sunscreen-uv-protection-spf70-solntsezaschitnyy-krem-100-g-a08461/",
+      "url": "https://globalmarket.kg/product/yc-sunscreen-uv-protection-spf70-solntsezaschitnyy-krem-100-g-a08461/",
+      "title": "YC Sunscreen UV Protection SPF70 солнцезащитный крем 100 г",
+      "brand": "YC",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 300,
+      "image": "/assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 6
+    },
+    {
+      "id": "prd_45b58a935040",
+      "slug": "yc-white-sunscreen-spray-spf50-solntsezaschitnyy-sprey-150-ml-935040",
+      "path": "/product/yc-white-sunscreen-spray-spf50-solntsezaschitnyy-sprey-150-ml-935040/",
+      "url": "https://globalmarket.kg/product/yc-white-sunscreen-spray-spf50-solntsezaschitnyy-sprey-150-ml-935040/",
+      "title": "YC White Sunscreen Spray SPF50 солнцезащитный спрей 150 мл",
+      "brand": "YC",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 6
+    },
+    {
       "id": "prd_0b8a7c8dea63",
       "slug": "johnson-s-baby-oil-detskoe-maslo-300-ml-8dea63",
       "path": "/product/johnson-s-baby-oil-detskoe-maslo-300-ml-8dea63/",
@@ -691,7 +751,7 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 4
+      "relatedCount": 6
     },
     {
       "id": "prd_d3c195668843",
@@ -706,7 +766,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 4
+      "relatedCount": 6
     },
     {
       "id": "prd_96fe6b1c7d9c",
@@ -721,7 +781,7 @@
       "retailPriceKgs": 295,
       "image": "/assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 4
+      "relatedCount": 6
     },
     {
       "id": "prd_a9ee2b0ab49d",
