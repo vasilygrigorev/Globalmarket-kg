@@ -59,3 +59,21 @@ variants, either take/send a proper third photo (a clean product-forward
 shot to serve as `card-front`), or explicitly approve publishing with only
 2 images as a documented exception (like the existing card+front-only
 exceptions in `docs/product-photo-rules.md`).
+
+## Что нужно от Пети/владельца (по-русски)
+
+Два товара Dove не публикуются — не хватает третьего фото:
+
+1. **Dove Go Fresh Apple & White Tea, 250 мл** (спрей-дезодорант, красная
+   крышка). Сейчас есть только фото лицевой этикетки и фото с составом на
+   обороте — нужно ещё одно нормальное "витринное" фото товара (как
+   `card-front` у других товаров), либо явное разрешение опубликовать
+   всего с 2 фото как исключение.
+2. **Dove Advanced Care Original, 250 мл** (спрей-дезодорант, синяя
+   крышка). Та же ситуация — 2 фото есть, третьего (`card-front`) нет.
+
+Третий товар с этих же фото — **Dove Pear & Aloe Vera** — уже опубликован
+на сайте, эти 2 фото для него не нужны, можно не пересъёмывать.
+
+Пока не пришлют третье фото (или явное "публикуй как есть"), эти два
+товара останутся в статусе "review", без фото на сайте.

@@ -197,3 +197,12 @@ browser, no Supabase, no Cloudflare, no secrets.
   Telegram/OCR/contact-sheet leftovers (same marker set as the gallery
   verifier) and are not referenced by any product — report-only, nothing is
   ever deleted automatically. Syntax-checked in the preflight.
+- `scripts/report_raw_photo_groups.py` + `raw-photo-triage.test.mjs` — triages
+  loose photo files sitting directly under `assets/products/` (not yet sorted
+  into a brand subfolder). Groups by filename prefix and reports
+  complete-by-filename card-front/front/back sets vs. incomplete 1-2 photo
+  groups; either kind only counts as reviewed if it (or its batch prefix) is
+  written up in `docs/pending-photo-review.md` — a complete-looking filename
+  triple is not proof the three photos are the same product. `--strict`
+  (wired into the preflight) fails only on a brand-new undocumented group;
+  never deletes or moves files.
