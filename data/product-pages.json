@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 150,
+  "count": 167,
   "pages": [
     {
       "id": "prd_d0bc9026f5ab",
@@ -1171,7 +1171,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_ded7b0409c9c",
@@ -1186,7 +1186,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_081404d81ef8",
@@ -1201,7 +1201,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_bc63389835c9",
@@ -1216,7 +1216,7 @@
       "retailPriceKgs": 490,
       "image": "/assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_16599c72dda7",
@@ -1231,7 +1231,7 @@
       "retailPriceKgs": 490,
       "image": "/assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_e6202bbb1789",
@@ -1246,7 +1246,37 @@
       "retailPriceKgs": 490,
       "image": "/assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
+    },
+    {
+      "id": "prd_0d95e9b49711",
+      "slug": "rexona-men-antibacterial-invisible-dezodorant-stik-40-g-b49711",
+      "path": "/product/rexona-men-antibacterial-invisible-dezodorant-stik-40-g-b49711/",
+      "url": "https://globalmarket.kg/product/rexona-men-antibacterial-invisible-dezodorant-stik-40-g-b49711/",
+      "title": "Rexona Men Antibacterial + Invisible дезодорант-стик 40 г",
+      "brand": "Rexona",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 300,
+      "image": "/assets/products/rexona/rexona-stick-antibacterial-40g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 23
+    },
+    {
+      "id": "prd_56cefec24fdf",
+      "slug": "rexona-bamboo-dezodorant-stik-40-g-c24fdf",
+      "path": "/product/rexona-bamboo-dezodorant-stik-40-g-c24fdf/",
+      "url": "https://globalmarket.kg/product/rexona-bamboo-dezodorant-stik-40-g-c24fdf/",
+      "title": "Rexona Bamboo дезодорант-стик 40 г",
+      "brand": "Rexona",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 300,
+      "image": "/assets/products/rexona/rexona-stick-bamboo-40g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 23
     },
     {
       "id": "prd_7c7e94c7128f",
@@ -1261,7 +1291,7 @@
       "retailPriceKgs": 250,
       "image": "/assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_e40df5ac7d15",
@@ -1276,7 +1306,22 @@
       "retailPriceKgs": 250,
       "image": "/assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
+    },
+    {
+      "id": "prd_8b3a9f34a763",
+      "slug": "dove-men-care-clean-comfort-dezodorant-stik-40-g-34a763",
+      "path": "/product/dove-men-care-clean-comfort-dezodorant-stik-40-g-34a763/",
+      "url": "https://globalmarket.kg/product/dove-men-care-clean-comfort-dezodorant-stik-40-g-34a763/",
+      "title": "Dove Men +Care Clean Comfort дезодорант-стик 40 г",
+      "brand": "Dove",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 300,
+      "image": "/assets/products/dove/dove-stick-men-clean-comfort-40g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 23
     },
     {
       "id": "prd_f7a9d836005f",
@@ -1291,7 +1336,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/dove/dove-stick-original-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_23e1645a6a85",
@@ -1306,7 +1351,52 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/dove/dove-stick-pomegranate-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
+    },
+    {
+      "id": "prd_47c8b6565a63",
+      "slug": "rexona-men-cobalt-dezodorant-stik-40-g-565a63",
+      "path": "/product/rexona-men-cobalt-dezodorant-stik-40-g-565a63/",
+      "url": "https://globalmarket.kg/product/rexona-men-cobalt-dezodorant-stik-40-g-565a63/",
+      "title": "Rexona Men Cobalt дезодорант-стик 40 г",
+      "brand": "Rexona",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 300,
+      "image": "/assets/products/rexona/rexona-stick-cobalt-40g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 23
+    },
+    {
+      "id": "prd_9bb309942383",
+      "slug": "rexona-men-v8-dezodorant-stik-40-g-942383",
+      "path": "/product/rexona-men-v8-dezodorant-stik-40-g-942383/",
+      "url": "https://globalmarket.kg/product/rexona-men-v8-dezodorant-stik-40-g-942383/",
+      "title": "Rexona Men V8 дезодорант-стик 40 г",
+      "brand": "Rexona",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 300,
+      "image": "/assets/products/rexona/rexona-stick-v8-40g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 23
+    },
+    {
+      "id": "prd_168ccd5d1f3e",
+      "slug": "rexona-men-xtra-cool-dezodorant-stik-40-g-5d1f3e",
+      "path": "/product/rexona-men-xtra-cool-dezodorant-stik-40-g-5d1f3e/",
+      "url": "https://globalmarket.kg/product/rexona-men-xtra-cool-dezodorant-stik-40-g-5d1f3e/",
+      "title": "Rexona Men Xtra Cool дезодорант-стик 40 г",
+      "brand": "Rexona",
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "retailPriceKgs": 300,
+      "image": "/assets/products/rexona/rexona-stick-extra-cool-40g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 23
     },
     {
       "id": "prd_21c8c8aa3e5d",
@@ -1321,7 +1411,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/dove/dove-stick-beauty-finish-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_cdc989a294f9",
@@ -1336,7 +1426,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/dove/dove-stick-cucumber-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_e616d7830dcc",
@@ -1351,7 +1441,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-rogue-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_e74e6e5aeafb",
@@ -1366,7 +1456,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-maverick-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_84707e91d0d1",
@@ -1381,7 +1471,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-gold-temptation-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_e79bae4e0c99",
@@ -1396,7 +1486,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-intense-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_8b110a525852",
@@ -1411,7 +1501,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-corporate-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_17547dd70a52",
@@ -1426,7 +1516,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-champion-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 17
+      "relatedCount": 23
     },
     {
       "id": "prd_08eb2cef1689",
@@ -1441,7 +1531,7 @@
       "retailPriceKgs": 2490,
       "image": "/assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
     },
     {
       "id": "prd_e166f2ec9c56",
@@ -1456,7 +1546,7 @@
       "retailPriceKgs": 400,
       "image": "/assets/products/gillette/gillette-moisturising-shave-gel-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
     },
     {
       "id": "prd_debb27afb337",
@@ -1471,7 +1561,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/gillette/gillette-venus-smooth-cartridges-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
     },
     {
       "id": "prd_477c3cbc2534",
@@ -1486,7 +1576,67 @@
       "retailPriceKgs": 230,
       "image": "/assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_7f5f15b91773",
+      "slug": "gillette-venus-comfortglide-breeze-smennye-kassety-8-sht-xl-b91773",
+      "path": "/product/gillette-venus-comfortglide-breeze-smennye-kassety-8-sht-xl-b91773/",
+      "url": "https://globalmarket.kg/product/gillette-venus-comfortglide-breeze-smennye-kassety-8-sht-xl-b91773/",
+      "title": "Gillette Venus Comfortglide Breeze сменные кассеты 8 шт (XL)",
+      "brand": "Gillette",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 2095,
+      "image": "/assets/products/gillette/gillette-venus-comfortglide-breeze-cartridges-8-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_be5c87ae6741",
+      "slug": "gillette-venus-extra-smooth-smennye-kassety-8-sht-xl-ae6741",
+      "path": "/product/gillette-venus-extra-smooth-smennye-kassety-8-sht-xl-ae6741/",
+      "url": "https://globalmarket.kg/product/gillette-venus-extra-smooth-smennye-kassety-8-sht-xl-ae6741/",
+      "title": "Gillette Venus Extra Smooth сменные кассеты 8 шт (XL)",
+      "brand": "Gillette",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 1790,
+      "image": "/assets/products/gillette/gillette-venus-extra-smooth-cartridges-8-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_9f1a9f037659",
+      "slug": "gillette-fusion5-power-stanok-1-sht-037659",
+      "path": "/product/gillette-fusion5-power-stanok-1-sht-037659/",
+      "url": "https://globalmarket.kg/product/gillette-fusion5-power-stanok-1-sht-037659/",
+      "title": "Gillette Fusion5 Power станок 1 шт",
+      "brand": "Gillette",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 890,
+      "image": "/assets/products/gillette/gillette-fusion5-power-razor-1-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_1b7d37e71949",
+      "slug": "gillette-fusion5-proglide-power-stanok-1-sht-5-smennyh-kasset-e71949",
+      "path": "/product/gillette-fusion5-proglide-power-stanok-1-sht-5-smennyh-kasset-e71949/",
+      "url": "https://globalmarket.kg/product/gillette-fusion5-proglide-power-stanok-1-sht-5-smennyh-kasset-e71949/",
+      "title": "Gillette Fusion5 ProGlide Power станок 1 шт (+5 сменных кассет)",
+      "brand": "Gillette",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 895,
+      "image": "/assets/products/gillette/gillette-fusion5-proglide-power-razor-1-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
     },
     {
       "id": "prd_26f86cee34e8",
@@ -1501,7 +1651,7 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/gillette/gillette-foam-sensitive-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
     },
     {
       "id": "prd_bd1e6c3316c4",
@@ -1516,7 +1666,52 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/gillette/gillette-foam-original-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_76659cd2bb07",
+      "slug": "gillette-venus-deluxe-smooth-swirl-smennye-kassety-3-sht-d2bb07",
+      "path": "/product/gillette-venus-deluxe-smooth-swirl-smennye-kassety-3-sht-d2bb07/",
+      "url": "https://globalmarket.kg/product/gillette-venus-deluxe-smooth-swirl-smennye-kassety-3-sht-d2bb07/",
+      "title": "Gillette Venus Deluxe Smooth Swirl сменные кассеты 3 шт",
+      "brand": "Gillette",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 1190,
+      "image": "/assets/products/gillette/gillette-venus-deluxe-smooth-swirl-cartridges-3-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_f83cc0014f92",
+      "slug": "bic-3-sensitive-odnorazovye-stanki-6-sht-4-2-014f92",
+      "path": "/product/bic-3-sensitive-odnorazovye-stanki-6-sht-4-2-014f92/",
+      "url": "https://globalmarket.kg/product/bic-3-sensitive-odnorazovye-stanki-6-sht-4-2-014f92/",
+      "title": "BIC 3 Sensitive одноразовые станки 6 шт (4+2)",
+      "brand": "BIC",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 350,
+      "image": "/assets/products/bic/bic-3-sensitive-6pcs-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_d89548b02b08",
+      "slug": "bic-soleil-scent-zhenskie-odnorazovye-stanki-4-sht-b02b08",
+      "path": "/product/bic-soleil-scent-zhenskie-odnorazovye-stanki-4-sht-b02b08/",
+      "url": "https://globalmarket.kg/product/bic-soleil-scent-zhenskie-odnorazovye-stanki-4-sht-b02b08/",
+      "title": "BIC Soleil Scent женские одноразовые станки 4 шт",
+      "brand": "BIC",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 495,
+      "image": "/assets/products/bic/bic-soleil-scent-4pcs-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
     },
     {
       "id": "prd_e993df33c857",
@@ -1531,7 +1726,37 @@
       "retailPriceKgs": 890,
       "image": "/assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_a5a45ddea545",
+      "slug": "bic-1-sensitive-odnorazovye-stanki-15-sht-10-5-dea545",
+      "path": "/product/bic-1-sensitive-odnorazovye-stanki-15-sht-10-5-dea545/",
+      "url": "https://globalmarket.kg/product/bic-1-sensitive-odnorazovye-stanki-15-sht-10-5-dea545/",
+      "title": "BIC 1 Sensitive одноразовые станки 15 шт (10+5)",
+      "brand": "BIC",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 390,
+      "image": "/assets/products/bic/bic-1-sensitive-15pcs-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_9e4624cbe2cf",
+      "slug": "bic-twin-lady-zhenskie-odnorazovye-stanki-5-sht-cbe2cf",
+      "path": "/product/bic-twin-lady-zhenskie-odnorazovye-stanki-5-sht-cbe2cf/",
+      "url": "https://globalmarket.kg/product/bic-twin-lady-zhenskie-odnorazovye-stanki-5-sht-cbe2cf/",
+      "title": "BIC Twin Lady женские одноразовые станки 5 шт",
+      "brand": "BIC",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 230,
+      "image": "/assets/products/bic/bic-twin-lady-5pcs-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
     },
     {
       "id": "prd_0fffb16fcaee",
@@ -1546,7 +1771,22 @@
       "retailPriceKgs": 250,
       "image": "/assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_6a96d3de0c5a",
+      "slug": "bic-comfort-2-odnorazovye-stanki-5-sht-de0c5a",
+      "path": "/product/bic-comfort-2-odnorazovye-stanki-5-sht-de0c5a/",
+      "url": "https://globalmarket.kg/product/bic-comfort-2-odnorazovye-stanki-5-sht-de0c5a/",
+      "title": "BIC Comfort 2 одноразовые станки 5 шт",
+      "brand": "BIC",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 230,
+      "image": "/assets/products/bic/bic-2-comfort-5pcs-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
     },
     {
       "id": "prd_45a4eda764f6",
@@ -1561,7 +1801,22 @@
       "retailPriceKgs": 1595,
       "image": "/assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_4f3caf82472d",
+      "slug": "bic-2-sensitive-odnorazovye-stanki-5-sht-82472d",
+      "path": "/product/bic-2-sensitive-odnorazovye-stanki-5-sht-82472d/",
+      "url": "https://globalmarket.kg/product/bic-2-sensitive-odnorazovye-stanki-5-sht-82472d/",
+      "title": "BIC 2 Sensitive одноразовые станки 5 шт",
+      "brand": "BIC",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 195,
+      "image": "/assets/products/bic/bic-2-sensitive-5pcs-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
     },
     {
       "id": "prd_94f09d0e25fc",
@@ -1576,7 +1831,7 @@
       "retailPriceKgs": 495,
       "image": "/assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
     },
     {
       "id": "prd_08168d08df30",
@@ -1591,7 +1846,7 @@
       "retailPriceKgs": 590,
       "image": "/assets/products/gillette/gillette-venus-smooth-sensitive-cartridges-2-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
     },
     {
       "id": "prd_cbc7943d5965",
@@ -1606,7 +1861,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
     },
     {
       "id": "prd_b26c0045dd47",
@@ -1621,7 +1876,7 @@
       "retailPriceKgs": 650,
       "image": "/assets/products/gillette/gillette-venus-comfortglide-cartridges-2-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
     },
     {
       "id": "prd_13dbf4e592aa",
@@ -1636,7 +1891,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 13
+      "relatedCount": 24
     },
     {
       "id": "prd_3e6fdfc928fc",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T07:06:53.651025+00:00",
+  "generatedAt": "2026-07-06T08:43:09.917149+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -9,7 +9,7 @@
     {
       "id": "laundry",
       "title": "Стирка и уход за бельем",
-      "count": 55,
+      "count": 53,
       "icon": "🫧"
     },
     {
@@ -39,13 +39,13 @@
     {
       "id": "deodorants",
       "title": "Дезодоранты",
-      "count": 72,
+      "count": 73,
       "icon": "💜"
     },
     {
       "id": "shaving",
       "title": "Бритье",
-      "count": 54,
+      "count": 55,
       "icon": "🪒"
     },
     {
@@ -1108,31 +1108,6 @@
     },
     {
       "unit": "шт",
-      "badge": "Dove",
-      "retailPriceKgs": 300,
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_8b3a9f34a763",
-      "tones": [
-        "#f2dfc6",
-        "#d58d79"
-      ],
-      "image": null,
-      "icon": "🫧",
-      "registeredPriceKgs": 291,
-      "description": "Dove: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 40 g, 40g.",
-      "title": "Dove Stick Men (40g) Clean Comfort",
-      "productType": "кондиционер для белья",
-      "brand": "Dove",
-      "rating": 4.8,
-      "searchText": "dove stick men (40g) clean comfort стирка и уход за бельем dove кондиционер для белья dove: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 40 g, 40g."
-    },
-    {
-      "unit": "шт",
       "badge": "Lenor",
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
@@ -1159,31 +1134,6 @@
       "brand": "Lenor",
       "rating": 4.8,
       "searchText": "lenor dreamy jasmine парфюм для белья 155 г стирка и уход за бельем lenor парфюм для белья парфюмированные гранулы lenor unstoppables для добавления аромата белью во время стирки. вариант: dreamy jasmine. формат: 155 г."
-    },
-    {
-      "unit": "шт",
-      "badge": "Comfort",
-      "retailPriceKgs": 230,
-      "category": "Стирка и уход за бельем",
-      "categoryId": "laundry",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_6a96d3de0c5a",
-      "tones": [
-        "#f2dfc6",
-        "#d58d79"
-      ],
-      "image": null,
-      "icon": "🫧",
-      "registeredPriceKgs": 223,
-      "description": "Comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 5 PCS.",
-      "title": "BIC 2 COMFORT 5PCS POUCH",
-      "productType": "кондиционер для белья",
-      "brand": "Comfort",
-      "rating": 4.8,
-      "searchText": "bic 2 comfort 5pcs pouch стирка и уход за бельем comfort кондиционер для белья comfort: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. формат: 5 pcs."
     },
     {
       "unit": "шт",
@@ -7617,22 +7567,26 @@
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/rexona/rexona-stick-antibacterial-40g-card-front.jpg",
+        "assets/products/rexona/rexona-stick-antibacterial-40g-front.jpg",
+        "assets/products/rexona/rexona-stick-antibacterial-40g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_0d95e9b49711",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/rexona/rexona-stick-antibacterial-40g-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 291,
-      "description": "Rexona: дезодорант для ежедневной свежести.",
-      "title": "Rexona Stick (40) Anti Bakterial",
-      "productType": "дезодорант",
+      "description": "Дезодорант-антиперспирант Rexona Antibacterial + Invisible, 10x антибактериальная защита, 48 часов. Объём 40 г.",
+      "title": "Rexona Men Antibacterial + Invisible дезодорант-стик 40 г",
+      "productType": "дезодорант-стик",
       "brand": "Rexona",
       "rating": 4.8,
-      "searchText": "rexona stick (40) anti bakterial дезодоранты rexona дезодорант rexona: дезодорант для ежедневной свежести."
+      "searchText": "rexona men antibacterial + invisible дезодорант-стик 40 г дезодоранты rexona дезодорант-стик дезодорант-антиперспирант rexona antibacterial + invisible, 10x антибактериальная защита, 48 часов. объём 40 г."
     },
     {
       "unit": "шт",
@@ -7667,22 +7621,26 @@
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/rexona/rexona-stick-bamboo-40g-card-front.jpg",
+        "assets/products/rexona/rexona-stick-bamboo-40g-front.jpg",
+        "assets/products/rexona/rexona-stick-bamboo-40g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_56cefec24fdf",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/rexona/rexona-stick-bamboo-40g-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 291,
-      "description": "Rexona: дезодорант для ежедневной свежести.",
-      "title": "Rexona Stick (40) Bamboo",
-      "productType": "дезодорант",
+      "description": "Дезодорант-антиперспирант Rexona Bamboo, свежий аромат бамбука, защита 48 часов. Объём 40 г.",
+      "title": "Rexona Bamboo дезодорант-стик 40 г",
+      "productType": "дезодорант-стик",
       "brand": "Rexona",
       "rating": 4.8,
-      "searchText": "rexona stick (40) bamboo дезодоранты rexona дезодорант rexona: дезодорант для ежедневной свежести."
+      "searchText": "rexona bamboo дезодорант-стик 40 г дезодоранты rexona дезодорант-стик дезодорант-антиперспирант rexona bamboo, свежий аромат бамбука, защита 48 часов. объём 40 г."
     },
     {
       "unit": "шт",
@@ -7801,6 +7759,35 @@
       "collections": [],
       "collectionLabels": [],
       "galleryImages": [
+        "assets/products/dove/dove-stick-men-clean-comfort-40g-card-front.jpg",
+        "assets/products/dove/dove-stick-men-clean-comfort-40g-front.jpg",
+        "assets/products/dove/dove-stick-men-clean-comfort-40g-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_8b3a9f34a763",
+      "tones": [
+        "#e1d8f3",
+        "#8e78bd"
+      ],
+      "image": "assets/products/dove/dove-stick-men-clean-comfort-40g-card-front.jpg",
+      "icon": "💜",
+      "registeredPriceKgs": 291,
+      "description": "Дезодорант-антиперспирант Dove Men +Care Clean Comfort, 48 часов защиты, технология увлажнения. Объём 40 г.",
+      "title": "Dove Men +Care Clean Comfort дезодорант-стик 40 г",
+      "productType": "дезодорант-стик",
+      "brand": "Dove",
+      "rating": 4.8,
+      "searchText": "dove men +care clean comfort дезодорант-стик 40 г дезодоранты dove дезодорант-стик дезодорант-антиперспирант dove men +care clean comfort, 48 часов защиты, технология увлажнения. объём 40 г."
+    },
+    {
+      "unit": "шт",
+      "badge": "Dove",
+      "retailPriceKgs": 300,
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
         "assets/products/dove/dove-stick-original-40g-card-front.jpg",
         "assets/products/dove/dove-stick-original-40g-front.jpg",
         "assets/products/dove/dove-stick-original-40g-back.jpg"
@@ -7858,22 +7845,26 @@
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/rexona/rexona-stick-cobalt-40g-card-front.jpg",
+        "assets/products/rexona/rexona-stick-cobalt-40g-front.jpg",
+        "assets/products/rexona/rexona-stick-cobalt-40g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_47c8b6565a63",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/rexona/rexona-stick-cobalt-40g-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 291,
-      "description": "Rexona: дезодорант для ежедневной свежести.",
-      "title": "Rexona Stick MEN (40) Cobalt Dry",
-      "productType": "дезодорант",
+      "description": "Дезодорант-антиперспирант Rexona Men Cobalt MotionSense, защита 48 часов, 0% спирта. Объём 40 г.",
+      "title": "Rexona Men Cobalt дезодорант-стик 40 г",
+      "productType": "дезодорант-стик",
       "brand": "Rexona",
       "rating": 4.8,
-      "searchText": "rexona stick men (40) cobalt dry дезодоранты rexona дезодорант rexona: дезодорант для ежедневной свежести."
+      "searchText": "rexona men cobalt дезодорант-стик 40 г дезодоранты rexona дезодорант-стик дезодорант-антиперспирант rexona men cobalt motionsense, защита 48 часов, 0% спирта. объём 40 г."
     },
     {
       "unit": "шт",
@@ -7883,22 +7874,55 @@
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/rexona/rexona-stick-v8-40g-card-front.jpg",
+        "assets/products/rexona/rexona-stick-v8-40g-front.jpg",
+        "assets/products/rexona/rexona-stick-v8-40g-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_9bb309942383",
+      "tones": [
+        "#e1d8f3",
+        "#8e78bd"
+      ],
+      "image": "assets/products/rexona/rexona-stick-v8-40g-card-front.jpg",
+      "icon": "💜",
+      "registeredPriceKgs": 291,
+      "description": "Дезодорант-антиперспирант Rexona Men V8 MotionSense, защита 48 часов, 0% спирта. Объём 40 г.",
+      "title": "Rexona Men V8 дезодорант-стик 40 г",
+      "productType": "дезодорант-стик",
+      "brand": "Rexona",
+      "rating": 4.8,
+      "searchText": "rexona men v8 дезодорант-стик 40 г дезодоранты rexona дезодорант-стик дезодорант-антиперспирант rexona men v8 motionsense, защита 48 часов, 0% спирта. объём 40 г."
+    },
+    {
+      "unit": "шт",
+      "badge": "Rexona",
+      "retailPriceKgs": 300,
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/rexona/rexona-stick-extra-cool-40g-card-front.jpg",
+        "assets/products/rexona/rexona-stick-extra-cool-40g-front.jpg",
+        "assets/products/rexona/rexona-stick-extra-cool-40g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_168ccd5d1f3e",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/rexona/rexona-stick-extra-cool-40g-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 291,
-      "description": "Rexona: дезодорант для ежедневной свежести.",
-      "title": "Rexona Stick MEN (40) Extra Cool",
-      "productType": "дезодорант",
+      "description": "Дезодорант-антиперспирант Rexona Men Xtra Cool MotionSense, защита 48 часов, 0% спирта. Объём 40 г.",
+      "title": "Rexona Men Xtra Cool дезодорант-стик 40 г",
+      "productType": "дезодорант-стик",
       "brand": "Rexona",
       "rating": 4.8,
-      "searchText": "rexona stick men (40) extra cool дезодоранты rexona дезодорант rexona: дезодорант для ежедневной свежести."
+      "searchText": "rexona men xtra cool дезодорант-стик 40 г дезодоранты rexona дезодорант-стик дезодорант-антиперспирант rexona men xtra cool motionsense, защита 48 часов, 0% спирта. объём 40 г."
     },
     {
       "unit": "шт",
@@ -7924,31 +7948,6 @@
       "brand": "Rexona",
       "rating": 4.8,
       "searchText": "rexona stick men (40) ice cool дезодоранты rexona дезодорант rexona: дезодорант для ежедневной свежести."
-    },
-    {
-      "unit": "шт",
-      "badge": "Rexona",
-      "retailPriceKgs": 300,
-      "category": "Дезодоранты",
-      "categoryId": "deodorants",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_9bb309942383",
-      "tones": [
-        "#e1d8f3",
-        "#8e78bd"
-      ],
-      "image": null,
-      "icon": "💜",
-      "registeredPriceKgs": 291,
-      "description": "Rexona: дезодорант для ежедневной свежести.",
-      "title": "Rexona Stick MEN (40) V 8",
-      "productType": "дезодорант",
-      "brand": "Rexona",
-      "rating": 4.8,
-      "searchText": "rexona stick men (40) v 8 дезодоранты rexona дезодорант rexona: дезодорант для ежедневной свежести."
     },
     {
       "unit": "шт",
@@ -9406,22 +9405,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-comfortglide-breeze-cartridges-8-card-front.jpg",
+        "assets/products/gillette/gillette-venus-comfortglide-breeze-cartridges-8-front.jpg",
+        "assets/products/gillette/gillette-venus-comfortglide-breeze-cartridges-8-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_7f5f15b91773",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-comfortglide-breeze-cartridges-8-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 2032,
-      "description": "Gillette: товар для бритья и ухода.",
-      "title": "6 VENUS запаски (8) Breeze",
+      "description": "Сменные кассеты Gillette Venus Comfortglide Breeze со Skin Cushion для женского станка. Упаковка XL, 8 штук.",
+      "title": "Gillette Venus Comfortglide Breeze сменные кассеты 8 шт (XL)",
       "productType": "сменные кассеты для бритья",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "6 venus запаски (8) breeze бритье gillette сменные кассеты для бритья gillette: товар для бритья и ухода."
+      "searchText": "gillette venus comfortglide breeze сменные кассеты 8 шт (xl) бритье gillette сменные кассеты для бритья сменные кассеты gillette venus comfortglide breeze со skin cushion для женского станка. упаковка xl, 8 штук."
     },
     {
       "unit": "шт",
@@ -9456,22 +9459,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-extra-smooth-cartridges-8-card-front.jpg",
+        "assets/products/gillette/gillette-venus-extra-smooth-cartridges-8-front.jpg",
+        "assets/products/gillette/gillette-venus-extra-smooth-cartridges-8-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_be5c87ae6741",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-extra-smooth-cartridges-8-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 1736,
-      "description": "Gillette: товар для бритья и ухода.",
-      "title": "6 VENUS запаски (8) Extra Smooth",
+      "description": "Сменные кассеты Gillette Venus Extra Smooth со Skin Cushion для женского станка. Упаковка XL, 8 штук.",
+      "title": "Gillette Venus Extra Smooth сменные кассеты 8 шт (XL)",
       "productType": "сменные кассеты для бритья",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "6 venus запаски (8) extra smooth бритье gillette сменные кассеты для бритья gillette: товар для бритья и ухода."
+      "searchText": "gillette venus extra smooth сменные кассеты 8 шт (xl) бритье gillette сменные кассеты для бритья сменные кассеты gillette venus extra smooth со skin cushion для женского станка. упаковка xl, 8 штук."
     },
     {
       "unit": "шт",
@@ -9556,22 +9563,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/gillette/gillette-fusion5-power-razor-1-card-front.jpg",
+        "assets/products/gillette/gillette-fusion5-power-razor-1-front.jpg",
+        "assets/products/gillette/gillette-fusion5-power-razor-1-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_9f1a9f037659",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-fusion5-power-razor-1-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 863,
-      "description": "Gillette: товар для бритья и ухода.",
-      "title": "5 FUSION Станок (1) Power",
-      "productType": "бритвенные станки",
+      "description": "Станок для бритья Gillette Fusion5 Power с 5 лезвиями и стайлинговым лезвием на обороте.",
+      "title": "Gillette Fusion5 Power станок 1 шт",
+      "productType": "станок для бритья",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "5 fusion станок (1) power бритье gillette бритвенные станки gillette: товар для бритья и ухода."
+      "searchText": "gillette fusion5 power станок 1 шт бритье gillette станок для бритья станок для бритья gillette fusion5 power с 5 лезвиями и стайлинговым лезвием на обороте."
     },
     {
       "unit": "шт",
@@ -9606,22 +9617,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/gillette/gillette-fusion5-proglide-power-razor-1-card-front.jpg",
+        "assets/products/gillette/gillette-fusion5-proglide-power-razor-1-front.jpg",
+        "assets/products/gillette/gillette-fusion5-proglide-power-razor-1-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_1b7d37e71949",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-fusion5-proglide-power-razor-1-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 868,
-      "description": "Gillette: товар для бритья и ухода.",
-      "title": "5 PROGL.POWER (1) станок",
-      "productType": "бритвенные станки",
+      "description": "Станок для бритья Gillette Fusion5 ProGlide Power с 5 лезвиями, FlexBall, в комплекте 5 сменных кассет.",
+      "title": "Gillette Fusion5 ProGlide Power станок 1 шт (+5 сменных кассет)",
+      "productType": "станок для бритья",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "5 progl.power (1) станок бритье gillette бритвенные станки gillette: товар для бритья и ухода."
+      "searchText": "gillette fusion5 proglide power станок 1 шт (+5 сменных кассет) бритье gillette станок для бритья станок для бритья gillette fusion5 proglide power с 5 лезвиями, flexball, в комплекте 5 сменных кассет."
     },
     {
       "unit": "шт",
@@ -9739,22 +9754,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/gillette/gillette-venus-deluxe-smooth-swirl-cartridges-3-card-front.jpg",
+        "assets/products/gillette/gillette-venus-deluxe-smooth-swirl-cartridges-3-front.jpg",
+        "assets/products/gillette/gillette-venus-deluxe-smooth-swirl-cartridges-3-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_76659cd2bb07",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/gillette/gillette-venus-deluxe-smooth-swirl-cartridges-3-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 1154,
-      "description": "Gillette: товар для бритья и ухода.",
-      "title": "6 VENUS запаски (3) Delux Smooth",
+      "description": "Сменные кассеты Gillette Venus Deluxe Smooth Swirl с 5 лезвиями для женского станка. В упаковке 3 штуки.",
+      "title": "Gillette Venus Deluxe Smooth Swirl сменные кассеты 3 шт",
       "productType": "сменные кассеты для бритья",
       "brand": "Gillette",
       "rating": 4.8,
-      "searchText": "6 venus запаски (3) delux smooth бритье gillette сменные кассеты для бритья gillette: товар для бритья и ухода."
+      "searchText": "gillette venus deluxe smooth swirl сменные кассеты 3 шт бритье gillette сменные кассеты для бритья сменные кассеты gillette venus deluxe smooth swirl с 5 лезвиями для женского станка. в упаковке 3 штуки."
     },
     {
       "unit": "шт",
@@ -9789,22 +9808,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/bic/bic-3-sensitive-6pcs-card-front.jpg",
+        "assets/products/bic/bic-3-sensitive-6pcs-front.jpg",
+        "assets/products/bic/bic-3-sensitive-6pcs-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_f83cc0014f92",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/bic/bic-3-sensitive-6pcs-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 339,
-      "description": "BIC: товар для бритья и ухода.",
-      "title": "BIC 3 SENSITIVE 4+2 POUCH (1X20)",
-      "productType": "бритье",
+      "description": "Одноразовые станки BIC 3 Sensitive с алоэ и витамином E, 3 лезвия, упаковка 6 штук (4+2).",
+      "title": "BIC 3 Sensitive одноразовые станки 6 шт (4+2)",
+      "productType": "одноразовые станки",
       "brand": "BIC",
       "rating": 4.8,
-      "searchText": "bic 3 sensitive 4+2 pouch (1x20) бритье bic бритье bic: товар для бритья и ухода."
+      "searchText": "bic 3 sensitive одноразовые станки 6 шт (4+2) бритье bic одноразовые станки одноразовые станки bic 3 sensitive с алоэ и витамином e, 3 лезвия, упаковка 6 штук (4+2)."
     },
     {
       "unit": "шт",
@@ -9864,22 +9887,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/bic/bic-soleil-scent-4pcs-card-front.jpg",
+        "assets/products/bic/bic-soleil-scent-4pcs-front.jpg",
+        "assets/products/bic/bic-soleil-scent-4pcs-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_d89548b02b08",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/bic/bic-soleil-scent-4pcs-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 480,
-      "description": "BIC: товар для бритья и ухода. Формат: 4 PCS.",
-      "title": "BIC SOLEIL SCENT WOMEN 4PCS BOX (1X10)",
-      "productType": "бритье",
+      "description": "Одноразовые станки для женщин BIC Soleil Scent с витамином E, 3 лезвия, упаковка 4 штуки.",
+      "title": "BIC Soleil Scent женские одноразовые станки 4 шт",
+      "productType": "одноразовые станки",
       "brand": "BIC",
       "rating": 4.8,
-      "searchText": "bic soleil scent women 4pcs box (1x10) бритье bic бритье bic: товар для бритья и ухода. формат: 4 pcs."
+      "searchText": "bic soleil scent женские одноразовые станки 4 шт бритье bic одноразовые станки одноразовые станки для женщин bic soleil scent с витамином e, 3 лезвия, упаковка 4 штуки."
     },
     {
       "unit": "шт",
@@ -9968,22 +9995,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/bic/bic-1-sensitive-15pcs-card-front.jpg",
+        "assets/products/bic/bic-1-sensitive-15pcs-front.jpg",
+        "assets/products/bic/bic-1-sensitive-15pcs-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_a5a45ddea545",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/bic/bic-1-sensitive-15pcs-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 378,
-      "description": "BIC: товар для бритья и ухода.",
-      "title": "BIC 1 SENSITIVE DISPOSABLE 10+5 POUCH (1X10)",
-      "productType": "бритье",
+      "description": "Одноразовые станки BIC 1 Sensitive, 1 лезвие, упаковка 15 штук (10+5).",
+      "title": "BIC 1 Sensitive одноразовые станки 15 шт (10+5)",
+      "productType": "одноразовые станки",
       "brand": "BIC",
       "rating": 4.8,
-      "searchText": "bic 1 sensitive disposable 10+5 pouch (1x10) бритье bic бритье bic: товар для бритья и ухода."
+      "searchText": "bic 1 sensitive одноразовые станки 15 шт (10+5) бритье bic одноразовые станки одноразовые станки bic 1 sensitive, 1 лезвие, упаковка 15 штук (10+5)."
     },
     {
       "unit": "шт",
@@ -9993,22 +10024,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/bic/bic-twin-lady-5pcs-card-front.jpg",
+        "assets/products/bic/bic-twin-lady-5pcs-front.jpg",
+        "assets/products/bic/bic-twin-lady-5pcs-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_9e4624cbe2cf",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/bic/bic-twin-lady-5pcs-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 223,
-      "description": "BIC: товар для бритья и ухода. Формат: 5 PCS.",
-      "title": "BIC TWIN LADY RAZOR 5PCS POUCH (1X20)",
-      "productType": "бритвенные станки",
+      "description": "Одноразовые станки для женщин BIC Twin Lady, 2 лезвия, ручка из переработанного пластика, упаковка 5 штук.",
+      "title": "BIC Twin Lady женские одноразовые станки 5 шт",
+      "productType": "одноразовые станки",
       "brand": "BIC",
       "rating": 4.8,
-      "searchText": "bic twin lady razor 5pcs pouch (1x20) бритье bic бритвенные станки bic: товар для бритья и ухода. формат: 5 pcs."
+      "searchText": "bic twin lady женские одноразовые станки 5 шт бритье bic одноразовые станки одноразовые станки для женщин bic twin lady, 2 лезвия, ручка из переработанного пластика, упаковка 5 штук."
     },
     {
       "unit": "шт",
@@ -10038,6 +10073,35 @@
       "brand": "Gillette Venus",
       "rating": 4.8,
       "searchText": "gillette venus simply basic одноразовые станки 5 шт бритье gillette venus бритвенные станки одноразовые станки gillette venus simply basic для мягкого бритья. в упаковке 5 штук."
+    },
+    {
+      "unit": "шт",
+      "badge": "BIC",
+      "retailPriceKgs": 230,
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/bic/bic-2-comfort-5pcs-card-front.jpg",
+        "assets/products/bic/bic-2-comfort-5pcs-front.jpg",
+        "assets/products/bic/bic-2-comfort-5pcs-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_6a96d3de0c5a",
+      "tones": [
+        "#d8e1e7",
+        "#667d8c"
+      ],
+      "image": "assets/products/bic/bic-2-comfort-5pcs-card-front.jpg",
+      "icon": "🪒",
+      "registeredPriceKgs": 223,
+      "description": "Одноразовые станки BIC Comfort 2 с алоэ и витаминами, 2 лезвия, упаковка 5 штук.",
+      "title": "BIC Comfort 2 одноразовые станки 5 шт",
+      "productType": "одноразовые станки",
+      "brand": "BIC",
+      "rating": 4.8,
+      "searchText": "bic comfort 2 одноразовые станки 5 шт бритье bic одноразовые станки одноразовые станки bic comfort 2 с алоэ и витаминами, 2 лезвия, упаковка 5 штук."
     },
     {
       "unit": "шт",
@@ -10101,22 +10165,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/bic/bic-2-sensitive-5pcs-card-front.jpg",
+        "assets/products/bic/bic-2-sensitive-5pcs-front.jpg",
+        "assets/products/bic/bic-2-sensitive-5pcs-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_4f3caf82472d",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/bic/bic-2-sensitive-5pcs-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 189,
-      "description": "BIC: товар для бритья и ухода. Формат: 5 PCS.",
-      "title": "BIC 2 SENSITIVE 5 PCS POUCH (1X20)",
-      "productType": "бритье",
+      "description": "Одноразовые станки BIC 2 Sensitive, 2 лезвия, упаковка 5 штук.",
+      "title": "BIC 2 Sensitive одноразовые станки 5 шт",
+      "productType": "одноразовые станки",
       "brand": "BIC",
       "rating": 4.8,
-      "searchText": "bic 2 sensitive 5 pcs pouch (1x20) бритье bic бритье bic: товар для бритья и ухода. формат: 5 pcs."
+      "searchText": "bic 2 sensitive одноразовые станки 5 шт бритье bic одноразовые станки одноразовые станки bic 2 sensitive, 2 лезвия, упаковка 5 штук."
     },
     {
       "unit": "шт",

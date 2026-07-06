@@ -1,6 +1,8 @@
 {
   "prd_01077bb33667": {
     "brand": "TRESemmé",
+    "category_id": "hair",
+    "clean_title": "TRESemmé Silky & Smooth шампунь 828 мл",
     "description": "Шампунь TRESemmé Silky & Smooth для гладкости и блеска волос. Объём 828 мл, формула с argan oleo blend.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-smooth-silky-828ml-card-front.jpg",
@@ -12,9 +14,7 @@
       "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "clean_title": "TRESemmé Silky & Smooth шампунь 828 мл",
-    "product_type": "шампунь",
-    "category_id": "hair"
+    "product_type": "шампунь"
   },
   "prd_060cfccd22d3": {
     "brand": "Downy",
@@ -114,6 +114,8 @@
   },
   "prd_096618ced7c1": {
     "brand": "TRESemmé",
+    "category_id": "hair",
+    "clean_title": "TRESemmé Volume шампунь 828 мл",
     "description": "Шампунь TRESemmé Volume для придания объёма волосам. Объём 828 мл, формула с collagen & peptide complex.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
@@ -125,9 +127,7 @@
       "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "clean_title": "TRESemmé Volume шампунь 828 мл",
-    "product_type": "шампунь",
-    "category_id": "hair"
+    "product_type": "шампунь"
   },
   "prd_0a8f4b1bdcb6": {
     "brand": "Cussons",
@@ -165,6 +165,24 @@
     "product_type": "шампунь",
     "short_title": "Dove Moisture 600 мл"
   },
+  "prd_0d95e9b49711": {
+    "brand": "Rexona",
+    "category_id": "deodorants",
+    "clean_title": "Rexona Men Antibacterial + Invisible дезодорант-стик 40 г",
+    "description": "Дезодорант-антиперспирант Rexona Antibacterial + Invisible, 10x антибактериальная защита, 48 часов. Объём 40 г.",
+    "galleryImages": [
+      "assets/products/rexona/rexona-stick-antibacterial-40g-card-front.jpg",
+      "assets/products/rexona/rexona-stick-antibacterial-40g-front.jpg",
+      "assets/products/rexona/rexona-stick-antibacterial-40g-back.jpg"
+    ],
+    "image": "assets/products/rexona/rexona-stick-antibacterial-40g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-120953); товар опознан по названию и весу 40г, совпадает с 1C кодом 2839 (Rexona Stick (40) Anti Bakterial)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Rexona Antibacterial 40 г",
+    "unit": "40 г"
+  },
   "prd_0e763c9c3654": {
     "brand": "Persil",
     "category_id": "laundry",
@@ -185,6 +203,7 @@
   "prd_0fb16d2a0b60": {
     "badge": "Lenor",
     "brand": "Lenor",
+    "clean_title": "Lenor Sandalwood & Eucalyptus парфюм для белья 155 г",
     "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Sandalwood & Eucalyptus. Формат: 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg",
@@ -197,9 +216,8 @@
       "Back label may show minor packaging/weight variation; do not use back-photo OCR as source of product title/weight without manual check.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "unit": "155 г",
-    "clean_title": "Lenor Sandalwood & Eucalyptus парфюм для белья 155 г",
-    "product_type": "парфюм для белья"
+    "product_type": "парфюм для белья",
+    "unit": "155 г"
   },
   "prd_0fffb16fcaee": {
     "brand": "Gillette Venus",
@@ -312,9 +330,28 @@
     "product_type": "стиральный порошок",
     "short_title": "Ariel Fast Dissolving 2,5 кг"
   },
+  "prd_168ccd5d1f3e": {
+    "brand": "Rexona",
+    "category_id": "deodorants",
+    "clean_title": "Rexona Men Xtra Cool дезодорант-стик 40 г",
+    "description": "Дезодорант-антиперспирант Rexona Men Xtra Cool MotionSense, защита 48 часов, 0% спирта. Объём 40 г.",
+    "galleryImages": [
+      "assets/products/rexona/rexona-stick-extra-cool-40g-card-front.jpg",
+      "assets/products/rexona/rexona-stick-extra-cool-40g-front.jpg",
+      "assets/products/rexona/rexona-stick-extra-cool-40g-back.jpg"
+    ],
+    "image": "assets/products/rexona/rexona-stick-extra-cool-40g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-120924); товар опознан по названию и штрихкоду 4800888220875, весу 40г, совпадает с 1C кодом 2836 (Rexona Stick MEN (40) Extra Cool)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Rexona Xtra Cool 40 г",
+    "unit": "40 г"
+  },
   "prd_1710ac102a49": {
     "badge": "Lenor",
     "brand": "Lenor",
+    "clean_title": "Lenor Dreamy Jasmine парфюм для белья 155 г",
     "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Dreamy Jasmine. Формат: 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg",
@@ -326,9 +363,8 @@
       "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "unit": "155 г",
-    "clean_title": "Lenor Dreamy Jasmine парфюм для белья 155 г",
-    "product_type": "парфюм для белья"
+    "product_type": "парфюм для белья",
+    "unit": "155 г"
   },
   "prd_175203a1119f": {
     "brand": "Oral-B",
@@ -376,6 +412,7 @@
   "prd_19a727030e6b": {
     "badge": "Lenor",
     "brand": "Lenor",
+    "clean_title": "Lenor Gold Orchid парфюм для белья 210 г",
     "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Gold Orchid. Формат: 210 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg",
@@ -387,9 +424,26 @@
       "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "unit": "210 г",
-    "clean_title": "Lenor Gold Orchid парфюм для белья 210 г",
-    "product_type": "парфюм для белья"
+    "product_type": "парфюм для белья",
+    "unit": "210 г"
+  },
+  "prd_1b7d37e71949": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Fusion5 ProGlide Power станок 1 шт (+5 сменных кассет)",
+    "description": "Станок для бритья Gillette Fusion5 ProGlide Power с 5 лезвиями, FlexBall, в комплекте 5 сменных кассет.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-fusion5-proglide-power-razor-1-card-front.jpg",
+      "assets/products/gillette/gillette-fusion5-proglide-power-razor-1-front.jpg",
+      "assets/products/gillette/gillette-fusion5-proglide-power-razor-1-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-fusion5-proglide-power-razor-1-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по названию (ProGlide Power) и штрихкоду 7702018353231, совпадает с 1C кодом 2823 (5 PROGL.POWER (1) станок)."
+    ],
+    "product_type": "станок для бритья",
+    "short_title": "Gillette ProGlide Power",
+    "unit": "шт"
   },
   "prd_1b9ccd33f502": {
     "brand": "Gillette Venus",
@@ -429,6 +483,8 @@
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
+    "category_id": "hair-care",
+    "clean_title": "Pantene Goodbye Frizz шампунь 600 мл",
     "description": "Шампунь Pantene Pro-V Goodbye Frizz для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
@@ -436,31 +492,29 @@
       "assets/products/pantene/pantene-goodbye-frizz-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
-    "searchText": "pantene goodbye frizz шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v goodbye frizz для ежедневного ухода за волосами. формат: 600 мл.",
-    "unit": "600 мл",
-    "clean_title": "Pantene Goodbye Frizz шампунь 600 мл",
-    "product_type": "шампунь",
-    "category_id": "hair-care",
     "notes": [
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
-    ]
+    ],
+    "product_type": "шампунь",
+    "searchText": "pantene goodbye frizz шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v goodbye frizz для ежедневного ухода за волосами. формат: 600 мл.",
+    "unit": "600 мл"
   },
   "prd_1f1557a2acbb": {
     "brand": "Pantene",
+    "category_id": "hair",
+    "clean_title": "Pantene Damage Repair шампунь 600 мл",
     "description": "Шампунь Pantene Pro-V Damage Repair для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg",
       "assets/products/pantene/pantene-damage-repair-600ml-front.jpg"
     ],
     "image": "assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg",
-    "unit": "600 мл",
-    "clean_title": "Pantene Damage Repair шампунь 600 мл",
-    "short_title": "Pantene Damage Repair 600 мл",
-    "category_id": "hair",
-    "product_type": "шампунь",
     "notes": [
       "2026-07-05: fixed a legacy camelCase override schema bug — this entry used productType/categoryId/title instead of product_type/category_id/clean_title, so scripts/apply_product_overrides.py silently skipped it (its required-field check needs the snake_case keys) and this product showed no photo at all despite having a real card-front+front pair on disk since 2026-06-09/10. No back photo exists anywhere; still a documented card+front-only exception."
-    ]
+    ],
+    "product_type": "шампунь",
+    "short_title": "Pantene Damage Repair 600 мл",
+    "unit": "600 мл"
   },
   "prd_1f9a545036b2": {
     "brand": "Persil",
@@ -598,20 +652,20 @@
   },
   "prd_296bd01a7c1f": {
     "brand": "Pantene",
+    "category_id": "hair",
+    "clean_title": "Pantene Sheer Volume шампунь 600 мл",
     "description": "Шампунь Pantene Pro-V Sheer Volume для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-sheer-volume-600ml-card-front.jpg",
       "assets/products/pantene/pantene-sheer-volume-600ml-front.jpg"
     ],
     "image": "assets/products/pantene/pantene-sheer-volume-600ml-card-front.jpg",
-    "unit": "600 мл",
-    "clean_title": "Pantene Sheer Volume шампунь 600 мл",
-    "short_title": "Pantene Sheer Volume 600 мл",
-    "category_id": "hair",
-    "product_type": "шампунь",
     "notes": [
       "2026-07-05: fixed a legacy camelCase override schema bug — this entry used productType/categoryId/title instead of product_type/category_id/clean_title, so scripts/apply_product_overrides.py silently skipped it (its required-field check needs the snake_case keys) and this product showed no photo at all despite having a real card-front+front pair on disk since 2026-06-09/10. No back photo exists anywhere; still a documented card+front-only exception."
-    ]
+    ],
+    "product_type": "шампунь",
+    "short_title": "Pantene Sheer Volume 600 мл",
+    "unit": "600 мл"
   },
   "prd_2aacb9eafb42": {
     "brand": "Gillette",
@@ -647,6 +701,7 @@
   "prd_311be4dd4930": {
     "badge": "Lenor",
     "brand": "Lenor",
+    "clean_title": "Lenor Fresh парфюм для белья 155 г",
     "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Fresh. Формат: 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-fresh-155g-card-front.jpg",
@@ -658,9 +713,8 @@
       "Telegram album 20260610 Lenor Fresh photos manually mapped; public gallery follows card/front/back contract.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "unit": "155 г",
-    "clean_title": "Lenor Fresh парфюм для белья 155 г",
-    "product_type": "парфюм для белья"
+    "product_type": "парфюм для белья",
+    "unit": "155 г"
   },
   "prd_323fb137e76a": {
     "brand": "Old Spice",
@@ -758,6 +812,7 @@
   "prd_40d21a2a86d6": {
     "badge": "Lenor",
     "brand": "Lenor",
+    "clean_title": "Lenor Northern Solstice парфюм для белья 155 г",
     "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Northern Solstice. Формат: 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg",
@@ -769,9 +824,8 @@
       "Telegram album 20260610 Lenor Northern Solstice photos mapped from correct 3-photo set; public gallery follows card/front/back contract.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "unit": "155 г",
-    "clean_title": "Lenor Northern Solstice парфюм для белья 155 г",
-    "product_type": "парфюм для белья"
+    "product_type": "парфюм для белья",
+    "unit": "155 г"
   },
   "prd_4180ad019486": {
     "brand": "Downy",
@@ -803,6 +857,8 @@
   },
   "prd_432b62d4b317": {
     "brand": "TRESemmé",
+    "category_id": "hair",
+    "clean_title": "TRESemmé Clean & Replenish шампунь 828 мл",
     "description": "Шампунь TRESemmé Clean & Replenish 3-в-1 для очищения, ухода и распутывания волос. Объём 828 мл, с pro vitamin C и green tea.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-clean-replenish-828ml-card-front.jpg",
@@ -813,10 +869,8 @@
       "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first.",
       "2026-07-05: fixed a legacy camelCase override schema bug — this entry used productType/categoryId/title instead of product_type/category_id/clean_title, so scripts/apply_product_overrides.py silently skipped it (its required-field check needs the snake_case keys) and this product showed no photo at all despite having a real card-front+front pair on disk since 2026-06-09/10. No back photo exists anywhere; still a documented card+front-only exception."
     ],
-    "clean_title": "TRESemmé Clean & Replenish шампунь 828 мл",
-    "short_title": "TRESemmé Clean & Replenish 828 мл",
-    "category_id": "hair",
-    "product_type": "шампунь"
+    "product_type": "шампунь",
+    "short_title": "TRESemmé Clean & Replenish 828 мл"
   },
   "prd_43bb60f484a9": {
     "brand": "Fairy",
@@ -898,6 +952,24 @@
     "product_type": "шампунь",
     "short_title": "Ignite My Colour 400 мл"
   },
+  "prd_47c8b6565a63": {
+    "brand": "Rexona",
+    "category_id": "deodorants",
+    "clean_title": "Rexona Men Cobalt дезодорант-стик 40 г",
+    "description": "Дезодорант-антиперспирант Rexona Men Cobalt MotionSense, защита 48 часов, 0% спирта. Объём 40 г.",
+    "galleryImages": [
+      "assets/products/rexona/rexona-stick-cobalt-40g-card-front.jpg",
+      "assets/products/rexona/rexona-stick-cobalt-40g-front.jpg",
+      "assets/products/rexona/rexona-stick-cobalt-40g-back.jpg"
+    ],
+    "image": "assets/products/rexona/rexona-stick-cobalt-40g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-120924); товар опознан по названию и штрихкоду 4800888221988, совпадает с 1C кодом 2835 (Rexona Stick MEN (40) Cobalt Dry)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Rexona Cobalt 40 г",
+    "unit": "40 г"
+  },
   "prd_481ff75cc07b": {
     "brand": "Clear",
     "category_id": "hair",
@@ -974,6 +1046,8 @@
     "badge": "TRESemme",
     "brand": "TRESemmé",
     "category": "Уход за волосами",
+    "category_id": "hair",
+    "clean_title": "TRESemmé Curl Hydration шампунь 828 мл",
     "description": "Шампунь TRESemmé Curl Hydration для увлажнения и ухода за кудрявыми волосами. Объём 828 мл, заявлено до 7x более увлажнённых локонов.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-curl-hydration-828ml-card-front.jpg",
@@ -987,6 +1061,7 @@
       "User confirmed product is in stock despite latest 1C stock_quantity=0; publish with Telegram album 20260609 TRESemmé photos.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
+    "product_type": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 577,
     "retailPriceKgs": 595,
@@ -996,10 +1071,7 @@
       "#d7eadf",
       "#6aa58f"
     ],
-    "unit": "шт",
-    "clean_title": "TRESemmé Curl Hydration шампунь 828 мл",
-    "product_type": "шампунь",
-    "category_id": "hair"
+    "unit": "шт"
   },
   "prd_4db8a0f93b3f": {
     "brand": "Dash",
@@ -1017,6 +1089,24 @@
     ],
     "product_type": "капсулы для стирки",
     "short_title": "Dash Color Frische 60 шт"
+  },
+  "prd_4f3caf82472d": {
+    "brand": "BIC",
+    "category_id": "shaving",
+    "clean_title": "BIC 2 Sensitive одноразовые станки 5 шт",
+    "description": "Одноразовые станки BIC 2 Sensitive, 2 лезвия, упаковка 5 штук.",
+    "galleryImages": [
+      "assets/products/bic/bic-2-sensitive-5pcs-card-front.jpg",
+      "assets/products/bic/bic-2-sensitive-5pcs-front.jpg",
+      "assets/products/bic/bic-2-sensitive-5pcs-back.jpg"
+    ],
+    "image": "assets/products/bic/bic-2-sensitive-5pcs-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по названию и количеству (5 шт), совпадает с 1C кодом 2926 (BIC 2 SENSITIVE 5 PCS POUCH)."
+    ],
+    "product_type": "одноразовые станки",
+    "short_title": "BIC 2 Sensitive 5 шт",
+    "unit": "уп."
   },
   "prd_4f7a9fa2b279": {
     "brand": "Colgate",
@@ -1073,6 +1163,7 @@
   "prd_56516b8b34c7": {
     "badge": "Lenor",
     "brand": "Lenor",
+    "clean_title": "Lenor Cool Cotton парфюм для белья 155 г",
     "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Cool Cotton. Формат: 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg",
@@ -1084,14 +1175,33 @@
       "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "unit": "155 г",
-    "clean_title": "Lenor Cool Cotton парфюм для белья 155 г",
-    "product_type": "парфюм для белья"
+    "product_type": "парфюм для белья",
+    "unit": "155 г"
+  },
+  "prd_56cefec24fdf": {
+    "brand": "Rexona",
+    "category_id": "deodorants",
+    "clean_title": "Rexona Bamboo дезодорант-стик 40 г",
+    "description": "Дезодорант-антиперспирант Rexona Bamboo, свежий аромат бамбука, защита 48 часов. Объём 40 г.",
+    "galleryImages": [
+      "assets/products/rexona/rexona-stick-bamboo-40g-card-front.jpg",
+      "assets/products/rexona/rexona-stick-bamboo-40g-front.jpg",
+      "assets/products/rexona/rexona-stick-bamboo-40g-back.jpg"
+    ],
+    "image": "assets/products/rexona/rexona-stick-bamboo-40g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по названию и штрихкоду 4800888220837, совпадает с 1C кодом 1246 (Rexona Stick (40) Bamboo)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Rexona Bamboo 40 г",
+    "unit": "40 г"
   },
   "prd_572ed90689d1": {
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
+    "category_id": "hair-care",
+    "clean_title": "Pantene Daily Care шампунь 600 мл",
     "description": "Шампунь Pantene Pro-V Daily Care для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
@@ -1099,14 +1209,12 @@
       "assets/products/pantene/pantene-daily-care-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
-    "searchText": "pantene daily care шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v daily care для ежедневного ухода за волосами. формат: 600 мл.",
-    "unit": "600 мл",
-    "clean_title": "Pantene Daily Care шампунь 600 мл",
-    "product_type": "шампунь",
-    "category_id": "hair-care",
     "notes": [
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
-    ]
+    ],
+    "product_type": "шампунь",
+    "searchText": "pantene daily care шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v daily care для ежедневного ухода за волосами. формат: 600 мл.",
+    "unit": "600 мл"
   },
   "prd_57922054f500": {
     "brand": "Concord",
@@ -1119,6 +1227,7 @@
   "prd_594869df277e": {
     "badge": "Lenor",
     "brand": "Lenor",
+    "clean_title": "Lenor Jasmine & White Cedar парфюм для белья 155 г",
     "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Jasmine & White Cedar. Формат: 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg",
@@ -1130,9 +1239,8 @@
       "Telegram album 20260610 Lenor photos manually mapped; public gallery follows card/front/back contract.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "unit": "155 г",
-    "clean_title": "Lenor Jasmine & White Cedar парфюм для белья 155 г",
-    "product_type": "парфюм для белья"
+    "product_type": "парфюм для белья",
+    "unit": "155 г"
   },
   "prd_5c4dde48386b": {
     "brand": "Dove",
@@ -1160,6 +1268,8 @@
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
+    "category_id": "hair-care",
+    "clean_title": "Pantene Moisture Renewal шампунь 600 мл",
     "description": "Шампунь Pantene Pro-V Moisture Renewal для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
@@ -1167,14 +1277,12 @@
       "assets/products/pantene/pantene-moisture-renewal-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
-    "searchText": "pantene moisture renewal шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v moisture renewal для ежедневного ухода за волосами. формат: 600 мл.",
-    "unit": "600 мл",
-    "clean_title": "Pantene Moisture Renewal шампунь 600 мл",
-    "product_type": "шампунь",
-    "category_id": "hair-care",
     "notes": [
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
-    ]
+    ],
+    "product_type": "шампунь",
+    "searchText": "pantene moisture renewal шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v moisture renewal для ежедневного ухода за волосами. формат: 600 мл.",
+    "unit": "600 мл"
   },
   "prd_608815c5bf7d": {
     "brand": "Queen",
@@ -1267,6 +1375,24 @@
     ],
     "product_type": "гель для стирки",
     "short_title": "Persil Rose 4,8 л"
+  },
+  "prd_6a96d3de0c5a": {
+    "brand": "BIC",
+    "category_id": "shaving",
+    "clean_title": "BIC Comfort 2 одноразовые станки 5 шт",
+    "description": "Одноразовые станки BIC Comfort 2 с алоэ и витаминами, 2 лезвия, упаковка 5 штук.",
+    "galleryImages": [
+      "assets/products/bic/bic-2-comfort-5pcs-card-front.jpg",
+      "assets/products/bic/bic-2-comfort-5pcs-front.jpg",
+      "assets/products/bic/bic-2-comfort-5pcs-back.jpg"
+    ],
+    "image": "assets/products/bic/bic-2-comfort-5pcs-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по названию и количеству (5 шт), совпадает с 1C кодом 2928 (BIC 2 COMFORT 5PCS POUCH). Категория исправлена с laundry на shaving (была ошибочно назначена при импорте)."
+    ],
+    "product_type": "одноразовые станки",
+    "short_title": "BIC Comfort 2 5 шт",
+    "unit": "уп."
   },
   "prd_6ac15f7b2cff": {
     "brand": "Dash",
@@ -1374,6 +1500,24 @@
     "description": "Немецкие капсулы Dalli 3in1 Vollwaschmittel для удобной стирки. В упаковке 24 штуки.",
     "product_type": "капсулы для стирки",
     "short_title": "Dalli Vollwaschmittel 24 шт"
+  },
+  "prd_76659cd2bb07": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Deluxe Smooth Swirl сменные кассеты 3 шт",
+    "description": "Сменные кассеты Gillette Venus Deluxe Smooth Swirl с 5 лезвиями для женского станка. В упаковке 3 штуки.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-venus-deluxe-smooth-swirl-cartridges-3-card-front.jpg",
+      "assets/products/gillette/gillette-venus-deluxe-smooth-swirl-cartridges-3-front.jpg",
+      "assets/products/gillette/gillette-venus-deluxe-smooth-swirl-cartridges-3-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-venus-deluxe-smooth-swirl-cartridges-3-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по названию и штрихкоду 7702018401291, количеству (3 шт), совпадает с 1C кодом 2949 (6 VENUS запаски (3) Delux Smooth)."
+    ],
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Venus Deluxe Smooth Swirl 3 шт",
+    "unit": "уп."
   },
   "prd_76fa6e266408": {
     "brand": "Cussons",
@@ -1497,6 +1641,8 @@
   },
   "prd_7cf735f59b18": {
     "brand": "TRESemmé",
+    "category_id": "hair",
+    "clean_title": "TRESemmé Color шампунь 828 мл",
     "description": "Шампунь TRESemmé Revitalized Color для окрашенных волос. Объём 828 мл, формула с hibiscus essence для яркости и блеска.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-color-828ml-card-front.jpg",
@@ -1508,9 +1654,7 @@
       "Telegram album 20260609-153037/153041: TRESemmé photos manually mapped; card image placed first.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "clean_title": "TRESemmé Color шампунь 828 мл",
-    "product_type": "шампунь",
-    "category_id": "hair"
+    "product_type": "шампунь"
   },
   "prd_7da6b6d3a85f": {
     "brand": "Gillette",
@@ -1547,6 +1691,24 @@
     "product_type": "пена для ванны",
     "short_title": "Cussons Apple 500 мл",
     "unit": "500 мл"
+  },
+  "prd_7f5f15b91773": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Comfortglide Breeze сменные кассеты 8 шт (XL)",
+    "description": "Сменные кассеты Gillette Venus Comfortglide Breeze со Skin Cushion для женского станка. Упаковка XL, 8 штук.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-venus-comfortglide-breeze-cartridges-8-card-front.jpg",
+      "assets/products/gillette/gillette-venus-comfortglide-breeze-cartridges-8-front.jpg",
+      "assets/products/gillette/gillette-venus-comfortglide-breeze-cartridges-8-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-venus-comfortglide-breeze-cartridges-8-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по названию, штрихкоду 7702018886463 и количеству (8 шт, XL), совпадает с 1C кодом 605 (6 VENUS запаски (8) Breeze)."
+    ],
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Venus Comfortglide Breeze 8 шт",
+    "unit": "уп."
   },
   "prd_83037f3d35df": {
     "brand": "Clear",
@@ -1630,6 +1792,24 @@
     "short_title": "Cussons Paradise Fruits 500 мл",
     "unit": "500 мл"
   },
+  "prd_8b3a9f34a763": {
+    "brand": "Dove",
+    "category_id": "deodorants",
+    "clean_title": "Dove Men +Care Clean Comfort дезодорант-стик 40 г",
+    "description": "Дезодорант-антиперспирант Dove Men +Care Clean Comfort, 48 часов защиты, технология увлажнения. Объём 40 г.",
+    "galleryImages": [
+      "assets/products/dove/dove-stick-men-clean-comfort-40g-card-front.jpg",
+      "assets/products/dove/dove-stick-men-clean-comfort-40g-front.jpg",
+      "assets/products/dove/dove-stick-men-clean-comfort-40g-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-stick-men-clean-comfort-40g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-120924); товар опознан по названию и штрихкоду 4800888222763, совпадает с 1C кодом 1523 (Dove Stick Men (40g) Clean Comfort). Категория исправлена с laundry на deodorants (была ошибочно назначена при импорте)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Dove Men Clean Comfort 40 г",
+    "unit": "40 г"
+  },
   "prd_8b7fb5c9a8b4": {
     "brand": "Head & Shoulders",
     "category_id": "hair",
@@ -1660,6 +1840,8 @@
     "badge": "Sunsilk",
     "brand": "Sunsilk",
     "category": "Уход за волосами",
+    "category_id": "hair",
+    "clean_title": "Sunsilk Smooth & Manageable шампунь 625 мл",
     "description": "Шампунь Sunsilk Smooth & Manageable для более послушных и гладких волос. Объём 625 мл, формула с argan oil, elastin и vitamin C.",
     "galleryImages": [
       "assets/products/sunsilk/sunsilk-smooth-manageable-625ml-card-front.jpg",
@@ -1673,6 +1855,7 @@
       "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
+    "product_type": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 674,
     "retailPriceKgs": 695,
@@ -1682,10 +1865,7 @@
       "#f5a4c5",
       "#d84991"
     ],
-    "unit": "шт",
-    "clean_title": "Sunsilk Smooth & Manageable шампунь 625 мл",
-    "product_type": "шампунь",
-    "category_id": "hair"
+    "unit": "шт"
   },
   "prd_8f967f2becb0": {
     "brand": "YC",
@@ -1803,6 +1983,24 @@
     "product_type": "масло для тела",
     "short_title": "Johnson's Baby Oil 200 мл"
   },
+  "prd_9bb309942383": {
+    "brand": "Rexona",
+    "category_id": "deodorants",
+    "clean_title": "Rexona Men V8 дезодорант-стик 40 г",
+    "description": "Дезодорант-антиперспирант Rexona Men V8 MotionSense, защита 48 часов, 0% спирта. Объём 40 г.",
+    "galleryImages": [
+      "assets/products/rexona/rexona-stick-v8-40g-card-front.jpg",
+      "assets/products/rexona/rexona-stick-v8-40g-front.jpg",
+      "assets/products/rexona/rexona-stick-v8-40g-back.jpg"
+    ],
+    "image": "assets/products/rexona/rexona-stick-v8-40g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-120953); товар опознан по названию и весу 40г, совпадает с 1C кодом 1028 (Rexona Stick MEN (40) V 8)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Rexona V8 40 г",
+    "unit": "40 г"
+  },
   "prd_9caa2a2540d9": {
     "brand": "Concord",
     "category_id": "other",
@@ -1827,6 +2025,42 @@
     ],
     "product_type": "гель для стирки",
     "short_title": "Persil Sensitive 3 л"
+  },
+  "prd_9e4624cbe2cf": {
+    "brand": "BIC",
+    "category_id": "shaving",
+    "clean_title": "BIC Twin Lady женские одноразовые станки 5 шт",
+    "description": "Одноразовые станки для женщин BIC Twin Lady, 2 лезвия, ручка из переработанного пластика, упаковка 5 штук.",
+    "galleryImages": [
+      "assets/products/bic/bic-twin-lady-5pcs-card-front.jpg",
+      "assets/products/bic/bic-twin-lady-5pcs-front.jpg",
+      "assets/products/bic/bic-twin-lady-5pcs-back.jpg"
+    ],
+    "image": "assets/products/bic/bic-twin-lady-5pcs-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743 + 124755); товар опознан по названию и количеству (5 шт), совпадает с 1C кодом 2924 (BIC TWIN LADY RAZOR 5PCS POUCH). Фото back пришло отдельным сообщением (telegram-8767964230-20260706-124755)."
+    ],
+    "product_type": "одноразовые станки",
+    "short_title": "BIC Twin Lady 5 шт",
+    "unit": "уп."
+  },
+  "prd_9f1a9f037659": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Fusion5 Power станок 1 шт",
+    "description": "Станок для бритья Gillette Fusion5 Power с 5 лезвиями и стайлинговым лезвием на обороте.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-fusion5-power-razor-1-card-front.jpg",
+      "assets/products/gillette/gillette-fusion5-power-razor-1-front.jpg",
+      "assets/products/gillette/gillette-fusion5-power-razor-1-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-fusion5-power-razor-1-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по названию и штрихкоду 4987176282941, совпадает с 1C кодом 887 (5 FUSION Станок (1) Power)."
+    ],
+    "product_type": "станок для бритья",
+    "short_title": "Gillette Fusion5 Power",
+    "unit": "шт"
   },
   "prd_9f6d2674faac": {
     "brand": "Dove",
@@ -1853,6 +2087,24 @@
     ],
     "product_type": "шампунь",
     "short_title": "Tropical Hydration 400 мл"
+  },
+  "prd_a5a45ddea545": {
+    "brand": "BIC",
+    "category_id": "shaving",
+    "clean_title": "BIC 1 Sensitive одноразовые станки 15 шт (10+5)",
+    "description": "Одноразовые станки BIC 1 Sensitive, 1 лезвие, упаковка 15 штук (10+5).",
+    "galleryImages": [
+      "assets/products/bic/bic-1-sensitive-15pcs-card-front.jpg",
+      "assets/products/bic/bic-1-sensitive-15pcs-front.jpg",
+      "assets/products/bic/bic-1-sensitive-15pcs-back.jpg"
+    ],
+    "image": "assets/products/bic/bic-1-sensitive-15pcs-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по надписи '10+5' на упаковке, совпадает с 1C кодом 2925 (BIC 1 SENSITIVE DISPOSABLE 10+5 POUCH)."
+    ],
+    "product_type": "одноразовые станки",
+    "short_title": "BIC 1 Sensitive 15 шт",
+    "unit": "уп."
   },
   "prd_a5b0ca7fb277": {
     "brand": "Queen",
@@ -2045,6 +2297,8 @@
     "badge": "Sunsilk",
     "brand": "Sunsilk",
     "category": "Уход за волосами",
+    "category_id": "hair",
+    "clean_title": "Sunsilk Soft & Smooth шампунь 625 мл",
     "description": "Шампунь Sunsilk Soft & Smooth для мягкости и гладкости волос. Объём 625 мл, формула с light natural oil, cashmere keratin и vitamin E.",
     "galleryImages": [
       "assets/products/sunsilk/sunsilk-soft-smooth-625ml-card-front.jpg",
@@ -2058,6 +2312,7 @@
       "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
+    "product_type": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 674,
     "retailPriceKgs": 695,
@@ -2067,10 +2322,7 @@
       "#f4c94d",
       "#c48922"
     ],
-    "unit": "шт",
-    "clean_title": "Sunsilk Soft & Smooth шампунь 625 мл",
-    "product_type": "шампунь",
-    "category_id": "hair"
+    "unit": "шт"
   },
   "prd_bc63389835c9": {
     "brand": "Arm & Hammer",
@@ -2119,6 +2371,8 @@
     "badge": "Sunsilk",
     "brand": "Sunsilk",
     "category": "Уход за волосами",
+    "category_id": "hair",
+    "clean_title": "Sunsilk Anti-Dandruff Healthy Strong шампунь 625 мл",
     "description": "Шампунь Sunsilk Anti-Dandruff Healthy Strong против перхоти. Объём 625 мл, формула с tea tree oil, aloe vera и ginseng.",
     "galleryImages": [
       "assets/products/sunsilk/sunsilk-anti-dandruff-healthy-strong-625ml-card-front.jpg",
@@ -2132,6 +2386,7 @@
       "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
+    "product_type": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 674,
     "retailPriceKgs": 695,
@@ -2141,10 +2396,25 @@
       "#d7e8ff",
       "#5c94d6"
     ],
-    "unit": "шт",
-    "clean_title": "Sunsilk Anti-Dandruff Healthy Strong шампунь 625 мл",
-    "product_type": "шампунь",
-    "category_id": "hair"
+    "unit": "шт"
+  },
+  "prd_be5c87ae6741": {
+    "brand": "Gillette",
+    "category_id": "shaving",
+    "clean_title": "Gillette Venus Extra Smooth сменные кассеты 8 шт (XL)",
+    "description": "Сменные кассеты Gillette Venus Extra Smooth со Skin Cushion для женского станка. Упаковка XL, 8 штук.",
+    "galleryImages": [
+      "assets/products/gillette/gillette-venus-extra-smooth-cartridges-8-card-front.jpg",
+      "assets/products/gillette/gillette-venus-extra-smooth-cartridges-8-front.jpg",
+      "assets/products/gillette/gillette-venus-extra-smooth-cartridges-8-back.jpg"
+    ],
+    "image": "assets/products/gillette/gillette-venus-extra-smooth-cartridges-8-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по названию, штрихкоду 8001090596017 и количеству (8 шт, XL), совпадает с 1C кодом 2951 (6 VENUS запаски (8) Extra Smooth)."
+    ],
+    "product_type": "сменные кассеты для бритья",
+    "short_title": "Venus Extra Smooth 8 шт",
+    "unit": "уп."
   },
   "prd_bf0dc63d18a6": {
     "brand": "Пластырь",
@@ -2299,6 +2569,8 @@
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
+    "category_id": "hair-care",
+    "clean_title": "Pantene Smooth & Silky шампунь 600 мл",
     "description": "Шампунь Pantene Pro-V Smooth & Silky для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
@@ -2306,18 +2578,17 @@
       "assets/products/pantene/pantene-smooth-silky-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
-    "searchText": "pantene smooth & silky шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v smooth & silky для ежедневного ухода за волосами. формат: 600 мл.",
-    "unit": "600 мл",
-    "clean_title": "Pantene Smooth & Silky шампунь 600 мл",
-    "product_type": "шампунь",
-    "category_id": "hair-care",
     "notes": [
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
-    ]
+    ],
+    "product_type": "шампунь",
+    "searchText": "pantene smooth & silky шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v smooth & silky для ежедневного ухода за волосами. формат: 600 мл.",
+    "unit": "600 мл"
   },
   "prd_d0f02fd7d3b0": {
     "badge": "Lenor",
     "brand": "Lenor",
+    "clean_title": "Lenor Spring Awakening парфюм для белья 155 г",
     "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Spring Awakening. Формат: 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg",
@@ -2330,9 +2601,8 @@
       "Back label may show minor packaging/weight variation; do not use back-photo OCR as source of product title/weight without manual check.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
-    "unit": "155 г",
-    "clean_title": "Lenor Spring Awakening парфюм для белья 155 г",
-    "product_type": "парфюм для белья"
+    "product_type": "парфюм для белья",
+    "unit": "155 г"
   },
   "prd_d3c195668843": {
     "brand": "Dove",
@@ -2382,10 +2652,30 @@
     "product_type": "шампунь",
     "short_title": "H&S Anti-Hairfall 650 мл"
   },
+  "prd_d89548b02b08": {
+    "brand": "BIC",
+    "category_id": "shaving",
+    "clean_title": "BIC Soleil Scent женские одноразовые станки 4 шт",
+    "description": "Одноразовые станки для женщин BIC Soleil Scent с витамином E, 3 лезвия, упаковка 4 штуки.",
+    "galleryImages": [
+      "assets/products/bic/bic-soleil-scent-4pcs-card-front.jpg",
+      "assets/products/bic/bic-soleil-scent-4pcs-front.jpg",
+      "assets/products/bic/bic-soleil-scent-4pcs-back.jpg"
+    ],
+    "image": "assets/products/bic/bic-soleil-scent-4pcs-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по названию и количеству (4 шт), совпадает с 1C кодом 2922 (BIC SOLEIL SCENT WOMEN 4PCS BOX)."
+    ],
+    "product_type": "одноразовые станки",
+    "short_title": "BIC Soleil Scent 4 шт",
+    "unit": "уп."
+  },
   "prd_da9eaa7d3675": {
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
+    "category_id": "hair-care",
+    "clean_title": "Pantene Anti-Dandruff шампунь 600 мл",
     "description": "Шампунь Pantene Pro-V Anti-Dandruff для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
@@ -2393,19 +2683,19 @@
       "assets/products/pantene/pantene-anti-dandruff-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
-    "searchText": "pantene anti-dandruff шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v anti-dandruff для ежедневного ухода за волосами. формат: 600 мл.",
-    "unit": "600 мл",
-    "clean_title": "Pantene Anti-Dandruff шампунь 600 мл",
-    "product_type": "шампунь",
-    "category_id": "hair-care",
     "notes": [
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
-    ]
+    ],
+    "product_type": "шампунь",
+    "searchText": "pantene anti-dandruff шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v anti-dandruff для ежедневного ухода за волосами. формат: 600 мл.",
+    "unit": "600 мл"
   },
   "prd_dbf6cb3b3a0e": {
     "badge": "TRESemme",
     "brand": "TRESemmé",
     "category": "Уход за волосами",
+    "category_id": "hair",
+    "clean_title": "TRESemmé Rich Moisture шампунь 828 мл",
     "description": "Шампунь TRESemmé Rich Moisture для питания и увлажнения волос. Объём 828 мл, формула с hyaluronic plex.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-rich-moisture-828ml-card-front.jpg",
@@ -2419,6 +2709,7 @@
       "User confirmed product is in stock despite latest 1C stock_quantity=0; publish with Telegram album 20260609 TRESemmé photos.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
+    "product_type": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 674,
     "retailPriceKgs": 695,
@@ -2428,15 +2719,14 @@
       "#f3ddaa",
       "#9a762c"
     ],
-    "unit": "шт",
-    "clean_title": "TRESemmé Rich Moisture шампунь 828 мл",
-    "product_type": "шампунь",
-    "category_id": "hair"
+    "unit": "шт"
   },
   "prd_dce1df68b778": {
     "badge": "Pantene",
     "brand": "Pantene",
     "category": "Уход за волосами",
+    "category_id": "hair-care",
+    "clean_title": "Pantene Anti Hair Fall шампунь 600 мл",
     "description": "Шампунь Pantene Pro-V Anti Hair Fall для ежедневного ухода за волосами. Формат: 600 мл.",
     "galleryImages": [
       "assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
@@ -2444,14 +2734,12 @@
       "assets/products/pantene/pantene-anti-hair-fall-600ml-back.jpg"
     ],
     "image": "assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
-    "searchText": "pantene anti hair fall шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v anti hair fall для ежедневного ухода за волосами. формат: 600 мл.",
-    "unit": "600 мл",
-    "clean_title": "Pantene Anti Hair Fall шампунь 600 мл",
-    "product_type": "шампунь",
-    "category_id": "hair-care",
     "notes": [
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
-    ]
+    ],
+    "product_type": "шампунь",
+    "searchText": "pantene anti hair fall шампунь 600 мл уход за волосами pantene шампунь шампунь pantene pro-v anti hair fall для ежедневного ухода за волосами. формат: 600 мл.",
+    "unit": "600 мл"
   },
   "prd_dd48efde24f0": {
     "brand": "Concord",
@@ -2614,6 +2902,8 @@
     "badge": "Sunsilk",
     "brand": "Sunsilk",
     "category": "Уход за волосами",
+    "category_id": "hair",
+    "clean_title": "Sunsilk Black Shine шампунь 625 мл",
     "description": "Шампунь Sunsilk Black Shine для блеска тёмных волос. Объём 625 мл, формула с henna, oil, pearl и vitamin E.",
     "galleryImages": [
       "assets/products/sunsilk/sunsilk-black-shine-625ml-card-front.jpg",
@@ -2627,6 +2917,7 @@
       "Telegram album 20260610 Sunsilk photos manually mapped; publish product with card/front/back gallery. Soft & Smooth may be stock_quantity=0 in latest 1C but user requested adding photographed products.",
       "2026-07-05: normalized legacy override schema so apply_product_overrides.py applies the entry."
     ],
+    "product_type": "шампунь",
     "rating": 4.8,
     "registeredPriceKgs": 674,
     "retailPriceKgs": 695,
@@ -2636,10 +2927,7 @@
       "#251f28",
       "#c13e99"
     ],
-    "unit": "шт",
-    "clean_title": "Sunsilk Black Shine шампунь 625 мл",
-    "product_type": "шампунь",
-    "category_id": "hair"
+    "unit": "шт"
   },
   "prd_e993df33c857": {
     "brand": "Gillette",
@@ -2855,6 +3143,24 @@
     "product_type": "дезодорант-стик",
     "short_title": "Dove Original 40 г",
     "unit": "40 г"
+  },
+  "prd_f83cc0014f92": {
+    "brand": "BIC",
+    "category_id": "shaving",
+    "clean_title": "BIC 3 Sensitive одноразовые станки 6 шт (4+2)",
+    "description": "Одноразовые станки BIC 3 Sensitive с алоэ и витамином E, 3 лезвия, упаковка 6 штук (4+2).",
+    "galleryImages": [
+      "assets/products/bic/bic-3-sensitive-6pcs-card-front.jpg",
+      "assets/products/bic/bic-3-sensitive-6pcs-front.jpg",
+      "assets/products/bic/bic-3-sensitive-6pcs-back.jpg"
+    ],
+    "image": "assets/products/bic/bic-3-sensitive-6pcs-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124743); товар опознан по надписи '4+2' на упаковке, совпадает с 1C кодом 2927 (BIC 3 SENSITIVE 4+2 POUCH)."
+    ],
+    "product_type": "одноразовые станки",
+    "short_title": "BIC 3 Sensitive 6 шт",
+    "unit": "уп."
   },
   "prd_fbc4a5e759ac": {
     "brand": "Пластырь",

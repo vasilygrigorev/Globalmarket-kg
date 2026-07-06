@@ -6,6 +6,78 @@ confidence. Nothing here has been added to `data/product_overrides.json`
 or moved into a published `assets/products/<brand>/` folder. Raw files are
 left in place under `assets/products/` — do not delete.
 
+## PARTIALLY RESOLVED 2026-07-06 (afternoon) — `assets/telegram_inbox/telegram-8767964230-20260706-{120924,120953,124743,124755}`
+
+A new batch (69 raw files, not yet in card-front/front/back naming — found in the
+raw `assets/telegram_inbox/` staging area, not `assets/products/`) covering
+Rexona/Dove sticks, BIC disposable razors, and Gillette/Venus razors +
+cartridges. **17 products identified and published** (card-front/front/back
+triples, cross-referenced by name/weight/barcode against `data/store.db`
+`source_products`):
+
+| Product | 1C code | product_id |
+|---|---|---|
+| Rexona Men V8 стик 40 г | 1028 | `prd_9bb309942383` |
+| Rexona Antibacterial + Invisible стик 40 г | 2839 | `prd_0d95e9b49711` |
+| Rexona Men Cobalt стик 40 г | 2835 | `prd_47c8b6565a63` |
+| Rexona Men Xtra Cool стик 40 г | 2836 | `prd_168ccd5d1f3e` |
+| Rexona Bamboo стик 40 г | 1246 | `prd_56cefec24fdf` |
+| Dove Men +Care Clean Comfort стик 40 г | 1523 | `prd_8b3a9f34a763` |
+| BIC 1 Sensitive 15 шт (10+5) | 2925 | `prd_a5a45ddea545` |
+| BIC 3 Sensitive 6 шт (4+2) | 2927 | `prd_f83cc0014f92` |
+| BIC 2 Sensitive 5 шт | 2926 | `prd_4f3caf82472d` |
+| BIC Comfort 2, 5 шт | 2928 | `prd_6a96d3de0c5a` |
+| BIC Soleil Scent (женский) 4 шт | 2922 | `prd_d89548b02b08` |
+| BIC Twin Lady (женский) 5 шт | 2924 | `prd_9e4624cbe2cf` |
+| Gillette Fusion5 Power станок | 887 | `prd_9f1a9f037659` |
+| Gillette Fusion5 ProGlide Power станок | 2823 | `prd_1b7d37e71949` |
+| Venus Deluxe Smooth Swirl кассеты 3 шт | 2949 | `prd_76659cd2bb07` |
+| Venus Comfortglide Breeze кассеты 8 шт (XL) | 605 | `prd_7f5f15b91773` |
+| Venus Extra Smooth кассеты 8 шт (XL) | 2951 | `prd_be5c87ae6741` |
+
+Попутно исправлены 2 неверные категории, назначенные при импорте остатков
+(были `laundry`, должны быть `deodorants`/`shaving`): Dove Men +Care Clean
+Comfort и BIC Comfort 2.
+
+**6 групп фото НЕ опубликованы** — реальные проблемы, не просто "руки не
+дошли":
+
+- **Rexona Men Ice Cool стик 40 г** (кандидат: код 2961, `prd_f024c1fb0785`)
+  — есть только card-front и back (штрихкод 4800888191144), фото "front"
+  (обычное фото товара) не прислали. По контракту нужны все 3 фото.
+- **Rexona "invisible on black+white clothes"** (группа `124743-01..03`) —
+  тройка фото внутренне согласована, но её back-фото (штрихкод
+  4800888220820, текст "REXONA ANTIBACTERIAL + INVISIBLE ANTIPERSPIRANT
+  STICK") **побайтово совпадает по штрихкоду** с back-фото уже
+  опубликованного Rexona Antibacterial + Invisible (группа `120953-06..08`),
+  хотя дизайн лицевой стороны другой ("anti-white marks + yellow stains" с
+  иконкой одежды, без красного щита "10x protection"). Вероятный кандидат —
+  код 1248 (`Rexona Stick (40) Invisible Black`), но с чужим/задвоенным back
+  фото публиковать нельзя — нужно новое фото back именно этой упаковки.
+- **BIC Miss Soleil Colour Collection 4T** (кандидат: код 2921,
+  `prd_684776405d52`) — есть только card-front (присылали дважды, `124743-31`
+  и `124743-50`) и back (штрихкод 3086123303843), обычного фото "front" нет.
+- **BIC Soleil Bella** (группа `124743-33..35`) — тройка фото полная
+  (card-front/front/back), но на упаковке написано **"3T"** (3 станка),
+  а единственный кандидат в остатках — `BIC SOLEIL BELLA WOMEN 4PCS BOX`
+  (4 штуки). Расхождение в количестве — нужно подтверждение, тот ли это
+  товар (может, другая фасовка не заведена в 1С) или нет.
+- **Venus Comfortglide Breeze, малая пачка 4 шт** (группа `124743-41/43`
+  card-front, `124743-42` back; кандидат: код 617, `src_ebe1f3c5ba87`) — нет
+  фото "front", а присланное back-фото (штрихкод 7702018886364) **побайтово
+  совпадает** с back-фото, присланным для другой пачки (см. следующий пункт)
+  — явная путаница, нужно новое фото back именно 4-штучной пачки.
+- **Venus Deluxe Smooth Swirl, большая пачка XL 6 шт** (группа
+  `124743-27/30` card-front/front; кандидат: код 2950, `prd_f5853f007466`) —
+  card-front и front надёжные, но присланное back-фото (`124743-29`,
+  штрихкод 7702018886364) — **тот же самый штрихкод**, что и у Comfortglide
+  Breeze 4 шт выше. Одно из двух back-фото явно перепутано с другим —
+  публиковать нельзя, пока не пришлют однозначно свой back для каждой
+  пачки.
+
+Все 69 исходных файлов остаются нетронутыми в
+`assets/telegram_inbox/telegram-8767964230-20260706-{120924,120953,124743,124755}/`.
+
 ## PARTIALLY RESOLVED 2026-07-06 — `telegram-8767964230-20260706-*` (two live batches)
 
 Two fresh batches landed on disk **during local sessions** (~10:28-10:40 and

@@ -1,5 +1,5 @@
 {
-  "count": 35,
+  "count": 37,
   "pages": [
     {
       "type": "category",
@@ -7,7 +7,7 @@
       "title": "Стирка и уход за бельем",
       "path": "/category/laundry/",
       "url": "https://globalmarket.kg/category/laundry/",
-      "count": 55,
+      "count": 53,
       "seoTerms": [
         "порошок",
         "стиральный порошок",
@@ -80,7 +80,7 @@
       "title": "Дезодоранты",
       "path": "/category/deodorants/",
       "url": "https://globalmarket.kg/category/deodorants/",
-      "count": 72,
+      "count": 73,
       "seoTerms": [
         "дезодорант",
         "дезик",
@@ -88,7 +88,7 @@
         "стик",
         "спрей"
       ],
-      "shown": 18
+      "shown": 24
     },
     {
       "type": "category",
@@ -96,7 +96,7 @@
       "title": "Бритье",
       "path": "/category/shaving/",
       "url": "https://globalmarket.kg/category/shaving/",
-      "count": 54,
+      "count": 55,
       "seoTerms": [
         "бритье",
         "товары для бритья",
@@ -110,7 +110,7 @@
         "пена для бритья",
         "гель для бритья"
       ],
-      "shown": 14
+      "shown": 25
     },
     {
       "type": "category",
@@ -175,7 +175,7 @@
         "товары Dove",
         "Dove купить Бишкек"
       ],
-      "shown": 9
+      "shown": 10
     },
     {
       "type": "brand",
@@ -189,7 +189,7 @@
         "товары Gillette",
         "Gillette купить Бишкек"
       ],
-      "shown": 9
+      "shown": 14
     },
     {
       "type": "brand",
@@ -232,6 +232,20 @@
         "Persil купить Бишкек"
       ],
       "shown": 10
+    },
+    {
+      "type": "brand",
+      "slug": "rexona",
+      "title": "Rexona",
+      "path": "/brand/rexona/",
+      "url": "https://globalmarket.kg/brand/rexona/",
+      "count": 14,
+      "seoTerms": [
+        "Rexona",
+        "товары Rexona",
+        "Rexona купить Бишкек"
+      ],
+      "shown": 5
     },
     {
       "type": "brand",
@@ -302,6 +316,20 @@
         "Lenor купить Бишкек"
       ],
       "shown": 8
+    },
+    {
+      "type": "brand",
+      "slug": "bic",
+      "title": "BIC",
+      "path": "/brand/bic/",
+      "url": "https://globalmarket.kg/brand/bic/",
+      "count": 8,
+      "seoTerms": [
+        "BIC",
+        "товары BIC",
+        "BIC купить Бишкек"
+      ],
+      "shown": 6
     },
     {
       "type": "brand",
@@ -421,7 +449,7 @@
       "title": "Comfort",
       "path": "/brand/comfort/",
       "url": "https://globalmarket.kg/brand/comfort/",
-      "count": 5,
+      "count": 4,
       "seoTerms": [
         "Comfort",
         "товары Comfort",

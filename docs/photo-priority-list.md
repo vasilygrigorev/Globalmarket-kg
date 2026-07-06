@@ -5,15 +5,35 @@ Snapshot after commit `b26262c` (legacy override schema normalization). Run
 `python3 scripts/report_photo_priority.py`) for a fresh number any time —
 this file is a snapshot, not a live report.
 
-Current coverage: **150/529 = 28.4%** (was 142/529 — 8 new products from a
-live 2026-07-06 Petya batch: 4 Colgate toothbrushes + 4 Dove deodorant
-sticks, see `docs/pending-photo-review.md` for the full identification
-trail). From here on, closing the remaining gap needs real new photos.
+Current coverage: **167/529 = 31.6%** (was 150/529 — 17 new products from a
+second live 2026-07-06 Petya batch found in `assets/telegram_inbox/`: 5
+Rexona sticks, 1 Dove Men stick, 6 BIC disposable razors, 5 Gillette/Venus
+razors and cartridges, see `docs/pending-photo-review.md` for the full
+identification trail). From here on, closing the remaining gap needs real
+new photos.
 
 ## Priority 0 — fix these first, they're almost done
 
-Two products from the same 2026-07-06 batch have a **confident 1C match
-and a good front/card-front, but a wrong back photo** — not missing, wrong
+Six groups from the 2026-07-06 afternoon batch are blocked on a **specific
+missing or wrong photo**, not full reshoots:
+
+- **Rexona Men Ice Cool стик 40 г** — has card-front + back, missing the
+  plain "front" photo.
+- **Rexona "invisible on black+white clothes"** — has a full triple, but its
+  back photo is byte/barcode-identical to a different product's (Rexona
+  Antibacterial + Invisible) already-published back — needs its own back
+  photo.
+- **BIC Miss Soleil Colour Collection 4T** — has card-front + back, missing
+  the plain "front" photo.
+- **BIC Soleil Bella** — full triple, but package says 3 razors while the
+  only 1C candidate is a 4-pack — needs count/code confirmation.
+- **Venus Comfortglide Breeze, 4-pack** and **Venus Deluxe Smooth Swirl,
+  XL 6-pack** — both are missing a *reliable* back photo: the two back
+  photos sent for them are byte/barcode-identical to each other, so at
+  least one is misattributed. Needs a fresh back photo for each pack size.
+
+From the earlier 2026-07-06 morning batch: two products have a **confident
+1C match and a good front/card-front, but a wrong back photo** — not missing, wrong
 (one is a different product's back entirely, one is byte-identical to
 another product's back). A single correct back photo each would finish
 them:
@@ -97,6 +117,13 @@ untouched):
 
 Что снять в первую очередь, по убыванию пользы:
 
+0. **Из партии 2026-07-06 (день)**: обычное фото "front" для Rexona Ice Cool
+   и для BIC Miss Soleil Colour Collection; новое фото "back" для Rexona
+   "invisible on black+white clothes", для Venus Comfortglide Breeze
+   (пачка 4 шт) и для Venus Deluxe Smooth Swirl (пачка XL 6 шт) — присланные
+   back-фото для этих двух пачек Venus совпадают друг с другом, значит
+   одно из них перепутано; и подтверждение — Soleil Bella в пачке правда
+   3 станка или 4 (в остатках только позиция на 4 шт)?
 1. **Обратная сторона (back) для Colgate 360 Optic White и Colgate Max
    Fresh** — фото перепутались с другими щётками при съёмке 2026-07-06,
    нужно всего по одному новому фото на каждый товар, всё остальное уже
