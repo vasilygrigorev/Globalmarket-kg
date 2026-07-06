@@ -1,6 +1,6 @@
 # Project Stage Map
 
-Generated: 2026-07-06T11:59:22.211425+00:00
+Generated: 2026-07-06T13:15:46.540902+00:00
 
 Approximate progress map for Global Market KG. Percentages are working estimates, not contractual milestones.
 
