@@ -88,3 +88,72 @@ When backend work starts, the same taxonomy can be stored in PostgreSQL, Supabas
 - product_collections.
 
 The current static fields map directly to those tables later, so this taxonomy step does not require rewriting the storefront now.
+
+## Fine-grained taxonomy for recommendations (2026-07)
+
+The broad categories (laundry, hair, shaving, …) are too coarse for the
+"Похожие товары" block: a shampoo can end up next to a hair mask, and in laundry
+a powder can mix with a fabric softener. Three optional, derived fields make the
+recommendation ordering tighter. They are **additive** — existing fields, URLs,
+and behaviour are unchanged, and any field is left empty/`unknown` when it can't
+be told confidently.
+
+- **`productKind`** — fine-grained type. Examples: laundry → `washing_powder`,
+  `laundry_gel`, `fabric_softener`, `laundry_capsules`; hair → `shampoo`,
+  `conditioner`, `hair_mask`; shaving → `razor`, `blade_cartridge`,
+  `shaving_gel`, `shaving_foam`; body → `shower_gel`, `soap`, `body_lotion`,
+  `bath_foam`; deodorants → `deodorant_spray`, `deodorant_stick`,
+  `deodorant_rollon`; perfume → `perfume_decant`; cleaning →
+  `dishwashing_liquid`, `cleaning_cream`, `surface_cleaner`, `toilet_cleaner`.
+  `""` when unknown.
+- **`audience`** — `men` / `women` / `kids` / `unisex` / `family` / `unknown`.
+  Household categories (laundry, cleaning, food) default to `family`; personal
+  care is left `unknown` unless the name/brand clearly signals men/women/kids.
+- **`attributes`** — a de-duplicated list of extra tags such as `rose`, `fresh`,
+  `sensitive`, `anti_dandruff`, `color`, `white`, `for_black_clothes`, `spf`,
+  `moisturising`, `capsules`, `concentrate`, `lavender`.
+
+### Classifier
+
+`scripts/classify_taxonomy.py` is a pure, deterministic classifier over a
+product's existing data (title, brand, category/categoryId, productType,
+description). It never guesses; when unsure it returns `""` / `unknown`. Unit
+tests live in `scripts/classify_taxonomy_test.py` (run
+`python3 scripts/classify_taxonomy_test.py`) and cover the tricky cases: VENUS
+запаски → `blade_cartridge` (not just "shaving"), Gillette gel/foam →
+`shaving_gel` / `shaving_foam`, and laundry powder/gel/capsules/softener staying
+distinct.
+
+Observed coverage on the current catalog (report-only): shaving 54/55 and
+laundry 46/53 products get a `productKind`; the laundry gaps are abbreviated
+Ariel titles (e.g. "Ariel (6kg) Color") with no form word — intentionally left
+`""` rather than guessed.
+
+### Related-products ranking
+
+`related_rank_key(target, candidate)` in the same module gives the recommendation
+order (smaller = more relevant): **1)** same `productKind` → **2)** same
+category → **3)** same `audience` (when known) → **4)** shared brand or attribute
+→ **5)** fallback by title. This keeps laundry forms from mixing, keeps razors
+apart from cartridges, and — within the same kind and category — ranks a men's
+product's male analogues above female ones.
+
+### Wiring (apply when the working tree is clean — do not regenerate mid-batch)
+
+1. In `scripts/build_public_catalog.py`, after `item["searchText"] = …`, merge
+   the derived fields: `item.update(classify_taxonomy.enrich(product))`, and add
+   `productKind` / `audience` / `attributes` to `PUBLIC_PRODUCT_FIELDS` if you
+   prefer to carry them through from the source instead. Then regenerate
+   `data/public-catalog.json`.
+2. In `scripts/generate_product_pages.py` `related_products()`, replace the
+   `related.sort(...)` europe/title key with
+   `related.sort(key=lambda c: classify_taxonomy.related_rank_key(product, c))`
+   (keep the existing same-category + in-stock + has-images filters and the
+   fallback). Regenerate product pages.
+3. Add real-catalog guardrails (once the fields exist): every laundry product
+   whose title contains a form word has a non-empty `productKind`; recommendation
+   output for a product leads with the same `productKind` when such products
+   exist.
+
+`scripts/classify_taxonomy_test.py` is already wired into
+`scripts/verify_backend_mvp.py` so the classifier stays correct.
