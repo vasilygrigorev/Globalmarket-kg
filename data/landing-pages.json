@@ -1,5 +1,5 @@
 {
-  "count": 38,
+  "count": 39,
   "pages": [
     {
       "type": "category",
@@ -62,7 +62,7 @@
         "мыло для рук",
         "хозяйственное мыло"
       ],
-      "shown": 13
+      "shown": 15
     },
     {
       "type": "category",
@@ -110,7 +110,7 @@
         "пена для бритья",
         "гель для бритья"
       ],
-      "shown": 25
+      "shown": 26
     },
     {
       "type": "category",
@@ -145,7 +145,7 @@
         "мыло для рук",
         "хозяйственное мыло"
       ],
-      "shown": 8
+      "shown": 11
     },
     {
       "type": "collection",
@@ -165,6 +165,20 @@
     },
     {
       "type": "brand",
+      "slug": "concord",
+      "title": "Concord",
+      "path": "/brand/concord/",
+      "url": "https://globalmarket.kg/brand/concord/",
+      "count": 44,
+      "seoTerms": [
+        "Concord",
+        "товары Concord",
+        "Concord купить Бишкек"
+      ],
+      "shown": 4
+    },
+    {
+      "type": "brand",
       "slug": "dove",
       "title": "Dove",
       "path": "/brand/dove/",
@@ -175,7 +189,7 @@
         "товары Dove",
         "Dove купить Бишкек"
       ],
-      "shown": 12
+      "shown": 14
     },
     {
       "type": "brand",
@@ -329,7 +343,7 @@
         "товары BIC",
         "BIC купить Бишкек"
       ],
-      "shown": 6
+      "shown": 7
     },
     {
       "type": "brand",

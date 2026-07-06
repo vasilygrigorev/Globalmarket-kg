@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 173,
+  "count": 179,
   "pages": [
     {
       "id": "prd_d0bc9026f5ab",
@@ -16,7 +16,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 10
     },
     {
       "id": "prd_1e0cb301d44d",
@@ -31,7 +31,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 10
     },
     {
       "id": "prd_5faaff6cf17c",
@@ -46,7 +46,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 10
     },
     {
       "id": "prd_572ed90689d1",
@@ -61,7 +61,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 10
     },
     {
       "id": "prd_dce1df68b778",
@@ -76,7 +76,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 10
     },
     {
       "id": "prd_da9eaa7d3675",
@@ -91,7 +91,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 10
     },
     {
       "id": "prd_c5f3a1dce862",
@@ -1006,7 +1006,7 @@
       "retailPriceKgs": 550,
       "image": "/assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_b1d27dff5c3e",
@@ -1021,7 +1021,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/yc/yc-sunscreen-spf50-100g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_8f967f2becb0",
@@ -1036,7 +1036,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/yc/yc-sunscreen-spf60-100g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_f50077a08461",
@@ -1051,7 +1051,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_45b58a935040",
@@ -1066,7 +1066,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_418f9f481516",
@@ -1081,7 +1081,7 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_91d95a5103ac",
@@ -1096,7 +1096,7 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_23e9c6bb855b",
@@ -1111,7 +1111,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_0b8a7c8dea63",
@@ -1126,7 +1126,22 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
+    },
+    {
+      "id": "prd_792036a19367",
+      "slug": "dove-advanced-care-go-fresh-coconut-jasmine-sprey-dezodorant-250-ml-a19367",
+      "path": "/product/dove-advanced-care-go-fresh-coconut-jasmine-sprey-dezodorant-250-ml-a19367/",
+      "url": "https://globalmarket.kg/product/dove-advanced-care-go-fresh-coconut-jasmine-sprey-dezodorant-250-ml-a19367/",
+      "title": "Dove Advanced Care go fresh Coconut & Jasmine спрей-дезодорант, 250 мл",
+      "brand": "Dove",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 14
     },
     {
       "id": "prd_f23090eb2627",
@@ -1141,7 +1156,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-go-fresh-apple-white-tea-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_b8b5bfec07e5",
@@ -1156,7 +1171,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_d3c195668843",
@@ -1171,7 +1186,22 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
+    },
+    {
+      "id": "prd_07e3d025b33c",
+      "slug": "dove-advanced-care-go-fresh-cucumber-green-tea-sprey-dezodorant-250-ml-25b33c",
+      "path": "/product/dove-advanced-care-go-fresh-cucumber-green-tea-sprey-dezodorant-250-ml-25b33c/",
+      "url": "https://globalmarket.kg/product/dove-advanced-care-go-fresh-cucumber-green-tea-sprey-dezodorant-250-ml-25b33c/",
+      "title": "Dove Advanced Care go fresh Cucumber & Green Tea спрей-дезодорант, 250 мл",
+      "brand": "Dove",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 14
     },
     {
       "id": "prd_96fe6b1c7d9c",
@@ -1186,7 +1216,7 @@
       "retailPriceKgs": 295,
       "image": "/assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 12
+      "relatedCount": 14
     },
     {
       "id": "prd_1cb756e99bac",
@@ -1789,6 +1819,21 @@
       "relatedCount": 24
     },
     {
+      "id": "prd_684776405d52",
+      "slug": "bic-miss-soleil-colour-collection-odnorazovye-stanki-4-sht-405d52",
+      "path": "/product/bic-miss-soleil-colour-collection-odnorazovye-stanki-4-sht-405d52/",
+      "url": "https://globalmarket.kg/product/bic-miss-soleil-colour-collection-odnorazovye-stanki-4-sht-405d52/",
+      "title": "BIC Miss Soleil Colour Collection одноразовые станки 4 шт",
+      "brand": "BIC",
+      "category": "Бритье",
+      "categoryId": "shaving",
+      "collections": [],
+      "retailPriceKgs": 495,
+      "image": "/assets/products/bic/bic-miss-soleil-colour-4pcs-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
       "id": "prd_d89548b02b08",
       "slug": "bic-soleil-scent-zhenskie-odnorazovye-stanki-4-sht-b02b08",
       "path": "/product/bic-soleil-scent-zhenskie-odnorazovye-stanki-4-sht-b02b08/",
@@ -2273,6 +2318,51 @@
       "relatedCount": 16
     },
     {
+      "id": "prd_f652a5ca9bbf",
+      "slug": "concord-clip-it-detskie-kusachki-dlya-nogtey-020-1-ca9bbf",
+      "path": "/product/concord-clip-it-detskie-kusachki-dlya-nogtey-020-1-ca9bbf/",
+      "url": "https://globalmarket.kg/product/concord-clip-it-detskie-kusachki-dlya-nogtey-020-1-ca9bbf/",
+      "title": "Concord Clip It детские кусачки для ногтей 020-1",
+      "brand": "Concord",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 190,
+      "image": "/assets/products/concord/concord-kids-020-1-blue-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 10
+    },
+    {
+      "id": "prd_d53b7b8bf384",
+      "slug": "concord-clip-it-kusachki-dlya-nogtey-6401-3-8bf384",
+      "path": "/product/concord-clip-it-kusachki-dlya-nogtey-6401-3-8bf384/",
+      "url": "https://globalmarket.kg/product/concord-clip-it-kusachki-dlya-nogtey-6401-3-8bf384/",
+      "title": "Concord Clip It кусачки для ногтей 6401-3",
+      "brand": "Concord",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 190,
+      "image": "/assets/products/concord/concord-6401-3-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 10
+    },
+    {
+      "id": "prd_d686b0354eac",
+      "slug": "concord-clip-it-kusachki-dlya-nogtey-6425-3-354eac",
+      "path": "/product/concord-clip-it-kusachki-dlya-nogtey-6425-3-354eac/",
+      "url": "https://globalmarket.kg/product/concord-clip-it-kusachki-dlya-nogtey-6425-3-354eac/",
+      "title": "Concord Clip It кусачки для ногтей 6425-3",
+      "brand": "Concord",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [],
+      "retailPriceKgs": 170,
+      "image": "/assets/products/concord/concord-6425-3-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 10
+    },
+    {
       "id": "prd_bf0dc63d18a6",
       "slug": "plastyr-banduff-10-sht-3d18a6",
       "path": "/product/plastyr-banduff-10-sht-3d18a6/",
@@ -2285,7 +2375,7 @@
       "retailPriceKgs": 20,
       "image": "/assets/products/restored-history/prd_bf0dc63d18a6-пластырь-banduff-10-шт-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 10
     },
     {
       "id": "prd_fbc4a5e759ac",
@@ -2300,7 +2390,7 @@
       "retailPriceKgs": 120,
       "image": "/assets/products/restored-history/prd_fbc4a5e759ac-пластырь-banduff-50-шт-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 10
     },
     {
       "id": "prd_perfume_bybozo_sea_breeze_5ml",

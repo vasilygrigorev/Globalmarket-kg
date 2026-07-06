@@ -5,15 +5,16 @@ Snapshot after commit `b26262c` (legacy override schema normalization). Run
 `python3 scripts/report_photo_priority.py`) for a fresh number any time —
 this file is a snapshot, not a live report.
 
-Current coverage: **173/529 = 32.7%** (was 167/529 — a full audit of the
-entire `assets/telegram_inbox/` archive, 74 folders/764 files back to
-2026-06-02, found 6 more genuinely new products: H&S Cool Menthol, 3 Skin
-Doctor sunscreens, and 2 Dove sprays whose card-front and front/back came
-from two different Petya batches. See `docs/pending-photo-review.md`
-"FULL ARCHIVE AUDIT" section for the full trail, including 2 products with
-a ready photo but zero current stock, and a dozen more needing one
-additional photo). From here on, closing the remaining gap needs real
-new photos.
+Current coverage: **179/529 = 33.8%** (was 173/529 — after owner confirmed
+several previously-uncertain items from the archive audit: 3 Concord nail
+clippers, BIC Miss Soleil Colour Collection, and 2 Dove go fresh 250 ml
+sprays, Cucumber & Green Tea + Coconut & Jasmine, were published; the
+Concord Butterfly Razor KL 90 was also confirmed and prepared but is held
+out of the catalog because its stock is 0). The 173 milestone came from a
+full audit of the entire `assets/telegram_inbox/` archive, 74 folders/764
+files back to 2026-06-02. See `docs/pending-photo-review.md` "FULL ARCHIVE
+AUDIT" section for the full trail. From here on, closing the remaining gap
+needs real new photos.
 
 ## Priority 0 — fix these first, they're almost done
 

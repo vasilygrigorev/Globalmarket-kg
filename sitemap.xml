@@ -79,6 +79,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://globalmarket.kg/brand/concord/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/brand/dalli/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -472,6 +478,15 @@
     </image:image>
   </url>
   <url>
+    <loc>https://globalmarket.kg/product/bic-miss-soleil-colour-collection-odnorazovye-stanki-4-sht-405d52/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/bic/bic-miss-soleil-colour-4pcs-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/product/bic-soleil-scent-zhenskie-odnorazovye-stanki-4-sht-b02b08/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -697,6 +712,33 @@
     </image:image>
   </url>
   <url>
+    <loc>https://globalmarket.kg/product/concord-clip-it-detskie-kusachki-dlya-nogtey-020-1-ca9bbf/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/concord/concord-kids-020-1-blue-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/concord-clip-it-kusachki-dlya-nogtey-6401-3-8bf384/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/concord/concord-6401-3-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/concord-clip-it-kusachki-dlya-nogtey-6425-3-354eac/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/concord/concord-6425-3-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/product/concord-stanok-d-652-e592aa/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -856,6 +898,24 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://globalmarket.kg/assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/dove-advanced-care-go-fresh-coconut-jasmine-sprey-dezodorant-250-ml-a19367/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/dove-advanced-care-go-fresh-cucumber-green-tea-sprey-dezodorant-250-ml-25b33c/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>

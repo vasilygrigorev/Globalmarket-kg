@@ -51,6 +51,24 @@
     "product_type": "гель для стирки",
     "short_title": "Dalli Color Gel 5 л"
   },
+  "prd_07e3d025b33c": {
+    "brand": "Dove",
+    "category_id": "body",
+    "clean_title": "Dove Advanced Care go fresh Cucumber & Green Tea спрей-дезодорант, 250 мл",
+    "description": "Спрей-антиперспирант Dove Advanced Care go fresh с ароматом огурца и зелёного чая, технология тройного увлажнения, защита 72 часа. Объём 250 мл.",
+    "galleryImages": [
+      "assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-card-front.jpg",
+      "assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-front.jpg",
+      "assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-card-front.jpg",
+    "notes": [
+      "2026-07-06: подтверждено владельцем (огурец); опознан по надписи \"cucumber & green tea scent\" и штрихкоду 8717163559610, 1C код 1059 (Dove Body Spray (250) Cucumber, telegram-8767964230-20260626-142813-next-2)."
+    ],
+    "product_type": "спрей-дезодорант",
+    "short_title": "Dove Cucumber & Green Tea 250 мл",
+    "unit": "250 мл"
+  },
   "prd_081404d81ef8": {
     "brand": "Gillette",
     "category_id": "deodorants",
@@ -1412,6 +1430,24 @@
     "product_type": "гель для стирки",
     "short_title": "Persil Rose 4,8 л"
   },
+  "prd_684776405d52": {
+    "brand": "BIC",
+    "category_id": "shaving",
+    "clean_title": "BIC Miss Soleil Colour Collection одноразовые станки 4 шт",
+    "description": "Одноразовые станки для женщин BIC Miss Soleil Colour Collection, 3 лезвия, витамин E, разноцветные ручки. Упаковка 4 штуки.",
+    "galleryImages": [
+      "assets/products/bic/bic-miss-soleil-colour-4pcs-card-front.jpg",
+      "assets/products/bic/bic-miss-soleil-colour-4pcs-front.jpg",
+      "assets/products/bic/bic-miss-soleil-colour-4pcs-back.jpg"
+    ],
+    "image": "assets/products/bic/bic-miss-soleil-colour-4pcs-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото и раскладка (перед/зад) подтверждены владельцем; опознан по названию Miss Soleil Colour Collection, 4 шт, штрихкод 3086123303843 (BIC SOLEIL COLOR WOMEN 4PCS BOX, telegram-8767964230-20260706-124743)."
+    ],
+    "product_type": "одноразовые станки",
+    "short_title": "BIC Miss Soleil 4 шт",
+    "unit": "уп."
+  },
   "prd_6a96d3de0c5a": {
     "brand": "BIC",
     "category_id": "shaving",
@@ -1626,6 +1662,24 @@
     "description": "Зубная паста Colgate Cool Stripe в удобном формате Pump. Объем 100 мл.",
     "product_type": "зубная паста",
     "short_title": "Colgate Cool Stripe 100 мл"
+  },
+  "prd_792036a19367": {
+    "brand": "Dove",
+    "category_id": "body",
+    "clean_title": "Dove Advanced Care go fresh Coconut & Jasmine спрей-дезодорант, 250 мл",
+    "description": "Спрей-антиперспирант Dove Advanced Care go fresh с ароматом кокоса и жасмина, технология тройного увлажнения, защита 72 часа. Объём 250 мл.",
+    "galleryImages": [
+      "assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-card-front.jpg",
+      "assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-front.jpg",
+      "assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-card-front.jpg",
+    "notes": [
+      "2026-07-06: подтверждено владельцем (кокос); опознан по надписи \"coconut & jasmine flower scent\", 1C код 1490 (Dove Body Spray (250) Coconut, telegram-8767964230-20260626-142813-next-2)."
+    ],
+    "product_type": "спрей-дезодорант",
+    "short_title": "Dove Coconut & Jasmine 250 мл",
+    "unit": "250 мл"
   },
   "prd_79ae12d5e324": {
     "brand": "Comfort",
@@ -2709,6 +2763,42 @@
     "product_type": "гель для стирки",
     "short_title": "Persil Light Foam 3 л + 1 л"
   },
+  "prd_d53b7b8bf384": {
+    "brand": "Concord",
+    "category_id": "other",
+    "clean_title": "Concord Clip It кусачки для ногтей 6401-3",
+    "description": "Кусачки для ногтей Concord Clip It (Art# 6401-3) со стильной тонкой ручкой и точным лезвием.",
+    "galleryImages": [
+      "assets/products/concord/concord-6401-3-card-front.jpg",
+      "assets/products/concord/concord-6401-3-front.jpg",
+      "assets/products/concord/concord-6401-3-back.jpg"
+    ],
+    "image": "assets/products/concord/concord-6401-3-card-front.jpg",
+    "notes": [
+      "2026-07-06: подтверждено владельцем; опознан по Art#6401-3 и штрихкоду 663234016065 (Concord Кусачки (6401-3), telegram-8767964230-20260612-140339)."
+    ],
+    "product_type": "кусачки для ногтей",
+    "short_title": "Concord Clip It 6401-3",
+    "unit": "шт"
+  },
+  "prd_d686b0354eac": {
+    "brand": "Concord",
+    "category_id": "other",
+    "clean_title": "Concord Clip It кусачки для ногтей 6425-3",
+    "description": "Кусачки для ногтей Concord Clip It (Art# 6425-3) с тонкой ручкой и точным лезвием для аккуратного маникюра.",
+    "galleryImages": [
+      "assets/products/concord/concord-6425-3-card-front.jpg",
+      "assets/products/concord/concord-6425-3-front.jpg",
+      "assets/products/concord/concord-6425-3-back.jpg"
+    ],
+    "image": "assets/products/concord/concord-6425-3-card-front.jpg",
+    "notes": [
+      "2026-07-06: подтверждено владельцем; опознан по Art#6425-3 и штрихкоду 663234016072 (Concord Кусачки (6425-3), telegram-8767964230-20260612-140343)."
+    ],
+    "product_type": "кусачки для ногтей",
+    "short_title": "Concord Clip It 6425-3",
+    "unit": "шт"
+  },
   "prd_d8023f79398b": {
     "brand": "Head & Shoulders",
     "category_id": "hair",
@@ -3136,10 +3226,20 @@
   "prd_f12169c0af17": {
     "brand": "Concord",
     "category_id": "shaving",
-    "clean_title": "Concord станок KL 90",
-    "description": "Бритвенный станок Concord KL 90.",
-    "product_type": "бритвенные станки",
-    "short_title": "Concord KL 90"
+    "clean_title": "Concord Butterfly Razor станок KL 90",
+    "description": "Т-образный станок Concord Butterfly Razor (Art# KL 90) с двусторонними лезвиями и системой butterfly (открывается поворотом ручки для замены лезвия).",
+    "galleryImages": [
+      "assets/products/concord/concord-razor-kl90-card-front.jpg",
+      "assets/products/concord/concord-razor-kl90-front.jpg",
+      "assets/products/concord/concord-razor-kl90-back.jpg"
+    ],
+    "image": "assets/products/concord/concord-razor-kl90-card-front.jpg",
+    "notes": [
+      "2026-07-06: модель подтверждена владельцем (кл90) при разборе архива telegram_inbox (telegram-8767964230-20260619-110606, файлы 04-06). ВНИМАНИЕ: остаток 0, товар пока не показывается на сайте (каталог фильтрует stock>0) — появится с фото при поступлении."
+    ],
+    "product_type": "бритвенный станок",
+    "short_title": "Concord KL 90",
+    "unit": "шт"
   },
   "prd_f1688401cd5f": {
     "brand": "Fa",
@@ -3219,6 +3319,24 @@
     "product_type": "солнцезащитный крем",
     "short_title": "YC Sunscreen SPF70 100 г",
     "unit": "100 г"
+  },
+  "prd_f652a5ca9bbf": {
+    "brand": "Concord",
+    "category_id": "other",
+    "clean_title": "Concord Clip It детские кусачки для ногтей 020-1",
+    "description": "Детские кусачки для ногтей Concord Clip It (Art# 020-1) с широким удобным основанием. Безопасны для нежных ноготков малыша.",
+    "galleryImages": [
+      "assets/products/concord/concord-kids-020-1-blue-card-front.jpg",
+      "assets/products/concord/concord-kids-020-1-blue-front.jpg",
+      "assets/products/concord/concord-kids-020-1-blue-back.jpg"
+    ],
+    "image": "assets/products/concord/concord-kids-020-1-blue-card-front.jpg",
+    "notes": [
+      "2026-07-06: подтверждено владельцем при разборе архива telegram_inbox (фото уже подготовлены в assets/products/concord/, telegram-8767964230-20260612-140339); опознан по Art#020-1 и штрихкоду 663234016058 (Concord Кусачки (020-1))."
+    ],
+    "product_type": "кусачки для ногтей",
+    "short_title": "Concord Clip It 020-1",
+    "unit": "шт"
   },
   "prd_f724e0973fa5": {
     "brand": "Dove",

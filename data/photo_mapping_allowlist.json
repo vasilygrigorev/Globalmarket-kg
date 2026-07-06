@@ -9,7 +9,8 @@
     "prd_dbf6cb3b3a0e": "Existing pre-guard case: old TRESemme Rich Moisture photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
     "prd_e82e0719de28": "Existing pre-guard case: old Sunsilk Black Shine photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
     "prd_a91e8f943ffc": "Existing pre-guard case: old Gillette Blue3 8 photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
-    "prd_13a9f6cc2aa7": "Existing pre-guard case: old Gillette Venus Comfortglide 2 photo override is currently hidden from the public catalog after a stock import. Review before remapping."
+    "prd_13a9f6cc2aa7": "Existing pre-guard case: old Gillette Venus Comfortglide 2 photo override is currently hidden from the public catalog after a stock import. Review before remapping.",
+    "prd_f12169c0af17": "2026-07-06: Concord Butterfly Razor KL 90 — model confirmed by owner, photos prepared, but stock is 0 so it is intentionally hidden from the public catalog (catalog filters stock>0). Will appear automatically with its photo when restocked."
   },
   "known_external_override_ids": {
     "prd_perfume_bybozo_sea_breeze_5ml": "Manual perfume product lives in data/manual_products.json, not the 1C products table.",

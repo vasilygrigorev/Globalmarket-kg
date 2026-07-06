@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T10:47:25.156948+00:00",
+  "generatedAt": "2026-07-06T11:56:10.471224+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -5131,22 +5131,26 @@
       "categoryId": "body",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-card-front.jpg",
+        "assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-front.jpg",
+        "assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_792036a19367",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 436,
-      "description": "Dove: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "Dove Body Spray (250) Coconut",
-      "productType": "уход за телом",
+      "description": "Спрей-антиперспирант Dove Advanced Care go fresh с ароматом кокоса и жасмина, технология тройного увлажнения, защита 72 часа. Объём 250 мл.",
+      "title": "Dove Advanced Care go fresh Coconut & Jasmine спрей-дезодорант, 250 мл",
+      "productType": "спрей-дезодорант",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove body spray (250) coconut уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
+      "searchText": "dove advanced care go fresh coconut & jasmine спрей-дезодорант, 250 мл уход за телом dove спрей-дезодорант спрей-антиперспирант dove advanced care go fresh с ароматом кокоса и жасмина, технология тройного увлажнения, защита 72 часа. объём 250 мл."
     },
     {
       "unit": "шт",
@@ -5243,22 +5247,26 @@
       "categoryId": "body",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-card-front.jpg",
+        "assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-front.jpg",
+        "assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_07e3d025b33c",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 436,
-      "description": "Dove: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "Dove Body Spray (250) Cucumber",
-      "productType": "уход за телом",
+      "description": "Спрей-антиперспирант Dove Advanced Care go fresh с ароматом огурца и зелёного чая, технология тройного увлажнения, защита 72 часа. Объём 250 мл.",
+      "title": "Dove Advanced Care go fresh Cucumber & Green Tea спрей-дезодорант, 250 мл",
+      "productType": "спрей-дезодорант",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove body spray (250) cucumber уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
+      "searchText": "dove advanced care go fresh cucumber & green tea спрей-дезодорант, 250 мл уход за телом dove спрей-дезодорант спрей-антиперспирант dove advanced care go fresh с ароматом огурца и зелёного чая, технология тройного увлажнения, защита 72 часа. объём 250 мл."
     },
     {
       "unit": "шт",
@@ -9886,22 +9894,26 @@
       "categoryId": "shaving",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/bic/bic-miss-soleil-colour-4pcs-card-front.jpg",
+        "assets/products/bic/bic-miss-soleil-colour-4pcs-front.jpg",
+        "assets/products/bic/bic-miss-soleil-colour-4pcs-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_684776405d52",
       "tones": [
         "#d8e1e7",
         "#667d8c"
       ],
-      "image": null,
+      "image": "assets/products/bic/bic-miss-soleil-colour-4pcs-card-front.jpg",
       "icon": "🪒",
       "registeredPriceKgs": 480,
-      "description": "BIC: товар для бритья и ухода. Формат: 4 PCS.",
-      "title": "BIC SOLEIL COLOR WOMEN 4PCS BOX (1X10)",
-      "productType": "бритье",
+      "description": "Одноразовые станки для женщин BIC Miss Soleil Colour Collection, 3 лезвия, витамин E, разноцветные ручки. Упаковка 4 штуки.",
+      "title": "BIC Miss Soleil Colour Collection одноразовые станки 4 шт",
+      "productType": "одноразовые станки",
       "brand": "BIC",
       "rating": 4.8,
-      "searchText": "bic soleil color women 4pcs box (1x10) бритье bic бритье bic: товар для бритья и ухода. формат: 4 pcs."
+      "searchText": "bic miss soleil colour collection одноразовые станки 4 шт бритье bic одноразовые станки одноразовые станки для женщин bic miss soleil colour collection, 3 лезвия, витамин e, разноцветные ручки. упаковка 4 штуки."
     },
     {
       "unit": "шт",
@@ -12005,22 +12017,26 @@
       "categoryId": "other",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/concord/concord-kids-020-1-blue-card-front.jpg",
+        "assets/products/concord/concord-kids-020-1-blue-front.jpg",
+        "assets/products/concord/concord-kids-020-1-blue-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_f652a5ca9bbf",
       "tones": [
         "#e4ded2",
         "#a99076"
       ],
-      "image": null,
+      "image": "assets/products/concord/concord-kids-020-1-blue-card-front.jpg",
       "icon": "🛍️",
       "registeredPriceKgs": 184,
-      "description": "Concord: товар для дома и личного ухода.",
-      "title": "Concord Кусачки (020-1)",
-      "productType": "разное",
+      "description": "Детские кусачки для ногтей Concord Clip It (Art# 020-1) с широким удобным основанием. Безопасны для нежных ноготков малыша.",
+      "title": "Concord Clip It детские кусачки для ногтей 020-1",
+      "productType": "кусачки для ногтей",
       "brand": "Concord",
       "rating": 4.8,
-      "searchText": "concord кусачки (020-1) разное concord разное concord: товар для дома и личного ухода."
+      "searchText": "concord clip it детские кусачки для ногтей 020-1 разное concord кусачки для ногтей детские кусачки для ногтей concord clip it (art# 020-1) с широким удобным основанием. безопасны для нежных ноготков малыша."
     },
     {
       "unit": "шт",
@@ -12080,22 +12096,26 @@
       "categoryId": "other",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/concord/concord-6401-3-card-front.jpg",
+        "assets/products/concord/concord-6401-3-front.jpg",
+        "assets/products/concord/concord-6401-3-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_d53b7b8bf384",
       "tones": [
         "#e4ded2",
         "#a99076"
       ],
-      "image": null,
+      "image": "assets/products/concord/concord-6401-3-card-front.jpg",
       "icon": "🛍️",
       "registeredPriceKgs": 184,
-      "description": "Concord: товар для дома и личного ухода.",
-      "title": "Concord Кусачки (6401-3)",
-      "productType": "разное",
+      "description": "Кусачки для ногтей Concord Clip It (Art# 6401-3) со стильной тонкой ручкой и точным лезвием.",
+      "title": "Concord Clip It кусачки для ногтей 6401-3",
+      "productType": "кусачки для ногтей",
       "brand": "Concord",
       "rating": 4.8,
-      "searchText": "concord кусачки (6401-3) разное concord разное concord: товар для дома и личного ухода."
+      "searchText": "concord clip it кусачки для ногтей 6401-3 разное concord кусачки для ногтей кусачки для ногтей concord clip it (art# 6401-3) со стильной тонкой ручкой и точным лезвием."
     },
     {
       "unit": "шт",
@@ -12130,22 +12150,26 @@
       "categoryId": "other",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/concord/concord-6425-3-card-front.jpg",
+        "assets/products/concord/concord-6425-3-front.jpg",
+        "assets/products/concord/concord-6425-3-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_d686b0354eac",
       "tones": [
         "#e4ded2",
         "#a99076"
       ],
-      "image": null,
+      "image": "assets/products/concord/concord-6425-3-card-front.jpg",
       "icon": "🛍️",
       "registeredPriceKgs": 164,
-      "description": "Concord: товар для дома и личного ухода.",
-      "title": "Concord Кусачки (6425-3)",
-      "productType": "разное",
+      "description": "Кусачки для ногтей Concord Clip It (Art# 6425-3) с тонкой ручкой и точным лезвием для аккуратного маникюра.",
+      "title": "Concord Clip It кусачки для ногтей 6425-3",
+      "productType": "кусачки для ногтей",
       "brand": "Concord",
       "rating": 4.8,
-      "searchText": "concord кусачки (6425-3) разное concord разное concord: товар для дома и личного ухода."
+      "searchText": "concord clip it кусачки для ногтей 6425-3 разное concord кусачки для ногтей кусачки для ногтей concord clip it (art# 6425-3) с тонкой ручкой и точным лезвием для аккуратного маникюра."
     },
     {
       "unit": "шт",

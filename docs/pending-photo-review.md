@@ -6,6 +6,47 @@ confidence. Nothing here has been added to `data/product_overrides.json`
 or moved into a published `assets/products/<brand>/` folder. Raw files are
 left in place under `assets/products/` — do not delete.
 
+## RESOLVED 2026-07-06 (late) — owner confirmations on archive-audit leftovers
+
+The owner reviewed the uncertain items surfaced by the full-archive audit and
+gave direct confirmations. Published as a result:
+
+- **Concord Butterfly Razor = KL 90** (`prd_f12169c0af17`) — owner confirmed
+  the unlabeled butterfly razor (`telegram-...-20260619-110606` files 04-06)
+  is model KL 90. Override + photos prepared. **Stock is 0**, so it stays
+  hidden from the storefront (catalog filters `stock>0`); added to
+  `data/photo_mapping_allowlist.json` so the guard knows this is intentional.
+  Will appear automatically with its photo when restocked.
+- **3 Concord nail clippers** (`prd_f652a5ca9bbf` 020-1, `prd_d53b7b8bf384`
+  6401-3, `prd_d686b0354eac` 6425-3) — owner said "take any" for the missing
+  plain-front shot. Photos already existed, prepared, in
+  `assets/products/concord/` (a prior session curated them but never linked
+  overrides); each now published with card-front/front/back. Category `other`.
+- **BIC Miss Soleil Colour Collection 4 шт** (`prd_684776405d52`) — owner
+  clarified the two shots I sent are front + back and that the designed card
+  (`124743` file 50) is the real card-front, so a full triple exists.
+  Published.
+- **Dove go fresh Cucumber & Green Tea 250 мл** (`prd_07e3d025b33c`) and
+  **Coconut & Jasmine 250 мл** (`prd_792036a19367`) — owner confirmed both
+  scent identities ("огурец, кокос — всё верно"); the generic 1C names
+  ("Cucumber"/"Coconut") are these variants. Published, category `body`.
+
+Perfume note: the 3 "no 1C match" 5 ml perfumes flagged by the audit
+(Chanel Chance, Le Labo Another 13, Bybozo Sea Breeze) were never actually
+blocked — perfumes live in a **separate** DB, `data/manual_products.json`,
+not the 1C `store.db`, and all three were already published there with
+images. The audit agent simply didn't know about that file. The "rule" the
+owner asked for (perfumes not tied to 1C) already exists as
+`manual_products.json` + the `known_external_override_ids` allowlist.
+
+Still genuinely pending after this pass (unchanged, need a photo or a
+larger-volume 1C match): Fairy Max Plus Fruity Green (no back), AXE Suave
+Zesty Citrus + 2 Gillette shave gels (2 of 3 photos), Downy Lavender & Musk
+1 L + Dash Color Frische Gel 1.1 L (back only), Dalli "Super Concentrate"
+31-wash (owner thinks it may be a larger 2.25/2.5 L pack — no matching 1C
+line found yet), and the several low-confidence Dove Advanced Care /
+Persil bundle variants.
+
 ## FULL ARCHIVE AUDIT 2026-07-06 (evening) — `assets/telegram_inbox/` (74 folders, 764 files, 2026-06-02 → 2026-07-06)
 
 The user reported that not all photos Petya sent had made it to the site.
