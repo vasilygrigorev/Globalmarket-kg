@@ -215,7 +215,13 @@ browser, no Supabase, no Cloudflare, no secrets.
   written up in `docs/pending-photo-review.md` — a complete-looking filename
   triple is not proof the three photos are the same product. `--strict`
   (wired into the preflight) fails only on a brand-new undocumented group;
-  never deletes or moves files.
+  never deletes or moves files. Its scan is intentionally non-recursive
+  (`assets/products/` root only, matching where real raw Petya uploads
+  land) — `tests/photo-cleanup-guard.test.mjs` relies on exactly that to
+  write its transient fixture inside a dedicated subfolder, so the two test
+  files can no longer race each other when run concurrently (2026-07-06;
+  the old root-level fixture reliably failed ~100% of the time under
+  concurrent `node --test`, confirmed before fixing it).
 - `scripts/check_override_schema.py` + `override-schema-guard.test.mjs` —
   catches the 2026-07-05 incident class where a `data/product_overrides.json`
   entry carries a photo (`image`/`galleryImages`) but uses legacy camelCase

@@ -30,16 +30,32 @@ import report_photo_coverage as m
 # public-catalog.json's "products" list, but its override still references a
 # raw-named Telegram photo (the only file shape the "unused leftover" scan
 # matches). find_unused_raw_leftovers must not flag it.
+#
+# The fixture lives in its own subfolder rather than directly under
+# assets/products/: find_unused_raw_leftovers scans recursively (rglob), so
+# this still exercises the real production behavior, but it keeps this
+# transient file invisible to scripts/report_raw_photo_groups.py's scan
+# (non-recursive iterdir, by design — real raw Petya uploads always land at
+# the assets/products/ root, never in a subfolder). Without this, a fixture
+# written directly at the root could momentarily collide with
+# tests/raw-photo-triage.test.mjs's own subprocess scan when node runs both
+# test files concurrently (see that history in git blame / commit messages).
+fixture_dir = m.PRODUCTS_DIR / "__test-fixture-photo-cleanup-guard__"
 fixture_name = "telegram-photo-cleanup-guard-test-front.jpg"
-m.override_referenced_paths = lambda: {f"assets/products/{fixture_name}"}
+m.override_referenced_paths = lambda: {f"assets/products/__test-fixture-photo-cleanup-guard__/{fixture_name}"}
 
-fixture_path = m.PRODUCTS_DIR / fixture_name
+fixture_path = fixture_dir / fixture_name
 try:
+    fixture_dir.mkdir(parents=True, exist_ok=True)
     fixture_path.write_bytes(b"x")
     unused = m.find_unused_raw_leftovers([])  # empty visible-products list = out of stock
     print(fixture_name in [p.rsplit("/", 1)[-1] for p in unused])
 finally:
     fixture_path.unlink(missing_ok=True)
+    try:
+        fixture_dir.rmdir()
+    except OSError:
+        pass
 `);
   assert.equal(output, "False");
 });

@@ -1,77 +1,77 @@
 # Claude Next Task
 
-> **STATUS: "Свежие товары" MOBILE STOREFRONT MVP DONE.**
+> **STATUS: RELEASE-CANDIDATE CLEANUP PASS DONE.**
 >
-> Verified live in a browser at mobile/tablet/desktop widths. Codex: replace
-> this file's body with the next task when there is one.
+> Flaky raw-photo test race fixed and proven (not just patched), package
+> safety re-audited, RC facts recorded. Codex: replace this file's body with
+> the next task when there is one.
 
-## Outcome (2026-07-05)
+## Outcome (2026-07-06)
 
-- **Mobile**: category tiles (`.quick-category-grid`) no longer take vertical
-  space — hidden via CSS in the existing `@media (max-width: 680px)` block.
-  The compact catalog directory (`Главная / ...`) stays visible. Right below
-  it, a new **"Свежие товары"** horizontal strip shows up to 16 products,
-  sourced live from the catalog (not localStorage), reusing the
-  `.recent-product` card family (image + brand pill + type/size + price + a
-  small "+" add button), with a bottom-right `Новинка`/`Хит` badge when
-  `productBadges()` returns one.
-- **Desktop/tablet**: unchanged — category tiles stay fully visible, "Свежие
-  товары" renders below them (same section, just not hidden by the mobile
-  media query). Verified visually at 375px, 768px, and 1280px.
-- **Selection logic**: new `freshProducts(limit = 16)` in `app.js` — starts
-  from `product.status === "active"`, sorts by real-photo first, then
-  `Новинка` badge, then rating, then title; caps at 2 per `categoryId` and 2
-  per `brand`, backfilling with the next-best products if the cap leaves
-  slots unfilled. No new catalog fields invented.
-- **Add-to-cart**: `data-fresh-add` click delegation on `#freshProductsRow`
-  mirrors the existing `data-recent-add` pattern exactly — `addToCart()` +
-  `showAddFeedback()`, never opens the cart drawer. Verified live: clicking
-  "+" on a fresh card bumped the header cart count without opening the
-  drawer.
-- **Bug found and fixed during browser verification**: the badge was
-  initially positioned top-right, which overlapped the existing top-left
-  brand pill on narrow (~82-104px) mobile cards, garbling both into
-  unreadable overlapping text. Moved the badge to bottom-right — confirmed
-  clean in a mobile screenshot afterward.
-- **Category access**: the header menu (`#categoryMenu`, `#toggleMenu`) is
-  completely unchanged and still lists all 11 category sections — verified
-  live by opening it on a 375px viewport.
+- **Task A (flaky test fixed):** root cause was
+  `tests/photo-cleanup-guard.test.mjs` writing its transient fixture
+  directly at `assets/products/` root, where a concurrently-running
+  `tests/raw-photo-triage.test.mjs` subprocess (`report_raw_photo_groups.py
+  --strict`, which really does scan the real filesystem) could catch it
+  mid-write and misreport it as a brand-new undocumented raw group.
+  `report_raw_photo_groups.py`'s scan is intentionally non-recursive
+  (`assets/products/` root only — matches where real Petya uploads land, not
+  brand subfolders), so moving the fixture into a dedicated subfolder
+  (`__test-fixture-photo-cleanup-guard__/`) makes it structurally invisible
+  to that scan while `find_unused_raw_leftovers()` (the function actually
+  under test, which scans recursively) still sees and correctly ignores it.
+  **Proved causation, not just correlation**: reverted the fix and ran the
+  two test files together 15x — failed 15/15. Reapplied the fix, ran 15x
+  more (then 10x again after other changes) — passed 25/25. No leftover
+  fixture files/dirs after any run. The real guardrail is unweakened: a
+  genuinely new undocumented `telegram-*` group still fails `--strict`
+  (test 2 in `raw-photo-triage.test.mjs`, unchanged), and documented Dove
+  leftovers still pass (test 1, unchanged).
+- **Task B (package safety):** ran the full `verify_backend_mvp.py`
+  (package build included, not `--skip-package`) — green, 795-file package.
+  Directly confirmed: zero `telegram-*` files in the built package; admin
+  runtime (`admin.js`, `admin.logic.js`, `config.js`, `index.html`) and
+  Cloudflare Pages Function (`orders.js`) present; no `.env`/`store.db`/
+  `*.test.mjs` leaked; secret scan of both tracked files and the package
+  clean. The package build itself regenerates the static site (product
+  pages, sitemap) as a side effect — reverted those regenerated files since
+  this task didn't ask for a catalog/site change (same lastmod-only /
+  incidental-crosslink diffs seen in prior sessions); nothing about the
+  audit result depends on committing them.
+- **Task C (RC note):** added a "Current release candidate (2026-07-06)"
+  section to the top of `docs/production-readiness.md` (left the existing
+  2026-07-03 checklist below it as historical reference rather than
+  rewriting it) and a short note in `docs/test-coverage.md` explaining the
+  non-recursive-scan/subfolder-fixture relationship so a future editor
+  doesn't reintroduce the race.
 
-Changed files: `index.html` (new `#freshProducts`/`#freshProductsRow`
-section), `app.js` (`freshProducts()`, `renderFreshProducts()`, DOM refs,
-click delegation, one call in `loadCatalog()`), `styles.css` (`.fresh-products`
-family + mobile `.quick-category-grid { display: none; }`),
-`tests/fresh-products.test.mjs` (new, 6 tests), `tests/storefront-layout.test.mjs`
-(+1 order assertion), `scripts/verify_backend_mvp.py` (wired the new test),
-`docs/test-coverage.md`.
-
-Verification: `node --check app.js` OK; 26 relevant node tests OK;
-`verify_backend_mvp.py --skip-package` OK (hit one pre-existing, unrelated
-test-isolation flake between `photo-cleanup-guard.test.mjs` and
-`raw-photo-triage.test.mjs` sharing `assets/products/` during a fixture
-write — passed clean on retry twice, not caused by this task);
+Verification: `node --test tests/photo-cleanup-guard.test.mjs
+tests/raw-photo-triage.test.mjs` OK (and stress-tested well beyond a single
+run, see above); `verify_backend_mvp.py` (full, with package) OK;
 `check_no_secrets.py` clean; `git diff --check` clean.
+
+## Context carried forward
+
+- 3 known incomplete-gallery exceptions remain documented, unchanged:
+  `prd_432b62d4b317`, `prd_1f1557a2acbb`, `prd_296bd01a7c1f`.
+- 6 Dove raw leftovers remain in `docs/pending-photo-review.md`, untouched:
+  `assets/products/telegram-989425384-20260703-160531-{01,02}-*`.
+- Photo coverage: 142/529 = 26.8% (unchanged by this pass — no photo/catalog
+  data was touched).
 
 ## Next candidate tasks (pick one, or wait for a new user goal)
 
-1. **Optional Claude-safe follow-up**: the pre-existing flaky race between
-   `tests/photo-cleanup-guard.test.mjs` and `tests/raw-photo-triage.test.mjs`
-   (both briefly touch files directly under `assets/products/`) could be
-   hardened by giving the cleanup-guard fixture a name that can never collide
-   with a real/raw file group, or by having the triage scan ignore
-   obviously-synthetic fixture names. Low priority — it self-resolves on
-   retry and has never affected real data.
-2. **Waiting on Petya/user**: the 2 remaining Dove variants
+1. **Waiting on Petya/user**: the 2 remaining Dove variants
    (`docs/pending-photo-review.md`) still need one more card-front photo
    each, or an explicit 2-photo exception approval.
-3. **Business decision, not Claude-safe alone**: 6 photographed products
+2. **Business decision, not Claude-safe alone**: 6 photographed products
    (TRESemmé x2, Sunsilk x4) stay hidden because 1C reports 0 stock, despite
-   a past session note saying the user wanted them shown anyway — needs a
-   stock re-check or a deliberate "show despite 0 stock" feature decision.
-4. **Codex/user-only**: GitHub push/merge decision for
+   a past session note saying the user wanted them shown anyway.
+3. **Codex/user-only**: this RC is otherwise ready for a push/deploy
+   decision whenever Codex/the user wants to make it — GitHub push/merge for
    `collab/preview-baseline`, and the standing Supabase
-   `SUPABASE_SERVICE_ROLE_KEY` production-secret item — unrelated to this
-   task.
+   `SUPABASE_SERVICE_ROLE_KEY` production-secret item, remain explicitly
+   outside Claude's authority.
 
 Do not restart an open-ended improvement cycle without a specific new goal
 from the user.

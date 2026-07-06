@@ -1,6 +1,27 @@
 # Production readiness — Global Market KG
 
 Status: 2026-07-03, branch `collab/preview-baseline`, commit `d1df9ff`.
+(Sections 1-5 below are that 2026-07-03 snapshot — kept for the historical
+checklist shape; see "Current release candidate" for live numbers.)
+
+## Current release candidate (2026-07-06)
+
+- Local RC includes the mobile "Свежие товары" storefront strip
+  (`9a09751 Add fresh products strip to mobile storefront`) plus this pass's
+  test-flake hardening and package safety audit.
+- Backend/admin/storefront preflight: green
+  (`python3 scripts/verify_backend_mvp.py` — full run including the static
+  package build/verify, not just `--skip-package`).
+- Static package builds and verifies clean: 795 files, admin runtime present,
+  no raw `assets/products/telegram-*` files, no secrets in tracked files or
+  in the built package.
+- Photo coverage: **142/529 = 26.8%** (`python3 scripts/report_photo_coverage.py`).
+- Remaining blockers before production/push are user-gated, unchanged from
+  the checklist below:
+  - decision on the 6 pending raw Dove photos (`docs/pending-photo-review.md`);
+  - Supabase Production secret (`SUPABASE_SERVICE_ROLE_KEY`) + a live orders
+    smoke test, if backend order-saving is part of this launch;
+  - the explicit push/deploy decision itself.
 
 This is the short decision checklist. For exact commands, use
 [`backend-go-live-checklist.md`](backend-go-live-checklist.md) (privileged
