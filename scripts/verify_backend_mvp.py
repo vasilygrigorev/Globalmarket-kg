@@ -90,6 +90,7 @@ def main():
                 "tests/landing-counts.test.mjs",
                 "tests/catalog-fields.test.mjs",
                 "tests/import-stock-identity.test.mjs",
+                "tests/import-stock-freshness.test.mjs",
                 "tests/search-synonyms-terms.test.mjs",
                 "tests/photo-coverage.test.mjs",
                 "tests/photo-cleanup-guard.test.mjs",

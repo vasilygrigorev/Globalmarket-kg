@@ -17,6 +17,7 @@ PUBLIC_SETTINGS = {
 PUBLIC_PRODUCT_FIELDS = [
     "unit",
     "badge",
+    "restockedAt",
     "retailPriceKgs",
     "category",
     "categoryId",

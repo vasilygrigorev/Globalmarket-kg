@@ -13,6 +13,8 @@ from xml.sax.saxutils import escape
 
 import xlrd
 
+from freshness import restock_date
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = Path("/Users/macmini/Downloads/Остатки2.xls")
@@ -625,7 +627,8 @@ def connect_db():
             stock_date text,
             last_imported_at text,
             source_file text,
-            source_hash text
+            source_hash text,
+            restocked_at text
         );
         create table if not exists products (
             product_id text primary key,
@@ -695,6 +698,8 @@ def connect_db():
     existing_source_columns = {row[1] for row in conn.execute("pragma table_info(source_products)").fetchall()}
     if "source_code" not in existing_source_columns:
         conn.execute("alter table source_products add column source_code text")
+    if "restocked_at" not in existing_source_columns:
+        conn.execute("alter table source_products add column restocked_at text")
     return conn
 
 
@@ -767,14 +772,24 @@ def import_to_db(conn, data, settings, source_path):
     for item in data["products"]:
         item["source_code"] = normalize_source_code(item.get("source_code"))
         item["source_id"] = resolve_import_source_id(conn, item)
+        prev = conn.execute(
+            "select stock_quantity, restocked_at from source_products where source_id = ?",
+            (item["source_id"],),
+        ).fetchone()
+        item["restocked_at"] = restock_date(
+            prev["stock_quantity"] if prev else None,
+            item["stock_quantity"],
+            prev["restocked_at"] if prev else None,
+            data["stock_date"],
+        )
         item_hash = hashlib.sha1(json.dumps(item, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
         conn.execute(
             """
             insert into source_products(
                 source_id, source_code, raw_name, raw_group, unit, base_price_usd, stock_quantity, stock_amount_usd,
-                warehouse, stock_date, last_imported_at, source_file, source_hash
+                warehouse, stock_date, last_imported_at, source_file, source_hash, restocked_at
             )
-            values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             on conflict(source_id) do update set
                 source_code=excluded.source_code,
                 raw_name=excluded.raw_name,
@@ -787,7 +802,8 @@ def import_to_db(conn, data, settings, source_path):
                 stock_date=excluded.stock_date,
                 last_imported_at=excluded.last_imported_at,
                 source_file=excluded.source_file,
-                source_hash=excluded.source_hash
+                source_hash=excluded.source_hash,
+                restocked_at=excluded.restocked_at
             """,
             (
                 item["source_id"],
@@ -803,6 +819,7 @@ def import_to_db(conn, data, settings, source_path):
                 now,
                 str(source_path),
                 item_hash,
+                item["restocked_at"],
             ),
         )
         product_id = f"prd_{item['source_id'].split('_', 1)[1]}"
@@ -1011,7 +1028,7 @@ def generate_outputs(conn, settings):
           p.product_id, p.status, p.visibility, p.clean_title, p.short_title, p.description,
           p.brand, p.product_type, p.unit as product_unit, p.placeholder_key, p.image_id, p.search_text,
           sp.source_id, sp.source_code, sp.raw_name, sp.raw_group, sp.unit, sp.base_price_usd,
-          sp.stock_quantity, sp.stock_amount_usd, sp.warehouse, sp.stock_date,
+          sp.stock_quantity, sp.stock_amount_usd, sp.warehouse, sp.stock_date, sp.restocked_at,
           c.category_id, c.title as category_title
         from products p
         join source_products sp on sp.source_id = p.source_id
@@ -1045,6 +1062,7 @@ def generate_outputs(conn, settings):
             "unit": row["unit"],
             "stockQuantity": row["stock_quantity"],
             "stockAmountUsd": row["stock_amount_usd"],
+            "restockedAt": row["restocked_at"],
             "status": row["status"],
             "basePriceUsd": row["base_price_usd"],
             "wholesalePriceKgs": wholesale,
@@ -1079,6 +1097,7 @@ def generate_outputs(conn, settings):
                 "primary_category": row["category_title"] or category["title"],
                 "unit": row["unit"],
                 "stock_quantity": row["stock_quantity"],
+                "restocked_at": row["restocked_at"],
                 "base_price_usd": row["base_price_usd"],
                 "wholesale_kgs": wholesale,
                 "retail_raw_kgs": retail_raw,
@@ -1118,6 +1137,7 @@ def generate_outputs(conn, settings):
             "unit": manual.get("unit", "шт"),
             "stockQuantity": manual.get("stockQuantity", 1),
             "stockAmountUsd": manual.get("stockAmountUsd"),
+            "restockedAt": manual.get("restockedAt"),
             "status": manual.get("status", "active"),
             "basePriceUsd": manual.get("basePriceUsd"),
             "wholesalePriceKgs": manual.get("wholesalePriceKgs"),
