@@ -1,29 +1,36 @@
 // Cloudflare Pages Function — POST /api/customer-orders
 //
-// "Мои заказы" — lets a customer see their own order history without any
-// account/login. Proof of ownership is phone number + the short lookup_code
-// generated client-side at checkout (see app.js generateOrderLookupCode) and
-// delivered for free inside the WhatsApp message the customer already sends
-// to the manager, plus in the manager's WhatsApp confirmation reply.
+// "Мои заказы" — lets a customer see their own order history two ways:
+//
+// 1. No login: phone number + the short lookup_code generated client-side at
+//    checkout (see app.js generateOrderLookupCode), delivered for free inside
+//    the WhatsApp message the customer already sends to the manager, plus in
+//    the manager's WhatsApp confirmation reply. Scoped to orders matching
+//    BOTH the phone and the code; a wrong guess on either gets the same
+//    generic "not_found" so this endpoint never confirms whether a phone
+//    number placed any orders at all.
+// 2. Logged in: a signed session cookie (functions/api/session.js), minted by
+//    functions/api/auth/verify-otp.js after a real SMS OTP check. A valid
+//    session already proves phone ownership more strongly than the
+//    lookup_code, so no code is required and an empty order list is a
+//    legitimate answer (not "not_found", which stays reserved for guesses).
 //
 // Access model: reads Supabase via the SERVICE ROLE key (server-side only),
 // exactly like functions/api/orders.js writes. This endpoint does NOT add any
 // anon RLS policy — public.orders/order_items stay unreadable by the anon key
 // (see supabase/migrations/0001_init_orders_customers.sql,
-// 0002_customer_order_lookup.sql). Every response is scoped to rows matching
-// BOTH the phone and the code; a wrong guess on either gets the same generic
-// "not_found" so this endpoint never confirms whether a phone number placed
-// any orders at all.
+// 0002_customer_order_lookup.sql).
 //
 // Known limitation (documented, not solved here): Cloudflare Pages Functions
-// have no built-in rate limiting without Workers KV/Durable Objects, so this
-// is not brute-force-hardened beyond requiring phone+code together. Fine for
-// a first version; revisit if abuse is observed.
+// have no built-in rate limiting without Workers KV/Durable Objects, so the
+// no-login path is not brute-force-hardened beyond requiring phone+code
+// together. Fine for a first version; revisit if abuse is observed.
 //
 // Pure helpers are exported for unit testing — see customer-orders.test.mjs.
 
 import { str, digitsOnly, normalizeLookupCode } from "./orders.js";
 import { statusLabel } from "../../admin/admin.logic.js";
+import { parseSessionCookie, verifySession } from "./session.js";
 
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
@@ -113,6 +120,13 @@ async function supabaseSelect(env, table, query) {
   return res.json();
 }
 
+async function resolveSession(request, env) {
+  if (!env.SESSION_SIGNING_SECRET) return null;
+  const cookieToken = parseSessionCookie(request.headers.get("cookie"));
+  if (!cookieToken) return null;
+  return verifySession(cookieToken, env.SESSION_SIGNING_SECRET);
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
 
@@ -120,33 +134,50 @@ export async function onRequestPost(context) {
     return json({ ok: false, error: "backend_not_configured" }, 503);
   }
 
-  let payload;
-  try {
-    payload = await request.json();
-  } catch {
-    return json({ ok: false, error: "invalid_json" }, 400);
-  }
+  const session = await resolveSession(request, env);
 
-  const normalized = normalizeLookupRequest(payload);
-  if (normalized.error) {
-    return json({ ok: false, error: normalized.error }, 400);
+  let phoneDigits;
+  let code = null;
+  if (session) {
+    phoneDigits = session.phone;
+  } else {
+    let payload;
+    try {
+      payload = await request.json();
+    } catch {
+      return json({ ok: false, error: "invalid_json" }, 400);
+    }
+    const normalized = normalizeLookupRequest(payload);
+    if (normalized.error) {
+      return json({ ok: false, error: normalized.error }, 400);
+    }
+    phoneDigits = normalized.phoneDigits;
+    code = normalized.code;
   }
 
   try {
     const candidates = await supabaseSelect(
       env,
       "orders",
-      `select=id,created_at,status,total_kgs,customer_name,city,region,address,customer_comment,promo_code,lookup_code&customer_phone_digits=eq.${normalized.phoneDigits}&order=created_at.desc&limit=200`,
+      `select=id,created_at,status,total_kgs,customer_name,city,region,address,customer_comment,promo_code,lookup_code&customer_phone_digits=eq.${phoneDigits}&order=created_at.desc&limit=200`,
     );
 
-    const verified = Array.isArray(candidates) && candidates.some((order) => matchesLookupCode(order, normalized.code));
-    if (!verified) {
-      // Same generic response whether the phone has zero orders or the code
-      // was simply wrong — never confirm which.
-      return json({ ok: false, error: "not_found" }, 404);
+    let matchedOrders;
+    if (session) {
+      // A verified SMS-OTP session already proves phone ownership — no code
+      // needed, and zero orders is a legitimate answer for a logged-in user.
+      matchedOrders = Array.isArray(candidates) ? candidates : [];
+    } else {
+      const verified = Array.isArray(candidates) && candidates.some((order) => matchesLookupCode(order, code));
+      if (!verified) {
+        // Same generic response whether the phone has zero orders or the code
+        // was simply wrong — never confirm which.
+        return json({ ok: false, error: "not_found" }, 404);
+      }
+      matchedOrders = candidates;
     }
 
-    const orderIds = candidates.map((order) => order.id);
+    const orderIds = matchedOrders.map((order) => order.id);
     const items = orderIds.length
       ? await supabaseSelect(
           env,
@@ -158,7 +189,7 @@ export async function onRequestPost(context) {
 
     return json({
       ok: true,
-      orders: candidates.map((order) => sanitizeOrderForCustomer(order, itemsByOrder.get(order.id))),
+      orders: matchedOrders.map((order) => sanitizeOrderForCustomer(order, itemsByOrder.get(order.id))),
     });
   } catch (error) {
     // Not 502/504: Cloudflare's proxied custom domain intercepts gateway-class

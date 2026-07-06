@@ -278,21 +278,49 @@
       <section class="checkout-section my-orders-section" id="myOrders">
         <div>
           <p class="eyebrow">Мои заказы</p>
-          <h2>Проверить статус заказа</h2>
-          <p>Введите номер телефона, который указывали при заказе, и код заказа — он приходит в сообщении WhatsApp, которое вы отправляете менеджеру, и в подтверждении от менеджера.</p>
+          <h2>Мои заказы</h2>
+          <p>Войдите по номеру телефона и коду из SMS — увидите сразу всю историю заказов. Или, без входа, проверьте один заказ по коду из WhatsApp-сообщения.</p>
         </div>
-        <form class="customer-form my-orders-form" id="myOrdersForm">
+
+        <div class="my-orders-account" id="myOrdersAccount" hidden>
+          <p>Вы вошли в «Мои заказы».</p>
+          <button class="secondary-link" type="button" id="myOrdersLogoutButton">Выйти</button>
+        </div>
+
+        <form class="customer-form my-orders-login-form" id="myOrdersLoginForm">
           <label>
             Телефон / WhatsApp
-            <input name="lookupPhone" type="tel" autocomplete="tel" required />
+            <input name="loginPhone" type="tel" autocomplete="tel" required />
           </label>
-          <label>
-            Код заказа
-            <input name="lookupCode" autocomplete="off" required placeholder="Например, GM7K9X" />
-          </label>
-          <button class="secondary-link" type="submit">Показать мои заказы</button>
-          <p class="form-status" id="myOrdersStatus" role="status"></p>
+          <button class="primary-button" type="submit">Получить код по SMS</button>
+          <p class="form-status" id="myOrdersLoginStatus" role="status"></p>
         </form>
+
+        <form class="customer-form my-orders-otp-form" id="myOrdersOtpForm" hidden>
+          <label>
+            Код из SMS
+            <input name="otpCode" autocomplete="one-time-code" inputmode="numeric" required />
+          </label>
+          <button class="primary-button" type="submit">Войти</button>
+          <p class="form-status" id="myOrdersOtpStatus" role="status"></p>
+        </form>
+
+        <details class="my-orders-fallback" id="myOrdersFallback">
+          <summary>Проверить заказ без входа (по коду)</summary>
+          <form class="customer-form my-orders-form" id="myOrdersForm">
+            <label>
+              Телефон / WhatsApp
+              <input name="lookupPhone" type="tel" autocomplete="tel" required />
+            </label>
+            <label>
+              Код заказа
+              <input name="lookupCode" autocomplete="off" required placeholder="Например, GM7K9X" />
+            </label>
+            <button class="secondary-link" type="submit">Показать заказ</button>
+            <p class="form-status" id="myOrdersStatus" role="status"></p>
+          </form>
+        </details>
+
         <div class="my-orders-results" id="myOrdersResults" hidden></div>
       </section>
     </main>

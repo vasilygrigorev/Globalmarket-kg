@@ -1699,6 +1699,10 @@ textarea {
   align-content: start;
 }
 
+.my-orders-results[hidden] {
+  display: none;
+}
+
 .my-order-card {
   display: grid;
   gap: 8px;
@@ -1733,6 +1737,34 @@ textarea {
 
 .my-order-card-total {
   font-weight: 800;
+}
+
+.my-orders-account {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.my-orders-account[hidden],
+.my-orders-login-form[hidden],
+.my-orders-otp-form[hidden] {
+  display: none;
+}
+
+.my-orders-fallback {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.my-orders-fallback summary {
+  cursor: pointer;
+  color: var(--muted);
 }
 
 .cart-drawer {

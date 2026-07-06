@@ -60,8 +60,10 @@ own phone/phone-digits echoed back. Includes `code`, `status`/`status_label`
 duplicated Russian status strings), totals, address, and item snapshots.
 
 **UI:** a "Мои заказы" section on the homepage (`#myOrders` in `index.html`,
-linked from the side menu and footer), a phone+code form, results rendered by
-`renderMyOrders()`/`myOrderCardHtml()` in `app.js`.
+linked from the side menu and footer). Two ways in: the SMS-OTP login below
+(shown by default), or a collapsed `<details>` fallback with the phone+code
+form for anyone who doesn't want to log in. Results either way render through
+the same `renderMyOrders()`/`myOrderCardHtml()` in `app.js`.
 
 **Verified locally the same way as `/api/orders`:** `node --check`, full pure
 logic suite green, `npx wrangler pages functions build` compiles the bundle
@@ -92,6 +94,74 @@ body untouched. Fix: both handlers now return `500` instead of `502` for
 these recoverable, application-level errors. Lesson: never use `502`/`504` as
 a deliberate application status code behind a Cloudflare-proxied custom
 domain.
+
+## SMS-OTP login ("Мои заказы", persistent session)
+
+A second, optional way into "Мои заказы": log in once with phone + a code
+sent by SMS, then see the full order history on later visits without
+re-entering a per-order `lookup_code`. The phone+code lookup above still
+works standalone — this doesn't replace it, it's an upgrade path for anyone
+who wants to stay logged in.
+
+- Code: `functions/api/auth/request-otp.js`, `functions/api/auth/verify-otp.js`,
+  `functions/api/auth/logout.js`, `functions/api/session.js` (shared, stateless
+  session cookie helpers), plus the session-aware branch added to
+  `functions/api/customer-orders.js`
+- Tests: `functions/api/session.test.mjs`,
+  `functions/api/auth/request-otp{,.integration}.test.mjs`,
+  `functions/api/auth/verify-otp{,.integration}.test.mjs`,
+  `functions/api/auth/logout.test.mjs`,
+  `functions/api/customer-orders.integration.test.mjs` — all pure logic or
+  mocked-fetch integration, no network
+- Routes: `POST /api/auth/request-otp` `{ phone }` → `{ token }`;
+  `POST /api/auth/verify-otp` `{ token, code }` → sets the session cookie;
+  `POST /api/auth/logout` → clears it
+- Depends on `supabase/migrations/0003_otp_login.sql` (adds the
+  `public.otp_requests` table)
+- SMS delivery: [SMS PRO (nikita.kg)](https://smspro.nikita.kg/kg/otp-sms.html)
+  OTP API — they generate the code, send it, and verify it; we never see or
+  store the code ourselves, only their opaque per-request `token`.
+
+**Why `otp_requests` exists:** SMS PRO's `/otp/verify` only checks
+token+code — it never tells us which phone a token belongs to. Without
+recording that binding ourselves in `otp_requests` at `/otp/send` time, a
+client could request a code for their own phone, receive the real code, then
+call `verify-otp` claiming a *different* phone and get a session for someone
+else's orders. `verify-otp` always resolves the phone from this table, never
+from client input; the row is deleted after a successful verify (single-use)
+and also rejected locally if older than 15 minutes
+(`OTP_REQUEST_MAX_AGE_SECONDS`), independent of whatever TTL is configured in
+the SMS PRO dashboard.
+
+**Session:** stateless — no session table. `functions/api/session.js` signs
+`{ phone, exp }` with HMAC-SHA256 (`SESSION_SIGNING_SECRET`) and sets it as an
+HttpOnly, Secure, SameSite=Lax cookie (`gmk_session`, 30 days). Every request
+re-verifies the signature + expiry; there's nothing to revoke server-side
+beyond letting it expire or rotating the secret (which invalidates every
+session at once — acceptable for a first version).
+
+**How `customer-orders.js` uses it:** at the top of `onRequestPost`, a valid
+session cookie takes priority over the phone+code body — the phone comes
+from the session, no code is checked (a verified SMS OTP is already stronger
+proof than the lookup code), and an empty order list is answered as
+`{ ok: true, orders: [] }`, not `not_found` (which stays reserved for
+unauthenticated guesses, to avoid confirming whether a phone number exists).
+
+**Known limitation (documented, not solved here):** no rate limiting beyond a
+plausible phone number, same Workers-KV/Durable-Objects gap as the rest of
+this backend. Each `request-otp` call costs real money at the SMS PRO
+account, so abuse is a billing problem before it's a security one; revisit if
+abuse is observed.
+
+**Env bindings needed in Cloudflare Pages (never in git):**
+`SMSPRO_API_KEY` (SMS PRO personal cabinet, "OTP-сервис" tab) and
+`SESSION_SIGNING_SECRET` (any random string, generated once, known only
+server-side).
+
+**Privileged steps remaining (Codex/user):** apply
+`supabase/migrations/0003_otp_login.sql`, and set `SMSPRO_API_KEY` +
+`SESSION_SIGNING_SECRET` in Cloudflare Pages. Until both are done,
+`request-otp`/`verify-otp` answer `503 backend_not_configured`.
 
 To bring this online, follow the step-by-step
 [`backend-go-live-checklist.md`](backend-go-live-checklist.md) (Supabase →

@@ -53,6 +53,13 @@ const formStatus = document.querySelector("#formStatus");
 const myOrdersForm = document.querySelector("#myOrdersForm");
 const myOrdersStatus = document.querySelector("#myOrdersStatus");
 const myOrdersResults = document.querySelector("#myOrdersResults");
+const myOrdersAccount = document.querySelector("#myOrdersAccount");
+const myOrdersLogoutButton = document.querySelector("#myOrdersLogoutButton");
+const myOrdersLoginForm = document.querySelector("#myOrdersLoginForm");
+const myOrdersLoginStatus = document.querySelector("#myOrdersLoginStatus");
+const myOrdersOtpForm = document.querySelector("#myOrdersOtpForm");
+const myOrdersOtpStatus = document.querySelector("#myOrdersOtpStatus");
+const myOrdersFallback = document.querySelector("#myOrdersFallback");
 const openCartButton = document.querySelector("#openCart");
 const floatingCartButton = document.querySelector("#floatingCart");
 const floatingCartCount = document.querySelector("#floatingCartCount");
@@ -2429,6 +2436,168 @@ myOrdersForm?.addEventListener("submit", async (event) => {
     if (submitButton) submitButton.disabled = false;
   }
 });
+
+// "Мои заказы" — SMS-OTP login (functions/api/auth/request-otp.js,
+// functions/api/auth/verify-otp.js). The session itself lives in an
+// HttpOnly cookie the browser can't read, so "am I logged in" is answered by
+// asking /api/customer-orders with an empty body: a valid session cookie
+// makes it return the full order history; no session/expired falls back to
+// its normal phone+code validation and answers 400.
+function otpRequestErrorMessage(error) {
+  switch (error) {
+    case "invalid_phone":
+      return "Проверьте номер телефона.";
+    case "sms_provider_unavailable":
+      return "Сервис SMS временно недоступен. Попробуйте позже или напишите менеджеру в WhatsApp.";
+    case "backend_not_configured":
+      return "Вход по SMS временно недоступен.";
+    default:
+      return "Не получилось отправить код. Попробуйте ещё раз.";
+  }
+}
+
+function otpVerifyErrorMessage(error) {
+  switch (error) {
+    case "invalid_code":
+      return "Неверный код. Проверьте SMS и попробуйте снова.";
+    case "code_expired":
+      return "Код устарел. Запросите новый.";
+    case "invalid_token":
+      return "Сессия входа устарела. Запросите код заново.";
+    default:
+      return "Не получилось войти. Попробуйте ещё раз.";
+  }
+}
+
+let pendingOtpToken = null;
+
+function showLoggedOutView() {
+  if (myOrdersAccount) myOrdersAccount.hidden = true;
+  if (myOrdersLoginForm) myOrdersLoginForm.hidden = false;
+  if (myOrdersOtpForm) myOrdersOtpForm.hidden = true;
+  if (myOrdersFallback) myOrdersFallback.hidden = false;
+  if (myOrdersLoginStatus) myOrdersLoginStatus.textContent = "";
+  if (myOrdersOtpStatus) myOrdersOtpStatus.textContent = "";
+}
+
+function showLoggedInView() {
+  if (myOrdersAccount) myOrdersAccount.hidden = false;
+  if (myOrdersLoginForm) myOrdersLoginForm.hidden = true;
+  if (myOrdersOtpForm) myOrdersOtpForm.hidden = true;
+  if (myOrdersFallback) myOrdersFallback.hidden = true;
+  if (myOrdersLoginStatus) myOrdersLoginStatus.textContent = "";
+  if (myOrdersOtpStatus) myOrdersOtpStatus.textContent = "";
+}
+
+async function fetchMyOrdersSession() {
+  try {
+    const res = await fetch("/api/customer-orders", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({}),
+    });
+    const data = await res.json().catch(() => null);
+    return data && data.ok ? data : null;
+  } catch {
+    return null;
+  }
+}
+
+async function checkMyOrdersSession() {
+  const data = await fetchMyOrdersSession();
+  if (data) {
+    showLoggedInView();
+    renderMyOrders(data.orders);
+  } else {
+    showLoggedOutView();
+  }
+}
+
+myOrdersLoginForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (!myOrdersLoginStatus) return;
+  const formData = new FormData(event.currentTarget);
+  const phone = formData.get("loginPhone");
+  const submitButton = event.currentTarget.querySelector("button[type='submit']");
+  if (submitButton) submitButton.disabled = true;
+  myOrdersLoginStatus.textContent = "Отправляем код…";
+  try {
+    const res = await fetch("/api/auth/request-otp", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ phone }),
+    });
+    const data = await res.json().catch(() => null);
+    if (data && data.ok && data.token) {
+      pendingOtpToken = data.token;
+      myOrdersLoginStatus.textContent = "Код отправлен по SMS.";
+      if (myOrdersLoginForm) myOrdersLoginForm.hidden = true;
+      if (myOrdersOtpForm) {
+        myOrdersOtpForm.hidden = false;
+        myOrdersOtpForm.querySelector("input[name='otpCode']")?.focus();
+      }
+    } else {
+      myOrdersLoginStatus.textContent = otpRequestErrorMessage(data && data.error);
+    }
+  } catch {
+    myOrdersLoginStatus.textContent = otpRequestErrorMessage(null);
+  } finally {
+    if (submitButton) submitButton.disabled = false;
+  }
+});
+
+myOrdersOtpForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (!myOrdersOtpStatus) return;
+  if (!pendingOtpToken) {
+    myOrdersOtpStatus.textContent = otpVerifyErrorMessage("invalid_token");
+    return;
+  }
+  const formData = new FormData(event.currentTarget);
+  const code = formData.get("otpCode");
+  const submitButton = event.currentTarget.querySelector("button[type='submit']");
+  if (submitButton) submitButton.disabled = true;
+  myOrdersOtpStatus.textContent = "Проверяем код…";
+  try {
+    const res = await fetch("/api/auth/verify-otp", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ token: pendingOtpToken, code }),
+    });
+    const data = await res.json().catch(() => null);
+    if (data && data.ok) {
+      pendingOtpToken = null;
+      myOrdersOtpStatus.textContent = "";
+      await checkMyOrdersSession();
+    } else {
+      myOrdersOtpStatus.textContent = otpVerifyErrorMessage(data && data.error);
+    }
+  } catch {
+    myOrdersOtpStatus.textContent = otpVerifyErrorMessage(null);
+  } finally {
+    if (submitButton) submitButton.disabled = false;
+  }
+});
+
+myOrdersLogoutButton?.addEventListener("click", async () => {
+  myOrdersLogoutButton.disabled = true;
+  try {
+    await fetch("/api/auth/logout", { method: "POST" });
+  } catch {
+    // Best-effort — the cookie is short-lived and the UI resets either way.
+  }
+  renderMyOrders(null);
+  showLoggedOutView();
+  myOrdersLoginForm?.reset();
+  myOrdersOtpForm?.reset();
+  myOrdersLogoutButton.disabled = false;
+});
+
+// Only the homepage ships the "Мои заказы" section — skip the extra request
+// on every product/category page that merely shares this script.
+if (myOrdersAccount) {
+  checkMyOrdersSession();
+}
 
 async function initStorefront() {
   await loadSiteConfig();

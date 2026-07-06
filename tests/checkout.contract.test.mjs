@@ -129,3 +129,35 @@ test("buildOrderPayload sends lookup_code, and functions/api/orders.js reads it"
   assert.match(payloadFn, /lookup_code:\s*lookupCode/);
   assert.match(ordersFn, /normalizeLookupCode\(payload\.lookup_code\)/);
 });
+
+// "Мои заказы" SMS-OTP login (functions/api/auth/request-otp.js,
+// functions/api/auth/verify-otp.js) — a persistent, cookie-based alternative
+// to the one-off phone+code lookup above.
+test("login/OTP form fields exist and only the OTP form's fields are read via formData.get()", () => {
+  assert.match(html, /name="loginPhone"/);
+  assert.match(html, /name="otpCode"/);
+  assert.match(appJs, /formData\.get\("loginPhone"\)/);
+  assert.match(appJs, /formData\.get\("otpCode"\)/);
+});
+
+test("login form calls request-otp, OTP form calls verify-otp, logout calls logout", () => {
+  assert.match(appJs, /fetch\("\/api\/auth\/request-otp"/);
+  assert.match(appJs, /fetch\("\/api\/auth\/verify-otp"/);
+  assert.match(appJs, /fetch\("\/api\/auth\/logout"/);
+});
+
+test("the OTP token from request-otp is threaded into verify-otp, never re-derived", () => {
+  const loginHandler = appJs.match(/myOrdersLoginForm\?\.addEventListener\("submit", async \(event\) => \{[\s\S]*?\n\}\);/)[0];
+  assert.match(loginHandler, /pendingOtpToken = data\.token;/);
+  const otpHandler = appJs.match(/myOrdersOtpForm\?\.addEventListener\("submit", async \(event\) => \{[\s\S]*?\n\}\);/)[0];
+  assert.match(otpHandler, /token:\s*pendingOtpToken/);
+});
+
+test("session check asks customer-orders with an empty body, not phone/code", () => {
+  const sessionFn = appJs.match(/async function fetchMyOrdersSession\(\)[\s\S]*?\n\}/)[0];
+  assert.match(sessionFn, /body:\s*JSON\.stringify\(\{\}\)/);
+});
+
+test("checking for an existing session is skipped on pages without the myOrders section", () => {
+  assert.match(appJs, /if \(myOrdersAccount\) \{\s*\n\s*checkMyOrdersSession\(\);/);
+});
