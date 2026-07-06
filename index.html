@@ -274,6 +274,27 @@
           <p class="form-status" id="formStatus" role="status"></p>
         </form>
       </section>
+
+      <section class="checkout-section my-orders-section" id="myOrders">
+        <div>
+          <p class="eyebrow">Мои заказы</p>
+          <h2>Проверить статус заказа</h2>
+          <p>Введите номер телефона, который указывали при заказе, и код заказа — он приходит в сообщении WhatsApp, которое вы отправляете менеджеру, и в подтверждении от менеджера.</p>
+        </div>
+        <form class="customer-form my-orders-form" id="myOrdersForm">
+          <label>
+            Телефон / WhatsApp
+            <input name="lookupPhone" type="tel" autocomplete="tel" required />
+          </label>
+          <label>
+            Код заказа
+            <input name="lookupCode" autocomplete="off" required placeholder="Например, GM7K9X" />
+          </label>
+          <button class="secondary-link" type="submit">Показать мои заказы</button>
+          <p class="form-status" id="myOrdersStatus" role="status"></p>
+        </form>
+        <div class="my-orders-results" id="myOrdersResults" hidden></div>
+      </section>
     </main>
 
     <!-- BEGIN shared-footer -->
@@ -287,6 +308,7 @@
           <a href="/#catalog">Каталог</a>
           <a href="/catalog/">Разделы</a>
           <a href="/#checkout">Оформление</a>
+          <a href="/#myOrders">Мои заказы</a>
           <a href="/privacy.html">Политика конфиденциальности</a>
         </nav>
         <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>

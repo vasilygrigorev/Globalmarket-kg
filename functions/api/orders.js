@@ -45,6 +45,17 @@ export function digitsOnly(value) {
   return String(value || "").replace(/\D/g, "");
 }
 
+// The customer-generated lookup code (see app.js generateOrderLookupCode) —
+// stored as-is aside from trimming/case/length so functions/api/customer-orders.js
+// can match it back exactly. Never trust it for anything but a lookup key.
+export function normalizeLookupCode(value) {
+  const cleaned = String(value || "")
+    .toUpperCase()
+    .replace(/[^A-Z0-9]/g, "")
+    .slice(0, 12);
+  return cleaned || null;
+}
+
 export function buildManagerUrl(managerWhatsapp, message) {
   const phone = digitsOnly(managerWhatsapp) || DEFAULT_MANAGER_WHATSAPP;
   return message
@@ -60,6 +71,7 @@ export function buildOrderEmail(normalized, orderId) {
   const order = normalized.order;
   const lines = [
     `Новый заказ Global Market KG${orderId ? ` #${orderId}` : ""}`,
+    ...(order.lookup_code ? [`Код заказа для клиента: ${order.lookup_code}`] : []),
     "",
     "Клиент:",
     `Имя: ${order.customer_name || "не указано"}`,
@@ -182,6 +194,7 @@ export function normalizeOrderPayload(payload) {
     customer_comment: str(customer.comment ?? payload.comment, 2000),
     customer_source: str(payload.customer_source, 200),
     promo_code: str(payload.promo_code, 120),
+    lookup_code: normalizeLookupCode(payload.lookup_code),
     whatsapp_message: str(payload.whatsapp_message, 4000),
     sent_to_whatsapp: false,
   };

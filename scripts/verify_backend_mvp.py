@@ -55,6 +55,7 @@ def main():
                 "--test",
                 "functions/api/orders.test.mjs",
                 "functions/api/orders.integration.test.mjs",
+                "functions/api/customer-orders.test.mjs",
                 "admin/admin.logic.test.mjs",
                 "admin/admin.dom.test.mjs",
                 "tests/admin-workflow.test.mjs",

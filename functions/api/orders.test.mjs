@@ -11,6 +11,7 @@ import {
   num,
   str,
   digitsOnly,
+  normalizeLookupCode,
   DEFAULT_MANAGER_WHATSAPP,
 } from "./orders.js";
 
@@ -113,4 +114,39 @@ test("helpers: num/str/digitsOnly", () => {
   assert.equal(str("  hi  "), "hi");
   assert.equal(str(""), null);
   assert.equal(digitsOnly("+996 706-77-11-03"), "996706771103");
+});
+
+test("normalizeLookupCode uppercases, strips non-alphanumerics, and caps length", () => {
+  assert.equal(normalizeLookupCode("a1b2-c3"), "A1B2C3");
+  assert.equal(normalizeLookupCode("  gm7k9x  "), "GM7K9X");
+  assert.equal(normalizeLookupCode(""), null);
+  assert.equal(normalizeLookupCode(null), null);
+  assert.equal(normalizeLookupCode("x".repeat(20)).length, 12);
+});
+
+test("normalizeOrderPayload carries a normalized lookup_code onto the order", () => {
+  const r = normalizeOrderPayload({
+    customer: { name: "A", phone: "996700000000" },
+    items: [{ title: "X", qty: 1, price_kgs: 100 }],
+    lookup_code: "gm-7k9x",
+  });
+  assert.equal(r.order.lookup_code, "GM7K9X");
+});
+
+test("normalizeOrderPayload leaves lookup_code null when absent", () => {
+  const r = normalizeOrderPayload({
+    customer: { name: "A", phone: "996700000000" },
+    items: [{ title: "X", qty: 1, price_kgs: 100 }],
+  });
+  assert.equal(r.order.lookup_code, null);
+});
+
+test("buildOrderEmail includes the customer lookup code when present", () => {
+  const normalized = normalizeOrderPayload({
+    customer: { name: "Айгуль", phone: "996700000000" },
+    items: [{ title: "Dove дезодорант", qty: 1, price_kgs: 395 }],
+    lookup_code: "gm7k9x",
+  });
+  const email = buildOrderEmail(normalized, "order-1");
+  assert.match(email.text, /Код заказа для клиента: GM7K9X/);
 });

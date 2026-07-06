@@ -50,6 +50,9 @@ const cartDeliveryNote = document.querySelector("#cartDeliveryNote");
 const cartDeliveryProgress = document.querySelector("#cartDeliveryProgress");
 const cartDeliveryProgressBar = document.querySelector("#cartDeliveryProgressBar");
 const formStatus = document.querySelector("#formStatus");
+const myOrdersForm = document.querySelector("#myOrdersForm");
+const myOrdersStatus = document.querySelector("#myOrdersStatus");
+const myOrdersResults = document.querySelector("#myOrdersResults");
 const openCartButton = document.querySelector("#openCart");
 const floatingCartButton = document.querySelector("#floatingCart");
 const floatingCartCount = document.querySelector("#floatingCartCount");
@@ -1812,7 +1815,23 @@ function requestSmartHeaderUpdate() {
   window.requestAnimationFrame(updateSmartHeader);
 }
 
-function orderMessage(formData) {
+// A short, easy-to-read/type code the customer can use later on /orders/ to
+// look up their order history — no account needed. Generated client-side (not
+// derived from the DB order id, which does not exist yet at this point) and
+// sent to the server as payload.lookup_code; delivered to the customer for
+// free because it rides along inside the WhatsApp message they already send
+// (see orderMessage below) and in the manager's WhatsApp confirmation reply.
+// Alphabet excludes 0/O and 1/I to avoid misreads.
+const ORDER_LOOKUP_CODE_ALPHABET = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+function generateOrderLookupCode(length = 6) {
+  let code = "";
+  for (let i = 0; i < length; i += 1) {
+    code += ORDER_LOOKUP_CODE_ALPHABET[Math.floor(Math.random() * ORDER_LOOKUP_CODE_ALPHABET.length)];
+  }
+  return code;
+}
+
+function orderMessage(formData, lookupCode) {
   const entries = cartEntries();
   const total = cartTotalValue();
   const delivery = total >= catalogSettings.free_delivery_threshold_kgs ? "Бесплатная доставка" : "Доставку согласовать с менеджером";
@@ -1831,6 +1850,7 @@ function orderMessage(formData) {
 
   return [
     "Новый заказ с сайта",
+    `Код заказа (для раздела "Мои заказы" на сайте): ${lookupCode}`,
     "",
     `Клиент: ${formData.get("name")}`,
     `Телефон/WhatsApp: ${formData.get("phone")}`,
@@ -2251,7 +2271,7 @@ cartDrawer.addEventListener("click", (event) => {
   if (event.target === cartDrawer) setCartOpen(false);
 });
 
-function buildOrderPayload(formData, message) {
+function buildOrderPayload(formData, message, lookupCode) {
   return {
     customer: {
       name: formData.get("name"),
@@ -2281,6 +2301,7 @@ function buildOrderPayload(formData, message) {
     },
     customer_source: formData.get("customerSource"),
     promo_code: formData.get("promoCode"),
+    lookup_code: lookupCode,
     consent: { consent_type: "marketing", is_granted: formData.get("marketingConsent") === "yes" },
     whatsapp_message: message,
   };
@@ -2329,16 +2350,82 @@ checkoutForm.addEventListener("submit", async (event) => {
   try {
     const formData = new FormData(event.currentTarget);
     saveCustomerDraftFromForm(event.currentTarget);
-    const message = orderMessage(formData);
+    const lookupCode = generateOrderLookupCode();
+    const message = orderMessage(formData, lookupCode);
     let whatsapp = `https://wa.me/${catalogSettings.manager_whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
     // If the backend is enabled, save the order first; always fall back to WhatsApp.
-    const saved = await saveOrderViaApi(buildOrderPayload(formData, message));
+    const saved = await saveOrderViaApi(buildOrderPayload(formData, message, lookupCode));
     if (saved && saved.manager_whatsapp_url) whatsapp = saved.manager_whatsapp_url;
     saveLastOrder();
     formStatus.innerHTML = `Открываем WhatsApp. Если он не открылся, <a href="${whatsapp}" target="_blank" rel="noreferrer">нажмите здесь</a>.`;
     window.location.href = whatsapp;
   } finally {
     checkoutSubmitting = false;
+    if (submitButton) submitButton.disabled = false;
+  }
+});
+
+// "Мои заказы" — no account/login: proof of ownership is phone + the code
+// from the WhatsApp message/confirmation (see generateOrderLookupCode above
+// and functions/api/customer-orders.js). Pure rendering split out from the
+// submit handler so the markup shape is easy to eyeball/test.
+function myOrderCardHtml(order) {
+  const items = (order.items || [])
+    .map((item) => `<li>${escapeHtml(item.title || "Товар")} — ${item.qty} x ${formatPrice(item.price_kgs)}</li>`)
+    .join("");
+  const created = order.created_at ? new Date(order.created_at).toLocaleDateString("ru-RU") : "";
+  return `
+    <article class="my-order-card">
+      <div class="my-order-card-head">
+        <span class="my-order-card-code">Заказ ${escapeHtml(order.code || "")}</span>
+        <span>${escapeHtml(created)}</span>
+      </div>
+      <div>Статус: ${escapeHtml(order.status_label || order.status || "")}</div>
+      <ul class="my-order-card-items">${items}</ul>
+      <div class="my-order-card-total">Итого: ${formatPrice(order.total_kgs)}</div>
+    </article>
+  `;
+}
+
+function renderMyOrders(orders) {
+  if (!myOrdersResults) return;
+  if (!orders || !orders.length) {
+    myOrdersResults.hidden = true;
+    myOrdersResults.innerHTML = "";
+    return;
+  }
+  myOrdersResults.hidden = false;
+  myOrdersResults.innerHTML = orders.map(myOrderCardHtml).join("");
+}
+
+myOrdersForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (!myOrdersStatus) return;
+  const formData = new FormData(event.currentTarget);
+  const phone = formData.get("lookupPhone");
+  const code = formData.get("lookupCode");
+  const submitButton = event.currentTarget.querySelector("button[type='submit']");
+  if (submitButton) submitButton.disabled = true;
+  myOrdersStatus.textContent = "Ищем ваши заказы…";
+  renderMyOrders(null);
+  try {
+    const res = await fetch("/api/customer-orders", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ phone, code }),
+    });
+    const data = await res.json().catch(() => null);
+    if (data && data.ok && Array.isArray(data.orders) && data.orders.length) {
+      myOrdersStatus.textContent = `Найдено заказов: ${data.orders.length}`;
+      renderMyOrders(data.orders);
+    } else {
+      myOrdersStatus.textContent = "Заказы не найдены. Проверьте телефон и код заказа.";
+      renderMyOrders(null);
+    }
+  } catch {
+    myOrdersStatus.textContent = "Не получилось проверить заказы. Попробуйте ещё раз или напишите менеджеру в WhatsApp.";
+    renderMyOrders(null);
+  } finally {
     if (submitButton) submitButton.disabled = false;
   }
 });

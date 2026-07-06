@@ -21,7 +21,8 @@
     { "label": "Кремы", "category": "Уход за телом", "query": "крем" },
     { "label": "Тело", "category": "Уход за телом" },
     { "label": "Зубы", "category": "Зубная гигиена" },
-    { "label": "Оформление", "href": "/#checkout" }
+    { "label": "Оформление", "href": "/#checkout" },
+    { "label": "Мои заказы", "href": "/#myOrders" }
   ],
   "banners": [
     {
@@ -90,6 +91,7 @@
     { "label": "Каталог", "href": "/#catalog" },
     { "label": "Разделы", "href": "/catalog/" },
     { "label": "Оформление", "href": "/#checkout" },
+    { "label": "Мои заказы", "href": "/#myOrders" },
     { "label": "Политика конфиденциальности", "href": "/privacy.html" }
   ],
   "footerText": "Контакты, условия доставки и реквизиты добавим после финального согласования."

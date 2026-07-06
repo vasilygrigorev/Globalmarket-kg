@@ -17,9 +17,65 @@ the primary channel — this endpoint only persists the order.
 `whatsapp` column, separate from an order's `customer_phone`), but
 `onRequestPost` in `functions/api/orders.js` never inserts or upserts into it —
 today every order only writes `orders` + `order_items` (+ optional
-`marketing_attribution` / `customer_consents`). A returning-customer
-lookup/history feature would need that upsert added; it is not in scope for
-the current MVP.
+`marketing_attribution` / `customer_consents`). There is no account/login
+layer built on `customers` either. A returning-customer *order history* lookup
+now exists a different way — see `/api/customer-orders` below, keyed to
+`orders.customer_phone`/`lookup_code` directly, not the `customers` table.
+
+## Customer order lookup ("Мои заказы") — `POST /api/customer-orders`
+
+Lets a customer see their own order history with no account/login: proof of
+ownership is phone number + a short `lookup_code`.
+
+- Code: `functions/api/customer-orders.js`
+- Tests: `functions/api/customer-orders.test.mjs` (pure logic, 12/12, no network)
+- Route: `POST /api/customer-orders`, body `{ "phone": "...", "code": "..." }`
+- Depends on `supabase/migrations/0002_customer_order_lookup.sql` (adds
+  `orders.lookup_code` and the generated column `orders.customer_phone_digits`)
+
+**Where the code comes from:** `app.js` generates a 6-character code
+(`generateOrderLookupCode()`, unambiguous alphabet — no `0/O/1/I`) client-side
+*before* the order exists in the DB, so it can be embedded directly in the
+WhatsApp message the customer sends to the manager (`orderMessage()`) — the
+customer sees it in their own sent-message bubble, no extra delivery channel
+needed. It also rides along in `buildOrderPayload()` as `payload.lookup_code`
+and in the manager's email copy (`buildOrderEmail`). Nothing about the
+existing checkout flow changes visibly; this is additive.
+
+**Access model:** identical posture to order inserts — reads Supabase via the
+service role key server-side only. No new anon RLS policy; `public.orders`/
+`public.order_items` remain unreadable by the anon key. A lookup is scoped to
+rows matching *both* `customer_phone_digits` and `lookup_code`; a wrong phone
+or wrong code gets the same generic `not_found`, so the endpoint never
+confirms whether a given phone number placed any orders at all.
+
+**Known limitation:** no rate limiting beyond requiring phone+code together —
+Cloudflare Pages Functions have no built-in limiter without Workers KV/Durable
+Objects. Acceptable for a first version; revisit if abuse is observed.
+
+**Response shape** (`sanitizeOrderForCustomer`) excludes internal-only fields:
+no `manager_comment`, `whatsapp_message`, `sent_to_whatsapp`, or the customer's
+own phone/phone-digits echoed back. Includes `code`, `status`/`status_label`
+(reused from `admin/admin.logic.js` `statusLabel()` — one source of truth, no
+duplicated Russian status strings), totals, address, and item snapshots.
+
+**UI:** a "Мои заказы" section on the homepage (`#myOrders` in `index.html`,
+linked from the side menu and footer), a phone+code form, results rendered by
+`renderMyOrders()`/`myOrderCardHtml()` in `app.js`.
+
+**Verified locally the same way as `/api/orders`:** `node --check`, full pure
+logic suite green, `npx wrangler pages functions build` compiles the bundle
+(including the cross-directory import of `admin/admin.logic.js`) successfully.
+`wrangler pages dev .` does not route *any* `/api/*` request in this sandbox
+(confirmed `/api/orders` — already live in production — 404s identically
+here), so end-to-end request testing needs an actual preview/production
+deploy + `curl`, same as `/api/orders` needed before its own go-live.
+
+**Privileged step remaining (Codex/user):** apply
+`supabase/migrations/0002_customer_order_lookup.sql` (SQL editor or
+`supabase db push`, see `docs/supabase-setup.md`) before this endpoint can
+return real data — until then it 502s on the Supabase query (no such
+column). Same "stop-and-handoff" boundary as the rest of the Supabase setup.
 
 To bring this online, follow the step-by-step
 [`backend-go-live-checklist.md`](backend-go-live-checklist.md) (Supabase →

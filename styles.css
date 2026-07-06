@@ -1689,6 +1689,52 @@ textarea {
   text-decoration: underline;
 }
 
+.my-orders-section {
+  border-top: 1px solid var(--line);
+}
+
+.my-orders-results {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.my-order-card {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.my-order-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.my-order-card-code {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.my-order-card-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.my-order-card-total {
+  font-weight: 800;
+}
+
 .cart-drawer {
   position: fixed;
   inset: 0;

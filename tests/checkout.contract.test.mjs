@@ -98,3 +98,34 @@ test("docs/api-orders.md no longer documents the unused customer.whatsapp field"
   // normalizeOrderPayload() and would silently do nothing if a client sent it.
   assert.ok(!/"customer":\s*\{[^}]*"whatsapp"/.test(apiDoc), "docs/api-orders.md still shows a phantom customer.whatsapp field");
 });
+
+// "Мои заказы" lookup code — generated client-side (the DB order id does not
+// exist yet at checkout time), sent as payload.lookup_code, and delivered to
+// the customer for free inside the WhatsApp message they already send.
+test("generateOrderLookupCode produces an unambiguous-alphabet code of the expected length", () => {
+  assert.match(appJs, /function generateOrderLookupCode\(length = 6\)/);
+  const alphabetLine = appJs.match(/const ORDER_LOOKUP_CODE_ALPHABET = "([^"]+)"/);
+  assert.ok(alphabetLine, "ORDER_LOOKUP_CODE_ALPHABET not found");
+  const alphabet = alphabetLine[1];
+  // Must exclude the easily-confused 0/O and 1/I.
+  for (const excluded of ["0", "O", "1", "I"]) {
+    assert.ok(!alphabet.includes(excluded), `lookup code alphabet must not include "${excluded}"`);
+  }
+});
+
+test("the lookup code is generated once per submit and threaded into both the message and the payload", () => {
+  assert.match(submitHandler, /const lookupCode = generateOrderLookupCode\(\);/);
+  assert.match(submitHandler, /orderMessage\(formData, lookupCode\)/);
+  assert.match(submitHandler, /buildOrderPayload\(formData, message, lookupCode\)/);
+});
+
+test("orderMessage includes the lookup code so it reaches the customer's own WhatsApp copy", () => {
+  const messageFn = appJs.match(/function orderMessage\([\s\S]*?\n\}/)[0];
+  assert.match(messageFn, /Код заказа.*\$\{lookupCode\}/);
+});
+
+test("buildOrderPayload sends lookup_code, and functions/api/orders.js reads it", () => {
+  const payloadFn = appJs.match(/function buildOrderPayload\([\s\S]*?\n\}/)[0];
+  assert.match(payloadFn, /lookup_code:\s*lookupCode/);
+  assert.match(ordersFn, /normalizeLookupCode\(payload\.lookup_code\)/);
+});
