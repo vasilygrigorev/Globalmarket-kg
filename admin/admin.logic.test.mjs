@@ -48,6 +48,13 @@ import {
   customerTelLink,
   orderItemsSummary,
   statusClass,
+  customerWaTextLink,
+  orderConfirmationText,
+  computeDashboardStats,
+  renderDashboard,
+  renderRowStatusSelect,
+  shouldAutoRefresh,
+  AUTO_REFRESH_MS,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -441,4 +448,113 @@ test("orderItemsSummary appears in the order detail and copy summary", () => {
   assert.match(html, /2 позиции · 3 шт/);
   const text = orderSummaryText({ customer_name: "X", status: "new", total_kgs: 150 }, items);
   assert.match(text, /2 позиции · 3 шт/);
+});
+
+// --- WhatsApp confirmation link (customerWaTextLink + orderConfirmationText) ---
+
+test("customerWaTextLink builds a wa.me link with encoded prefilled text", () => {
+  const link = customerWaTextLink("+996 700 12-34-56", "Привет, мир");
+  assert.ok(link.startsWith("https://wa.me/996700123456?text="));
+  assert.equal(link, `https://wa.me/996700123456?text=${encodeURIComponent("Привет, мир")}`);
+});
+
+test("customerWaTextLink degrades gracefully", () => {
+  assert.equal(customerWaTextLink("", "hi"), ""); // no phone -> no link
+  assert.equal(customerWaTextLink("996700", ""), "https://wa.me/996700"); // no text -> plain chat
+});
+
+test("orderConfirmationText greets the customer and lists items + total", () => {
+  const order = { customer_name: "Айгуль", status: "new", total_kgs: 550, city: "Бишкек" };
+  const items = [{ title_snapshot: "Ariel 3кг", qty: 2, line_total_kgs: 500 }];
+  const text = orderConfirmationText(order, items);
+  assert.match(text, /Здравствуйте, Айгуль!/);
+  assert.match(text, /Global Market KG/);
+  assert.match(text, /2× Ariel 3кг/);
+  assert.match(text, /Итого: 550 сом/);
+  assert.match(text, /Доставка: Бишкек/);
+  assert.match(text, /Подтвердите/);
+});
+
+test("orderConfirmationText omits absent parts (no name, no items, no address)", () => {
+  const text = orderConfirmationText({ status: "new", total_kgs: 0 }, []);
+  assert.match(text, /Здравствуйте! Это Global Market KG\./);
+  assert.doesNotMatch(text, /Доставка:/);
+});
+
+test("order detail exposes a WhatsApp confirmation link with the order text", () => {
+  const order = { customer_name: "X", customer_phone: "+996700123456", status: "new", total_kgs: 150 };
+  const items = [{ title_snapshot: "A", qty: 1, line_total_kgs: 150 }];
+  const html = renderOrderDetail(order, items, [], []);
+  assert.match(html, /Отправить подтверждение заказа/);
+  assert.match(html, /href="https:\/\/wa\.me\/996700123456\?text=/);
+});
+
+// --- Dashboard summary (computeDashboardStats + renderDashboard) ---
+
+test("computeDashboardStats aggregates today, revenue, new count, and per-status", () => {
+  const now = new Date("2026-07-06T12:00:00Z");
+  const orders = [
+    { status: "new", total_kgs: 100, created_at: "2026-07-06T09:00:00Z" },      // today
+    { status: "completed", total_kgs: 200, created_at: "2026-07-06T10:00:00Z" }, // today
+    { status: "cancelled", total_kgs: 999, created_at: "2026-07-06T11:00:00Z" }, // today, excluded from revenue
+    { status: "confirmed", total_kgs: 300, created_at: "2026-07-01T10:00:00Z" }, // older
+    { status: "new", total_kgs: 50, created_at: "2026-07-05T10:00:00Z" },        // older
+  ];
+  const s = computeDashboardStats(orders, now);
+  assert.equal(s.total, 5);
+  assert.equal(s.newCount, 2);
+  assert.equal(s.byStatus.completed, 1);
+  assert.equal(s.byStatus.cancelled, 1);
+  assert.equal(s.todayCount, 3);
+  assert.equal(s.todayRevenue, 300); // 100 + 200, cancelled 999 excluded
+  assert.equal(s.openRevenue, 650); // all non-cancelled: 100+200+300+50
+});
+
+test("computeDashboardStats handles empty/absent input", () => {
+  const s = computeDashboardStats(null, new Date());
+  assert.equal(s.total, 0);
+  assert.equal(s.newCount, 0);
+  assert.equal(s.todayRevenue, 0);
+});
+
+test("renderDashboard shows headline chips and a status breakdown; blank when absent", () => {
+  assert.equal(renderDashboard(null), "");
+  const html = renderDashboard(computeDashboardStats([
+    { status: "new", total_kgs: 100, created_at: new Date().toISOString() },
+  ], new Date()));
+  assert.match(html, /заказов сегодня/);
+  assert.match(html, /новых, ждут обработки/);
+  assert.match(html, /stat-alert/); // newCount > 0 highlights the chip
+  assert.match(html, /Новый: 1/);
+  assert.match(html, /Отменён: 0/);
+});
+
+// --- Inline row status changer + new-order highlight (renderRowStatusSelect / renderOrderRow) ---
+
+test("renderRowStatusSelect carries the id, current value, and status colour", () => {
+  const html = renderRowStatusSelect({ id: "o1", status: "confirmed" });
+  assert.match(html, /class="row-status status-confirmed"/);
+  assert.match(html, /data-id="o1"/);
+  assert.match(html, /<option value="confirmed" selected>Подтверждён<\/option>/);
+  assert.match(html, /<option value="new" >Новый<\/option>/);
+});
+
+test("renderOrderRow embeds the inline status select and highlights new orders", () => {
+  const newRow = renderOrderRow({ id: "a", status: "new", total_kgs: 100 });
+  assert.match(newRow, /class="row-new"/);
+  assert.match(newRow, /select class="row-status/);
+  const doneRow = renderOrderRow({ id: "b", status: "completed", total_kgs: 100 });
+  assert.doesNotMatch(doneRow, /row-new/);
+});
+
+// --- Auto-refresh gate (shouldAutoRefresh) ---
+
+test("shouldAutoRefresh only fires on the list view, visible tab, first page, when enabled", () => {
+  assert.equal(shouldAutoRefresh({ enabled: true, view: "list", hidden: false, page: 0 }), true);
+  assert.equal(shouldAutoRefresh({ enabled: false, view: "list", hidden: false, page: 0 }), false);
+  assert.equal(shouldAutoRefresh({ enabled: true, view: "detail", hidden: false, page: 0 }), false);
+  assert.equal(shouldAutoRefresh({ enabled: true, view: "list", hidden: true, page: 0 }), false);
+  assert.equal(shouldAutoRefresh({ enabled: true, view: "list", hidden: false, page: 2 }), false);
+  assert.equal(shouldAutoRefresh({}), false);
+  assert.ok(AUTO_REFRESH_MS > 0);
 });

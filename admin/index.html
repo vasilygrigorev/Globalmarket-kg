@@ -35,6 +35,24 @@
       .banner { padding: 12px 14px; border-radius: 10px; background: #fff4f6; border: 1px solid rgba(215,0,21,.25); color: #a3001a; }
       .ok { background: #eefaf0; border-color: rgba(48,168,92,.3); color: #1c7a3f; }
       a.back { text-decoration: none; color: var(--muted); }
+      /* Summary dashboard strip (see admin.logic.js renderDashboard). */
+      .dashboard { margin-bottom: 14px; }
+      .dashboard:empty { display: none; }
+      .stats-row { display: flex; gap: 10px; flex-wrap: wrap; }
+      .stat { flex: 1 1 140px; min-width: 130px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+      .stat-value { font-size: 22px; font-weight: 700; line-height: 1.1; }
+      .stat-label { font-size: 12px; color: var(--muted); }
+      .stat-alert { border-color: #c7d2fe; background: #eef2ff; }
+      .stat-alert .stat-value { color: #3346d1; }
+      .stats-breakdown { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+      .stat-pill { font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); }
+      /* New (unprocessed) orders stand out in the list. */
+      tr.row-new td { background: #f7f9ff; }
+      tr.row-new td:first-child { box-shadow: inset 3px 0 0 #6366f1; }
+      /* Inline per-row status changer (see admin.logic.js renderRowStatusSelect). */
+      select.row-status { padding: 4px 8px; border-radius: 999px; font-size: 12px; min-height: 0; cursor: pointer; }
+      .autorefresh { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+      .autorefresh input { min-height: 0; }
     </style>
   </head>
   <body>
@@ -73,6 +91,7 @@
       </section>
 
       <section id="listView" class="hidden">
+        <div id="dashboard" class="dashboard"></div>
         <div class="row" style="margin-bottom:12px;">
           <select id="statusFilter">
             <option value="">Все статусы</option>
@@ -102,10 +121,12 @@
           <button id="refresh" class="secondary" type="button">Обновить</button>
           <button id="resetFilters" class="secondary" type="button">Сбросить фильтры</button>
           <button id="exportCsv" class="secondary" type="button">Экспорт CSV</button>
+          <label class="autorefresh"><input id="autoRefresh" type="checkbox" checked />Автообновление</label>
           <span id="ordersCount" class="muted"></span>
           <span id="ordersTotal" class="muted"></span>
+          <span id="listMsg" class="muted"></span>
         </div>
-        <p class="muted" style="margin:0 0 12px; font-size:13px;">Нажмите на строку заказа, чтобы открыть детали и сменить статус.</p>
+        <p class="muted" style="margin:0 0 12px; font-size:13px;">Нажмите на строку заказа, чтобы открыть детали. Статус можно сменить прямо в списке через выпадающий список в колонке «Статус».</p>
         <div class="card" style="padding:0; overflow-x:auto;">
           <table>
             <thead>

@@ -101,6 +101,18 @@ test("CSS defines state classes used by JS (.banner, .ok, .hidden)", () => {
   }
 });
 
+test("list view declares the new dashboard/auto-refresh/feedback controls", () => {
+  for (const id of ["dashboard", "autoRefresh", "listMsg"]) {
+    assert.ok(declared.has(id), `missing #${id} in admin/index.html`);
+  }
+});
+
+test("CSS styles the dashboard, new-order highlight, and inline row status select", () => {
+  for (const sel of [".stat", ".stat-alert", ".stats-breakdown", "tr.row-new", "select.row-status"]) {
+    assert.ok(html.includes(sel), `admin/index.html CSS missing ${sel}`);
+  }
+});
+
 test("CSS defines a colour for every status class emitted by admin.logic.js", () => {
   // statusClass() in admin.logic.js maps each status to "status-<name>";
   // every one of those classes must actually be styled, or badges render as

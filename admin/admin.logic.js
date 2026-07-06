@@ -57,6 +57,66 @@ export function ordersTotalText(orders) {
   return `Сумма показанных: ${money(sum)}`;
 }
 
+// --- Dashboard summary (pure) ---
+
+// Aggregate a raw orders list (each {status, total_kgs, created_at}) into the
+// numbers shown in the top summary strip. Independent of list filters/paging —
+// admin.js feeds it a dedicated lightweight query of all orders. `now` is
+// injectable for tests. Cancelled orders are excluded from revenue (they didn't
+// earn anything) but still counted per status so the breakdown stays honest.
+export function computeDashboardStats(orders, now = new Date()) {
+  const list = (orders || []).filter(Boolean);
+  const dayStart = new Date(now.getTime());
+  dayStart.setHours(0, 0, 0, 0);
+  const startMs = dayStart.getTime();
+  const byStatus = { new: 0, contacted: 0, confirmed: 0, completed: 0, cancelled: 0 };
+  let todayCount = 0;
+  let todayRevenue = 0;
+  let openRevenue = 0; // revenue of non-cancelled orders
+  for (const o of list) {
+    const total = Number(o.total_kgs) || 0;
+    const status = o.status;
+    if (byStatus[status] != null) byStatus[status] += 1;
+    if (status !== "cancelled") openRevenue += total;
+    const t = new Date(o.created_at).getTime();
+    if (Number.isFinite(t) && t >= startMs) {
+      todayCount += 1;
+      if (status !== "cancelled") todayRevenue += total;
+    }
+  }
+  return {
+    total: list.length,
+    byStatus,
+    newCount: byStatus.new,
+    todayCount,
+    todayRevenue,
+    openRevenue,
+  };
+}
+
+// Render the summary strip HTML from computeDashboardStats() output (pure).
+// A few headline chips (today's orders + revenue, new/unprocessed, all-time)
+// plus a compact per-status breakdown line. Returns "" for absent stats so the
+// strip can be blanked while loading.
+export function renderDashboard(stats) {
+  if (!stats) return "";
+  const s = stats;
+  const chip = (value, label, cls = "") =>
+    `<div class="stat ${cls}"><span class="stat-value">${esc(value)}</span><span class="stat-label">${esc(label)}</span></div>`;
+  const headline = [
+    chip(s.todayCount, "заказов сегодня"),
+    chip(money(s.todayRevenue), "выручка сегодня"),
+    chip(s.newCount, "новых, ждут обработки", s.newCount > 0 ? "stat-alert" : ""),
+    chip(s.total, "всего заказов"),
+    chip(money(s.openRevenue), "сумма (без отменённых)"),
+  ].join("");
+  const by = s.byStatus || {};
+  const breakdown = STATUSES
+    .map((st) => `<span class="stat-pill ${statusClass(st)}">${esc(statusLabel(st))}: ${esc(by[st] || 0)}</span>`)
+    .join("");
+  return `<div class="stats-row">${headline}</div><div class="stats-breakdown">${breakdown}</div>`;
+}
+
 // Marketing consent summary from a customer_consents list (pure).
 export function consentText(consents) {
   const list = consents || [];
@@ -135,6 +195,41 @@ export function customerTelLink(phone) {
   const digits = raw.replace(/\D/g, "");
   if (!digits) return "";
   return `tel:${raw.trim().startsWith("+") ? "+" : ""}${digits}`;
+}
+
+// WhatsApp link that opens a chat with the customer AND pre-fills a message
+// (digits only; "" when no phone). When `text` is empty it degrades to a plain
+// wa.me chat link. The body is URL-encoded so line breaks/Cyrillic survive.
+export function customerWaTextLink(phone, text) {
+  const digits = String(phone || "").replace(/\D/g, "");
+  if (!digits) return "";
+  const body = String(text || "");
+  return `https://wa.me/${digits}${body ? `?text=${encodeURIComponent(body)}` : ""}`;
+}
+
+// Customer-facing order confirmation message (plain text, RU) a manager can send
+// straight to the customer over WhatsApp. Unlike orderSummaryText (internal
+// manager view), this greets the customer and asks them to confirm. Skips any
+// part that is absent so it never shows empty fields.
+export function orderConfirmationText(order, items) {
+  const o = order || {};
+  const lines = [];
+  lines.push(`Здравствуйте${o.customer_name ? `, ${o.customer_name}` : ""}! Это Global Market KG.`);
+  lines.push("Спасибо за заказ! Проверьте, пожалуйста, детали:");
+  const rows = (items || []).filter(Boolean);
+  if (rows.length) {
+    lines.push("—");
+    for (const it of rows) {
+      const qty = Number(it.qty) || 0;
+      lines.push(`${qty}× ${it.title_snapshot || ""} — ${money(it.line_total_kgs)}`);
+    }
+  }
+  lines.push("—");
+  lines.push(`Итого: ${money(o.total_kgs)}`);
+  const address = orderAddressText(o);
+  if (address) lines.push(`Доставка: ${address}`);
+  lines.push("Подтвердите, пожалуйста, заказ и удобное время доставки. Спасибо!");
+  return lines.join("\n");
 }
 
 // Russian plural for "заказ" (pure): 1 заказ, 2 заказа, 5 заказов.
@@ -344,21 +439,46 @@ export function renderStatusOptions(current) {
     .join("");
 }
 
+// Inline status <select> shown in each list row, so a manager can change an
+// order's status without opening it (change handler wired in admin.js). Carries
+// the order id + a status colour class; admin.js swaps the class on change.
+export function renderRowStatusSelect(o) {
+  const opts = STATUSES
+    .map((s) => `<option value="${s}" ${s === o.status ? "selected" : ""}>${esc(statusLabel(s))}</option>`)
+    .join("");
+  return `<select class="row-status ${statusClass(o.status)}" data-id="${esc(o.id)}" aria-label="Сменить статус заказа" title="Сменить статус">${opts}</select>`;
+}
+
 export function renderOrderRow(o) {
   // Rows are keyboard-operable: focusable, announced as a button, and opened
   // with Enter/Space (handler wired in admin.js). The label gives screen-reader
   // users the key facts without opening the order.
   const label = `Открыть заказ: ${statusLabel(o.status)}, ${o.customer_name || "без имени"}, ${money(o.total_kgs)}`;
+  // New (unprocessed) orders get a highlight so they stand out in the list.
+  const rowClass = o.status === "new" ? "row-new" : "";
   return `
-    <tr data-id="${esc(o.id)}" tabindex="0" role="button" aria-label="${esc(label)}" style="cursor:pointer;">
+    <tr data-id="${esc(o.id)}" class="${rowClass}" tabindex="0" role="button" aria-label="${esc(label)}" style="cursor:pointer;">
       <td>${esc(when(o.created_at))}</td>
       <td>${esc(o.customer_name)}</td>
       <td>${esc(o.customer_phone)}</td>
       <td>${esc(o.city)}</td>
       <td>${esc(money(o.total_kgs))}</td>
-      <td><span class="status ${statusClass(o.status)}">${esc(statusLabel(o.status))}</span></td>
+      <td>${renderRowStatusSelect(o)}</td>
       <td>${esc(o.customer_source)}</td>
     </tr>`;
+}
+
+// --- Auto-refresh (pure) ---
+
+// How often the list auto-refreshes, in ms.
+export const AUTO_REFRESH_MS = 30000;
+
+// Whether an auto-refresh tick should actually reload now. Only when: the toggle
+// is on, the list view is showing (never mid-edit in a detail), the tab is
+// visible (no pointless polling in a background tab), and we're on the first
+// page (don't yank a manager who paged through results back to the top). Pure.
+export function shouldAutoRefresh({ enabled, view, hidden, page } = {}) {
+  return Boolean(enabled) && view === "list" && !hidden && (Number(page) || 0) === 0;
 }
 
 // Which view to show given the current auth session. Pure (no DOM).
@@ -415,6 +535,7 @@ export function renderOrderDetail(order, items, attr, consents) {
     ${customerWaLink(order.customer_phone)
       ? `<p class="row" style="gap:14px;">
           <a href="${esc(customerWaLink(order.customer_phone))}" target="_blank" rel="noopener">Написать клиенту в WhatsApp</a>
+          <a href="${esc(customerWaTextLink(order.customer_phone, orderConfirmationText(order, items)))}" target="_blank" rel="noopener">Отправить подтверждение заказа</a>
           <a href="${esc(customerTelLink(order.customer_phone))}">Позвонить</a>
           <button id="copyPhone" type="button" class="secondary">Копировать телефон</button>
         </p>`

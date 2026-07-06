@@ -31,6 +31,12 @@ import {
   parseMaxAmount,
   orderSummaryText,
   orderAddressText,
+  computeDashboardStats,
+  renderDashboard,
+  shouldAutoRefresh,
+  AUTO_REFRESH_MS,
+  statusClass,
+  statusLabel,
 } from "./admin.logic.js";
 
 const $ = (id) => document.getElementById(id);
@@ -40,6 +46,9 @@ const show = (el, on) => el.classList.toggle("hidden", !on);
 let lastOrders = [];
 // Current page index for pagination (reset to 0 on any filter change).
 let page = 0;
+// Which view is currently shown — read by the auto-refresh tick so it only
+// reloads while the list is open (never mid-edit in an order detail).
+let currentView = "login";
 
 const configured = isConfigured({
   url: window.GM_SUPABASE_URL,
@@ -50,10 +59,71 @@ const configured = isConfigured({
 let supabase = null;
 
 function setView(name) {
+  currentView = name;
   show($("loginView"), name === "login");
   show($("accessView"), name === "access");
   show($("listView"), name === "list");
   show($("detailView"), name === "detail");
+}
+
+// Transient message next to the orders count (quick status change feedback).
+function setListMsg(text, ok) {
+  const el = $("listMsg");
+  if (!el) return;
+  el.textContent = text || "";
+  el.classList.toggle("ok", Boolean(ok));
+}
+
+// Load the top summary strip. Uses a dedicated lightweight query of all orders
+// (status/total/date only) so the numbers reflect the whole table, independent
+// of the list's filters and pagination. Fails quietly (blanks the strip) — the
+// dashboard is a convenience, never a blocker for the list itself.
+async function loadStats() {
+  const box = $("dashboard");
+  if (!box) return;
+  let data, error;
+  try {
+    ({ data, error } = await supabase.from("orders").select("status,total_kgs,created_at"));
+  } catch (err) {
+    error = err;
+  }
+  if (error || !data) {
+    box.innerHTML = "";
+    return;
+  }
+  box.innerHTML = renderDashboard(computeDashboardStats(data));
+}
+
+// Recolour a row's inline status control + its new-order highlight after a change.
+function applyRowStatusUI(sel, status) {
+  sel.className = `row-status ${statusClass(status)}`;
+  const tr = sel.closest("tr");
+  if (tr) tr.classList.toggle("row-new", status === "new");
+}
+
+// Change an order's status straight from the list, without opening it. On error
+// the select reverts to the previous value so the row never lies about state.
+async function quickUpdateStatus(id, status, sel) {
+  const o = lastOrders.find((x) => String(x.id) === String(id));
+  const prevStatus = o ? o.status : null;
+  sel.disabled = true;
+  setListMsg("Сохранение…", false);
+  let error;
+  try {
+    ({ error } = await supabase.from("orders").update({ status }).eq("id", id));
+  } catch (err) {
+    error = err;
+  }
+  sel.disabled = false;
+  if (error) {
+    if (prevStatus != null) sel.value = prevStatus;
+    setListMsg(friendlyError(error) || "Не удалось сменить статус", false);
+    return;
+  }
+  if (o) o.status = status;
+  applyRowStatusUI(sel, status);
+  setListMsg(`Статус: ${statusLabel(status)} ✓`, true);
+  loadStats();
 }
 
 async function refreshSessionUI() {
@@ -77,7 +147,7 @@ async function refreshSessionUI() {
     $("accessEmail").textContent = session.user.email || "текущий пользователь";
   }
   setView(view);
-  if (view === "list") loadOrders();
+  if (view === "list") { loadOrders(); loadStats(); }
 }
 
 function setMoreButton({ visible, busy }) {
@@ -91,7 +161,7 @@ function setMoreButton({ visible, busy }) {
 async function loadOrders({ append = false } = {}) {
   const body = $("ordersBody");
   if (append) { page += 1; setMoreButton({ visible: true, busy: true }); }
-  else { page = 0; lastOrders = []; body.innerHTML = loadingRowHtml(); setMoreButton({ visible: false, busy: false }); }
+  else { page = 0; lastOrders = []; setListMsg(""); body.innerHTML = loadingRowHtml(); setMoreButton({ visible: false, busy: false }); }
 
   const status = $("statusFilter").value;
   const q = $("search").value;
@@ -155,6 +225,14 @@ async function loadOrders({ append = false } = {}) {
     tr.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
     });
+    // Inline status changer: interacting with it must NOT open the order.
+    const sel = tr.querySelector("select.row-status");
+    if (sel) {
+      const stop = (e) => e.stopPropagation();
+      sel.addEventListener("click", stop);
+      sel.addEventListener("keydown", stop);
+      sel.addEventListener("change", (e) => { stop(e); quickUpdateStatus(sel.dataset.id, sel.value, sel); });
+    }
   });
   setMoreButton({ visible: hasMore(batch.length, PAGE_SIZE), busy: false });
 }
@@ -254,6 +332,8 @@ async function saveOrder(id) {
   }
   if (btn) btn.disabled = false;
   setSaveMsg(msg, error ? "error" : "done", error);
+  // A saved status change shifts the summary numbers — refresh them.
+  if (!error) loadStats();
 }
 
 function wire() {
@@ -305,6 +385,16 @@ function init() {
     if (event === "INITIAL_SESSION") return;
     refreshSessionUI();
   });
+  // Auto-refresh: quietly pull new orders + refresh the summary while the list
+  // is open and the tab is visible. shouldAutoRefresh() keeps it from disrupting
+  // an open order detail or a manager who has paged past the first page.
+  setInterval(() => {
+    const enabled = $("autoRefresh") ? $("autoRefresh").checked : false;
+    if (shouldAutoRefresh({ enabled, view: currentView, hidden: document.hidden, page })) {
+      loadOrders();
+      loadStats();
+    }
+  }, AUTO_REFRESH_MS);
   refreshSessionUI();
 }
 

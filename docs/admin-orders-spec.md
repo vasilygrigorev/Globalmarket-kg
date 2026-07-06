@@ -231,3 +231,38 @@ The admin is usable from a phone or small laptop — no separate app needed:
 
 These affordances are locked by `tests/admin-mobile.test.mjs` so a future edit
 can't silently break phone usability.
+
+## Daily-use features (2026-07-06)
+
+Four convenience features layered on top of the MVP list/detail, all client-side
+over the anon key (RLS unchanged), all backed by pure helpers in
+`admin.logic.js` and tested in `admin.logic.test.mjs` + `admin.dom.test.mjs`:
+
+1. **Summary dashboard** — a strip above the filters (`#dashboard`) showing
+   today's orders + revenue, the count of `new` (unprocessed) orders, all-time
+   order count and non-cancelled revenue, plus a per-status breakdown.
+   `computeDashboardStats(orders, now)` aggregates a dedicated lightweight query
+   of all orders (`status,total_kgs,created_at`) so the numbers reflect the
+   whole table, independent of the list's filters/paging; `renderDashboard()`
+   renders it. Cancelled orders are excluded from revenue but still counted per
+   status. It refreshes after any status change and fails quietly (blank strip)
+   so it can never block the list.
+2. **Inline status change** — every list row's status cell is a colour-coded
+   `<select>` (`renderRowStatusSelect()`); changing it updates that order's
+   status via Supabase without opening the detail. Interacting with the select
+   never opens the row; on error the select reverts so the row never lies about
+   state.
+3. **New-order highlight + auto-refresh** — rows with status `new` get a
+   `.row-new` highlight. An **Автообновление** toggle (`#autoRefresh`, on by
+   default) re-pulls the list + summary every `AUTO_REFRESH_MS` (30s).
+   `shouldAutoRefresh({enabled,view,hidden,page})` gates it: only on the list
+   view, only when the tab is visible, and only on the first page — so it never
+   disrupts an open order detail or a manager who has paged through results.
+4. **WhatsApp with prefilled text** — the order detail adds **Отправить
+   подтверждение заказа**, a `wa.me` link (`customerWaTextLink()`) pre-filled
+   with a customer-facing confirmation message (`orderConfirmationText()`):
+   greeting, item lines, total, delivery address, and a request to confirm.
+
+New CSS (`.stat*`, `tr.row-new`, `select.row-status`, `.autorefresh`) and the
+new control ids (`dashboard`, `autoRefresh`, `listMsg`) are locked by
+`admin.dom.test.mjs`.
