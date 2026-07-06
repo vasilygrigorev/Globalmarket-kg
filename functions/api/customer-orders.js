@@ -114,79 +114,58 @@ async function supabaseSelect(env, table, query) {
 }
 
 export async function onRequestPost(context) {
-  // TEMPORARY diagnostics (2026-07-06): tracking down a raw edge 502 that
-  // only reproduces once this handler reaches the Supabase fetch. Remove
-  // once root-caused — see docs/api-orders.md.
+  const { request, env } = context;
+
+  if (!env.SUPABASE_URL || !env.SUPABASE_SERVICE_ROLE_KEY) {
+    return json({ ok: false, error: "backend_not_configured" }, 503);
+  }
+
+  let payload;
   try {
-    const { request, env } = context;
-    console.log("customer-orders: start");
+    payload = await request.json();
+  } catch {
+    return json({ ok: false, error: "invalid_json" }, 400);
+  }
 
-    if (!env.SUPABASE_URL || !env.SUPABASE_SERVICE_ROLE_KEY) {
-      return json({ ok: false, error: "backend_not_configured" }, 503);
-    }
+  const normalized = normalizeLookupRequest(payload);
+  if (normalized.error) {
+    return json({ ok: false, error: normalized.error }, 400);
+  }
 
-    let payload;
-    try {
-      payload = await request.json();
-    } catch {
-      return json({ ok: false, error: "invalid_json" }, 400);
-    }
-    console.log("customer-orders: payload parsed");
-
-    const normalized = normalizeLookupRequest(payload);
-    if (normalized.error) {
-      return json({ ok: false, error: normalized.error }, 400);
-    }
-    console.log("customer-orders: request normalized, calling supabase orders select");
-
-    let candidates;
-    try {
-      candidates = await supabaseSelect(
-        env,
-        "orders",
-        `select=id,created_at,status,total_kgs,customer_name,city,region,address,customer_comment,promo_code,lookup_code&customer_phone_digits=eq.${normalized.phoneDigits}&order=created_at.desc&limit=200`,
-      );
-      console.log("customer-orders: orders select ok, count=" + (Array.isArray(candidates) ? candidates.length : typeof candidates));
-    } catch (error) {
-      console.log("customer-orders: orders select threw: " + String((error && error.stack) || error));
-      return json({ ok: false, error: String((error && error.message) || error) }, 502);
-    }
+  try {
+    const candidates = await supabaseSelect(
+      env,
+      "orders",
+      `select=id,created_at,status,total_kgs,customer_name,city,region,address,customer_comment,promo_code,lookup_code&customer_phone_digits=eq.${normalized.phoneDigits}&order=created_at.desc&limit=200`,
+    );
 
     const verified = Array.isArray(candidates) && candidates.some((order) => matchesLookupCode(order, normalized.code));
     if (!verified) {
-      console.log("customer-orders: not verified, returning 404");
       // Same generic response whether the phone has zero orders or the code
       // was simply wrong — never confirm which.
       return json({ ok: false, error: "not_found" }, 404);
     }
 
     const orderIds = candidates.map((order) => order.id);
-    let items;
-    try {
-      items = orderIds.length
-        ? await supabaseSelect(
-            env,
-            "order_items",
-            `select=order_id,title_snapshot,brand_snapshot,unit_snapshot,qty,price_kgs,line_total_kgs,image_snapshot&order_id=in.(${orderIds.join(",")})`,
-          )
-        : [];
-      console.log("customer-orders: items select ok, count=" + (Array.isArray(items) ? items.length : typeof items));
-    } catch (error) {
-      console.log("customer-orders: items select threw: " + String((error && error.stack) || error));
-      return json({ ok: false, error: String((error && error.message) || error) }, 502);
-    }
+    const items = orderIds.length
+      ? await supabaseSelect(
+          env,
+          "order_items",
+          `select=order_id,title_snapshot,brand_snapshot,unit_snapshot,qty,price_kgs,line_total_kgs,image_snapshot&order_id=in.(${orderIds.join(",")})`,
+        )
+      : [];
     const itemsByOrder = groupItemsByOrderId(items);
 
-    console.log("customer-orders: building final response");
-    const responseBody = {
+    return json({
       ok: true,
       orders: candidates.map((order) => sanitizeOrderForCustomer(order, itemsByOrder.get(order.id))),
-    };
-    console.log("customer-orders: returning final response");
-    return json(responseBody);
+    });
   } catch (error) {
-    console.log("customer-orders: TOP LEVEL threw: " + String((error && error.stack) || error));
-    return json({ ok: false, error: "unexpected_error" }, 500);
+    // Not 502/504: Cloudflare's proxied custom domain intercepts gateway-class
+    // status codes and replaces the body with its own generic error page,
+    // discarding this JSON entirely (confirmed in production — see
+    // docs/api-orders.md "Customer order lookup" section).
+    return json({ ok: false, error: String((error && error.message) || error) }, 500);
   }
 }
 

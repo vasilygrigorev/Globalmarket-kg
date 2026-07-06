@@ -176,10 +176,13 @@ test("attribution + consent inserted when provided", async () => {
   assert.ok(tables.includes("customer_consents"));
 });
 
-test("502 fallback when orders insert fails", async () => {
+test("500 fallback when orders insert fails", async () => {
+  // Not 502/504: Cloudflare's proxied custom domain intercepts gateway-class
+  // status codes and replaces the body with its own generic error page (see
+  // docs/api-orders.md).
   installFetchMock({ orders: { ok: false, status: 500, body: { message: "boom" } } });
   const res = await onRequestPost(makeContext(goodOrder, FULL_ENV));
-  assert.equal(res.status, 502);
+  assert.equal(res.status, 500);
   const data = await res.json();
   assert.equal(data.ok, false);
   assert.equal(data.fallback, true);

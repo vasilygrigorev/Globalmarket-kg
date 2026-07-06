@@ -305,9 +305,13 @@ export async function onRequestPost(context) {
       email_notification: emailNotification,
     });
   } catch (error) {
+    // Not 502/504: Cloudflare's proxied custom domain intercepts gateway-class
+    // status codes and replaces the body with its own generic error page,
+    // discarding this JSON entirely (confirmed in production — see
+    // docs/api-orders.md).
     return json(
       { ok: false, fallback: true, error: String((error && error.message) || error) },
-      502,
+      500,
     );
   }
 }

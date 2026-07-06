@@ -74,8 +74,24 @@ deploy + `curl`, same as `/api/orders` needed before its own go-live.
 **Privileged step remaining (Codex/user):** apply
 `supabase/migrations/0002_customer_order_lookup.sql` (SQL editor or
 `supabase db push`, see `docs/supabase-setup.md`) before this endpoint can
-return real data — until then it 502s on the Supabase query (no such
-column). Same "stop-and-handoff" boundary as the rest of the Supabase setup.
+return real data — until then the Supabase query 400s (no such column) and
+this handler's own catch block turns that into a controlled `500` JSON error.
+Same "stop-and-handoff" boundary as the rest of the Supabase setup.
+
+**Cloudflare gotcha (fixed 2026-07-06):** both this endpoint's and
+`/api/orders`'s own error-catch responses originally used HTTP status `502`
+for "the Supabase call itself failed" — but on the proxied custom domain
+(`globalmarket.kg`, unlike a raw `*.pages.dev` deployment URL) Cloudflare's
+edge intercepts gateway-class status codes (502/504/etc.) from the origin and
+replaces the body with its own generic "error code: 502" page, discarding the
+JSON entirely, regardless of `content-type`. Diagnosed via
+`wrangler pages deployment tail` (which showed `outcome: "ok"`, no exception,
+proving the Worker itself ran fine) plus a differential test against the raw
+`*.pages.dev` URL for the same deployment, which returned the correct JSON
+body untouched. Fix: both handlers now return `500` instead of `502` for
+these recoverable, application-level errors. Lesson: never use `502`/`504` as
+a deliberate application status code behind a Cloudflare-proxied custom
+domain.
 
 To bring this online, follow the step-by-step
 [`backend-go-live-checklist.md`](backend-go-live-checklist.md) (Supabase →
