@@ -239,3 +239,19 @@ browser, no Supabase, no Cloudflare, no secrets.
   categories, and the top 20 in-stock/no-photo products by stock value in
   one place, backing `docs/photo-priority-list.md` and
   `docs/petya-shooting-request.md`. Syntax-checked in the preflight only.
+- `scripts/import_stock.py`'s `resolve_import_source_id()` +
+  `import-stock-identity.test.mjs` — the 1C item code, not the mutable raw
+  name, is the stable product identity across stock refreshes. Beyond the
+  existing `source_id()` unit test, this now builds a real temp sqlite DB
+  (import_stock.py's own schema) and calls `resolve_import_source_id()`
+  against it directly (2026-07-06 — the prior second test only regex-matched
+  the function's source text, never actually ran it): a legacy row whose
+  `source_id` predates the 1C-code scheme keeps that same id when its name
+  changes under the same code (photo/override never orphaned); a genuinely
+  new code gets a fresh `src_1c_<code>` id; if the same code is somehow
+  recorded under two legacy ids, the photographed one wins. Confirmed live
+  against the real `data/store.db` too: `audit_photo_mapping_integrity.py
+  --strict` shows 0 suspected lost mappings, and no row currently uses the
+  `src_1c_` id format yet (no fresh MXL import with a brand-new code has run
+  since the scheme shipped) — these tests are what actually exercise that
+  path today.

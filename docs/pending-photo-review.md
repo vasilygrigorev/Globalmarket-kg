@@ -6,6 +6,35 @@ confidence. Nothing here has been added to `data/product_overrides.json`
 or moved into a published `assets/products/<brand>/` folder. Raw files are
 left in place under `assets/products/` — do not delete.
 
+## NEW, UNIDENTIFIED 2026-07-06 — `telegram-8767964230-20260706-{102856,103856,104056}-*`
+
+A fresh batch landed on disk **during this local audit session**
+(timestamps 10:28-10:40 local time), while checking release readiness — not
+something this session went looking for. 9 complete-by-filename
+card-front/front/back groups, 27 files total:
+
+```text
+telegram-8767964230-20260706-102856-{01,02,03,04,05}-{card-front,front,back}.jpg  (5 products)
+telegram-8767964230-20260706-103856-{01,02,03}-{card-front,front,back}.jpg        (3 products)
+telegram-8767964230-20260706-104056-{card-front,front,back}.jpg                   (1 product)
+```
+
+**Not opened, not identified, not matched to any 1C stock item or
+`product_overrides.json` entry in this session** — this pass was scoped to
+readiness auditing and guardrail hardening, not photo identification, and
+"don't guess a product mapping" applies here exactly as it did for the
+YC/Dove batches above. Recorded here only so
+`scripts/report_raw_photo_groups.py --strict` (and the full preflight)
+correctly read this as "a known, pending batch" rather than failing with no
+context for the next session.
+
+**Next step:** a dedicated photo-identification pass (same pattern as the
+YC sunscreen batch in `290c609`/`b1ca708` or the Pantene/Lenor/TRESemmé
+schema-normalization batch in `b26262c`) — open each group, cross-reference
+brand/barcode/label text against `data/store.db` source_products by 1C
+`source_code` (not by name), and only add confidently-identified,
+complete 3-photo groups to `data/product_overrides.json`.
+
 ## RESOLVED 2026-07-05 — `telegram-8767964230-20260626-142813-next-2-03-*`
 
 Was ambiguous (back-label barcode read "YC852"/SPF50, but the tube design
