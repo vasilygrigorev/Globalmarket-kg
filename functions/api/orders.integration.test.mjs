@@ -82,6 +82,86 @@ test("happy path inserts orders then order_items and returns order_id + wa url",
   assert.equal(calls[0].options.headers.apikey, "service-role-test-key");
 });
 
+test("sends optional manager email when Resend is configured", async () => {
+  const calls = [];
+  globalThis.fetch = async (url, options) => {
+    const href = String(url);
+    const payload = JSON.parse(options.body);
+    if (href.includes("/rest/v1/")) {
+      const table = href.split("/rest/v1/")[1] || "";
+      calls.push({ type: "supabase", table, options, payload });
+      return {
+        ok: true,
+        status: 200,
+        json: async () => (table === "orders" ? [{ id: "uuid-order-email" }] : []),
+        text: async () => "{}",
+      };
+    }
+    calls.push({ type: "email", url: href, options, payload });
+    return {
+      ok: true,
+      status: 200,
+      json: async () => ({ id: "email-1" }),
+      text: async () => "{}",
+    };
+  };
+
+  const res = await onRequestPost(makeContext(goodOrder, {
+    ...FULL_ENV,
+    RESEND_API_KEY: "re_test_key",
+    ORDER_EMAIL_TO: "orders@globalmarket.kg",
+    ORDER_EMAIL_FROM: "Global Market KG <orders@globalmarket.kg>",
+  }));
+  assert.equal(res.status, 200);
+  const data = await res.json();
+  assert.equal(data.ok, true);
+  assert.equal(data.email_notification.sent, true);
+
+  const emailCall = calls.find((c) => c.type === "email");
+  assert.equal(emailCall.url, "https://api.resend.com/emails");
+  assert.equal(emailCall.options.headers.authorization, "Bearer re_test_key");
+  assert.deepEqual(emailCall.payload.to, ["orders@globalmarket.kg"]);
+  assert.match(emailCall.payload.subject, /Новый заказ Global Market KG/);
+  assert.match(emailCall.payload.text, /Итого: 1 100 с/);
+});
+
+test("email failure does not block saved order or WhatsApp response", async () => {
+  const calls = [];
+  globalThis.fetch = async (url, options) => {
+    const href = String(url);
+    const payload = JSON.parse(options.body);
+    if (href.includes("/rest/v1/")) {
+      const table = href.split("/rest/v1/")[1] || "";
+      calls.push({ type: "supabase", table, options, payload });
+      return {
+        ok: true,
+        status: 200,
+        json: async () => (table === "orders" ? [{ id: "uuid-order-email-fail" }] : []),
+        text: async () => "{}",
+      };
+    }
+    calls.push({ type: "email", url: href, options, payload });
+    return {
+      ok: false,
+      status: 500,
+      json: async () => ({ message: "mail down" }),
+      text: async () => "mail down",
+    };
+  };
+
+  const res = await onRequestPost(makeContext(goodOrder, {
+    ...FULL_ENV,
+    RESEND_API_KEY: "re_test_key",
+  }));
+  assert.equal(res.status, 200);
+  const data = await res.json();
+  assert.equal(data.ok, true);
+  assert.equal(data.email_notification.attempted, true);
+  assert.equal(data.email_notification.sent, false);
+  assert.equal(data.email_notification.reason, "send_failed");
+  assert.match(data.manager_whatsapp_url, /^https:\/\/wa\.me\//);
+});
+
 test("attribution + consent inserted when provided", async () => {
   const calls = installFetchMock({ orders: { ok: true, body: [{ id: "o1" }] } });
   const body = {

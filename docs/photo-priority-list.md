@@ -5,11 +5,14 @@ Snapshot after commit `b26262c` (legacy override schema normalization). Run
 `python3 scripts/report_photo_priority.py`) for a fresh number any time —
 this file is a snapshot, not a live report.
 
-Current coverage: **167/529 = 31.6%** (was 150/529 — 17 new products from a
-second live 2026-07-06 Petya batch found in `assets/telegram_inbox/`: 5
-Rexona sticks, 1 Dove Men stick, 6 BIC disposable razors, 5 Gillette/Venus
-razors and cartridges, see `docs/pending-photo-review.md` for the full
-identification trail). From here on, closing the remaining gap needs real
+Current coverage: **173/529 = 32.7%** (was 167/529 — a full audit of the
+entire `assets/telegram_inbox/` archive, 74 folders/764 files back to
+2026-06-02, found 6 more genuinely new products: H&S Cool Menthol, 3 Skin
+Doctor sunscreens, and 2 Dove sprays whose card-front and front/back came
+from two different Petya batches. See `docs/pending-photo-review.md`
+"FULL ARCHIVE AUDIT" section for the full trail, including 2 products with
+a ready photo but zero current stock, and a dozen more needing one
+additional photo). From here on, closing the remaining gap needs real
 new photos.
 
 ## Priority 0 — fix these first, they're almost done

@@ -10,6 +10,9 @@
 //   SUPABASE_URL                e.g. https://xxxx.supabase.co
 //   SUPABASE_SERVICE_ROLE_KEY   service role key (bypasses RLS) — server only
 //   MANAGER_WHATSAPP            optional, digits only, e.g. 996706771103
+//   RESEND_API_KEY              optional; when set, sends manager email copy
+//   ORDER_EMAIL_TO              optional; defaults to orders@globalmarket.kg
+//   ORDER_EMAIL_FROM            optional; defaults to Global Market KG <orders@globalmarket.kg>
 //
 // Pure helpers (normalizeOrderPayload, buildManagerUrl, …) are exported for
 // unit testing — see functions/api/orders.test.mjs. See docs/api-orders.md.
@@ -47,6 +50,91 @@ export function buildManagerUrl(managerWhatsapp, message) {
   return message
     ? `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
     : `https://wa.me/${phone}`;
+}
+
+function formatKgs(value) {
+  return `${Math.round(num(value)).toLocaleString("ru-RU").replace(/\u00a0/g, " ")} с`;
+}
+
+export function buildOrderEmail(normalized, orderId) {
+  const order = normalized.order;
+  const lines = [
+    `Новый заказ Global Market KG${orderId ? ` #${orderId}` : ""}`,
+    "",
+    "Клиент:",
+    `Имя: ${order.customer_name || "не указано"}`,
+    `Телефон/WhatsApp: ${order.customer_phone || "не указано"}`,
+    `Город: ${order.city || "не указано"}`,
+    `Регион: ${order.region || "не указано"}`,
+    `Адрес: ${order.address || "не указано"}`,
+    `Комментарий: ${order.customer_comment || "не указано"}`,
+    "",
+    "Товары:",
+    ...normalized.items.map((item, index) => {
+      const title = item.title_snapshot || item.product_id || `Товар ${index + 1}`;
+      return `${index + 1}. ${title} — ${item.qty} x ${formatKgs(item.price_kgs)} = ${formatKgs(item.line_total_kgs)}`;
+    }),
+    "",
+    `Итого: ${formatKgs(order.total_kgs)}`,
+    "",
+    "Маркетинг:",
+    `Откуда узнали: ${order.customer_source || "не указано"}`,
+    `Промокод/код: ${order.promo_code || "не указано"}`,
+  ];
+
+  if (normalized.attribution) {
+    lines.push(
+      `utm_source: ${normalized.attribution.utm_source || "не указано"}`,
+      `utm_medium: ${normalized.attribution.utm_medium || "не указано"}`,
+      `utm_campaign: ${normalized.attribution.utm_campaign || "не указано"}`,
+      `utm_content: ${normalized.attribution.utm_content || "не указано"}`,
+      `referrer: ${normalized.attribution.referrer || "не указано"}`,
+    );
+  }
+
+  if (normalized.consent) {
+    lines.push("", `Согласие на обратную связь: ${normalized.consent.is_granted ? "да" : "нет"}`);
+  }
+
+  if (order.whatsapp_message) {
+    lines.push("", "WhatsApp-сообщение:", order.whatsapp_message);
+  }
+
+  return {
+    subject: `Новый заказ Global Market KG — ${formatKgs(order.total_kgs)}`,
+    text: lines.join("\n"),
+  };
+}
+
+async function sendOrderEmail(env, normalized, orderId) {
+  if (!env.RESEND_API_KEY) {
+    return { attempted: false, sent: false, reason: "email_not_configured" };
+  }
+
+  const to = str(env.ORDER_EMAIL_TO, 300) || "orders@globalmarket.kg";
+  const from = str(env.ORDER_EMAIL_FROM, 300) || "Global Market KG <orders@globalmarket.kg>";
+  const email = buildOrderEmail(normalized, orderId);
+
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      authorization: `Bearer ${env.RESEND_API_KEY}`,
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      from,
+      to: [to],
+      subject: email.subject,
+      text: email.text,
+    }),
+  });
+
+  if (!res.ok) {
+    const detail = await res.text().catch(() => "");
+    throw new Error(`Email send failed: ${res.status} ${detail}`);
+  }
+
+  return { attempted: true, sent: true };
 }
 
 // Pure: validate + normalize an incoming order payload.
@@ -186,11 +274,22 @@ export async function onRequestPost(context) {
       await supabaseInsert(env, "customer_consents", { ...normalized.consent, order_id: orderId });
     }
 
+    let emailNotification = { attempted: false, sent: false, reason: "email_not_configured" };
+    try {
+      emailNotification = await sendOrderEmail(env, normalized, orderId);
+    } catch (emailError) {
+      // Email is a manager convenience copy. It must never block saved orders
+      // or the customer's WhatsApp flow.
+      console.error("Order email notification failed", emailError);
+      emailNotification = { attempted: true, sent: false, reason: "send_failed" };
+    }
+
     return json({
       ok: true,
       order_id: orderId,
       status: "new",
       manager_whatsapp_url: buildManagerUrl(env.MANAGER_WHATSAPP, normalized.order.whatsapp_message),
+      email_notification: emailNotification,
     });
   } catch (error) {
     return json(

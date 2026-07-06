@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 167,
+  "count": 173,
   "pages": [
     {
       "id": "prd_d0bc9026f5ab",
@@ -889,6 +889,21 @@
       "relatedCount": 24
     },
     {
+      "id": "prd_e7e45d64df8b",
+      "slug": "head-shoulders-cool-menthol-shampun-650-ml-64df8b",
+      "path": "/product/head-shoulders-cool-menthol-shampun-650-ml-64df8b/",
+      "url": "https://globalmarket.kg/product/head-shoulders-cool-menthol-shampun-650-ml-64df8b/",
+      "title": "Head & Shoulders Cool Menthol шампунь 650 мл",
+      "brand": "Head & Shoulders",
+      "category": "Уход за волосами",
+      "categoryId": "hair",
+      "collections": [],
+      "retailPriceKgs": 795,
+      "image": "/assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
       "id": "prd_01077bb33667",
       "slug": "tresemm-silky-smooth-shampun-828-ml-b33667",
       "path": "/product/tresemm-silky-smooth-shampun-828-ml-b33667/",
@@ -991,7 +1006,7 @@
       "retailPriceKgs": 550,
       "image": "/assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 12
     },
     {
       "id": "prd_b1d27dff5c3e",
@@ -1006,7 +1021,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/yc/yc-sunscreen-spf50-100g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 12
     },
     {
       "id": "prd_8f967f2becb0",
@@ -1021,7 +1036,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/yc/yc-sunscreen-spf60-100g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 12
     },
     {
       "id": "prd_f50077a08461",
@@ -1036,7 +1051,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 12
     },
     {
       "id": "prd_45b58a935040",
@@ -1051,7 +1066,52 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_418f9f481516",
+      "slug": "skin-doctor-facial-sunscreen-spf60-sprey-100-ml-481516",
+      "path": "/product/skin-doctor-facial-sunscreen-spf60-sprey-100-ml-481516/",
+      "url": "https://globalmarket.kg/product/skin-doctor-facial-sunscreen-spf60-sprey-100-ml-481516/",
+      "title": "Skin Doctor Facial Sunscreen SPF60+ спрей, 100 мл",
+      "brand": "Skin Doctor",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 350,
+      "image": "/assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_91d95a5103ac",
+      "slug": "skin-doctor-face-body-sun-cream-spf50-150-g-5103ac",
+      "path": "/product/skin-doctor-face-body-sun-cream-spf50-150-g-5103ac/",
+      "url": "https://globalmarket.kg/product/skin-doctor-face-body-sun-cream-spf50-150-g-5103ac/",
+      "title": "Skin Doctor Face & Body Sun Cream SPF50, 150 г",
+      "brand": "Skin Doctor",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 350,
+      "image": "/assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_23e9c6bb855b",
+      "slug": "skin-doctor-face-body-moisturizing-sunblock-spf60-170-g-bb855b",
+      "path": "/product/skin-doctor-face-body-moisturizing-sunblock-spf60-170-g-bb855b/",
+      "url": "https://globalmarket.kg/product/skin-doctor-face-body-moisturizing-sunblock-spf60-170-g-bb855b/",
+      "title": "Skin Doctor Face & Body Moisturizing Sunblock SPF60, 170 г",
+      "brand": "Skin Doctor",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 300,
+      "image": "/assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
     },
     {
       "id": "prd_0b8a7c8dea63",
@@ -1066,7 +1126,37 @@
       "retailPriceKgs": 350,
       "image": "/assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_f23090eb2627",
+      "slug": "dove-go-fresh-apple-white-tea-sprey-dezodorant-250-ml-eb2627",
+      "path": "/product/dove-go-fresh-apple-white-tea-sprey-dezodorant-250-ml-eb2627/",
+      "url": "https://globalmarket.kg/product/dove-go-fresh-apple-white-tea-sprey-dezodorant-250-ml-eb2627/",
+      "title": "Dove go fresh Apple & White Tea спрей-дезодорант, 250 мл",
+      "brand": "Dove",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/dove/dove-go-fresh-apple-white-tea-250ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
+    },
+    {
+      "id": "prd_b8b5bfec07e5",
+      "slug": "dove-advanced-care-original-sprey-dezodorant-250-ml-ec07e5",
+      "path": "/product/dove-advanced-care-original-sprey-dezodorant-250-ml-ec07e5/",
+      "url": "https://globalmarket.kg/product/dove-advanced-care-original-sprey-dezodorant-250-ml-ec07e5/",
+      "title": "Dove Advanced Care Original спрей-дезодорант, 250 мл",
+      "brand": "Dove",
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "retailPriceKgs": 450,
+      "image": "/assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 12
     },
     {
       "id": "prd_d3c195668843",
@@ -1081,7 +1171,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 12
     },
     {
       "id": "prd_96fe6b1c7d9c",
@@ -1096,7 +1186,7 @@
       "retailPriceKgs": 295,
       "image": "/assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 7
+      "relatedCount": 12
     },
     {
       "id": "prd_1cb756e99bac",

@@ -1,5 +1,5 @@
 {
-  "count": 37,
+  "count": 38,
   "pages": [
     {
       "type": "category",
@@ -47,7 +47,7 @@
       "url": "https://globalmarket.kg/category/hair/",
       "count": 98,
       "seoTerms": [],
-      "shown": 29
+      "shown": 30
     },
     {
       "type": "category",
@@ -62,7 +62,7 @@
         "мыло для рук",
         "хозяйственное мыло"
       ],
-      "shown": 8
+      "shown": 13
     },
     {
       "type": "category",
@@ -175,7 +175,7 @@
         "товары Dove",
         "Dove купить Бишкек"
       ],
-      "shown": 10
+      "shown": 12
     },
     {
       "type": "brand",
@@ -361,6 +361,20 @@
     },
     {
       "type": "brand",
+      "slug": "head-shoulders",
+      "title": "Head & Shoulders",
+      "path": "/brand/head-shoulders/",
+      "url": "https://globalmarket.kg/brand/head-shoulders/",
+      "count": 8,
+      "seoTerms": [
+        "Head & Shoulders",
+        "товары Head & Shoulders",
+        "Head & Shoulders купить Бишкек"
+      ],
+      "shown": 7
+    },
+    {
+      "type": "brand",
       "slug": "attar-collection",
       "title": "Attar Collection",
       "path": "/brand/attar-collection/",
@@ -372,20 +386,6 @@
         "Attar Collection купить Бишкек"
       ],
       "shown": 7
-    },
-    {
-      "type": "brand",
-      "slug": "head-shoulders",
-      "title": "Head & Shoulders",
-      "path": "/brand/head-shoulders/",
-      "url": "https://globalmarket.kg/brand/head-shoulders/",
-      "count": 7,
-      "seoTerms": [
-        "Head & Shoulders",
-        "товары Head & Shoulders",
-        "Head & Shoulders купить Бишкек"
-      ],
-      "shown": 6
     },
     {
       "type": "brand",
@@ -454,6 +454,20 @@
         "Comfort",
         "товары Comfort",
         "Comfort купить Бишкек"
+      ],
+      "shown": 4
+    },
+    {
+      "type": "brand",
+      "slug": "skin-doctor",
+      "title": "Skin Doctor",
+      "path": "/brand/skin-doctor/",
+      "url": "https://globalmarket.kg/brand/skin-doctor/",
+      "count": 4,
+      "seoTerms": [
+        "Skin Doctor",
+        "товары Skin Doctor",
+        "Skin Doctor купить Бишкек"
       ],
       "shown": 4
     },

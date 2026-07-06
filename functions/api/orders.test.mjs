@@ -7,6 +7,7 @@ import assert from "node:assert/strict";
 import {
   normalizeOrderPayload,
   buildManagerUrl,
+  buildOrderEmail,
   num,
   str,
   digitsOnly,
@@ -86,6 +87,24 @@ test("buildManagerUrl uses default phone and encodes message", () => {
   const url = buildManagerUrl(undefined, "привет мир");
   assert.ok(url.startsWith(`https://wa.me/${DEFAULT_MANAGER_WHATSAPP}?text=`));
   assert.ok(url.includes(encodeURIComponent("привет мир")));
+});
+
+test("buildOrderEmail creates readable manager copy", () => {
+  const normalized = normalizeOrderPayload({
+    customer: { name: "Айгуль", phone: "996700000000", city: "Бишкек" },
+    items: [{ title: "Dove дезодорант", qty: 2, price_kgs: 395 }],
+    customer_source: "Instagram",
+    promo_code: "STORY10",
+    attribution: { utm_source: "instagram", utm_campaign: "dove" },
+    consent: { is_granted: false },
+  });
+  const email = buildOrderEmail(normalized, "order-1");
+  assert.match(email.subject, /Новый заказ Global Market KG/);
+  assert.match(email.text, /Имя: Айгуль/);
+  assert.match(email.text, /Dove дезодорант/);
+  assert.match(email.text, /Итого: 790 с/);
+  assert.match(email.text, /utm_source: instagram/);
+  assert.match(email.text, /Согласие на обратную связь: нет/);
 });
 
 test("helpers: num/str/digitsOnly", () => {

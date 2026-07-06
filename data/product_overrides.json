@@ -584,6 +584,24 @@
     "short_title": "Dove Pomegranate 40 г",
     "unit": "40 г"
   },
+  "prd_23e9c6bb855b": {
+    "brand": "Skin Doctor",
+    "category_id": "body",
+    "clean_title": "Skin Doctor Face & Body Moisturizing Sunblock SPF60, 170 г",
+    "description": "Солнцезащитный увлажняющий крем Skin Doctor для лица и тела, SPF60, с витамином E. Объём 170 г. Солнцезащитка, крем, для тела.",
+    "galleryImages": [
+      "assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-card-front.jpg",
+      "assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-front.jpg",
+      "assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-back.jpg"
+    ],
+    "image": "assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из архива Пети (assets/telegram_inbox/telegram-8767964230-20260626-142813-next-2), обнаружено при полном аудите telegram_inbox; товар опознан по коду SD 622 и штрихкоду 8858546012 54, совпадает с 1C кодом (С/З DS (SD-622)SPF60 (170) голуб)."
+    ],
+    "product_type": "солнцезащитный крем",
+    "short_title": "Skin Doctor SD-622 SPF60 170 г",
+    "unit": "170 г"
+  },
   "prd_24cef17d3d9a": {
     "brand": "Dove",
     "category_id": "body",
@@ -844,6 +862,24 @@
     ],
     "product_type": "концентрированный кондиционер для белья",
     "short_title": "Downy Rose Garden 1 л"
+  },
+  "prd_418f9f481516": {
+    "brand": "Skin Doctor",
+    "category_id": "body",
+    "clean_title": "Skin Doctor Facial Sunscreen SPF60+ спрей, 100 мл",
+    "description": "Солнцезащитный спрей для лица Skin Doctor, SPF60+ PA++++, лёгкая нежирная формула. Объём 100 мл. Солнцезащитка, спрей, для тела.",
+    "galleryImages": [
+      "assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-card-front.jpg",
+      "assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-front.jpg",
+      "assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-back.jpg"
+    ],
+    "image": "assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из архива Пети (assets/telegram_inbox/telegram-8767964230-20260626-142813-next-2), обнаружено при полном аудите telegram_inbox; товар опознан по коду SD-SS-F60P100 на этикетке, совпадает с 1C кодом (С/З DS (SD-SS-F60P100)SPF60 (100) Spray)."
+    ],
+    "product_type": "солнцезащитный спрей",
+    "short_title": "Skin Doctor Facial SPF60+ 100 мл",
+    "unit": "100 мл"
   },
   "prd_41aae31f87a5": {
     "brand": "Cussons",
@@ -1915,6 +1951,24 @@
     "title": "Jif Lemon чистящий крем 500 мл",
     "unit": "500 мл"
   },
+  "prd_91d95a5103ac": {
+    "brand": "Skin Doctor",
+    "category_id": "body",
+    "clean_title": "Skin Doctor Face & Body Sun Cream SPF50, 150 г",
+    "description": "Солнцезащитный крем Skin Doctor для лица и тела, SPF50, с витамином E и алоэ вера. Объём 150 г. Солнцезащитка, крем, для тела.",
+    "galleryImages": [
+      "assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-card-front.jpg",
+      "assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-front.jpg",
+      "assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-back.jpg"
+    ],
+    "image": "assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из архива Пети (assets/telegram_inbox/telegram-8767964230-20260626-142813-next-2), обнаружено при полном аудите telegram_inbox; товар опознан по коду SD 665 на этикетке (150 г), совпадает с 1C кодом (С/З DS (SD-665)SPF50 (150gr))."
+    ],
+    "product_type": "солнцезащитный крем",
+    "short_title": "Skin Doctor SD-665 SPF50 150 г",
+    "unit": "150 г"
+  },
   "prd_9499434568a7": {
     "brand": "Head & Shoulders",
     "category_id": "hair",
@@ -2323,6 +2377,24 @@
       "#c48922"
     ],
     "unit": "шт"
+  },
+  "prd_b8b5bfec07e5": {
+    "brand": "Dove",
+    "category_id": "body",
+    "clean_title": "Dove Advanced Care Original спрей-дезодорант, 250 мл",
+    "description": "Спрей-антиперспирант Dove Advanced Care Original с технологией тройного увлажнения, защита 72 часа. Объём 250 мл.",
+    "galleryImages": [
+      "assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg",
+      "assets/products/dove/dove-advanced-care-original-250ml-front.jpg",
+      "assets/products/dove/dove-advanced-care-original-250ml-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото собрано из двух партий Пети при полном аудите telegram_inbox — card-front из assets/telegram_inbox/telegram-8767964230-20260626-142813-next-2, front/back из более ранней assets/telegram_inbox/telegram-989425384-20260703-160531 (см. docs/pending-photo-review.md, ранее не хватало card-front); товар опознан по штрихкоду 250мл, совпадает с 1C кодом (Dove Body Spray (250) Original)."
+    ],
+    "product_type": "спрей-дезодорант",
+    "short_title": "Dove Advanced Care Original 250 мл",
+    "unit": "250 мл"
   },
   "prd_bc63389835c9": {
     "brand": "Arm & Hammer",
@@ -2898,6 +2970,24 @@
     "short_title": "AXE Intense 122 мл",
     "unit": "122 мл"
   },
+  "prd_e7e45d64df8b": {
+    "brand": "Head & Shoulders",
+    "category_id": "hair",
+    "clean_title": "Head & Shoulders Cool Menthol шампунь 650 мл",
+    "description": "Шампунь против перхоти Head & Shoulders Cool Menthol с ментолом, освежает и очищает кожу головы, до 100% защиты от перхоти. Объём 650 мл.",
+    "galleryImages": [
+      "assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-card-front.jpg",
+      "assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-front.jpg",
+      "assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-back.jpg"
+    ],
+    "image": "assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из архива Пети (assets/telegram_inbox/telegram-8767964230-20260619-110800), обнаружено при полном аудите telegram_inbox; товар опознан по названию и штрихкоду 4987176072849, совпадает с 1C кодом 169 (H&S Шампунь (650ml) Menthol)."
+    ],
+    "product_type": "шампунь",
+    "short_title": "H&S Cool Menthol 650 мл",
+    "unit": "650 мл"
+  },
   "prd_e82e0719de28": {
     "badge": "Sunsilk",
     "brand": "Sunsilk",
@@ -3075,6 +3165,24 @@
     ],
     "product_type": "гель для стирки",
     "short_title": "Persil Rose 3 л"
+  },
+  "prd_f23090eb2627": {
+    "brand": "Dove",
+    "category_id": "body",
+    "clean_title": "Dove go fresh Apple & White Tea спрей-дезодорант, 250 мл",
+    "description": "Спрей-дезодорант Dove go fresh с ароматом яблока и белого чая, увлажняющий крем, защита 48 часов. Объём 250 мл.",
+    "galleryImages": [
+      "assets/products/dove/dove-go-fresh-apple-white-tea-250ml-card-front.jpg",
+      "assets/products/dove/dove-go-fresh-apple-white-tea-250ml-front.jpg",
+      "assets/products/dove/dove-go-fresh-apple-white-tea-250ml-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-go-fresh-apple-white-tea-250ml-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото собрано из двух партий Пети при полном аудите telegram_inbox — card-front из assets/telegram_inbox/telegram-8767964230-20260626-142813-next-2, front/back из более ранней assets/telegram_inbox/telegram-989425384-20260703-160531 (см. docs/pending-photo-review.md, ранее не хватало card-front); товар опознан по названию \"apple & white tea scent\" на этикетке, совпадает с 1C кодом (Dove Body Spray (250) Go Fresh Apple)."
+    ],
+    "product_type": "спрей-дезодорант",
+    "short_title": "Dove Apple & White Tea 250 мл",
+    "unit": "250 мл"
   },
   "prd_f3ed12b53668": {
     "brand": "Colgate",

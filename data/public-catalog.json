@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T08:43:09.917149+00:00",
+  "generatedAt": "2026-07-06T10:47:25.156948+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -3337,28 +3337,32 @@
     },
     {
       "unit": "шт",
-      "badge": "H&S",
+      "badge": "Head & Shoulders",
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-card-front.jpg",
+        "assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-front.jpg",
+        "assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_e7e45d64df8b",
       "tones": [
         "#f4d5df",
         "#b66f91"
       ],
-      "image": null,
+      "image": "assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 771,
-      "description": "H&S: средство для ухода за волосами на каждый день. Формат: 650 ml, 650ml.",
-      "title": "H&S Шампунь (650ml) Menthol",
+      "description": "Шампунь против перхоти Head & Shoulders Cool Menthol с ментолом, освежает и очищает кожу головы, до 100% защиты от перхоти. Объём 650 мл.",
+      "title": "Head & Shoulders Cool Menthol шампунь 650 мл",
       "productType": "шампунь",
-      "brand": "H&S",
+      "brand": "Head & Shoulders",
       "rating": 4.8,
-      "searchText": "h&s шампунь (650ml) menthol уход за волосами h&s шампунь h&s: средство для ухода за волосами на каждый день. формат: 650 ml, 650ml."
+      "searchText": "head & shoulders cool menthol шампунь 650 мл уход за волосами head & shoulders шампунь шампунь против перхоти head & shoulders cool menthol с ментолом, освежает и очищает кожу головы, до 100% защиты от перхоти. объём 650 мл."
     },
     {
       "unit": "шт",
@@ -4755,28 +4759,32 @@
     },
     {
       "unit": "шт",
-      "badge": "С",
+      "badge": "Skin Doctor",
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-card-front.jpg",
+        "assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-front.jpg",
+        "assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_418f9f481516",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 339,
-      "description": "С: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "С/З DS (SD-SS-F60P100)SPF60 (100) Spray",
-      "productType": "уход за телом",
-      "brand": "С",
+      "description": "Солнцезащитный спрей для лица Skin Doctor, SPF60+ PA++++, лёгкая нежирная формула. Объём 100 мл. Солнцезащитка, спрей, для тела.",
+      "title": "Skin Doctor Facial Sunscreen SPF60+ спрей, 100 мл",
+      "productType": "солнцезащитный спрей",
+      "brand": "Skin Doctor",
       "rating": 4.8,
-      "searchText": "с/з ds (sd-ss-f60p100)spf60 (100) spray уход за телом с уход за телом с: средство для ухода за кожей и ежедневной гигиены."
+      "searchText": "skin doctor facial sunscreen spf60+ спрей, 100 мл уход за телом skin doctor солнцезащитный спрей солнцезащитный спрей для лица skin doctor, spf60+ pa++++, лёгкая нежирная формула. объём 100 мл. солнцезащитка, спрей, для тела."
     },
     {
       "unit": "шт",
@@ -4827,6 +4835,35 @@
       "brand": "С",
       "rating": 4.8,
       "searchText": "с/з ds (sd-183/2)spf80 (125)box уход за телом с уход за телом с: средство для ухода за кожей и ежедневной гигиены."
+    },
+    {
+      "unit": "шт",
+      "badge": "Skin Doctor",
+      "retailPriceKgs": 350,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-card-front.jpg",
+        "assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-front.jpg",
+        "assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_91d95a5103ac",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": "assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-card-front.jpg",
+      "icon": "🌸",
+      "registeredPriceKgs": 339,
+      "description": "Солнцезащитный крем Skin Doctor для лица и тела, SPF50, с витамином E и алоэ вера. Объём 150 г. Солнцезащитка, крем, для тела.",
+      "title": "Skin Doctor Face & Body Sun Cream SPF50, 150 г",
+      "productType": "солнцезащитный крем",
+      "brand": "Skin Doctor",
+      "rating": 4.8,
+      "searchText": "skin doctor face & body sun cream spf50, 150 г уход за телом skin doctor солнцезащитный крем солнцезащитный крем skin doctor для лица и тела, spf50, с витамином e и алоэ вера. объём 150 г. солнцезащитка, крем, для тела."
     },
     {
       "unit": "шт",
@@ -4905,31 +4942,6 @@
     },
     {
       "unit": "шт",
-      "badge": "С",
-      "retailPriceKgs": 350,
-      "category": "Уход за телом",
-      "categoryId": "body",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_91d95a5103ac",
-      "tones": [
-        "#f2d9c7",
-        "#c7876a"
-      ],
-      "image": null,
-      "icon": "🌸",
-      "registeredPriceKgs": 339,
-      "description": "С: средство для ухода за кожей и ежедневной гигиены. Формат: 150 g.",
-      "title": "С/З DS (SD-665)SPF50 (150gr)",
-      "productType": "уход за телом",
-      "brand": "С",
-      "rating": 4.8,
-      "searchText": "с/з ds (sd-665)spf50 (150gr) уход за телом с уход за телом с: средство для ухода за кожей и ежедневной гигиены. формат: 150 g."
-    },
-    {
-      "unit": "шт",
       "badge": "Dove",
       "retailPriceKgs": 495,
       "category": "Уход за телом",
@@ -4980,28 +4992,32 @@
     },
     {
       "unit": "шт",
-      "badge": "С",
+      "badge": "Skin Doctor",
       "retailPriceKgs": 300,
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-card-front.jpg",
+        "assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-front.jpg",
+        "assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_23e9c6bb855b",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 291,
-      "description": "С: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "С/З DS (SD-622)SPF60 (170) голуб",
-      "productType": "уход за телом",
-      "brand": "С",
+      "description": "Солнцезащитный увлажняющий крем Skin Doctor для лица и тела, SPF60, с витамином E. Объём 170 г. Солнцезащитка, крем, для тела.",
+      "title": "Skin Doctor Face & Body Moisturizing Sunblock SPF60, 170 г",
+      "productType": "солнцезащитный крем",
+      "brand": "Skin Doctor",
       "rating": 4.8,
-      "searchText": "с/з ds (sd-622)spf60 (170) голуб уход за телом с уход за телом с: средство для ухода за кожей и ежедневной гигиены."
+      "searchText": "skin doctor face & body moisturizing sunblock spf60, 170 г уход за телом skin doctor солнцезащитный крем солнцезащитный увлажняющий крем skin doctor для лица и тела, spf60, с витамином e. объём 170 г. солнцезащитка, крем, для тела."
     },
     {
       "unit": "шт",
@@ -5140,22 +5156,55 @@
       "categoryId": "body",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/dove/dove-go-fresh-apple-white-tea-250ml-card-front.jpg",
+        "assets/products/dove/dove-go-fresh-apple-white-tea-250ml-front.jpg",
+        "assets/products/dove/dove-go-fresh-apple-white-tea-250ml-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_f23090eb2627",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/dove/dove-go-fresh-apple-white-tea-250ml-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 436,
-      "description": "Dove: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "Dove Body Spray (250) Go Fresh Apple",
-      "productType": "уход за телом",
+      "description": "Спрей-дезодорант Dove go fresh с ароматом яблока и белого чая, увлажняющий крем, защита 48 часов. Объём 250 мл.",
+      "title": "Dove go fresh Apple & White Tea спрей-дезодорант, 250 мл",
+      "productType": "спрей-дезодорант",
       "brand": "Dove",
       "rating": 4.8,
-      "searchText": "dove body spray (250) go fresh apple уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
+      "searchText": "dove go fresh apple & white tea спрей-дезодорант, 250 мл уход за телом dove спрей-дезодорант спрей-дезодорант dove go fresh с ароматом яблока и белого чая, увлажняющий крем, защита 48 часов. объём 250 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Dove",
+      "retailPriceKgs": 450,
+      "category": "Уход за телом",
+      "categoryId": "body",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg",
+        "assets/products/dove/dove-advanced-care-original-250ml-front.jpg",
+        "assets/products/dove/dove-advanced-care-original-250ml-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_b8b5bfec07e5",
+      "tones": [
+        "#f2d9c7",
+        "#c7876a"
+      ],
+      "image": "assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg",
+      "icon": "🌸",
+      "registeredPriceKgs": 436,
+      "description": "Спрей-антиперспирант Dove Advanced Care Original с технологией тройного увлажнения, защита 72 часа. Объём 250 мл.",
+      "title": "Dove Advanced Care Original спрей-дезодорант, 250 мл",
+      "productType": "спрей-дезодорант",
+      "brand": "Dove",
+      "rating": 4.8,
+      "searchText": "dove advanced care original спрей-дезодорант, 250 мл уход за телом dove спрей-дезодорант спрей-антиперспирант dove advanced care original с технологией тройного увлажнения, защита 72 часа. объём 250 мл."
     },
     {
       "unit": "шт",
@@ -5260,31 +5309,6 @@
       "brand": "Dove",
       "rating": 4.8,
       "searchText": "dove body spray (250) invisible dry уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
-    },
-    {
-      "unit": "шт",
-      "badge": "Dove",
-      "retailPriceKgs": 450,
-      "category": "Уход за телом",
-      "categoryId": "body",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_b8b5bfec07e5",
-      "tones": [
-        "#f2d9c7",
-        "#c7876a"
-      ],
-      "image": null,
-      "icon": "🌸",
-      "registeredPriceKgs": 436,
-      "description": "Dove: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "Dove Body Spray (250) Original",
-      "productType": "уход за телом",
-      "brand": "Dove",
-      "rating": 4.8,
-      "searchText": "dove body spray (250) original уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
     },
     {
       "unit": "шт",

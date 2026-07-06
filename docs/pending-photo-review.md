@@ -6,6 +6,92 @@ confidence. Nothing here has been added to `data/product_overrides.json`
 or moved into a published `assets/products/<brand>/` folder. Raw files are
 left in place under `assets/products/` — do not delete.
 
+## FULL ARCHIVE AUDIT 2026-07-06 (evening) — `assets/telegram_inbox/` (74 folders, 764 files, 2026-06-02 → 2026-07-06)
+
+The user reported that not all photos Petya sent had made it to the site.
+Investigation found that the entire `assets/telegram_inbox/` directory is
+**gitignored** (`.gitignore` line `assets/telegram_inbox/`), so `git status`
+never surfaces it and it had never been audited as a whole — only individual
+folders that someone happened to browse to by hand in past sessions. The
+existing coverage scripts (`report_raw_photo_groups.py`,
+`report_photo_coverage.py`) also only scan `assets/products/`, not
+`assets/telegram_inbox/`, so this backlog was invisible to every automated
+check.
+
+Ran a full visual audit of all 74 folders (8 parallel research passes,
+cross-referenced against `data/store.db` `source_products` by name/weight/
+barcode, checked against `data/product_overrides.json` for existing
+publication). Result: **the overwhelming majority of the 764 files are
+duplicates/resends of photos already published** in prior sessions (Sunsilk,
+Lenor, Jif, Pantene, TRESemmé, Downy, Clear, Herbal Essences, Gillette/Venus,
+Johnson's, AXE, Persil/Ariel/Dash/Dalli detergents, YC/Skin Doctor sunscreens,
+etc. — dozens of SKUs, all already in `product_overrides.json` with full
+galleries). Some agent-reported "not yet published" matches turned out to be
+wrong on manual re-check (e.g. a "Mach3 Turbo" and a "Fusion5 PRO" cartridge
+box were misidentified against unrelated 1C codes that already had photos) —
+those were verified against the actual images before being ruled out.
+
+**6 new products confirmed and published** this pass (photos copied into
+`assets/products/<brand>/`, added to `data/product_overrides.json`):
+
+| Product | 1C match | product_id |
+|---|---|---|
+| Head & Shoulders Cool Menthol шампунь 650 мл | H&S Шампунь (650ml) Menthol | `prd_e7e45d64df8b` |
+| Skin Doctor SD-622 SPF60 крем 170 г | С/З DS (SD-622)SPF60 (170) | `prd_23e9c6bb855b` |
+| Skin Doctor Facial Sunscreen SPF60+ спрей 100 мл | С/З DS (SD-SS-F60P100) | `prd_418f9f481516` |
+| Skin Doctor SD-665 SPF50 крем 150 г | С/З DS (SD-665)SPF50 (150gr) | `prd_91d95a5103ac` |
+| Dove Advanced Care Original спрей 250 мл | Dove Body Spray (250) Original | `prd_b8b5bfec07e5` |
+| Dove go fresh Apple & White Tea спрей 250 мл | Dove Body Spray (250) Go Fresh Apple | `prd_f23090eb2627` |
+
+The two Dove sprays are notable: their `card-front` came from the June 26
+batch, while the matching plain `front`/`back` shelf photos came from the
+**already-known** July 3 batch (`telegram-989425384-20260703-160531`) that
+was previously blocked for exactly these two products (see the "2026-07-05"
+section below) — combining photos across two different Petya sends resolved
+both long-pending items.
+
+**Photo exists but product is out of stock (0 quantity) — do not publish:**
+
+- **Concord станок KL 6947** (`prd_2554a61dc141`) — complete, confident
+  card-front/front/back triple found (`telegram-8767964230-20260619-110606`,
+  files 07-09, Art# KL6947 printed on the pack), but `stock_quantity = 0` in
+  the current 1C export. Photo is ready to go the moment stock arrives.
+- **Dove Шамп. (680) Daily Shine** (`prd_6bd469f8a2b6`) — complete, confident
+  triple found (`telegram-8767964230-20260619-110800`, files 21-23), but
+  `stock_quantity = 0`.
+
+**Found but still needs one more/better photo, or confirmation, not
+published:**
+
+- 3 Concord nail clippers (Art# 020-1, 6425-3, 6401-3 — `prd_f652a5ca9bbf`,
+  `prd_d686b0354eac`, `prd_d53b7b8bf384`) — each only has a card-front-style
+  shot + back, no plain "front".
+- Concord Butterfly Razor, no model number visible on the box — plausible
+  match to `Станок (KL 90)` but not confirmed.
+- Fairy Max Plus "Fruity Green" 600ml (`prd_43bb60f484a9`, already has a
+  text-only override, 1C raw_name says plain "Apple") — has card-front+front
+  with a clear barcode, but no matching back panel in the same folder (the
+  two back-candidates present are a generic label and one explicitly marked
+  "Lavender").
+- AXE Signature Suave Zesty Citrus (`prd_af4df5014530`), Gillette Fusion
+  Shave Gel 5X Cocoa Butter (`prd_1dfaa90e937f`, text-only override exists),
+  Gillette Series Shave Gel Aloe Vera Sensitive (`prd_28ee787466c6`) — each
+  only has 2 of the 3 required photos.
+- Downy Concentrate Lavender & Musk 1L (`prd_f390f3fe18e6`) and Dash Color
+  Frische Gel 1.1L (`prd_57c963eeb3d1`) — only a single back photo each, no
+  front/card-front found anywhere in the archive.
+- BIC Miss Soleil Colour Collection, Dalli "Super Concentrate" 31-wash
+  detergent, several Dove Advanced Care goFresh Cucumber/Coconut variants,
+  and a couple of Persil Power Gel bundles with illegible scent names — all
+  medium/low confidence, no forced matches made.
+- 3 travel-size 5ml perfumes (Chanel Chance, Le Labo Another 13, Bybozo Sea
+  Breeze) and a Chloé Nomade 5ml — no perfume line at all in
+  `source_products` to cross-reference against; needs a manual check outside
+  this DB (or confirmation these are even current stock).
+
+All raw files remain untouched in `assets/telegram_inbox/` (gitignored, not
+tracked by git either way).
+
 ## PARTIALLY RESOLVED 2026-07-06 (afternoon) — `assets/telegram_inbox/telegram-8767964230-20260706-{120924,120953,124743,124755}`
 
 A new batch (69 raw files, not yet in card-front/front/back naming — found in the

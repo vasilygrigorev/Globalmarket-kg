@@ -37,6 +37,9 @@ so this endpoint returns `503` and the checkout falls back automatically.
 | `SUPABASE_URL` | `https://<project>.supabase.co` |
 | `SUPABASE_SERVICE_ROLE_KEY` | service role key — server only |
 | `MANAGER_WHATSAPP` | optional, digits only (defaults to `996706771103`) |
+| `RESEND_API_KEY` | optional; when set, sends a manager email copy after the order is saved |
+| `ORDER_EMAIL_TO` | optional; defaults to `orders@globalmarket.kg` |
+| `ORDER_EMAIL_FROM` | optional; defaults to `Global Market KG <orders@globalmarket.kg>` |
 
 Set these in Cloudflare Pages → project → Settings → Environment variables
 (Production + Preview). Do not put them in the repo or in `.env` that is
@@ -45,6 +48,17 @@ committed.
 If `SUPABASE_URL` / `SUPABASE_SERVICE_ROLE_KEY` are missing, the function
 returns `503 {ok:false, fallback:true}` so the site keeps working
 (WhatsApp-only).
+
+Email notifications are intentionally optional and non-blocking. If
+`RESEND_API_KEY` is missing, the order is saved and WhatsApp opens as usual. If
+Resend returns an error, the API still returns `ok:true` for the saved order and
+includes `email_notification.sent=false`; a manager email copy must never break
+checkout.
+
+Cloudflare Email Routing handles inbound mail for `orders@globalmarket.kg`.
+Outbound order notifications require a sending provider. The current function
+uses Resend's HTTPS API directly via `fetch`, with no SDK and no browser-visible
+secret.
 
 ## Request
 
@@ -78,7 +92,8 @@ be non-empty.
 
 ```json
 { "ok": true, "order_id": "uuid", "status": "new",
-  "manager_whatsapp_url": "https://wa.me/996706771103?text=..." }
+  "manager_whatsapp_url": "https://wa.me/996706771103?text=...",
+  "email_notification": { "attempted": true, "sent": true } }
 ```
 
 On failure: `{ "ok": false, "fallback": true, "error": "..." }` with a 5xx/503.

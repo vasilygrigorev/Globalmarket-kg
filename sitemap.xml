@@ -163,6 +163,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://globalmarket.kg/brand/skin-doctor/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/brand/tresemm/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -853,6 +859,15 @@
     </image:image>
   </url>
   <url>
+    <loc>https://globalmarket.kg/product/dove-advanced-care-original-sprey-dezodorant-250-ml-ec07e5/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/product/dove-advanced-care-pear-aloe-vera-sprey-antiperspirant-250-ml-668843/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -868,6 +883,15 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://globalmarket.kg/assets/products/dove/dove-stick-beauty-finish-40g-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/dove-go-fresh-apple-white-tea-sprey-dezodorant-250-ml-eb2627/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/dove/dove-go-fresh-apple-white-tea-250ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -1192,6 +1216,15 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://globalmarket.kg/assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/head-shoulders-cool-menthol-shampun-650-ml-64df8b/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -1633,6 +1666,33 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://globalmarket.kg/assets/products/rexona/rexona-stick-extra-cool-40g-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/skin-doctor-face-body-moisturizing-sunblock-spf60-170-g-bb855b/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/skin-doctor-face-body-sun-cream-spf50-150-g-5103ac/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-card-front.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://globalmarket.kg/product/skin-doctor-facial-sunscreen-spf60-sprey-100-ml-481516/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://globalmarket.kg/assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
