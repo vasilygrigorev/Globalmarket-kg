@@ -1,5 +1,5 @@
 {
-  "count": 34,
+  "count": 35,
   "pages": [
     {
       "type": "category",
@@ -55,7 +55,7 @@
       "title": "Уход за телом",
       "path": "/category/body/",
       "url": "https://globalmarket.kg/category/body/",
-      "count": 85,
+      "count": 81,
       "seoTerms": [
         "мыло",
         "жидкое мыло",
@@ -72,7 +72,7 @@
       "url": "https://globalmarket.kg/category/oral/",
       "count": 26,
       "seoTerms": [],
-      "shown": 0
+      "shown": 4
     },
     {
       "type": "category",
@@ -80,7 +80,7 @@
       "title": "Дезодоранты",
       "path": "/category/deodorants/",
       "url": "https://globalmarket.kg/category/deodorants/",
-      "count": 68,
+      "count": 72,
       "seoTerms": [
         "дезодорант",
         "дезик",
@@ -88,7 +88,7 @@
         "стик",
         "спрей"
       ],
-      "shown": 14
+      "shown": 18
     },
     {
       "type": "category",
@@ -175,7 +175,7 @@
         "товары Dove",
         "Dove купить Бишкек"
       ],
-      "shown": 5
+      "shown": 9
     },
     {
       "type": "brand",
@@ -246,6 +246,20 @@
         "Clear купить Бишкек"
       ],
       "shown": 6
+    },
+    {
+      "type": "brand",
+      "slug": "colgate",
+      "title": "Colgate",
+      "path": "/brand/colgate/",
+      "url": "https://globalmarket.kg/brand/colgate/",
+      "count": 12,
+      "seoTerms": [
+        "Colgate",
+        "товары Colgate",
+        "Colgate купить Бишкек"
+      ],
+      "shown": 4
     },
     {
       "type": "brand",

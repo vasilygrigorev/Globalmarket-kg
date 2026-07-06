@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T16:17:49.123854+00:00",
+  "generatedAt": "2026-07-06T07:06:53.651025+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -27,7 +27,7 @@
     {
       "id": "body",
       "title": "Уход за телом",
-      "count": 85,
+      "count": 81,
       "icon": "🌸"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "deodorants",
       "title": "Дезодоранты",
-      "count": 68,
+      "count": 72,
       "icon": "💜"
     },
     {
@@ -5388,106 +5388,6 @@
     },
     {
       "unit": "шт",
-      "badge": "Dove",
-      "retailPriceKgs": 300,
-      "category": "Уход за телом",
-      "categoryId": "body",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_f7a9d836005f",
-      "tones": [
-        "#f2d9c7",
-        "#c7876a"
-      ],
-      "image": null,
-      "icon": "🌸",
-      "registeredPriceKgs": 291,
-      "description": "Dove: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "Dove Stick (40) Original",
-      "productType": "уход за телом",
-      "brand": "Dove",
-      "rating": 4.8,
-      "searchText": "dove stick (40) original уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
-    },
-    {
-      "unit": "шт",
-      "badge": "Dove",
-      "retailPriceKgs": 300,
-      "category": "Уход за телом",
-      "categoryId": "body",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_23e1645a6a85",
-      "tones": [
-        "#f2d9c7",
-        "#c7876a"
-      ],
-      "image": null,
-      "icon": "🌸",
-      "registeredPriceKgs": 291,
-      "description": "Dove: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "Dove Stick (40) Pomegranate",
-      "productType": "уход за телом",
-      "brand": "Dove",
-      "rating": 4.8,
-      "searchText": "dove stick (40) pomegranate уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
-    },
-    {
-      "unit": "шт",
-      "badge": "Dove",
-      "retailPriceKgs": 300,
-      "category": "Уход за телом",
-      "categoryId": "body",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_21c8c8aa3e5d",
-      "tones": [
-        "#f2d9c7",
-        "#c7876a"
-      ],
-      "image": null,
-      "icon": "🌸",
-      "registeredPriceKgs": 291,
-      "description": "Dove: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "Dove Stick (40) Beauty Finish",
-      "productType": "уход за телом",
-      "brand": "Dove",
-      "rating": 4.8,
-      "searchText": "dove stick (40) beauty finish уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
-    },
-    {
-      "unit": "шт",
-      "badge": "Dove",
-      "retailPriceKgs": 300,
-      "category": "Уход за телом",
-      "categoryId": "body",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_cdc989a294f9",
-      "tones": [
-        "#f2d9c7",
-        "#c7876a"
-      ],
-      "image": null,
-      "icon": "🌸",
-      "registeredPriceKgs": 291,
-      "description": "Dove: средство для ухода за кожей и ежедневной гигиены.",
-      "title": "Dove Stick (40) Cucumber",
-      "productType": "уход за телом",
-      "brand": "Dove",
-      "rating": 4.8,
-      "searchText": "dove stick (40) cucumber уход за телом dove уход за телом dove: средство для ухода за кожей и ежедневной гигиены."
-    },
-    {
-      "unit": "шт",
       "badge": "Roja",
       "retailPriceKgs": 220,
       "category": "Уход за телом",
@@ -6802,6 +6702,35 @@
       "categoryId": "oral",
       "collections": [],
       "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/colgate/colgate-maxwhite-card-front.jpg",
+        "assets/products/colgate/colgate-maxwhite-front.jpg",
+        "assets/products/colgate/colgate-maxwhite-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_1cb756e99bac",
+      "tones": [
+        "#d6e7f4",
+        "#6b9ec6"
+      ],
+      "image": "assets/products/colgate/colgate-maxwhite-card-front.jpg",
+      "icon": "🪥",
+      "registeredPriceKgs": 116,
+      "description": "Зубная щётка Colgate MaxWhite с полирующей звёздочкой и очистителем языка — помогает отполировать поверхностные пятна и освежить дыхание.",
+      "title": "Colgate MaxWhite зубная щётка",
+      "productType": "зубная щётка",
+      "brand": "Colgate",
+      "rating": 4.8,
+      "searchText": "colgate maxwhite зубная щётка зубная гигиена colgate зубная щётка зубная щётка colgate maxwhite с полирующей звёздочкой и очистителем языка — помогает отполировать поверхностные пятна и освежить дыхание."
+    },
+    {
+      "unit": "шт",
+      "badge": "Colgate",
+      "retailPriceKgs": 120,
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "collectionLabels": [],
       "galleryImages": [],
       "status": "review",
       "id": "prd_b61ba7c4268e",
@@ -6822,52 +6751,31 @@
     {
       "unit": "шт",
       "badge": "Colgate",
-      "retailPriceKgs": 120,
-      "category": "Зубная гигиена",
-      "categoryId": "oral",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_1cb756e99bac",
-      "tones": [
-        "#d6e7f4",
-        "#6b9ec6"
-      ],
-      "image": null,
-      "icon": "🪥",
-      "registeredPriceKgs": 116,
-      "description": "Colgate: товар для ежедневной зубной гигиены.",
-      "title": "Colgate з/щ MaxWhite",
-      "productType": "зубная гигиена",
-      "brand": "Colgate",
-      "rating": 4.8,
-      "searchText": "colgate з/щ maxwhite зубная гигиена colgate зубная гигиена colgate: товар для ежедневной зубной гигиены."
-    },
-    {
-      "unit": "шт",
-      "badge": "Colgate",
       "retailPriceKgs": 230,
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/colgate/colgate-zigzag-3pcs-card-front.jpg",
+        "assets/products/colgate/colgate-zigzag-3pcs-front.jpg",
+        "assets/products/colgate/colgate-zigzag-3pcs-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_66dd4882eecf",
       "tones": [
         "#d6e7f4",
         "#6b9ec6"
       ],
-      "image": null,
+      "image": "assets/products/colgate/colgate-zigzag-3pcs-card-front.jpg",
       "icon": "🪥",
       "registeredPriceKgs": 223,
-      "description": "Colgate: товар для ежедневной зубной гигиены. Формат: 3 pcs, 3pcs.",
-      "title": "Colgate з/щ ZigZag (3pcs)",
-      "productType": "зубная гигиена",
+      "description": "Набор зубных щёток Colgate ZigZag с антибактериальными щетинками. В упаковке 3 штуки (2+1).",
+      "title": "Colgate ZigZag зубная щётка 3 шт",
+      "productType": "зубная щётка",
       "brand": "Colgate",
       "rating": 4.8,
-      "searchText": "colgate з/щ zigzag (3pcs) зубная гигиена colgate зубная гигиена colgate: товар для ежедневной зубной гигиены. формат: 3 pcs, 3pcs."
+      "searchText": "colgate zigzag зубная щётка 3 шт зубная гигиена colgate зубная щётка набор зубных щёток colgate zigzag с антибактериальными щетинками. в упаковке 3 штуки (2+1)."
     },
     {
       "unit": "шт",
@@ -6877,22 +6785,26 @@
       "categoryId": "oral",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/colgate/colgate-double-action-charcoal-card-front.jpg",
+        "assets/products/colgate/colgate-double-action-charcoal-front.jpg",
+        "assets/products/colgate/colgate-double-action-charcoal-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_773d5cd63456",
       "tones": [
         "#d6e7f4",
         "#6b9ec6"
       ],
-      "image": null,
+      "image": "assets/products/colgate/colgate-double-action-charcoal-card-front.jpg",
       "icon": "🪥",
       "registeredPriceKgs": 67,
-      "description": "Colgate: товар для ежедневной зубной гигиены.",
-      "title": "Colgate з/щ Double Action Charcoal",
-      "productType": "зубная гигиена",
+      "description": "Зубная щётка Colgate Double Action Charcoal с угольными щетинками, глубоко очищает между зубами и освежает дыхание.",
+      "title": "Colgate Double Action Charcoal зубная щётка",
+      "productType": "зубная щётка",
       "brand": "Colgate",
       "rating": 4.8,
-      "searchText": "colgate з/щ double action charcoal зубная гигиена colgate зубная гигиена colgate: товар для ежедневной зубной гигиены."
+      "searchText": "colgate double action charcoal зубная щётка зубная гигиена colgate зубная щётка зубная щётка colgate double action charcoal с угольными щетинками, глубоко очищает между зубами и освежает дыхание."
     },
     {
       "unit": "шт",
@@ -7002,22 +6914,26 @@
       "categoryId": "oral",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/colgate/colgate-zigzag-charcoal-card-front.jpg",
+        "assets/products/colgate/colgate-zigzag-charcoal-front.jpg",
+        "assets/products/colgate/colgate-zigzag-charcoal-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_f3ed12b53668",
       "tones": [
         "#d6e7f4",
         "#6b9ec6"
       ],
-      "image": null,
+      "image": "assets/products/colgate/colgate-zigzag-charcoal-card-front.jpg",
       "icon": "🪥",
       "registeredPriceKgs": 92,
-      "description": "Colgate: товар для ежедневной зубной гигиены.",
-      "title": "Colgate з/щ ZigZag Charcoal",
-      "productType": "зубная гигиена",
+      "description": "Зубная щётка Colgate ZigZag Charcoal с угольными щетинками и наклонной формой для чистки труднодоступных мест между зубами.",
+      "title": "Colgate ZigZag Charcoal зубная щётка",
+      "productType": "зубная щётка",
       "brand": "Colgate",
       "rating": 4.8,
-      "searchText": "colgate з/щ zigzag charcoal зубная гигиена colgate зубная гигиена colgate: товар для ежедневной зубной гигиены."
+      "searchText": "colgate zigzag charcoal зубная щётка зубная гигиена colgate зубная щётка зубная щётка colgate zigzag charcoal с угольными щетинками и наклонной формой для чистки труднодоступных мест между зубами."
     },
     {
       "unit": "шт",
@@ -7878,6 +7794,64 @@
     },
     {
       "unit": "шт",
+      "badge": "Dove",
+      "retailPriceKgs": 300,
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/dove/dove-stick-original-40g-card-front.jpg",
+        "assets/products/dove/dove-stick-original-40g-front.jpg",
+        "assets/products/dove/dove-stick-original-40g-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_f7a9d836005f",
+      "tones": [
+        "#e1d8f3",
+        "#8e78bd"
+      ],
+      "image": "assets/products/dove/dove-stick-original-40g-card-front.jpg",
+      "icon": "💜",
+      "registeredPriceKgs": 291,
+      "description": "Дезодорант-антиперспирант Dove Original с увлажняющим кремом, защита 48 часов. Объём 40 г.",
+      "title": "Dove Original дезодорант-стик 40 г",
+      "productType": "дезодорант-стик",
+      "brand": "Dove",
+      "rating": 4.8,
+      "searchText": "dove original дезодорант-стик 40 г дезодоранты dove дезодорант-стик дезодорант-антиперспирант dove original с увлажняющим кремом, защита 48 часов. объём 40 г."
+    },
+    {
+      "unit": "шт",
+      "badge": "Dove",
+      "retailPriceKgs": 300,
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/dove/dove-stick-pomegranate-40g-card-front.jpg",
+        "assets/products/dove/dove-stick-pomegranate-40g-front.jpg",
+        "assets/products/dove/dove-stick-pomegranate-40g-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_23e1645a6a85",
+      "tones": [
+        "#e1d8f3",
+        "#8e78bd"
+      ],
+      "image": "assets/products/dove/dove-stick-pomegranate-40g-card-front.jpg",
+      "icon": "💜",
+      "registeredPriceKgs": 291,
+      "description": "Дезодорант-антиперспирант Dove go fresh с ароматом граната и вербены, увлажняющий крем, защита 48 часов. Объём 40 г.",
+      "title": "Dove go fresh Pomegranate & Lemon Verbena дезодорант-стик 40 г",
+      "productType": "дезодорант-стик",
+      "brand": "Dove",
+      "rating": 4.8,
+      "searchText": "dove go fresh pomegranate & lemon verbena дезодорант-стик 40 г дезодоранты dove дезодорант-стик дезодорант-антиперспирант dove go fresh с ароматом граната и вербены, увлажняющий крем, защита 48 часов. объём 40 г."
+    },
+    {
+      "unit": "шт",
       "badge": "Rexona",
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
@@ -8000,6 +7974,64 @@
       "brand": "Adidas",
       "rating": 4.8,
       "searchText": "adidas edt (m) (100) victory league дезодоранты adidas дезодоранты adidas: дезодорант для ежедневной свежести."
+    },
+    {
+      "unit": "шт",
+      "badge": "Dove",
+      "retailPriceKgs": 300,
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/dove/dove-stick-beauty-finish-40g-card-front.jpg",
+        "assets/products/dove/dove-stick-beauty-finish-40g-front.jpg",
+        "assets/products/dove/dove-stick-beauty-finish-40g-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_21c8c8aa3e5d",
+      "tones": [
+        "#e1d8f3",
+        "#8e78bd"
+      ],
+      "image": "assets/products/dove/dove-stick-beauty-finish-40g-card-front.jpg",
+      "icon": "💜",
+      "registeredPriceKgs": 291,
+      "description": "Дезодорант-антиперспирант Dove Beauty Finish с увлажняющим кремом, защита 48 часов. Объём 40 г.",
+      "title": "Dove Beauty Finish дезодорант-стик 40 г",
+      "productType": "дезодорант-стик",
+      "brand": "Dove",
+      "rating": 4.8,
+      "searchText": "dove beauty finish дезодорант-стик 40 г дезодоранты dove дезодорант-стик дезодорант-антиперспирант dove beauty finish с увлажняющим кремом, защита 48 часов. объём 40 г."
+    },
+    {
+      "unit": "шт",
+      "badge": "Dove",
+      "retailPriceKgs": 300,
+      "category": "Дезодоранты",
+      "categoryId": "deodorants",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/dove/dove-stick-cucumber-40g-card-front.jpg",
+        "assets/products/dove/dove-stick-cucumber-40g-front.jpg",
+        "assets/products/dove/dove-stick-cucumber-40g-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_cdc989a294f9",
+      "tones": [
+        "#e1d8f3",
+        "#8e78bd"
+      ],
+      "image": "assets/products/dove/dove-stick-cucumber-40g-card-front.jpg",
+      "icon": "💜",
+      "registeredPriceKgs": 291,
+      "description": "Дезодорант-антиперспирант Dove go fresh с ароматом огурца и зелёного чая, увлажняющий крем, защита 48 часов. Объём 40 г.",
+      "title": "Dove go fresh Cucumber & Green Tea дезодорант-стик 40 г",
+      "productType": "дезодорант-стик",
+      "brand": "Dove",
+      "rating": 4.8,
+      "searchText": "dove go fresh cucumber & green tea дезодорант-стик 40 г дезодоранты dove дезодорант-стик дезодорант-антиперспирант dove go fresh с ароматом огурца и зелёного чая, увлажняющий крем, защита 48 часов. объём 40 г."
     },
     {
       "unit": "шт",

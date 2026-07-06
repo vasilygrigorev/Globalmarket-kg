@@ -399,6 +399,24 @@
     "product_type": "бритвенные станки",
     "short_title": "Venus станки 2 шт"
   },
+  "prd_1cb756e99bac": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate MaxWhite зубная щётка",
+    "description": "Зубная щётка Colgate MaxWhite с полирующей звёздочкой и очистителем языка — помогает отполировать поверхностные пятна и освежить дыхание.",
+    "galleryImages": [
+      "assets/products/colgate/colgate-maxwhite-card-front.jpg",
+      "assets/products/colgate/colgate-maxwhite-front.jpg",
+      "assets/products/colgate/colgate-maxwhite-back.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-maxwhite-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-102856-05); товар уверенно опознан по названию и штрихкоду 058000004481, совпадает с 1C кодом 1241 (Colgate з/щ MaxWhite)."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate MaxWhite",
+    "unit": "шт"
+  },
   "prd_1dfaa90e937f": {
     "brand": "Gillette",
     "category_id": "shaving",
@@ -475,6 +493,42 @@
     "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-113508-02-card-front.jpg.",
     "product_type": "шампунь",
     "short_title": "H&S Menthol 400 мл"
+  },
+  "prd_21c8c8aa3e5d": {
+    "brand": "Dove",
+    "category_id": "deodorants",
+    "clean_title": "Dove Beauty Finish дезодорант-стик 40 г",
+    "description": "Дезодорант-антиперспирант Dove Beauty Finish с увлажняющим кремом, защита 48 часов. Объём 40 г.",
+    "galleryImages": [
+      "assets/products/dove/dove-stick-beauty-finish-40g-card-front.jpg",
+      "assets/products/dove/dove-stick-beauty-finish-40g-front.jpg",
+      "assets/products/dove/dove-stick-beauty-finish-40g-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-stick-beauty-finish-40g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124023-03); товар уверенно опознан по названию и штрихкоду 4800888221889, совпадает с 1C кодом 2706 (Dove Stick (40) Beauty Finish)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Dove Beauty Finish 40 г",
+    "unit": "40 г"
+  },
+  "prd_23e1645a6a85": {
+    "brand": "Dove",
+    "category_id": "deodorants",
+    "clean_title": "Dove go fresh Pomegranate & Lemon Verbena дезодорант-стик 40 г",
+    "description": "Дезодорант-антиперспирант Dove go fresh с ароматом граната и вербены, увлажняющий крем, защита 48 часов. Объём 40 г.",
+    "galleryImages": [
+      "assets/products/dove/dove-stick-pomegranate-40g-card-front.jpg",
+      "assets/products/dove/dove-stick-pomegranate-40g-front.jpg",
+      "assets/products/dove/dove-stick-pomegranate-40g-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-stick-pomegranate-40g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124023-04); товар уверенно опознан по названию и штрихкоду 4800888202147, совпадает с 1C кодом 2948 (Dove Stick (40) Pomegranate)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Dove Pomegranate 40 г",
+    "unit": "40 г"
   },
   "prd_24cef17d3d9a": {
     "brand": "Dove",
@@ -1179,6 +1233,24 @@
     "product_type": "шампунь",
     "short_title": "Love Me Longer 400 мл"
   },
+  "prd_66dd4882eecf": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate ZigZag зубная щётка 3 шт",
+    "description": "Набор зубных щёток Colgate ZigZag с антибактериальными щетинками. В упаковке 3 штуки (2+1).",
+    "galleryImages": [
+      "assets/products/colgate/colgate-zigzag-3pcs-card-front.jpg",
+      "assets/products/colgate/colgate-zigzag-3pcs-front.jpg",
+      "assets/products/colgate/colgate-zigzag-3pcs-back.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-zigzag-3pcs-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-103856-02); товар уверенно опознан по названию и штрихкоду 6001067023771, совпадает с 1C кодом 2938 (Colgate з/щ ZigZag (3pcs))."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate ZigZag 3 шт",
+    "unit": "3 шт"
+  },
   "prd_682eb8c7e746": {
     "brand": "Persil",
     "category_id": "laundry",
@@ -1312,6 +1384,24 @@
     "product_type": "пена для ванны",
     "short_title": "Cussons Apricot 500 мл",
     "unit": "500 мл"
+  },
+  "prd_773d5cd63456": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate Double Action Charcoal зубная щётка",
+    "description": "Зубная щётка Colgate Double Action Charcoal с угольными щетинками, глубоко очищает между зубами и освежает дыхание.",
+    "galleryImages": [
+      "assets/products/colgate/colgate-double-action-charcoal-card-front.jpg",
+      "assets/products/colgate/colgate-double-action-charcoal-front.jpg",
+      "assets/products/colgate/colgate-double-action-charcoal-back.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-double-action-charcoal-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-104056); товар уверенно опознан по названию и штрихкоду 8718951120571, совпадает с 1C кодом 2937 (Colgate з/щ Double Action Charcoal)."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate Double Action Charcoal",
+    "unit": "шт"
   },
   "prd_77afdc5c4601": {
     "brand": "Herbal Essences",
@@ -2187,6 +2277,24 @@
     "short_title": "Skin Doctor Summer 200 мл",
     "unit": "200 мл"
   },
+  "prd_cdc989a294f9": {
+    "brand": "Dove",
+    "category_id": "deodorants",
+    "clean_title": "Dove go fresh Cucumber & Green Tea дезодорант-стик 40 г",
+    "description": "Дезодорант-антиперспирант Dove go fresh с ароматом огурца и зелёного чая, увлажняющий крем, защита 48 часов. Объём 40 г.",
+    "galleryImages": [
+      "assets/products/dove/dove-stick-cucumber-40g-card-front.jpg",
+      "assets/products/dove/dove-stick-cucumber-40g-front.jpg",
+      "assets/products/dove/dove-stick-cucumber-40g-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-stick-cucumber-40g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124023-01); товар уверенно опознан по названию и штрихкоду 4800888221896, совпадает с 1C кодом 1699 (Dove Stick (40) Cucumber)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Dove Cucumber & Green Tea 40 г",
+    "unit": "40 г"
+  },
   "prd_d0bc9026f5ab": {
     "badge": "Pantene",
     "brand": "Pantene",
@@ -2680,6 +2788,24 @@
     "product_type": "гель для стирки",
     "short_title": "Persil Rose 3 л"
   },
+  "prd_f3ed12b53668": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate ZigZag Charcoal зубная щётка",
+    "description": "Зубная щётка Colgate ZigZag Charcoal с угольными щетинками и наклонной формой для чистки труднодоступных мест между зубами.",
+    "galleryImages": [
+      "assets/products/colgate/colgate-zigzag-charcoal-card-front.jpg",
+      "assets/products/colgate/colgate-zigzag-charcoal-front.jpg",
+      "assets/products/colgate/colgate-zigzag-charcoal-back.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-zigzag-charcoal-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-103856-03); товар уверенно опознан по названию и штрихкоду 6001067157182, совпадает с 1C кодом 2939 (Colgate з/щ ZigZag Charcoal)."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate ZigZag Charcoal",
+    "unit": "шт"
+  },
   "prd_f50077a08461": {
     "brand": "YC",
     "category_id": "body",
@@ -2711,6 +2837,24 @@
     "image": "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
     "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-01-card-front.jpg.",
     "product_type": "шампунь"
+  },
+  "prd_f7a9d836005f": {
+    "brand": "Dove",
+    "category_id": "deodorants",
+    "clean_title": "Dove Original дезодорант-стик 40 г",
+    "description": "Дезодорант-антиперспирант Dove Original с увлажняющим кремом, защита 48 часов. Объём 40 г.",
+    "galleryImages": [
+      "assets/products/dove/dove-stick-original-40g-card-front.jpg",
+      "assets/products/dove/dove-stick-original-40g-front.jpg",
+      "assets/products/dove/dove-stick-original-40g-back.jpg"
+    ],
+    "image": "assets/products/dove/dove-stick-original-40g-card-front.jpg",
+    "notes": [
+      "2026-07-06: фото из новой партии Пети (telegram-8767964230-20260706-124023-02); товар уверенно опознан по названию и штрихкоду 4800888221872, совпадает с 1C кодом 122 (Dove Stick (40) Original)."
+    ],
+    "product_type": "дезодорант-стик",
+    "short_title": "Dove Original 40 г",
+    "unit": "40 г"
   },
   "prd_fbc4a5e759ac": {
     "brand": "Пластырь",

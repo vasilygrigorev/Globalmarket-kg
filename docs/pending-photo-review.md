@@ -6,34 +6,66 @@ confidence. Nothing here has been added to `data/product_overrides.json`
 or moved into a published `assets/products/<brand>/` folder. Raw files are
 left in place under `assets/products/` — do not delete.
 
-## NEW, UNIDENTIFIED 2026-07-06 — `telegram-8767964230-20260706-{102856,103856,104056}-*`
+## PARTIALLY RESOLVED 2026-07-06 — `telegram-8767964230-20260706-*` (two live batches)
 
-A fresh batch landed on disk **during this local audit session**
-(timestamps 10:28-10:40 local time), while checking release readiness — not
-something this session went looking for. 9 complete-by-filename
-card-front/front/back groups, 27 files total:
+Two fresh batches landed on disk **during local sessions** (~10:28-10:40 and
+~12:40, same day), while working on unrelated tasks — not something either
+session went looking for. 13 complete-by-filename card-front/front/back
+groups, 39 files total, across two drops:
 
 ```text
-telegram-8767964230-20260706-102856-{01,02,03,04,05}-{card-front,front,back}.jpg  (5 products)
-telegram-8767964230-20260706-103856-{01,02,03}-{card-front,front,back}.jpg        (3 products)
-telegram-8767964230-20260706-104056-{card-front,front,back}.jpg                   (1 product)
+telegram-8767964230-20260706-102856-{01,02,03,04,05}-{card-front,front,back}.jpg  (5 groups)
+telegram-8767964230-20260706-103856-{01,02,03}-{card-front,front,back}.jpg        (3 groups)
+telegram-8767964230-20260706-104056-{card-front,front,back}.jpg                   (1 group)
+telegram-8767964230-20260706-124023-{01,02,03,04}-{card-front,front,back}.jpg     (4 groups)
 ```
 
-**Not opened, not identified, not matched to any 1C stock item or
-`product_overrides.json` entry in this session** — this pass was scoped to
-readiness auditing and guardrail hardening, not photo identification, and
-"don't guess a product mapping" applies here exactly as it did for the
-YC/Dove batches above. Recorded here only so
-`scripts/report_raw_photo_groups.py --strict` (and the full preflight)
-correctly read this as "a known, pending batch" rather than failing with no
-context for the next session.
+**8 of the 13 groups were identified and published** (dedicated
+photo-identification pass, same pattern as the YC sunscreen batch in
+`290c609`/`b1ca708` or the Pantene/Lenor/TRESemmé batch in `b26262c` —
+cross-referenced brand/barcode/label text against `data/store.db`
+`source_products` by 1C `source_code`, not by name):
 
-**Next step:** a dedicated photo-identification pass (same pattern as the
-YC sunscreen batch in `290c609`/`b1ca708` or the Pantene/Lenor/TRESemmé
-schema-normalization batch in `b26262c`) — open each group, cross-reference
-brand/barcode/label text against `data/store.db` source_products by 1C
-`source_code` (not by name), and only add confidently-identified,
-complete 3-photo groups to `data/product_overrides.json`.
+| Group | Product | 1C code | product_id |
+|---|---|---|---|
+| `102856-05` | Colgate MaxWhite зубная щётка | 1241 | `prd_1cb756e99bac` |
+| `103856-02` | Colgate ZigZag зубная щётка 3 шт | 2938 | `prd_66dd4882eecf` |
+| `103856-03` | Colgate ZigZag Charcoal зубная щётка | 2939 | `prd_f3ed12b53668` |
+| `104056` | Colgate Double Action Charcoal зубная щётка | 2937 | `prd_773d5cd63456` |
+| `124023-01` | Dove go fresh Cucumber & Green Tea стик 40 г | 1699 | `prd_cdc989a294f9` |
+| `124023-02` | Dove Original стик 40 г | 122 | `prd_f7a9d836005f` |
+| `124023-03` | Dove Beauty Finish стик 40 г | 2706 | `prd_21c8c8aa3e5d` |
+| `124023-04` | Dove go fresh Pomegranate & Lemon Verbena стик 40 г | 2948 | `prd_23e1645a6a85` |
+
+Moved to `assets/products/colgate/` and `assets/products/dove/`
+respectively, added to `data/product_overrides.json`. Photo coverage
+142/529 → 150/529.
+
+**5 groups still NOT published** — real problems found, not just
+unopened files:
+
+- **`102856-01` (Colgate 360 Optic White, Medium)** — front/card-front are
+  clear and consistent, but its **back photo is wrong**: byte-different
+  from, but textually identical to, `102856-03`'s own back (both say "360
+  Charcoal Gold... Medium"), while `102856-01`'s front clearly shows white/
+  blue bristles, not the black charcoal bristles the back describes. No
+  matching 1C stock line for "360 Optic White" either. Needs a correct back
+  photo and a stock-code confirmation before it can be considered.
+- **`103856-01` (Colgate Max Fresh)** — front/card-front confidently match
+  1C code 1075 (`Colgate з/щ MaxFresh`, `prd_b61ba7c4268e`), **but its back
+  photo is byte-identical to `102856-05`'s MaxWhite back** (confirmed via
+  md5) — a real duplicate/mixup, not this product's actual back. Needs a
+  correct back photo; the 1C match itself is solid once that exists.
+- **`102856-02` (Colgate 360 Charcoal, Medium)**, **`102856-03` (Colgate 360
+  Charcoal Gold, Soft)**, **`102856-04` (Colgate 360 Whole Mouth Clean,
+  Medium)** — all three are internally consistent (card-front/front/back
+  agree with each other) and clearly branded, but **no matching "360 ..."
+  line exists anywhere in the current `data/store.db` stock** (checked
+  every Colgate row). Either a new SKU not yet in any 1C export, or listed
+  under a name too different to match with confidence. Needs Petya/owner
+  confirmation of the 1C code before publishing — do not guess.
+
+Raw files for all 5 remain at `assets/products/` root, untouched.
 
 ## RESOLVED 2026-07-05 — `telegram-8767964230-20260626-142813-next-2-03-*`
 
