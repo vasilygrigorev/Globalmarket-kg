@@ -22,13 +22,17 @@ OVERRIDES_PATH = ROOT / "data" / "product_overrides.json"
 MANUAL_PRODUCTS_PATH = ROOT / "data" / "manual_products.json"
 PRODUCTS_DIR = ROOT / "assets" / "products"
 
-# Card+front-only products deliberately published without a back photo.
+# Products deliberately published with only 2 of the usual 3 gallery photos
+# (most are card+front, missing a back; prd_e165f2a765a7/prd_f724e0973fa5 are
+# front+back, missing a card — see docs/product-photo-rules.md for each reason).
 KNOWN_EXCEPTIONS = {
     "prd_432b62d4b317",
     "prd_1f1557a2acbb",
     "prd_296bd01a7c1f",
     "prd_e8a318ef10d2",
     "prd_b61ba7c4268e",
+    "prd_e165f2a765a7",
+    "prd_f724e0973fa5",
 }
 
 # Filename markers that mean "raw/temporary Telegram upload or derived working

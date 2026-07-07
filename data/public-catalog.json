@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T18:20:53.490354+00:00",
+  "generatedAt": "2026-07-07T19:46:48.001208+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -2540,9 +2540,8 @@
       "collections": [],
       "collectionLabels": [],
       "galleryImages": [
-        "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
-        "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-front.jpg",
-        "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-back.jpg"
+        "assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
+        "assets/products/dove/dove-straight-silky-680ml-back.jpg"
       ],
       "status": "active",
       "id": "prd_e165f2a765a7",
@@ -2550,7 +2549,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
+      "image": "assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
       "description": "Dove Straight & Silky шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
@@ -2678,9 +2677,9 @@
       "collections": [],
       "collectionLabels": [],
       "galleryImages": [
-        "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
-        "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-front.jpg",
-        "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-back.jpg"
+        "assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-card-front.jpg",
+        "assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-front.jpg",
+        "assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-back.jpg"
       ],
       "status": "active",
       "id": "prd_2563a902d211",
@@ -2688,7 +2687,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
+      "image": "assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 771,
       "description": "Шампунь Head & Shoulders Smooth & Silky для гладкости волос. Большой объем 650 мл.",
@@ -3000,9 +2999,9 @@
       "collections": [],
       "collectionLabels": [],
       "galleryImages": [
-        "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
-        "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-front.jpg",
-        "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-back.jpg"
+        "assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-card-front.jpg",
+        "assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-front.jpg",
+        "assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-back.jpg"
       ],
       "status": "active",
       "id": "prd_d8023f79398b",
@@ -3010,7 +3009,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
+      "image": "assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 771,
       "description": "Шампунь Head & Shoulders Anti-Hairfall для ежедневного ухода за волосами. Объем 650 мл.",
@@ -3384,9 +3383,8 @@
       "collections": [],
       "collectionLabels": [],
       "galleryImages": [
-        "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
-        "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-front.jpg",
-        "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-back.jpg"
+        "assets/products/dove/dove-nourishing-oil-care-680ml-card-front.jpg",
+        "assets/products/dove/dove-nourishing-oil-care-680ml-back.jpg"
       ],
       "status": "active",
       "id": "prd_f724e0973fa5",
@@ -3394,7 +3392,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
+      "image": "assets/products/dove/dove-nourishing-oil-care-680ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
       "description": "Dove Nourishing Oil Care шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
@@ -3604,9 +3602,9 @@
       "collections": [],
       "collectionLabels": [],
       "galleryImages": [
-        "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
-        "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-front.jpg",
-        "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-back.jpg"
+        "assets/products/dove/dove-hair-fall-rescue-680ml-card-front.jpg",
+        "assets/products/dove/dove-hair-fall-rescue-680ml-front.jpg",
+        "assets/products/dove/dove-hair-fall-rescue-680ml-back.jpg"
       ],
       "status": "active",
       "id": "prd_5c4dde48386b",
@@ -3614,7 +3612,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
+      "image": "assets/products/dove/dove-hair-fall-rescue-680ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
       "description": "Dove Hair Fall Rescue шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
@@ -3790,9 +3788,9 @@
       "collections": [],
       "collectionLabels": [],
       "galleryImages": [
-        "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
-        "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-front.jpg",
-        "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-back.jpg"
+        "assets/products/dove/dove-intensive-repair-680ml-card-front.jpg",
+        "assets/products/dove/dove-intensive-repair-680ml-front.jpg",
+        "assets/products/dove/dove-intensive-repair-680ml-back.jpg"
       ],
       "status": "active",
       "id": "prd_fc72d049dab9",
@@ -3800,7 +3798,7 @@
         "#f4d5df",
         "#b66f91"
       ],
-      "image": "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
+      "image": "assets/products/dove/dove-intensive-repair-680ml-card-front.jpg",
       "icon": "🧴",
       "registeredPriceKgs": 727,
       "description": "Dove Intensive Repair шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",

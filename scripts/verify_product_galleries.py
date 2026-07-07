@@ -14,6 +14,8 @@ KNOWN_EXCEPTIONS = {
     "prd_296bd01a7c1f": "Pantene Sheer Volume 600 ml: missing back photo in 2026-06-10 Petya album; user requested publication.",
     "prd_e8a318ef10d2": "Colgate 360 Optic White toothbrush: the -102856-01-back.jpg from the same Petya batch is a mismatch (text/branding says Charcoal Gold, matches -102856-03's own back) — no real back photo exists yet.",
     "prd_b61ba7c4268e": "Colgate MaxFresh toothbrush: the -103856-01-back.jpg from the same Petya batch is byte-identical (md5) to Colgate MaxWhite's back photo — a photographer mixup, no real back photo exists yet.",
+    "prd_e165f2a765a7": "Dove Straight & Silky 680 ml: missing stylized card photo (a 2026-07-05 gallery restore rotated photo roles across a Dove/Head & Shoulders chain — see notes in data/product_overrides.json); published as card+back only (the plain front photo doubles as the card).",
+    "prd_f724e0973fa5": "Dove Nourishing Oil Care 680 ml: missing stylized card photo (same 2026-07-05 restore rotation — see notes in data/product_overrides.json); published as card+back only (the plain front photo doubles as the card).",
 }
 
 # Raw/temporary-file markers that must never appear in a PUBLISHED image path —

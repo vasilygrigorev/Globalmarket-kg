@@ -644,8 +644,8 @@
       "categoryId": "hair",
       "collections": [],
       "retailPriceKgs": 750,
-      "image": "/assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
-      "imageCount": 3,
+      "image": "/assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
+      "imageCount": 2,
       "relatedCount": 24
     },
     {
@@ -674,7 +674,7 @@
       "categoryId": "hair",
       "collections": [],
       "retailPriceKgs": 795,
-      "image": "/assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
+      "image": "/assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
     },
@@ -809,7 +809,7 @@
       "categoryId": "hair",
       "collections": [],
       "retailPriceKgs": 795,
-      "image": "/assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
+      "image": "/assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
     },
@@ -884,8 +884,8 @@
       "categoryId": "hair",
       "collections": [],
       "retailPriceKgs": 750,
-      "image": "/assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
-      "imageCount": 3,
+      "image": "/assets/products/dove/dove-nourishing-oil-care-680ml-card-front.jpg",
+      "imageCount": 2,
       "relatedCount": 24
     },
     {
@@ -929,7 +929,7 @@
       "categoryId": "hair",
       "collections": [],
       "retailPriceKgs": 750,
-      "image": "/assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
+      "image": "/assets/products/dove/dove-hair-fall-rescue-680ml-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
     },
@@ -944,7 +944,7 @@
       "categoryId": "hair",
       "collections": [],
       "retailPriceKgs": 750,
-      "image": "/assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
+      "image": "/assets/products/dove/dove-intensive-repair-680ml-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
     },

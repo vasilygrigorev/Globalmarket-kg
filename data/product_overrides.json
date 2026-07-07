@@ -660,12 +660,12 @@
     "clean_title": "Head & Shoulders Smooth & Silky шампунь 650 мл",
     "description": "Шампунь Head & Shoulders Smooth & Silky для гладкости волос. Большой объем 650 мл.",
     "galleryImages": [
-      "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
-      "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-front.jpg",
-      "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-back.jpg"
+      "assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-card-front.jpg",
+      "assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-front.jpg",
+      "assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-back.jpg"
     ],
-    "image": "assets/products/restored-history/prd_2563a902d211-head-shoulders-smooth-silky-шампунь-650-мл-card-front.jpg",
-    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-04-card-front.jpg.",
+    "image": "assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-04-card-front.jpg.\n2026-07-08: that restore had the three photo roles rotated across this product and Anti-Hairfall (prd_d8023f79398b) — this product's own -card-front.jpg/-front.jpg/-back.jpg were actually front/back/[Anti-Hairfall's own back] respectively. Fixed: the real stylized card (pink) was sitting in Anti-Hairfall's own -back.jpg slot, moved here; the real front/back were relabeled correctly. The old -back.jpg here (a byte-identical duplicate of head-shoulders-cool-menthol-650ml-card-front.jpg) was discarded, not this product's own photo. Files renamed into assets/products/head-shoulders/ (matching the already-correct Cool Menthol variant).",
     "product_type": "шампунь",
     "short_title": "H&S Smooth & Silky 650 мл"
   },
@@ -1320,12 +1320,12 @@
     "clean_title": "Dove Hair Fall Rescue шампунь 680 мл",
     "description": "Dove Hair Fall Rescue шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
     "galleryImages": [
-      "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
-      "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-front.jpg",
-      "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-back.jpg"
+      "assets/products/dove/dove-hair-fall-rescue-680ml-card-front.jpg",
+      "assets/products/dove/dove-hair-fall-rescue-680ml-front.jpg",
+      "assets/products/dove/dove-hair-fall-rescue-680ml-back.jpg"
     ],
-    "image": "assets/products/restored-history/prd_5c4dde48386b-dove-hair-fall-rescue-шампунь-680-мл-card-front.jpg",
-    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-07-card-front.jpg.",
+    "image": "assets/products/dove/dove-hair-fall-rescue-680ml-card-front.jpg",
+    "notes": "2026-07-08: the 2026-07-05 restore rotated photo roles across a chain of Dove 680ml shampoos and Head & Shoulders 650ml shampoos together — this product's own -card-front.jpg/-front.jpg were actually front/back (mislabeled), and what was saved as this product's -back.jpg was actually a DIFFERENT product's real stylized card. Renamed into assets/products/dove/ (or assets/products/head-shoulders/), matching the already-correct Cool Menthol pattern. Chain: Dove Nourishing Oil Care -> Dove Intensive Repair -> Head & Shoulders Anti-Hairfall -> Head & Shoulders Smooth & Silky (each arrow: source's old -back.jpg held target's real card); separately Dove Straight & Silky -> Dove Hair Fall Rescue -> Dove Daily Shine (source_code 2622, currently 0 stock, not yet a public product — its recovered card saved as assets/products/dove/dove-daily-shine-680ml-card-front.jpg for whenever it's back in stock). This product's real card was recovered from Dove Straight & Silky's old -back.jpg slot.",
     "product_type": "шампунь"
   },
   "prd_5dffa1268ed0": {
@@ -2876,12 +2876,12 @@
     "clean_title": "Head & Shoulders Anti-Hairfall шампунь 650 мл",
     "description": "Шампунь Head & Shoulders Anti-Hairfall для ежедневного ухода за волосами. Объем 650 мл.",
     "galleryImages": [
-      "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
-      "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-front.jpg",
-      "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-back.jpg"
+      "assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-card-front.jpg",
+      "assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-front.jpg",
+      "assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-back.jpg"
     ],
-    "image": "assets/products/restored-history/prd_d8023f79398b-head-shoulders-anti-hairfall-шампунь-650-мл-card-front.jpg",
-    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-03-card-front.jpg.",
+    "image": "assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-card-front.jpg",
+    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-03-card-front.jpg.\n2026-07-08: that restore rotated this product's, Smooth & Silky's (prd_2563a902d211), and a Dove 680ml shampoo chain's photo roles together. First fixed as front+back only (its card wasn't found among the H&S 650ml files), then its real stylized card turned up while resolving the Dove 680ml chain — it was sitting in Dove Intensive Repair's (prd_fc72d049dab9) old -back.jpg slot. Now published with the full 3-photo set.",
     "product_type": "шампунь",
     "short_title": "H&S Anti-Hairfall 650 мл"
   },
@@ -3031,12 +3031,11 @@
     "clean_title": "Dove Straight & Silky шампунь 680 мл",
     "description": "Dove Straight & Silky шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
     "galleryImages": [
-      "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
-      "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-front.jpg",
-      "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-back.jpg"
+      "assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
+      "assets/products/dove/dove-straight-silky-680ml-back.jpg"
     ],
-    "image": "assets/products/restored-history/prd_e165f2a765a7-dove-straight-silky-шампунь-680-мл-card-front.jpg",
-    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-06-card-front.jpg.",
+    "image": "assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
+    "notes": "2026-07-08: the 2026-07-05 restore rotated photo roles across a chain of Dove 680ml shampoos and Head & Shoulders 650ml shampoos together — this product's own -card-front.jpg/-front.jpg were actually front/back (mislabeled), and what was saved as this product's -back.jpg was actually a DIFFERENT product's real stylized card. Renamed into assets/products/dove/ (or assets/products/head-shoulders/), matching the already-correct Cool Menthol pattern. Chain: Dove Nourishing Oil Care -> Dove Intensive Repair -> Head & Shoulders Anti-Hairfall -> Head & Shoulders Smooth & Silky (each arrow: source's old -back.jpg held target's real card); separately Dove Straight & Silky -> Dove Hair Fall Rescue -> Dove Daily Shine (source_code 2622, currently 0 stock, not yet a public product — its recovered card saved as assets/products/dove/dove-daily-shine-680ml-card-front.jpg for whenever it's back in stock). This product's own real card was not found anywhere in the chain — published as front+back only (see KNOWN_EXCEPTIONS in scripts/verify_product_galleries.py).",
     "product_type": "шампунь"
   },
   "prd_e166f2ec9c56": {
@@ -3432,12 +3431,11 @@
     "clean_title": "Dove Nourishing Oil Care шампунь 680 мл",
     "description": "Dove Nourishing Oil Care шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
     "galleryImages": [
-      "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
-      "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-front.jpg",
-      "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-back.jpg"
+      "assets/products/dove/dove-nourishing-oil-care-680ml-card-front.jpg",
+      "assets/products/dove/dove-nourishing-oil-care-680ml-back.jpg"
     ],
-    "image": "assets/products/restored-history/prd_f724e0973fa5-dove-nourishing-oil-care-шампунь-680-мл-card-front.jpg",
-    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-01-card-front.jpg.",
+    "image": "assets/products/dove/dove-nourishing-oil-care-680ml-card-front.jpg",
+    "notes": "2026-07-08: the 2026-07-05 restore rotated photo roles across a chain of Dove 680ml shampoos and Head & Shoulders 650ml shampoos together — this product's own -card-front.jpg/-front.jpg were actually front/back (mislabeled), and what was saved as this product's -back.jpg was actually a DIFFERENT product's real stylized card. Renamed into assets/products/dove/ (or assets/products/head-shoulders/), matching the already-correct Cool Menthol pattern. Chain: Dove Nourishing Oil Care -> Dove Intensive Repair -> Head & Shoulders Anti-Hairfall -> Head & Shoulders Smooth & Silky (each arrow: source's old -back.jpg held target's real card); separately Dove Straight & Silky -> Dove Hair Fall Rescue -> Dove Daily Shine (source_code 2622, currently 0 stock, not yet a public product — its recovered card saved as assets/products/dove/dove-daily-shine-680ml-card-front.jpg for whenever it's back in stock). This product's own real card was not found anywhere in the chain — published as front+back only (see KNOWN_EXCEPTIONS in scripts/verify_product_galleries.py).",
     "product_type": "шампунь"
   },
   "prd_f7a9d836005f": {
@@ -3496,12 +3494,12 @@
     "clean_title": "Dove Intensive Repair шампунь 680 мл",
     "description": "Dove Intensive Repair шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
     "galleryImages": [
-      "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
-      "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-front.jpg",
-      "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-back.jpg"
+      "assets/products/dove/dove-intensive-repair-680ml-card-front.jpg",
+      "assets/products/dove/dove-intensive-repair-680ml-front.jpg",
+      "assets/products/dove/dove-intensive-repair-680ml-back.jpg"
     ],
-    "image": "assets/products/restored-history/prd_fc72d049dab9-dove-intensive-repair-шампунь-680-мл-card-front.jpg",
-    "notes": "2026-07-05: restored historical gallery from d8df3e0 after raw Telegram cleanup removed previously published images; old main image was assets/products/telegram-8767964230-20260619-110800-02-card-front.jpg.",
+    "image": "assets/products/dove/dove-intensive-repair-680ml-card-front.jpg",
+    "notes": "2026-07-08: the 2026-07-05 restore rotated photo roles across a chain of Dove 680ml shampoos and Head & Shoulders 650ml shampoos together — this product's own -card-front.jpg/-front.jpg were actually front/back (mislabeled), and what was saved as this product's -back.jpg was actually a DIFFERENT product's real stylized card. Renamed into assets/products/dove/ (or assets/products/head-shoulders/), matching the already-correct Cool Menthol pattern. Chain: Dove Nourishing Oil Care -> Dove Intensive Repair -> Head & Shoulders Anti-Hairfall -> Head & Shoulders Smooth & Silky (each arrow: source's old -back.jpg held target's real card); separately Dove Straight & Silky -> Dove Hair Fall Rescue -> Dove Daily Shine (source_code 2622, currently 0 stock, not yet a public product — its recovered card saved as assets/products/dove/dove-daily-shine-680ml-card-front.jpg for whenever it's back in stock). This product's real card was recovered from Dove Nourishing Oil Care's old -back.jpg slot.",
     "product_type": "шампунь"
   },
   "prd_fd5eee161942": {

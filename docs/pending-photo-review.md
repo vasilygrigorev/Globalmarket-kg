@@ -6,6 +6,66 @@ confidence. Nothing here has been added to `data/product_overrides.json`
 or moved into a published `assets/products/<brand>/` folder. Raw files are
 left in place under `assets/products/` — do not delete.
 
+## RESOLVED 2026-07-08 — `restored-history/` photo-role rotation (H&S 650 ml + Dove 680 ml)
+
+User report: "хэден 650 вместо карточки стоит лицо" (H&S 650 ml shows the
+front photo where the card should be), then "тоже самое по dove 680, фото
+перепутаны с разными видами" (same for Dove 680 ml, mixed up with other
+variants).
+
+Root cause: the 2026-07-05 gallery restore (`data/product_overrides.json`
+notes: "restored historical gallery from d8df3e0 after raw Telegram cleanup
+removed previously published images") rotated the three photo roles across
+a chain of products instead of restoring each product's own three photos:
+
+- Every affected product's `-card-front.jpg` was actually that product's own
+  plain **front** photo, and its `-front.jpg` was actually that product's own
+  **back**/ingredients photo — a consistent two-role swap, not random.
+- Each product's `-back.jpg` was not a back photo at all: it held a
+  **different product's real stylized card**, chained across product lines:
+  `Dove Nourishing Oil Care → Dove Intensive Repair → Head & Shoulders
+  Anti-Hairfall → Head & Shoulders Smooth & Silky`, and separately
+  `Dove Straight & Silky → Dove Hair Fall Rescue → Dove Daily Shine`
+  (arrow = "this product's old -back.jpg held the next one's real card").
+
+Fixed by renaming each product's own front/back into their correct roles and
+moving each recovered stylized card to the product it actually belongs to:
+
+| Product | product_id | Real card recovered from |
+|---|---|---|
+| Head & Shoulders Smooth & Silky 650 ml | `prd_2563a902d211` | Anti-Hairfall's old `-back.jpg` |
+| Head & Shoulders Anti-Hairfall 650 ml | `prd_d8023f79398b` | Dove Intensive Repair's old `-back.jpg` |
+| Dove Intensive Repair 680 ml | `prd_fc72d049dab9` | Dove Nourishing Oil Care's old `-back.jpg` |
+| Dove Hair Fall Rescue 680 ml | `prd_5c4dde48386b` | Dove Straight & Silky's old `-back.jpg` |
+
+Two chain heads had no incoming card (nobody's old `-back.jpg` pointed to
+them), so their own real stylized card was never found in this batch:
+
+- **Dove Nourishing Oil Care 680 ml** (`prd_f724e0973fa5`) and **Dove
+  Straight & Silky 680 ml** (`prd_e165f2a765a7`) — published front+back only,
+  registered in `KNOWN_EXCEPTIONS` (`scripts/verify_product_galleries.py`).
+- **Dove Daily Shine 680 ml** (1C source_code 2622, currently 0 stock, not a
+  public product) — its recovered card was saved to
+  `assets/products/dove/dove-daily-shine-680ml-card-front.jpg` for whenever
+  it's back in stock; no product override was added since there's no active
+  product row for it yet.
+
+`Head & Shoulders Cool Menthol 650 ml` (`prd_e7e45d64df8b`) was already
+correctly organized in its own folder before this fix and was not part of
+the broken chain — a stray byte-identical duplicate of its card had leaked
+into Smooth & Silky's old `-back.jpg` slot, which was simply discarded (not
+moved, since the real file already exists at
+`assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-card-front.jpg`).
+
+14 products total reference "restored historical gallery from d8df3e0" in
+their override notes (the H&S/Dove chain above plus Concord, Comfort x3,
+Banduff x2, Fairy Lavender). Spot-checked Comfort Iris & Jasmine
+(`prd_733c019c32a5`) as a sample from the rest — its card-front/front/back
+are each self-consistent and correctly branded, not part of a rotation. The
+bug reported here appears scoped to the H&S/Dove shampoo chain specifically,
+not universal to every product this restore touched, but the other 9 weren't
+individually checked — worth a quick look if a mismatch surfaces there too.
+
 ## RESOLVED 2026-07-06 (late) — owner confirmations on archive-audit leftovers
 
 The owner reviewed the uncertain items surfaced by the full-archive audit and
