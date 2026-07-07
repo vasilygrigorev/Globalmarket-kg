@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 179,
+  "count": 184,
   "pages": [
     {
       "id": "prd_d0bc9026f5ab",
@@ -1219,6 +1219,81 @@
       "relatedCount": 14
     },
     {
+      "id": "prd_9fe19a4044b7",
+      "slug": "colgate-360-charcoal-zubnaya-schetka-4044b7",
+      "path": "/product/colgate-360-charcoal-zubnaya-schetka-4044b7/",
+      "url": "https://globalmarket.kg/product/colgate-360-charcoal-zubnaya-schetka-4044b7/",
+      "title": "Colgate 360 Charcoal зубная щётка",
+      "brand": "Colgate",
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "retailPriceKgs": 150,
+      "image": "/assets/products/colgate/colgate-360-charcoal-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 8
+    },
+    {
+      "id": "prd_e8a318ef10d2",
+      "slug": "colgate-360-optic-white-zubnaya-schetka-ef10d2",
+      "path": "/product/colgate-360-optic-white-zubnaya-schetka-ef10d2/",
+      "url": "https://globalmarket.kg/product/colgate-360-optic-white-zubnaya-schetka-ef10d2/",
+      "title": "Colgate 360 Optic White зубная щётка",
+      "brand": "Colgate",
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "retailPriceKgs": 150,
+      "image": "/assets/products/colgate/colgate-360-optic-white-card-front.jpg",
+      "imageCount": 2,
+      "relatedCount": 8
+    },
+    {
+      "id": "prd_77566889af78",
+      "slug": "colgate-360-whole-mouth-clean-zubnaya-schetka-89af78",
+      "path": "/product/colgate-360-whole-mouth-clean-zubnaya-schetka-89af78/",
+      "url": "https://globalmarket.kg/product/colgate-360-whole-mouth-clean-zubnaya-schetka-89af78/",
+      "title": "Colgate 360 Whole Mouth Clean зубная щётка",
+      "brand": "Colgate",
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "retailPriceKgs": 150,
+      "image": "/assets/products/colgate/colgate-360-whole-mouth-clean-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 8
+    },
+    {
+      "id": "prd_09feb137fd5e",
+      "slug": "colgate-360-charcoal-gold-zubnaya-schetka-37fd5e",
+      "path": "/product/colgate-360-charcoal-gold-zubnaya-schetka-37fd5e/",
+      "url": "https://globalmarket.kg/product/colgate-360-charcoal-gold-zubnaya-schetka-37fd5e/",
+      "title": "Colgate 360 Charcoal Gold зубная щётка",
+      "brand": "Colgate",
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "retailPriceKgs": 150,
+      "image": "/assets/products/colgate/colgate-360-charcoal-gold-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 8
+    },
+    {
+      "id": "prd_b61ba7c4268e",
+      "slug": "colgate-maxfresh-zubnaya-schetka-c4268e",
+      "path": "/product/colgate-maxfresh-zubnaya-schetka-c4268e/",
+      "url": "https://globalmarket.kg/product/colgate-maxfresh-zubnaya-schetka-c4268e/",
+      "title": "Colgate MaxFresh зубная щётка",
+      "brand": "Colgate",
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "retailPriceKgs": 120,
+      "image": "/assets/products/colgate/colgate-maxfresh-card-front.jpg",
+      "imageCount": 2,
+      "relatedCount": 8
+    },
+    {
       "id": "prd_1cb756e99bac",
       "slug": "colgate-maxwhite-zubnaya-schetka-e99bac",
       "path": "/product/colgate-maxwhite-zubnaya-schetka-e99bac/",
@@ -1231,7 +1306,7 @@
       "retailPriceKgs": 120,
       "image": "/assets/products/colgate/colgate-maxwhite-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 4
+      "relatedCount": 8
     },
     {
       "id": "prd_66dd4882eecf",
@@ -1246,7 +1321,7 @@
       "retailPriceKgs": 230,
       "image": "/assets/products/colgate/colgate-zigzag-3pcs-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 4
+      "relatedCount": 8
     },
     {
       "id": "prd_773d5cd63456",
@@ -1261,7 +1336,7 @@
       "retailPriceKgs": 70,
       "image": "/assets/products/colgate/colgate-double-action-charcoal-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 4
+      "relatedCount": 8
     },
     {
       "id": "prd_f3ed12b53668",
@@ -1276,7 +1351,7 @@
       "retailPriceKgs": 95,
       "image": "/assets/products/colgate/colgate-zigzag-charcoal-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 4
+      "relatedCount": 8
     },
     {
       "id": "prd_a9ee2b0ab49d",

@@ -72,7 +72,7 @@
       "url": "https://globalmarket.kg/category/oral/",
       "count": 26,
       "seoTerms": [],
-      "shown": 4
+      "shown": 9
     },
     {
       "type": "category",
@@ -221,6 +221,20 @@
     },
     {
       "type": "brand",
+      "slug": "colgate",
+      "title": "Colgate",
+      "path": "/brand/colgate/",
+      "url": "https://globalmarket.kg/brand/colgate/",
+      "count": 16,
+      "seoTerms": [
+        "Colgate",
+        "товары Colgate",
+        "Colgate купить Бишкек"
+      ],
+      "shown": 9
+    },
+    {
+      "type": "brand",
       "slug": "pantene",
       "title": "Pantene",
       "path": "/brand/pantene/",
@@ -274,20 +288,6 @@
         "Clear купить Бишкек"
       ],
       "shown": 6
-    },
-    {
-      "type": "brand",
-      "slug": "colgate",
-      "title": "Colgate",
-      "path": "/brand/colgate/",
-      "url": "https://globalmarket.kg/brand/colgate/",
-      "count": 12,
-      "seoTerms": [
-        "Colgate",
-        "товары Colgate",
-        "Colgate купить Бишкек"
-      ],
-      "shown": 4
     },
     {
       "type": "brand",

@@ -27,6 +27,8 @@ KNOWN_EXCEPTIONS = {
     "prd_432b62d4b317",
     "prd_1f1557a2acbb",
     "prd_296bd01a7c1f",
+    "prd_e8a318ef10d2",
+    "prd_b61ba7c4268e",
 }
 
 # Filename markers that mean "raw/temporary Telegram upload or derived working

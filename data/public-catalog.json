@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T11:56:10.471224+00:00",
+  "generatedAt": "2026-07-07T18:20:53.490354+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -77,6 +77,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Разное",
       "categoryId": "other",
@@ -106,6 +107,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Разное",
       "categoryId": "other",
@@ -135,6 +137,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Разное",
       "categoryId": "other",
@@ -164,6 +167,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Разное",
       "categoryId": "other",
@@ -193,6 +197,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Разное",
       "categoryId": "other",
@@ -222,6 +227,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Разное",
       "categoryId": "other",
@@ -251,6 +257,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 2595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -282,6 +289,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 2595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -307,6 +315,7 @@
     {
       "unit": "шт",
       "badge": "Ariel",
+      "restockedAt": null,
       "retailPriceKgs": 1595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -336,6 +345,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 2595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -365,6 +375,7 @@
     {
       "unit": "шт",
       "badge": "Ariel",
+      "restockedAt": null,
       "retailPriceKgs": 2790,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -390,6 +401,7 @@
     {
       "unit": "шт",
       "badge": "Ariel",
+      "restockedAt": null,
       "retailPriceKgs": 2790,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -415,6 +427,7 @@
     {
       "unit": "шт",
       "badge": "Ariel",
+      "restockedAt": null,
       "retailPriceKgs": 1590,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -440,6 +453,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 650,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -465,6 +479,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 1590,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -490,6 +505,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 2090,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -519,6 +535,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 2090,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -548,6 +565,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 2090,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -577,6 +595,7 @@
     {
       "unit": "шт",
       "badge": "Ariel",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -606,6 +625,7 @@
     {
       "unit": "шт",
       "badge": "OMO",
+      "restockedAt": null,
       "retailPriceKgs": 995,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -631,6 +651,7 @@
     {
       "unit": "шт",
       "badge": "OMO",
+      "restockedAt": null,
       "retailPriceKgs": 995,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -656,6 +677,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 3200,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -685,6 +707,7 @@
     {
       "unit": "шт",
       "badge": "OMO",
+      "restockedAt": null,
       "retailPriceKgs": 995,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -710,6 +733,7 @@
     {
       "unit": "шт",
       "badge": "Ariel",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -739,6 +763,7 @@
     {
       "unit": "шт",
       "badge": "OMO",
+      "restockedAt": null,
       "retailPriceKgs": 995,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -764,6 +789,7 @@
     {
       "unit": "шт",
       "badge": "OMO",
+      "restockedAt": null,
       "retailPriceKgs": 1390,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -789,6 +815,7 @@
     {
       "unit": "шт",
       "badge": "Ariel",
+      "restockedAt": null,
       "retailPriceKgs": 750,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -814,6 +841,7 @@
     {
       "unit": "шт",
       "badge": "Lenor",
+      "restockedAt": null,
       "retailPriceKgs": 750,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -843,6 +871,7 @@
     {
       "unit": "шт",
       "badge": "OMO",
+      "restockedAt": null,
       "retailPriceKgs": 1390,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -868,6 +897,7 @@
     {
       "unit": "шт",
       "badge": "Lenor",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -897,6 +927,7 @@
     {
       "unit": "шт",
       "badge": "Ariel",
+      "restockedAt": null,
       "retailPriceKgs": 3200,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -922,6 +953,7 @@
     {
       "unit": "шт",
       "badge": "Lenor",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -947,6 +979,7 @@
     {
       "unit": "шт",
       "badge": "Downy",
+      "restockedAt": null,
       "retailPriceKgs": 2395,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -972,6 +1005,7 @@
     {
       "unit": "шт",
       "badge": "Downy",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -997,6 +1031,7 @@
     {
       "unit": "шт",
       "badge": "Lenor",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1026,6 +1061,7 @@
     {
       "unit": "шт",
       "badge": "Downy",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1055,6 +1091,7 @@
     {
       "unit": "шт",
       "badge": "Downy",
+      "restockedAt": null,
       "retailPriceKgs": 2395,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1080,6 +1117,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 2090,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1109,6 +1147,7 @@
     {
       "unit": "шт",
       "badge": "Lenor",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1138,6 +1177,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 2595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1167,6 +1207,7 @@
     {
       "unit": "шт",
       "badge": "Comfort",
+      "restockedAt": null,
       "retailPriceKgs": 595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1196,6 +1237,7 @@
     {
       "unit": "шт",
       "badge": "Comfort",
+      "restockedAt": null,
       "retailPriceKgs": 595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1225,6 +1267,7 @@
     {
       "unit": "шт",
       "badge": "Lenor",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1254,6 +1297,7 @@
     {
       "unit": "шт",
       "badge": "Lenor",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1283,6 +1327,7 @@
     {
       "unit": "шт",
       "badge": "Comfort",
+      "restockedAt": null,
       "retailPriceKgs": 1290,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1312,6 +1357,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 3200,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1337,6 +1383,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 3200,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1366,6 +1413,7 @@
     {
       "unit": "шт",
       "badge": "Ariel",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1391,6 +1439,7 @@
     {
       "unit": "шт",
       "badge": "Ariel",
+      "restockedAt": null,
       "retailPriceKgs": 1590,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1416,6 +1465,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 2090,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1441,6 +1491,7 @@
     {
       "unit": "шт",
       "badge": "Comfort",
+      "restockedAt": null,
       "retailPriceKgs": 1290,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1470,6 +1521,7 @@
     {
       "unit": "шт",
       "badge": "Lenor",
+      "restockedAt": null,
       "retailPriceKgs": 750,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1495,6 +1547,7 @@
     {
       "unit": "шт",
       "badge": "Lenor",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1524,6 +1577,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 3200,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1553,6 +1607,7 @@
     {
       "unit": "шт",
       "badge": "Persil",
+      "restockedAt": null,
       "retailPriceKgs": 2090,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1578,6 +1633,7 @@
     {
       "unit": "шт",
       "badge": "Tide",
+      "restockedAt": null,
       "retailPriceKgs": 1595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1603,6 +1659,7 @@
     {
       "unit": "шт",
       "badge": "Downy",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1632,6 +1689,7 @@
     {
       "unit": "шт",
       "badge": "Lenor",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1661,6 +1719,7 @@
     {
       "unit": "шт",
       "badge": "Downy",
+      "restockedAt": null,
       "retailPriceKgs": 595,
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
@@ -1690,6 +1749,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
@@ -1715,6 +1775,7 @@
     {
       "unit": "шт",
       "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 70,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
@@ -1740,6 +1801,7 @@
     {
       "unit": "шт",
       "badge": "Fructies",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
@@ -1765,6 +1827,7 @@
     {
       "unit": "шт",
       "badge": "Jif",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
@@ -1794,6 +1857,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
@@ -1819,6 +1883,7 @@
     {
       "unit": "шт",
       "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 70,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
@@ -1844,6 +1909,7 @@
     {
       "unit": "шт",
       "badge": "Fairy",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
@@ -1873,6 +1939,7 @@
     {
       "unit": "шт",
       "badge": "Signal",
+      "restockedAt": null,
       "retailPriceKgs": 120,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
@@ -1898,6 +1965,7 @@
     {
       "unit": "шт",
       "badge": "Febreze",
+      "restockedAt": null,
       "retailPriceKgs": 390,
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
@@ -1923,6 +1991,7 @@
     {
       "unit": "шт",
       "badge": "Head & Shoulders",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -1952,6 +2021,7 @@
     {
       "unit": "шт",
       "badge": "Head & Shoulders",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -1981,6 +2051,7 @@
     {
       "unit": "шт",
       "badge": "Head & Shoulders",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2006,6 +2077,7 @@
     {
       "unit": "шт",
       "badge": "Head & Shoulders",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2035,6 +2107,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2060,6 +2133,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2085,6 +2159,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2110,6 +2185,7 @@
     {
       "unit": "шт",
       "badge": "Head & Shoulders",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2139,6 +2215,7 @@
     {
       "unit": "шт",
       "badge": "LUX",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2164,6 +2241,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2192,6 +2270,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2220,6 +2299,7 @@
     {
       "unit": "шт",
       "badge": "LUX",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2245,6 +2325,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2270,6 +2351,7 @@
     {
       "unit": "шт",
       "badge": "LUX",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2295,6 +2377,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2320,6 +2403,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2345,6 +2429,7 @@
     {
       "unit": "шт",
       "badge": "LUX",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2370,6 +2455,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2395,6 +2481,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2420,6 +2507,7 @@
     {
       "unit": "шт",
       "badge": "H&S",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2445,6 +2533,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 750,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2474,6 +2563,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2499,6 +2589,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2524,6 +2615,7 @@
     {
       "unit": "шт",
       "badge": "Nivea",
+      "restockedAt": null,
       "retailPriceKgs": 595,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2549,6 +2641,7 @@
     {
       "unit": "шт",
       "badge": "Herbal Essences",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2578,6 +2671,7 @@
     {
       "unit": "шт",
       "badge": "Head & Shoulders",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2607,6 +2701,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2636,6 +2731,7 @@
     {
       "unit": "шт",
       "badge": "Herbal Essences",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2665,6 +2761,7 @@
     {
       "unit": "шт",
       "badge": "Herbal Essences",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2694,6 +2791,7 @@
     {
       "unit": "шт",
       "badge": "Herbal Essences",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2723,6 +2821,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2748,6 +2847,7 @@
     {
       "unit": "шт",
       "badge": "TRESemme",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2773,6 +2873,7 @@
     {
       "unit": "шт",
       "badge": "Herbal Essences",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2802,6 +2903,7 @@
     {
       "unit": "шт",
       "badge": "Herbal Essences",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2831,6 +2933,7 @@
     {
       "unit": "шт",
       "badge": "Herbal Essences",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2860,6 +2963,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2889,6 +2993,7 @@
     {
       "unit": "шт",
       "badge": "Head & Shoulders",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2918,6 +3023,7 @@
     {
       "unit": "шт",
       "badge": "Fructies",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2943,6 +3049,7 @@
     {
       "unit": "шт",
       "badge": "Royal",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2968,6 +3075,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -2993,6 +3101,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3022,6 +3131,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3047,6 +3157,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3076,6 +3187,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3105,6 +3217,7 @@
     {
       "unit": "шт",
       "badge": "Fa",
+      "restockedAt": null,
       "retailPriceKgs": 1190,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3130,6 +3243,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3155,6 +3269,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3180,6 +3295,7 @@
     {
       "unit": "шт",
       "badge": "1Nivea",
+      "restockedAt": null,
       "retailPriceKgs": 595,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3205,6 +3321,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 1190,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3234,6 +3351,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3259,6 +3377,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 750,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3288,6 +3407,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3313,6 +3433,7 @@
     {
       "unit": "шт",
       "badge": "Royal",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3338,6 +3459,7 @@
     {
       "unit": "шт",
       "badge": "Head & Shoulders",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3367,6 +3489,7 @@
     {
       "unit": "шт",
       "badge": "HS",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3392,6 +3515,7 @@
     {
       "unit": "шт",
       "badge": "H&S",
+      "restockedAt": null,
       "retailPriceKgs": 1590,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3417,6 +3541,7 @@
     {
       "unit": "шт",
       "badge": "Nivea",
+      "restockedAt": null,
       "retailPriceKgs": 595,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3442,6 +3567,7 @@
     {
       "unit": "шт",
       "badge": "TRESemmé",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3471,6 +3597,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 750,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3500,6 +3627,7 @@
     {
       "unit": "шт",
       "badge": "Fructies",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3525,6 +3653,7 @@
     {
       "unit": "шт",
       "badge": "Fructies",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3550,6 +3679,7 @@
     {
       "unit": "шт",
       "badge": "Fa",
+      "restockedAt": null,
       "retailPriceKgs": 995,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3575,6 +3705,7 @@
     {
       "unit": "шт",
       "badge": "Syoss",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3600,6 +3731,7 @@
     {
       "unit": "шт",
       "badge": "Fa",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3625,6 +3757,7 @@
     {
       "unit": "шт",
       "badge": "Fructies",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3650,6 +3783,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 750,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3679,6 +3813,7 @@
     {
       "unit": "шт",
       "badge": "Fructies",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3704,6 +3839,7 @@
     {
       "unit": "шт",
       "badge": "Royal",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3729,6 +3865,7 @@
     {
       "unit": "шт",
       "badge": "Vatika",
+      "restockedAt": null,
       "retailPriceKgs": 395,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3754,6 +3891,7 @@
     {
       "unit": "шт",
       "badge": "Syoss",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3779,6 +3917,7 @@
     {
       "unit": "шт",
       "badge": "Vatika",
+      "restockedAt": null,
       "retailPriceKgs": 395,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3804,6 +3943,7 @@
     {
       "unit": "шт",
       "badge": "Syoss",
+      "restockedAt": null,
       "retailPriceKgs": 995,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3829,6 +3969,7 @@
     {
       "unit": "шт",
       "badge": "Syoss",
+      "restockedAt": null,
       "retailPriceKgs": 995,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3854,6 +3995,7 @@
     {
       "unit": "шт",
       "badge": "H&S",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3879,6 +4021,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3904,6 +4047,7 @@
     {
       "unit": "шт",
       "badge": "TRESemmé",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3932,6 +4076,7 @@
     {
       "unit": "шт",
       "badge": "TRESemmé",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3961,6 +4106,7 @@
     {
       "unit": "шт",
       "badge": "Clear",
+      "restockedAt": null,
       "retailPriceKgs": 1190,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -3986,6 +4132,7 @@
     {
       "unit": "шт",
       "badge": "H&S",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4011,6 +4158,7 @@
     {
       "unit": "шт",
       "badge": "H&S",
+      "restockedAt": null,
       "retailPriceKgs": 120,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4036,6 +4184,7 @@
     {
       "unit": "шт",
       "badge": "TRESemmé",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4065,6 +4214,7 @@
     {
       "unit": "шт",
       "badge": "St.Ives",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4090,6 +4240,7 @@
     {
       "unit": "шт",
       "badge": "St.Ives",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4115,6 +4266,7 @@
     {
       "unit": "шт",
       "badge": "Vatika",
+      "restockedAt": null,
       "retailPriceKgs": 395,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4140,6 +4292,7 @@
     {
       "unit": "шт",
       "badge": "H&S",
+      "restockedAt": null,
       "retailPriceKgs": 1590,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4165,6 +4318,7 @@
     {
       "unit": "шт",
       "badge": "St.Ives",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4190,6 +4344,7 @@
     {
       "unit": "шт",
       "badge": "St.Ives",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4215,6 +4370,7 @@
     {
       "unit": "шт",
       "badge": "St.Ives",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4240,6 +4396,7 @@
     {
       "unit": "шт",
       "badge": "St.Ives",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4265,6 +4422,7 @@
     {
       "unit": "шт",
       "badge": "H&S",
+      "restockedAt": null,
       "retailPriceKgs": 395,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4290,6 +4448,7 @@
     {
       "unit": "шт",
       "badge": "L'Oreal",
+      "restockedAt": null,
       "retailPriceKgs": 395,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4315,6 +4474,7 @@
     {
       "unit": "шт",
       "badge": "Vatika",
+      "restockedAt": null,
       "retailPriceKgs": 395,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4340,6 +4500,7 @@
     {
       "unit": "шт",
       "badge": "Vatika",
+      "restockedAt": null,
       "retailPriceKgs": 395,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4365,6 +4526,7 @@
     {
       "unit": "шт",
       "badge": "L'Oreal",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4390,6 +4552,7 @@
     {
       "unit": "шт",
       "badge": "Pantene",
+      "restockedAt": null,
       "retailPriceKgs": 395,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4415,6 +4578,7 @@
     {
       "unit": "шт",
       "badge": "St.Ives",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4440,6 +4604,7 @@
     {
       "unit": "шт",
       "badge": "H&S",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4465,6 +4630,7 @@
     {
       "unit": "шт",
       "badge": "Royal",
+      "restockedAt": null,
       "retailPriceKgs": 170,
       "category": "Уход за волосами",
       "categoryId": "hair",
@@ -4490,6 +4656,7 @@
     {
       "unit": "шт",
       "badge": "Skin Doctor",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4519,6 +4686,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4544,6 +4712,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4569,6 +4738,7 @@
     {
       "unit": "шт",
       "badge": "YC",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4598,6 +4768,7 @@
     {
       "unit": "шт",
       "badge": "YC",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4627,6 +4798,7 @@
     {
       "unit": "шт",
       "badge": "YC",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4656,6 +4828,7 @@
     {
       "unit": "шт",
       "badge": "YC",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4685,6 +4858,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4710,6 +4884,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4735,6 +4910,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4760,6 +4936,7 @@
     {
       "unit": "шт",
       "badge": "Skin Doctor",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4789,6 +4966,7 @@
     {
       "unit": "шт",
       "badge": "0.С",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4814,6 +4992,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4839,6 +5018,7 @@
     {
       "unit": "шт",
       "badge": "Skin Doctor",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4868,6 +5048,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4893,6 +5074,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4918,6 +5100,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4943,6 +5126,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4968,6 +5152,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 790,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -4993,6 +5178,7 @@
     {
       "unit": "шт",
       "badge": "Skin Doctor",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5022,6 +5208,7 @@
     {
       "unit": "шт",
       "badge": "Johnson's",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5051,6 +5238,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 790,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5076,6 +5264,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 790,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5101,6 +5290,7 @@
     {
       "unit": "шт",
       "badge": "Acne",
+      "restockedAt": null,
       "retailPriceKgs": 60,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5126,6 +5316,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5155,6 +5346,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5184,6 +5376,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5213,6 +5406,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5242,6 +5436,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5271,6 +5466,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5296,6 +5492,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5321,6 +5518,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5346,6 +5544,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5371,6 +5570,7 @@
     {
       "unit": "шт",
       "badge": "Roja",
+      "restockedAt": null,
       "retailPriceKgs": 220,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5396,6 +5596,7 @@
     {
       "unit": "шт",
       "badge": "D.S",
+      "restockedAt": null,
       "retailPriceKgs": 130,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5421,6 +5622,7 @@
     {
       "unit": "шт",
       "badge": "Imperial",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5446,6 +5648,7 @@
     {
       "unit": "шт",
       "badge": "Johnson's",
+      "restockedAt": null,
       "retailPriceKgs": 295,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5475,6 +5678,7 @@
     {
       "unit": "шт",
       "badge": "LadyDiana",
+      "restockedAt": null,
       "retailPriceKgs": 195,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5500,6 +5704,7 @@
     {
       "unit": "шт",
       "badge": "Cussons",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5525,6 +5730,7 @@
     {
       "unit": "шт",
       "badge": "Cussons",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5550,6 +5756,7 @@
     {
       "unit": "шт",
       "badge": "Cussons",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5575,6 +5782,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5600,6 +5808,7 @@
     {
       "unit": "шт",
       "badge": "Cussons",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5625,6 +5834,7 @@
     {
       "unit": "шт",
       "badge": "Cussons",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5650,6 +5860,7 @@
     {
       "unit": "шт",
       "badge": "Cussons",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5675,6 +5886,7 @@
     {
       "unit": "шт",
       "badge": "Palmolive",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5700,6 +5912,7 @@
     {
       "unit": "шт",
       "badge": "LadyDiana",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5725,6 +5938,7 @@
     {
       "unit": "шт",
       "badge": "LadyDiana",
+      "restockedAt": null,
       "retailPriceKgs": 250,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5750,6 +5964,7 @@
     {
       "unit": "шт",
       "badge": "Nivea",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5775,6 +5990,7 @@
     {
       "unit": "шт",
       "badge": "Kamill",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5804,6 +6020,7 @@
     {
       "unit": "шт",
       "badge": "Cinthol",
+      "restockedAt": null,
       "retailPriceKgs": 70,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5829,6 +6046,7 @@
     {
       "unit": "шт",
       "badge": "Camay",
+      "restockedAt": null,
       "retailPriceKgs": 60,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5854,6 +6072,7 @@
     {
       "unit": "шт",
       "badge": "J's",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5879,6 +6098,7 @@
     {
       "unit": "шт",
       "badge": "Cinthol",
+      "restockedAt": null,
       "retailPriceKgs": 70,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5904,6 +6124,7 @@
     {
       "unit": "шт",
       "badge": "SPA",
+      "restockedAt": null,
       "retailPriceKgs": 50,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5929,6 +6150,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5954,6 +6176,7 @@
     {
       "unit": "шт",
       "badge": "Camay",
+      "restockedAt": null,
       "retailPriceKgs": 60,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -5979,6 +6202,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6004,6 +6228,7 @@
     {
       "unit": "шт",
       "badge": "Palmolive",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6029,6 +6254,7 @@
     {
       "unit": "шт",
       "badge": "С",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6054,6 +6280,7 @@
     {
       "unit": "шт",
       "badge": "Camay",
+      "restockedAt": null,
       "retailPriceKgs": 60,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6079,6 +6306,7 @@
     {
       "unit": "шт",
       "badge": "Camay",
+      "restockedAt": null,
       "retailPriceKgs": 60,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6104,6 +6332,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6129,6 +6358,7 @@
     {
       "unit": "шт",
       "badge": "J's",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6154,6 +6384,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6179,6 +6410,7 @@
     {
       "unit": "шт",
       "badge": "Palmolive",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6204,6 +6436,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6229,6 +6462,7 @@
     {
       "unit": "шт",
       "badge": "SPA",
+      "restockedAt": null,
       "retailPriceKgs": 160,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6254,6 +6488,7 @@
     {
       "unit": "шт",
       "badge": "Jergens",
+      "restockedAt": null,
       "retailPriceKgs": 790,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6279,6 +6514,7 @@
     {
       "unit": "шт",
       "badge": "Jergens",
+      "restockedAt": null,
       "retailPriceKgs": 790,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6304,6 +6540,7 @@
     {
       "unit": "шт",
       "badge": "Camay",
+      "restockedAt": null,
       "retailPriceKgs": 60,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6329,6 +6566,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6354,6 +6592,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6379,6 +6618,7 @@
     {
       "unit": "шт",
       "badge": "Camay",
+      "restockedAt": null,
       "retailPriceKgs": 60,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6404,6 +6644,7 @@
     {
       "unit": "шт",
       "badge": "Palmolive",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6429,6 +6670,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6454,6 +6696,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6479,6 +6722,7 @@
     {
       "unit": "шт",
       "badge": "Glysolid",
+      "restockedAt": null,
       "retailPriceKgs": 400,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6504,6 +6748,7 @@
     {
       "unit": "шт",
       "badge": "Imperial",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6529,6 +6774,7 @@
     {
       "unit": "шт",
       "badge": "Palmolive",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6554,6 +6800,7 @@
     {
       "unit": "шт",
       "badge": "Palmolive",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Уход за телом",
       "categoryId": "body",
@@ -6578,107 +6825,156 @@
     },
     {
       "unit": "шт",
-      "badge": "Charcoal",
+      "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/colgate/colgate-360-charcoal-card-front.jpg",
+        "assets/products/colgate/colgate-360-charcoal-front.jpg",
+        "assets/products/colgate/colgate-360-charcoal-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_9fe19a4044b7",
       "tones": [
         "#d6e7f4",
         "#6b9ec6"
       ],
-      "image": null,
+      "image": "assets/products/colgate/colgate-360-charcoal-card-front.jpg",
       "icon": "🪥",
       "registeredPriceKgs": 145,
-      "description": "Charcoal: товар для ежедневной зубной гигиены.",
-      "title": "Charcoal щсп",
-      "productType": "зубная гигиена",
-      "brand": "Charcoal",
+      "description": "Зубная щётка Colgate 360 Charcoal с угольными щетинками, очищает между зубами и вдоль дёсен, а также щёки и язык.",
+      "title": "Colgate 360 Charcoal зубная щётка",
+      "productType": "зубная щётка",
+      "brand": "Colgate",
       "rating": 4.8,
-      "searchText": "charcoal щсп зубная гигиена charcoal зубная гигиена charcoal: товар для ежедневной зубной гигиены."
+      "searchText": "colgate 360 charcoal зубная щётка зубная гигиена colgate зубная щётка зубная щётка colgate 360 charcoal с угольными щетинками, очищает между зубами и вдоль дёсен, а также щёки и язык."
     },
     {
       "unit": "шт",
-      "badge": "Optic",
+      "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/colgate/colgate-360-optic-white-card-front.jpg",
+        "assets/products/colgate/colgate-360-optic-white-front.jpg"
+      ],
+      "status": "active",
       "id": "prd_e8a318ef10d2",
       "tones": [
         "#d6e7f4",
         "#6b9ec6"
       ],
-      "image": null,
+      "image": "assets/products/colgate/colgate-360-optic-white-card-front.jpg",
       "icon": "🪥",
       "registeredPriceKgs": 145,
-      "description": "Optic: товар для ежедневной зубной гигиены.",
-      "title": "Optic White щкд",
-      "productType": "зубная гигиена",
-      "brand": "Optic",
+      "description": "Зубная щётка Colgate 360 Optic White с отбеливающими щетинками, помогает удалить поверхностные пятна и очищает щёки и язык.",
+      "title": "Colgate 360 Optic White зубная щётка",
+      "productType": "зубная щётка",
+      "brand": "Colgate",
       "rating": 4.8,
-      "searchText": "optic white щкд зубная гигиена optic зубная гигиена optic: товар для ежедневной зубной гигиены."
+      "searchText": "colgate 360 optic white зубная щётка зубная гигиена colgate зубная щётка зубная щётка colgate 360 optic white с отбеливающими щетинками, помогает удалить поверхностные пятна и очищает щёки и язык."
     },
     {
       "unit": "шт",
-      "badge": "Whole",
+      "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/colgate/colgate-360-whole-mouth-clean-card-front.jpg",
+        "assets/products/colgate/colgate-360-whole-mouth-clean-front.jpg",
+        "assets/products/colgate/colgate-360-whole-mouth-clean-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_77566889af78",
       "tones": [
         "#d6e7f4",
         "#6b9ec6"
       ],
-      "image": null,
+      "image": "assets/products/colgate/colgate-360-whole-mouth-clean-card-front.jpg",
       "icon": "🪥",
       "registeredPriceKgs": 145,
-      "description": "Whole: товар для ежедневной зубной гигиены.",
-      "title": "Whole Mouth щкд",
-      "productType": "зубная гигиена",
-      "brand": "Whole",
+      "description": "Зубная щётка Colgate 360 Whole Mouth Clean с межзубными щетинками и полирующими чашечками, очищает щёки и язык.",
+      "title": "Colgate 360 Whole Mouth Clean зубная щётка",
+      "productType": "зубная щётка",
+      "brand": "Colgate",
       "rating": 4.8,
-      "searchText": "whole mouth щкд зубная гигиена whole зубная гигиена whole: товар для ежедневной зубной гигиены."
+      "searchText": "colgate 360 whole mouth clean зубная щётка зубная гигиена colgate зубная щётка зубная щётка colgate 360 whole mouth clean с межзубными щетинками и полирующими чашечками, очищает щёки и язык."
     },
     {
       "unit": "шт",
-      "badge": "GOLD",
+      "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
+      "galleryImages": [
+        "assets/products/colgate/colgate-360-charcoal-gold-card-front.jpg",
+        "assets/products/colgate/colgate-360-charcoal-gold-front.jpg",
+        "assets/products/colgate/colgate-360-charcoal-gold-back.jpg"
+      ],
+      "status": "active",
       "id": "prd_09feb137fd5e",
       "tones": [
         "#d6e7f4",
         "#6b9ec6"
       ],
-      "image": null,
+      "image": "assets/products/colgate/colgate-360-charcoal-gold-card-front.jpg",
       "icon": "🪥",
       "registeredPriceKgs": 145,
-      "description": "GOLD: товар для ежедневной зубной гигиены.",
-      "title": "GOLD",
-      "productType": "зубная гигиена",
-      "brand": "GOLD",
+      "description": "Зубная щётка Colgate 360 Charcoal Gold с угольными спиральными щетинками, мягкая, очищает щёки и язык.",
+      "title": "Colgate 360 Charcoal Gold зубная щётка",
+      "productType": "зубная щётка",
+      "brand": "Colgate",
       "rating": 4.8,
-      "searchText": "gold зубная гигиена gold зубная гигиена gold: товар для ежедневной зубной гигиены."
+      "searchText": "colgate 360 charcoal gold зубная щётка зубная гигиена colgate зубная щётка зубная щётка colgate 360 charcoal gold с угольными спиральными щетинками, мягкая, очищает щёки и язык."
     },
     {
       "unit": "шт",
       "badge": "Colgate",
+      "restockedAt": null,
+      "retailPriceKgs": 120,
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/colgate/colgate-maxfresh-card-front.jpg",
+        "assets/products/colgate/colgate-maxfresh-front.jpg"
+      ],
+      "status": "active",
+      "id": "prd_b61ba7c4268e",
+      "tones": [
+        "#d6e7f4",
+        "#6b9ec6"
+      ],
+      "image": "assets/products/colgate/colgate-maxfresh-card-front.jpg",
+      "icon": "🪥",
+      "registeredPriceKgs": 116,
+      "description": "Зубная щётка Colgate Max Fresh с полирующей звёздочкой, освежает дыхание и помогает отполировать поверхностные пятна.",
+      "title": "Colgate MaxFresh зубная щётка",
+      "productType": "зубная щётка",
+      "brand": "Colgate",
+      "rating": 4.8,
+      "searchText": "colgate maxfresh зубная щётка зубная гигиена colgate зубная щётка зубная щётка colgate max fresh с полирующей звёздочкой, освежает дыхание и помогает отполировать поверхностные пятна."
+    },
+    {
+      "unit": "шт",
+      "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 120,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6708,31 +7004,7 @@
     {
       "unit": "шт",
       "badge": "Colgate",
-      "retailPriceKgs": 120,
-      "category": "Зубная гигиена",
-      "categoryId": "oral",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_b61ba7c4268e",
-      "tones": [
-        "#d6e7f4",
-        "#6b9ec6"
-      ],
-      "image": null,
-      "icon": "🪥",
-      "registeredPriceKgs": 116,
-      "description": "Colgate: товар для ежедневной зубной гигиены.",
-      "title": "Colgate з/щ MaxFresh",
-      "productType": "зубная гигиена",
-      "brand": "Colgate",
-      "rating": 4.8,
-      "searchText": "colgate з/щ maxfresh зубная гигиена colgate зубная гигиена colgate: товар для ежедневной зубной гигиены."
-    },
-    {
-      "unit": "шт",
-      "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6762,6 +7034,7 @@
     {
       "unit": "шт",
       "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 70,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6791,6 +7064,7 @@
     {
       "unit": "шт",
       "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6816,6 +7090,7 @@
     {
       "unit": "шт",
       "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6841,6 +7116,7 @@
     {
       "unit": "шт",
       "badge": "Oral-B",
+      "restockedAt": null,
       "retailPriceKgs": 120,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6866,6 +7142,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6891,6 +7168,7 @@
     {
       "unit": "шт",
       "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 95,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6920,6 +7198,7 @@
     {
       "unit": "шт",
       "badge": "Oral-B",
+      "restockedAt": null,
       "retailPriceKgs": 240,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6945,6 +7224,7 @@
     {
       "unit": "шт",
       "badge": "Oral-B",
+      "restockedAt": null,
       "retailPriceKgs": 240,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6970,6 +7250,7 @@
     {
       "unit": "шт",
       "badge": "Oral-B",
+      "restockedAt": null,
       "retailPriceKgs": 270,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -6995,6 +7276,7 @@
     {
       "unit": "шт",
       "badge": "Crest",
+      "restockedAt": null,
       "retailPriceKgs": 190,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7020,6 +7302,7 @@
     {
       "unit": "шт",
       "badge": "Dabur",
+      "restockedAt": null,
       "retailPriceKgs": 100,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7045,6 +7328,7 @@
     {
       "unit": "шт",
       "badge": "LORD",
+      "restockedAt": null,
       "retailPriceKgs": 95,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7070,6 +7354,7 @@
     {
       "unit": "шт",
       "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7095,6 +7380,7 @@
     {
       "unit": "шт",
       "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7120,6 +7406,7 @@
     {
       "unit": "шт",
       "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 60,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7145,6 +7432,7 @@
     {
       "unit": "шт",
       "badge": "TRISA",
+      "restockedAt": null,
       "retailPriceKgs": 170,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7170,6 +7458,7 @@
     {
       "unit": "шт",
       "badge": "Crest",
+      "restockedAt": null,
       "retailPriceKgs": 190,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7195,6 +7484,7 @@
     {
       "unit": "шт",
       "badge": "TRISA",
+      "restockedAt": null,
       "retailPriceKgs": 140,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7220,6 +7510,7 @@
     {
       "unit": "шт",
       "badge": "Crest",
+      "restockedAt": null,
       "retailPriceKgs": 190,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7245,6 +7536,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7270,6 +7562,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7299,6 +7592,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7328,6 +7622,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7357,6 +7652,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7382,6 +7678,7 @@
     {
       "unit": "шт",
       "badge": "Arm & Hammer",
+      "restockedAt": null,
       "retailPriceKgs": 490,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7411,6 +7708,7 @@
     {
       "unit": "шт",
       "badge": "1ARM",
+      "restockedAt": null,
       "retailPriceKgs": 490,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7436,6 +7734,7 @@
     {
       "unit": "шт",
       "badge": "Arm & Hammer",
+      "restockedAt": null,
       "retailPriceKgs": 490,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7465,6 +7764,7 @@
     {
       "unit": "шт",
       "badge": "Arm & Hammer",
+      "restockedAt": null,
       "retailPriceKgs": 490,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7494,6 +7794,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7519,6 +7820,7 @@
     {
       "unit": "шт",
       "badge": "L'Oreal",
+      "restockedAt": null,
       "retailPriceKgs": 590,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7544,6 +7846,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7569,6 +7872,7 @@
     {
       "unit": "шт",
       "badge": "Degree",
+      "restockedAt": null,
       "retailPriceKgs": 595,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7594,6 +7898,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7623,6 +7928,7 @@
     {
       "unit": "шт",
       "badge": "L'Oreal",
+      "restockedAt": null,
       "retailPriceKgs": 590,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7648,6 +7954,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7677,6 +7984,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7702,6 +8010,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7727,6 +8036,7 @@
     {
       "unit": "шт",
       "badge": "Arm & Hammer",
+      "restockedAt": null,
       "retailPriceKgs": 250,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7756,6 +8066,7 @@
     {
       "unit": "шт",
       "badge": "Arm & Hammer",
+      "restockedAt": null,
       "retailPriceKgs": 250,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7785,6 +8096,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7814,6 +8126,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7843,6 +8156,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7872,6 +8186,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7901,6 +8216,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7930,6 +8246,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7959,6 +8276,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -7984,6 +8302,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8009,6 +8328,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8038,6 +8358,7 @@
     {
       "unit": "шт",
       "badge": "Dove",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8067,6 +8388,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8092,6 +8414,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8117,6 +8440,7 @@
     {
       "unit": "шт",
       "badge": "L'Oreal",
+      "restockedAt": null,
       "retailPriceKgs": 590,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8142,6 +8466,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8167,6 +8492,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8192,6 +8518,7 @@
     {
       "unit": "шт",
       "badge": "Fa",
+      "restockedAt": null,
       "retailPriceKgs": 160,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8217,6 +8544,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8242,6 +8570,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8267,6 +8596,7 @@
     {
       "unit": "шт",
       "badge": "Old Spice",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8292,6 +8622,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8317,6 +8648,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8342,6 +8674,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8367,6 +8700,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8392,6 +8726,7 @@
     {
       "unit": "шт",
       "badge": "L'Oreal",
+      "restockedAt": null,
       "retailPriceKgs": 590,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8417,6 +8752,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8442,6 +8778,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8467,6 +8804,7 @@
     {
       "unit": "шт",
       "badge": "L'Oreal",
+      "restockedAt": null,
       "retailPriceKgs": 590,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8492,6 +8830,7 @@
     {
       "unit": "шт",
       "badge": "L'Oreal",
+      "restockedAt": null,
       "retailPriceKgs": 590,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8517,6 +8856,7 @@
     {
       "unit": "шт",
       "badge": "Fa",
+      "restockedAt": null,
       "retailPriceKgs": 160,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8542,6 +8882,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8567,6 +8908,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8592,6 +8934,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8617,6 +8960,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 270,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8646,6 +8990,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8671,6 +9016,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 270,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8696,6 +9042,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 270,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8725,6 +9072,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 270,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8754,6 +9102,7 @@
     {
       "unit": "шт",
       "badge": "L'Oreal",
+      "restockedAt": null,
       "retailPriceKgs": 390,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8779,6 +9128,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 270,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8808,6 +9158,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 270,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8837,6 +9188,7 @@
     {
       "unit": "шт",
       "badge": "Reebok",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8862,6 +9214,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8887,6 +9240,7 @@
     {
       "unit": "шт",
       "badge": "Old Spice",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8912,6 +9266,7 @@
     {
       "unit": "шт",
       "badge": "Fa",
+      "restockedAt": null,
       "retailPriceKgs": 160,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8937,6 +9292,7 @@
     {
       "unit": "шт",
       "badge": "Reebok",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8962,6 +9318,7 @@
     {
       "unit": "шт",
       "badge": "AXE",
+      "restockedAt": null,
       "retailPriceKgs": 270,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -8991,6 +9348,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -9016,6 +9374,7 @@
     {
       "unit": "шт",
       "badge": "Alpifresh",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -9041,6 +9400,7 @@
     {
       "unit": "шт",
       "badge": "Rexona",
+      "restockedAt": null,
       "retailPriceKgs": 400,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -9066,6 +9426,7 @@
     {
       "unit": "шт",
       "badge": "Reebok",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -9091,6 +9452,7 @@
     {
       "unit": "шт",
       "badge": "Adidas",
+      "restockedAt": null,
       "retailPriceKgs": 295,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -9116,6 +9478,7 @@
     {
       "unit": "шт",
       "badge": "Old Spice",
+      "restockedAt": null,
       "retailPriceKgs": 295,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -9141,6 +9504,7 @@
     {
       "unit": "шт",
       "badge": "Fa",
+      "restockedAt": null,
       "retailPriceKgs": 160,
       "category": "Дезодоранты",
       "categoryId": "deodorants",
@@ -9166,6 +9530,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 1495,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9191,6 +9556,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 2490,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9220,6 +9586,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 250,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9245,6 +9612,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 2190,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9270,6 +9638,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 400,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9299,6 +9668,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9324,6 +9694,7 @@
     {
       "unit": "шт",
       "badge": "Gillette Venus",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9353,6 +9724,7 @@
     {
       "unit": "шт",
       "badge": "Shaving",
+      "restockedAt": null,
       "retailPriceKgs": 400,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9378,6 +9750,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 590,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9403,6 +9776,7 @@
     {
       "unit": "шт",
       "badge": "Gillette Venus",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9432,6 +9806,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 2095,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9461,6 +9836,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 2090,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9486,6 +9862,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 1790,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9515,6 +9892,7 @@
     {
       "unit": "шт",
       "badge": "4",
+      "restockedAt": null,
       "retailPriceKgs": 1195,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9540,6 +9918,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 400,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9565,6 +9944,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9590,6 +9970,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 890,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9619,6 +10000,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 990,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9644,6 +10026,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9673,6 +10056,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9702,6 +10086,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9731,6 +10116,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9756,6 +10142,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9781,6 +10168,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 1190,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9810,6 +10198,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9835,6 +10224,7 @@
     {
       "unit": "шт",
       "badge": "BIC",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9864,6 +10254,7 @@
     {
       "unit": "шт",
       "badge": "BIC",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9889,6 +10280,7 @@
     {
       "unit": "шт",
       "badge": "BIC",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9918,6 +10310,7 @@
     {
       "unit": "шт",
       "badge": "BIC",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9947,6 +10340,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -9972,6 +10366,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 890,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10001,6 +10396,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10026,6 +10422,7 @@
     {
       "unit": "шт",
       "badge": "BIC",
+      "restockedAt": null,
       "retailPriceKgs": 390,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10055,6 +10452,7 @@
     {
       "unit": "шт",
       "badge": "BIC",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10084,6 +10482,7 @@
     {
       "unit": "шт",
       "badge": "Gillette Venus",
+      "restockedAt": null,
       "retailPriceKgs": 250,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10113,6 +10512,7 @@
     {
       "unit": "шт",
       "badge": "BIC",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10142,6 +10542,7 @@
     {
       "unit": "шт",
       "badge": "Gillette Venus",
+      "restockedAt": null,
       "retailPriceKgs": 1595,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10171,6 +10572,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10196,6 +10598,7 @@
     {
       "unit": "шт",
       "badge": "BIC",
+      "restockedAt": null,
       "retailPriceKgs": 195,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10225,6 +10628,7 @@
     {
       "unit": "шт",
       "badge": "Gillette Venus",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10254,6 +10658,7 @@
     {
       "unit": "шт",
       "badge": "1",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10279,6 +10684,7 @@
     {
       "unit": "шт",
       "badge": "Gillette Venus",
+      "restockedAt": null,
       "retailPriceKgs": 590,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10308,6 +10714,7 @@
     {
       "unit": "шт",
       "badge": "Gillette Venus",
+      "restockedAt": null,
       "retailPriceKgs": 795,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10333,6 +10740,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10362,6 +10770,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 2495,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10387,6 +10796,7 @@
     {
       "unit": "шт",
       "badge": "Lazer",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10412,6 +10822,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10437,6 +10848,7 @@
     {
       "unit": "шт",
       "badge": "Queen",
+      "restockedAt": null,
       "retailPriceKgs": 120,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10462,6 +10874,7 @@
     {
       "unit": "шт",
       "badge": "Gillette",
+      "restockedAt": null,
       "retailPriceKgs": 1990,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10487,6 +10900,7 @@
     {
       "unit": "шт",
       "badge": "Gillette Venus",
+      "restockedAt": null,
       "retailPriceKgs": 650,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10516,6 +10930,7 @@
     {
       "unit": "шт",
       "badge": "4",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10541,6 +10956,7 @@
     {
       "unit": "шт",
       "badge": "2",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10566,6 +10982,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 120,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10591,6 +11008,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10620,6 +11038,7 @@
     {
       "unit": "шт",
       "badge": "Queen",
+      "restockedAt": null,
       "retailPriceKgs": 120,
       "category": "Бритье",
       "categoryId": "shaving",
@@ -10645,6 +11064,7 @@
     {
       "unit": "шт",
       "badge": "Bharmal",
+      "restockedAt": null,
       "retailPriceKgs": 890,
       "category": "Продукты",
       "categoryId": "food",
@@ -10670,6 +11090,7 @@
     {
       "unit": "шт",
       "badge": "Bharmal",
+      "restockedAt": null,
       "retailPriceKgs": 890,
       "category": "Продукты",
       "categoryId": "food",
@@ -10695,6 +11116,7 @@
     {
       "unit": "шт",
       "badge": "Davidoff",
+      "restockedAt": null,
       "retailPriceKgs": 995,
       "category": "Продукты",
       "categoryId": "food",
@@ -10720,6 +11142,7 @@
     {
       "unit": "шт",
       "badge": "Bharmal",
+      "restockedAt": null,
       "retailPriceKgs": 400,
       "category": "Продукты",
       "categoryId": "food",
@@ -10745,6 +11168,7 @@
     {
       "unit": "шт",
       "badge": "Bharmal",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Продукты",
       "categoryId": "food",
@@ -10770,6 +11194,7 @@
     {
       "unit": "шт",
       "badge": "Bharmal",
+      "restockedAt": null,
       "retailPriceKgs": 495,
       "category": "Продукты",
       "categoryId": "food",
@@ -10795,6 +11220,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 2595,
       "category": "Европа",
       "categoryId": "germany",
@@ -10828,6 +11254,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 2595,
       "category": "Европа",
       "categoryId": "germany",
@@ -10861,6 +11288,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 990,
       "category": "Европа",
       "categoryId": "germany",
@@ -10890,6 +11318,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 2395,
       "category": "Европа",
       "categoryId": "germany",
@@ -10923,6 +11352,7 @@
     {
       "unit": "шт",
       "badge": "Dash",
+      "restockedAt": null,
       "retailPriceKgs": 2295,
       "category": "Европа",
       "categoryId": "germany",
@@ -10956,6 +11386,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 990,
       "category": "Европа",
       "categoryId": "germany",
@@ -10985,6 +11416,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 2595,
       "category": "Европа",
       "categoryId": "germany",
@@ -11014,6 +11446,7 @@
     {
       "unit": "шт",
       "badge": "Dash",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Европа",
       "categoryId": "germany",
@@ -11047,6 +11480,7 @@
     {
       "unit": "шт",
       "badge": "Dash",
+      "restockedAt": null,
       "retailPriceKgs": 2295,
       "category": "Европа",
       "categoryId": "germany",
@@ -11080,6 +11514,7 @@
     {
       "unit": "шт",
       "badge": "G.Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 990,
       "category": "Европа",
       "categoryId": "germany",
@@ -11109,6 +11544,7 @@
     {
       "unit": "шт",
       "badge": "Dash",
+      "restockedAt": null,
       "retailPriceKgs": 2195,
       "category": "Европа",
       "categoryId": "germany",
@@ -11142,6 +11578,7 @@
     {
       "unit": "шт",
       "badge": "Dash",
+      "restockedAt": null,
       "retailPriceKgs": 2195,
       "category": "Европа",
       "categoryId": "germany",
@@ -11175,6 +11612,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 650,
       "category": "Европа",
       "categoryId": "germany",
@@ -11208,6 +11646,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 650,
       "category": "Европа",
       "categoryId": "germany",
@@ -11241,6 +11680,7 @@
     {
       "unit": "шт",
       "badge": "G.Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 395,
       "category": "Европа",
       "categoryId": "germany",
@@ -11270,6 +11710,7 @@
     {
       "unit": "шт",
       "badge": "Dash",
+      "restockedAt": null,
       "retailPriceKgs": 2090,
       "category": "Европа",
       "categoryId": "germany",
@@ -11303,6 +11744,7 @@
     {
       "unit": "шт",
       "badge": "G.Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 990,
       "category": "Европа",
       "categoryId": "germany",
@@ -11332,6 +11774,7 @@
     {
       "unit": "шт",
       "badge": "G.Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 395,
       "category": "Европа",
       "categoryId": "germany",
@@ -11361,6 +11804,7 @@
     {
       "unit": "шт",
       "badge": "Dash",
+      "restockedAt": null,
       "retailPriceKgs": 2090,
       "category": "Европа",
       "categoryId": "germany",
@@ -11394,6 +11838,7 @@
     {
       "unit": "шт",
       "badge": "Dash",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Европа",
       "categoryId": "germany",
@@ -11427,6 +11872,7 @@
     {
       "unit": "шт",
       "badge": "G.BONUX",
+      "restockedAt": null,
       "retailPriceKgs": 590,
       "category": "Европа",
       "categoryId": "germany",
@@ -11456,6 +11902,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Европа",
       "categoryId": "germany",
@@ -11489,6 +11936,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Европа",
       "categoryId": "germany",
@@ -11522,6 +11970,7 @@
     {
       "unit": "шт",
       "badge": "G.DASH",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Европа",
       "categoryId": "germany",
@@ -11551,6 +12000,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Европа",
       "categoryId": "germany",
@@ -11584,6 +12034,7 @@
     {
       "unit": "шт",
       "badge": "Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 690,
       "category": "Европа",
       "categoryId": "germany",
@@ -11617,6 +12068,7 @@
     {
       "unit": "шт",
       "badge": "G.DASH",
+      "restockedAt": null,
       "retailPriceKgs": 2990,
       "category": "Европа",
       "categoryId": "germany",
@@ -11646,6 +12098,7 @@
     {
       "unit": "шт",
       "badge": "1G.DASH",
+      "restockedAt": null,
       "retailPriceKgs": 4400,
       "category": "Европа",
       "categoryId": "germany",
@@ -11675,6 +12128,7 @@
     {
       "unit": "шт",
       "badge": "1G.DASH",
+      "restockedAt": null,
       "retailPriceKgs": 4400,
       "category": "Европа",
       "categoryId": "germany",
@@ -11704,6 +12158,7 @@
     {
       "unit": "шт",
       "badge": "G.Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 1490,
       "category": "Европа",
       "categoryId": "germany",
@@ -11733,6 +12188,7 @@
     {
       "unit": "шт",
       "badge": "G.Dalli",
+      "restockedAt": null,
       "retailPriceKgs": 1490,
       "category": "Европа",
       "categoryId": "germany",
@@ -11762,6 +12218,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Разное",
       "categoryId": "other",
@@ -11787,6 +12244,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 170,
       "category": "Разное",
       "categoryId": "other",
@@ -11812,6 +12270,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Разное",
       "categoryId": "other",
@@ -11837,6 +12296,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Разное",
       "categoryId": "other",
@@ -11862,6 +12322,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 240,
       "category": "Разное",
       "categoryId": "other",
@@ -11887,6 +12348,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 390,
       "category": "Разное",
       "categoryId": "other",
@@ -11912,6 +12374,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Разное",
       "categoryId": "other",
@@ -11937,6 +12400,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Разное",
       "categoryId": "other",
@@ -11962,6 +12426,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -11987,6 +12452,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 1095,
       "category": "Разное",
       "categoryId": "other",
@@ -12012,6 +12478,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 190,
       "category": "Разное",
       "categoryId": "other",
@@ -12041,6 +12508,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Разное",
       "categoryId": "other",
@@ -12066,6 +12534,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 240,
       "category": "Разное",
       "categoryId": "other",
@@ -12091,6 +12560,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 190,
       "category": "Разное",
       "categoryId": "other",
@@ -12120,6 +12590,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Разное",
       "categoryId": "other",
@@ -12145,6 +12616,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 170,
       "category": "Разное",
       "categoryId": "other",
@@ -12174,6 +12646,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 1495,
       "category": "Разное",
       "categoryId": "other",
@@ -12199,6 +12672,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Разное",
       "categoryId": "other",
@@ -12224,6 +12698,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -12249,6 +12724,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -12274,6 +12750,7 @@
     {
       "unit": "шт",
       "badge": "Пластырь",
+      "restockedAt": null,
       "retailPriceKgs": 20,
       "category": "Разное",
       "categoryId": "other",
@@ -12303,6 +12780,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 240,
       "category": "Разное",
       "categoryId": "other",
@@ -12328,6 +12806,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 220,
       "category": "Разное",
       "categoryId": "other",
@@ -12353,6 +12832,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -12378,6 +12858,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 195,
       "category": "Разное",
       "categoryId": "other",
@@ -12403,6 +12884,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -12428,6 +12910,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -12453,6 +12936,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 240,
       "category": "Разное",
       "categoryId": "other",
@@ -12478,6 +12962,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Разное",
       "categoryId": "other",
@@ -12503,6 +12988,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -12528,6 +13014,7 @@
     {
       "unit": "шт",
       "badge": "Пластырь",
+      "restockedAt": null,
       "retailPriceKgs": 120,
       "category": "Разное",
       "categoryId": "other",
@@ -12557,6 +13044,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 240,
       "category": "Разное",
       "categoryId": "other",
@@ -12582,6 +13070,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -12607,6 +13096,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Разное",
       "categoryId": "other",
@@ -12632,6 +13122,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 240,
       "category": "Разное",
       "categoryId": "other",
@@ -12657,6 +13148,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Разное",
       "categoryId": "other",
@@ -12682,6 +13174,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Разное",
       "categoryId": "other",
@@ -12707,6 +13200,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 190,
       "category": "Разное",
       "categoryId": "other",
@@ -12732,6 +13226,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Разное",
       "categoryId": "other",
@@ -12757,6 +13252,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 240,
       "category": "Разное",
       "categoryId": "other",
@@ -12782,6 +13278,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -12807,6 +13304,7 @@
     {
       "unit": "шт",
       "badge": "Салфетки",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Разное",
       "categoryId": "other",
@@ -12832,6 +13330,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 240,
       "category": "Разное",
       "categoryId": "other",
@@ -12857,6 +13356,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Разное",
       "categoryId": "other",
@@ -12882,6 +13382,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -12907,6 +13408,7 @@
     {
       "unit": "шт",
       "badge": "Салфетки",
+      "restockedAt": null,
       "retailPriceKgs": 150,
       "category": "Разное",
       "categoryId": "other",
@@ -12932,6 +13434,7 @@
     {
       "unit": "шт",
       "badge": "Салфетки",
+      "restockedAt": null,
       "retailPriceKgs": 130,
       "category": "Разное",
       "categoryId": "other",
@@ -12957,6 +13460,7 @@
     {
       "unit": "шт",
       "badge": "Ушные",
+      "restockedAt": null,
       "retailPriceKgs": 60,
       "category": "Разное",
       "categoryId": "other",
@@ -12982,6 +13486,7 @@
     {
       "unit": "шт",
       "badge": "King",
+      "restockedAt": null,
       "retailPriceKgs": 1895,
       "category": "Разное",
       "categoryId": "other",
@@ -13007,6 +13512,7 @@
     {
       "unit": "шт",
       "badge": "Bharmal",
+      "restockedAt": null,
       "retailPriceKgs": 695,
       "category": "Разное",
       "categoryId": "other",
@@ -13032,6 +13538,7 @@
     {
       "unit": "шт",
       "badge": "3Febreze",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Разное",
       "categoryId": "other",
@@ -13057,6 +13564,7 @@
     {
       "unit": "шт",
       "badge": "Febreze",
+      "restockedAt": null,
       "retailPriceKgs": 390,
       "category": "Разное",
       "categoryId": "other",
@@ -13082,6 +13590,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -13107,6 +13616,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -13132,6 +13642,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -13157,6 +13668,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -13182,6 +13694,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -13207,6 +13720,7 @@
     {
       "unit": "шт",
       "badge": "Терки",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -13232,6 +13746,7 @@
     {
       "unit": "шт",
       "badge": "Febreze",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Разное",
       "categoryId": "other",
@@ -13257,6 +13772,7 @@
     {
       "unit": "шт",
       "badge": "Febreze",
+      "restockedAt": null,
       "retailPriceKgs": 450,
       "category": "Разное",
       "categoryId": "other",
@@ -13282,6 +13798,7 @@
     {
       "unit": "шт",
       "badge": "Febreze",
+      "restockedAt": null,
       "retailPriceKgs": 390,
       "category": "Разное",
       "categoryId": "other",
@@ -13307,6 +13824,7 @@
     {
       "unit": "шт",
       "badge": "Febreze",
+      "restockedAt": null,
       "retailPriceKgs": 390,
       "category": "Разное",
       "categoryId": "other",
@@ -13332,6 +13850,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -13357,6 +13876,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 350,
       "category": "Разное",
       "categoryId": "other",
@@ -13382,6 +13902,7 @@
     {
       "unit": "шт",
       "badge": "Терка",
+      "restockedAt": null,
       "retailPriceKgs": 300,
       "category": "Разное",
       "categoryId": "other",
@@ -13407,6 +13928,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 290,
       "category": "Разное",
       "categoryId": "other",
@@ -13432,6 +13954,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 230,
       "category": "Разное",
       "categoryId": "other",
@@ -13457,6 +13980,7 @@
     {
       "unit": "шт",
       "badge": "Пластырь",
+      "restockedAt": null,
       "retailPriceKgs": 100,
       "category": "Разное",
       "categoryId": "other",
@@ -13482,6 +14006,7 @@
     {
       "unit": "шт",
       "badge": "Concord",
+      "restockedAt": null,
       "retailPriceKgs": 70,
       "category": "Разное",
       "categoryId": "other",
@@ -13507,6 +14032,7 @@
     {
       "unit": "5 мл",
       "badge": "Bybozo",
+      "restockedAt": null,
       "retailPriceKgs": 995,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13534,6 +14060,7 @@
     {
       "unit": "5 мл",
       "badge": "Chanel",
+      "restockedAt": null,
       "retailPriceKgs": 895,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13561,6 +14088,7 @@
     {
       "unit": "5 мл",
       "badge": "Le Labo",
+      "restockedAt": null,
       "retailPriceKgs": 2245,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13588,6 +14116,7 @@
     {
       "unit": "5 мл",
       "badge": "Attar Collection",
+      "restockedAt": null,
       "retailPriceKgs": 800,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13615,6 +14144,7 @@
     {
       "unit": "5 мл",
       "badge": "Attar Collection",
+      "restockedAt": null,
       "retailPriceKgs": 800,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13642,6 +14172,7 @@
     {
       "unit": "5 мл",
       "badge": "Attar Collection",
+      "restockedAt": null,
       "retailPriceKgs": 1200,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13669,6 +14200,7 @@
     {
       "unit": "5 мл",
       "badge": "Attar Collection",
+      "restockedAt": null,
       "retailPriceKgs": 1200,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13696,6 +14228,7 @@
     {
       "unit": "5 мл",
       "badge": "Chloé",
+      "restockedAt": null,
       "retailPriceKgs": 1200,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13723,6 +14256,7 @@
     {
       "unit": "5 мл",
       "badge": "Chloé",
+      "restockedAt": null,
       "retailPriceKgs": 1100,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13750,6 +14284,7 @@
     {
       "unit": "5 мл",
       "badge": "Attar Collection",
+      "restockedAt": null,
       "retailPriceKgs": 800,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13777,6 +14312,7 @@
     {
       "unit": "5 мл",
       "badge": "Attar Collection",
+      "restockedAt": null,
       "retailPriceKgs": 800,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13804,6 +14340,7 @@
     {
       "unit": "5 мл",
       "badge": "Attar Collection",
+      "restockedAt": null,
       "retailPriceKgs": 800,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13831,6 +14368,7 @@
     {
       "unit": "5 мл",
       "badge": "Chanel",
+      "restockedAt": null,
       "retailPriceKgs": 1200,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13858,6 +14396,7 @@
     {
       "unit": "5 мл",
       "badge": "Chanel",
+      "restockedAt": null,
       "retailPriceKgs": 1100,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13885,6 +14424,7 @@
     {
       "unit": "5 мл",
       "badge": "Giorgio Armani",
+      "restockedAt": null,
       "retailPriceKgs": 850,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13912,6 +14452,7 @@
     {
       "unit": "5 мл",
       "badge": "Versace",
+      "restockedAt": null,
       "retailPriceKgs": 550,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13939,6 +14480,7 @@
     {
       "unit": "5 мл",
       "badge": "Chanel",
+      "restockedAt": null,
       "retailPriceKgs": 1100,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13966,6 +14508,7 @@
     {
       "unit": "5 мл",
       "badge": "Parfums de Marly",
+      "restockedAt": null,
       "retailPriceKgs": 850,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -13993,6 +14536,7 @@
     {
       "unit": "5 мл",
       "badge": "Victoria's Secret",
+      "restockedAt": null,
       "retailPriceKgs": 800,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -14020,6 +14564,7 @@
     {
       "unit": "5 мл",
       "badge": "Yves Saint Laurent",
+      "restockedAt": null,
       "retailPriceKgs": 950,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -14047,6 +14592,7 @@
     {
       "unit": "5 мл",
       "badge": "Chanel",
+      "restockedAt": null,
       "retailPriceKgs": 1450,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",
@@ -14074,6 +14620,7 @@
     {
       "unit": "5 мл",
       "badge": "Burberry",
+      "restockedAt": null,
       "retailPriceKgs": 850,
       "category": "Парфюм 5 мл",
       "categoryId": "perfume",

@@ -205,7 +205,7 @@ Comfort и BIC Comfort 2.
 Все 69 исходных файлов остаются нетронутыми в
 `assets/telegram_inbox/telegram-8767964230-20260706-{120924,120953,124743,124755}/`.
 
-## PARTIALLY RESOLVED 2026-07-06 — `telegram-8767964230-20260706-*` (two live batches)
+## RESOLVED 2026-07-08 (remaining 5 groups) — `telegram-8767964230-20260706-*` (two live batches)
 
 Two fresh batches landed on disk **during local sessions** (~10:28-10:40 and
 ~12:40, same day), while working on unrelated tasks — not something either
@@ -240,31 +240,44 @@ Moved to `assets/products/colgate/` and `assets/products/dove/`
 respectively, added to `data/product_overrides.json`. Photo coverage
 142/529 → 150/529.
 
-**5 groups still NOT published** — real problems found, not just
-unopened files:
+**The remaining 5 groups were resolved 2026-07-08.** The earlier pass had
+searched `data/store.db` for a literal "360" in `raw_name` and found nothing —
+but the 1C export for this line uses heavily truncated/abbreviated names
+(`щкд`, `щсп`, or in one case just the bare word `GOLD`) that don't contain
+"360" or even "Colgate" as text. Found instead by cross-referencing
+`base_price_usd` ($1.30, identical across all four) and `warehouse`
+("Основной склад", also identical) — a strong fingerprint for "same shipment,
+same product line" even when names don't match:
 
-- **`102856-01` (Colgate 360 Optic White, Medium)** — front/card-front are
-  clear and consistent, but its **back photo is wrong**: byte-different
-  from, but textually identical to, `102856-03`'s own back (both say "360
-  Charcoal Gold... Medium"), while `102856-01`'s front clearly shows white/
-  blue bristles, not the black charcoal bristles the back describes. No
-  matching 1C stock line for "360 Optic White" either. Needs a correct back
-  photo and a stock-code confirmation before it can be considered.
-- **`103856-01` (Colgate Max Fresh)** — front/card-front confidently match
-  1C code 1075 (`Colgate з/щ MaxFresh`, `prd_b61ba7c4268e`), **but its back
-  photo is byte-identical to `102856-05`'s MaxWhite back** (confirmed via
-  md5) — a real duplicate/mixup, not this product's actual back. Needs a
-  correct back photo; the 1C match itself is solid once that exists.
-- **`102856-02` (Colgate 360 Charcoal, Medium)**, **`102856-03` (Colgate 360
-  Charcoal Gold, Soft)**, **`102856-04` (Colgate 360 Whole Mouth Clean,
-  Medium)** — all three are internally consistent (card-front/front/back
-  agree with each other) and clearly branded, but **no matching "360 ..."
-  line exists anywhere in the current `data/store.db` stock** (checked
-  every Colgate row). Either a new SKU not yet in any 1C export, or listed
-  under a name too different to match with confidence. Needs Petya/owner
-  confirmation of the 1C code before publishing — do not guess.
+| Group | Product | raw_name in 1C | 1C code | product_id |
+|---|---|---|---|---|
+| `102856-01` | Colgate 360 Optic White зубная щётка | `Optic White щкд` | 2940 | `prd_e8a318ef10d2` |
+| `102856-02` | Colgate 360 Charcoal зубная щётка | `Charcoal щсп` | 824 | `prd_9fe19a4044b7` |
+| `102856-03` | Colgate 360 Charcoal Gold зубная щётка | `GOLD` | 1077 | `prd_09feb137fd5e` |
+| `102856-04` | Colgate 360 Whole Mouth Clean зубная щётка | `Whole Mouth щкд` | 2941 | `prd_77566889af78` |
+| `103856-01` | Colgate MaxFresh зубная щётка | `Colgate з/щ MaxFresh` | 1075 | `prd_b61ba7c4268e` |
 
-Raw files for all 5 remain at `assets/products/` root, untouched.
+Moved to `assets/products/colgate/`, added to `data/product_overrides.json`.
+Photo coverage 179/529 → 184/529.
+
+Two of the five (`102856-01` Optic White and `103856-01` MaxFresh) are
+published with only **card-front + front**, not the full 3-photo set — their
+own `-back.jpg` files are confirmed mismatches, not genuinely missing photos:
+
+- `102856-01`'s back photo is textually identical to `102856-03`'s own back
+  (both say "360 Charcoal Gold"), while `102856-01`'s front clearly shows
+  white/blue Optic White bristles — a mixed-up file, not this product's back.
+- `103856-01`'s back photo is **byte-identical (md5) to `102856-05`'s
+  MaxWhite back** — a real photographer duplicate, not this product's own
+  back.
+
+Both are registered in `KNOWN_EXCEPTIONS` in
+`scripts/verify_product_galleries.py`, same mechanism already used for the
+Pantene/TRESemmé missing-back cases above. The two mismatched `-back.jpg`
+files are left untouched at `assets/products/` root — not renamed into
+either product's slug, so they're never accidentally published — and not
+deleted, in case a real back photo later confirms one of them actually
+belongs somewhere else.
 
 ## RESOLVED 2026-07-05 — `telegram-8767964230-20260626-142813-next-2-03-*`
 

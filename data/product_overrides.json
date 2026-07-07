@@ -147,6 +147,24 @@
     ],
     "product_type": "шампунь"
   },
+  "prd_09feb137fd5e": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate 360 Charcoal Gold зубная щётка",
+    "description": "Зубная щётка Colgate 360 Charcoal Gold с угольными спиральными щетинками, мягкая, очищает щёки и язык.",
+    "galleryImages": [
+      "assets/products/colgate/colgate-360-charcoal-gold-card-front.jpg",
+      "assets/products/colgate/colgate-360-charcoal-gold-front.jpg",
+      "assets/products/colgate/colgate-360-charcoal-gold-back.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-360-charcoal-gold-card-front.jpg",
+    "notes": [
+      "2026-07-08: фото из партии Пети (telegram-8767964230-20260706-102856-03); название/штрихкод 8693495048019 на собственном back-фото совпадают с 1C кодом 1077, чей raw_name в выгрузке 1С сохранился только как «GOLD» (обрезанное название, из-за чего автоматическое сопоставление по названию раньше не срабатывало) — сверено по цене $1.30 и складу «Основной склад», общим для всей линейки 360. Card-front/front/back внутренне согласованы («360 Charcoal Gold, Soft»). Именно этот back ошибочно попал в 102856-01 (Optic White) — см. заметку там."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate 360 Charcoal Gold",
+    "unit": "шт"
+  },
   "prd_0a8f4b1bdcb6": {
     "brand": "Cussons",
     "category_id": "body",
@@ -1619,6 +1637,24 @@
     "short_title": "Colgate Double Action Charcoal",
     "unit": "шт"
   },
+  "prd_77566889af78": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate 360 Whole Mouth Clean зубная щётка",
+    "description": "Зубная щётка Colgate 360 Whole Mouth Clean с межзубными щетинками и полирующими чашечками, очищает щёки и язык.",
+    "galleryImages": [
+      "assets/products/colgate/colgate-360-whole-mouth-clean-card-front.jpg",
+      "assets/products/colgate/colgate-360-whole-mouth-clean-front.jpg",
+      "assets/products/colgate/colgate-360-whole-mouth-clean-back.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-360-whole-mouth-clean-card-front.jpg",
+    "notes": [
+      "2026-07-08: фото из партии Пети (telegram-8767964230-20260706-102856-04); название/штрихкод 8714789183800 на собственном back-фото совпадают с 1C кодом 2941 (raw_name «Whole Mouth щкд» — сокращённое название в выгрузке 1С; сверено по цене $1.30 и складу «Основной склад», общим для всей линейки 360). Card-front/front/back внутренне согласованы («360 Whole Mouth Clean, Medium»)."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate 360 Whole Mouth Clean",
+    "unit": "шт"
+  },
   "prd_77afdc5c4601": {
     "brand": "Herbal Essences",
     "category_id": "hair",
@@ -2178,6 +2214,24 @@
     "product_type": "гель для душа",
     "short_title": "Dove Calming 750 мл"
   },
+  "prd_9fe19a4044b7": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate 360 Charcoal зубная щётка",
+    "description": "Зубная щётка Colgate 360 Charcoal с угольными щетинками, очищает между зубами и вдоль дёсен, а также щёки и язык.",
+    "galleryImages": [
+      "assets/products/colgate/colgate-360-charcoal-card-front.jpg",
+      "assets/products/colgate/colgate-360-charcoal-front.jpg",
+      "assets/products/colgate/colgate-360-charcoal-back.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-360-charcoal-card-front.jpg",
+    "notes": [
+      "2026-07-08: фото из партии Пети (telegram-8767964230-20260706-102856-02); название/штрихкод 6910021100204 на собственном back-фото совпадают с 1C кодом 824 (raw_name «Charcoal щсп» — сокращённое название в выгрузке 1С; сверено по цене $1.30 и складу «Основной склад», общим для всей линейки 360). Card-front/front/back внутренне согласованы (все — «360 Charcoal, Medium», без Gold)."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate 360 Charcoal",
+    "unit": "шт"
+  },
   "prd_a4eb0f5d79c1": {
     "brand": "Herbal Essences",
     "category_id": "hair",
@@ -2392,6 +2446,23 @@
     "description": "Женские бритвенные станки Gillette Venus Ocean для мягкого бритья. В упаковке 3 штуки.",
     "product_type": "бритвенные станки",
     "short_title": "Venus Ocean 3 шт"
+  },
+  "prd_b61ba7c4268e": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate MaxFresh зубная щётка",
+    "description": "Зубная щётка Colgate Max Fresh с полирующей звёздочкой, освежает дыхание и помогает отполировать поверхностные пятна.",
+    "galleryImages": [
+      "assets/products/colgate/colgate-maxfresh-card-front.jpg",
+      "assets/products/colgate/colgate-maxfresh-front.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-maxfresh-card-front.jpg",
+    "notes": [
+      "2026-07-08: фото из партии Пети (telegram-8767964230-20260706-103856-01); название/дизайн уверенно опознаны (Colgate Max Fresh, Medium), совпадает с 1C кодом 1075 (Colgate з/щ MaxFresh). Штатный back-файл в этой же папке (103856-01-back.jpg) НЕ используется — он побайтово (md5) идентичен back-фото Colgate MaxWhite (prd_1cb756e99bac), явная путаница при съёмке; настоящего back для MaxFresh нет, публикуется как card-front+front (см. KNOWN_EXCEPTIONS в scripts/verify_product_galleries.py)."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate MaxFresh",
+    "unit": "шт"
   },
   "prd_b63755a295b7": {
     "brand": "Rexona",
@@ -3107,6 +3178,23 @@
       "#251f28",
       "#c13e99"
     ],
+    "unit": "шт"
+  },
+  "prd_e8a318ef10d2": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate 360 Optic White зубная щётка",
+    "description": "Зубная щётка Colgate 360 Optic White с отбеливающими щетинками, помогает удалить поверхностные пятна и очищает щёки и язык.",
+    "galleryImages": [
+      "assets/products/colgate/colgate-360-optic-white-card-front.jpg",
+      "assets/products/colgate/colgate-360-optic-white-front.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-360-optic-white-card-front.jpg",
+    "notes": [
+      "2026-07-08: фото из партии Пети (telegram-8767964230-20260706-102856-01); название/дизайн уверенно опознаны (Colgate 360 Optic White, Medium), совпадает с 1C кодом 2940 (raw_name «Optic White щкд» — усечённое/сокращённое название в выгрузке 1С, из-за чего автоматическое сопоставление по названию раньше не срабатывало; сверено по цене $1.30 и складу «Основной склад», общим для всей линейки 360). Штатный back-файл в этой же папке (102856-01-back.jpg) НЕ используется — он побайтово совпадает с текстом «360 Charcoal Gold», перепутан с 102856-03; настоящего back для Optic White нет, публикуется как card-front+front (см. KNOWN_EXCEPTIONS в scripts/verify_product_galleries.py)."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate 360 Optic White",
     "unit": "шт"
   },
   "prd_e993df33c857": {

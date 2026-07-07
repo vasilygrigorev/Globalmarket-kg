@@ -33,6 +33,11 @@ Known exception as of 2026-06-10:
 - `prd_1f1557a2acbb` / `Pantene Damage Repair шампунь 600 мл`: missing back photo; currently card + front only.
 - `prd_296bd01a7c1f` / `Pantene Sheer Volume шампунь 600 мл`: missing back photo; currently card + front only.
 
+Known exception as of 2026-07-08 (mismatched back, not just missing):
+
+- `prd_e8a318ef10d2` / `Colgate 360 Optic White зубная щётка`: its own back photo is a mismatch (text/branding matches a different "360" variant); currently card + front only.
+- `prd_b61ba7c4268e` / `Colgate MaxFresh зубная щётка`: its own back photo is byte-identical (md5) to Colgate MaxWhite's back — a photographer duplicate; currently card + front only.
+
 Run before deployment after product-photo changes:
 
 ```bash
