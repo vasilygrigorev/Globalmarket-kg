@@ -8,6 +8,15 @@
 // functions/api/customer-orders.js can recognize this browser as logged in
 // on later requests without re-sending phone+code.
 //
+// This is also the ONE place a public.customers row gets created — SMS
+// login IS the registration step (see supabase/migrations/
+// 0004_customer_roles_wholesale.sql). No password, no separate signup form.
+// The new row is seeded from the customer's most recent order if one
+// exists, and past orders matching this phone get linked via customer_id
+// so their history shows up immediately. Best-effort: if this fails, login
+// still succeeds — functions/api/customer-profile.js has its own fallback
+// to create the row on first profile save.
+//
 // Secrets (Cloudflare Pages env, never in git):
 //   SMSPRO_API_KEY               from the SMS PRO personal cabinet, "OTP-сервис" tab
 //   SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY   same as functions/api/orders.js
@@ -107,6 +116,92 @@ async function verifyOtpViaSmsPro(env, token, code) {
   return body;
 }
 
+async function findCustomerByPhone(env, phoneDigits) {
+  const res = await fetch(
+    `${env.SUPABASE_URL}/rest/v1/customers?select=id&phone_digits=eq.${phoneDigits}&limit=1`,
+    {
+      headers: {
+        apikey: env.SUPABASE_SERVICE_ROLE_KEY,
+        authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`,
+      },
+    },
+  );
+  if (!res.ok) throw new Error(`Supabase customers select failed: ${res.status}`);
+  const rows = await res.json();
+  return Array.isArray(rows) && rows[0] ? rows[0] : null;
+}
+
+async function mostRecentOrderContact(env, phoneDigits) {
+  const res = await fetch(
+    `${env.SUPABASE_URL}/rest/v1/orders?select=customer_name,city,region,address&customer_phone_digits=eq.${phoneDigits}&order=created_at.desc&limit=1`,
+    {
+      headers: {
+        apikey: env.SUPABASE_SERVICE_ROLE_KEY,
+        authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`,
+      },
+    },
+  );
+  if (!res.ok) throw new Error(`Supabase orders select failed: ${res.status}`);
+  const rows = await res.json();
+  return Array.isArray(rows) && rows[0] ? rows[0] : null;
+}
+
+async function createCustomerFromOrderHistory(env, phoneDigits) {
+  const contact = await mostRecentOrderContact(env, phoneDigits).catch(() => null);
+  const res = await fetch(`${env.SUPABASE_URL}/rest/v1/customers`, {
+    method: "POST",
+    headers: {
+      apikey: env.SUPABASE_SERVICE_ROLE_KEY,
+      authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`,
+      "content-type": "application/json",
+      prefer: "return=representation",
+    },
+    body: JSON.stringify({
+      phone: phoneDigits,
+      name: contact?.customer_name || null,
+      city: contact?.city || null,
+      region: contact?.region || null,
+      address: contact?.address || null,
+    }),
+  });
+  if (!res.ok) throw new Error(`Supabase customers insert failed: ${res.status}`);
+  const rows = await res.json();
+  return Array.isArray(rows) && rows[0] ? rows[0] : null;
+}
+
+async function linkPastOrders(env, phoneDigits, customerId) {
+  await fetch(
+    `${env.SUPABASE_URL}/rest/v1/orders?customer_phone_digits=eq.${phoneDigits}&customer_id=is.null`,
+    {
+      method: "PATCH",
+      headers: {
+        apikey: env.SUPABASE_SERVICE_ROLE_KEY,
+        authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ customer_id: customerId }),
+    },
+  );
+}
+
+// SMS login IS the registration step — ensure a customers row exists for
+// this phone and that any past guest orders get linked to it. Best-effort:
+// errors here never fail the login itself.
+async function ensureCustomerRecord(env, phoneDigits) {
+  try {
+    let customer = await findCustomerByPhone(env, phoneDigits);
+    if (!customer) {
+      customer = await createCustomerFromOrderHistory(env, phoneDigits);
+    }
+    if (customer?.id) {
+      await linkPastOrders(env, phoneDigits, customer.id).catch(() => {});
+    }
+  } catch {
+    // Non-fatal — functions/api/customer-profile.js creates the row lazily
+    // on first profile save if this step didn't run.
+  }
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
 
@@ -143,6 +238,7 @@ export async function onRequestPost(context) {
     }
 
     await deleteOtpRequest(env, normalized.token);
+    await ensureCustomerRecord(env, otpRequest.phone_digits);
 
     const exp = Math.floor(Date.now() / 1000) + SESSION_TTL_SECONDS;
     const sessionToken = await signSession({ phone: otpRequest.phone_digits, exp }, env.SESSION_SIGNING_SECRET);

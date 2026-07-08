@@ -20,7 +20,14 @@ const FULL_ENV = {
   SESSION_SIGNING_SECRET: "test-session-secret",
 };
 
-function installFetchMock({ otpRequestRow, smsProVerify, deleteOk = true } = {}) {
+function installFetchMock({
+  otpRequestRow,
+  smsProVerify,
+  deleteOk = true,
+  existingCustomer = null,
+  recentOrderContact = null,
+  insertedCustomer,
+} = {}) {
   const calls = [];
   globalThis.fetch = async (url, options = {}) => {
     const href = String(url);
@@ -39,6 +46,23 @@ function installFetchMock({ otpRequestRow, smsProVerify, deleteOk = true } = {})
         ? { phone_digits: "996700123456", created_at: new Date().toISOString() }
         : otpRequestRow;
       const rows = row ? [row] : [];
+      return { ok: true, status: 200, json: async () => rows, text: async () => JSON.stringify(rows) };
+    }
+
+    if (href.includes("/rest/v1/customers")) {
+      if (options.method === "POST") {
+        const rows = insertedCustomer === undefined ? [{ id: "cust-new" }] : insertedCustomer;
+        return { ok: true, status: 201, json: async () => rows, text: async () => JSON.stringify(rows) };
+      }
+      const rows = existingCustomer ? [existingCustomer] : [];
+      return { ok: true, status: 200, json: async () => rows, text: async () => JSON.stringify(rows) };
+    }
+
+    if (href.includes("/rest/v1/orders")) {
+      if (options.method === "PATCH") {
+        return { ok: true, status: 200, json: async () => [], text: async () => "[]" };
+      }
+      const rows = recentOrderContact ? [recentOrderContact] : [];
       return { ok: true, status: 200, json: async () => rows, text: async () => JSON.stringify(rows) };
     }
 
@@ -112,4 +136,53 @@ test("otp_requests row is deleted (single-use) after a successful verify", async
 test("onRequest rejects non-POST methods with 405", async () => {
   const res = await onRequest({ request: { method: "GET" }, env: FULL_ENV });
   assert.equal(res.status, 405);
+});
+
+test("login creates a customers row seeded from the most recent order when none exists yet", async () => {
+  const calls = installFetchMock({
+    recentOrderContact: { customer_name: "Иван", city: "Бишкек", region: null, address: null },
+  });
+  const res = await onRequestPost(makeContext({ token: "t", code: "1234" }, FULL_ENV));
+  assert.equal(res.status, 200);
+
+  const insertCall = calls.find((c) => c.url.includes("/rest/v1/customers") && c.options.method === "POST");
+  assert.ok(insertCall, "expected a customers insert");
+  const body = JSON.parse(insertCall.options.body);
+  assert.equal(body.phone, "996700123456");
+  assert.equal(body.name, "Иван");
+  assert.equal(body.city, "Бишкек");
+});
+
+test("login links past guest orders to the (new or existing) customer id", async () => {
+  const calls = installFetchMock({ existingCustomer: { id: "cust-existing" } });
+  const res = await onRequestPost(makeContext({ token: "t", code: "1234" }, FULL_ENV));
+  assert.equal(res.status, 200);
+
+  const patchCall = calls.find((c) => c.url.includes("/rest/v1/orders") && c.options.method === "PATCH");
+  assert.ok(patchCall, "expected an orders PATCH to link past orders");
+  assert.match(patchCall.url, /customer_phone_digits=eq\.996700123456/);
+  assert.match(patchCall.url, /customer_id=is\.null/);
+  const body = JSON.parse(patchCall.options.body);
+  assert.equal(body.customer_id, "cust-existing");
+});
+
+test("login still succeeds even if customer linking fails entirely", async () => {
+  globalThis.fetch = async (url, options = {}) => {
+    const href = String(url);
+    if (href.includes("smspro.nikita.kg")) {
+      return { ok: true, status: 200, json: async () => ({ status: 0 }), text: async () => "{}" };
+    }
+    if (href.includes("/rest/v1/otp_requests")) {
+      if (options.method === "DELETE") return { ok: true, status: 204, json: async () => ({}), text: async () => "" };
+      const rows = [{ phone_digits: "996700123456", created_at: new Date().toISOString() }];
+      return { ok: true, status: 200, json: async () => rows, text: async () => JSON.stringify(rows) };
+    }
+    // Simulate every customers/orders-linking call failing.
+    return { ok: false, status: 500, json: async () => ({}), text: async () => "boom" };
+  };
+  const res = await onRequestPost(makeContext({ token: "t", code: "1234" }, FULL_ENV));
+  assert.equal(res.status, 200);
+  const data = await res.json();
+  assert.equal(data.ok, true);
+  assert.ok(res.headers.get("set-cookie"));
 });

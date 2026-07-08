@@ -5,10 +5,15 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { onRequestPost, onRequest } from "./orders.js";
+import { signSession, buildSessionCookie } from "./session.js";
 
-function makeContext(body, env) {
+function makeContext(body, env, cookie) {
   return {
-    request: { method: "POST", json: async () => body },
+    request: {
+      method: "POST",
+      json: async () => body,
+      headers: { get: (name) => (name.toLowerCase() === "cookie" ? cookie || null : null) },
+    },
     env,
   };
 }
@@ -80,6 +85,69 @@ test("happy path inserts orders then order_items and returns order_id + wa url",
   assert.equal(itemsCall.payload[0].line_total_kgs, 1100);
   // service role key is used server-side
   assert.equal(calls[0].options.headers.apikey, "service-role-test-key");
+});
+
+test("no session cookie: order saves without a customer_id (guest checkout unaffected)", async () => {
+  const calls = installFetchMock({
+    orders: { ok: true, body: [{ id: "uuid-order-42" }] },
+    order_items: { ok: true, body: [] },
+  });
+  const res = await onRequestPost(makeContext(goodOrder, { ...FULL_ENV, SESSION_SIGNING_SECRET: "test-secret" }));
+  assert.equal(res.status, 200);
+  const orderCall = calls.find((c) => c.table === "orders");
+  assert.ok(!("customer_id" in orderCall.payload));
+});
+
+test("logged-in customer: order is linked via customer_id from the session", async () => {
+  const env = { ...FULL_ENV, SESSION_SIGNING_SECRET: "test-secret" };
+  const exp = Math.floor(Date.now() / 1000) + 3600;
+  const sessionToken = await signSession({ phone: "996700123456", exp }, env.SESSION_SIGNING_SECRET);
+  const cookie = buildSessionCookie(sessionToken).split(";")[0];
+
+  const calls = [];
+  globalThis.fetch = async (url, options = {}) => {
+    const href = String(url);
+    calls.push({ url: href, options });
+    if (href.includes("/rest/v1/customers")) {
+      const rows = [{ id: "cust-abc" }];
+      return { ok: true, status: 200, json: async () => rows, text: async () => JSON.stringify(rows) };
+    }
+    const payload = options.body ? JSON.parse(options.body) : null;
+    if (href.includes("/rest/v1/orders")) {
+      return { ok: true, status: 201, json: async () => [{ id: "uuid-order-42" }], text: async () => "[]" };
+    }
+    return { ok: true, status: 200, json: async () => (payload ? [] : {}), text: async () => "[]" };
+  };
+
+  const res = await onRequestPost(makeContext(goodOrder, env, cookie));
+  assert.equal(res.status, 200);
+
+  const orderInsertCall = calls.find((c) => c.url.includes("/rest/v1/orders") && c.options.method === "POST");
+  const orderPayload = JSON.parse(orderInsertCall.options.body);
+  assert.equal(orderPayload.customer_id, "cust-abc");
+});
+
+test("logged-in but customer lookup fails: order still saves (best-effort, non-blocking)", async () => {
+  const env = { ...FULL_ENV, SESSION_SIGNING_SECRET: "test-secret" };
+  const exp = Math.floor(Date.now() / 1000) + 3600;
+  const sessionToken = await signSession({ phone: "996700123456", exp }, env.SESSION_SIGNING_SECRET);
+  const cookie = buildSessionCookie(sessionToken).split(";")[0];
+
+  globalThis.fetch = async (url, options = {}) => {
+    const href = String(url);
+    if (href.includes("/rest/v1/customers")) {
+      return { ok: false, status: 500, json: async () => ({}), text: async () => "boom" };
+    }
+    if (href.includes("/rest/v1/orders") && options.method === "POST") {
+      return { ok: true, status: 201, json: async () => [{ id: "uuid-order-42" }], text: async () => "[]" };
+    }
+    return { ok: true, status: 200, json: async () => [], text: async () => "[]" };
+  };
+
+  const res = await onRequestPost(makeContext(goodOrder, env, cookie));
+  assert.equal(res.status, 200);
+  const data = await res.json();
+  assert.equal(data.ok, true);
 });
 
 test("sends optional manager email when Resend is configured", async () => {

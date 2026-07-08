@@ -16,6 +16,14 @@
 //
 // Pure helpers (normalizeOrderPayload, buildManagerUrl, …) are exported for
 // unit testing — see functions/api/orders.test.mjs. See docs/api-orders.md.
+//
+// If the customer is logged in (SESSION_SIGNING_SECRET cookie from
+// functions/api/auth/verify-otp.js), the order is linked to their
+// public.customers row via customer_id. This is best-effort and never
+// blocks a guest checkout — an order always saves even if this lookup
+// fails or the customer isn't logged in.
+
+import { parseSessionCookie, verifySession } from "./session.js";
 
 export const DEFAULT_MANAGER_WHATSAPP = "996706771103";
 
@@ -249,6 +257,34 @@ async function supabaseInsert(env, table, rows, { returning = false } = {}) {
   return returning ? res.json() : null;
 }
 
+// Best-effort: resolve the logged-in customer's id from their session
+// cookie, so a placed-while-logged-in order links straight to their
+// customers row (no need to wait for the retroactive backfill that
+// verify-otp.js does at next login).
+async function resolveSessionCustomerId(request, env) {
+  try {
+    if (!env.SESSION_SIGNING_SECRET) return null;
+    const cookieToken = parseSessionCookie(request.headers.get("cookie"));
+    if (!cookieToken) return null;
+    const session = await verifySession(cookieToken, env.SESSION_SIGNING_SECRET);
+    if (!session) return null;
+    const res = await fetch(
+      `${env.SUPABASE_URL}/rest/v1/customers?select=id&phone_digits=eq.${session.phone}&limit=1`,
+      {
+        headers: {
+          apikey: env.SUPABASE_SERVICE_ROLE_KEY,
+          authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`,
+        },
+      },
+    );
+    if (!res.ok) return null;
+    const rows = await res.json();
+    return Array.isArray(rows) && rows[0] ? rows[0].id : null;
+  } catch {
+    return null;
+  }
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
 
@@ -266,6 +302,11 @@ export async function onRequestPost(context) {
   const normalized = normalizeOrderPayload(payload);
   if (normalized.error) {
     return json({ ok: false, error: normalized.error }, 400);
+  }
+
+  const sessionCustomerId = await resolveSessionCustomerId(request, env);
+  if (sessionCustomerId) {
+    normalized.order.customer_id = sessionCustomerId;
   }
 
   try {
