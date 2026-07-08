@@ -82,6 +82,15 @@ never remove historical card/front/back assets until
 `scripts/audit_photo_mapping_integrity.py --strict` and
 `scripts/verify_product_galleries.py` are both clean after the remap.
 
+**Never delete a photo file, confirmed duplicate or not (2026-07-08).** Even
+a raw upload that's byte-identical (md5) to a file already correctly
+published elsewhere must be moved, not `rm`'d — every action on product
+photos must be reversible. Move it to `assets/products/_archive/` instead,
+keeping its original filename so the history stays traceable. This applies
+even when a loose raw group turns out to be 100% redundant with published
+photos; archiving costs nothing and preserves an undo path a future session
+might need.
+
 `scripts/report_photo_coverage.py`'s "unused raw leftover" scan (the report a
 prior cleanup, commit `c4e3a27`, used to justify deleting 273 files) now
 cross-checks `data/product_overrides.json` and `data/manual_products.json` in

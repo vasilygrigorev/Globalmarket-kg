@@ -87,9 +87,19 @@ published with the full 3-photo set.
 `Head & Shoulders Cool Menthol 650 ml` (`prd_e7e45d64df8b`) was already
 correctly organized in its own folder before this fix and was not part of
 the broken chain — a stray byte-identical duplicate of its card had leaked
-into Smooth & Silky's old `-back.jpg` slot, which was simply discarded (not
-moved, since the real file already exists at
-`assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-card-front.jpg`).
+into Smooth & Silky's old `-back.jpg` slot. Originally `rm`'d outright since
+the real file already exists at
+`assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-card-front.jpg`
+— per the no-delete policy adopted 2026-07-08 (see "Petya import rules" in
+`docs/product-photo-rules.md`), recovered from git history (commit
+`66a1cf7`) and moved to `assets/products/_archive/` instead.
+
+Several duplicate files from Petya's Dove-680ml resend (the same day) were
+also `rm`'d before the no-delete policy existed. Those were never committed
+to git, so unlike the Cool Menthol case above, the exact original files
+can't be restored — but every one was confirmed byte-identical (md5) to a
+file that still exists at its published location, so no photographic
+content was actually lost, only a redundant raw-upload copy.
 
 14 products total reference "restored historical gallery from d8df3e0" in
 their override notes (the H&S/Dove chain above plus Concord, Comfort x3,
