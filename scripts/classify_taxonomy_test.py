@@ -10,6 +10,9 @@ from classify_taxonomy import (
     classify_product_kind,
     classify_audience,
     classify_attributes,
+    classify_form,
+    classify_use_area,
+    classify_search_terms,
     enrich,
     rank_related,
     related_rank_key,
@@ -91,6 +94,28 @@ class ProductKind(unittest.TestCase):
         self.assertEqual(classify_product_kind(prod(categoryId="other", title="Что-то непонятное")), "")
         self.assertEqual(classify_product_kind(prod(categoryId="body", title="Johnson's baby масло 200 мл")), "")
 
+    def test_oral_kinds(self):
+        self.assertEqual(classify_product_kind(prod(categoryId="oral", title="Colgate Cavity Protection зубная паста Pump 100 мл")), "toothpaste")
+        self.assertEqual(classify_product_kind(prod(categoryId="oral", title="Dabur Зуб.Паста RED (100) щл")), "toothpaste")
+        self.assertEqual(classify_product_kind(prod(categoryId="oral", title="Colgate 360 Charcoal зубная щётка")), "toothbrush")
+        self.assertEqual(classify_product_kind(prod(categoryId="oral", title="Oral-B з/щ")), "toothbrush")
+        self.assertEqual(classify_product_kind(prod(categoryId="oral", title="LORD Kids зуб/щ Speed фб")), "toothbrush")
+
+    def test_sunscreen_including_abbreviated_titles(self):
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="body", title="YC Sunscreen UV Protection SPF50 солнцезащитный крем 100 г")),
+            "sunscreen",
+        )
+        # Abbreviated distributor title with no Russian "солнцезащ" word at all.
+        self.assertEqual(classify_product_kind(prod(categoryId="body", title="С/З DS (SD-299)SPF80(200ml) Summer")), "sunscreen")
+
+    def test_sunscreen_does_not_leak_into_deodorant_query(self):
+        # Regression guard for the real bug: a sunscreen SPRAY must not be
+        # confused with a deodorant spray just because both say "spray".
+        sunscreen = classify_product_kind(prod(categoryId="body", title="YC White Sunscreen Spray SPF50 солнцезащитный спрей 150 мл"))
+        self.assertEqual(sunscreen, "sunscreen")
+        self.assertNotIn(sunscreen, {"deodorant_spray", "deodorant_stick", "deodorant_rollon"})
+
 
 class Audience(unittest.TestCase):
     def test_kids(self):
@@ -126,6 +151,55 @@ class Attributes(unittest.TestCase):
         self.assertEqual(e["productKind"], "laundry_gel")
         self.assertEqual(e["audience"], "family")
         self.assertIn("rose", e["attributes"])
+        self.assertEqual(e["form"], "gel")
+        self.assertEqual(e["useArea"], "laundry")
+        self.assertIn("persil", e["searchTerms"])
+
+
+class Form(unittest.TestCase):
+    def test_form_by_kind(self):
+        self.assertEqual(classify_form(prod(categoryId="laundry", title="Dalli стиральный порошок 6 кг")), "powder")
+        self.assertEqual(classify_form(prod(categoryId="deodorants", title="Rexona стик 40 мл")), "stick")
+        self.assertEqual(classify_form(prod(categoryId="shaving", title="Gillette Regular пена для бритья 200 мл")), "foam")
+        self.assertEqual(classify_form(prod(categoryId="shaving", title="Gillette Blue3 одноразовые станки 3 шт")), "card_only")
+
+    def test_sunscreen_form_depends_on_spray_vs_cream(self):
+        self.assertEqual(classify_form(prod(categoryId="body", title="YC White Sunscreen Spray SPF50 солнцезащитный спрей 150 мл")), "spray")
+        self.assertEqual(classify_form(prod(categoryId="body", title="YC Sunscreen UV Protection SPF50 солнцезащитный крем 100 г")), "cream")
+
+    def test_unknown_kind_has_no_form(self):
+        self.assertEqual(classify_form(prod(categoryId="other", title="Что-то непонятное")), "")
+
+
+class UseArea(unittest.TestCase):
+    def test_maps_from_category(self):
+        self.assertEqual(classify_use_area(prod(categoryId="hair", title="Clear шампунь 600 мл")), "hair")
+        self.assertEqual(classify_use_area(prod(categoryId="shaving", title="Gillette станок")), "shaving")
+        self.assertEqual(classify_use_area(prod(categoryId="oral", title="Colgate зубная паста")), "oral")
+
+    def test_dishwashing_gets_its_own_area(self):
+        self.assertEqual(
+            classify_use_area(prod(categoryId="home_cleaning", title="Fairy средство для посуды 600 мл")),
+            "dishes",
+        )
+        self.assertEqual(
+            classify_use_area(prod(categoryId="home_cleaning", title="Domestos для унитаза 1 л")),
+            "home_cleaning",
+        )
+
+
+class SearchTerms(unittest.TestCase):
+    def test_tokenizes_and_dedupes(self):
+        terms = classify_search_terms(prod(title="Ariel Fast Dissolving концентрат 2,5 кг", brand="Ariel", productType="стиральный порошок"))
+        self.assertIn("ariel", terms)
+        self.assertIn("концентрат", terms)
+        self.assertIn("порошок", terms)
+        self.assertEqual(len(terms), len(set(terms)))
+
+    def test_drops_units_and_stopwords(self):
+        terms = classify_search_terms(prod(title="Persil Rose гель для стирки 3 л", brand="Persil"))
+        self.assertNotIn("для", terms)
+        self.assertNotIn("л", terms)
 
 
 class RelatedRanking(unittest.TestCase):

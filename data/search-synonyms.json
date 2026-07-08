@@ -39,6 +39,28 @@
       "categoryIds": ["laundry"]
     },
     {
+      "id": "laundry-powder",
+      "label": "Стиральный порошок",
+      "aliases": ["порошок", "стиральный порошок", "мыло порошок"],
+      "terms": ["порошок", "стиральный порошок"],
+      "landingTerms": ["стиральный порошок"],
+      "categories": [],
+      "categoryIds": [],
+      "productKinds": ["washing_powder"],
+      "landingCategories": ["Стирка и уход за бельем"]
+    },
+    {
+      "id": "laundry-gel",
+      "label": "Гель для стирки",
+      "aliases": ["гель для стирки", "жидкий порошок"],
+      "terms": ["гель для стирки"],
+      "landingTerms": ["гель для стирки"],
+      "categories": [],
+      "categoryIds": [],
+      "productKinds": ["laundry_gel"],
+      "landingCategories": ["Стирка и уход за бельем"]
+    },
+    {
       "id": "europe",
       "label": "Европа",
       "aliases": ["германия", "немецкий", "немецкое", "germany", "европа"],
@@ -71,6 +93,7 @@
       "categories": [],
       "categoryIds": [],
       "brands": ["Fairy"],
+      "productKinds": ["dishwashing_liquid"],
       "landingCategories": ["Уборка и чистота"]
     },
     {
@@ -81,7 +104,19 @@
       "landingTerms": ["таблетки", "капсулы", "капсулы для стирки"],
       "categories": [],
       "categoryIds": [],
+      "productKinds": ["laundry_capsules"],
       "landingCategories": ["Стирка"]
+    },
+    {
+      "id": "hair-shampoo",
+      "label": "Шампунь",
+      "aliases": ["шампунь", "шампуни", "shampoo"],
+      "terms": ["шампунь", "shampoo"],
+      "landingTerms": ["шампунь"],
+      "categories": [],
+      "categoryIds": ["hair"],
+      "productKinds": ["shampoo"],
+      "landingCategories": ["Уход за волосами"]
     },
     {
       "id": "shaving-general",
@@ -100,6 +135,7 @@
       "landingTerms": ["запаски", "кассеты", "лезвия", "сменные кассеты"],
       "categories": [],
       "categoryIds": [],
+      "productKinds": ["blade_cartridge"],
       "landingCategories": ["Бритье"]
     },
     {
@@ -110,6 +146,7 @@
       "landingTerms": ["станки", "бритвы", "одноразовые станки"],
       "categories": [],
       "categoryIds": [],
+      "productKinds": ["razor"],
       "landingCategories": ["Бритье"]
     },
     {
@@ -120,6 +157,7 @@
       "landingTerms": ["пена для бритья"],
       "categories": [],
       "categoryIds": [],
+      "productKinds": ["shaving_foam"],
       "landingCategories": ["Бритье"]
     },
     {
@@ -130,16 +168,21 @@
       "landingTerms": ["гель для бритья"],
       "categories": [],
       "categoryIds": [],
+      "productKinds": ["shaving_gel"],
       "landingCategories": ["Бритье"]
     },
     {
       "id": "deodorants",
       "label": "Дезодоранты",
       "aliases": ["дезик", "део", "deo", "стик", "дезодорант", "дезодоранты"],
-      "terms": ["дезодорант", "део", "deo", "стик", "spray", "axe"],
+      "terms": ["дезодорант", "антиперспирант"],
+      "aliasKinds": {
+        "стик": ["deodorant_stick"]
+      },
       "landingTerms": ["дезодорант", "дезик", "део", "стик", "спрей"],
       "categories": ["Дезодоранты"],
-      "categoryIds": ["deodorants"]
+      "categoryIds": ["deodorants"],
+      "productKinds": ["deodorant_stick", "deodorant_spray", "deodorant_rollon"]
     },
     {
       "id": "soap-body",
@@ -149,9 +192,72 @@
       "landingTerms": ["мыло", "жидкое мыло", "мыло для рук", "хозяйственное мыло"],
       "categories": [],
       "categoryIds": [],
+      "productKinds": ["soap"],
       "landingCategories": ["Уход за телом", "Разное"]
+    },
+    {
+      "id": "body-showergel",
+      "label": "Гель для душа",
+      "aliases": ["гель для душа", "гель душ", "shower gel"],
+      "terms": ["гель для душа", "гель душ"],
+      "landingTerms": ["гель для душа"],
+      "categories": [],
+      "categoryIds": ["body"],
+      "productKinds": ["shower_gel"],
+      "landingCategories": ["Уход за телом"]
+    },
+    {
+      "id": "sunscreen",
+      "label": "Солнцезащита",
+      "aliases": ["солнцезащитка", "солнцезащитный крем", "spf", "от солнца", "солнцезащита"],
+      "terms": ["spf", "солнцезащ", "sunscreen", "sunblock"],
+      "landingTerms": ["солнцезащитный крем", "SPF", "солнцезащитный спрей"],
+      "categories": [],
+      "categoryIds": ["body"],
+      "productKinds": ["sunscreen"],
+      "landingCategories": ["Уход за телом"]
+    },
+    {
+      "id": "oral-toothpaste",
+      "label": "Зубная паста",
+      "aliases": ["зубная паста", "паста для зубов"],
+      "terms": ["зубная паста", "зуб.паста", "зубн.паста"],
+      "landingTerms": ["зубная паста"],
+      "categories": [],
+      "categoryIds": ["oral"],
+      "productKinds": ["toothpaste"],
+      "landingCategories": ["Зубная гигиена"]
+    },
+    {
+      "id": "oral-toothbrush",
+      "label": "Зубная щетка",
+      "aliases": ["зубная щетка", "зубная щётка", "щетка"],
+      "terms": ["зубная щетка", "зубная щётка", "з/щ"],
+      "landingTerms": ["зубная щетка"],
+      "categories": [],
+      "categoryIds": ["oral"],
+      "productKinds": ["toothbrush"],
+      "landingCategories": ["Зубная гигиена"]
     }
   ],
+  "brandAliases": {
+    "Ariel": ["ariel", "ариель", "ариэль", "ариел", "ариэл"],
+    "Clear": ["clear", "клир"],
+    "Dove": ["dove", "дав", "дов"],
+    "Persil": ["persil", "персил"],
+    "Dalli": ["dalli", "далли"],
+    "Dash": ["dash", "дэш", "деш"],
+    "Gillette": ["gillette", "жилет", "жиллет"],
+    "Gillette Venus": ["venus", "gillette venus", "винус", "венус"],
+    "Pantene": ["pantene", "пантин", "пантен"],
+    "Colgate": ["colgate", "колгейт"],
+    "Rexona": ["rexona", "рексона"],
+    "AXE": ["axe", "акс", "аксе"],
+    "BIC": ["bic", "бик"],
+    "Fairy": ["fairy", "фейри", "фери"],
+    "Downy": ["downy", "дауни"],
+    "Lenor": ["lenor", "ленор"]
+  },
   "ignoredDraftTerms": [
     "сергей"
   ]

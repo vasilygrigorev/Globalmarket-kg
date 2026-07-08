@@ -3,6 +3,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from classify_taxonomy import enrich
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data" / "catalog.json"
@@ -71,6 +72,7 @@ def main():
             if key in product
         }
         item["searchText"] = compact_search_text(product)
+        item.update(enrich(product))
         public["products"].append(item)
 
     TARGET.write_text(

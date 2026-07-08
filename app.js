@@ -97,6 +97,7 @@ let favoriteIds = new Set(loadFavorites());
 let siteConfig = {};
 let searchSynonymGroups = [];
 let ignoredSearchDraftTerms = [];
+let searchBrandAliases = {};
 
 let promoBanners = [
   {
@@ -268,6 +269,7 @@ async function loadSearchSynonyms() {
     const config = await response.json();
     searchSynonymGroups = Array.isArray(config.groups) ? config.groups : [];
     ignoredSearchDraftTerms = Array.isArray(config.ignoredDraftTerms) ? config.ignoredDraftTerms.map(normalizeSearchValue) : [];
+    searchBrandAliases = config.brandAliases && typeof config.brandAliases === "object" ? config.brandAliases : {};
   } catch (error) {
     console.warn("Не удалось загрузить словарь поиска", error);
   }
@@ -655,6 +657,54 @@ function productMatchesSynonymGroup(product, group, text) {
   return terms.some((term) => text.includes(term));
 }
 
+function resolveBrandFromQuery(normalizedQuery) {
+  const queryTokens = normalizedQuery.split(" ").filter(Boolean);
+  for (const canonicalBrand of Object.keys(searchBrandAliases)) {
+    const aliases = (searchBrandAliases[canonicalBrand] || []).map(normalizeSearchValue).filter(Boolean);
+    const candidates = [normalizeSearchValue(canonicalBrand), ...aliases];
+    const matched = candidates.some((alias) => {
+      if (!alias) return false;
+      if (normalizedQuery === alias) return true;
+      if (!alias.includes(" ")) return queryTokens.includes(alias);
+      return normalizedQuery.includes(alias);
+    });
+    if (matched) return canonicalBrand;
+  }
+  return "";
+}
+
+function resolveMatchedSynonymGroups(normalizedQuery) {
+  return searchSynonymGroups.filter((group) => groupMatchesQuery(group, normalizedQuery));
+}
+
+function resolveExpectedKinds(matchedGroups, normalizedQuery) {
+  const kinds = new Set();
+  matchedGroups.forEach((group) => {
+    const aliasKinds = group.aliasKinds || {};
+    let usedAliasKind = false;
+    Object.keys(aliasKinds).forEach((alias) => {
+      if (normalizeSearchValue(alias) && normalizedQuery.includes(normalizeSearchValue(alias))) {
+        (aliasKinds[alias] || []).forEach((kind) => kinds.add(kind));
+        usedAliasKind = true;
+      }
+    });
+    if (!usedAliasKind) {
+      (group.productKinds || []).forEach((kind) => kinds.add(kind));
+    }
+  });
+  return kinds;
+}
+
+function buildSearchContext(normalizedQuery) {
+  if (!normalizedQuery) return null;
+  const matchedGroups = resolveMatchedSynonymGroups(normalizedQuery);
+  const expectedKinds = resolveExpectedKinds(matchedGroups, normalizedQuery);
+  const expectedCategoryIds = new Set(matchedGroups.flatMap((group) => group.categoryIds || []));
+  const expectedCategories = new Set(matchedGroups.flatMap((group) => group.categories || []));
+  const expectedBrand = resolveBrandFromQuery(normalizedQuery);
+  return { normalizedQuery, expectedKinds, expectedCategoryIds, expectedCategories, expectedBrand };
+}
+
 function productMatchesSearchQuery(product, query) {
   const normalizedQuery = normalizeSearchValue(query);
   if (!normalizedQuery) return true;
@@ -673,7 +723,52 @@ function productMatchesSearchQuery(product, query) {
   const queryTerms = normalizedQuery.split(" ").filter(Boolean);
   if (queryTerms.length > 1 && queryTerms.every((term) => text.includes(term))) return true;
 
+  const expectedBrand = resolveBrandFromQuery(normalizedQuery);
+  if (expectedBrand && normalizeSearchValue(product.brand) === normalizeSearchValue(expectedBrand)) return true;
+
   return searchSynonymGroups.some((group) => groupMatchesQuery(group, normalizedQuery) && productMatchesSynonymGroup(product, group, text));
+}
+
+function searchRelevanceScore(product, context) {
+  if (!context) return 0;
+  const { normalizedQuery, expectedKinds, expectedCategoryIds, expectedCategories, expectedBrand } = context;
+  const normTitle = normalizeSearchValue(product.title);
+  const normBrand = normalizeSearchValue(product.brand);
+  let score = 0;
+
+  if (normTitle === normalizedQuery) score += 1000;
+  else if (normTitle.startsWith(`${normalizedQuery} `)) score += 400;
+
+  if (expectedBrand && normBrand === normalizeSearchValue(expectedBrand)) score += 500;
+  else if (normBrand === normalizedQuery) score += 500;
+
+  const titleTokens = normTitle.split(" ").filter(Boolean);
+  if (titleTokens.includes(normalizedQuery)) score += 150;
+
+  if (expectedKinds.size && product.productKind && expectedKinds.has(product.productKind)) score += 300;
+
+  if (expectedCategoryIds.size && expectedCategoryIds.has(product.categoryId)) score += 120;
+  else if (expectedCategories.size && expectedCategories.has(product.category)) score += 120;
+
+  if (hasProductImage(product)) score += 8;
+  if (product.status === "active") score += 5;
+
+  const normProductType = normalizeSearchValue(product.productType);
+  if (normTitle.includes(normalizedQuery) || normBrand.includes(normalizedQuery) || normProductType.includes(normalizedQuery)) {
+    score += 60;
+  } else if ((product.searchTerms || []).some((term) => normalizeSearchValue(term) === normalizedQuery)) {
+    score += 40;
+  } else {
+    score += 5;
+  }
+
+  return score;
+}
+
+function compareBySearchRelevance(a, b, context) {
+  const diff = searchRelevanceScore(b, context) - searchRelevanceScore(a, context);
+  if (diff) return diff;
+  return featuredProductCompare(a, b);
 }
 
 function titleWithoutFirstMatch(title, value) {
@@ -1167,9 +1262,11 @@ function getVisibleProducts() {
     return matchesFavorite && matchesCategory && matchesCollection && matchesPrice && matchesQuery;
   });
 
+  const searchContext = state.sort === "featured" && normalizedQuery ? buildSearchContext(normalizedQuery) : null;
   const sorted = filtered.sort((a, b) => {
     if (state.sort === "price-asc") return productPrice(a) - productPrice(b);
     if (state.sort === "price-desc") return productPrice(b) - productPrice(a);
+    if (searchContext) return compareBySearchRelevance(a, b, searchContext);
     return featuredProductCompare(a, b);
   });
 

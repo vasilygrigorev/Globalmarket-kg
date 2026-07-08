@@ -7,6 +7,7 @@ import urllib.parse
 from datetime import date
 from pathlib import Path
 
+from classify_taxonomy import related_rank_key
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG_PATH = ROOT / "data" / "public-catalog.json"
@@ -202,7 +203,7 @@ def related_products(product, products):
             continue
         related.append(candidate)
         seen.add(candidate_id)
-    related.sort(key=lambda item: (0 if "europe" in (item.get("collections") or []) else 1, item.get("title", "")))
+    related.sort(key=lambda item: related_rank_key(product, item))
     if len(related) < 4:
         fallback = []
         for candidate in products:

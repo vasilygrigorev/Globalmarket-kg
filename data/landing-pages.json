@@ -46,7 +46,9 @@
       "path": "/category/hair/",
       "url": "https://globalmarket.kg/category/hair/",
       "count": 98,
-      "seoTerms": [],
+      "seoTerms": [
+        "шампунь"
+      ],
       "shown": 30
     },
     {
@@ -60,7 +62,11 @@
         "мыло",
         "жидкое мыло",
         "мыло для рук",
-        "хозяйственное мыло"
+        "хозяйственное мыло",
+        "гель для душа",
+        "солнцезащитный крем",
+        "SPF",
+        "солнцезащитный спрей"
       ],
       "shown": 15
     },
@@ -71,7 +77,10 @@
       "path": "/category/oral/",
       "url": "https://globalmarket.kg/category/oral/",
       "count": 28,
-      "seoTerms": [],
+      "seoTerms": [
+        "зубная паста",
+        "зубная щетка"
+      ],
       "shown": 11
     },
     {

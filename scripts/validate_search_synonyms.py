@@ -32,6 +32,52 @@ DEFAULT_QUERIES = [
     "капсулы",
     "посудомойка",
     "стиральная машина",
+    "ариель",
+    "ariel",
+    "ариэл",
+    "клир",
+    "clear",
+    "шампунь",
+    "гель душ",
+    "зубная паста",
+    "щетка",
+    "зубная щетка",
+    "spf",
+    "солнцезащитка",
+]
+
+# Required queries where "there is a match" is not enough — the FIRST/best
+# ranked result must have a specific productKind or brand. Regression guard
+# for the reported bug class: "дезик"/"део"/"стик" must never lead with a
+# sunscreen just because both happen to say "spray" somewhere.
+RANKING_EXPECTATIONS = [
+    {"query": "ариель", "expected_brand": "Ariel"},
+    {"query": "ariel", "expected_brand": "Ariel"},
+    {"query": "ариэл", "expected_brand": "Ariel"},
+    {"query": "клир", "expected_brand": "Clear"},
+    {"query": "clear", "expected_brand": "Clear"},
+    {"query": "порошок", "expected_kinds": ["washing_powder"]},
+    {"query": "гель для стирки", "expected_kinds": ["laundry_gel"]},
+    {"query": "капсулы", "expected_kinds": ["laundry_capsules"]},
+    {"query": "шампунь", "expected_kinds": ["shampoo"]},
+    {"query": "дезик", "expected_kinds": ["deodorant_stick", "deodorant_spray", "deodorant_rollon"], "forbidden_kinds": ["sunscreen"]},
+    {"query": "део", "expected_kinds": ["deodorant_stick", "deodorant_spray", "deodorant_rollon"], "forbidden_kinds": ["sunscreen"]},
+    {"query": "стик", "expected_kinds": ["deodorant_stick"], "forbidden_kinds": ["sunscreen"]},
+    {"query": "гель душ", "expected_kinds": ["shower_gel"]},
+    {"query": "пена для бритья", "expected_kinds": ["shaving_foam"]},
+    {"query": "гель для бритья", "expected_kinds": ["shaving_gel"]},
+    {"query": "станки", "expected_kinds": ["razor"]},
+    {"query": "станок", "expected_kinds": ["razor"]},
+    {"query": "запаски", "expected_kinds": ["blade_cartridge"]},
+    {"query": "кассеты", "expected_kinds": ["blade_cartridge"]},
+    {"query": "лезвия", "expected_kinds": ["blade_cartridge"]},
+    {"query": "зубная паста", "expected_kinds": ["toothpaste"]},
+    {"query": "щетка", "expected_kinds": ["toothbrush"]},
+    {"query": "зубная щетка", "expected_kinds": ["toothbrush"]},
+    {"query": "spf", "expected_kinds": ["sunscreen"]},
+    {"query": "солнцезащитка", "expected_kinds": ["sunscreen"]},
+    {"query": "мыломойка", "expected_kinds": ["dishwashing_liquid"]},
+    {"query": "посудомойка", "expected_kinds": ["dishwashing_liquid"]},
 ]
 
 
@@ -123,7 +169,24 @@ def product_matches_group(product, group, text):
     return any(term and term in text for term in terms)
 
 
-def product_matches_query(product, query, groups, ignored_terms):
+def resolve_brand_from_query(normalized_query, brand_aliases):
+    """Mirrors resolveBrandFromQuery() in app.js — keep both in sync."""
+    query_tokens = [term for term in normalized_query.split(" ") if term]
+    for canonical_brand, aliases in (brand_aliases or {}).items():
+        candidates = [normalize(canonical_brand)] + [normalize(alias) for alias in aliases or []]
+        for alias in candidates:
+            if not alias:
+                continue
+            if normalized_query == alias:
+                return canonical_brand
+            if " " not in alias and alias in query_tokens:
+                return canonical_brand
+            if " " in alias and alias in normalized_query:
+                return canonical_brand
+    return ""
+
+
+def product_matches_query(product, query, groups, ignored_terms, brand_aliases=None):
     normalized_query = normalize(query)
     if not normalized_query:
         return True
@@ -138,17 +201,141 @@ def product_matches_query(product, query, groups, ignored_terms):
     if len(query_terms) > 1 and all(term in text for term in query_terms):
         return True
 
+    expected_brand = resolve_brand_from_query(normalized_query, brand_aliases)
+    if expected_brand and normalize(product.get("brand")) == normalize(expected_brand):
+        return True
+
     return any(
         group_matches_query(group, normalized_query) and product_matches_group(product, group, text)
         for group in groups
     )
 
 
-def find_matches(products, query, groups, ignored_terms):
+def resolve_expected_kinds(matched_groups, normalized_query):
+    """Mirrors resolveExpectedKinds() in app.js — keep both in sync."""
+    kinds = set()
+    for group in matched_groups:
+        alias_kinds = group.get("aliasKinds") or {}
+        used_alias_kind = False
+        for alias, kind_list in alias_kinds.items():
+            if normalize(alias) and normalize(alias) in normalized_query:
+                kinds.update(kind_list or [])
+                used_alias_kind = True
+        if not used_alias_kind:
+            kinds.update(group.get("productKinds") or [])
+    return kinds
+
+
+def search_relevance_score(product, normalized_query, expected_kinds, expected_category_ids, expected_categories, expected_brand):
+    """Mirrors searchRelevanceScore() in app.js — keep both in sync."""
+    norm_title = normalize(product.get("title"))
+    norm_brand = normalize(product.get("brand"))
+    score = 0
+
+    if norm_title == normalized_query:
+        score += 1000
+    elif norm_title.startswith(f"{normalized_query} "):
+        score += 400
+
+    if expected_brand and norm_brand == normalize(expected_brand):
+        score += 500
+    elif norm_brand == normalized_query:
+        score += 500
+
+    title_tokens = [t for t in norm_title.split(" ") if t]
+    if normalized_query in title_tokens:
+        score += 150
+
+    if expected_kinds and product.get("productKind") and product.get("productKind") in expected_kinds:
+        score += 300
+
+    if expected_category_ids and product.get("categoryId") in expected_category_ids:
+        score += 120
+    elif expected_categories and product.get("category") in expected_categories:
+        score += 120
+
+    if product.get("image") or product.get("galleryImages"):
+        score += 8
+    if product.get("status") == "active":
+        score += 5
+
+    norm_product_type = normalize(product.get("productType"))
+    if normalized_query in norm_title or normalized_query in norm_brand or normalized_query in norm_product_type:
+        score += 60
+    elif any(normalize(term) == normalized_query for term in product.get("searchTerms") or []):
+        score += 40
+    else:
+        score += 5
+
+    return score
+
+
+def rank_matches(products, query, groups, brand_aliases):
+    normalized_query = normalize(query)
+    matched_groups = [group for group in groups if group_matches_query(group, normalized_query)]
+    expected_kinds = resolve_expected_kinds(matched_groups, normalized_query)
+    expected_category_ids = {cid for group in matched_groups for cid in (group.get("categoryIds") or [])}
+    expected_categories = {cat for group in matched_groups for cat in (group.get("categories") or [])}
+    expected_brand = resolve_brand_from_query(normalized_query, brand_aliases)
+
+    def sort_key(product):
+        return -search_relevance_score(
+            product, normalized_query, expected_kinds, expected_category_ids, expected_categories, expected_brand
+        )
+
+    return sorted(products, key=sort_key)
+
+
+def check_ranking_expectations(products, synonyms, expectations):
+    """Not just 'there is a match' — the top-ranked result(s) must have the
+    expected productKind/brand. Returns a list of error strings."""
+    groups = synonyms.get("groups") or []
+    brand_aliases = synonyms.get("brandAliases") or {}
+    ignored_terms = {normalize(term) for term in synonyms.get("ignoredDraftTerms") or []}
+    errors = []
+
+    for expectation in expectations:
+        query = expectation["query"]
+        matches = find_matches(products, query, groups, ignored_terms, brand_aliases)
+        if not matches:
+            errors.append(f"Ranking check `{query}`: no matches at all.")
+            continue
+        ranked = rank_matches(matches, query, groups, brand_aliases)
+        top = ranked[0]
+
+        expected_brand = expectation.get("expected_brand")
+        if expected_brand and normalize(top.get("brand")) != normalize(expected_brand):
+            errors.append(
+                f"Ranking check `{query}`: expected top result brand `{expected_brand}`, got "
+                f"`{top.get('brand')}` ({top.get('title')})."
+            )
+
+        expected_kinds = expectation.get("expected_kinds")
+        if expected_kinds and top.get("productKind") not in expected_kinds:
+            errors.append(
+                f"Ranking check `{query}`: expected top result productKind in {expected_kinds}, got "
+                f"`{top.get('productKind')}` ({top.get('title')})."
+            )
+
+        forbidden_kinds = expectation.get("forbidden_kinds")
+        if forbidden_kinds:
+            top_n = ranked[:5]
+            leaked = [p for p in top_n if p.get("productKind") in forbidden_kinds]
+            if leaked:
+                errors.append(
+                    f"Ranking check `{query}`: forbidden productKind {leaked[0].get('productKind')} "
+                    f"leaked into top results ({leaked[0].get('title')})."
+                )
+
+    return errors
+
+
+def find_matches(products, query, groups, ignored_terms, brand_aliases=None):
     return [
         product
         for product in products
-        if product.get("inStock") is not False and product_matches_query(product, query, groups, ignored_terms)
+        if product.get("inStock") is not False
+        and product_matches_query(product, query, groups, ignored_terms, brand_aliases)
     ]
 
 
@@ -159,6 +346,7 @@ def report_row(values):
 def build_report(catalog, synonyms, queries, shape_errors, shape_warnings):
     products = catalog.get("products") or []
     groups = synonyms.get("groups") or []
+    brand_aliases = synonyms.get("brandAliases") or {}
     ignored_terms = {normalize(term) for term in synonyms.get("ignoredDraftTerms") or []}
     rows = []
     errors = list(shape_errors)
@@ -166,8 +354,9 @@ def build_report(catalog, synonyms, queries, shape_errors, shape_warnings):
 
     for query in queries:
         normalized_query = normalize(query)
-        matches = find_matches(products, query, groups, ignored_terms)
-        first = matches[0].get("title", "") if matches else ""
+        matches = find_matches(products, query, groups, ignored_terms, brand_aliases)
+        ranked = rank_matches(matches, query, groups, brand_aliases) if matches else matches
+        first = ranked[0].get("title", "") if ranked else ""
         if normalized_query in ignored_terms:
             status = "ignored"
         elif matches:
@@ -179,6 +368,8 @@ def build_report(catalog, synonyms, queries, shape_errors, shape_warnings):
             status = "missing"
             errors.append(f"Query `{query}` returned 0 matches.")
         rows.append((query, len(matches), first or "—", status))
+
+    errors.extend(check_ranking_expectations(products, synonyms, RANKING_EXPECTATIONS))
 
     lines = [
         "# Search Synonyms QA",
@@ -199,6 +390,9 @@ def build_report(catalog, synonyms, queries, shape_errors, shape_warnings):
         lines.extend(f"- {warning}" for warning in warnings)
     else:
         lines.append("- none")
+
+    ranking_errors = [e for e in errors if e.startswith("Ranking check")]
+    lines.extend(["", "## Ranking Checks", "", f"Checked: {len(RANKING_EXPECTATIONS)}", f"Failed: {len(ranking_errors)}"])
 
     lines.extend(["", "## Errors", ""])
     if errors:
