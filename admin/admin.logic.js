@@ -569,3 +569,33 @@ export function renderOrderDetail(order, items, attr, consents) {
       </div>
     </div>`;
 }
+
+// --- Wholesale applications ("Подать заявку на оптовый доступ") ---
+// See supabase/migrations/0004_customer_roles_wholesale.sql,
+// functions/api/wholesale-application.js. Pending applications only — once
+// approved/rejected they drop out of this queue (the manager already acted).
+
+export function renderWholesaleApplicationRow(app) {
+  return `
+    <tr data-id="${esc(app.id)}">
+      <td>${esc(when(app.created_at))}</td>
+      <td>${esc(app.name)}</td>
+      <td>${esc(app.phone)}</td>
+      <td>${esc(app.shop_name)}</td>
+      <td>${esc(app.city)}</td>
+      <td>${esc(app.comment)}</td>
+      <td>
+        <button class="secondary wholesale-approve" type="button" data-id="${esc(app.id)}" data-customer-id="${esc(app.customer_id || "")}">Подтвердить</button>
+        <button class="secondary wholesale-reject" type="button" data-id="${esc(app.id)}" data-customer-id="${esc(app.customer_id || "")}">Отклонить</button>
+      </td>
+    </tr>`;
+}
+
+export function wholesaleApplicationsEmptyRow() {
+  return `<tr><td colspan="7" class="muted" style="padding:16px;">Нет новых заявок на оптовый доступ.</td></tr>`;
+}
+
+export function wholesaleApplicationsCountText(n) {
+  const count = Number(n) || 0;
+  return count > 0 ? `Заявок на рассмотрении: ${count}` : "";
+}

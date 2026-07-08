@@ -92,6 +92,20 @@
 
       <section id="listView" class="hidden">
         <div id="dashboard" class="dashboard"></div>
+
+        <div id="wholesaleApplications" class="card" style="margin-bottom:14px; padding:0; overflow-x:auto;">
+          <div class="row" style="padding:12px 14px 0; justify-content:space-between;">
+            <strong>Заявки на оптовый доступ</strong>
+            <span id="wholesaleApplicationsCount" class="muted"></span>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Дата</th><th>Имя</th><th>Телефон</th><th>Магазин</th><th>Город</th><th>Комментарий</th><th>Действие</th></tr>
+            </thead>
+            <tbody id="wholesaleApplicationsBody"><tr><td colspan="7" class="muted" style="padding:16px;">Загрузка…</td></tr></tbody>
+          </table>
+        </div>
+
         <div class="row" style="margin-bottom:12px;">
           <select id="statusFilter">
             <option value="">Все статусы</option>

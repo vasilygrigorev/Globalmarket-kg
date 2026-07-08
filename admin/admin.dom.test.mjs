@@ -121,3 +121,23 @@ test("CSS defines a colour for every status class emitted by admin.logic.js", ()
     assert.ok(html.includes(cls), `admin/index.html CSS missing ${cls}`);
   }
 });
+
+// --- Wholesale applications queue ---
+
+test("list view declares the wholesale applications table", () => {
+  for (const id of ["wholesaleApplications", "wholesaleApplicationsCount", "wholesaleApplicationsBody"]) {
+    assert.ok(declared.has(id), `missing #${id} in admin/index.html`);
+  }
+});
+
+test("loading the list view also loads the wholesale applications queue", () => {
+  assert.match(adminJs, /if \(view === "list"\) \{ loadOrders\(\); loadStats\(\); loadWholesaleApplications\(\); \}/);
+});
+
+test("approve/reject both update the application AND, when linked, the customer's row", () => {
+  const fn = adminJs.match(/async function reviewWholesaleApplication\([\s\S]*?\n\}/)[0];
+  assert.match(fn, /wholesale_applications["'][\s\S]*?\.update\(\{ status: decision/);
+  assert.match(fn, /customer_type: "wholesale", wholesale_status: "approved"/);
+  assert.match(fn, /wholesale_status: "rejected"/);
+  assert.match(fn, /if \(!error && customerId\)/);
+});

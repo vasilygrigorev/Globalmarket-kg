@@ -55,6 +55,9 @@ import {
   renderRowStatusSelect,
   shouldAutoRefresh,
   AUTO_REFRESH_MS,
+  renderWholesaleApplicationRow,
+  wholesaleApplicationsEmptyRow,
+  wholesaleApplicationsCountText,
 } from "./admin.logic.js";
 
 test("esc neutralizes HTML", () => {
@@ -557,4 +560,36 @@ test("shouldAutoRefresh only fires on the list view, visible tab, first page, wh
   assert.equal(shouldAutoRefresh({ enabled: true, view: "list", hidden: false, page: 2 }), false);
   assert.equal(shouldAutoRefresh({}), false);
   assert.ok(AUTO_REFRESH_MS > 0);
+});
+
+// --- Wholesale applications ---
+
+test("renderWholesaleApplicationRow escapes content and carries data-id/data-customer-id on both action buttons", () => {
+  const row = renderWholesaleApplicationRow({
+    id: "app-1",
+    customer_id: "cust-1",
+    name: '<b>Иван</b>',
+    phone: "996700123456",
+    shop_name: "Магазин",
+    city: "Бишкек",
+    comment: "Хотим опт",
+    created_at: "2026-07-08T10:00:00Z",
+  });
+  assert.match(row, /data-id="app-1"/);
+  assert.match(row, /wholesale-approve/);
+  assert.match(row, /wholesale-reject/);
+  assert.match(row, /data-customer-id="cust-1"/);
+  assert.ok(!row.includes("<b>Иван</b>"), "name must be escaped");
+  assert.match(row, /&lt;b&gt;Иван&lt;\/b&gt;/);
+});
+
+test("renderWholesaleApplicationRow tolerates a missing customer_id (never logged in)", () => {
+  const row = renderWholesaleApplicationRow({ id: "app-2", name: "Иван", phone: "996700123456" });
+  assert.match(row, /data-customer-id=""/);
+});
+
+test("wholesaleApplicationsEmptyRow and count text", () => {
+  assert.match(wholesaleApplicationsEmptyRow(), /Нет новых заявок/);
+  assert.equal(wholesaleApplicationsCountText(0), "");
+  assert.equal(wholesaleApplicationsCountText(3), "Заявок на рассмотрении: 3");
 });

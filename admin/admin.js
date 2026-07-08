@@ -37,6 +37,9 @@ import {
   AUTO_REFRESH_MS,
   statusClass,
   statusLabel,
+  renderWholesaleApplicationRow,
+  wholesaleApplicationsEmptyRow,
+  wholesaleApplicationsCountText,
 } from "./admin.logic.js";
 
 const $ = (id) => document.getElementById(id);
@@ -147,7 +150,7 @@ async function refreshSessionUI() {
     $("accessEmail").textContent = session.user.email || "текущий пользователь";
   }
   setView(view);
-  if (view === "list") { loadOrders(); loadStats(); }
+  if (view === "list") { loadOrders(); loadStats(); loadWholesaleApplications(); }
 }
 
 function setMoreButton({ visible, busy }) {
@@ -235,6 +238,71 @@ async function loadOrders({ append = false } = {}) {
     }
   });
   setMoreButton({ visible: hasMore(batch.length, PAGE_SIZE), busy: false });
+}
+
+// Queue of pending "Подать заявку на оптовый доступ" submissions (see
+// functions/api/wholesale-application.js, supabase/migrations/
+// 0004_customer_roles_wholesale.sql). Approve/reject here flips both the
+// application's own status and, when the applicant is a known customer
+// (logged in via SMS at least once), their customers row — that's what
+// actually unlocks/denies wholesale pricing.
+async function loadWholesaleApplications() {
+  const body = $("wholesaleApplicationsBody");
+  if (!body) return;
+  let data, error;
+  try {
+    ({ data, error } = await supabase
+      .from("wholesale_applications")
+      .select("id,created_at,name,phone,shop_name,city,comment,customer_id")
+      .eq("status", "pending")
+      .order("created_at", { ascending: false }));
+  } catch (err) {
+    error = err;
+  }
+  const countEl = $("wholesaleApplicationsCount");
+  if (error) {
+    body.innerHTML = `<tr><td colspan="7" class="banner" style="margin:0;">${esc(friendlyError(error))}</td></tr>`;
+    if (countEl) countEl.textContent = "";
+    return;
+  }
+  const rows = data || [];
+  if (countEl) countEl.textContent = wholesaleApplicationsCountText(rows.length);
+  body.innerHTML = rows.length ? rows.map(renderWholesaleApplicationRow).join("") : wholesaleApplicationsEmptyRow();
+  body.querySelectorAll(".wholesale-approve").forEach((btn) => {
+    btn.addEventListener("click", () => reviewWholesaleApplication(btn.dataset.id, btn.dataset.customerId, "approved"));
+  });
+  body.querySelectorAll(".wholesale-reject").forEach((btn) => {
+    btn.addEventListener("click", () => reviewWholesaleApplication(btn.dataset.id, btn.dataset.customerId, "rejected"));
+  });
+}
+
+async function reviewWholesaleApplication(id, customerId, decision) {
+  const row = document.querySelector(`#wholesaleApplicationsBody tr[data-id="${CSS.escape(id)}"]`);
+  const buttons = row ? row.querySelectorAll("button") : [];
+  buttons.forEach((b) => { b.disabled = true; });
+  let error;
+  try {
+    const { error: appError } = await supabase
+      .from("wholesale_applications")
+      .update({ status: decision, reviewed_at: new Date().toISOString() })
+      .eq("id", id);
+    error = appError;
+    if (!error && customerId) {
+      const customerPatch = decision === "approved"
+        ? { customer_type: "wholesale", wholesale_status: "approved" }
+        : { wholesale_status: "rejected" };
+      const { error: customerError } = await supabase.from("customers").update(customerPatch).eq("id", customerId);
+      if (customerError) error = customerError;
+    }
+  } catch (err) {
+    error = err;
+  }
+  if (error) {
+    buttons.forEach((b) => { b.disabled = false; });
+    setListMsg(friendlyError(error) || "Не удалось обновить заявку", false);
+    return;
+  }
+  loadWholesaleApplications();
 }
 
 async function openOrder(id) {
