@@ -16,6 +16,8 @@ const html = read("index.html");
 const appJs = read("app.js");
 const ordersFn = read("functions/api/orders.js");
 const apiDoc = read("docs/api-orders.md");
+const productPagesGen = read("scripts/generate_product_pages.py");
+const landingPagesGen = read("scripts/generate_landing_pages.py");
 
 // Every form field app.js reads via formData.get("X") must exist as name="X".
 test("checkout form fields match formData.get() usage in app.js", () => {
@@ -160,4 +162,53 @@ test("session check asks customer-orders with an empty body, not phone/code", ()
 
 test("checking for an existing session is skipped on pages without the myOrders section", () => {
   assert.match(appJs, /if \(myOrdersAccount\) \{\s*\n\s*checkMyOrdersSession\(\);/);
+});
+
+// Unified customer identity: no separate local "registration" — client
+// pricing, order history, profile, and the wholesale application all key
+// off the same SMS-verified session (functions/api/customer-profile.js).
+test("client pricing is driven by the SMS-login session, not a local registration form", () => {
+  assert.match(appJs, /function isRegisteredCustomer\(\)\s*\{\s*\n\s*return Boolean\(state\.session\);/);
+  // "globalMarketCustomerDraft" (checkout-form field memory) is unrelated and stays.
+  assert.ok(!/"globalMarketCustomer"/.test(appJs), "no leftover local-registration localStorage key");
+  assert.ok(!/function loadCustomer\(/.test(appJs), "old local registration loader must be removed");
+  assert.ok(!/function saveCustomer\(/.test(appJs), "old local registration saver must be removed");
+  assert.ok(!appJs.includes("customerForm"), "old standalone registration form must be removed from index.html/app.js");
+});
+
+test("every page checks the session (for pricing), only the homepage also fetches order history", () => {
+  assert.match(appJs, /async function refreshSession\(\)/);
+  assert.match(appJs, /fetch\("\/api\/customer-profile", \{ method: "GET" \}\)/);
+  assert.match(appJs, /await ensureSession\(\);\s*\n\s*refreshPricingViews\(\);/);
+});
+
+test("profile form saves via /api/customer-profile and never submits the phone field", () => {
+  assert.match(html, /id="profileForm"/);
+  for (const field of ["name", "city", "region", "address"]) {
+    assert.match(html, new RegExp(`<form class="customer-form" id="profileForm">[\\s\\S]*?name="${field}"`));
+  }
+  const profileHandler = appJs.match(/profileForm\?\.addEventListener\("submit", async \(event\) => \{[\s\S]*?\n\}\);/)[0];
+  assert.match(profileHandler, /fetch\("\/api\/customer-profile"/);
+  assert.match(profileHandler, /method:\s*"POST"/);
+  assert.ok(!/formData\.get\("phone"\)/.test(profileHandler), "profile save must never submit an editable phone field");
+});
+
+test("wholesale application form posts to /api/wholesale-application and shows the confirmation text", () => {
+  assert.match(html, /id="wholesaleForm"/);
+  assert.match(html, /Подать заявку на оптовый доступ/);
+  const wholesaleHandler = appJs.match(/wholesaleForm\?\.addEventListener\("submit", async \(event\) => \{[\s\S]*?\n\}\);/)[0];
+  assert.match(wholesaleHandler, /fetch\("\/api\/wholesale-application"/);
+  assert.match(wholesaleHandler, /Заявка отправлена\. Менеджер подтвердит доступ\./);
+});
+
+test("the old 'после регистрации' wording never regresses into app.js, index.html, or the static page generators", () => {
+  for (const [name, text] of [
+    ["index.html", html],
+    ["app.js", appJs],
+    ["scripts/generate_product_pages.py", productPagesGen],
+    ["scripts/generate_landing_pages.py", landingPagesGen],
+  ]) {
+    assert.ok(!/[Пп]осле регистрации/.test(text), `${name} still contains "после регистрации"`);
+    assert.ok(!/[Сс]кидка регистрации/.test(text), `${name} still contains "скидка регистрации"`);
+  }
 });

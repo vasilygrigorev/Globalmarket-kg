@@ -199,31 +199,18 @@
         <div>
           <p class="eyebrow">Оформление</p>
           <h2>Заказ менеджеру</h2>
-          <p>Оставьте контакты и адрес. После оформления откроется WhatsApp с готовым сообщением для менеджера.</p>
+          <p>Оставьте контакты и адрес. После оформления откроется WhatsApp с готовым сообщением для менеджера. Оформить заказ можно без входа.</p>
           <div class="checkout-note">
             Бесплатная доставка от <strong><span id="deliveryThresholdCheckout">10 000</span> сом</strong>. Если сумма меньше, условия доставки согласуются вручную.
           </div>
         </div>
-        <section class="customer-card" aria-label="Регистрация клиента">
+        <section class="customer-card" aria-label="Клиентская цена">
           <div>
-            <p class="eyebrow">Регистрация</p>
-            <h3 id="customerCardTitle">Скидка после регистрации</h3>
-            <p id="customerCardText">Укажите имя и WhatsApp, чтобы получить скидку 3%.</p>
+            <p class="eyebrow">Клиентская цена</p>
+            <h3 id="customerCardTitle">Войдите по телефону для клиентской цены</h3>
+            <p id="customerCardText">Вход по SMS-коду открывает клиентскую цену, историю заказов и личный кабинет — без пароля и отдельной регистрации.</p>
           </div>
-          <form class="customer-form" id="customerForm">
-            <label>
-              Имя
-              <input name="customerName" autocomplete="name" required />
-            </label>
-            <label>
-              WhatsApp
-              <input name="customerPhone" type="tel" autocomplete="tel" required />
-            </label>
-            <div class="customer-actions">
-              <button class="secondary-link" type="submit">Зарегистрироваться</button>
-              <button class="text-button" id="clearCustomer" type="button" hidden>Сбросить</button>
-            </div>
-          </form>
+          <a class="secondary-link" href="#myOrders">Войти по телефону</a>
         </section>
         <form class="checkout-form" id="checkoutForm">
           <label>
@@ -278,13 +265,73 @@
       <section class="checkout-section my-orders-section" id="myOrders">
         <div>
           <p class="eyebrow">Мои заказы</p>
-          <h2>Мои заказы</h2>
-          <p>Войдите по номеру телефона и коду из SMS — увидите сразу всю историю заказов. Или, без входа, проверьте один заказ по коду из WhatsApp-сообщения.</p>
+          <h2>Мои заказы и личный кабинет</h2>
+          <p>Войдите по номеру телефона и коду из SMS — увидите клиентскую цену, всю историю заказов и сможете сохранить свои данные. Или, без входа, проверьте один заказ по коду из WhatsApp-сообщения.</p>
         </div>
 
         <div class="my-orders-account" id="myOrdersAccount" hidden>
-          <p>Вы вошли в «Мои заказы».</p>
-          <button class="secondary-link" type="button" id="myOrdersLogoutButton">Выйти</button>
+          <div class="cabinet-account-row">
+            <p>Вы вошли. <span id="cabinetRoleBadge" class="cabinet-role-badge"></span></p>
+            <button class="secondary-link" type="button" id="myOrdersLogoutButton">Выйти</button>
+          </div>
+
+          <details class="cabinet-block" id="profileBlock" open>
+            <summary>Мои данные</summary>
+            <form class="customer-form" id="profileForm">
+              <label>
+                Имя
+                <input name="name" autocomplete="name" />
+              </label>
+              <label>
+                Телефон
+                <input name="phone" type="tel" disabled />
+              </label>
+              <label>
+                Город
+                <input name="city" autocomplete="address-level2" />
+              </label>
+              <label>
+                Регион
+                <input name="region" autocomplete="address-level1" />
+              </label>
+              <label>
+                Адрес
+                <input name="address" autocomplete="street-address" />
+              </label>
+              <button class="secondary-link" type="submit">Сохранить</button>
+              <p class="form-status" id="profileStatus" role="status"></p>
+            </form>
+          </details>
+
+          <details class="cabinet-block" id="wholesaleBlock">
+            <summary>Оптовый доступ</summary>
+            <p id="wholesaleStatusText" class="cabinet-hint"></p>
+            <button class="secondary-link" type="button" id="wholesaleApplyButton" hidden>Подать заявку на оптовый доступ</button>
+            <form class="customer-form" id="wholesaleForm" hidden>
+              <label>
+                Имя
+                <input name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Телефон
+                <input name="phone" type="tel" autocomplete="tel" required />
+              </label>
+              <label>
+                Название магазина
+                <input name="shop_name" autocomplete="organization" />
+              </label>
+              <label>
+                Город
+                <input name="city" autocomplete="address-level2" />
+              </label>
+              <label>
+                Комментарий
+                <textarea name="comment" rows="3" placeholder="Что и сколько обычно закупаете"></textarea>
+              </label>
+              <button class="primary-button" type="submit">Отправить заявку</button>
+              <p class="form-status" id="wholesaleStatus" role="status"></p>
+            </form>
+          </details>
         </div>
 
         <form class="customer-form my-orders-login-form" id="myOrdersLoginForm">

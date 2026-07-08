@@ -23,7 +23,10 @@ const state = {
   sort: "featured",
   visibleLimit: 60,
   cart: loadCartDraft(),
-  customer: loadCustomer(),
+  // Populated by refreshSession() — an SMS-verified login session (see
+  // functions/api/customer-profile.js), never a locally-typed "registration".
+  // null means logged out (retail/guest pricing).
+  session: null,
 };
 
 const productGrid = document.querySelector("#productGrid");
@@ -68,10 +71,15 @@ const repeatLastOrderButton = document.querySelector("#repeatLastOrder");
 const productModal = document.querySelector("#productModal");
 const productModalContent = document.querySelector("#productModalContent");
 const modalTopActions = document.querySelector("#modalTopActions");
-const customerForm = document.querySelector("#customerForm");
 const customerCardTitle = document.querySelector("#customerCardTitle");
 const customerCardText = document.querySelector("#customerCardText");
-const clearCustomerButton = document.querySelector("#clearCustomer");
+const cabinetRoleBadge = document.querySelector("#cabinetRoleBadge");
+const profileForm = document.querySelector("#profileForm");
+const profileStatus = document.querySelector("#profileStatus");
+const wholesaleStatusText = document.querySelector("#wholesaleStatusText");
+const wholesaleApplyButton = document.querySelector("#wholesaleApplyButton");
+const wholesaleForm = document.querySelector("#wholesaleForm");
+const wholesaleStatus = document.querySelector("#wholesaleStatus");
 const siteHeader = document.querySelector(".site-header");
 const toggleSearchButton = document.querySelector("#toggleSearch");
 const toggleMenuButton = document.querySelector("#toggleMenu");
@@ -294,7 +302,7 @@ function manuallyShowHeroBanner(index) {
 }
 
 function isRegisteredCustomer() {
-  return Boolean(state.customer?.name && state.customer?.phone);
+  return Boolean(state.session);
 }
 
 function productPrice(product) {
@@ -421,7 +429,7 @@ function productQuestionText(product) {
 }
 
 function productQuickOrderText(product) {
-  const customer = state.customer;
+  const customer = state.session;
   const lines = [
     "Быстрый заказ с сайта Global Market KG",
     "",
@@ -722,26 +730,6 @@ function productDisplayParts(product) {
   return { brand, type, size, variant };
 }
 
-function loadCustomer() {
-  try {
-    const customer = JSON.parse(localStorage.getItem("globalMarketCustomer") || "null");
-    if (customer?.name && customer?.phone) return customer;
-  } catch {
-    return null;
-  }
-  return null;
-}
-
-function saveCustomer(customer) {
-  state.customer = customer;
-  localStorage.setItem("globalMarketCustomer", JSON.stringify(customer));
-}
-
-function clearCustomer() {
-  state.customer = null;
-  localStorage.removeItem("globalMarketCustomer");
-}
-
 function safeLocalStorageJson(key, fallback = null) {
   try {
     return JSON.parse(localStorage.getItem(key) || "null") || fallback;
@@ -827,21 +815,27 @@ function trackAttribution() {
 
 function fillCheckoutFromCustomer() {
   const checkoutForm = document.querySelector("#checkoutForm");
-  if (!checkoutForm || !state.customer) return;
-  if (!checkoutForm.elements.name.value) checkoutForm.elements.name.value = state.customer.name;
-  if (!checkoutForm.elements.phone.value) checkoutForm.elements.phone.value = state.customer.phone;
+  if (!checkoutForm || !state.session) return;
+  if (!checkoutForm.elements.name.value && state.session.name) checkoutForm.elements.name.value = state.session.name;
+  if (!checkoutForm.elements.phone.value && state.session.phone) checkoutForm.elements.phone.value = state.session.phone;
 }
 
-function renderCustomerPanel() {
+// The checkout section's "Клиентская цена" card is a CTA to the SMS login in
+// #myOrders, not a form of its own — there's only one login/registration
+// flow in this storefront. See index.html #checkout .customer-card and
+// docs/api-orders.md "Unified customer identity".
+function renderClientPriceCta() {
   const registered = isRegisteredCustomer();
-  customerCardTitle.textContent = registered ? "Скидка применена" : "Скидка после регистрации";
-  customerCardText.textContent = registered
-    ? `${state.customer.name}, для вас применена скидка ${catalogSettings.default_registered_discount_percent}% от розничной цены.`
-    : `Укажите имя и WhatsApp, чтобы получить скидку ${catalogSettings.default_registered_discount_percent}%.`;
-  customerForm.elements.customerName.value = state.customer?.name || "";
-  customerForm.elements.customerPhone.value = state.customer?.phone || "";
-  customerForm.querySelector("button[type='submit']").textContent = registered ? "Обновить данные" : "Зарегистрироваться";
-  clearCustomerButton.hidden = !registered;
+  if (customerCardTitle) {
+    customerCardTitle.textContent = registered
+      ? "Клиентская цена применена"
+      : "Войдите по телефону для клиентской цены";
+  }
+  if (customerCardText) {
+    customerCardText.textContent = registered
+      ? `Вам применена клиентская цена (скидка ${catalogSettings.default_registered_discount_percent}% от розничной).`
+      : `Вход по SMS-коду открывает клиентскую цену (скидка ${catalogSettings.default_registered_discount_percent}%), историю заказов и личный кабинет — без пароля и отдельной регистрации.`;
+  }
   fillCheckoutFromDraft();
   fillCheckoutFromCustomer();
 }
@@ -869,7 +863,7 @@ async function loadCatalog() {
   priceOutput.textContent = currency.format(state.maxPrice);
   document.querySelector("#deliveryThreshold").textContent = currency.format(catalogSettings.free_delivery_threshold_kgs);
   document.querySelector("#deliveryThresholdCheckout").textContent = currency.format(catalogSettings.free_delivery_threshold_kgs);
-  renderCustomerPanel();
+  renderClientPriceCta();
   renderQuickCategories(catalog.categories || []);
   renderCategories();
   renderCatalogDirectory();
@@ -1462,8 +1456,8 @@ function renderProducts() {
               </div>
               <span class="registered-price-note">${
                 isRegisteredCustomer()
-                  ? `Скидка регистрации: ${catalogSettings.default_registered_discount_percent}%`
-                  : `После регистрации: ${formatPriceHtml(product.registeredPriceKgs)}`
+                  ? `Клиентская цена: скидка ${catalogSettings.default_registered_discount_percent}%`
+                  : `Цена при входе: ${formatPriceHtml(product.registeredPriceKgs)}`
               }</span>
             </div>
             <div class="buy-row">
@@ -1569,8 +1563,8 @@ function openProductModal(productId) {
           </strong>
           <small>${
             isRegisteredCustomer()
-              ? `Скидка регистрации: ${catalogSettings.default_registered_discount_percent}%`
-              : `После регистрации: ${formatPriceHtml(product.registeredPriceKgs)}`
+              ? `Клиентская цена: скидка ${catalogSettings.default_registered_discount_percent}%`
+              : `Цена при входе: ${formatPriceHtml(product.registeredPriceKgs)}`
           }</small>
         </div>
         <dl class="product-specs">
@@ -2215,28 +2209,6 @@ hero?.addEventListener(
   true,
 );
 
-customerForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const formData = new FormData(event.currentTarget);
-  saveCustomer({
-    name: String(formData.get("customerName") || "").trim(),
-    phone: String(formData.get("customerPhone") || "").trim(),
-  });
-  renderCustomerPanel();
-  renderProducts();
-  renderRecentlyViewed();
-  renderCart();
-  formStatus.textContent = "Регистрация сохранена. Скидка применена к корзине и каталогу.";
-});
-
-clearCustomerButton.addEventListener("click", () => {
-  clearCustomer();
-  renderCustomerPanel();
-  renderProducts();
-  renderRecentlyViewed();
-  renderCart();
-  formStatus.textContent = "Регистрация сброшена. В каталоге снова розничные цены.";
-});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
@@ -2489,6 +2461,33 @@ function showLoggedInView() {
   if (myOrdersOtpStatus) myOrdersOtpStatus.textContent = "";
 }
 
+// The single source of truth for "is this browser logged in" — an
+// SMS-verified session (functions/api/customer-profile.js), never a locally
+// typed "registration". Safe to call on every page; a 401 (not logged in)
+// just resolves to null.
+async function fetchCustomerProfile() {
+  try {
+    const res = await fetch("/api/customer-profile", { method: "GET" });
+    const data = await res.json().catch(() => null);
+    return data && data.ok ? data.profile : null;
+  } catch {
+    return null;
+  }
+}
+
+async function refreshSession() {
+  state.session = await fetchCustomerProfile();
+  return state.session;
+}
+
+// Shared across every page that loads app.js, so a homepage visit doesn't
+// fetch the session twice (once for #myOrders, once for catalog pricing).
+let sessionPromise = null;
+function ensureSession() {
+  if (!sessionPromise) sessionPromise = refreshSession();
+  return sessionPromise;
+}
+
 async function fetchMyOrdersSession() {
   try {
     const res = await fetch("/api/customer-orders", {
@@ -2503,11 +2502,59 @@ async function fetchMyOrdersSession() {
   }
 }
 
+const CABINET_ROLE_LABELS = {
+  retail: "",
+  registered: "Клиент",
+  wholesale_pending: "Заявка на опт: на рассмотрении",
+  wholesale: "Оптовый клиент",
+};
+
+function renderCabinetProfile(profile) {
+  if (!profileForm) return;
+  profileForm.elements.name.value = profile?.name || "";
+  profileForm.elements.phone.value = profile?.phone || "";
+  profileForm.elements.city.value = profile?.city || "";
+  profileForm.elements.region.value = profile?.region || "";
+  profileForm.elements.address.value = profile?.address || "";
+}
+
+function renderWholesaleBlock(role) {
+  if (!wholesaleStatusText || !wholesaleApplyButton || !wholesaleForm) return;
+  if (role === "wholesale") {
+    wholesaleStatusText.textContent = "У вас оптовый доступ.";
+    wholesaleApplyButton.hidden = true;
+    wholesaleForm.hidden = true;
+  } else if (role === "wholesale_pending") {
+    wholesaleStatusText.textContent = "Заявка отправлена. Менеджер подтвердит доступ.";
+    wholesaleApplyButton.hidden = true;
+    wholesaleForm.hidden = true;
+  } else {
+    wholesaleStatusText.textContent = "Оптовые цены доступны после подтверждения менеджером.";
+    wholesaleApplyButton.hidden = false;
+  }
+}
+
+function renderCabinet(profile) {
+  const role = profile?.role || "retail";
+  if (cabinetRoleBadge) cabinetRoleBadge.textContent = CABINET_ROLE_LABELS[role] || "";
+  renderCabinetProfile(profile);
+  renderWholesaleBlock(role);
+}
+
+function refreshPricingViews() {
+  renderClientPriceCta();
+  renderProducts();
+  renderRecentlyViewed();
+  renderCart();
+}
+
 async function checkMyOrdersSession() {
-  const data = await fetchMyOrdersSession();
-  if (data) {
+  const profile = await ensureSession();
+  if (profile) {
     showLoggedInView();
-    renderMyOrders(data.orders);
+    renderCabinet(profile);
+    const data = await fetchMyOrdersSession();
+    renderMyOrders(data ? data.orders : null);
   } else {
     showLoggedOutView();
   }
@@ -2568,7 +2615,9 @@ myOrdersOtpForm?.addEventListener("submit", async (event) => {
     if (data && data.ok) {
       pendingOtpToken = null;
       myOrdersOtpStatus.textContent = "";
+      sessionPromise = null; // force a fresh session fetch — we just logged in
       await checkMyOrdersSession();
+      refreshPricingViews();
     } else {
       myOrdersOtpStatus.textContent = otpVerifyErrorMessage(data && data.error);
     }
@@ -2586,15 +2635,104 @@ myOrdersLogoutButton?.addEventListener("click", async () => {
   } catch {
     // Best-effort — the cookie is short-lived and the UI resets either way.
   }
+  state.session = null;
+  sessionPromise = null;
   renderMyOrders(null);
   showLoggedOutView();
   myOrdersLoginForm?.reset();
   myOrdersOtpForm?.reset();
   myOrdersLogoutButton.disabled = false;
+  refreshPricingViews();
 });
 
-// Only the homepage ships the "Мои заказы" section — skip the extra request
-// on every product/category page that merely shares this script.
+profileForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (!profileStatus) return;
+  const formData = new FormData(event.currentTarget);
+  const submitButton = event.currentTarget.querySelector("button[type='submit']");
+  if (submitButton) submitButton.disabled = true;
+  profileStatus.textContent = "Сохраняем…";
+  try {
+    const res = await fetch("/api/customer-profile", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        name: formData.get("name"),
+        city: formData.get("city"),
+        region: formData.get("region"),
+        address: formData.get("address"),
+      }),
+    });
+    const data = await res.json().catch(() => null);
+    if (data && data.ok) {
+      state.session = data.profile;
+      renderCabinet(data.profile);
+      profileStatus.textContent = "Сохранено.";
+      fillCheckoutFromCustomer();
+    } else {
+      profileStatus.textContent = "Не получилось сохранить. Попробуйте ещё раз.";
+    }
+  } catch {
+    profileStatus.textContent = "Не получилось сохранить. Попробуйте ещё раз.";
+  } finally {
+    if (submitButton) submitButton.disabled = false;
+  }
+});
+
+wholesaleApplyButton?.addEventListener("click", () => {
+  wholesaleApplyButton.hidden = true;
+  if (wholesaleForm) {
+    wholesaleForm.hidden = false;
+    if (state.session) {
+      if (!wholesaleForm.elements.name.value) wholesaleForm.elements.name.value = state.session.name || "";
+      if (!wholesaleForm.elements.phone.value) wholesaleForm.elements.phone.value = state.session.phone || "";
+      if (!wholesaleForm.elements.city.value) wholesaleForm.elements.city.value = state.session.city || "";
+    }
+    wholesaleForm.querySelector("input[name='name']")?.focus();
+  }
+});
+
+wholesaleForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (!wholesaleStatus) return;
+  const formData = new FormData(event.currentTarget);
+  const submitButton = event.currentTarget.querySelector("button[type='submit']");
+  if (submitButton) submitButton.disabled = true;
+  wholesaleStatus.textContent = "Отправляем…";
+  try {
+    const res = await fetch("/api/wholesale-application", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        name: formData.get("name"),
+        phone: formData.get("phone"),
+        shop_name: formData.get("shop_name"),
+        city: formData.get("city"),
+        comment: formData.get("comment"),
+      }),
+    });
+    const data = await res.json().catch(() => null);
+    if (data && data.ok) {
+      wholesaleStatus.textContent = "Заявка отправлена. Менеджер подтвердит доступ.";
+      wholesaleForm.hidden = true;
+      if (state.session) {
+        state.session = { ...state.session, role: "wholesale_pending" };
+        renderWholesaleBlock("wholesale_pending");
+        if (cabinetRoleBadge) cabinetRoleBadge.textContent = CABINET_ROLE_LABELS.wholesale_pending;
+      }
+    } else {
+      wholesaleStatus.textContent = "Не получилось отправить заявку. Попробуйте ещё раз или напишите менеджеру в WhatsApp.";
+    }
+  } catch {
+    wholesaleStatus.textContent = "Не получилось отправить заявку. Попробуйте ещё раз или напишите менеджеру в WhatsApp.";
+  } finally {
+    if (submitButton) submitButton.disabled = false;
+  }
+});
+
+// Only the homepage ships the "Мои заказы" section, but every page (product,
+// category, homepage) needs to know login state for client pricing — both
+// paths share the same in-flight request via ensureSession().
 if (myOrdersAccount) {
   checkMyOrdersSession();
 }
@@ -2607,6 +2745,8 @@ async function initStorefront() {
   renderHeroBanners();
   startHeroRotation();
   await loadCatalog();
+  await ensureSession();
+  refreshPricingViews();
 }
 
 initStorefront().catch((error) => {

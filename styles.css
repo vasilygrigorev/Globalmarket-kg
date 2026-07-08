@@ -1740,20 +1740,47 @@ textarea {
 }
 
 .my-orders-account {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  display: grid;
+  gap: 14px;
   padding: 14px 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
 }
 
+.cabinet-account-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cabinet-role-badge {
+  font-weight: 800;
+  color: var(--sage);
+}
+
+.cabinet-block {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.cabinet-block summary {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.cabinet-hint {
+  color: var(--muted);
+  margin: 10px 0;
+}
+
 .my-orders-account[hidden],
 .my-orders-login-form[hidden],
-.my-orders-otp-form[hidden] {
+.my-orders-otp-form[hidden],
+#wholesaleApplyButton[hidden],
+#wholesaleForm[hidden] {
   display: none;
 }
 

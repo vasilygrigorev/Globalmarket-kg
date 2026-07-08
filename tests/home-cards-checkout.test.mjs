@@ -34,16 +34,18 @@ test("home product card carries price, brand/type/volume, image, cart, favorite"
   assert.match(renderProducts, /data-favorite="\$\{product\.id\}"/); // favorite
 });
 
-test("home product card keeps open/details + registration discount text", () => {
+test("home product card keeps open/details + client-price discount text", () => {
   assert.ok(renderProducts, "renderProducts not found");
   // Product opens: either a real product page link or an in-app open handler.
   assert.match(renderProducts, /data-product-link="\$\{product\.id\}"|data-open-product="\$\{product\.id\}"/);
   // "Подробнее" details control opens the product.
   assert.match(renderProducts, /data-open-product="\$\{product\.id\}"[^>]*>Подробнее</);
-  // Registration discount note shows both registered and not-yet-registered text.
+  // Client-price note shows both logged-in and logged-out text (see
+  // isRegisteredCustomer(), driven by the SMS-login session, not a local
+  // "registration" form).
   assert.match(renderProducts, /registered-price-note/);
-  assert.match(renderProducts, /Скидка регистрации/);
-  assert.match(renderProducts, /После регистрации/);
+  assert.match(renderProducts, /Клиентская цена/);
+  assert.match(renderProducts, /Цена при входе/);
 });
 
 test("checkout can be submitted without registration", () => {
