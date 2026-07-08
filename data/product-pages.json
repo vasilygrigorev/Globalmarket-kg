@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 184,
+  "count": 186,
   "pages": [
     {
       "id": "prd_d0bc9026f5ab",
@@ -645,7 +645,7 @@
       "collections": [],
       "retailPriceKgs": 750,
       "image": "/assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
-      "imageCount": 2,
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -885,7 +885,7 @@
       "collections": [],
       "retailPriceKgs": 750,
       "image": "/assets/products/dove/dove-nourishing-oil-care-680ml-card-front.jpg",
-      "imageCount": 2,
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -1231,7 +1231,7 @@
       "retailPriceKgs": 150,
       "image": "/assets/products/colgate/colgate-360-charcoal-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 8
+      "relatedCount": 10
     },
     {
       "id": "prd_e8a318ef10d2",
@@ -1246,7 +1246,7 @@
       "retailPriceKgs": 150,
       "image": "/assets/products/colgate/colgate-360-optic-white-card-front.jpg",
       "imageCount": 2,
-      "relatedCount": 8
+      "relatedCount": 10
     },
     {
       "id": "prd_77566889af78",
@@ -1261,7 +1261,7 @@
       "retailPriceKgs": 150,
       "image": "/assets/products/colgate/colgate-360-whole-mouth-clean-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 8
+      "relatedCount": 10
     },
     {
       "id": "prd_09feb137fd5e",
@@ -1276,7 +1276,22 @@
       "retailPriceKgs": 150,
       "image": "/assets/products/colgate/colgate-360-charcoal-gold-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 8
+      "relatedCount": 10
+    },
+    {
+      "id": "prd_f5192ea22a74",
+      "slug": "colgate-extra-clean-zubnaya-schetka-a22a74",
+      "path": "/product/colgate-extra-clean-zubnaya-schetka-a22a74/",
+      "url": "https://globalmarket.kg/product/colgate-extra-clean-zubnaya-schetka-a22a74/",
+      "title": "Colgate Extra Clean зубная щётка",
+      "brand": "Colgate",
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "retailPriceKgs": 70,
+      "image": "/assets/products/colgate/colgate-extra-clean-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 10
     },
     {
       "id": "prd_b61ba7c4268e",
@@ -1291,7 +1306,7 @@
       "retailPriceKgs": 120,
       "image": "/assets/products/colgate/colgate-maxfresh-card-front.jpg",
       "imageCount": 2,
-      "relatedCount": 8
+      "relatedCount": 10
     },
     {
       "id": "prd_1cb756e99bac",
@@ -1306,7 +1321,7 @@
       "retailPriceKgs": 120,
       "image": "/assets/products/colgate/colgate-maxwhite-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 8
+      "relatedCount": 10
     },
     {
       "id": "prd_66dd4882eecf",
@@ -1321,7 +1336,7 @@
       "retailPriceKgs": 230,
       "image": "/assets/products/colgate/colgate-zigzag-3pcs-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 8
+      "relatedCount": 10
     },
     {
       "id": "prd_773d5cd63456",
@@ -1336,7 +1351,22 @@
       "retailPriceKgs": 70,
       "image": "/assets/products/colgate/colgate-double-action-charcoal-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 8
+      "relatedCount": 10
+    },
+    {
+      "id": "prd_bca38e1fa11e",
+      "slug": "colgate-deep-clean-zubnaya-schetka-1fa11e",
+      "path": "/product/colgate-deep-clean-zubnaya-schetka-1fa11e/",
+      "url": "https://globalmarket.kg/product/colgate-deep-clean-zubnaya-schetka-1fa11e/",
+      "title": "Colgate Deep Clean зубная щётка",
+      "brand": "Colgate",
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "retailPriceKgs": 70,
+      "image": "/assets/products/colgate/colgate-deep-clean-card-front.jpg",
+      "imageCount": 3,
+      "relatedCount": 10
     },
     {
       "id": "prd_f3ed12b53668",
@@ -1351,7 +1381,7 @@
       "retailPriceKgs": 95,
       "image": "/assets/products/colgate/colgate-zigzag-charcoal-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 8
+      "relatedCount": 10
     },
     {
       "id": "prd_a9ee2b0ab49d",

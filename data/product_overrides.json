@@ -3032,10 +3032,11 @@
     "description": "Dove Straight & Silky шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
     "galleryImages": [
       "assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
+      "assets/products/dove/dove-straight-silky-680ml-front.jpg",
       "assets/products/dove/dove-straight-silky-680ml-back.jpg"
     ],
     "image": "assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
-    "notes": "2026-07-08: the 2026-07-05 restore rotated photo roles across a chain of Dove 680ml shampoos and Head & Shoulders 650ml shampoos together — this product's own -card-front.jpg/-front.jpg were actually front/back (mislabeled), and what was saved as this product's -back.jpg was actually a DIFFERENT product's real stylized card. Renamed into assets/products/dove/ (or assets/products/head-shoulders/), matching the already-correct Cool Menthol pattern. Chain: Dove Nourishing Oil Care -> Dove Intensive Repair -> Head & Shoulders Anti-Hairfall -> Head & Shoulders Smooth & Silky (each arrow: source's old -back.jpg held target's real card); separately Dove Straight & Silky -> Dove Hair Fall Rescue -> Dove Daily Shine (source_code 2622, currently 0 stock, not yet a public product — its recovered card saved as assets/products/dove/dove-daily-shine-680ml-card-front.jpg for whenever it's back in stock). This product's own real card was not found anywhere in the chain — published as front+back only (see KNOWN_EXCEPTIONS in scripts/verify_product_galleries.py).",
+    "notes": "2026-07-08: the 2026-07-05 restore rotated photo roles across a chain of Dove 680ml shampoos and Head & Shoulders 650ml shampoos together — this product's own -card-front.jpg/-front.jpg were actually front/back (mislabeled), and what was saved as this product's -back.jpg was actually a DIFFERENT product's real stylized card. Renamed into assets/products/dove/ (or assets/products/head-shoulders/), matching the already-correct Cool Menthol pattern. Chain: Dove Nourishing Oil Care -> Dove Intensive Repair -> Head & Shoulders Anti-Hairfall -> Head & Shoulders Smooth & Silky (each arrow: source's old -back.jpg held target's real card); separately Dove Straight & Silky -> Dove Hair Fall Rescue -> Dove Daily Shine (source_code 2622, currently 0 stock, not yet a public product — its recovered card saved as assets/products/dove/dove-daily-shine-680ml-card-front.jpg for whenever it's back in stock). This product's own real card was not found anywhere in the chain — published as front+back only (see KNOWN_EXCEPTIONS in scripts/verify_product_galleries.py). 2026-07-08 (later): Petya re-sent the same 5-image Dove marketing set (same rotation bug recurred on the resend), which included this product's genuine missing stylized card this time. Now published with the full 3-photo set; removed from KNOWN_EXCEPTIONS.",
     "product_type": "шампунь"
   },
   "prd_e166f2ec9c56": {
@@ -3432,10 +3433,11 @@
     "description": "Dove Nourishing Oil Care шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
     "galleryImages": [
       "assets/products/dove/dove-nourishing-oil-care-680ml-card-front.jpg",
+      "assets/products/dove/dove-nourishing-oil-care-680ml-front.jpg",
       "assets/products/dove/dove-nourishing-oil-care-680ml-back.jpg"
     ],
     "image": "assets/products/dove/dove-nourishing-oil-care-680ml-card-front.jpg",
-    "notes": "2026-07-08: the 2026-07-05 restore rotated photo roles across a chain of Dove 680ml shampoos and Head & Shoulders 650ml shampoos together — this product's own -card-front.jpg/-front.jpg were actually front/back (mislabeled), and what was saved as this product's -back.jpg was actually a DIFFERENT product's real stylized card. Renamed into assets/products/dove/ (or assets/products/head-shoulders/), matching the already-correct Cool Menthol pattern. Chain: Dove Nourishing Oil Care -> Dove Intensive Repair -> Head & Shoulders Anti-Hairfall -> Head & Shoulders Smooth & Silky (each arrow: source's old -back.jpg held target's real card); separately Dove Straight & Silky -> Dove Hair Fall Rescue -> Dove Daily Shine (source_code 2622, currently 0 stock, not yet a public product — its recovered card saved as assets/products/dove/dove-daily-shine-680ml-card-front.jpg for whenever it's back in stock). This product's own real card was not found anywhere in the chain — published as front+back only (see KNOWN_EXCEPTIONS in scripts/verify_product_galleries.py).",
+    "notes": "2026-07-08: the 2026-07-05 restore rotated photo roles across a chain of Dove 680ml shampoos and Head & Shoulders 650ml shampoos together — this product's own -card-front.jpg/-front.jpg were actually front/back (mislabeled), and what was saved as this product's -back.jpg was actually a DIFFERENT product's real stylized card. Renamed into assets/products/dove/ (or assets/products/head-shoulders/), matching the already-correct Cool Menthol pattern. Chain: Dove Nourishing Oil Care -> Dove Intensive Repair -> Head & Shoulders Anti-Hairfall -> Head & Shoulders Smooth & Silky (each arrow: source's old -back.jpg held target's real card); separately Dove Straight & Silky -> Dove Hair Fall Rescue -> Dove Daily Shine (source_code 2622, currently 0 stock, not yet a public product — its recovered card saved as assets/products/dove/dove-daily-shine-680ml-card-front.jpg for whenever it's back in stock). This product's own real card was not found anywhere in the chain — published as front+back only (see KNOWN_EXCEPTIONS in scripts/verify_product_galleries.py). 2026-07-08 (later): Petya re-sent the same 5-image Dove marketing set (same rotation bug recurred on the resend), which included this product's genuine missing stylized card this time. Now published with the full 3-photo set; removed from KNOWN_EXCEPTIONS.",
     "product_type": "шампунь"
   },
   "prd_f7a9d836005f": {
@@ -3560,5 +3562,41 @@
     "searchText": "le labo another 13 парфюм 5 мл парфюм 5 мл le labo another 13 парфюм на разлив брендовый парфюм travel формат оригинальный аромат 5 мл",
     "title": "Le Labo Another 13 парфюм 5 мл",
     "unit": "5 мл"
+  },
+  "prd_f5192ea22a74": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate Extra Clean зубная щётка",
+    "description": "Зубная щётка Colgate Extra Clean с чистящим наконечником для задних зубов и очистителем языка.",
+    "galleryImages": [
+      "assets/products/colgate/colgate-extra-clean-card-front.jpg",
+      "assets/products/colgate/colgate-extra-clean-front.jpg",
+      "assets/products/colgate/colgate-extra-clean-back.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-extra-clean-card-front.jpg",
+    "notes": [
+      "2026-07-08: фото из партии Пети (telegram-8767964230-20260708-080803-01); название/штрихкод 6001067022558 совпадают с 1C кодом 357 (Colgate з/щ Extra Clean). Card-front/front/back внутренне согласованы."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate Extra Clean",
+    "unit": "шт"
+  },
+  "prd_bca38e1fa11e": {
+    "brand": "Colgate",
+    "category_id": "oral",
+    "clean_title": "Colgate Deep Clean зубная щётка",
+    "description": "Зубная щётка Colgate Classic Deep Clean, чистит между зубами и в труднодоступных местах, с очистителем языка.",
+    "galleryImages": [
+      "assets/products/colgate/colgate-deep-clean-card-front.jpg",
+      "assets/products/colgate/colgate-deep-clean-front.jpg",
+      "assets/products/colgate/colgate-deep-clean-back.jpg"
+    ],
+    "image": "assets/products/colgate/colgate-deep-clean-card-front.jpg",
+    "notes": [
+      "2026-07-08: фото из партии Пети (telegram-8767964230-20260708-080803-02); название на упаковке — Colgate Classic Deep Clean — совпадает с 1C кодом 2936 (Colgate з/щ Deep Clean). Card-front/front/back внутренне согласованы."
+    ],
+    "product_type": "зубная щётка",
+    "short_title": "Colgate Deep Clean",
+    "unit": "шт"
   }
 }

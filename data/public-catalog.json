@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T19:46:48.001208+00:00",
+  "generatedAt": "2026-07-08T02:14:04.661382+00:00",
   "settings": {
     "default_registered_discount_percent": 3.0,
     "free_delivery_threshold_kgs": 10000,
@@ -15,7 +15,7 @@
     {
       "id": "home_cleaning",
       "title": "Уборка и чистота",
-      "count": 9,
+      "count": 7,
       "icon": "✨"
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": "oral",
       "title": "Зубная гигиена",
-      "count": 26,
+      "count": 28,
       "icon": "🪥"
     },
     {
@@ -1774,32 +1774,6 @@
     },
     {
       "unit": "шт",
-      "badge": "Colgate",
-      "restockedAt": null,
-      "retailPriceKgs": 70,
-      "category": "Уборка и чистота",
-      "categoryId": "home_cleaning",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_f5192ea22a74",
-      "tones": [
-        "#d7eadf",
-        "#6aa58f"
-      ],
-      "image": null,
-      "icon": "✨",
-      "registeredPriceKgs": 67,
-      "description": "Colgate: товар для дома и личного ухода.",
-      "title": "Colgate з/щ Extra Clean",
-      "productType": "уборка и чистота",
-      "brand": "Colgate",
-      "rating": 4.8,
-      "searchText": "colgate з/щ extra clean уборка и чистота colgate уборка и чистота colgate: товар для дома и личного ухода."
-    },
-    {
-      "unit": "шт",
       "badge": "Fructies",
       "restockedAt": null,
       "retailPriceKgs": 695,
@@ -1879,32 +1853,6 @@
       "brand": "Clear",
       "rating": 4.8,
       "searchText": "clear шампунь arab.(m) (350ml) deep cleans уборка и чистота clear уборка и чистота clear: товар для дома и личного ухода. формат: 350 ml, 350ml."
-    },
-    {
-      "unit": "шт",
-      "badge": "Colgate",
-      "restockedAt": null,
-      "retailPriceKgs": 70,
-      "category": "Уборка и чистота",
-      "categoryId": "home_cleaning",
-      "collections": [],
-      "collectionLabels": [],
-      "galleryImages": [],
-      "status": "review",
-      "id": "prd_bca38e1fa11e",
-      "tones": [
-        "#d7eadf",
-        "#6aa58f"
-      ],
-      "image": null,
-      "icon": "✨",
-      "registeredPriceKgs": 67,
-      "description": "Colgate: товар для дома и личного ухода.",
-      "title": "Colgate з/щ Deep Clean",
-      "productType": "уборка и чистота",
-      "brand": "Colgate",
-      "rating": 4.8,
-      "searchText": "colgate з/щ deep clean уборка и чистота colgate уборка и чистота colgate: товар для дома и личного ухода."
     },
     {
       "unit": "шт",
@@ -2541,6 +2489,7 @@
       "collectionLabels": [],
       "galleryImages": [
         "assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
+        "assets/products/dove/dove-straight-silky-680ml-front.jpg",
         "assets/products/dove/dove-straight-silky-680ml-back.jpg"
       ],
       "status": "active",
@@ -3384,6 +3333,7 @@
       "collectionLabels": [],
       "galleryImages": [
         "assets/products/dove/dove-nourishing-oil-care-680ml-card-front.jpg",
+        "assets/products/dove/dove-nourishing-oil-care-680ml-front.jpg",
         "assets/products/dove/dove-nourishing-oil-care-680ml-back.jpg"
       ],
       "status": "active",
@@ -6944,6 +6894,36 @@
       "unit": "шт",
       "badge": "Colgate",
       "restockedAt": null,
+      "retailPriceKgs": 70,
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/colgate/colgate-extra-clean-card-front.jpg",
+        "assets/products/colgate/colgate-extra-clean-front.jpg",
+        "assets/products/colgate/colgate-extra-clean-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_f5192ea22a74",
+      "tones": [
+        "#d6e7f4",
+        "#6b9ec6"
+      ],
+      "image": "assets/products/colgate/colgate-extra-clean-card-front.jpg",
+      "icon": "🪥",
+      "registeredPriceKgs": 67,
+      "description": "Зубная щётка Colgate Extra Clean с чистящим наконечником для задних зубов и очистителем языка.",
+      "title": "Colgate Extra Clean зубная щётка",
+      "productType": "зубная щётка",
+      "brand": "Colgate",
+      "rating": 4.8,
+      "searchText": "colgate extra clean зубная щётка зубная гигиена colgate зубная щётка зубная щётка colgate extra clean с чистящим наконечником для задних зубов и очистителем языка."
+    },
+    {
+      "unit": "шт",
+      "badge": "Colgate",
+      "restockedAt": null,
       "retailPriceKgs": 120,
       "category": "Зубная гигиена",
       "categoryId": "oral",
@@ -7110,6 +7090,36 @@
       "brand": "Colgate",
       "rating": 4.8,
       "searchText": "colgate cool stripe зубная паста pump 100 мл зубная гигиена colgate зубная паста зубная паста colgate cool stripe в удобном формате pump. объем 100 мл."
+    },
+    {
+      "unit": "шт",
+      "badge": "Colgate",
+      "restockedAt": null,
+      "retailPriceKgs": 70,
+      "category": "Зубная гигиена",
+      "categoryId": "oral",
+      "collections": [],
+      "collectionLabels": [],
+      "galleryImages": [
+        "assets/products/colgate/colgate-deep-clean-card-front.jpg",
+        "assets/products/colgate/colgate-deep-clean-front.jpg",
+        "assets/products/colgate/colgate-deep-clean-back.jpg"
+      ],
+      "status": "active",
+      "id": "prd_bca38e1fa11e",
+      "tones": [
+        "#d6e7f4",
+        "#6b9ec6"
+      ],
+      "image": "assets/products/colgate/colgate-deep-clean-card-front.jpg",
+      "icon": "🪥",
+      "registeredPriceKgs": 67,
+      "description": "Зубная щётка Colgate Classic Deep Clean, чистит между зубами и в труднодоступных местах, с очистителем языка.",
+      "title": "Colgate Deep Clean зубная щётка",
+      "productType": "зубная щётка",
+      "brand": "Colgate",
+      "rating": 4.8,
+      "searchText": "colgate deep clean зубная щётка зубная гигиена colgate зубная щётка зубная щётка colgate classic deep clean, чистит между зубами и в труднодоступных местах, с очистителем языка."
     },
     {
       "unit": "шт",

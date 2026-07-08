@@ -39,16 +39,50 @@ moving each recovered stylized card to the product it actually belongs to:
 | Dove Hair Fall Rescue 680 ml | `prd_5c4dde48386b` | Dove Straight & Silky's old `-back.jpg` |
 
 Two chain heads had no incoming card (nobody's old `-back.jpg` pointed to
-them), so their own real stylized card was never found in this batch:
+them), so their own real stylized card was not found in the first pass —
+published front+back only as a temporary `KNOWN_EXCEPTIONS` entry.
 
-- **Dove Nourishing Oil Care 680 ml** (`prd_f724e0973fa5`) and **Dove
-  Straight & Silky 680 ml** (`prd_e165f2a765a7`) — published front+back only,
-  registered in `KNOWN_EXCEPTIONS` (`scripts/verify_product_galleries.py`).
+**Update, same day, later:** Petya re-sent the same 5-image Dove marketing
+set (`telegram-8767964230-20260708-080342-{01..05}`) — the same rotation bug
+recurred on the resend (each group's `-back.jpg` again held a different
+product's card), but this time the full 5-cycle closed cleanly with no
+missing link: `Nourishing Oil Care -> Intensive Repair -> Straight & Silky ->
+Hair Fall Rescue -> Nourishing Oil Care` (via each `-back.jpg`), which
+included the two previously-missing cards:
+
+- **Dove Straight & Silky 680 ml** (`prd_e165f2a765a7`) — real card recovered
+  from this resend's group 02 `-back.jpg`. Now published with the full
+  3-photo set; removed from `KNOWN_EXCEPTIONS`.
+- **Dove Nourishing Oil Care 680 ml** (`prd_f724e0973fa5`) — real card
+  recovered from group 04 `-back.jpg`. Now published with the full 3-photo
+  set; removed from `KNOWN_EXCEPTIONS`.
 - **Dove Daily Shine 680 ml** (1C source_code 2622, currently 0 stock, not a
-  public product) — its recovered card was saved to
-  `assets/products/dove/dove-daily-shine-680ml-card-front.jpg` for whenever
-  it's back in stock; no product override was added since there's no active
-  product row for it yet.
+  public product) — this resend's group 01 supplied its own front (card-front
+  slot) and back (front slot); combined with the card already recovered
+  earlier, it now has a complete 3-photo set at
+  `assets/products/dove/dove-daily-shine-680ml-*.jpg` for whenever it's back
+  in stock. Still no product override, since there's no active product row.
+
+Every other file in the resent batch was a confirmed byte-identical (md5)
+duplicate of what was already correctly filed — discarded rather than kept
+as redundant loose copies.
+
+**Mistake made and caught during this second pass:** while re-pointing
+`dove-straight-silky-680ml-card-front.jpg` and
+`dove-nourishing-oil-care-680ml-card-front.jpg` at their newly-recovered real
+cards, the plain front photos previously occupying those paths were
+overwritten by `mv` before being saved elsewhere, and the loose duplicate
+copies that could have replaced them were deleted moments later believing
+them redundant. Both plain-front images were recovered from git history
+(commit `750b21b`, which predated this fix) and saved as proper, distinct
+`-front.jpg` files. Lesson: when a destination path is about to be
+overwritten, move the survivor to its new name *before* deleting any
+"duplicate" that might be its only remaining copy.
+
+**New, unrelated product identified in the same Petya delivery:** a sixth
+group, `telegram-8767964230-20260708-080803-01`, was Colgate Extra Clean
+(1C code 357, `prd_f5192ea22a74`) — self-consistent, no rotation issue,
+published with the full 3-photo set.
 
 `Head & Shoulders Cool Menthol 650 ml` (`prd_e7e45d64df8b`) was already
 correctly organized in its own folder before this fix and was not part of

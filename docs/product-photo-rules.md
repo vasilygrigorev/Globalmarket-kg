@@ -38,10 +38,6 @@ Known exception as of 2026-07-08 (mismatched back, not just missing):
 - `prd_e8a318ef10d2` / `Colgate 360 Optic White зубная щётка`: its own back photo is a mismatch (text/branding matches a different "360" variant); currently card + front only.
 - `prd_b61ba7c4268e` / `Colgate MaxFresh зубная щётка`: its own back photo is byte-identical (md5) to Colgate MaxWhite's back — a photographer duplicate; currently card + front only.
 
-Known exception as of 2026-07-08 (missing card, not missing back):
-
-- `prd_e165f2a765a7` / `Dove Straight & Silky шампунь 680 мл`: a 2026-07-05 gallery restore rotated photo roles across a Dove/Head & Shoulders chain (see `data/product_overrides.json` notes); this variant's own stylized card was never found — currently card + back only (the plain front photo doubles as the card).
-- `prd_f724e0973fa5` / `Dove Nourishing Oil Care шампунь 680 мл`: same 2026-07-05 restore rotation; this variant's own stylized card was never found — currently card + back only (the plain front photo doubles as the card).
 
 Run before deployment after product-photo changes:
 
