@@ -172,6 +172,81 @@ Cloudflare env → preview deploy → smoke test → wire checkout), and track i
 `data/site-config.json` (rebuild + redeploy), or remove the Cloudflare env vars
 so this endpoint returns `503` and the checkout falls back automatically.
 
+## Unified customer identity (2026-07-08)
+
+There is exactly one way to become a known customer on this storefront: log
+in once via SMS (`/api/auth/verify-otp`). That single action is what used to
+be three separate, disconnected things — a local "registration" mini-form
+(name+phone remembered in the browser, driving discount pricing), the
+checkout form (name+phone per order, always required), and the SMS login
+(order history only). Now:
+
+- **Checkout always works without logging in** — nothing changed here, a
+  guest can place an order same as before.
+- **Logging in via SMS** creates or reuses a `public.customers` row (see
+  `functions/api/auth/verify-otp.js`) and unlocks: client pricing everywhere
+  on the site, order history ("Мои заказы"), a saved profile, and the
+  wholesale application. It backfills `orders.customer_id` for any past
+  guest orders placed with the same phone.
+- **Client pricing** (`isRegisteredCustomer()` in `app.js`) is driven purely
+  by having a valid session — checked once per page load via
+  `GET /api/customer-profile` — never by a locally-typed name/phone. Wording:
+  "Цена при входе" (compact, logged-out) / "Клиентская цена" (logged-in),
+  with "Войдите по телефону для клиентской цены" as the full call-to-action.
+- **An order placed while logged in** is linked to the customer's row
+  directly at insert time (`functions/api/orders.js`), no need to wait for a
+  future login to backfill it.
+
+### Customer roles (`supabase/migrations/0004_customer_roles_wholesale.sql`)
+
+Derived, not stored as a single column:
+
+| Role | Condition |
+|---|---|
+| `retail` | no `customers` row yet — guest, never logged in |
+| `registered` | `customers` row exists, `customer_type = 'retail'` |
+| `wholesale_pending` | `customers.wholesale_status = 'pending'` |
+| `wholesale` | `customers.customer_type = 'wholesale'` |
+| `admin` / `manager` | staff — unrelated table, existing `app_metadata.is_admin` JWT claim (see `0001_init_orders_customers.sql`) |
+
+Logging in via SMS only ever reaches `registered` — wholesale pricing is
+never automatic; it requires an admin approving a wholesale application (see
+below).
+
+### `GET`/`POST /api/customer-profile` — the personal cabinet
+
+- Code: `functions/api/customer-profile.js` · Tests: `customer-profile{,.integration}.test.mjs`
+- `GET`: requires a valid session cookie (401 otherwise); returns
+  `{ ok, profile: { name, phone, city, region, address, role } }`. If no
+  `customers` row exists yet (should be rare — verify-otp.js already
+  created one), returns blank fields with `role: "retail"`, not an error.
+- `POST`: same auth; body `{ name, city, region, address }` — **phone is
+  never accepted here**, it's the SMS-verified session identity, not an
+  editable form field. Updates the existing row, or creates one as a
+  defensive fallback if verify-otp's own creation somehow didn't run.
+
+### `POST /api/wholesale-application` — "Подать заявку на оптовый доступ"
+
+- Code: `functions/api/wholesale-application.js` · Tests: `wholesale-application{,.integration}.test.mjs`
+- Body: `{ name, phone, shop_name, city, comment }`. Login is **not**
+  required to apply — a business might reach this before ever using "Мои
+  заказы" — but if the phone matches a known customer, the application gets
+  linked (`customer_id`) and that customer's `wholesale_status` flips to
+  `pending` immediately (so the cabinet shows "на рассмотрении" without
+  waiting for anything else).
+- Never grants wholesale pricing itself. An admin approves/rejects from the
+  admin panel's "Заявки на оптовый доступ" queue (`admin/admin.js`
+  `loadWholesaleApplications()`/`reviewWholesaleApplication()`), which flips
+  both `wholesale_applications.status` and, when linked,
+  `customers.customer_type`/`wholesale_status`.
+
+**Privileged step remaining (Codex/user):** apply
+`supabase/migrations/0004_customer_roles_wholesale.sql`. Until then,
+`customer-profile`/`wholesale-application` will error on the missing
+`phone_digits`/`wholesale_status` columns and `wholesale_applications` table
+— same graceful-degradation posture as every other migration here (the rest
+of the site keeps working).
+
 ## Environment bindings (set in Cloudflare Pages, NEVER in git)
 
 | Variable | Purpose |

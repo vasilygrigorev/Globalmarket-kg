@@ -519,7 +519,7 @@ def product_tile_html(product, extra_class=""):
                     {price_with_discount_html(product)}
                     <button class="add-button compact-add-button" type="button" data-add="{product_id}" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">После регистрации: {price_html(product.get("registeredPriceKgs", 0))}</span>
+                  <span class="registered-price-note">Цена при входе: {price_html(product.get("registeredPriceKgs", 0))}</span>
                 </div>
               </div>
             </article>
@@ -751,7 +751,7 @@ def render_page(product, related, slug, landing_lookup=None):
         <div class="price-box">
           <span>Ваша цена{f" · скидка {int(product['discountPercent'])}%" if has_discount(product) else ""}</span>
           <strong>{price_with_discount_html(product)}</strong>
-          <small>Скидка регистрации: 3%</small>
+          <small>Клиентская цена: скидка 3% при входе</small>
         </div>
         <dl class="specs">
           <div><dt>Бренд</dt><dd>{spec_value(brand_with_country(product), (links.get("brand") or {}).get("path", ""))}</dd></div>

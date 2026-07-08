@@ -379,7 +379,7 @@ def product_tile_html(product, href):
                     {price_with_discount_html(product)}
                     <button class="add-button compact-add-button" type="button" data-add="{product_id}" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">После регистрации: {price_html(product.get("registeredPriceKgs", 0))}</span>
+                  <span class="registered-price-note">Цена при входе: {price_html(product.get("registeredPriceKgs", 0))}</span>
                 </div>
               </div>
             </article>

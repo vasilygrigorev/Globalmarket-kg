@@ -18,15 +18,21 @@ secret values). Verify env/config shape without revealing values:
 
 ```text
 supabase/
-  .gitignore                         # blocks .env / local CLI state
+  .gitignore                              # blocks .env / local CLI state
   migrations/
-    0001_init_orders_customers.sql   # MVP tables + indexes + RLS
-docs/supabase-setup.md               # this file
+    0001_init_orders_customers.sql        # MVP tables + indexes + RLS
+    0002_customer_order_lookup.sql        # "Мои заказы" lookup_code + phone_digits
+    0003_otp_login.sql                    # SMS-OTP login (otp_requests)
+    0004_customer_roles_wholesale.sql     # customer roles + wholesale_applications
+docs/supabase-setup.md                    # this file (0001 only — see docs/api-orders.md
+                                           # for 0002-0004, applied the same way)
 ```
 
 The migration creates five tables — `customers`, `orders`, `order_items`,
 `marketing_attribution`, `customer_consents` — plus indexes, `updated_at`
-triggers, and Row Level Security.
+triggers, and Row Level Security. Apply later migrations (0002-0004) the same
+way, in order — each is additive (`add column if not exists`, `create table
+if not exists`) and safe to run on top of the previous ones.
 
 ## What to create in Supabase
 
