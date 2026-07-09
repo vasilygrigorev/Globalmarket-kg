@@ -1140,12 +1140,14 @@ function selectCategory(category) {
   state.label = "";
   state.collection = "";
   state.collectionLabel = "";
+  state.favoriteOnly = false;
   state.visibleLimit = 60;
   searchInput.value = "";
   headerSearchInput.value = "";
   renderCategories();
   renderCategoryMenu();
   renderCatalogDirectory();
+  renderFavoriteFilter();
   renderProducts();
 }
 
@@ -1155,12 +1157,14 @@ function selectQuery(query, label = "") {
   state.label = label;
   state.collection = "";
   state.collectionLabel = "";
+  state.favoriteOnly = false;
   state.visibleLimit = 60;
   searchInput.value = query;
   headerSearchInput.value = query;
   renderCategories();
   renderCategoryMenu();
   renderCatalogDirectory();
+  renderFavoriteFilter();
   renderProducts();
 }
 
@@ -1170,12 +1174,14 @@ function selectCategoryQuery(category, query, label = "") {
   state.label = label;
   state.collection = "";
   state.collectionLabel = "";
+  state.favoriteOnly = false;
   state.visibleLimit = 60;
   searchInput.value = query;
   headerSearchInput.value = query;
   renderCategories();
   renderCategoryMenu();
   renderCatalogDirectory();
+  renderFavoriteFilter();
   renderProducts();
 }
 
@@ -1185,12 +1191,14 @@ function selectCollection(collection, label = "") {
   state.label = "";
   state.collection = collection;
   state.collectionLabel = label || displayCollectionName(collection);
+  state.favoriteOnly = false;
   state.visibleLimit = 60;
   searchInput.value = "";
   headerSearchInput.value = "";
   renderCategories();
   renderCategoryMenu();
   renderCatalogDirectory();
+  renderFavoriteFilter();
   renderProducts();
 }
 
@@ -1200,12 +1208,14 @@ function selectCollectionQuery(collection, query, label = "") {
   state.label = label || query;
   state.collection = collection;
   state.collectionLabel = displayCollectionName(collection);
+  state.favoriteOnly = false;
   state.visibleLimit = 60;
   searchInput.value = query;
   headerSearchInput.value = query;
   renderCategories();
   renderCategoryMenu();
   renderCatalogDirectory();
+  renderFavoriteFilter();
   renderProducts();
 }
 
@@ -2273,20 +2283,57 @@ function scrollToSection(selector) {
   document.querySelector(selector)?.scrollIntoView({ behavior: "smooth" });
 }
 
+// "Главная" / logo: reset to the clean home view (no leftover category or
+// favorites filter) and scroll to the very top. Plain <a href="/#top"> would
+// otherwise land at the fixed-header offset, leaving the page looking a bit
+// scrolled down.
+function goHomeTop(event) {
+  if (!document.querySelector("#catalog")) return; // not the homepage → let the link navigate
+  event.preventDefault();
+  selectCategory("Все"); // also clears favoriteOnly / query / collection
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+bottomNavHomeLink?.addEventListener("click", goHomeTop);
+document.querySelectorAll(".brand, .footer-brand").forEach((el) => el.addEventListener("click", goHomeTop));
+
 bottomNavCatalogLink?.addEventListener("click", (event) => {
   if (!document.querySelector("#catalog")) return;
   event.preventDefault();
+  // "Каталог" always shows the full catalog — turn off a lingering favorites
+  // filter so the user isn't stuck on an empty/short favorites list.
+  if (state.favoriteOnly) {
+    state.favoriteOnly = false;
+    state.visibleLimit = 60;
+    renderFavoriteFilter();
+    renderProducts();
+  }
   scrollToSection("#catalog");
 });
 
 bottomNavFavoritesLink?.addEventListener("click", (event) => {
   if (!document.querySelector("#catalog")) return;
   event.preventDefault();
-  state.favoriteOnly = true;
+  const enabling = !state.favoriteOnly;
+  if (enabling) {
+    // Show favorites across the whole catalog, not filtered by whatever
+    // category/collection/search happened to be active.
+    state.category = "Все";
+    state.query = "";
+    state.label = "";
+    state.collection = "";
+    state.collectionLabel = "";
+    if (searchInput) searchInput.value = "";
+    if (headerSearchInput) headerSearchInput.value = "";
+  }
+  state.favoriteOnly = enabling;
   state.visibleLimit = 60;
+  renderCategories();
+  renderCategoryMenu();
+  renderCatalogDirectory();
   renderFavoriteFilter();
   renderProducts();
-  scrollToSection("#catalog");
+  if (enabling) scrollToSection("#catalog");
 });
 
 bottomNavCartLink?.addEventListener("click", (event) => {
@@ -2315,18 +2362,22 @@ cartItems.addEventListener("click", (event) => {
 searchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
   state.label = "";
+  state.favoriteOnly = false;
   headerSearchInput.value = state.query;
   state.visibleLimit = 60;
   renderCatalogDirectory();
+  renderFavoriteFilter();
   renderProducts();
 });
 
 headerSearchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
   state.label = "";
+  state.favoriteOnly = false;
   searchInput.value = state.query;
   state.visibleLimit = 60;
   renderCatalogDirectory();
+  renderFavoriteFilter();
   renderProducts();
 });
 

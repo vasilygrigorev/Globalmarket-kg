@@ -73,6 +73,41 @@ test("bottom nav degrades to plain links (works from a product page, a different
   }
 });
 
+test("Избранное toggles (does not get stuck on) — tapping it again turns the filter off", () => {
+  const fn = appJs.match(/bottomNavFavoritesLink\?\.addEventListener\("click"[\s\S]*?\n\}\);/)[0];
+  assert.match(fn, /const enabling = !state\.favoriteOnly/);
+  assert.match(fn, /state\.favoriteOnly = enabling/);
+  // Enabling favorites clears any lingering category/collection/search so it
+  // shows favorites across the whole catalog, not filtered to a leftover
+  // category (the "Главная / Тело" + 0 товаров stuck state).
+  assert.match(fn, /state\.category = "Все"/);
+});
+
+test("Каталог turns off a lingering favorites filter (never leaves the user stuck on an empty favorites list)", () => {
+  const fn = appJs.match(/bottomNavCatalogLink\?\.addEventListener\("click"[\s\S]*?\n\}\);/)[0];
+  assert.match(fn, /state\.favoriteOnly = false/);
+});
+
+test("selecting a category / collection / search query clears the favorites filter", () => {
+  for (const fnName of ["selectCategory", "selectQuery", "selectCategoryQuery", "selectCollection", "selectCollectionQuery"]) {
+    const fn = appJs.match(new RegExp(`function ${fnName}\\([^)]*\\) \\{[\\s\\S]*?\\n\\}`))[0];
+    assert.match(fn, /state\.favoriteOnly = false/, `${fnName} must clear favoriteOnly`);
+  }
+  for (const handler of ["searchInput", "headerSearchInput"]) {
+    const fn = appJs.match(new RegExp(`${handler}\\.addEventListener\\("input"[\\s\\S]*?\\n\\}\\);`))[0];
+    assert.match(fn, /state\.favoriteOnly = false/, `${handler} input must clear favoriteOnly`);
+  }
+});
+
+test("Главная / logo reset to a clean top-of-home view (not left at the fixed-header anchor offset)", () => {
+  assert.match(appJs, /function goHomeTop/);
+  const fn = appJs.match(/function goHomeTop\(event\) \{[\s\S]*?\n\}/)[0];
+  assert.match(fn, /selectCategory\("Все"\)/); // clears category/query/collection/favorites
+  assert.match(fn, /window\.scrollTo\(\{ top: 0/); // to the very top, not the #top anchor offset
+  assert.match(appJs, /bottomNavHomeLink\?\.addEventListener\("click", goHomeTop\)/);
+  assert.match(appJs, /\.brand, \.footer-brand[\s\S]*?goHomeTop/); // logo/footer brand too
+});
+
 test("URL params from the bottom nav are honored on load (?favorites=1, ?openCart=1)", () => {
   assert.match(appJs, /function applyBottomNavParamsFromUrl/);
   assert.match(appJs, /params\.get\("favorites"\) === "1"/);
