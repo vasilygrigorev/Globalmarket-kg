@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Clear Men Legend by CR7 шампунь 600 мл">
   <meta name="twitter:description" content="Мужской шампунь Clear Men Legend by CR7 против перхоти, объём 600 мл. На этикетке указана линейка Legend by CR7 и компонент natural sea salt / натуральная ">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/clear/clear-men-legend-cr7-600ml-card-front.png">
-  <link rel="stylesheet" href="/styles.css?v=20260708-search-taxonomy">
+  <link rel="stylesheet" href="/styles.css?v=20260709-marketplace-nav">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -1153,6 +1153,34 @@
     <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
   </div>
 </footer>
+  <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Нижняя навигация">
+  <a class="bottom-nav-item" id="bottomNavHome" href="/#top" data-bottom-nav="home">
+    <span class="bottom-nav-icon bottom-nav-icon-home" aria-hidden="true"></span>
+    <span class="bottom-nav-label">Главная</span>
+  </a>
+  <a class="bottom-nav-item" id="bottomNavCatalog" href="/#catalog" data-bottom-nav="catalog">
+    <span class="bottom-nav-icon bottom-nav-icon-catalog" aria-hidden="true"></span>
+    <span class="bottom-nav-label">Каталог</span>
+  </a>
+  <a class="bottom-nav-item" id="bottomNavFavorites" href="/?favorites=1#catalog" data-bottom-nav="favorites">
+    <span class="bottom-nav-icon bottom-nav-icon-favorites" aria-hidden="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 20.3 4.9 13.4C1.8 10.4 2 5.6 5.4 3.6c2.1-1.2 4.8-.7 6.6 1.2 1.8-1.9 4.5-2.4 6.6-1.2 3.4 2 3.6 6.8.5 9.8L12 20.3Z"></path>
+      </svg>
+    </span>
+    <span class="bottom-nav-label">Избранное</span>
+    <span class="bottom-nav-badge" id="bottomNavFavoritesCount" hidden>0</span>
+  </a>
+  <a class="bottom-nav-item" id="bottomNavCart" href="/?openCart=1#top" data-bottom-nav="cart">
+    <span class="bottom-nav-icon cart-bag-icon" aria-hidden="true"></span>
+    <span class="bottom-nav-label">Корзина</span>
+    <span class="bottom-nav-badge" id="bottomNavCartCount" hidden>0</span>
+  </a>
+  <a class="bottom-nav-item" id="bottomNavCabinet" href="/#myOrders" data-bottom-nav="cabinet">
+    <span class="bottom-nav-icon bottom-nav-icon-cabinet" aria-hidden="true"></span>
+    <span class="bottom-nav-label">Кабинет</span>
+  </a>
+</nav>
   <script>
     const product = {"id": "prd_8d15b250f536", "title": "Clear Men Legend by CR7 шампунь 600 мл", "price": 795, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Clear%20Men%20Legend%20by%20CR7%20%D1%88%D0%B0%D0%BC%D0%BF%D1%83%D0%BD%D1%8C%20600%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20795%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/clear-men-legend-by-cr7-shampun-600-ml-50f536/"};
     const cartKey = "globalMarketCartDraft";
@@ -1197,6 +1225,19 @@
       document.querySelectorAll("[data-cart-count]").forEach((item) => {
         item.textContent = String(count);
       });
+      const bottomNavCount = document.querySelector("#bottomNavCartCount");
+      if (bottomNavCount) {
+        bottomNavCount.textContent = String(count);
+        bottomNavCount.hidden = count === 0;
+      }
+    }
+
+    function updateBottomNavFavoritesCount() {
+      const ids = readJson(favoritesKey, []);
+      const badge = document.querySelector("#bottomNavFavoritesCount");
+      if (!badge) return;
+      badge.textContent = String(ids.length);
+      badge.hidden = ids.length === 0;
     }
 
     function recordRecentlyViewed() {
@@ -1241,6 +1282,7 @@
         else ids.add(id);
         localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
         syncGridFavoriteButtons();
+        updateBottomNavFavoritesCount();
         return;
       }
       if (addButton) {
@@ -1351,6 +1393,7 @@
       else ids.add(product.id);
       localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
       updateFavoriteButton();
+      updateBottomNavFavoritesCount();
     });
 
     document.querySelector("[data-add-cart]")?.addEventListener("click", addToCart);
@@ -1368,6 +1411,7 @@
     updateFavoriteButton();
     syncGridFavoriteButtons();
     updateCartCount();
+    updateBottomNavFavoritesCount();
     recordRecentlyViewed();
     renderMenu();
 

@@ -338,6 +338,19 @@ select {
   pointer-events: auto;
 }
 
+/* Marketplace-style fixed bottom nav — mobile-only (enabled inside the
+   680px breakpoint below). Hidden whenever the cart drawer or the quick-view
+   product modal is open, since both are full-screen overlays; relies on
+   DOM order (this nav is the last fixed element in body, after both). */
+.mobile-bottom-nav {
+  display: none;
+}
+
+.cart-drawer.open ~ .mobile-bottom-nav,
+.product-modal.open ~ .mobile-bottom-nav {
+  display: none !important;
+}
+
 @keyframes cartPulse {
   0%,
   100% {
@@ -1776,6 +1789,59 @@ textarea {
   margin: 10px 0;
 }
 
+.cabinet-favorites {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.cabinet-favorite-item {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.cabinet-favorite-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: var(--surface);
+}
+
+.cabinet-favorite-copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.cabinet-favorite-copy strong {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cabinet-favorite-copy span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.my-orders-empty {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--muted);
+}
+
 .my-orders-account[hidden],
 .my-orders-login-form[hidden],
 .my-orders-otp-form[hidden],
@@ -2995,5 +3061,209 @@ textarea {
 
   .product-specs {
     grid-template-columns: 1fr;
+  }
+
+  /* Marketplace-style fixed bottom nav (Главная/Каталог/Избранное/Корзина/
+     Кабинет). Sits above page content on every page that includes it
+     (homepage + product pages); .back-to-top-button and
+     .floating-cart-button are nudged up so they don't overlap it. */
+  :root {
+    --mobile-bottom-nav-height: 60px;
+  }
+
+  body,
+  body.product-page {
+    padding-bottom: calc(var(--mobile-bottom-nav-height) + env(safe-area-inset-bottom));
+  }
+
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    align-items: stretch;
+    justify-content: space-between;
+    height: var(--mobile-bottom-nav-height);
+    padding-bottom: env(safe-area-inset-bottom);
+    background: rgba(255, 255, 255, 0.98);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .bottom-nav-item {
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    min-width: 0;
+    color: var(--muted);
+    text-decoration: none;
+    background: none;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .bottom-nav-item.active {
+    color: var(--sage, #2f7a4f);
+  }
+
+  .bottom-nav-icon {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+
+  .bottom-nav-label {
+    font-size: 10.5px;
+    font-weight: 650;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .bottom-nav-badge {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(6px);
+    min-width: 15px;
+    height: 15px;
+    padding: 0 3px;
+    border-radius: 999px;
+    background: #d1473f;
+    color: #fff;
+    font-size: 9.5px;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  /* Simple line-art icons, drawn with borders/pseudo-elements to match the
+     existing header icon style (cart-bag-icon, search-icon) rather than
+     bitmap images — keeps the nav calm and monochrome, no acid colors. */
+  .bottom-nav-icon-home {
+    width: 18px;
+    height: 16px;
+    margin: 3px auto;
+  }
+
+  .bottom-nav-icon-home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: currentColor;
+    clip-path: polygon(
+      50% 0%,
+      100% 38%,
+      100% 100%,
+      62% 100%,
+      62% 66%,
+      38% 66%,
+      38% 100%,
+      0% 100%,
+      0% 38%
+    );
+  }
+
+  .bottom-nav-icon-catalog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    width: 16px;
+    height: 16px;
+    margin: 3px auto;
+  }
+
+  .bottom-nav-icon-catalog::before,
+  .bottom-nav-icon-catalog::after {
+    content: "";
+    border-radius: 2px;
+    background: currentColor;
+    opacity: 0.85;
+    box-shadow: 9px 0 0 currentColor, 0 9px 0 currentColor, 9px 9px 0 currentColor;
+    width: 7px;
+    height: 7px;
+  }
+
+  .bottom-nav-icon-catalog::after {
+    display: none;
+  }
+
+  /* Reuses the same heart path as the product-card favorite button
+     (favoriteIcon() in app.js) so both icons match exactly. */
+  .bottom-nav-icon-favorites {
+    width: 18px;
+    height: 16px;
+    margin: 4px auto;
+  }
+
+  .bottom-nav-icon-favorites svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bottom-nav-icon-favorites svg path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7px;
+  }
+
+  .bottom-nav-item.active .bottom-nav-icon-favorites svg path {
+    fill: #d1473f;
+    stroke: #d1473f;
+  }
+
+  /* Reuses .cart-bag-icon (already defined for the header cart button)
+     for visual consistency; overridden here to follow currentColor so it
+     can pick up the active/highlighted nav color. */
+  .bottom-nav-item .cart-bag-icon {
+    margin: 2px auto 0;
+  }
+
+  .bottom-nav-item .cart-bag-icon::before,
+  .bottom-nav-item .cart-bag-icon::after {
+    border-color: currentColor;
+  }
+
+  .bottom-nav-icon-cabinet {
+    width: 15px;
+    height: 15px;
+    margin: 4px auto 0;
+    border: 1.6px solid currentColor;
+    border-radius: 999px;
+  }
+
+  .bottom-nav-icon-cabinet::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 3px;
+    width: 6px;
+    height: 6px;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: currentColor;
+  }
+
+  .bottom-nav-icon-cabinet::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 14px;
+    height: 8px;
+    transform: translateX(-50%);
+    border-radius: 8px 8px 0 0;
+    background: currentColor;
+  }
+
+  .back-to-top-button {
+    bottom: calc(var(--mobile-bottom-nav-height) + max(14px, env(safe-area-inset-bottom)));
   }
 }

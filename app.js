@@ -89,6 +89,15 @@ const heroTrack = document.querySelector("#heroTrack");
 const heroDots = document.querySelector("#heroDots");
 const heroPrevButton = document.querySelector("#heroPrev");
 const heroNextButton = document.querySelector("#heroNext");
+const mobileBottomNav = document.querySelector("#mobileBottomNav");
+const bottomNavHomeLink = document.querySelector("#bottomNavHome");
+const bottomNavCatalogLink = document.querySelector("#bottomNavCatalog");
+const bottomNavFavoritesLink = document.querySelector("#bottomNavFavorites");
+const bottomNavCartLink = document.querySelector("#bottomNavCart");
+const bottomNavCabinetLink = document.querySelector("#bottomNavCabinet");
+const bottomNavFavoritesCount = document.querySelector("#bottomNavFavoritesCount");
+const bottomNavCartCount = document.querySelector("#bottomNavCartCount");
+const myOrdersFavorites = document.querySelector("#myOrdersFavorites");
 let activeZoomImage = null;
 
 let recentlyViewedIds = loadRecentlyViewed();
@@ -587,6 +596,7 @@ function toggleFavorite(productId) {
   renderFavoriteFilter();
   renderProducts();
   renderRecentlyViewed();
+  renderCabinetFavorites();
 }
 
 function loadRecentlyViewed() {
@@ -968,7 +978,26 @@ async function loadCatalog() {
   renderProducts();
   renderCart();
   applyCatalogParamsFromUrl();
+  applyBottomNavParamsFromUrl();
   openSharedProductFromUrl();
+}
+
+// Lets the bottom nav's Избранное/Корзина links work as plain <a href> from
+// a product page (a different document — no shared JS state to intercept
+// with), by finishing the action once the homepage itself has loaded.
+function applyBottomNavParamsFromUrl() {
+  const params = mergedUrlParams();
+  if (params.get("favorites") === "1") {
+    state.favoriteOnly = true;
+    renderFavoriteFilter();
+    renderProducts();
+    if (window.location.hash.includes("catalog")) {
+      document.querySelector("#catalog")?.scrollIntoView({ behavior: "auto" });
+    }
+  }
+  if (params.get("openCart") === "1") {
+    setCartOpen(true);
+  }
 }
 
 function renderQuickCategories(catalogCategories) {
@@ -1025,11 +1054,47 @@ function renderCategories() {
 }
 
 function renderFavoriteFilter() {
-  if (!favoriteFilterButton) return;
   const count = products.filter((product) => favoriteIds.has(product.id)).length;
-  favoriteFilterButton.classList.toggle("active", state.favoriteOnly);
-  favoriteFilterButton.setAttribute("aria-pressed", String(state.favoriteOnly));
-  favoriteFilterButton.textContent = state.favoriteOnly ? `♥ Избранное (${count})` : `♡ Избранное${count ? ` (${count})` : ""}`;
+  if (favoriteFilterButton) {
+    favoriteFilterButton.classList.toggle("active", state.favoriteOnly);
+    favoriteFilterButton.setAttribute("aria-pressed", String(state.favoriteOnly));
+    favoriteFilterButton.textContent = state.favoriteOnly ? `♥ Избранное (${count})` : `♡ Избранное${count ? ` (${count})` : ""}`;
+  }
+  if (bottomNavFavoritesCount) {
+    bottomNavFavoritesCount.textContent = String(count);
+    bottomNavFavoritesCount.hidden = count === 0;
+  }
+  bottomNavFavoritesLink?.classList.toggle("active", state.favoriteOnly);
+}
+
+function cabinetFavoriteProducts() {
+  return products.filter((product) => favoriteIds.has(product.id));
+}
+
+function renderCabinetFavorites() {
+  if (!myOrdersFavorites) return;
+  const favorites = cabinetFavoriteProducts();
+  if (!favorites.length) {
+    myOrdersFavorites.innerHTML = `
+      <p class="cabinet-hint">Пока нет избранных товаров.</p>
+      <a class="secondary-link" href="#catalog">В каталог</a>
+    `;
+    return;
+  }
+  myOrdersFavorites.innerHTML = favorites
+    .map(
+      (product) => `
+        <article class="cabinet-favorite-item">
+          <img class="cabinet-favorite-image ${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy" />
+          <div class="cabinet-favorite-copy">
+            <strong>${escapeHtml(product.title)}</strong>
+            <span>${formatPriceHtml(productPrice(product))}</span>
+          </div>
+          <button class="icon-button" type="button" data-favorite="${product.id}" aria-label="Убрать из избранного">×</button>
+        </article>
+      `,
+    )
+    .join("");
 }
 
 function renderCategoryMenu() {
@@ -1812,6 +1877,10 @@ function renderCart() {
   const total = cartTotalValue();
   cartCount.textContent = totalCount;
   if (floatingCartCount) floatingCartCount.textContent = totalCount;
+  if (bottomNavCartCount) {
+    bottomNavCartCount.textContent = String(totalCount);
+    bottomNavCartCount.hidden = totalCount === 0;
+  }
   cartTotal.innerHTML = formatPriceHtml(total);
   if (repeatLastOrderButton) repeatLastOrderButton.hidden = !loadLastOrder();
   const threshold = catalogSettings.free_delivery_threshold_kgs;
@@ -1857,6 +1926,7 @@ function setCartOpen(isOpen) {
   cartDrawer.setAttribute("aria-hidden", String(!isOpen));
   if (isOpen) revealSmartHeader();
   updateBackToTopButton();
+  bottomNavCartLink?.classList.toggle("active", isOpen);
 }
 
 function updateSiteHeaderHeight() {
@@ -1904,7 +1974,28 @@ function updateSmartHeader() {
 
   lastHeaderScrollY = currentY;
   updateBackToTopButton();
+  updateBottomNavActiveSection();
   headerScrollTicking = false;
+}
+
+// Lightweight scroll-spy for Главная/Каталог/Кабинет — Избранное/Корзина
+// have their own active state (state.favoriteOnly / cart drawer open) set
+// where they're toggled, not from scroll position.
+function updateBottomNavActiveSection() {
+  if (!mobileBottomNav) return;
+  const catalogSection = document.querySelector("#catalog");
+  const cabinetSection = document.querySelector("#myOrders");
+  if (!catalogSection || !cabinetSection) return;
+  const probeY = window.scrollY + window.innerHeight * 0.3;
+  let current = bottomNavHomeLink;
+  if (probeY >= cabinetSection.offsetTop) {
+    current = bottomNavCabinetLink;
+  } else if (probeY >= catalogSection.offsetTop) {
+    current = bottomNavCatalogLink;
+  }
+  [bottomNavHomeLink, bottomNavCatalogLink, bottomNavCabinetLink].forEach((link) => {
+    link?.classList.toggle("active", link === current);
+  });
 }
 
 function requestSmartHeaderUpdate() {
@@ -2170,6 +2261,44 @@ favoriteFilterButton?.addEventListener("click", () => {
   state.visibleLimit = 60;
   renderFavoriteFilter();
   renderProducts();
+});
+
+// Bottom nav: progressive enhancement. Every link already has a real href
+// (/#catalog, /?favorites=1#catalog, /?openCart=1#top, /#myOrders) so it
+// works unassisted from a product page (a different document, no app.js
+// state to intercept with). On the homepage itself we intercept the click
+// to act in place — no reload, reuses the existing filter/drawer/scroll
+// behavior other nav entries already use.
+function scrollToSection(selector) {
+  document.querySelector(selector)?.scrollIntoView({ behavior: "smooth" });
+}
+
+bottomNavCatalogLink?.addEventListener("click", (event) => {
+  if (!document.querySelector("#catalog")) return;
+  event.preventDefault();
+  scrollToSection("#catalog");
+});
+
+bottomNavFavoritesLink?.addEventListener("click", (event) => {
+  if (!document.querySelector("#catalog")) return;
+  event.preventDefault();
+  state.favoriteOnly = true;
+  state.visibleLimit = 60;
+  renderFavoriteFilter();
+  renderProducts();
+  scrollToSection("#catalog");
+});
+
+bottomNavCartLink?.addEventListener("click", (event) => {
+  if (!cartDrawer) return;
+  event.preventDefault();
+  setCartOpen(true);
+});
+
+bottomNavCabinetLink?.addEventListener("click", (event) => {
+  if (!document.querySelector("#myOrders")) return;
+  event.preventDefault();
+  scrollToSection("#myOrders");
 });
 
 cartItems.addEventListener("click", (event) => {
@@ -2463,11 +2592,21 @@ function myOrderCardHtml(order) {
   `;
 }
 
-function renderMyOrders(orders) {
+function renderMyOrders(orders, { emptyState = false } = {}) {
   if (!myOrdersResults) return;
   if (!orders || !orders.length) {
-    myOrdersResults.hidden = true;
-    myOrdersResults.innerHTML = "";
+    if (emptyState) {
+      myOrdersResults.hidden = false;
+      myOrdersResults.innerHTML = `
+        <div class="my-orders-empty">
+          <p>У вас пока нет заказов.</p>
+          <a class="secondary-link" href="#catalog">В каталог</a>
+        </div>
+      `;
+    } else {
+      myOrdersResults.hidden = true;
+      myOrdersResults.innerHTML = "";
+    }
     return;
   }
   myOrdersResults.hidden = false;
@@ -2636,6 +2775,7 @@ function renderCabinet(profile) {
   if (cabinetRoleBadge) cabinetRoleBadge.textContent = CABINET_ROLE_LABELS[role] || "";
   renderCabinetProfile(profile);
   renderWholesaleBlock(role);
+  renderCabinetFavorites();
 }
 
 function refreshPricingViews() {
@@ -2651,7 +2791,7 @@ async function checkMyOrdersSession() {
     showLoggedInView();
     renderCabinet(profile);
     const data = await fetchMyOrdersSession();
-    renderMyOrders(data ? data.orders : null);
+    renderMyOrders(data ? data.orders : null, { emptyState: true });
   } else {
     showLoggedOutView();
   }
@@ -2740,6 +2880,12 @@ myOrdersLogoutButton?.addEventListener("click", async () => {
   myOrdersOtpForm?.reset();
   myOrdersLogoutButton.disabled = false;
   refreshPricingViews();
+});
+
+myOrdersFavorites?.addEventListener("click", (event) => {
+  const removeButton = event.target.closest("[data-favorite]");
+  if (!removeButton) return;
+  toggleFavorite(removeButton.dataset.favorite);
 });
 
 profileForm?.addEventListener("submit", async (event) => {
@@ -2844,6 +2990,7 @@ async function initStorefront() {
   await loadCatalog();
   await ensureSession();
   refreshPricingViews();
+  updateBottomNavActiveSection();
 }
 
 initStorefront().catch((error) => {

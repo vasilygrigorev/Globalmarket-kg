@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon" href="/assets/brand/globalmarket-tech-orb.jpg" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=20260708-search-taxonomy" />
+    <link rel="stylesheet" href="styles.css?v=20260709-marketplace-nav" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -303,6 +303,11 @@
             </form>
           </details>
 
+          <details class="cabinet-block" id="favoritesBlock" open>
+            <summary>Избранное</summary>
+            <div id="myOrdersFavorites" class="cabinet-favorites"></div>
+          </details>
+
           <details class="cabinet-block" id="wholesaleBlock">
             <summary>Оптовый доступ</summary>
             <p id="wholesaleStatusText" class="cabinet-hint"></p>
@@ -422,6 +427,37 @@
       </div>
     </section>
 
-    <script src="app.js?v=20260708-search-taxonomy"></script>
+    <!-- BEGIN shared-bottom-nav -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Нижняя навигация">
+      <a class="bottom-nav-item" id="bottomNavHome" href="/#top" data-bottom-nav="home">
+        <span class="bottom-nav-icon bottom-nav-icon-home" aria-hidden="true"></span>
+        <span class="bottom-nav-label">Главная</span>
+      </a>
+      <a class="bottom-nav-item" id="bottomNavCatalog" href="/#catalog" data-bottom-nav="catalog">
+        <span class="bottom-nav-icon bottom-nav-icon-catalog" aria-hidden="true"></span>
+        <span class="bottom-nav-label">Каталог</span>
+      </a>
+      <a class="bottom-nav-item" id="bottomNavFavorites" href="/?favorites=1#catalog" data-bottom-nav="favorites">
+        <span class="bottom-nav-icon bottom-nav-icon-favorites" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 20.3 4.9 13.4C1.8 10.4 2 5.6 5.4 3.6c2.1-1.2 4.8-.7 6.6 1.2 1.8-1.9 4.5-2.4 6.6-1.2 3.4 2 3.6 6.8.5 9.8L12 20.3Z"></path>
+          </svg>
+        </span>
+        <span class="bottom-nav-label">Избранное</span>
+        <span class="bottom-nav-badge" id="bottomNavFavoritesCount" hidden>0</span>
+      </a>
+      <a class="bottom-nav-item" id="bottomNavCart" href="/?openCart=1#top" data-bottom-nav="cart">
+        <span class="bottom-nav-icon cart-bag-icon" aria-hidden="true"></span>
+        <span class="bottom-nav-label">Корзина</span>
+        <span class="bottom-nav-badge" id="bottomNavCartCount" hidden>0</span>
+      </a>
+      <a class="bottom-nav-item" id="bottomNavCabinet" href="/#myOrders" data-bottom-nav="cabinet">
+        <span class="bottom-nav-icon bottom-nav-icon-cabinet" aria-hidden="true"></span>
+        <span class="bottom-nav-label">Кабинет</span>
+      </a>
+    </nav>
+    <!-- END shared-bottom-nav -->
+
+    <script src="app.js?v=20260709-marketplace-nav"></script>
   </body>
 </html>

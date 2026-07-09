@@ -17,6 +17,7 @@ OUTPUT_ROOT = ROOT / "product"
 REPORT_PATH = ROOT / "outputs" / "product-pages-report.md"
 HEADER_PARTIAL_PATH = ROOT / "partials" / "header.html"
 FOOTER_PARTIAL_PATH = ROOT / "partials" / "footer.html"
+BOTTOM_NAV_PARTIAL_PATH = ROOT / "partials" / "bottom-nav.html"
 SITE_URL = "https://globalmarket.kg"
 
 TRANSLIT = str.maketrans(
@@ -551,6 +552,7 @@ def render_related(products):
 def render_page(product, related, slug, landing_lookup=None):
     header_partial = load_partial(HEADER_PARTIAL_PATH)
     footer_partial = load_partial(FOOTER_PARTIAL_PATH)
+    bottom_nav_partial = load_partial(BOTTOM_NAV_PARTIAL_PATH)
     links = product_landing_links(product, landing_lookup or {"category": {}, "brand": {}, "collection": {}})
     images = product_images(product)
     main_image = images[0]
@@ -619,7 +621,7 @@ def render_page(product, related, slug, landing_lookup=None):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(meta_description)}">
   <meta name="twitter:image" content="{escape(absolute_url(main_image))}">
-  <link rel="stylesheet" href="/styles.css?v=20260708-search-taxonomy">
+  <link rel="stylesheet" href="/styles.css?v=20260709-marketplace-nav">
   <script type="application/ld+json">{json_ld}</script>
   <script type="application/ld+json">{breadcrumb_json_ld}</script>
   <style>
@@ -789,6 +791,7 @@ def render_page(product, related, slug, landing_lookup=None):
     </nav>
   </main>
   {footer_partial}
+  {bottom_nav_partial}
   <script>
     const product = {product_json};
     const cartKey = "globalMarketCartDraft";
@@ -833,6 +836,19 @@ def render_page(product, related, slug, landing_lookup=None):
       document.querySelectorAll("[data-cart-count]").forEach((item) => {{
         item.textContent = String(count);
       }});
+      const bottomNavCount = document.querySelector("#bottomNavCartCount");
+      if (bottomNavCount) {{
+        bottomNavCount.textContent = String(count);
+        bottomNavCount.hidden = count === 0;
+      }}
+    }}
+
+    function updateBottomNavFavoritesCount() {{
+      const ids = readJson(favoritesKey, []);
+      const badge = document.querySelector("#bottomNavFavoritesCount");
+      if (!badge) return;
+      badge.textContent = String(ids.length);
+      badge.hidden = ids.length === 0;
     }}
 
     function recordRecentlyViewed() {{
@@ -877,6 +893,7 @@ def render_page(product, related, slug, landing_lookup=None):
         else ids.add(id);
         localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
         syncGridFavoriteButtons();
+        updateBottomNavFavoritesCount();
         return;
       }}
       if (addButton) {{
@@ -987,6 +1004,7 @@ def render_page(product, related, slug, landing_lookup=None):
       else ids.add(product.id);
       localStorage.setItem(favoritesKey, JSON.stringify([...ids]));
       updateFavoriteButton();
+      updateBottomNavFavoritesCount();
     }});
 
     document.querySelector("[data-add-cart]")?.addEventListener("click", addToCart);
@@ -1004,6 +1022,7 @@ def render_page(product, related, slug, landing_lookup=None):
     updateFavoriteButton();
     syncGridFavoriteButtons();
     updateCartCount();
+    updateBottomNavFavoritesCount();
     recordRecentlyViewed();
     renderMenu();
 
