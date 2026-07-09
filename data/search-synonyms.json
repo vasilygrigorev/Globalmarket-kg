@@ -238,6 +238,39 @@
       "categoryIds": ["oral"],
       "productKinds": ["toothbrush"],
       "landingCategories": ["Зубная гигиена"]
+    },
+    {
+      "id": "perfume",
+      "label": "Парфюм",
+      "aliases": ["парфюм", "духи", "parfum", "perfume", "парфюмерия"],
+      "terms": ["парфюм", "духи", "parfum", "perfume"],
+      "landingTerms": ["парфюм на разлив", "духи"],
+      "categories": ["Парфюм 5 мл"],
+      "categoryIds": ["perfume"],
+      "productKinds": ["perfume_decant"],
+      "landingCategories": ["Парфюм 5 мл"]
+    },
+    {
+      "id": "body-cream",
+      "label": "Крем",
+      "aliases": ["крем", "cream"],
+      "terms": ["крем", "cream"],
+      "landingTerms": ["крем для тела", "солнцезащитный крем"],
+      "categories": [],
+      "categoryIds": [],
+      "productKinds": ["body_cream", "sunscreen", "body_lotion"],
+      "landingCategories": ["Уход за телом"]
+    },
+    {
+      "id": "deodorant-gel",
+      "label": "Гель-дезодорант",
+      "aliases": ["гель-дезодорант", "гель антиперспирант"],
+      "terms": ["гель-дезодорант", "антиперспирант"],
+      "landingTerms": ["гель-дезодорант"],
+      "categories": [],
+      "categoryIds": ["deodorants"],
+      "productKinds": ["deodorant_gel"],
+      "landingCategories": ["Дезодоранты"]
     }
   ],
   "brandAliases": {

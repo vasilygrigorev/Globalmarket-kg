@@ -16,7 +16,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-smooth-silky-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 10
+      "relatedCount": 24
     },
     {
       "id": "prd_1e0cb301d44d",
@@ -31,7 +31,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-goodbye-frizz-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 10
+      "relatedCount": 24
     },
     {
       "id": "prd_5faaff6cf17c",
@@ -46,7 +46,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-moisture-renewal-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 10
+      "relatedCount": 24
     },
     {
       "id": "prd_572ed90689d1",
@@ -61,7 +61,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-daily-care-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 10
+      "relatedCount": 24
     },
     {
       "id": "prd_dce1df68b778",
@@ -76,7 +76,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 10
+      "relatedCount": 24
     },
     {
       "id": "prd_da9eaa7d3675",
@@ -91,7 +91,7 @@
       "retailPriceKgs": 895,
       "image": "/assets/products/pantene/pantene-anti-dandruff-600ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 10
+      "relatedCount": 24
     },
     {
       "id": "prd_c5f3a1dce862",
@@ -1141,7 +1141,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-go-fresh-coconut-jasmine-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 24
     },
     {
       "id": "prd_f23090eb2627",
@@ -1156,7 +1156,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-go-fresh-apple-white-tea-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 24
     },
     {
       "id": "prd_b8b5bfec07e5",
@@ -1171,7 +1171,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 24
     },
     {
       "id": "prd_d3c195668843",
@@ -1186,7 +1186,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-advanced-care-pear-aloe-vera-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 24
     },
     {
       "id": "prd_07e3d025b33c",
@@ -1201,7 +1201,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/dove/dove-go-fresh-cucumber-green-tea-250ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 14
+      "relatedCount": 24
     },
     {
       "id": "prd_96fe6b1c7d9c",
@@ -1396,7 +1396,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_ded7b0409c9c",
@@ -1411,7 +1411,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_081404d81ef8",
@@ -1426,7 +1426,7 @@
       "retailPriceKgs": 450,
       "image": "/assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_bc63389835c9",
@@ -1441,7 +1441,7 @@
       "retailPriceKgs": 490,
       "image": "/assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_16599c72dda7",
@@ -1456,7 +1456,7 @@
       "retailPriceKgs": 490,
       "image": "/assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_e6202bbb1789",
@@ -1471,7 +1471,7 @@
       "retailPriceKgs": 490,
       "image": "/assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_0d95e9b49711",
@@ -1486,7 +1486,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/rexona/rexona-stick-antibacterial-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_56cefec24fdf",
@@ -1501,7 +1501,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/rexona/rexona-stick-bamboo-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_7c7e94c7128f",
@@ -1516,7 +1516,7 @@
       "retailPriceKgs": 250,
       "image": "/assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_e40df5ac7d15",
@@ -1531,7 +1531,7 @@
       "retailPriceKgs": 250,
       "image": "/assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_8b3a9f34a763",
@@ -1546,7 +1546,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/dove/dove-stick-men-clean-comfort-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_f7a9d836005f",
@@ -1561,7 +1561,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/dove/dove-stick-original-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_23e1645a6a85",
@@ -1576,7 +1576,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/dove/dove-stick-pomegranate-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_47c8b6565a63",
@@ -1591,7 +1591,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/rexona/rexona-stick-cobalt-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_9bb309942383",
@@ -1606,7 +1606,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/rexona/rexona-stick-v8-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_168ccd5d1f3e",
@@ -1621,7 +1621,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/rexona/rexona-stick-extra-cool-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_21c8c8aa3e5d",
@@ -1636,7 +1636,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/dove/dove-stick-beauty-finish-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_cdc989a294f9",
@@ -1651,7 +1651,7 @@
       "retailPriceKgs": 300,
       "image": "/assets/products/dove/dove-stick-cucumber-40g-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_e616d7830dcc",
@@ -1666,7 +1666,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-rogue-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_e74e6e5aeafb",
@@ -1681,7 +1681,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-maverick-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_84707e91d0d1",
@@ -1696,7 +1696,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-gold-temptation-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_e79bae4e0c99",
@@ -1711,7 +1711,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-intense-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_8b110a525852",
@@ -1726,7 +1726,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-corporate-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_17547dd70a52",
@@ -1741,7 +1741,7 @@
       "retailPriceKgs": 270,
       "image": "/assets/products/axe/axe-signature-champion-122ml-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 24
     },
     {
       "id": "prd_08eb2cef1689",
@@ -2148,7 +2148,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/dalli/dalli-vollwaschmittel-powder-6kg-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_4b7604e36f02",
@@ -2165,7 +2165,7 @@
       "retailPriceKgs": 2595,
       "image": "/assets/products/dalli/dalli-colorwaschmittel-powder-6kg-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_06e5daf553c4",
@@ -2182,7 +2182,7 @@
       "retailPriceKgs": 2395,
       "image": "/assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_4db8a0f93b3f",
@@ -2199,7 +2199,7 @@
       "retailPriceKgs": 2295,
       "image": "/assets/products/dash/dash-color-frische-caps-box-60-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_6ac15f7b2cff",
@@ -2216,7 +2216,7 @@
       "retailPriceKgs": 690,
       "image": "/assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_6d023c2652c2",
@@ -2233,7 +2233,7 @@
       "retailPriceKgs": 2295,
       "image": "/assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_ac041a61a578",
@@ -2250,7 +2250,7 @@
       "retailPriceKgs": 2195,
       "image": "/assets/products/dash/dash-alpen-frische-caps-60-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_33a2990e3c6a",
@@ -2267,7 +2267,7 @@
       "retailPriceKgs": 2195,
       "image": "/assets/products/dash/dash-color-frische-caps-60-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_f027d150c31a",
@@ -2284,7 +2284,7 @@
       "retailPriceKgs": 650,
       "image": "/assets/products/dalli/dalli-vollwaschmittel-caps-12-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_7ac05b86dfd8",
@@ -2301,7 +2301,7 @@
       "retailPriceKgs": 650,
       "image": "/assets/products/dalli/dalli-colorwaschmittel-caps-12-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_3fd39e5d8314",
@@ -2318,7 +2318,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_96f0268a48e0",
@@ -2335,7 +2335,7 @@
       "retailPriceKgs": 2090,
       "image": "/assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_ebd75b1e7557",
@@ -2352,7 +2352,7 @@
       "retailPriceKgs": 690,
       "image": "/assets/products/dash/dash-active-frische-gel-1-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_50de525f882c",
@@ -2369,7 +2369,7 @@
       "retailPriceKgs": 690,
       "image": "/assets/products/dalli/dalli-fein-color-gel-1-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_6c3fa744cf67",
@@ -2386,7 +2386,7 @@
       "retailPriceKgs": 690,
       "image": "/assets/products/dalli/dalli-sensitive-gel-1-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_48a2b18d3de6",
@@ -2403,7 +2403,7 @@
       "retailPriceKgs": 690,
       "image": "/assets/products/dalli/dalli-vollwaschmittel-frische-glueck-gel-1-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_539a47bdb383",
@@ -2420,7 +2420,7 @@
       "retailPriceKgs": 690,
       "image": "/assets/products/dalli/dalli-colorwaschmittel-gel-1-1l-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 16
+      "relatedCount": 24
     },
     {
       "id": "prd_f652a5ca9bbf",

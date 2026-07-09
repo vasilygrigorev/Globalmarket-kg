@@ -191,11 +191,18 @@ def select_product(products):
 def related_products(product, products):
     related = []
     seen = {product.get("id")}
+    target_use_area = product.get("useArea") or ""
     for candidate in products:
         candidate_id = candidate.get("id")
         if candidate_id in seen:
             continue
-        if candidate.get("categoryId") != product.get("categoryId"):
+        same_category = candidate.get("categoryId") == product.get("categoryId")
+        # useArea also matches a legacy/collection categoryId like "germany"
+        # to its real purpose category (see docs/catalog-taxonomy.md), so a
+        # Dalli powder tagged "germany" can still appear next to one tagged
+        # "laundry" instead of only ever comparing against its own bucket.
+        same_use_area = bool(target_use_area) and candidate.get("useArea") == target_use_area
+        if not (same_category or same_use_area):
             continue
         if not is_in_stock(candidate):
             continue

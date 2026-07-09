@@ -44,6 +44,8 @@ DEFAULT_QUERIES = [
     "зубная щетка",
     "spf",
     "солнцезащитка",
+    "крем",
+    "парфюм",
 ]
 
 # Required queries where "there is a match" is not enough — the FIRST/best
@@ -78,6 +80,8 @@ RANKING_EXPECTATIONS = [
     {"query": "солнцезащитка", "expected_kinds": ["sunscreen"]},
     {"query": "мыломойка", "expected_kinds": ["dishwashing_liquid"]},
     {"query": "посудомойка", "expected_kinds": ["dishwashing_liquid"]},
+    {"query": "парфюм", "expected_kinds": ["perfume_decant"], "forbidden_kinds": ["fabric_softener"]},
+    {"query": "крем", "expected_kinds": ["body_cream", "sunscreen", "body_lotion"]},
 ]
 
 

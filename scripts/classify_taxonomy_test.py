@@ -94,6 +94,133 @@ class ProductKind(unittest.TestCase):
         self.assertEqual(classify_product_kind(prod(categoryId="other", title="Что-то непонятное")), "")
         self.assertEqual(classify_product_kind(prod(categoryId="body", title="Johnson's baby масло 200 мл")), "")
 
+    def test_germany_category_uses_laundry_rules(self):
+        # "germany" is a legacy collection-style categoryId (see
+        # docs/catalog-taxonomy.md); classification runs off the text, not
+        # the categoryId, so it stays correct even though it isn't "laundry".
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="germany", title="Dalli Universal стиральный порошок 6 кг", brand="Dalli")),
+            "washing_powder",
+        )
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="germany", title="G.Dalli CAPS (24шт) 3in1 Colorwaschmittel", brand="G.Dalli")),
+            "laundry_capsules",
+        )
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="germany", title="G.DASH GEL (1.1L)(20стир) Color Frische", brand="G.DASH")),
+            "laundry_gel",
+        )
+        # No explicit form word at all, but weight (kg) + "Waschmittel" +
+        # wash count is the same structural signal as an explicit "порошок".
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="germany", title="G.Dalli (3.12kg)(48стир) Vollwaschmittel", brand="G.Dalli")),
+            "washing_powder",
+        )
+        # Genuinely ambiguous ("моющее средство" could be many things) stays "".
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="germany", title="G.Dalli моющее ср-во (1L) Apple", brand="G.Dalli")),
+            "",
+        )
+
+    def test_miscategorized_products_recovered_by_text_fallback(self):
+        # Raw 1C rows sometimes file a product under the wrong category; the
+        # fallback pass recognizes the real kind from the title regardless.
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="other", title="Pantene Smooth & Silky шампунь 600 мл", brand="Pantene")),
+            "shampoo",
+        )
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="home_cleaning", title="Signal з/щ X-tra Clean", brand="Signal")),
+            "toothbrush",
+        )
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="home_cleaning", title="Fructies Конд. (750 ml) Pure Clean", brand="Fructies")),
+            "conditioner",
+        )
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="deodorants", title="AXE Гель/душ (250) Apollo", brand="AXE")),
+            "shower_gel",
+        )
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="body", title="Dove Advanced Care Original спрей-дезодорант, 250 мл", brand="Dove")),
+            "deodorant_spray",
+        )
+
+    def test_edt_fragrance_excluded_from_deodorants(self):
+        # "EDT" (Eau de Toilette) is a fragrance wrongly filed under
+        # deodorants in the raw import; it must not be guessed as a form.
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="deodorants", title="Adidas EDT (M) (100) Team Five", brand="Adidas")),
+            "",
+        )
+
+    def test_deodorant_form_from_packaging_unit_when_no_form_word(self):
+        # No "стик"/"спрей" word at all, but grams vs ml is a reliable
+        # structural signal in this catalog (sticks 15-90g, sprays 100-300ml).
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="deodorants", title="Arm & Hammer Essentials Juniper Berry дезодорант 71 г", brand="Arm & Hammer")),
+            "deodorant_stick",
+        )
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="deodorants", title="L'Oreal ДЕО (250 мл) Thermic Resist", brand="L'Oreal")),
+            "deodorant_spray",
+        )
+        # No unit at all: stays unclassified rather than guessed.
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="deodorants", title="Reebok Deo (150) (L) Cool", brand="Reebok")),
+            "",
+        )
+
+    def test_gillette_gel_antiperspirant_is_its_own_kind(self):
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="deodorants", title="Gillette Antiperspirant Cool Wave гель-дезодорант 70 мл", brand="Gillette")),
+            "deodorant_gel",
+        )
+
+    def test_aftershave_balm_not_confused_with_hair_conditioner(self):
+        # Filed under "hair" in the raw import, but "после бритья" means it
+        # is an aftershave balm, not a hair conditioner (both say "бальзам").
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="hair", title="Nivea Бальзам после бритья (100 мл) Fresh Kick", brand="Nivea")),
+            "aftershave_balm",
+        )
+
+    def test_mistagged_razor_not_read_as_fabric_softener(self):
+        # Real catalog bug: a razor pack with a leftover laundry
+        # categoryId/productType from a source-code collision. The title's
+        # "Blue-3" (an established Gillette razor line elsewhere in this
+        # catalog) must win over the mistagged "кондиционер для белья".
+        self.assertEqual(
+            classify_product_kind(
+                prod(categoryId="laundry", title="GILLETTE Blue-3 comfort (8pcs) (6+2)", brand="Gillette", productType="кондиционер для белья")
+            ),
+            "",
+        )
+
+    def test_title_wins_over_conflicting_producttype(self):
+        # productType says "гель для душа" (copy-paste leftover) but the
+        # title clearly says "для ног" (feet/legs) — not a shower gel.
+        self.assertEqual(
+            classify_product_kind(
+                prod(categoryId="body", title="LadyDiana Гель для ног (170)", brand="LadyDiana", productType="гель для душа")
+            ),
+            "",
+        )
+
+    def test_misc_other_category_kinds(self):
+        self.assertEqual(classify_product_kind(prod(categoryId="other", title="Concord Кусачки (3001-8)", productType="разное")), "nail_clipper")
+        self.assertEqual(classify_product_kind(prod(categoryId="other", title="Concord Ножницы (DT 613)", productType="разное")), "scissors")
+        self.assertEqual(classify_product_kind(prod(categoryId="other", title="Терка для пяток № 160", productType="разное")), "foot_file")
+        self.assertEqual(classify_product_kind(prod(categoryId="other", title="Febreze освежитель (185) Ocean", productType="разное")), "air_freshener")
+        self.assertEqual(classify_product_kind(prod(categoryId="food", title="Davidoff Espresso молотый кофе 250 г")), "ground_coffee")
+        self.assertEqual(classify_product_kind(prod(categoryId="food", title="Bharmal Tea (500) Flag Brand")), "tea")
+        # productType "маникюрный инструмент" must not shadow the more
+        # specific title word "кусачки" (a real bug caught during review).
+        self.assertEqual(
+            classify_product_kind(prod(categoryId="other", title="Concord кусачки для ногтей №603-PS", productType="маникюрный инструмент")),
+            "nail_clipper",
+        )
+
     def test_oral_kinds(self):
         self.assertEqual(classify_product_kind(prod(categoryId="oral", title="Colgate Cavity Protection зубная паста Pump 100 мл")), "toothpaste")
         self.assertEqual(classify_product_kind(prod(categoryId="oral", title="Dabur Зуб.Паста RED (100) щл")), "toothpaste")
