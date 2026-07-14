@@ -181,12 +181,42 @@ select {
   background: var(--white);
 }
 
-.header-search span {
+.header-search-icon {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
   color: var(--muted);
-  font-size: 20px;
+  font-size: 0;
+}
+
+.header-search-icon::before,
+.header-search-icon::after {
+  position: absolute;
+  display: block;
+  content: "";
+}
+
+.header-search-icon::before {
+  inset: 1px 4px 4px 1px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.header-search-icon::after {
+  right: 1px;
+  bottom: 2px;
+  width: 8px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform: rotate(45deg);
+  transform-origin: center;
 }
 
 .header-search input {
+  width: 100%;
   min-width: 0;
   min-height: 40px;
   padding: 0;
@@ -2485,18 +2515,23 @@ textarea {
 @media (max-width: 680px) {
   .site-header {
     width: 100vw;
-    grid-template-columns: 32px minmax(0, 1fr) 32px 46px;
-    gap: 5px;
-    padding: 6px 8px;
+    grid-template-columns: 34px minmax(0, 1fr);
+    grid-template-rows: 34px 44px;
+    gap: 8px;
+    padding: 7px 12px 9px;
   }
 
   .menu-toggle {
     display: inline-flex;
-    width: 32px;
-    height: 32px;
+    grid-column: 1;
+    grid-row: 1;
+    width: 34px;
+    height: 34px;
   }
 
   .brand {
+    grid-column: 2;
+    grid-row: 1;
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -2509,37 +2544,48 @@ textarea {
   }
 
   .brand-orb {
-    width: 32px;
-    height: 32px;
-    flex-basis: 32px;
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
   }
 
   .brand-wordmark {
-    width: min(100%, 166px);
+    width: min(100%, 174px);
   }
 
   .search-toggle {
-    display: inline-flex;
-    width: 32px;
-    height: 32px;
+    display: none;
   }
 
   .header-search {
-    display: none;
+    display: flex;
     grid-column: 1 / -1;
     grid-row: 2;
+    min-height: 44px;
+    padding: 0 15px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.07);
   }
 
   .site-header.search-open .header-search {
     display: flex;
   }
 
+  .header-search-icon {
+    width: 19px;
+    height: 19px;
+    flex-basis: 19px;
+    color: #1785d8;
+  }
+
+  .header-search input {
+    min-height: 42px;
+    font-size: 17px;
+  }
+
   .cart-button {
-    min-width: 46px;
-    height: 32px;
-    padding: 0 6px;
-    gap: 4px;
-    font-size: 14px;
+    display: none;
   }
 
   .cart-bag-icon {
@@ -3068,7 +3114,9 @@ textarea {
      (homepage + product pages); .back-to-top-button and
      .floating-cart-button are nudged up so they don't overlap it. */
   :root {
-    --mobile-bottom-nav-height: 60px;
+    --mobile-bottom-nav-height: 64px;
+    --bottom-nav-accent: #0785d8;
+    --bottom-nav-badge: #ff2f7d;
   }
 
   body,
@@ -3085,11 +3133,12 @@ textarea {
     z-index: 50;
     align-items: stretch;
     justify-content: space-between;
-    height: var(--mobile-bottom-nav-height);
-    padding-bottom: env(safe-area-inset-bottom);
-    background: rgba(255, 255, 255, 0.98);
-    border-top: 1px solid var(--line);
-    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.06);
+    height: calc(var(--mobile-bottom-nav-height) + env(safe-area-inset-bottom));
+    padding: 4px 6px calc(4px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.96);
+    border-top: 1px solid rgba(17, 17, 17, 0.08);
+    box-shadow: 0 -12px 28px rgba(15, 23, 42, 0.1);
+    backdrop-filter: blur(18px);
   }
 
   .bottom-nav-item {
@@ -3099,9 +3148,10 @@ textarea {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 4px;
+    min-height: 54px;
     min-width: 0;
-    color: var(--muted);
+    color: #9aa0a6;
     text-decoration: none;
     background: none;
     border: 0;
@@ -3110,97 +3160,106 @@ textarea {
   }
 
   .bottom-nav-item.active {
-    color: var(--sage, #2f7a4f);
+    color: var(--bottom-nav-accent);
   }
 
   .bottom-nav-icon {
     position: relative;
     display: block;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
   }
 
   .bottom-nav-label {
-    font-size: 10.5px;
-    font-weight: 650;
+    font-size: 11px;
+    font-weight: 700;
     line-height: 1;
     white-space: nowrap;
   }
 
   .bottom-nav-badge {
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 50%;
-    transform: translateX(6px);
-    min-width: 15px;
-    height: 15px;
-    padding: 0 3px;
+    transform: translateX(8px);
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
     border-radius: 999px;
-    background: #d1473f;
+    background: var(--bottom-nav-badge);
     color: #fff;
-    font-size: 9.5px;
-    font-weight: 700;
-    line-height: 15px;
+    box-shadow: 0 0 0 2px #fff;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 17px;
     text-align: center;
   }
 
-  /* Simple line-art icons, drawn with borders/pseudo-elements to match the
-     existing header icon style (cart-bag-icon, search-icon) rather than
-     bitmap images — keeps the nav calm and monochrome, no acid colors. */
+  /* Marketplace-like line icons. The header keeps its own bag icon; the bottom
+     cart is intentionally a supermarket trolley. */
   .bottom-nav-icon-home {
-    width: 18px;
-    height: 16px;
-    margin: 3px auto;
+    width: 23px;
+    height: 23px;
   }
 
   .bottom-nav-icon-home::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background: currentColor;
-    clip-path: polygon(
-      50% 0%,
-      100% 38%,
-      100% 100%,
-      62% 100%,
-      62% 66%,
-      38% 66%,
-      38% 100%,
-      0% 100%,
-      0% 38%
-    );
+    left: 5px;
+    top: 4px;
+    width: 13px;
+    height: 13px;
+    border-top: 2.2px solid currentColor;
+    border-left: 2.2px solid currentColor;
+    border-radius: 2px 0 0 0;
+    transform: rotate(45deg);
+  }
+
+  .bottom-nav-icon-home::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 11px;
+    width: 11px;
+    height: 8px;
+    border: 2.2px solid currentColor;
+    border-top: 0;
+    border-radius: 0 0 3px 3px;
   }
 
   .bottom-nav-icon-catalog {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3px;
-    width: 16px;
-    height: 16px;
-    margin: 3px auto;
+    width: 24px;
+    height: 24px;
   }
 
   .bottom-nav-icon-catalog::before,
   .bottom-nav-icon-catalog::after {
     content: "";
-    border-radius: 2px;
+    position: absolute;
+    left: 5px;
+    width: 14px;
+    height: 2.2px;
+    border-radius: 999px;
     background: currentColor;
-    opacity: 0.85;
-    box-shadow: 9px 0 0 currentColor, 0 9px 0 currentColor, 9px 9px 0 currentColor;
-    width: 7px;
-    height: 7px;
+  }
+
+  .bottom-nav-icon-catalog::before {
+    top: 6px;
+    box-shadow: 0 6px 0 currentColor, 0 12px 0 currentColor;
   }
 
   .bottom-nav-icon-catalog::after {
-    display: none;
+    left: 2px;
+    top: 6px;
+    width: 2.2px;
+    box-shadow: 0 6px 0 currentColor, 0 12px 0 currentColor;
   }
 
   /* Reuses the same heart path as the product-card favorite button
      (favoriteIcon() in app.js) so both icons match exactly. */
   .bottom-nav-icon-favorites {
-    width: 18px;
-    height: 16px;
-    margin: 4px auto;
+    width: 23px;
+    height: 21px;
   }
 
   .bottom-nav-icon-favorites svg {
@@ -3211,31 +3270,51 @@ textarea {
   .bottom-nav-icon-favorites svg path {
     fill: none;
     stroke: currentColor;
-    stroke-width: 1.7px;
+    stroke-width: 2px;
   }
 
   .bottom-nav-item.active .bottom-nav-icon-favorites svg path {
-    fill: #d1473f;
-    stroke: #d1473f;
+    fill: var(--bottom-nav-badge);
+    stroke: var(--bottom-nav-badge);
   }
 
-  /* Reuses .cart-bag-icon (already defined for the header cart button)
-     for visual consistency; overridden here to follow currentColor so it
-     can pick up the active/highlighted nav color. */
   .bottom-nav-item .cart-bag-icon {
-    margin: 2px auto 0;
+    width: 25px;
+    height: 23px;
+    margin: 0 auto;
+    background:
+      radial-gradient(circle, currentColor 0 2px, transparent 2.2px) 8px 19px / 5px 5px no-repeat,
+      radial-gradient(circle, currentColor 0 2px, transparent 2.2px) 18px 19px / 5px 5px no-repeat;
   }
 
-  .bottom-nav-item .cart-bag-icon::before,
-  .bottom-nav-item .cart-bag-icon::after {
+  .bottom-nav-item .cart-bag-icon::before {
+    left: 6px;
+    top: 7px;
+    bottom: auto;
+    width: 15px;
+    height: 9px;
+    border: 2px solid currentColor;
+    border-top: 0;
+    border-radius: 1px 1px 4px 4px;
+    transform: skewX(-10deg);
     border-color: currentColor;
   }
 
+  .bottom-nav-item .cart-bag-icon::after {
+    left: 2px;
+    top: 4px;
+    width: 7px;
+    height: 4px;
+    border: 0;
+    border-top: 2px solid currentColor;
+    border-radius: 0;
+    transform: rotate(18deg);
+  }
+
   .bottom-nav-icon-cabinet {
-    width: 15px;
-    height: 15px;
-    margin: 4px auto 0;
-    border: 1.6px solid currentColor;
+    width: 23px;
+    height: 23px;
+    border: 2px solid currentColor;
     border-radius: 999px;
   }
 
@@ -3243,9 +3322,9 @@ textarea {
     content: "";
     position: absolute;
     left: 50%;
-    top: 3px;
-    width: 6px;
-    height: 6px;
+    top: 4px;
+    width: 6.5px;
+    height: 6.5px;
     transform: translateX(-50%);
     border-radius: 999px;
     background: currentColor;
@@ -3255,11 +3334,11 @@ textarea {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -8px;
-    width: 14px;
-    height: 8px;
+    bottom: 3px;
+    width: 13px;
+    height: 6px;
     transform: translateX(-50%);
-    border-radius: 8px 8px 0 0;
+    border-radius: 9px 9px 3px 3px;
     background: currentColor;
   }
 

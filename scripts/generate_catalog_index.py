@@ -115,7 +115,7 @@ def render_page(pages):
   <meta name="twitter:title" content="Разделы магазина Global Market KG">
   <meta name="twitter:description" content="Категории, подборки и бренды Global Market KG.">
   <meta name="twitter:image" content="{SITE_URL}/assets/hero-green-wide-v1.png">
-  <link rel="stylesheet" href="/styles.css?v=20260709-marketplace-nav-2">
+  <link rel="stylesheet" href="/styles.css?v=20260714-marketplace-search">
   <script type="application/ld+json">{json_ld}</script>
   <style>
     body.catalog-index-page {{ margin: 0; padding-top: var(--site-header-height, 58px); background: #f2f3f5; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }}
@@ -131,9 +131,10 @@ def render_page(pages):
     .catalog-index-card span {{ color: #6e6e73; font-size: 14px; }}
     .catalog-index-empty {{ margin: 0; color: #6e6e73; }}
     @media (max-width: 720px) {{
-      body.catalog-index-page {{ padding-top: 45px; }}
-      body.catalog-index-page .header-search {{ display: none; }}
-      body.catalog-index-page .search-toggle {{ display: inline-flex; }}
+      body.catalog-index-page {{ padding-top: var(--site-header-height, 92px); }}
+      body.catalog-index-page .header-search {{ display: flex; }}
+      body.catalog-index-page .search-toggle,
+      body.catalog-index-page .cart-button {{ display: none; }}
       .catalog-index-main {{ padding: 20px 12px 32px; }}
       .catalog-index-grid {{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }}
       .catalog-index-card {{ min-height: 82px; padding: 13px; border-radius: 12px; }}

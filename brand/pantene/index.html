@@ -21,7 +21,7 @@
   <meta name="twitter:title" content="Pantene">
   <meta name="twitter:description" content="Pantene в Global Market KG: Pantene, товары Pantene, Pantene купить Бишкек. В подборке 15 товаров бренда с ценами в сомах и заказом через WhatsApp.">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/pantene/pantene-anti-hair-fall-600ml-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20260709-marketplace-nav-2">
+  <link rel="stylesheet" href="/styles.css?v=20260714-marketplace-search">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -133,9 +133,10 @@
     .landing-link-card strong { font-size: 16px; line-height: 1.2; }
     .landing-link-card span { color: #6e6e73; font-size: 13px; }
     @media (max-width: 720px) {
-      body.landing-page { padding-top: 45px; }
-      body.landing-page .header-search { display: none; }
-      body.landing-page .search-toggle { display: inline-flex; }
+      body.landing-page { padding-top: var(--site-header-height, 92px); }
+      body.landing-page .header-search { display: flex; }
+      body.landing-page .search-toggle,
+      body.landing-page .cart-button { display: none; }
       .landing-main { padding: 18px 12px 28px; }
       .landing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
       .landing-link-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -157,7 +158,7 @@
     <a href="/#checkout">Оплата</a>
   </nav>
   <label class="header-search" aria-label="Поиск по товарам">
-    <span aria-hidden="true">⌕</span>
+    <span class="header-search-icon" aria-hidden="true"></span>
     <input id="headerSearchInput" type="search" placeholder="Найти товар" />
   </label>
   <button class="search-toggle" id="toggleSearch" type="button" aria-label="Открыть поиск" aria-expanded="false">

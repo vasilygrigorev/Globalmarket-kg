@@ -621,7 +621,7 @@ def render_page(product, related, slug, landing_lookup=None):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(meta_description)}">
   <meta name="twitter:image" content="{escape(absolute_url(main_image))}">
-  <link rel="stylesheet" href="/styles.css?v=20260709-marketplace-nav-2">
+  <link rel="stylesheet" href="/styles.css?v=20260714-marketplace-search">
   <script type="application/ld+json">{json_ld}</script>
   <script type="application/ld+json">{breadcrumb_json_ld}</script>
   <style>
@@ -699,9 +699,10 @@ def render_page(product, related, slug, landing_lookup=None):
     .bottom-page-action svg path {{ fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }}
     .bottom-page-action.top {{ margin-left: auto; }}
     @media (max-width: 720px) {{
-      body.product-page {{ padding-top: 45px; }}
-      body.product-page .header-search {{ display: none; }}
-      body.product-page .search-toggle {{ display: inline-flex; }}
+      body.product-page {{ padding-top: var(--site-header-height, 92px); }}
+      body.product-page .header-search {{ display: flex; }}
+      body.product-page .search-toggle,
+      body.product-page .cart-button {{ display: none; }}
       .page {{ max-width: none; padding: 0; }}
       .product-shell {{ border-radius: 0; box-shadow: none; }}
       .related {{ padding: 0 8px; }}

@@ -546,7 +546,7 @@ def render_page(target, products, product_page_by_id, all_targets):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(description)}">
   <meta name="twitter:image" content="{escape(share_image)}">
-  <link rel="stylesheet" href="/styles.css?v=20260709-marketplace-nav-2">
+  <link rel="stylesheet" href="/styles.css?v=20260714-marketplace-search">
   <script type="application/ld+json">{breadcrumb_json_ld(target, canonical)}</script>
   <script type="application/ld+json">{item_list_json_ld(products, product_page_by_id)}</script>
   <style>
@@ -582,9 +582,10 @@ def render_page(target, products, product_page_by_id, all_targets):
     .landing-link-card strong {{ font-size: 16px; line-height: 1.2; }}
     .landing-link-card span {{ color: #6e6e73; font-size: 13px; }}
     @media (max-width: 720px) {{
-      body.landing-page {{ padding-top: 45px; }}
-      body.landing-page .header-search {{ display: none; }}
-      body.landing-page .search-toggle {{ display: inline-flex; }}
+      body.landing-page {{ padding-top: var(--site-header-height, 92px); }}
+      body.landing-page .header-search {{ display: flex; }}
+      body.landing-page .search-toggle,
+      body.landing-page .cart-button {{ display: none; }}
       .landing-main {{ padding: 18px 12px 28px; }}
       .landing-grid {{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }}
       .landing-link-grid {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}

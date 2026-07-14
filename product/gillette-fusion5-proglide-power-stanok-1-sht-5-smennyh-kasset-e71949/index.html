@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Gillette Fusion5 ProGlide Power станок 1 шт (+5 сменных кассет)">
   <meta name="twitter:description" content="Станок для бритья Gillette Fusion5 ProGlide Power с 5 лезвиями, FlexBall, в комплекте 5 сменных кассет.">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/gillette/gillette-fusion5-proglide-power-razor-1-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20260709-marketplace-nav-2">
+  <link rel="stylesheet" href="/styles.css?v=20260714-marketplace-search">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -151,9 +151,10 @@
     .bottom-page-action svg path { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
     .bottom-page-action.top { margin-left: auto; }
     @media (max-width: 720px) {
-      body.product-page { padding-top: 45px; }
-      body.product-page .header-search { display: none; }
-      body.product-page .search-toggle { display: inline-flex; }
+      body.product-page { padding-top: var(--site-header-height, 92px); }
+      body.product-page .header-search { display: flex; }
+      body.product-page .search-toggle,
+      body.product-page .cart-button { display: none; }
       .page { max-width: none; padding: 0; }
       .product-shell { border-radius: 0; box-shadow: none; }
       .related { padding: 0 8px; }
@@ -186,7 +187,7 @@
     <a href="/#checkout">Оплата</a>
   </nav>
   <label class="header-search" aria-label="Поиск по товарам">
-    <span aria-hidden="true">⌕</span>
+    <span class="header-search-icon" aria-hidden="true"></span>
     <input id="headerSearchInput" type="search" placeholder="Найти товар" />
   </label>
   <button class="search-toggle" id="toggleSearch" type="button" aria-label="Открыть поиск" aria-expanded="false">

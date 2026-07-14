@@ -309,6 +309,22 @@ Comfort и BIC Comfort 2.
 Все 69 исходных файлов остаются нетронутыми в
 `assets/telegram_inbox/telegram-8767964230-20260706-{120924,120953,124743,124755}/`.
 
+## PENDING 2026-07-14 — loose raw group `telegram-8767964230-20260706-124755-next-2-*`
+
+While working on the mobile marketplace search/header layout, the raw-photo
+guard found one complete loose Petya group directly under `assets/products/`:
+
+```text
+telegram-8767964230-20260706-124755-next-2-card-front.jpg
+telegram-8767964230-20260706-124755-next-2-front.jpg
+telegram-8767964230-20260706-124755-next-2-back.jpg
+```
+
+These files were not part of the search/header task and were **not** mapped to
+a product or published. They need a separate manual photo-identification pass
+before any move into a brand folder or `data/product_overrides.json` update.
+Leave the raw files untouched until then.
+
 ## RESOLVED 2026-07-08 (remaining 5 groups) — `telegram-8767964230-20260706-*` (two live batches)
 
 Two fresh batches landed on disk **during local sessions** (~10:28-10:40 and

@@ -42,7 +42,7 @@ def render_header(config):
 {nav_links}
   </nav>
   <label class="header-search" aria-label="Поиск по товарам">
-    <span aria-hidden="true">⌕</span>
+    <span class="header-search-icon" aria-hidden="true"></span>
     <input id="headerSearchInput" type="search" placeholder="Найти товар" />
   </label>
   <button class="search-toggle" id="toggleSearch" type="button" aria-label="Открыть поиск" aria-expanded="false">
