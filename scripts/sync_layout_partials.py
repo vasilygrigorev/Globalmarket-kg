@@ -34,9 +34,8 @@ def render_header(config):
   <button class="menu-toggle" id="toggleMenu" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="categoryMenu">
     <span class="menu-icon" aria-hidden="true"></span>
   </button>
-  <a class="brand" href="/#top" aria-label="Global Market">
-    <img class="brand-orb" src="/assets/brand/globalmarket-tech-orb-tight.jpg" alt="" aria-hidden="true" />
-    <img class="brand-wordmark" src="/assets/brand/globalmarket-wordmark.svg" alt="GlobalMarket" />
+  <a class="brand brand-text-lockup" href="/#top" aria-label="Global Market">
+    <span class="brand-wordmark-text" aria-hidden="true"><span class="brand-wordmark-global">GLOBAL</span><span class="brand-wordmark-market">MARKET</span></span>
   </a>
   <nav class="main-nav" aria-label="Основная навигация">
 {nav_links}
@@ -67,8 +66,7 @@ def render_footer(config):
     return f"""<footer class="site-footer" aria-label="Информация о магазине">
   <div class="site-footer-inner">
     <a class="footer-brand" href="/#top" aria-label="Global Market KG">
-      <img class="footer-brand-orb" src="/assets/brand/globalmarket-tech-orb-tight.jpg" alt="" aria-hidden="true" />
-      <img class="footer-brand-wordmark" src="/assets/brand/globalmarket-wordmark.svg" alt="GlobalMarket" />
+      <span class="footer-wordmark-text" aria-hidden="true"><span class="footer-wordmark-global">GLOBAL</span><span class="footer-wordmark-market">MARKET</span></span>
     </a>
     <nav class="footer-links" aria-label="Ссылки внизу страницы">
 {footer_links}

@@ -115,10 +115,10 @@ def render_page(pages):
   <meta name="twitter:title" content="Разделы магазина Global Market KG">
   <meta name="twitter:description" content="Категории, подборки и бренды Global Market KG.">
   <meta name="twitter:image" content="{SITE_URL}/assets/hero-green-wide-v1.png">
-  <link rel="stylesheet" href="/styles.css?v=20260714-marketplace-search">
+  <link rel="stylesheet" href="/styles.css?v=20260715-ocean-market">
   <script type="application/ld+json">{json_ld}</script>
   <style>
-    body.catalog-index-page {{ margin: 0; padding-top: var(--site-header-height, 58px); background: #f2f3f5; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }}
+    body.catalog-index-page {{ margin: 0; padding-top: var(--site-header-height, 58px); background: #edf5f4; color: #162a32; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }}
     .catalog-index-main {{ max-width: 1120px; margin: 0 auto; padding: 30px 18px 42px; }}
     .catalog-index-hero {{ display: grid; gap: 12px; padding: 22px 0 24px; }}
     .catalog-index-hero h1 {{ margin: 0; font-size: clamp(38px, 7vw, 68px); font-weight: 300; line-height: 1.02; }}

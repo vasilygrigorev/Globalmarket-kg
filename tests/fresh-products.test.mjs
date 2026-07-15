@@ -61,12 +61,20 @@ test("fresh cards add to cart without opening the cart drawer", () => {
   assert.doesNotMatch(handler, /setCartOpen\(true\)/, "adding from a fresh card must not force-open the cart drawer");
 });
 
-test("CSS hides category tiles on mobile while keeping the catalog directory and showing fresh products", () => {
+test("CSS renders the marketplace category rail and fresh products on the mobile home", () => {
   const mobileBlock = css.match(/@media \(max-width: 680px\) \{[\s\S]*/);
   assert.ok(mobileBlock, "mobile breakpoint not found");
   const mobile = mobileBlock[0];
-  assert.match(mobile, /\.quick-category-grid\s*\{[^}]*display:\s*none/s, "category tiles must not take vertical space on mobile");
-  assert.doesNotMatch(mobile, /\.catalog-directory\s*\{[^}]*display:\s*none/s, "the compact catalog directory breadcrumb must stay reachable");
+  assert.match(
+    mobile,
+    /body\.home-page\s+\.quick-category-grid\s*\{[^}]*display:\s*flex\s*!important/s,
+    "the mobile marketplace home must expose the horizontal category rail",
+  );
+  assert.match(
+    mobile,
+    /body\.home-page\s+\.catalog-directory\s*\{[^}]*display:\s*none/s,
+    "the redundant breadcrumb stays hidden on the redesigned home; category access is the rail plus header menu",
+  );
   assert.match(mobile, /\.fresh-products(-heading|-row)?\s*\{/, "fresh-products mobile styling missing");
 });
 

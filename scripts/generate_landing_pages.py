@@ -546,11 +546,11 @@ def render_page(target, products, product_page_by_id, all_targets):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(description)}">
   <meta name="twitter:image" content="{escape(share_image)}">
-  <link rel="stylesheet" href="/styles.css?v=20260714-marketplace-search">
+  <link rel="stylesheet" href="/styles.css?v=20260715-ocean-market">
   <script type="application/ld+json">{breadcrumb_json_ld(target, canonical)}</script>
   <script type="application/ld+json">{item_list_json_ld(products, product_page_by_id)}</script>
   <style>
-    body.landing-page {{ margin: 0; padding-top: var(--site-header-height, 58px); background: #f2f3f5; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }}
+    body.landing-page {{ margin: 0; padding-top: var(--site-header-height, 58px); background: #edf5f4; color: #162a32; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }}
     .landing-main {{ max-width: 1120px; margin: 0 auto; padding: 26px 18px 36px; }}
     .landing-hero {{ display: grid; gap: 14px; padding: 28px 0 22px; }}
     .breadcrumbs {{ display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 14px; color: #6e6e73; }}

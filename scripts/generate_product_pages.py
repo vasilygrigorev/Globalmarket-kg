@@ -621,7 +621,7 @@ def render_page(product, related, slug, landing_lookup=None):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(meta_description)}">
   <meta name="twitter:image" content="{escape(absolute_url(main_image))}">
-  <link rel="stylesheet" href="/styles.css?v=20260714-marketplace-search">
+  <link rel="stylesheet" href="/styles.css?v=20260715-ocean-market">
   <script type="application/ld+json">{json_ld}</script>
   <script type="application/ld+json">{breadcrumb_json_ld}</script>
   <style>
@@ -686,13 +686,14 @@ def render_page(product, related, slug, landing_lookup=None):
        button. Only the grid container itself is defined here. */
     .related-grid {{ display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }}
     body.product-page .site-header {{ z-index: 20; }}
-    .site-footer {{ margin: 32px auto 0; padding: 28px 18px calc(32px + env(safe-area-inset-bottom)); color: #636366; background: #fff; border-top: 1px solid #e4e4e7; }}
+    .site-footer {{ margin: 32px auto 0; padding: 28px 18px calc(32px + env(safe-area-inset-bottom)); color: rgba(239, 255, 251, 0.82); background: linear-gradient(120deg, #002d3b, #005461 60%, #008f89); border: 0; }}
     .site-footer-inner {{ display: grid; gap: 18px; max-width: 980px; margin: 0 auto; }}
     .footer-brand {{ display: inline-flex; align-items: center; width: fit-content; gap: 9px; }}
-    .footer-brand-orb {{ display: block; width: 32px; height: 32px; border-radius: 50%; object-fit: cover; filter: brightness(1.16) saturate(0.94); -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 58%, rgba(0, 0, 0, 0.86) 66%, transparent 76%); mask-image: radial-gradient(circle at 50% 50%, #000 58%, rgba(0, 0, 0, 0.86) 66%, transparent 76%); }}
-    .footer-brand-wordmark {{ display: block; width: min(214px, 56vw); height: auto; }}
+    .footer-wordmark-text {{ display: inline-flex; align-items: baseline; font-family: "Avenir Next", Avenir, "Trebuchet MS", Arial, sans-serif; font-size: clamp(18px, 3vw, 25px); font-weight: 750; letter-spacing: 0.04em; line-height: 1; white-space: nowrap; }}
+    .footer-wordmark-global {{ color: #f3fbf9; }}
+    .footer-wordmark-market {{ color: #42e0ce; }}
     .footer-links {{ display: flex; gap: 14px; flex-wrap: wrap; }}
-    .footer-links a {{ color: #4b5563; text-decoration: none; }}
+    .footer-links a {{ color: #f0fffc; text-decoration: none; }}
     .bottom-page-actions {{ display: flex; align-items: center; gap: 10px; max-width: 980px; margin: 18px auto 0; padding: 0 14px; }}
     .bottom-page-action {{ display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 0 13px; border: 1px solid #d2d2d7; border-radius: 8px; color: #1d1d1f; background: rgba(255, 255, 255, 0.92); font-weight: 750; text-decoration: none; cursor: pointer; }}
     .bottom-page-action svg {{ width: 18px; height: 18px; }}
