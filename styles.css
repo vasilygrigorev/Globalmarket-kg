@@ -3472,10 +3472,13 @@ textarea {
     min-height: 206px;
     height: 206px;
     margin: 0 var(--gm-mobile-storefront-gutter);
-    border: 1px solid rgba(142, 234, 226, 0.38);
+    border: 1px solid rgba(152, 231, 224, 0.58);
+    border-top-color: rgba(222, 255, 252, 0.78);
     border-radius: 22px;
     background: #003644;
-    box-shadow: 0 16px 30px rgba(0, 30, 38, 0.18);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 16px 30px rgba(0, 30, 38, 0.18);
   }
 
   body.home-page .hero-track,
