@@ -3358,16 +3358,18 @@ textarea {
   }
 
   body.home-page .site-header {
+    top: -1px;
     grid-template-columns: 42px minmax(0, 1fr);
     grid-template-rows: 42px 52px;
     gap: 3px 8px;
-    min-height: 116px;
-    padding: 8px var(--gm-mobile-storefront-gutter) 11px;
+    min-height: 117px;
+    padding: 9px var(--gm-mobile-storefront-gutter) 11px;
+    border: 0;
     background:
       linear-gradient(104deg, rgba(0, 20, 33, 0.72), rgba(0, 48, 58, 0.42) 58%, rgba(0, 103, 98, 0.28)),
       url("/assets/brand/ocean-light-threads-v1.jpg") center 13% / cover no-repeat,
       #002c3a;
-    box-shadow: 0 4px 18px rgba(0, 36, 47, 0.2);
+    box-shadow: none;
   }
 
   body.home-page .site-header .menu-toggle {
@@ -3442,6 +3444,7 @@ textarea {
     position: relative;
     isolation: isolate;
     overflow: hidden;
+    margin-top: -1px;
     background: var(--gm-paper);
   }
 
@@ -3748,8 +3751,9 @@ textarea {
 
   body.home-page .product-card {
     display: grid;
-    grid-template-columns: minmax(0, 48%) minmax(0, 52%);
-    min-height: 168px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    min-height: 0;
     overflow: hidden;
     border: 0;
     border-radius: 17px;
@@ -3758,9 +3762,10 @@ textarea {
   }
 
   body.home-page .product-visual {
-    min-height: 168px;
-    height: 100%;
-    aspect-ratio: auto;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 1 / 1;
     border: 0;
     border-radius: 0;
     background: #e9f2f1;
@@ -3818,9 +3823,10 @@ textarea {
   body.home-page .product-info {
     display: flex;
     min-width: 0;
-    padding: 10px 9px 8px;
+    min-height: 132px;
+    padding: 10px 10px 9px;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
   }
 
   body.home-page .product-copy {
@@ -3832,7 +3838,7 @@ textarea {
     display: -webkit-box;
     overflow: hidden;
     color: #1d343b;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 750;
     letter-spacing: 0;
     line-height: 1.15;
@@ -3846,7 +3852,7 @@ textarea {
     overflow: hidden;
     min-height: 0;
     color: #436067;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.2;
   }
 
@@ -3858,7 +3864,7 @@ textarea {
   body.home-page .product-kind-line span {
     margin-left: 3px;
     color: #71878b;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   body.home-page .product-variant-line {
@@ -3866,7 +3872,7 @@ textarea {
     overflow: hidden;
     min-height: 0;
     color: #6d8388;
-    font-size: 9px;
+    font-size: 10px;
     line-height: 1.15;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
