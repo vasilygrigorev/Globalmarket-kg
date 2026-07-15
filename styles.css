@@ -3353,6 +3353,7 @@ textarea {
 @media (max-width: 680px) {
   body.home-page {
     --site-header-height: 116px;
+    --gm-mobile-storefront-gutter: 10px;
     background: var(--gm-paper);
   }
 
@@ -3361,10 +3362,11 @@ textarea {
     grid-template-rows: 42px 52px;
     gap: 3px 8px;
     min-height: 116px;
-    padding: 8px 14px 11px;
+    padding: 8px var(--gm-mobile-storefront-gutter) 11px;
     background:
-      radial-gradient(circle at 92% 8%, rgba(51, 222, 203, 0.28), transparent 32%),
-      linear-gradient(122deg, #00242f 0%, #003d49 57%, #007f79 135%);
+      radial-gradient(circle at 88% -18%, rgba(42, 232, 205, 0.34), transparent 41%),
+      radial-gradient(circle at 14% 126%, rgba(0, 151, 147, 0.28), transparent 42%),
+      linear-gradient(122deg, #001f2d 0%, #003d4a 55%, #007f79 132%);
     box-shadow: 0 4px 18px rgba(0, 36, 47, 0.2);
   }
 
@@ -3438,14 +3440,16 @@ textarea {
     flex-direction: column;
     overflow: hidden;
     background:
-      linear-gradient(180deg, #003845 0, #00424d 276px, var(--gm-paper) 276px, var(--gm-paper) 100%);
+      radial-gradient(circle at 88% -9%, rgba(49, 224, 202, 0.3), transparent 265px),
+      radial-gradient(ellipse at 8% 252px, rgba(0, 153, 151, 0.24), transparent 230px),
+      linear-gradient(162deg, #001f2d 0, #003f4c 175px, #00726f 294px, var(--gm-paper) 295px, var(--gm-paper) 100%);
   }
 
   body.home-page .hero {
     order: 1;
     min-height: 206px;
     height: 206px;
-    margin: 0 14px;
+    margin: 0 var(--gm-mobile-storefront-gutter);
     border: 1px solid rgba(142, 234, 226, 0.38);
     border-radius: 22px;
     background: #003644;
@@ -3551,7 +3555,7 @@ textarea {
   body.home-page .quick-categories {
     order: 2;
     z-index: 2;
-    margin: 16px 14px 2px;
+    margin: 16px var(--gm-mobile-storefront-gutter) 2px;
     padding: 11px 9px 8px;
     border: 0;
     border-radius: 18px;
@@ -3679,7 +3683,7 @@ textarea {
 
   body.home-page .catalog-section {
     order: 4;
-    padding: 19px 14px 14px;
+    padding: 19px var(--gm-mobile-storefront-gutter) 14px;
     background: var(--gm-paper);
   }
 
@@ -4115,7 +4119,7 @@ body.product-page {
     --site-header-height: 116px;
   }
 
-  .site-header {
+  body:not(.home-page) .site-header {
     grid-template-columns: 42px minmax(0, 1fr);
     grid-template-rows: 42px 50px;
     gap: 8px;
