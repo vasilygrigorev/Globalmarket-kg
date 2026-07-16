@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "GM Quicksand";
+  src: url("/assets/fonts/quicksand/quicksand-light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GM Quicksand";
+  src: url("/assets/fonts/quicksand/quicksand-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --ink: #1d1d1f;
   --muted: #6e6e73;
@@ -3354,6 +3370,17 @@ textarea {
   body.home-page {
     --site-header-height: 116px;
     --gm-mobile-storefront-gutter: 10px;
+    --gm-mobile-ocean-stage-height: 433px;
+    --gm-mobile-ocean-stage-background:
+      radial-gradient(circle at 92% 72%, rgba(0, 210, 178, 0.22), transparent 30%),
+      linear-gradient(180deg, rgba(0, 19, 31, 0.08) 0%, rgba(0, 42, 51, 0.08) 72%, var(--gm-paper) 100%),
+      linear-gradient(108deg, rgba(0, 20, 33, 0.5), rgba(0, 93, 88, 0.12)),
+      url("/assets/brand/ocean-light-threads-v1.jpg");
+    --gm-mobile-ocean-stage-size:
+      100% var(--gm-mobile-ocean-stage-height),
+      100% var(--gm-mobile-ocean-stage-height),
+      100% var(--gm-mobile-ocean-stage-height),
+      100% auto;
     background: var(--gm-paper);
   }
 
@@ -3365,10 +3392,11 @@ textarea {
     min-height: 117px;
     padding: 9px var(--gm-mobile-storefront-gutter) 11px;
     border: 0;
-    background:
-      linear-gradient(104deg, rgba(0, 20, 33, 0.72), rgba(0, 48, 58, 0.42) 58%, rgba(0, 103, 98, 0.28)),
-      url("/assets/brand/ocean-light-threads-v1.jpg") center 13% / cover no-repeat,
-      #002c3a;
+    background-color: #002c3a;
+    background-image: var(--gm-mobile-ocean-stage-background);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: var(--gm-mobile-ocean-stage-size);
     box-shadow: none;
   }
 
@@ -3396,12 +3424,12 @@ textarea {
   }
 
   body.home-page .site-header .brand-wordmark-text {
-    gap: 0.2em;
+    gap: 0.26em;
     color: #ffffff;
-    font-family: ui-rounded, "SF Pro Rounded", "Avenir Next Rounded", "Avenir Next", sans-serif;
-    font-size: clamp(17px, 5vw, 21px);
+    font-family: "GM Quicksand", ui-rounded, "SF Pro Rounded", sans-serif;
+    font-size: clamp(18px, 5.15vw, 22px);
     font-weight: 400;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.075em;
     line-height: 1;
     text-shadow: 0 1px 8px rgba(0, 18, 28, 0.42);
   }
@@ -3454,11 +3482,11 @@ textarea {
     z-index: 0;
     inset: 0 0 auto;
     height: 316px;
-    background:
-      linear-gradient(180deg, rgba(0, 22, 34, 0.16) 0%, rgba(0, 38, 47, 0.08) 70%, var(--gm-paper) 100%),
-      linear-gradient(108deg, rgba(0, 20, 33, 0.52), rgba(0, 86, 82, 0.16)),
-      url("/assets/brand/ocean-light-threads-v1.jpg") center 68% / cover no-repeat,
-      #003b49;
+    background-color: #003b49;
+    background-image: var(--gm-mobile-ocean-stage-background);
+    background-position: center calc(0px - var(--site-header-height));
+    background-repeat: no-repeat;
+    background-size: var(--gm-mobile-ocean-stage-size);
     pointer-events: none;
   }
 
@@ -3471,7 +3499,7 @@ textarea {
     order: 1;
     min-height: 206px;
     height: 206px;
-    margin: 0 var(--gm-mobile-storefront-gutter);
+    margin: 8px var(--gm-mobile-storefront-gutter) 0;
     border: 1px solid rgba(152, 231, 224, 0.58);
     border-top-color: rgba(222, 255, 252, 0.78);
     border-radius: 22px;
@@ -3479,6 +3507,18 @@ textarea {
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.1),
       0 16px 30px rgba(0, 30, 38, 0.18);
+  }
+
+  body.home-page .hero::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    inset: 0;
+    display: block;
+    border: 1px solid rgba(190, 249, 243, 0.72);
+    border-radius: inherit;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+    pointer-events: none;
   }
 
   body.home-page .hero-track,
@@ -4033,10 +4073,11 @@ body.product-page {
 .footer-wordmark-text {
   display: inline-flex;
   align-items: baseline;
-  font-family: ui-rounded, "SF Pro Rounded", "Avenir Next Rounded", "Avenir Next", Avenir, sans-serif;
+  gap: 0.24em;
+  font-family: "GM Quicksand", ui-rounded, "SF Pro Rounded", sans-serif;
   font-size: clamp(17px, 1.8vw, 25px);
   font-weight: 400;
-  letter-spacing: 0.085em;
+  letter-spacing: 0.075em;
   line-height: 1;
   white-space: nowrap;
 }
