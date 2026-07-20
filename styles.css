@@ -1180,6 +1180,12 @@ textarea {
   flex: 0 0 auto;
 }
 
+.checkout-submit-note {
+  margin: -4px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
 .catalog-layout {
   display: block;
   gap: 28px;

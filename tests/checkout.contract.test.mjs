@@ -33,6 +33,20 @@ test("checkout has the contact + attribution fields the payload needs", () => {
   }
 });
 
+test("cart opens guest checkout directly and SMS login stays in the cabinet", () => {
+  assert.match(html, /<a(?=[^>]*id="checkoutLink")(?=[^>]*href="#checkoutForm")[^>]*>Оформить без регистрации<\/a>/);
+  const checkoutSection = html.match(/<section class="checkout-section" id="checkout">[\s\S]*?<\/section>/)?.[0] || "";
+  assert.match(checkoutSection, /id="checkoutForm"/);
+  assert.ok(!/myOrdersLoginForm|Получить код по SMS/.test(checkoutSection), "checkout must not contain SMS authentication");
+  assert.match(appJs, /checkoutForm\.scrollIntoView\(\{ behavior: "smooth", block: "start" \}\)/);
+});
+
+test("guest checkout explains automatic manager email delivery", () => {
+  assert.match(html, /Менеджер получит заказ и ваши контакты по email/);
+  assert.match(html, />Отправить заказ менеджеру</);
+  assert.match(appJs, /Заказ отправлен менеджеру\. Открываем WhatsApp для связи/);
+});
+
 test("backend save is flag-gated and falls back to WhatsApp", () => {
   assert.match(appJs, /function buildOrderPayload\(/);
   assert.match(appJs, /async function saveOrderViaApi\(/);

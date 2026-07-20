@@ -2411,9 +2411,20 @@ backToTopButton?.addEventListener("click", () => {
 repeatLastOrderButton?.addEventListener("click", repeatLastOrder);
 document.querySelector("#closeCart").addEventListener("click", () => setCartOpen(false));
 document.querySelector("#closeProductModal").addEventListener("click", closeProductModal);
-document.querySelector("#checkoutLink").addEventListener("click", () => setCartOpen(false));
-
 const checkoutForm = document.querySelector("#checkoutForm");
+
+document.querySelector("#checkoutLink").addEventListener("click", (event) => {
+  event.preventDefault();
+  setCartOpen(false);
+  window.history.replaceState(null, "", "#checkoutForm");
+  checkoutForm.scrollIntoView({ behavior: "smooth", block: "start" });
+  window.setTimeout(() => {
+    const firstEmptyRequired = [...checkoutForm.querySelectorAll("input[required]")]
+      .find((input) => !input.value.trim());
+    (firstEmptyRequired || checkoutForm.querySelector("input"))?.focus({ preventScroll: true });
+  }, 350);
+});
+
 checkoutForm.addEventListener("input", () => saveCustomerDraftFromForm(checkoutForm));
 checkoutForm.addEventListener("change", () => saveCustomerDraftFromForm(checkoutForm));
 
@@ -2609,11 +2620,14 @@ checkoutForm.addEventListener("submit", async (event) => {
     const lookupCode = generateOrderLookupCode();
     const message = orderMessage(formData, lookupCode);
     let whatsapp = `https://wa.me/${catalogSettings.manager_whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
-    // If the backend is enabled, save the order first; always fall back to WhatsApp.
+    // Save the guest order first. The API also emails the manager; WhatsApp
+    // remains the customer-facing continuation and the no-backend fallback.
     const saved = await saveOrderViaApi(buildOrderPayload(formData, message, lookupCode));
     if (saved && saved.manager_whatsapp_url) whatsapp = saved.manager_whatsapp_url;
     saveLastOrder();
-    formStatus.innerHTML = `Открываем WhatsApp. Если он не открылся, <a href="${whatsapp}" target="_blank" rel="noreferrer">нажмите здесь</a>.`;
+    formStatus.innerHTML = saved
+      ? `Заказ отправлен менеджеру. Открываем WhatsApp для связи. Если он не открылся, <a href="${whatsapp}" target="_blank" rel="noreferrer">нажмите здесь</a>.`
+      : `Открываем WhatsApp для отправки заказа менеджеру. Если он не открылся, <a href="${whatsapp}" target="_blank" rel="noreferrer">нажмите здесь</a>.`;
     window.location.href = whatsapp;
   } finally {
     checkoutSubmitting = false;

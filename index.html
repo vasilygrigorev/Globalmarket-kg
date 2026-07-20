@@ -203,14 +203,6 @@
             Бесплатная доставка от <strong><span id="deliveryThresholdCheckout">10 000</span> сом</strong>. Если сумма меньше, условия доставки согласуются вручную.
           </div>
         </div>
-        <section class="customer-card" aria-label="Клиентская цена">
-          <div>
-            <p class="eyebrow">Клиентская цена</p>
-            <h3 id="customerCardTitle">Войдите по телефону для клиентской цены</h3>
-            <p id="customerCardText">Вход по SMS-коду открывает клиентскую цену, историю заказов и личный кабинет — без пароля и отдельной регистрации.</p>
-          </div>
-          <a class="secondary-link" href="#myOrders">Войти по телефону</a>
-        </section>
         <form class="checkout-form" id="checkoutForm">
           <label>
             Имя
@@ -256,7 +248,8 @@
             <input name="marketingConsent" type="checkbox" value="yes" />
             <span>Согласен получать обратную связь и акции</span>
           </label>
-          <button class="primary-button" type="submit">Отправить заказ в WhatsApp</button>
+          <button class="primary-button" type="submit">Отправить заказ менеджеру</button>
+          <p class="checkout-submit-note">Вход и регистрация не требуются. Менеджер получит заказ и ваши контакты по email, после чего откроется WhatsApp.</p>
           <p class="form-status" id="formStatus" role="status"></p>
         </form>
       </section>
@@ -412,7 +405,7 @@
             <strong id="cartTotal">0 сом</strong>
           </div>
           <button class="repeat-order-button" id="repeatLastOrder" type="button" hidden>Повторить последний заказ</button>
-          <a class="primary-link full" href="#checkout" id="checkoutLink">К оформлению</a>
+          <a class="primary-link full" href="#checkoutForm" id="checkoutLink">Оформить без регистрации</a>
         </div>
       </div>
     </aside>
