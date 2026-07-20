@@ -27,18 +27,32 @@ test("checkout form fields match formData.get() usage in app.js", () => {
   assert.deepEqual(missing, [], `app.js reads form fields not present in index.html: ${missing.join(", ")}`);
 });
 
-test("checkout has the contact + attribution fields the payload needs", () => {
-  for (const field of ["name", "phone", "city", "region", "address", "comment", "customerSource", "promoCode", "marketingConsent"]) {
-    assert.match(html, new RegExp(`name="${field}"`), `index.html missing checkout field name="${field}"`);
+test("checkout keeps only the compact customer fields", () => {
+  const checkoutSection = html.match(/<section class="checkout-section" id="checkout">[\s\S]*?<\/section>/)?.[0] || "";
+  for (const field of ["name", "phone", "address", "comment", "marketingConsent"]) {
+    assert.match(checkoutSection, new RegExp(`name="${field}"`), `checkout missing field name="${field}"`);
+  }
+  for (const field of ["city", "region", "customerSource", "promoCode"]) {
+    assert.doesNotMatch(checkoutSection, new RegExp(`name="${field}"`), `checkout must not show field name="${field}"`);
+  }
+  for (const label of ["Откуда узнали о нас", "Промокод / код рекламы", "Город", "Регион"]) {
+    assert.doesNotMatch(checkoutSection, new RegExp(label), `checkout must not show ${label}`);
   }
 });
 
 test("cart opens guest checkout directly and SMS login stays in the cabinet", () => {
-  assert.match(html, /<a(?=[^>]*id="checkoutLink")(?=[^>]*href="#checkoutForm")[^>]*>Оформить без регистрации<\/a>/);
+  assert.match(html, /<a(?=[^>]*id="checkoutLink")(?=[^>]*href="#checkoutForm")[^>]*>Оформить заказ<\/a>/);
   const checkoutSection = html.match(/<section class="checkout-section" id="checkout">[\s\S]*?<\/section>/)?.[0] || "";
   assert.match(checkoutSection, /id="checkoutForm"/);
   assert.ok(!/myOrdersLoginForm|Получить код по SMS/.test(checkoutSection), "checkout must not contain SMS authentication");
   assert.match(appJs, /checkoutForm\.scrollIntoView\(\{ behavior: "smooth", block: "start" \}\)/);
+});
+
+test("logged-in cabinet has a compact personalized welcome", () => {
+  assert.match(html, /id="cabinetGreetingName"/);
+  assert.match(html, /Здравствуйте,/);
+  assert.match(appJs, /cabinetGreetingName\.textContent = firstName/);
+  assert.match(html, /<details class="cabinet-block" id="profileBlock">/);
 });
 
 test("guest checkout explains automatic manager email delivery", () => {

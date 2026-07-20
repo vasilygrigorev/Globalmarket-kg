@@ -13,7 +13,7 @@ from xml.sax.saxutils import escape
 
 import xlrd
 
-from freshness import restock_date
+from freshness import first_seen_date, restock_date
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -628,7 +628,8 @@ def connect_db():
             last_imported_at text,
             source_file text,
             source_hash text,
-            restocked_at text
+            restocked_at text,
+            first_seen_at text
         );
         create table if not exists products (
             product_id text primary key,
@@ -700,6 +701,8 @@ def connect_db():
         conn.execute("alter table source_products add column source_code text")
     if "restocked_at" not in existing_source_columns:
         conn.execute("alter table source_products add column restocked_at text")
+    if "first_seen_at" not in existing_source_columns:
+        conn.execute("alter table source_products add column first_seen_at text")
     return conn
 
 
@@ -773,9 +776,14 @@ def import_to_db(conn, data, settings, source_path):
         item["source_code"] = normalize_source_code(item.get("source_code"))
         item["source_id"] = resolve_import_source_id(conn, item)
         prev = conn.execute(
-            "select stock_quantity, restocked_at from source_products where source_id = ?",
+            "select stock_quantity, restocked_at, first_seen_at from source_products where source_id = ?",
             (item["source_id"],),
         ).fetchone()
+        item["first_seen_at"] = first_seen_date(
+            prev is not None,
+            prev["first_seen_at"] if prev else None,
+            data["stock_date"],
+        )
         item["restocked_at"] = restock_date(
             prev["stock_quantity"] if prev else None,
             item["stock_quantity"],
@@ -787,9 +795,9 @@ def import_to_db(conn, data, settings, source_path):
             """
             insert into source_products(
                 source_id, source_code, raw_name, raw_group, unit, base_price_usd, stock_quantity, stock_amount_usd,
-                warehouse, stock_date, last_imported_at, source_file, source_hash, restocked_at
+                warehouse, stock_date, last_imported_at, source_file, source_hash, restocked_at, first_seen_at
             )
-            values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             on conflict(source_id) do update set
                 source_code=excluded.source_code,
                 raw_name=excluded.raw_name,
@@ -803,7 +811,8 @@ def import_to_db(conn, data, settings, source_path):
                 last_imported_at=excluded.last_imported_at,
                 source_file=excluded.source_file,
                 source_hash=excluded.source_hash,
-                restocked_at=excluded.restocked_at
+                restocked_at=excluded.restocked_at,
+                first_seen_at=coalesce(source_products.first_seen_at, excluded.first_seen_at)
             """,
             (
                 item["source_id"],
@@ -820,6 +829,7 @@ def import_to_db(conn, data, settings, source_path):
                 str(source_path),
                 item_hash,
                 item["restocked_at"],
+                item["first_seen_at"],
             ),
         )
         product_id = f"prd_{item['source_id'].split('_', 1)[1]}"
@@ -1028,7 +1038,7 @@ def generate_outputs(conn, settings):
           p.product_id, p.status, p.visibility, p.clean_title, p.short_title, p.description,
           p.brand, p.product_type, p.unit as product_unit, p.placeholder_key, p.image_id, p.search_text,
           sp.source_id, sp.source_code, sp.raw_name, sp.raw_group, sp.unit, sp.base_price_usd,
-          sp.stock_quantity, sp.stock_amount_usd, sp.warehouse, sp.stock_date, sp.restocked_at,
+          sp.stock_quantity, sp.stock_amount_usd, sp.warehouse, sp.stock_date, sp.restocked_at, sp.first_seen_at,
           c.category_id, c.title as category_title
         from products p
         join source_products sp on sp.source_id = p.source_id
@@ -1063,6 +1073,7 @@ def generate_outputs(conn, settings):
             "stockQuantity": row["stock_quantity"],
             "stockAmountUsd": row["stock_amount_usd"],
             "restockedAt": row["restocked_at"],
+            "firstSeenAt": row["first_seen_at"],
             "status": row["status"],
             "basePriceUsd": row["base_price_usd"],
             "wholesalePriceKgs": wholesale,
@@ -1189,10 +1200,16 @@ def generate_outputs(conn, settings):
         if count:
             categories.append({"id": category_id, "title": category["title"], "count": count, "icon": category["icon"]})
 
+    latest_stock_row = conn.execute(
+        "select max(stock_date) as latest_stock_date from source_products where stock_date is not null"
+    ).fetchone()
+    latest_stock_date = latest_stock_row["latest_stock_date"] if latest_stock_row else None
+
     CATALOG_PATH.write_text(
         json.dumps(
             {
                 "generatedAt": datetime.now(timezone.utc).isoformat(),
+                "latestStockDate": latest_stock_date,
                 "settings": settings,
                 "categories": categories,
                 "products": products,

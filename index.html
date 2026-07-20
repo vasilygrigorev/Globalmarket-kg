@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon" href="/assets/brand/globalmarket-tech-orb.jpg" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=20260720-hero-frame-v9" />
+    <link rel="stylesheet" href="styles.css?v=20260720-product-search-policy-v1" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -213,30 +213,6 @@
             <input name="phone" type="tel" autocomplete="tel" required />
           </label>
           <label>
-            Откуда узнали о нас?
-            <select name="customerSource">
-              <option value="">Не указано</option>
-              <option value="Instagram">Instagram</option>
-              <option value="Google">Google</option>
-              <option value="WhatsApp">WhatsApp</option>
-              <option value="TikTok">TikTok</option>
-              <option value="знакомые">знакомые</option>
-              <option value="другое">другое</option>
-            </select>
-          </label>
-          <label>
-            Промокод / код рекламы
-            <input name="promoCode" autocomplete="off" />
-          </label>
-          <label>
-            Город
-            <input name="city" autocomplete="address-level2" />
-          </label>
-          <label>
-            Регион
-            <input name="region" autocomplete="address-level1" />
-          </label>
-          <label>
             Адрес
             <input name="address" autocomplete="street-address" />
           </label>
@@ -257,18 +233,22 @@
       <section class="checkout-section my-orders-section" id="myOrders">
         <div>
           <p class="eyebrow">Мои заказы</p>
-          <h2>Мои заказы и личный кабинет</h2>
-          <p>Войдите по номеру телефона и коду из SMS — увидите клиентскую цену, всю историю заказов и сможете сохранить свои данные. Или, без входа, проверьте один заказ по коду из WhatsApp-сообщения.</p>
+          <h2>Личный кабинет</h2>
+          <p>Заказы, избранное и персональные данные в одном месте. Войти можно по номеру телефона и коду из SMS.</p>
         </div>
 
         <div class="my-orders-account" id="myOrdersAccount" hidden>
           <div class="cabinet-account-row">
-            <p>Вы вошли. <span id="cabinetRoleBadge" class="cabinet-role-badge"></span></p>
+            <div class="cabinet-welcome">
+              <p class="cabinet-welcome-label">Личный кабинет</p>
+              <h3>Здравствуйте, <span id="cabinetGreetingName">Клиент</span></h3>
+              <p class="cabinet-welcome-meta"><span id="cabinetRoleBadge" class="cabinet-role-badge"></span></p>
+            </div>
             <button class="secondary-link" type="button" id="myOrdersLogoutButton">Выйти</button>
           </div>
 
-          <details class="cabinet-block" id="profileBlock" open>
-            <summary>Мои данные</summary>
+          <details class="cabinet-block" id="profileBlock">
+            <summary>Личные данные</summary>
             <form class="customer-form" id="profileForm">
               <label>
                 Имя
@@ -405,7 +385,7 @@
             <strong id="cartTotal">0 сом</strong>
           </div>
           <button class="repeat-order-button" id="repeatLastOrder" type="button" hidden>Повторить последний заказ</button>
-          <a class="primary-link full" href="#checkoutForm" id="checkoutLink">Оформить без регистрации</a>
+          <a class="primary-link full" href="#checkoutForm" id="checkoutLink">Оформить заказ</a>
         </div>
       </div>
     </aside>
@@ -421,7 +401,13 @@
     <!-- BEGIN shared-bottom-nav -->
     <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Нижняя навигация">
       <a class="bottom-nav-item" id="bottomNavHome" href="/#top" data-bottom-nav="home">
-        <span class="bottom-nav-icon bottom-nav-icon-home" aria-hidden="true"></span>
+        <span class="bottom-nav-icon bottom-nav-icon-home" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m3 11 9-8 9 8"></path>
+            <path d="M5 10v10h14V10"></path>
+            <path d="M9 20v-6h6v6"></path>
+          </svg>
+        </span>
         <span class="bottom-nav-label">Главная</span>
       </a>
       <a class="bottom-nav-item" id="bottomNavCatalog" href="/#catalog" data-bottom-nav="catalog">
@@ -449,6 +435,6 @@
     </nav>
     <!-- END shared-bottom-nav -->
 
-    <script src="app.js?v=20260720-category-icons-v1"></script>
+    <script src="app.js?v=20260720-cabinet-header-v1"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 let products = [];
+let latestStockDate = "";
 let catalogSettings = {
   default_registered_discount_percent: 3,
   free_delivery_threshold_kgs: 10000,
@@ -14,6 +15,8 @@ const customerDraftStorageKey = "globalMarketCustomerDraft";
 
 const state = {
   category: "Все",
+  audience: "",
+  audienceLabel: "",
   query: "",
   label: "",
   favoriteOnly: false,
@@ -74,6 +77,7 @@ const modalTopActions = document.querySelector("#modalTopActions");
 const customerCardTitle = document.querySelector("#customerCardTitle");
 const customerCardText = document.querySelector("#customerCardText");
 const cabinetRoleBadge = document.querySelector("#cabinetRoleBadge");
+const cabinetGreetingName = document.querySelector("#cabinetGreetingName");
 const profileForm = document.querySelector("#profileForm");
 const profileStatus = document.querySelector("#profileStatus");
 const wholesaleStatusText = document.querySelector("#wholesaleStatusText");
@@ -155,7 +159,7 @@ let promoBanners = [
 
 let quickCategoryCards = [
   { title: "Стирка", category: "Стирка и уход за бельем", image: "assets/category-icons/laundry-generic.png" },
-  { title: "Детское", category: "Уход за телом", image: "assets/category-icons/kids-generic.png" },
+  { title: "Детское", audience: "kids", image: "assets/category-icons/kids-generic.png" },
   { title: "Европа", collection: "europe", image: "assets/category-icons/europe-generic.png" },
   { title: "Бритье", category: "Бритье", image: "assets/category-icons/shaving-generic.png" },
   { title: "Дезодоранты", category: "Дезодоранты", image: "assets/category-icons/deodorants-generic.png" },
@@ -862,10 +866,6 @@ function saveCustomerDraftFromForm(form) {
   const draft = {
     name: compactValue(formData.get("name")),
     phone: compactValue(formData.get("phone")),
-    customerSource: compactValue(formData.get("customerSource")),
-    promoCode: compactValue(formData.get("promoCode")),
-    city: compactValue(formData.get("city")),
-    region: compactValue(formData.get("region")),
     address: compactValue(formData.get("address")),
     comment: compactValue(formData.get("comment")),
     marketingConsent: formData.get("marketingConsent") === "yes",
@@ -952,6 +952,7 @@ async function loadCatalog() {
     throw new Error(`Не удалось загрузить каталог: ${response.status}`);
   }
   const catalog = await response.json();
+  latestStockDate = String(catalog.latestStockDate || "").slice(0, 10);
   catalogSettings = { ...catalogSettings, ...catalog.settings };
   products = catalog.products.map((product) => ({
     ...product,
@@ -1011,6 +1012,7 @@ function renderQuickCategories(catalogCategories) {
       const count = countProductsForShortcut(card, countByCategory);
       const dataAttributes = [
         card.category ? `data-category="${escapeHtml(card.category)}"` : "",
+        card.audience ? `data-audience="${escapeHtml(card.audience)}"` : "",
         card.collection ? `data-collection="${escapeHtml(card.collection)}"` : "",
         card.query ? `data-query="${escapeHtml(card.query)}"` : "",
       ]
@@ -1028,15 +1030,16 @@ function renderQuickCategories(catalogCategories) {
 
 function productMatchesShortcut(product, item) {
   const matchesCategory = !item.category || item.category === "Все" || product.category === item.category;
+  const matchesAudience = !item.audience || product.audience === item.audience;
   const matchesCollection = !item.collection || productMatchesCollection(product, item.collection);
   const matchesQuery = !item.query || productMatchesSearchQuery(product, item.query);
-  return matchesCategory && matchesCollection && matchesQuery;
+  return matchesCategory && matchesAudience && matchesCollection && matchesQuery;
 }
 
 function countProductsForShortcut(item, countByCategory = new Map()) {
-  if (!item.category && !item.collection && !item.query) return "";
+  if (!item.category && !item.audience && !item.collection && !item.query) return "";
   if (item.category === "Все") return products.length;
-  if (item.category && !item.collection && !item.query) return countByCategory.get(item.category) || 0;
+  if (item.category && !item.audience && !item.collection && !item.query) return countByCategory.get(item.category) || 0;
   return products.filter((product) => productMatchesShortcut(product, item)).length;
 }
 
@@ -1106,9 +1109,12 @@ function renderCategoryMenu() {
   categoryMenu.innerHTML = configuredItems
     .map((item) => {
       const count = countProductsForShortcut(item, countByCategory);
-      const isActive = (item.category && state.category === item.category && !state.collection) || (item.collection && state.collection === item.collection);
+      const isActive = (item.category && state.category === item.category && !state.collection && !state.audience)
+        || (item.audience && state.audience === item.audience)
+        || (item.collection && state.collection === item.collection);
       const attributes = [
         item.category ? `data-category="${escapeHtml(item.category)}"` : "",
+        item.audience ? `data-audience="${escapeHtml(item.audience)}"` : "",
         item.collection ? `data-collection="${escapeHtml(item.collection)}"` : "",
         item.query ? `data-query="${escapeHtml(item.query)}"` : "",
         item.label ? `data-label="${escapeHtml(item.label)}"` : "",
@@ -1136,6 +1142,8 @@ function setMenuOpen(isOpen) {
 
 function selectCategory(category) {
   state.category = category;
+  state.audience = "";
+  state.audienceLabel = "";
   state.query = "";
   state.label = "";
   state.collection = "";
@@ -1153,6 +1161,8 @@ function selectCategory(category) {
 
 function selectQuery(query, label = "") {
   state.category = "Все";
+  state.audience = "";
+  state.audienceLabel = "";
   state.query = query;
   state.label = label;
   state.collection = "";
@@ -1170,6 +1180,8 @@ function selectQuery(query, label = "") {
 
 function selectCategoryQuery(category, query, label = "") {
   state.category = category;
+  state.audience = "";
+  state.audienceLabel = "";
   state.query = query;
   state.label = label;
   state.collection = "";
@@ -1187,6 +1199,8 @@ function selectCategoryQuery(category, query, label = "") {
 
 function selectCollection(collection, label = "") {
   state.category = "Все";
+  state.audience = "";
+  state.audienceLabel = "";
   state.query = "";
   state.label = "";
   state.collection = collection;
@@ -1204,10 +1218,31 @@ function selectCollection(collection, label = "") {
 
 function selectCollectionQuery(collection, query, label = "") {
   state.category = "Все";
+  state.audience = "";
+  state.audienceLabel = "";
   state.query = query;
   state.label = label || query;
   state.collection = collection;
   state.collectionLabel = displayCollectionName(collection);
+  state.favoriteOnly = false;
+  state.visibleLimit = 60;
+  searchInput.value = query;
+  headerSearchInput.value = query;
+  renderCategories();
+  renderCategoryMenu();
+  renderCatalogDirectory();
+  renderFavoriteFilter();
+  renderProducts();
+}
+
+function selectAudience(audience, label = "", query = "") {
+  state.category = "Все";
+  state.audience = audience;
+  state.audienceLabel = label || audience;
+  state.query = query;
+  state.label = query ? label || query : "";
+  state.collection = "";
+  state.collectionLabel = "";
   state.favoriteOnly = false;
   state.visibleLimit = 60;
   searchInput.value = query;
@@ -1236,10 +1271,13 @@ function applyCatalogParamsFromUrl() {
   const params = mergedUrlParams();
   const collection = params.get("collection");
   const category = params.get("category");
+  const audience = params.get("audience");
   const query = params.get("q") || params.get("query");
   const label = params.get("label") || "";
 
-  if (collection && query) {
+  if (audience) {
+    selectAudience(audience, label || (audience === "kids" ? "Детское" : audience), query || "");
+  } else if (collection && query) {
     selectCollectionQuery(collection, query, label || query);
   } else if (collection) {
     selectCollection(collection, label || displayCollectionName(collection));
@@ -1265,6 +1303,9 @@ function renderCatalogDirectory() {
   if (state.category !== "Все") {
     parts.push({ title: displayCategoryName(state.category), category: state.category });
   }
+  if (state.audience) {
+    parts.push({ title: state.audienceLabel || state.audience, audience: state.audience });
+  }
   if (state.collection) {
     parts.push({ title: state.collectionLabel || displayCollectionName(state.collection), collection: state.collection });
   }
@@ -1276,6 +1317,8 @@ function renderCatalogDirectory() {
       const isCurrent = index === parts.length - 1;
       const attrs = part.query
         ? `data-query="${escapeHtml(part.query)}" data-label="${escapeHtml(part.title)}"`
+        : part.audience
+          ? `data-audience="${escapeHtml(part.audience)}" data-label="${escapeHtml(part.title)}"`
         : part.collection
           ? `data-collection="${escapeHtml(part.collection)}" data-label="${escapeHtml(part.title)}"`
           : `data-category="${escapeHtml(part.category)}"`;
@@ -1331,10 +1374,11 @@ function getVisibleProducts() {
   const filtered = products.filter((product) => {
     const matchesFavorite = !state.favoriteOnly || favoriteIds.has(product.id);
     const matchesCategory = state.category === "Все" || product.category === state.category;
+    const matchesAudience = !state.audience || product.audience === state.audience;
     const matchesCollection = productMatchesCollection(product, state.collection);
     const matchesPrice = productPrice(product) <= state.maxPrice;
     const matchesQuery = productMatchesSearchQuery(product, normalizedQuery);
-    return matchesFavorite && matchesCategory && matchesCollection && matchesPrice && matchesQuery;
+    return matchesFavorite && matchesCategory && matchesAudience && matchesCollection && matchesPrice && matchesQuery;
   });
 
   const searchContext = state.sort === "featured" && normalizedQuery ? buildSearchContext(normalizedQuery) : null;
@@ -1345,7 +1389,7 @@ function getVisibleProducts() {
     return featuredProductCompare(a, b);
   });
 
-  if (state.sort === "featured" && state.category === "Все" && !state.collection && !normalizedQuery) {
+  if (state.sort === "featured" && state.category === "Все" && !state.audience && !state.collection && !normalizedQuery) {
     return diversifyFeaturedProducts(sorted);
   }
 
@@ -1417,48 +1461,50 @@ function diversifyProductGroup(sortedProducts) {
   return result;
 }
 
-// Deterministic "Свежие товары" pick: active products, preferring a real photo
-// and the Новинка badge, then rating, capped at 2 per category/brand so the
-// strip doesn't turn into 10 near-identical items from one line.
+function freshProductGroup(product) {
+  const text = `${product.productType || ""} ${product.title || ""} ${product.categoryId || ""}`.toLowerCase();
+  if (/порош/.test(text)) return "01-powder";
+  if (/шампун/.test(text)) return "02-shampoo";
+  if (/дезодорант|антиперспирант|\bстик\b/.test(text)) return "03-deodorant";
+  if (/зубн.*щ[её]тк|щ[её]тк.*зубн/.test(text)) return "04-toothbrush";
+  return `10-${product.productType || product.categoryId || "other"}`.toLowerCase();
+}
+
+// Only stable 1C identities first seen in the latest stock export are fresh.
+// Round-robin by product type gives shoppers a broad overview instead of a
+// row filled with variants of one shampoo or detergent.
 function freshProducts(limit = 16) {
-  const eligible = products.filter((product) => product.status === "active");
+  if (!latestStockDate) return [];
+  const eligible = products.filter((product) =>
+    product.status === "active"
+    && String(product.firstSeenAt || "").slice(0, 10) === latestStockDate
+  );
   const ranked = eligible.slice().sort((a, b) => {
     const imageScore = Number(hasProductImage(b)) - Number(hasProductImage(a));
     if (imageScore) return imageScore;
-    const badgeScore = Number(productBadges(b).includes("Новинка")) - Number(productBadges(a).includes("Новинка"));
-    if (badgeScore) return badgeScore;
     const ratingScore = Number(b.rating || 0) - Number(a.rating || 0);
     if (ratingScore) return ratingScore;
     return a.title.localeCompare(b.title, "ru");
   });
-
-  const maxPerCategory = 2;
-  const maxPerBrand = 2;
-  const categoryCounts = new Map();
-  const brandCounts = new Map();
-  const picked = [];
-
+  const buckets = new Map();
   for (const product of ranked) {
-    if (picked.length >= limit) break;
-    const categoryKey = product.categoryId || product.category || "other";
-    const brandKey = product.brand || product.title;
-    if ((categoryCounts.get(categoryKey) || 0) >= maxPerCategory) continue;
-    if ((brandCounts.get(brandKey) || 0) >= maxPerBrand) continue;
-    picked.push(product);
-    categoryCounts.set(categoryKey, (categoryCounts.get(categoryKey) || 0) + 1);
-    brandCounts.set(brandKey, (brandCounts.get(brandKey) || 0) + 1);
+    const key = freshProductGroup(product);
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(product);
   }
-
-  if (picked.length < limit) {
-    const usedIds = new Set(picked.map((product) => product.id));
-    for (const product of ranked) {
-      if (picked.length >= limit) break;
-      if (usedIds.has(product.id)) continue;
+  const keys = [...buckets.keys()].sort((a, b) => a.localeCompare(b, "ru"));
+  const picked = [];
+  while (picked.length < limit) {
+    let added = false;
+    for (const key of keys) {
+      const product = buckets.get(key)?.shift();
+      if (!product) continue;
       picked.push(product);
-      usedIds.add(product.id);
+      added = true;
+      if (picked.length >= limit) break;
     }
+    if (!added) break;
   }
-
   return picked;
 }
 
@@ -1474,7 +1520,6 @@ function renderFreshProducts() {
   freshProductsRow.innerHTML = items
     .map((product) => {
       const display = productDisplayParts(product);
-      const badges = productBadges(product);
       const href = hasProductPage(product) ? productPageUrl(product) : "";
       const imageAction = href
         ? `href="${escapeHtml(href)}" data-product-link="${product.id}"`
@@ -1482,7 +1527,7 @@ function renderFreshProducts() {
       return `
         <article class="fresh-product recent-product">
           <a class="recent-product-image" ${imageAction} aria-label="Открыть ${escapeHtml(product.title)}">
-            ${badges.length ? `<div class="fresh-product-badge">${escapeHtml(badges[0])}</div>` : ""}
+            <div class="fresh-product-badge">Новинка</div>
             <img class="${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy">
             <span>${escapeHtml(display.brand)}</span>
           </a>
@@ -2053,8 +2098,6 @@ function orderMessage(formData, lookupCode) {
     "",
     `Клиент: ${formData.get("name")}`,
     `Телефон/WhatsApp: ${formData.get("phone")}`,
-    `Город: ${formData.get("city") || "-"}`,
-    `Регион: ${formData.get("region") || "-"}`,
     `Адрес: ${formData.get("address") || "-"}`,
     `Комментарий: ${formData.get("comment") || "-"}`,
     "",
@@ -2067,8 +2110,6 @@ function orderMessage(formData, lookupCode) {
     "Клиент:",
     `Имя: ${displayValue(formData.get("name"))}`,
     `Телефон/WhatsApp: ${displayValue(formData.get("phone"))}`,
-    `Откуда узнали: ${displayValue(formData.get("customerSource"))}`,
-    `Промокод/код: ${displayValue(formData.get("promoCode"))}`,
     `Согласие на обратную связь: ${formData.get("marketingConsent") === "yes" ? "да" : "нет"}`,
     "",
     "Источник сайта:",
@@ -2094,19 +2135,19 @@ categoryFilter.addEventListener("click", (event) => {
 });
 
 quickCategoryGrid.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-category]");
-  const collectionButton = event.target.closest("[data-collection]");
-  const queryButton = event.target.closest("[data-query]");
-  if (!button && !collectionButton && !queryButton) return;
-  const label = event.target.closest(".quick-category")?.dataset.label || "";
-  if (button && queryButton) {
-    selectCategoryQuery(button.dataset.category, queryButton.dataset.query, label);
-  } else if (collectionButton) {
-    selectCollection(collectionButton.dataset.collection, label);
-  } else if (queryButton) {
-    selectQuery(queryButton.dataset.query, label);
+  const shortcut = event.target.closest(".quick-category");
+  if (!shortcut) return;
+  const label = shortcut.dataset.label || "";
+  if (shortcut.dataset.audience) {
+    selectAudience(shortcut.dataset.audience, label, shortcut.dataset.query || "");
+  } else if (shortcut.dataset.category && shortcut.dataset.query) {
+    selectCategoryQuery(shortcut.dataset.category, shortcut.dataset.query, label);
+  } else if (shortcut.dataset.collection) {
+    selectCollection(shortcut.dataset.collection, label);
+  } else if (shortcut.dataset.query) {
+    selectQuery(shortcut.dataset.query, label);
   } else {
-    selectCategory(button.dataset.category);
+    selectCategory(shortcut.dataset.category);
   }
   document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
 });
@@ -2154,6 +2195,8 @@ catalogDirectory?.addEventListener("click", (event) => {
   if (!button) return;
   if (button.dataset.query) {
     selectQuery(button.dataset.query, button.dataset.label || button.dataset.query);
+  } else if (button.dataset.audience) {
+    selectAudience(button.dataset.audience, button.dataset.label || button.dataset.audience);
   } else if (button.dataset.collection) {
     selectCollection(button.dataset.collection, button.dataset.label || displayCollectionName(button.dataset.collection));
   } else {
@@ -2178,9 +2221,11 @@ categoryMenu?.addEventListener("click", (event) => {
     setMenuOpen(false);
     return;
   }
-  const button = event.target.closest("[data-category], [data-collection], [data-query]");
+  const button = event.target.closest("[data-category], [data-audience], [data-collection], [data-query]");
   if (!button) return;
-  if (button.dataset.query && button.dataset.category) {
+  if (button.dataset.audience) {
+    selectAudience(button.dataset.audience, button.dataset.label || button.dataset.audience, button.dataset.query || "");
+  } else if (button.dataset.query && button.dataset.category) {
     selectCategoryQuery(button.dataset.category, button.dataset.query, button.dataset.label || button.dataset.query);
   } else if (button.dataset.query) {
     selectQuery(button.dataset.query, button.dataset.label || button.dataset.query);
@@ -2319,6 +2364,8 @@ bottomNavFavoritesLink?.addEventListener("click", (event) => {
     // Show favorites across the whole catalog, not filtered by whatever
     // category/collection/search happened to be active.
     state.category = "Все";
+    state.audience = "";
+    state.audienceLabel = "";
     state.query = "";
     state.label = "";
     state.collection = "";
@@ -2543,8 +2590,6 @@ function buildOrderPayload(formData, message, lookupCode) {
     customer: {
       name: formData.get("name"),
       phone: formData.get("phone"),
-      city: formData.get("city"),
-      region: formData.get("region"),
       address: formData.get("address"),
       comment: formData.get("comment"),
     },
@@ -2566,8 +2611,6 @@ function buildOrderPayload(formData, message, lookupCode) {
       utm_term: attribution.utm_term,
       referrer: attribution.referrer,
     },
-    customer_source: formData.get("customerSource"),
-    promo_code: formData.get("promoCode"),
     lookup_code: lookupCode,
     consent: { consent_type: "marketing", is_granted: formData.get("marketingConsent") === "yes" },
     whatsapp_message: message,
@@ -2837,6 +2880,8 @@ function renderWholesaleBlock(role) {
 
 function renderCabinet(profile) {
   const role = profile?.role || "retail";
+  const firstName = String(profile?.name || "").trim().split(/\s+/)[0] || "Клиент";
+  if (cabinetGreetingName) cabinetGreetingName.textContent = firstName;
   if (cabinetRoleBadge) cabinetRoleBadge.textContent = CABINET_ROLE_LABELS[role] || "";
   renderCabinetProfile(profile);
   renderWholesaleBlock(role);

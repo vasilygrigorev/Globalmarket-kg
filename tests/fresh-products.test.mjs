@@ -37,18 +37,27 @@ test("app.js renders a fresh-products section from the catalog, not localStorage
   assert.match(appJs, /freshProductsSection\.hidden = items\.length === 0/);
   // Sourced from the in-memory catalog (`products`), not a recently-viewed-style
   // localStorage id list.
-  assert.match(appJs, /freshProducts\(limit = \d+\)\s*\{\s*const eligible = products\.filter/);
+  assert.match(appJs, /freshProducts\(limit = \d+\)[\s\S]*?const eligible = products\.filter/);
 });
 
-test("selection logic prefers real photos and caps per-category/brand concentration", () => {
+test("selection uses only first-seen products from the latest 1C export", () => {
   const match = appJs.match(/function freshProducts\(limit[\s\S]*?\n\}/);
   assert.ok(match, "freshProducts() body not found");
   const body = match[0];
-  assert.match(body, /hasProductImage/, "must prefer products with real images");
-  assert.match(body, /productBadges\(.*\)\.includes\("Новинка"\)/, "must prefer the Новинка badge");
-  // Documented diversity cap: at most 2 per category and 2 per brand.
-  assert.match(body, /maxPerCategory\s*=\s*2/);
-  assert.match(body, /maxPerBrand\s*=\s*2/);
+  assert.match(body, /firstSeenAt/);
+  assert.match(body, /latestStockDate/);
+  assert.doesNotMatch(body, /restockedAt/, "a restock must not make an existing product fresh");
+  assert.doesNotMatch(body, /productBadges/, "placeholder badges must not define freshness");
+});
+
+test("fresh products are round-robin diversified by useful product types", () => {
+  assert.match(appJs, /function freshProductGroup\(/);
+  assert.match(appJs, /порош/);
+  assert.match(appJs, /шампун/);
+  assert.match(appJs, /дезодорант\|антиперспирант/);
+  assert.match(appJs, /зубн\.\*щ/);
+  assert.match(appJs, /buckets\.get\(key\)\?\.shift\(\)/);
+  assert.match(appJs, /<div class="fresh-product-badge">Новинка<\/div>/);
 });
 
 test("fresh cards add to cart without opening the cart drawer", () => {

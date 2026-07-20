@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Yves Saint Laurent Libre парфюм 5 мл">
   <meta name="twitter:description" content="Брендовый парфюм Yves Saint Laurent Libre в travel-формате 5 мл. Цена включает одноразовую защищенную travel-упаковку. Налив из оригинального флакона может">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/perfume/yves-saint-laurent-libre-5ml-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20260715-ocean-market">
+  <link rel="stylesheet" href="/styles.css?v=20260720-product-search-policy-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -1036,7 +1036,13 @@
 </footer>
   <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Нижняя навигация">
   <a class="bottom-nav-item" id="bottomNavHome" href="/#top" data-bottom-nav="home">
-    <span class="bottom-nav-icon bottom-nav-icon-home" aria-hidden="true"></span>
+    <span class="bottom-nav-icon bottom-nav-icon-home" aria-hidden="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="m3 11 9-8 9 8"></path>
+        <path d="M5 10v10h14V10"></path>
+        <path d="M9 20v-6h6v6"></path>
+      </svg>
+    </span>
     <span class="bottom-nav-label">Главная</span>
   </a>
   <a class="bottom-nav-item" id="bottomNavCatalog" href="/#catalog" data-bottom-nav="catalog">
@@ -1209,6 +1215,7 @@
           const params = new URLSearchParams();
           if (item.collection) params.set("collection", item.collection);
           if (item.category) params.set("category", item.category);
+          if (item.audience) params.set("audience", item.audience);
           if (item.query) params.set("query", item.query);
           if (item.label) params.set("label", item.label);
           const query = params.toString();

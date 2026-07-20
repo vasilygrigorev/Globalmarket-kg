@@ -11,7 +11,7 @@
   "menu": [
     { "label": "Главная", "href": "/#top" },
     { "label": "Стирка", "category": "Стирка и уход за бельем" },
-    { "label": "Детское", "category": "Уход за телом" },
+    { "label": "Детское", "audience": "kids" },
     { "label": "Европа", "collection": "europe" },
     { "label": "Бритье", "category": "Бритье" },
     { "label": "Дезодоранты", "category": "Дезодоранты" },
@@ -76,7 +76,7 @@
   ],
   "quickCategories": [
     { "title": "Стирка", "category": "Стирка и уход за бельем", "image": "/assets/category-icons/laundry-generic.png" },
-    { "title": "Детское", "category": "Уход за телом", "image": "/assets/category-icons/kids-generic.png" },
+    { "title": "Детское", "audience": "kids", "image": "/assets/category-icons/kids-generic.png" },
     { "title": "Европа", "collection": "europe", "image": "/assets/category-icons/europe-generic.png" },
     { "title": "Бритье", "category": "Бритье", "image": "/assets/category-icons/shaving-generic.png" },
     { "title": "Дезодоранты", "category": "Дезодоранты", "image": "/assets/category-icons/deodorants-generic.png" },

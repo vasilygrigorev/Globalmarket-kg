@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Pure "fresh arrivals" logic for Global Market KG.
+"""Pure stock-arrival date logic for Global Market KG.
 
-Adds a per-product ``restockedAt`` date so the storefront can show a
-"Свежие поступления" section and sort newest arrivals first.
+Tracks two distinct dates:
+
+- ``firstSeenAt``: immutable first appearance of a stable 1C code; this is the
+  only source for the public "Свежие товары" section.
+- ``restockedAt``: replenishment date for internal analytics and optional
+  restock sorting. It never makes an existing product publicly new.
 
 Signal source: the 1C stock export already carries a report date ("На дату…",
 parsed by scripts/import_stock.py) and each product a ``stock_quantity``. A
@@ -13,12 +17,23 @@ the quantity does not rise, the previous ``restockedAt`` is carried forward
 unchanged, so a slow-selling item keeps its original arrival date.
 
 This module is intentionally standalone and pure (no I/O, no DB, no network) so
-it can be unit-tested and wired into scripts/import_stock.py (to write
-``restockedAt`` onto catalog products) and into the storefront ordering without
-a catalog regeneration. See docs/fresh-arrivals.md.
+it can be unit-tested and wired into scripts/import_stock.py. See
+docs/fresh-arrivals.md.
 """
 
 from datetime import date, datetime, timezone
+
+
+def first_seen_date(is_existing, previous_date, import_date):
+    """Return the first 1C appearance date without reviving legacy products.
+
+    A product is new only when its stable 1C identity did not exist before this
+    import. Existing legacy rows with an unknown first date stay unknown: using
+    their latest stock date would incorrectly mark the whole catalog as new.
+    """
+    if is_existing:
+        return previous_date
+    return import_date
 
 
 def _num(value):

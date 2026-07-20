@@ -7,7 +7,18 @@ Run:  python3 scripts/freshness_test.py
 import unittest
 from datetime import date
 
-from freshness import restock_date, is_new, fresh_arrivals
+from freshness import first_seen_date, restock_date, is_new, fresh_arrivals
+
+
+class FirstSeenDate(unittest.TestCase):
+    def test_new_stable_1c_identity_gets_import_date(self):
+        self.assertEqual(first_seen_date(False, None, "2026-07-20"), "2026-07-20")
+
+    def test_existing_identity_keeps_original_date(self):
+        self.assertEqual(first_seen_date(True, "2026-07-01", "2026-07-20"), "2026-07-01")
+
+    def test_legacy_existing_identity_stays_unknown(self):
+        self.assertIsNone(first_seen_date(True, None, "2026-07-20"))
 
 
 class RestockDate(unittest.TestCase):

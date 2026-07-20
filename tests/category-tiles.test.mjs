@@ -26,6 +26,7 @@ function parseTiles() {
       title: grab("title"),
       image: grab("image"),
       category: grab("category"),
+      audience: grab("audience"),
       collection: grab("collection"),
       query: grab("query"),
     });
@@ -35,6 +36,7 @@ function parseTiles() {
 
 const tiles = parseTiles();
 const catalog = JSON.parse(read("data/public-catalog.json"));
+const products = catalog.products || [];
 const categories = new Set((catalog.products || []).map((p) => p.category).filter(Boolean));
 
 test("there are 11 category tiles", () => {
@@ -44,7 +46,7 @@ test("there are 11 category tiles", () => {
 test("every tile has a title and at least one target", () => {
   for (const t of tiles) {
     assert.ok(t.title, `tile missing title: ${JSON.stringify(t)}`);
-    assert.ok(t.category || t.collection || t.query, `tile "${t.title}" has no category/collection/query`);
+    assert.ok(t.category || t.audience || t.collection || t.query, `tile "${t.title}" has no target`);
   }
 });
 
@@ -56,4 +58,19 @@ test("every tile image exists on disk", () => {
 test("every tile category is a real catalog category", () => {
   const bad = tiles.filter((t) => t.category && !categories.has(t.category)).map((t) => `${t.title}→${t.category}`);
   assert.deepEqual(bad, [], `tiles pointing at unknown categories: ${bad.join(", ")}`);
+});
+
+test("Детское uses the kids audience and excludes Dove deodorants", () => {
+  const tile = tiles.find((item) => item.title === "Детское");
+  assert.ok(tile, "Детское tile is missing");
+  assert.equal(tile.audience, "kids");
+  assert.equal(tile.category, undefined, "Детское must not map to the whole body-care category");
+
+  const kids = products.filter((product) => product.inStock !== false && product.audience === "kids");
+  assert.ok(kids.length > 0, "catalog has no in-stock kids products");
+  const doveDeodorants = kids.filter((product) => {
+    const text = `${product.brand || ""} ${product.title || ""} ${product.productType || ""}`;
+    return /dove/i.test(text) && /(дезод|deodor)/i.test(text);
+  });
+  assert.deepEqual(doveDeodorants, [], "Dove deodorants leaked into Детское");
 });

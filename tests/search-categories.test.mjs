@@ -23,6 +23,7 @@ const cats = new Set(products.map((p) => p.category).filter(Boolean));
 const cids = new Set(products.map((p) => p.categoryId).filter(Boolean));
 const brands = new Set(products.map((p) => p.brand).filter(Boolean));
 const colls = new Set(products.flatMap((p) => p.collections || []));
+const audiences = new Set(products.map((p) => p.audience).filter(Boolean));
 
 test("homepage has a search field and a search toggle", () => {
   assert.match(indexHtml, /id="toggleSearch"/);
@@ -51,11 +52,12 @@ test("synonyms target only real catalog categories/categoryIds/collections/brand
   assert.deepEqual(bad, [], `synonyms with broken targets: ${bad.join(", ")}`);
 });
 
-const menuSections = (config.menu || []).filter((m) => m.category || m.collection || m.query);
+const menuSections = (config.menu || []).filter((m) => m.category || m.audience || m.collection || m.query);
 const tileBlock = appJs.match(/let quickCategoryCards = \[([\s\S]*?)\];/)[1];
 const tiles = tileBlock.split("\n").filter((l) => l.includes("{")).map((l) => ({
   title: (l.match(/title:\s*"([^"]+)"/) || [])[1],
   category: (l.match(/category:\s*"([^"]+)"/) || [])[1],
+  audience: (l.match(/audience:\s*"([^"]+)"/) || [])[1],
   collection: (l.match(/collection:\s*"([^"]+)"/) || [])[1],
 }));
 
@@ -67,6 +69,7 @@ test("menu/tile category & collection targets exist in the catalog", () => {
   const bad = [];
   for (const m of [...menuSections, ...tiles]) {
     if (m.category && !cats.has(m.category)) bad.push(`category:${m.category}`);
+    if (m.audience && !audiences.has(m.audience)) bad.push(`audience:${m.audience}`);
     if (m.collection && !colls.has(m.collection)) bad.push(`collection:${m.collection}`);
   }
   assert.deepEqual([...new Set(bad)], [], `nav targets not in catalog: ${[...new Set(bad)].join(", ")}`);

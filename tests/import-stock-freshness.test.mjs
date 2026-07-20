@@ -24,7 +24,7 @@ function py(code) {
 }
 
 // Shared harness: a temp sqlite DB + a helper to run one import with one item,
-// returning the item's resulting restocked_at.
+// returning both the replenishment date and immutable first-seen date.
 const HARNESS = `
 import sys, tempfile, os, json
 sys.path.insert(0, "scripts")
@@ -72,17 +72,17 @@ def run_import(conn, qty, stock_date, code="9999", name="Test Product"):
     src_path.write_bytes(f"synthetic-{_call_counter['n']}".encode())
     m.import_to_db(conn, data, {}, src_path)
     row = conn.execute(
-        "select restocked_at, stock_quantity from source_products where source_id = ?",
-        (m.source_id(name, code),),
+        "select restocked_at, first_seen_at, stock_quantity from source_products where source_code = ?",
+        (m.normalize_source_code(code),),
     ).fetchone()
-    return row["restocked_at"], row["stock_quantity"]
+    return row["restocked_at"], row["first_seen_at"], row["stock_quantity"]
 
 conn = m.connect_db()
 `;
 
 test("brand-new product gets restockedAt = the import's stock_date", () => {
   const out = py(`${HARNESS}
-restocked_at, qty = run_import(conn, 10, "2026-06-01")
+restocked_at, first_seen_at, qty = run_import(conn, 10, "2026-06-01")
 print(restocked_at)
 conn.close()
 `);
@@ -92,7 +92,7 @@ conn.close()
 test("re-import with unchanged quantity keeps the original restockedAt", () => {
   const out = py(`${HARNESS}
 run_import(conn, 10, "2026-06-01")
-restocked_at, qty = run_import(conn, 10, "2026-07-06")
+restocked_at, first_seen_at, qty = run_import(conn, 10, "2026-07-06")
 print(restocked_at)
 conn.close()
 `);
@@ -102,7 +102,7 @@ conn.close()
 test("quantity increase on a later import updates restockedAt to that import's date", () => {
   const out = py(`${HARNESS}
 run_import(conn, 10, "2026-06-01")
-restocked_at, qty = run_import(conn, 25, "2026-07-10")
+restocked_at, first_seen_at, qty = run_import(conn, 25, "2026-07-10")
 print(restocked_at)
 conn.close()
 `);
@@ -134,7 +134,7 @@ print("after_zero", zeroed["stock_quantity"], zeroed["restocked_at"])
 
 # Third import: back in stock -> restockedAt should become this import's date,
 # not stay stuck on the original 2026-06-01.
-restocked_at, qty = run_import(conn, 12, "2026-07-15")
+restocked_at, first_seen_at, qty = run_import(conn, 12, "2026-07-15")
 print("after_restock", qty, restocked_at)
 conn.close()
 `);
@@ -148,7 +148,26 @@ conn.close()
   assert.equal(lines.after_restock, "12.0 2026-07-15", "coming back from 0 is a fresh arrival");
 });
 
-test("restocked_at survives a schema migration on a pre-existing DB without the column", () => {
+test("stable 1C code keeps firstSeenAt through rename, stock change, and restock", () => {
+  const out = py(`${HARNESS}
+restocked_at, first_seen_at, qty = run_import(conn, 10, "2026-06-01", code="1C-42", name="Old name")
+print("first", first_seen_at)
+
+# Same 1C code with an updated display name must resolve to the existing row.
+restocked_at, first_seen_at, qty = run_import(conn, 25, "2026-07-10", code="1C-42", name="New improved name")
+row = conn.execute(
+    "select first_seen_at, stock_date from source_products where source_code = ?",
+    (m.normalize_source_code("1C-42"),),
+).fetchone()
+print("after", row["first_seen_at"], row["stock_date"])
+conn.close()
+`);
+  const lines = out.split("\n");
+  assert.equal(lines[0], "first 2026-06-01");
+  assert.equal(lines[1], "after 2026-06-01 2026-07-10");
+});
+
+test("freshness columns survive a schema migration on a pre-existing DB", () => {
   const out = py(`
 import sys, tempfile, os, sqlite3
 sys.path.insert(0, "scripts")
@@ -188,12 +207,15 @@ conn.close()
 conn = m.connect_db()
 cols = {row[1] for row in conn.execute("pragma table_info(source_products)").fetchall()}
 print("restocked_at" in cols)
+print("first_seen_at" in cols)
 conn.close()
 `);
-  assert.equal(out, "True");
+  assert.equal(out, "True\nTrue");
 });
 
-test("build_public_catalog.py exposes restockedAt on public products", () => {
+test("build_public_catalog.py exposes stock arrival metadata", () => {
   const src = spawnSync("cat", ["scripts/build_public_catalog.py"], { cwd: ROOT, encoding: "utf8" }).stdout;
   assert.match(src, /PUBLIC_PRODUCT_FIELDS\s*=\s*\[[\s\S]*?"restockedAt"/);
+  assert.match(src, /PUBLIC_PRODUCT_FIELDS\s*=\s*\[[\s\S]*?"firstSeenAt"/);
+  assert.match(src, /"latestStockDate": source\.get\("latestStockDate"\)/);
 });

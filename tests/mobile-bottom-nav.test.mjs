@@ -38,6 +38,11 @@ test("bottom nav partial matches what's embedded in index.html (single source of
   assert.deepEqual(navItems(bottomNavPartial), navItems(indexHtml));
 });
 
+test("home nav icon is one coherent SVG instead of separately positioned roof pieces", () => {
+  assert.match(bottomNavPartial, /bottom-nav-icon-home[\s\S]*?<svg viewBox="0 0 24 24"/);
+  assert.match(bottomNavPartial, /<path d="m3 11 9-8 9 8"><\/path>/);
+});
+
 test("bottom nav is mobile-only (gated behind a max-width media query) and doesn't overlap content", () => {
   const css = read("styles.css");
   assert.match(css, /\.mobile-bottom-nav\s*\{[^}]*display:\s*none/s);
@@ -139,7 +144,7 @@ test("logged-in cabinet shows an empty-orders state with a link back to the cata
 });
 
 test("logged-out cabinet still shows a clear phone-login prompt (unchanged)", () => {
-  assert.match(indexHtml, /Войдите по номеру телефона и коду из SMS/);
+  assert.match(indexHtml, /Войти можно по номеру телефона и коду из SMS/);
   assert.match(indexHtml, /id="myOrdersLoginForm"/);
 });
 

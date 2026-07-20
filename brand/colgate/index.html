@@ -21,7 +21,7 @@
   <meta name="twitter:title" content="Colgate">
   <meta name="twitter:description" content="Colgate в Global Market KG: Colgate, товары Colgate, Colgate купить Бишкек. В подборке 16 товаров бренда с ценами в сомах и заказом через WhatsApp.">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/colgate/colgate-360-charcoal-gold-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20260715-ocean-market">
+  <link rel="stylesheet" href="/styles.css?v=20260720-product-search-policy-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -718,6 +718,7 @@
           const params = new URLSearchParams();
           if (item.collection) params.set("collection", item.collection);
           if (item.category) params.set("category", item.category);
+          if (item.audience) params.set("audience", item.audience);
           if (item.query) params.set("query", item.query);
           if (item.label) params.set("label", item.label);
           const query = params.toString();

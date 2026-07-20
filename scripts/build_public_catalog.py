@@ -19,6 +19,7 @@ PUBLIC_PRODUCT_FIELDS = [
     "unit",
     "badge",
     "restockedAt",
+    "firstSeenAt",
     "retailPriceKgs",
     "category",
     "categoryId",
@@ -56,6 +57,7 @@ def main():
     source = json.loads(SOURCE.read_text(encoding="utf-8"))
     public = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "latestStockDate": source.get("latestStockDate"),
         "settings": {
             key: value
             for key, value in source.get("settings", {}).items()

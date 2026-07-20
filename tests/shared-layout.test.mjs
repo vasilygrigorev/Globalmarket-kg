@@ -123,3 +123,19 @@ test("footer with logo + catalog/checkout/policy on home and product pages", () 
     }
   }
 });
+
+test("privacy page is a published policy rather than a draft", () => {
+  const html = read("privacy.html");
+  assert.doesNotMatch(html, /черновик/i);
+  assert.match(html, /Какие данные мы получаем/);
+  assert.match(html, /Для чего используются данные/);
+  assert.match(html, /Права клиента/);
+  assert.match(html, /globaldistkg@gmail\.com/);
+  assert.match(html, /\+996 706 771 103/);
+});
+
+test("mobile product header reserves stable space below search", () => {
+  const css = read("styles.css");
+  assert.match(css, /body\.product-page\s*\{\s*--site-header-height:\s*107px;/s);
+  assert.match(css, /body\.product-page \.site-header\s*\{[^}]*padding-bottom:\s*8px;/s);
+});

@@ -47,6 +47,8 @@ def product_matches(product, params):
         return False
     if params.get("category") and product.get("category") != params["category"]:
         return False
+    if params.get("audience") and product.get("audience") != params["audience"]:
+        return False
     if params.get("collection") and params["collection"] not in (product.get("collections") or []):
         return False
     query = (params.get("query") or params.get("q") or "").strip().lower()
@@ -80,11 +82,13 @@ def count_matches(products, item):
     params = parse_local_href(item.get("href", ""))
     if item.get("category") and "category" not in params:
         params["category"] = item["category"]
+    if item.get("audience") and "audience" not in params:
+        params["audience"] = item["audience"]
     if item.get("collection") and "collection" not in params:
         params["collection"] = item["collection"]
     if item.get("query") and "query" not in params:
         params["query"] = item["query"]
-    if not any(params.get(key) for key in ("category", "collection", "query", "q")):
+    if not any(params.get(key) for key in ("category", "audience", "collection", "query", "q")):
         return None
     return sum(1 for product in products if product_matches(product, params))
 

@@ -546,7 +546,7 @@ def render_page(target, products, product_page_by_id, all_targets):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(description)}">
   <meta name="twitter:image" content="{escape(share_image)}">
-  <link rel="stylesheet" href="/styles.css?v=20260715-ocean-market">
+  <link rel="stylesheet" href="/styles.css?v=20260720-product-search-policy-v1">
   <script type="application/ld+json">{breadcrumb_json_ld(target, canonical)}</script>
   <script type="application/ld+json">{item_list_json_ld(products, product_page_by_id)}</script>
   <style>
@@ -715,6 +715,7 @@ def render_page(target, products, product_page_by_id, all_targets):
           const params = new URLSearchParams();
           if (item.collection) params.set("collection", item.collection);
           if (item.category) params.set("category", item.category);
+          if (item.audience) params.set("audience", item.audience);
           if (item.query) params.set("query", item.query);
           if (item.label) params.set("label", item.label);
           const query = params.toString();

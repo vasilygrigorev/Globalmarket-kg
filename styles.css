@@ -1830,8 +1830,8 @@ textarea {
 
 .my-orders-account {
   display: grid;
-  gap: 14px;
-  padding: 14px 18px;
+  gap: 10px;
+  padding: 12px 14px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
@@ -1842,7 +1842,34 @@ textarea {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
+}
+
+.cabinet-welcome {
+  min-width: 0;
+}
+
+.cabinet-welcome-label,
+.cabinet-welcome-meta {
+  margin: 0;
+}
+
+.cabinet-welcome-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cabinet-welcome h3 {
+  margin: 2px 0 0;
+  font-size: clamp(20px, 5.4vw, 26px);
+  line-height: 1.15;
+}
+
+.cabinet-welcome-meta:empty,
+.cabinet-role-badge:empty {
+  display: none;
 }
 
 .cabinet-role-badge {
@@ -3248,29 +3275,14 @@ textarea {
     height: 23px;
   }
 
-  .bottom-nav-icon-home::before {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 4px;
-    width: 13px;
-    height: 13px;
-    border-top: 2.2px solid currentColor;
-    border-left: 2.2px solid currentColor;
-    border-radius: 2px 0 0 0;
-    transform: rotate(45deg);
-  }
-
-  .bottom-nav-icon-home::after {
-    content: "";
-    position: absolute;
-    left: 6px;
-    top: 11px;
-    width: 11px;
-    height: 8px;
-    border: 2.2px solid currentColor;
-    border-top: 0;
-    border-radius: 0 0 3px 3px;
+  .bottom-nav-icon-home svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   .bottom-nav-icon-catalog {
@@ -3397,7 +3409,7 @@ textarea {
    This is intentionally scoped to the catalog home so product pages retain
    their separate reading-focused layout. */
 @media (max-width: 680px) {
-  body.home-page {
+  body:is(.home-page, .product-page) {
     --site-header-height: 116px;
     --gm-mobile-storefront-gutter: 10px;
     --gm-mobile-ocean-stage-height: 433px;
@@ -3414,8 +3426,8 @@ textarea {
     background: var(--gm-paper);
   }
 
-  body.home-page .site-header,
-  body.home-page .site-header.header-floating {
+  body:is(.home-page, .product-page) .site-header,
+  body:is(.home-page, .product-page) .site-header.header-floating {
     top: -1px;
     grid-template-columns: 42px minmax(0, 1fr);
     grid-template-rows: 42px 52px;
@@ -3431,7 +3443,7 @@ textarea {
     box-shadow: none;
   }
 
-  body.home-page .site-header .menu-toggle {
+  body:is(.home-page, .product-page) .site-header .menu-toggle {
     width: 42px;
     height: 42px;
     min-width: 42px;
@@ -3442,19 +3454,19 @@ textarea {
     color: #ffffff;
   }
 
-  body.home-page .site-header .menu-toggle::before,
-  body.home-page .site-header .menu-toggle::after {
+  body:is(.home-page, .product-page) .site-header .menu-toggle::before,
+  body:is(.home-page, .product-page) .site-header .menu-toggle::after {
     background: currentColor;
   }
 
-  body.home-page .site-header .brand {
+  body:is(.home-page, .product-page) .site-header .brand {
     min-width: 0;
     margin: 0;
     padding: 0;
     color: #ffffff;
   }
 
-  body.home-page .site-header .brand-wordmark-text {
+  body:is(.home-page, .product-page) .site-header .brand-wordmark-text {
     gap: 0.26em;
     color: #ffffff;
     font-family: "GM Quicksand", ui-rounded, "SF Pro Rounded", sans-serif;
@@ -3465,15 +3477,15 @@ textarea {
     text-shadow: 0 1px 8px rgba(0, 18, 28, 0.42);
   }
 
-  body.home-page .site-header .brand-wordmark-global {
+  body:is(.home-page, .product-page) .site-header .brand-wordmark-global {
     color: #ffffff;
   }
 
-  body.home-page .site-header .brand-wordmark-market {
+  body:is(.home-page, .product-page) .site-header .brand-wordmark-market {
     color: #52e1d2;
   }
 
-  body.home-page .site-header .header-search {
+  body:is(.home-page, .product-page) .site-header .header-search {
     grid-column: 1 / -1;
     grid-row: 2;
     min-height: 52px;
@@ -3484,16 +3496,16 @@ textarea {
     box-shadow: 0 10px 24px rgba(0, 21, 29, 0.22);
   }
 
-  body.home-page .site-header .header-search::before {
+  body:is(.home-page, .product-page) .site-header .header-search::before {
     color: #47686e;
   }
 
-  body.home-page .site-header .header-search input {
+  body:is(.home-page, .product-page) .site-header .header-search input {
     color: #16313a;
     font-size: 16px;
   }
 
-  body.home-page .site-header .header-search input::placeholder {
+  body:is(.home-page, .product-page) .site-header .header-search input::placeholder {
     color: #80969b;
   }
 
@@ -4213,7 +4225,7 @@ body.product-page {
     --site-header-height: 116px;
   }
 
-  body:not(.home-page) .site-header {
+  body:not(.home-page):not(.product-page) .site-header {
     grid-template-columns: 42px minmax(0, 1fr);
     grid-template-rows: 42px 50px;
     gap: 8px;
@@ -4286,11 +4298,11 @@ body.product-page {
 /* Compact mobile storefront header: search, hero and category rail form one
    continuous composition. The small header trolley mirrors the bottom cart. */
 @media (max-width: 680px) {
-  body.home-page {
+  body:is(.home-page, .product-page) {
     --site-header-height: 99px;
   }
 
-  body.home-page .site-header {
+  body:is(.home-page, .product-page) .site-header {
     grid-template-columns: 40px minmax(0, 1fr) 40px;
     grid-template-rows: 40px 50px;
     gap: 2px 7px;
@@ -4311,24 +4323,24 @@ body.product-page {
     background-position: center calc(1px - var(--site-header-height));
   }
 
-  body.home-page .site-header .menu-toggle {
+  body:is(.home-page, .product-page) .site-header .menu-toggle {
     width: 40px;
     height: 40px;
     min-width: 40px;
   }
 
-  body.home-page .site-header .brand {
+  body:is(.home-page, .product-page) .site-header .brand {
     grid-column: 2;
     grid-row: 1;
     justify-self: center;
     max-width: 100%;
   }
 
-  body.home-page .site-header .brand-wordmark-text {
+  body:is(.home-page, .product-page) .site-header .brand-wordmark-text {
     font-size: clamp(16px, 4.65vw, 21px);
   }
 
-  body.home-page .site-header .cart-button {
+  body:is(.home-page, .product-page) .site-header .cart-button {
     position: relative;
     display: inline-flex !important;
     grid-column: 3;
@@ -4350,7 +4362,7 @@ body.product-page {
     transform: translateX(-3px);
   }
 
-  body.home-page .site-header .cart-button .cart-bag-icon {
+  body:is(.home-page, .product-page) .site-header .cart-button .cart-bag-icon {
     width: 22px;
     height: 21px;
     margin: 0;
@@ -4359,7 +4371,7 @@ body.product-page {
       radial-gradient(circle, currentColor 0 1.45px, transparent 1.65px) 16px 17px / 4px 4px no-repeat;
   }
 
-  body.home-page .site-header .cart-button .cart-bag-icon::before {
+  body:is(.home-page, .product-page) .site-header .cart-button .cart-bag-icon::before {
     left: 5px;
     top: 6px;
     bottom: auto;
@@ -4371,7 +4383,7 @@ body.product-page {
     transform: skewX(-10deg);
   }
 
-  body.home-page .site-header .cart-button .cart-bag-icon::after {
+  body:is(.home-page, .product-page) .site-header .cart-button .cart-bag-icon::after {
     left: 1px;
     top: 3px;
     width: 6px;
@@ -4382,11 +4394,11 @@ body.product-page {
     transform: rotate(18deg);
   }
 
-  body.home-page .site-header .cart-button .cart-separator {
+  body:is(.home-page, .product-page) .site-header .cart-button .cart-separator {
     display: none;
   }
 
-  body.home-page .site-header .cart-button [data-cart-count] {
+  body:is(.home-page, .product-page) .site-header .cart-button [data-cart-count] {
     position: absolute;
     top: -1px;
     right: -3px;
@@ -4404,9 +4416,20 @@ body.product-page {
     line-height: 1;
   }
 
-  body.home-page .site-header .header-search {
+  body:is(.home-page, .product-page) .site-header .header-search {
     grid-column: 1 / -1;
     min-height: 50px;
+  }
+
+  /* Product media begins immediately below the fixed header. Give the search
+     field a stable lower breathing space so it never looks clipped at rest. */
+  body.product-page {
+    --site-header-height: 107px;
+  }
+
+  body.product-page .site-header {
+    min-height: 107px;
+    padding-bottom: 8px;
   }
 
   body.home-page .hero {
@@ -4415,5 +4438,123 @@ body.product-page {
 
   body.home-page .quick-categories {
     margin-top: 7px;
+  }
+}
+
+/* Privacy policy */
+.legal-page {
+  min-height: 100vh;
+  margin: 0;
+  color: #132b30;
+  background: #f4f8f8;
+}
+
+.legal-header {
+  padding: 18px clamp(20px, 5vw, 52px);
+  color: #fff;
+  background:
+    radial-gradient(circle at 82% -30%, rgba(28, 217, 202, 0.35), transparent 44%),
+    linear-gradient(125deg, #002c37, #005c64 62%, #008f88);
+}
+
+.legal-brand {
+  color: #fff;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.legal-brand span {
+  color: #5be3d8;
+}
+
+.legal-main {
+  width: min(880px, calc(100% - 28px));
+  margin: 24px auto 48px;
+}
+
+.legal-card {
+  padding: clamp(22px, 5vw, 48px);
+  border: 1px solid rgba(0, 82, 88, 0.12);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 14px 40px rgba(0, 49, 56, 0.08);
+}
+
+.legal-card h1 {
+  margin: 6px 0 12px;
+  font-size: clamp(30px, 6vw, 48px);
+  line-height: 1.08;
+}
+
+.legal-updated,
+.legal-summary,
+.legal-section p,
+.legal-section li {
+  color: #53676b;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.legal-summary {
+  margin: 22px 0 30px;
+  padding: 16px 18px;
+  border-left: 3px solid #009b91;
+  border-radius: 0 8px 8px 0;
+  background: #eef9f8;
+}
+
+.legal-section {
+  padding: 22px 0;
+  border-top: 1px solid #e3ecec;
+}
+
+.legal-section h2 {
+  margin: 0 0 10px;
+  font-size: clamp(20px, 4vw, 26px);
+}
+
+.legal-section ul {
+  margin: 10px 0 0;
+  padding-left: 22px;
+}
+
+.legal-contact {
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #f3f7f7;
+}
+
+.legal-contact a,
+.legal-footer a {
+  color: #007b77;
+}
+
+.legal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 22px;
+}
+
+@media (max-width: 680px) {
+  .legal-header {
+    padding: 15px 18px;
+  }
+
+  .legal-main {
+    width: 100%;
+    margin: 0;
+  }
+
+  .legal-card {
+    padding: 26px 20px 40px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 }

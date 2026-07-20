@@ -64,15 +64,18 @@ test("checkout keeps the WhatsApp fallback (backend optional)", () => {
   assert.match(saveApi, /return null;/);
 });
 
-test("checkout sends customer + UTM/attribution fields without breaking", () => {
+test("checkout sends compact customer + automatic UTM attribution without breaking", () => {
   assert.ok(payload, "buildOrderPayload not found");
   assert.match(payload, /attribution:/);
   assert.match(payload, /utm_source/);
-  assert.match(payload, /customer_source:/);
-  assert.match(payload, /promo_code:/);
+  assert.doesNotMatch(payload, /customer_source:/);
+  assert.doesNotMatch(payload, /promo_code:/);
   assert.match(payload, /consent:/);
   // Core contact fields are still included.
-  for (const f of ["name", "phone", "city", "region", "address"]) {
+  for (const f of ["name", "phone", "address"]) {
     assert.match(payload, new RegExp(`formData\\.get\\("${f}"\\)`));
+  }
+  for (const f of ["city", "region", "customerSource", "promoCode"]) {
+    assert.doesNotMatch(payload, new RegExp(`formData\\.get\\("${f}"\\)`));
   }
 });
