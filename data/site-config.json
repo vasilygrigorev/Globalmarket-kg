@@ -75,17 +75,17 @@
     }
   ],
   "quickCategories": [
-    { "title": "Стирка", "category": "Стирка и уход за бельем", "image": "/assets/category-cards/category-laundry-new.jpg" },
-    { "title": "Детское", "category": "Уход за телом", "image": "/assets/category-cards/category-kids-new.jpg" },
-    { "title": "Европа", "collection": "europe", "image": "/assets/category-cards/category-europe-new.jpg" },
-    { "title": "Бритье", "category": "Бритье", "image": "/assets/category-cards/category-shaving-new.jpg" },
-    { "title": "Дезодоранты", "category": "Дезодоранты", "image": "/assets/category-cards/category-deodorants-new.jpg" },
-    { "title": "Волосы", "category": "Уход за волосами", "image": "/assets/category-cards/category-hair-new.jpg" },
-    { "title": "Чистка", "category": "Уборка и чистота", "image": "/assets/category-cards/category-cleaning-new.jpg" },
-    { "title": "Парфюм", "category": "Парфюм 5 мл", "image": "/assets/category-cards/category-perfume-new.jpg" },
-    { "title": "Кремы", "category": "Уход за телом", "query": "крем", "image": "/assets/category-cards/category-creams-new.jpg" },
-    { "title": "Тело", "category": "Уход за телом", "image": "/assets/category-cards/category-body-new.jpg" },
-    { "title": "Зубы", "category": "Зубная гигиена", "image": "/assets/category-cards/category-oral-new.jpg" }
+    { "title": "Стирка", "category": "Стирка и уход за бельем", "image": "/assets/category-icons/laundry-generic.png" },
+    { "title": "Детское", "category": "Уход за телом", "image": "/assets/category-icons/kids-generic.png" },
+    { "title": "Европа", "collection": "europe", "image": "/assets/category-icons/europe-generic.png" },
+    { "title": "Бритье", "category": "Бритье", "image": "/assets/category-icons/shaving-generic.png" },
+    { "title": "Дезодоранты", "category": "Дезодоранты", "image": "/assets/category-icons/deodorants-generic.png" },
+    { "title": "Волосы", "category": "Уход за волосами", "image": "/assets/category-icons/hair-generic.png" },
+    { "title": "Чистка", "category": "Уборка и чистота", "image": "/assets/category-icons/cleaning-generic.png" },
+    { "title": "Парфюм", "category": "Парфюм 5 мл", "image": "/assets/category-icons/perfume-generic.png" },
+    { "title": "Кремы", "category": "Уход за телом", "query": "крем", "image": "/assets/category-icons/creams-generic.png" },
+    { "title": "Тело", "category": "Уход за телом", "image": "/assets/category-icons/body-generic.png" },
+    { "title": "Зубы", "category": "Зубная гигиена", "image": "/assets/category-icons/oral-generic.png" }
   ],
   "footerLinks": [
     { "label": "Каталог", "href": "/#catalog" },
