@@ -493,7 +493,7 @@ def product_tile_html(product, extra_class=""):
         if badges
         else ""
     )
-    size_html = f'<span>{escape(display["size"])}</span>' if display["size"] else ""
+    size_html = f'<span class="product-size-line">{escape(display["size"])}</span>' if display["size"] else ""
     # rstrip each line: badges_html/discount_badge_html can be "" for a given
     # product, which would otherwise leave an indentation-only line behind
     # (fails git diff --check's trailing-whitespace guard).
@@ -512,10 +512,12 @@ def product_tile_html(product, extra_class=""):
               </div>
               <div class="product-info">
                 <a class="product-title-button product-copy" href="{href}" data-product-link="{product_id}">
-                  <span class="product-brand-line">{escape(display["brand"])}</span>
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">{escape(display["brand"])}</span>
+                    {size_html}
+                  </span>
                   <span class="product-kind-line">
                     <strong>{escape(display["type"])}</strong>
-                    {size_html}
                   </span>
                   <span class="product-variant-line">{escape(display["variant"])}</span>
                 </a>
@@ -657,7 +659,7 @@ def render_page(product, related, slug, landing_lookup=None):
     .size-line {{ flex: 0 0 auto; color: #555; font-size: clamp(20px, 4.5vw, 30px); font-weight: 300; line-height: 1.1; white-space: nowrap; }}
     .type {{ margin: 0; font-size: clamp(24px, 5vw, 34px); font-weight: 800; line-height: 1.12; }}
     .variant {{ margin: 0; color: #777; font-size: 19px; line-height: 1.35; }}
-    .description {{ margin: 0; color: #666; font-size: 18px; line-height: 1.55; }}
+    body.product-page .product-info .description {{ display: block; min-height: 0; overflow: visible; margin: 0; color: #666; font-size: 18px; line-height: 1.55; -webkit-line-clamp: unset; }}
     .price-box {{ display: grid; gap: 4px; padding: 16px; border: 1px solid #e4e4e7; border-radius: 8px; background: #f5f5f6; }}
     .price-box span,
     .price-box small {{ color: #777; }}

@@ -75,5 +75,12 @@ test("normalizeProfileUpdate trims/truncates fields, phone is never accepted", (
 
 test("normalizeProfileUpdate allows blank optional fields", () => {
   const result = normalizeProfileUpdate({});
-  assert.deepEqual(result, { name: null, city: null, region: null, address: null });
+  assert.deepEqual(result, { name: null, address: null });
+});
+
+test("normalizeProfileUpdate preserves legacy location fields when omitted", () => {
+  assert.deepEqual(normalizeProfileUpdate({ name: "Иван", address: "ул. Ленина 1" }), {
+    name: "Иван",
+    address: "ул. Ленина 1",
+  });
 });

@@ -50,12 +50,15 @@ export function sanitizeProfile(customer) {
 // editable here — it's the SMS-verified session identity, not a form field.
 export function normalizeProfileUpdate(payload) {
   if (!payload || typeof payload !== "object") return { error: "invalid_json" };
-  return {
+  const normalized = {
     name: str(payload.name, 200),
-    city: str(payload.city, 120),
-    region: str(payload.region, 120),
     address: str(payload.address, 300),
   };
+  // Legacy clients may still submit these fields. New clients omit them, so
+  // preserve any existing database values instead of clearing them.
+  if (Object.hasOwn(payload, "city")) normalized.city = str(payload.city, 120);
+  if (Object.hasOwn(payload, "region")) normalized.region = str(payload.region, 120);
+  return normalized;
 }
 
 async function resolveSession(request, env) {

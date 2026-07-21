@@ -212,13 +212,18 @@ test("every page checks the session (for pricing), only the homepage also fetche
 
 test("profile form saves via /api/customer-profile and never submits the phone field", () => {
   assert.match(html, /id="profileForm"/);
-  for (const field of ["name", "city", "region", "address"]) {
+  for (const field of ["name", "address"]) {
     assert.match(html, new RegExp(`<form class="customer-form" id="profileForm">[\\s\\S]*?name="${field}"`));
   }
+  const profileForm = html.match(/<form class="customer-form" id="profileForm">[\s\S]*?<\/form>/)[0];
+  assert.ok(!/name="city"/.test(profileForm));
+  assert.ok(!/name="region"/.test(profileForm));
   const profileHandler = appJs.match(/profileForm\?\.addEventListener\("submit", async \(event\) => \{[\s\S]*?\n\}\);/)[0];
   assert.match(profileHandler, /fetch\("\/api\/customer-profile"/);
   assert.match(profileHandler, /method:\s*"POST"/);
   assert.ok(!/formData\.get\("phone"\)/.test(profileHandler), "profile save must never submit an editable phone field");
+  assert.ok(!/formData\.get\("city"\)/.test(profileHandler));
+  assert.ok(!/formData\.get\("region"\)/.test(profileHandler));
 });
 
 test("wholesale application form posts to /api/wholesale-application and shows the confirmation text", () => {

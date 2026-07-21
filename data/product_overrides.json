@@ -38,7 +38,7 @@
     "brand": "Dalli",
     "category_id": "germany",
     "clean_title": "Dalli Colorwaschmittel гель для стирки 5 л",
-    "description": "Немецкий гель Dalli Colorwaschmittel для стирки цветного белья. Большой формат 5 л, рассчитан примерно на 100 стирок.",
+    "description": "Dalli Colorwaschmittel — жидкий гель для стирки цветного белья. На упаковке заявлены защита цвета, удаление пятен и уход за волокнами; средство рассчитано на стирку при 20–60 °C. Канистра 5 л рассчитана примерно на 100 стирок при соблюдении рекомендованной дозировки.",
     "galleryImages": [
       "assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg",
       "assets/products/dalli/dalli-colorwaschmittel-gel-5l-front.jpg",
@@ -116,7 +116,7 @@
     "brand": "Gillette",
     "category_id": "shaving",
     "clean_title": "Gillette Fusion5 ProGlide сменные кассеты 8 шт",
-    "description": "Сменные кассеты Gillette Fusion5 ProGlide для гладкого и комфортного бритья. В упаковке 8 штук.",
+    "description": "Сменные кассеты Gillette Fusion5 ProGlide предназначены для близкого и комфортного бритья. Пять лезвий с низким трением, смазывающая полоска и точный триммер на обратной стороне помогают обрабатывать основные и труднодоступные участки. В упаковке 8 кассет; они совместимы с ручками Gillette Fusion5, кроме GilletteLabs.",
     "galleryImages": [
       "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-card-front.jpg",
       "assets/products/gillette/gillette-fusion5-proglide-cartridges-8-raw-front.jpg",
@@ -223,7 +223,7 @@
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil Lavender гель для стирки 4,8 л",
-    "description": "Гель Persil Lavender для стирки белья с ароматом лаванды. Большой объем 4,8 л.",
+    "description": "Persil Power Gel Lavender — жидкое средство для машинной стирки в большом формате. Формула Deep Clean помогает удалять повседневные загрязнения и оставляет аромат лаванды. Объём 4,8 л; дозировку выбирайте по загрязнённости белья и инструкции на упаковке.",
     "galleryImages": [
       "assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg",
       "assets/products/persil/persil-lavender-gel-4-8l-front.jpg",
@@ -240,7 +240,7 @@
     "badge": "Lenor",
     "brand": "Lenor",
     "clean_title": "Lenor Sandalwood & Eucalyptus парфюм для белья 155 г",
-    "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Sandalwood & Eucalyptus. Формат: 155 г.",
+    "description": "Lenor Unstoppables Sandalwood & Eucalyptus — парфюмированные гранулы с древесно-свежим ароматом сандала и эвкалипта. Это ароматическая добавка к стирке, а не замена порошку или кондиционеру; интенсивность можно регулировать количеством гранул. Насыпьте их прямо в пустой барабан до загрузки белья; формат 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg",
       "assets/products/lenor/lenor-sandalwood-eucalyptus-155g-front.jpg",
@@ -353,7 +353,7 @@
     "brand": "Ariel",
     "category_id": "laundry",
     "clean_title": "Ariel Fast Dissolving концентрат 2,5 кг",
-    "description": "Концентрированное средство Ariel Fast Dissolving для стирки белья. Формат 2,5 кг.",
+    "description": "Ariel Fast Dissolving — порошок для автоматической стирки, разработанный для быстрого растворения в воде. Средство предназначено для удаления повседневных пятен и подходит для использования в стиральных машинах автоматического типа. Вес 2,5 кг; дозируйте порошок по инструкции на коробке с учётом загрузки и степени загрязнения.",
     "galleryImages": [
       "assets/products/ariel/ariel-fast-dissolving-2-5kg-card-front.jpg",
       "assets/products/ariel/ariel-fast-dissolving-2-5kg-front.jpg",
@@ -388,7 +388,7 @@
     "badge": "Lenor",
     "brand": "Lenor",
     "clean_title": "Lenor Dreamy Jasmine парфюм для белья 155 г",
-    "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Dreamy Jasmine. Формат: 155 г.",
+    "description": "Lenor Unstoppables Dreamy Jasmine — парфюмированные гранулы с жасминовым ароматом для добавления во время стирки. Они используются вместе с обычным моющим средством и позволяют регулировать интенсивность аромата количеством гранул. Насыпьте гранулы в пустой барабан до загрузки белья; формат 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg",
       "assets/products/lenor/lenor-dreamy-jasmine-155g-front.jpg",
@@ -556,7 +556,7 @@
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil Lavender гель для стирки 3 л",
-    "description": "Гель Persil Lavender для стирки белья с ароматом лаванды. Объем 3 л.",
+    "description": "Жидкий гель Persil Power Gel Lavender предназначен для машинной стирки и удаления повседневных загрязнений. Формула Deep Clean помогает очищать бельё и оставляет аромат лаванды. Объём 3 л; количество средства выбирайте по загрязнённости белья и инструкции на упаковке.",
     "galleryImages": [
       "assets/products/persil/persil-lavender-gel-3l-card-front.jpg",
       "assets/products/persil/persil-lavender-gel-3l-front.jpg",
@@ -658,7 +658,7 @@
     "brand": "Head & Shoulders",
     "category_id": "hair",
     "clean_title": "Head & Shoulders Smooth & Silky шампунь 650 мл",
-    "description": "Шампунь Head & Shoulders Smooth & Silky для гладкости волос. Большой объем 650 мл.",
+    "description": "Head & Shoulders Smooth & Silky — шампунь против перхоти для сухих волос и кожи головы. Формула предназначена для очищения, питания и более гладкого, ухоженного вида волос, одновременно помогая контролировать видимые проявления перхоти при регулярном использовании. Объём 650 мл; подходит для применения при каждом мытье головы.",
     "galleryImages": [
       "assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-card-front.jpg",
       "assets/products/head-shoulders/head-shoulders-smooth-silky-650ml-front.jpg",
@@ -756,7 +756,7 @@
     "badge": "Lenor",
     "brand": "Lenor",
     "clean_title": "Lenor Fresh парфюм для белья 155 г",
-    "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Fresh. Формат: 155 г.",
+    "description": "Lenor Unstoppables Fresh — парфюмированные гранулы, которые усиливают аромат белья во время стирки. Это дополнение к обычному моющему средству, а не порошок или кондиционер; интенсивность аромата можно регулировать количеством гранул. Насыпьте гранулы прямо в пустой барабан до загрузки белья; формат 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-fresh-155g-card-front.jpg",
       "assets/products/lenor/lenor-fresh-155g-front.jpg",
@@ -825,7 +825,7 @@
     "brand": "Dalli",
     "category_id": "germany",
     "clean_title": "Dalli Vollwaschmittel стиральный порошок 6 кг",
-    "description": "Немецкий стиральный порошок Dalli Vollwaschmittel для светлого и повседневного белья. Большая упаковка 6 кг, около 100 стирок.",
+    "description": "Dalli Vollwaschmittel — универсальный стиральный порошок для белого и светлого белья. На упаковке заявлены удаление пятен, защита волокон и рабочий диапазон температур от 20 до 95 °C. Коробка 6 кг рассчитана примерно на 100 стирок при соблюдении рекомендованной дозировки.",
     "galleryImages": [
       "assets/products/dalli/dalli-vollwaschmittel-powder-6kg-card-front.jpg",
       "assets/products/dalli/dalli-vollwaschmittel-powder-6kg-front.jpg",
@@ -850,7 +850,7 @@
     "brand": "Dash",
     "category_id": "germany",
     "clean_title": "Dash Active Frische гель для стирки 3,6 л",
-    "description": "Немецкий гель Dash Active Frische для повседневной стирки. Объем 3,6 л, около 80 стирок.",
+    "description": "Dash Active Frische 2in1 — жидкое универсальное средство для стирки с ароматом кондиционера. Формула предназначена для очищения и свежести белого и светлого белья; температурный диапазон на упаковке указан от 20 до 95 °C. Объём 3,6 л рассчитан примерно на 80 стирок при стандартной дозировке.",
     "galleryImages": [
       "assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg",
       "assets/products/dash/dash-active-frische-gel-3-6l-front.jpg",
@@ -867,7 +867,7 @@
     "badge": "Lenor",
     "brand": "Lenor",
     "clean_title": "Lenor Northern Solstice парфюм для белья 155 г",
-    "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Northern Solstice. Формат: 155 г.",
+    "description": "Lenor Unstoppables Northern Solstice — парфюмированные гранулы для усиления аромата белья во время стирки. Это отдельная ароматическая добавка, которую используют вместе с обычным моющим средством; количество гранул определяет интенсивность аромата. Насыпьте их прямо в пустой барабан до загрузки белья; формат 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg",
       "assets/products/lenor/lenor-northern-solstice-155g-front.jpg",
@@ -956,7 +956,7 @@
     "brand": "Gillette Venus",
     "category_id": "shaving",
     "clean_title": "Gillette Venus Smooth сменные кассеты 8 шт",
-    "description": "Сменные кассеты Gillette Venus Smooth для женского станка. В упаковке 8 штук.",
+    "description": "Сменные кассеты Gillette Venus Smooth предназначены для быстрого повседневного бритья тела. Три лезвия обеспечивают близкое бритьё, а смазывающая полоска помогает головке мягче скользить по коже. В упаковке 8 кассет; они подходят к многоразовым ручкам Venus.",
     "galleryImages": [
       "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-card-front.jpg",
       "assets/products/gillette/gillette-venus-smooth-cartridges-8-raw-front.jpg",
@@ -992,7 +992,7 @@
     "brand": "Gillette Venus",
     "category_id": "shaving",
     "clean_title": "Gillette Venus Simply одноразовые станки 4 шт",
-    "description": "Одноразовые станки Gillette Venus Simply для мягкого бритья. В упаковке 4 штуки.",
+    "description": "Gillette Simply Venus — одноразовые женские станки для простого повседневного бритья. Два лезвия и увлажняющая полоска помогают обеспечить ровное скольжение, а лёгкая ручка удобна в дороге. В упаковке 4 станка.",
     "galleryImages": [
       "assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
       "assets/products/gillette/gillette-venus-simply-4-raw-front.jpg",
@@ -1101,7 +1101,7 @@
     "brand": "Dalli",
     "category_id": "germany",
     "clean_title": "Dalli Colorwaschmittel стиральный порошок 6 кг",
-    "description": "Немецкий стиральный порошок Dalli Colorwaschmittel для цветного белья. Большая упаковка 6 кг, около 100 стирок.",
+    "description": "Dalli Colorwaschmittel — стиральный порошок для цветного белья. На упаковке заявлены защита цвета, удаление пятен и уход за волокнами; рабочий диапазон температур указан от 20 до 60 °C. Коробка 6 кг рассчитана примерно на 100 стирок при соблюдении рекомендованной дозировки.",
     "galleryImages": [
       "assets/products/dalli/dalli-colorwaschmittel-powder-6kg-card-front.jpg",
       "assets/products/dalli/dalli-colorwaschmittel-powder-6kg-front.jpg",
@@ -1300,7 +1300,7 @@
     "badge": "Lenor",
     "brand": "Lenor",
     "clean_title": "Lenor Jasmine & White Cedar парфюм для белья 155 г",
-    "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Jasmine & White Cedar. Формат: 155 г.",
+    "description": "Lenor Unstoppables Jasmine & White Cedar — парфюмированные гранулы с цветочно-древесным ароматом жасмина и белого кедра. Их добавляют к обычному средству для стирки, чтобы придать белью более выраженный аромат. Насыпьте гранулы прямо в пустой барабан до загрузки белья; формат 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg",
       "assets/products/lenor/lenor-jasmine-white-cedar-155g-front.jpg",
@@ -1522,7 +1522,7 @@
     "brand": "Dash",
     "category_id": "germany",
     "clean_title": "Dash Alpen Frische капсулы для стирки 60 шт",
-    "description": "Капсулы Dash Alpen Frische 3in1 для стирки. Упаковка XXL Pack, 60 капсул.",
+    "description": "Dash Alpen Frische 3in1 — капсулы для автоматической стирки с заранее отмеренной дозой средства. Трёхкомпонентная формула на упаковке объединяет очищение тканей, уход за волокнами и свежий аромат. В коробке 60 капсул; кладите капсулу в барабан до загрузки белья и следуйте инструкции производителя.",
     "galleryImages": [
       "assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg",
       "assets/products/dash/dash-alpen-frische-caps-box-60-front.jpg",
@@ -1677,7 +1677,7 @@
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil White Flower гель для стирки 3 л + 1 л",
-    "description": "Гель для стирки Persil White Flower с цветочным ароматом. Формат 3 л + 1 л удобен для семейного запаса.",
+    "description": "Жидкий гель Persil Power Gel White Flowers предназначен для машинной стирки и удаления повседневных загрязнений. Линия Deep Clean сочетает очищение белья со свежим цветочным ароматом. В комплекте две канистры: 2,9 л и 1 л, общий объём 3,9 л; дозировку выбирайте по инструкции на упаковке.",
     "galleryImages": [
       "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg",
       "assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-front.jpg",
@@ -1840,7 +1840,7 @@
     "brand": "Clear",
     "category_id": "hair",
     "clean_title": "Clear Men Cool Sport Menthol шампунь 600 мл",
-    "description": "Мужской шампунь Clear Men Cool Sport Menthol против перхоти, объём 600 мл. Формула с ментолом и заявленным 10x Deep Refreshing Effect для выраженного ощущения свежести. Штрихкод: 6221155120587.",
+    "description": "Clear Men Cool Sport Menthol — мужской шампунь против перхоти с ментолом. На упаковке заявлен усиленный освежающий эффект, а формула предназначена для очищения волос и кожи головы и контроля видимых проявлений перхоти при регулярном использовании. Объём 600 мл; нанесите на влажные волосы, вспеньте и тщательно смойте.",
     "galleryImages": [
       "assets/products/clear/clear-men-cool-sport-menthol-600ml-card-front.png",
       "assets/products/clear/clear-men-cool-sport-menthol-600ml-final-front.png",
@@ -1883,7 +1883,7 @@
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil High Foam гель для стирки 3 л + 1 л",
-    "description": "Гель для стирки Persil High Foam для свежести и чистоты белья. Большой формат 3 л + 1 л.",
+    "description": "Жидкий Persil Power Gel High Foam предназначен для стирки белья и ухода за стиральной машиной в рамках линейки Deep Clean. Средство помогает удалять повседневные загрязнения и поддерживать ощущение свежести после стирки. В комплекте канистры 2,9 л и 1 л, общий объём 3,9 л; используйте дозировку с упаковки.",
     "galleryImages": [
       "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg",
       "assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-front.jpg",
@@ -2026,7 +2026,7 @@
     "categoryId": "home_cleaning",
     "category_id": "home_cleaning",
     "clean_title": "Jif Lemon чистящий крем 500 мл",
-    "description": "Чистящий крем Jif Lemon для кухни, ванной и твердых поверхностей. Формат: 500 мл.",
+    "description": "Чистящий крем Jif Lemon предназначен для удаления жира и въевшейся грязи с моющихся твёрдых поверхностей. Кремовая текстура удобна для кухни и ванной, а лимонный вариант оставляет свежий аромат. Объём 500 мл; перед применением на деликатной поверхности проверьте средство на незаметном участке и следуйте этикетке.",
     "galleryImages": [
       "assets/products/jif/jif-cream-lemon-500ml-card-front.jpg",
       "assets/products/jif/jif-cream-lemon-500ml-front.jpg",
@@ -2096,7 +2096,7 @@
     "brand": "Dash",
     "category_id": "germany",
     "clean_title": "Dash Color Frische гель для стирки 3,6 л",
-    "description": "Немецкий гель Dash Color Frische для цветного белья. Объем 3,6 л, около 80 стирок.",
+    "description": "Dash Color Frische 2in1 — жидкое средство для стирки цветного белья с ароматом кондиционера. Формула предназначена для очищения тканей и сохранения свежести, а температурный диапазон на упаковке указан от 20 до 60 °C. Объём 3,6 л рассчитан примерно на 80 стирок при стандартной дозировке.",
     "galleryImages": [
       "assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg",
       "assets/products/dash/dash-color-frische-gel-3-6l-front.jpg",
@@ -2157,7 +2157,7 @@
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil Sensitive гель для стирки 3 л",
-    "description": "Гель Persil Sensitive для бережной стирки и ежедневного ухода за бельем. Объем 3 л.",
+    "description": "Persil Sensitive — жидкое средство для машинной стирки с марсельским мылом и миндальным молочком. На упаковке указаны дерматологическое тестирование и сочетание эффективного удаления пятен с бережным отношением к коже. Объём 3 л; применяйте средство в соответствии с дозировкой и указаниями на этикетке.",
     "galleryImages": [
       "assets/products/persil/persil-sensitive-gel-3l-card-front.jpg",
       "assets/products/persil/persil-sensitive-gel-3l-front.jpg",
@@ -2366,7 +2366,7 @@
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil White Flower гель для стирки 3 л",
-    "description": "Гель Persil White Flower для стирки белья с цветочным ароматом. Объем 3 л.",
+    "description": "Жидкий гель Persil Power Gel White Flowers предназначен для машинной стирки и удаления повседневных загрязнений. Формула Deep Clean помогает очищать бельё и оставляет аромат белых цветов. Объём 3 л; дозировку выбирайте по инструкции на упаковке.",
     "galleryImages": [
       "assets/products/persil/persil-white-flower-gel-3l-card-front.jpg",
       "assets/products/persil/persil-white-flower-gel-3l-front.jpg",
@@ -2657,7 +2657,7 @@
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil Rose гель для стирки 3 л + 1 л",
-    "description": "Гель для стирки Persil Rose с ароматом розы. Формат 3 л + 1 л для повседневной стирки белья.",
+    "description": "Жидкий гель Persil Power Gel Rose предназначен для машинной стирки и удаления повседневных загрязнений. Формула Deep Clean помогает очищать бельё и оставляет аромат розы. В комплекте две канистры: 2,9 л и 1 л, общий объём 3,9 л; дозировку выбирайте по инструкции на упаковке.",
     "galleryImages": [
       "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg",
       "assets/products/persil/persil-rose-gel-3l-plus-1l-raw-front.jpg",
@@ -2874,7 +2874,7 @@
     "brand": "Head & Shoulders",
     "category_id": "hair",
     "clean_title": "Head & Shoulders Anti-Hairfall шампунь 650 мл",
-    "description": "Шампунь Head & Shoulders Anti-Hairfall для ежедневного ухода за волосами. Объем 650 мл.",
+    "description": "Head & Shoulders Anti-Hairfall — шампунь против перхоти для волос, склонных к ослаблению и ломкости. На упаковке заявлено укрепление волос от корней до кончиков и защита от видимых проявлений перхоти при регулярном использовании. Объём 650 мл; подходит для применения при каждом мытье головы.",
     "galleryImages": [
       "assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-card-front.jpg",
       "assets/products/head-shoulders/head-shoulders-anti-hairfall-650ml-front.jpg",
@@ -3135,7 +3135,7 @@
     "brand": "Head & Shoulders",
     "category_id": "hair",
     "clean_title": "Head & Shoulders Cool Menthol шампунь 650 мл",
-    "description": "Шампунь против перхоти Head & Shoulders Cool Menthol с ментолом, освежает и очищает кожу головы, до 100% защиты от перхоти. Объём 650 мл.",
+    "description": "Head & Shoulders Cool Menthol — шампунь против перхоти с освежающим ментолом. При регулярном использовании он помогает очищать кожу головы и контролировать видимые проявления перхоти, оставляя ощущение прохлады. Объём 650 мл; нанесите на влажные волосы и кожу головы, вспеньте и тщательно смойте.",
     "galleryImages": [
       "assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-card-front.jpg",
       "assets/products/head-shoulders/head-shoulders-cool-menthol-650ml-front.jpg",
@@ -3201,7 +3201,7 @@
     "brand": "Gillette",
     "category_id": "shaving",
     "clean_title": "Gillette Mach3 Turbo сменные кассеты 4 шт",
-    "description": "Сменные кассеты Gillette Mach3 Turbo для классического чистого бритья. В упаковке 4 штуки.",
+    "description": "Сменные кассеты Gillette Mach3 Turbo предназначены для близкого классического бритья. Три лезвия, защитные микрогребни и смазывающая полоска помогают подготовить кожу и поддерживать плавное скольжение. В упаковке 4 кассеты для совместимых ручек семейства Mach3.",
     "galleryImages": [
       "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-card-front.jpg",
       "assets/products/gillette/gillette-mach3-turbo-cartridges-4-raw-front.jpg",
@@ -3298,7 +3298,7 @@
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil White Flower гель для стирки 4,8 л",
-    "description": "Гель Persil White Flower для стирки белья с цветочным ароматом. Большой объем 4,8 л.",
+    "description": "Persil Power Gel White Flowers — жидкое средство для машинной стирки в большом семейном формате. Формула Deep Clean помогает удалять повседневные загрязнения и оставляет аромат белых цветов. Объём 4,8 л; дозировку выбирайте по загрязнённости белья и инструкции на упаковке.",
     "galleryImages": [
       "assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg",
       "assets/products/persil/persil-white-flower-gel-4-8l-front.jpg",
@@ -3341,7 +3341,7 @@
     "brand": "Persil",
     "category_id": "laundry",
     "clean_title": "Persil Rose гель для стирки 3 л",
-    "description": "Гель для стирки Persil Rose для повседневного ухода за бельем. Объем 3 л.",
+    "description": "Жидкий гель Persil Power Gel Rose предназначен для машинной стирки и удаления повседневных загрязнений. Формула Deep Clean помогает очищать бельё и оставляет аромат розы. Фасовка на упаковке — 2,9 л; дозировку выбирайте по инструкции производителя.",
     "galleryImages": [
       "assets/products/persil/persil-rose-gel-3l-card-front.jpg",
       "assets/products/persil/persil-rose-gel-3l-front.jpg",

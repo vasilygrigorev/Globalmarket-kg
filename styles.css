@@ -1518,12 +1518,29 @@ textarea {
 }
 
 .product-brand-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.product-brand-name {
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: 300;
   line-height: 1.05;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-size-line {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.1;
   white-space: nowrap;
 }
 
@@ -3829,7 +3846,7 @@ textarea {
     gap: 12px;
   }
 
-  body.home-page .product-card {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr);
@@ -3841,7 +3858,7 @@ textarea {
     box-shadow: 0 7px 18px rgba(0, 55, 63, 0.11);
   }
 
-  body.home-page .product-visual {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-visual {
     width: 100%;
     min-height: 0;
     height: auto;
@@ -3851,18 +3868,18 @@ textarea {
     background: #e9f2f1;
   }
 
-  body.home-page .product-image-link,
-  body.home-page .product-image {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-image-link,
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-image {
     height: 100%;
   }
 
-  body.home-page .product-image {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-image {
     display: block;
     width: 100%;
     object-fit: cover;
   }
 
-  body.home-page .product-visual .placeholder-brand {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-visual .placeholder-brand {
     top: 6px;
     left: 6px;
     max-width: calc(100% - 12px);
@@ -3870,12 +3887,12 @@ textarea {
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.88);
     color: #143d45;
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 750;
     line-height: 1.1;
   }
 
-  body.home-page .product-visual .favorite-button {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-visual .favorite-button {
     top: 5px;
     right: 5px;
     width: 27px;
@@ -3887,112 +3904,120 @@ textarea {
     font-size: 15px;
   }
 
-  body.home-page .product-visual .marketing-badges {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-visual .marketing-badges {
     right: 5px;
     bottom: 5px;
     left: 5px;
     gap: 3px;
   }
 
-  body.home-page .product-visual .marketing-badge {
-    padding: 2px 5px;
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-visual .marketing-badge {
+    padding: 3px 6px;
     border-radius: 5px;
-    font-size: 7px;
+    font-size: 11px;
   }
 
-  body.home-page .product-info {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-info {
     display: flex;
     min-width: 0;
-    min-height: 132px;
+    min-height: 150px;
     padding: 10px 10px 9px;
     flex-direction: column;
     gap: 5px;
   }
 
-  body.home-page .product-copy {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-copy {
     min-height: 0;
     gap: 3px;
   }
 
-  body.home-page .product-brand-line {
-    display: -webkit-box;
-    overflow: hidden;
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-brand-line {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px;
     color: #1d343b;
-    font-size: 14px;
+  }
+
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-brand-name {
+    display: -webkit-box;
+    min-width: 0;
+    overflow: hidden;
+    font-size: 18px;
     font-weight: 750;
     letter-spacing: 0;
     line-height: 1.15;
-    white-space: normal;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
 
-  body.home-page .product-kind-line {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-size-line {
+    color: #5f777c;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-kind-line {
     display: block;
     overflow: hidden;
     min-height: 0;
     color: #436067;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.2;
   }
 
-  body.home-page .product-kind-line strong {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-kind-line strong {
     color: #436067;
     font-weight: 650;
   }
 
-  body.home-page .product-kind-line span {
-    margin-left: 3px;
-    color: #71878b;
-    font-size: 11px;
-  }
-
-  body.home-page .product-variant-line {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-variant-line {
     display: -webkit-box;
     overflow: hidden;
     min-height: 0;
     color: #6d8388;
-    font-size: 10px;
-    line-height: 1.15;
+    font-size: 13px;
+    line-height: 1.2;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
 
-  body.home-page .product-meta,
-  body.home-page .product-info > p,
-  body.home-page .stock-note,
-  body.home-page .registered-price-note,
-  body.home-page .buy-row,
-  body.home-page .details-button {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-meta,
+  :where(body.home-page .product-grid, body.product-page .related-grid) .product-info > p,
+  :where(body.home-page .product-grid, body.product-page .related-grid) .stock-note,
+  :where(body.home-page .product-grid, body.product-page .related-grid) .registered-price-note,
+  :where(body.home-page .product-grid, body.product-page .related-grid) .buy-row,
+  :where(body.home-page .product-grid, body.product-page .related-grid) .details-button {
     display: none !important;
   }
 
-  body.home-page .price-stack {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .price-stack {
     margin-top: auto;
     gap: 5px;
   }
 
-  body.home-page .price-action-row {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .price-action-row {
     display: block;
   }
 
-  body.home-page .price {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .price {
     color: #132e36;
-    font-size: 18px;
-    font-weight: 780;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 300;
     line-height: 1.05;
   }
 
-  body.home-page .price .currency-symbol {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .price .currency-symbol {
     font-size: 0.88em;
   }
 
-  body.home-page .compact-add-button {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button {
     display: flex;
     width: 100%;
     min-width: 0;
-    height: 30px;
-    min-height: 30px;
+    height: 36px;
+    min-height: 36px;
     margin-top: 6px;
     padding: 0 7px;
     border: 0;
@@ -4003,19 +4028,19 @@ textarea {
     font-size: 0;
   }
 
-  body.home-page .compact-add-button::before {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button::before {
     content: "В корзину";
     color: #ffffff;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 750;
     line-height: 1;
   }
 
-  body.home-page .compact-add-button.added {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button.added {
     background: #177d55;
   }
 
-  body.home-page .compact-add-button.added::before {
+  :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button.added::before {
     content: "Добавлено";
   }
 
@@ -4302,7 +4327,8 @@ body.product-page {
     --site-header-height: 99px;
   }
 
-  body:is(.home-page, .product-page) .site-header {
+  body:is(.home-page, .product-page) .site-header,
+  body:is(.home-page, .product-page) .site-header.header-floating {
     grid-template-columns: 40px minmax(0, 1fr) 40px;
     grid-template-rows: 40px 50px;
     gap: 2px 7px;
@@ -4421,15 +4447,20 @@ body.product-page {
     min-height: 50px;
   }
 
-  /* Product media begins immediately below the fixed header. Give the search
-     field a stable lower breathing space so it never looks clipped at rest. */
+  /* Keep the dark ocean stage below the search on product pages. The shared
+     header sits at -1px on the home page, but that offset exposes a 1px light
+     seam where product media starts. */
   body.product-page {
     --site-header-height: 107px;
   }
 
-  body.product-page .site-header {
+  body.product-page .site-header,
+  body.product-page .site-header.header-floating {
+    top: 0;
     min-height: 107px;
     padding-bottom: 8px;
+    border-bottom: 0;
+    box-shadow: none;
   }
 
   body.home-page .hero {

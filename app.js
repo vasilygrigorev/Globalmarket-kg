@@ -1655,10 +1655,12 @@ function renderProducts() {
           </div>
           <div class="product-info">
             <a class="product-title-button product-copy" ${cardLink}>
-              <span class="product-brand-line">${escapeHtml(display.brand)}</span>
+              <span class="product-brand-line">
+                <span class="product-brand-name">${escapeHtml(display.brand)}</span>
+                ${display.size ? `<span class="product-size-line">${escapeHtml(display.size)}</span>` : ""}
+              </span>
               <span class="product-kind-line">
                 <strong>${escapeHtml(display.type)}</strong>
-                ${display.size ? `<span>${escapeHtml(display.size)}</span>` : ""}
               </span>
               <span class="product-variant-line">${escapeHtml(display.variant)}</span>
             </a>
@@ -2857,8 +2859,6 @@ function renderCabinetProfile(profile) {
   if (!profileForm) return;
   profileForm.elements.name.value = profile?.name || "";
   profileForm.elements.phone.value = profile?.phone || "";
-  profileForm.elements.city.value = profile?.city || "";
-  profileForm.elements.region.value = profile?.region || "";
   profileForm.elements.address.value = profile?.address || "";
 }
 
@@ -3011,8 +3011,6 @@ profileForm?.addEventListener("submit", async (event) => {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         name: formData.get("name"),
-        city: formData.get("city"),
-        region: formData.get("region"),
         address: formData.get("address"),
       }),
     });

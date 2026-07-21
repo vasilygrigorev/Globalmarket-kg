@@ -134,8 +134,53 @@ test("privacy page is a published policy rather than a draft", () => {
   assert.match(html, /\+996 706 771 103/);
 });
 
-test("mobile product header reserves stable space below search", () => {
+test("mobile product header keeps dark space below search without a light seam", () => {
   const css = read("styles.css");
   assert.match(css, /body\.product-page\s*\{\s*--site-header-height:\s*107px;/s);
-  assert.match(css, /body\.product-page \.site-header\s*\{[^}]*padding-bottom:\s*8px;/s);
+  assert.match(
+    css,
+    /body\.product-page \.site-header,\s*body\.product-page \.site-header\.header-floating\s*\{[^}]*top:\s*0;[^}]*min-height:\s*107px;[^}]*padding-bottom:\s*8px;[^}]*border-bottom:\s*0;/s,
+  );
+});
+
+test("mobile storefront header keeps the same grid after it starts floating", () => {
+  const css = read("styles.css");
+  assert.match(
+    css,
+    /body:is\(\.home-page, \.product-page\) \.site-header,\s*body:is\(\.home-page, \.product-page\) \.site-header\.header-floating\s*\{[^}]*grid-template-columns:\s*40px minmax\(0, 1fr\) 40px;[^}]*grid-template-rows:\s*40px 50px;/s,
+  );
+});
+
+test("main and related product grids use the same light mobile price", () => {
+  const css = read("styles.css");
+  assert.match(
+    css,
+    /:where\(body\.home-page \.product-grid, body\.product-page \.related-grid\) \.price\s*\{[^}]*font-family:\s*"Helvetica Neue", Helvetica, Arial, sans-serif;[^}]*font-size:\s*34px;[^}]*font-weight:\s*300;/s,
+  );
+});
+
+test("main and related product grids use the same prominent mobile brand", () => {
+  const css = read("styles.css");
+  assert.match(
+    css,
+    /:where\(body\.home-page \.product-grid, body\.product-page \.related-grid\) \.product-brand-name\s*\{[^}]*font-size:\s*18px;/s,
+  );
+});
+
+test("mobile product cards place a prominent size beside the brand", () => {
+  const app = read("app.js");
+  const css = read("styles.css");
+  const sharedGrid = String.raw`:where\(body\.home-page \.product-grid, body\.product-page \.related-grid\)`;
+  assert.match(app, /product-brand-line[\s\S]*product-brand-name[\s\S]*product-size-line[\s\S]*product-kind-line/);
+  assert.match(css, new RegExp(`${sharedGrid} \\.product-brand-line\\s*\\{[^}]*justify-content:\\s*space-between;`, "s"));
+  assert.match(css, new RegExp(`${sharedGrid} \\.product-size-line\\s*\\{[^}]*font-size:\\s*15px;`, "s"));
+});
+
+test("mobile product cards avoid unreadably small supporting text", () => {
+  const css = read("styles.css");
+  const sharedGrid = String.raw`:where\(body\.home-page \.product-grid, body\.product-page \.related-grid\)`;
+  assert.match(css, new RegExp(`${sharedGrid} \\.product-kind-line\\s*\\{[^}]*font-size:\\s*14px;`, "s"));
+  assert.match(css, new RegExp(`${sharedGrid} \\.product-variant-line\\s*\\{[^}]*font-size:\\s*13px;`, "s"));
+  assert.match(css, new RegExp(`${sharedGrid} \\.product-visual \\.marketing-badge\\s*\\{[^}]*font-size:\\s*11px;`, "s"));
+  assert.match(css, new RegExp(`${sharedGrid} \\.compact-add-button::before\\s*\\{[^}]*font-size:\\s*13px;`, "s"));
 });

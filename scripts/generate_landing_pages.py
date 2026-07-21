@@ -344,7 +344,7 @@ def product_tile_html(product, href):
         if badges
         else ""
     )
-    size_html = f'<span>{escape(display["size"])}</span>' if display["size"] else ""
+    size_html = f'<span class="product-size-line">{escape(display["size"])}</span>' if display["size"] else ""
     # rstrip each line: badges_html/discount_badge_html can be "" for a given
     # product, which would otherwise leave an indentation-only line behind
     # (fails git diff --check's trailing-whitespace guard).
@@ -363,10 +363,12 @@ def product_tile_html(product, href):
               </div>
               <div class="product-info">
                 <a class="product-title-button product-copy" href="{escape(href)}" data-product-link="{product_id}">
-                  <span class="product-brand-line">{escape(display["brand"])}</span>
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">{escape(display["brand"])}</span>
+                    {size_html}
+                  </span>
                   <span class="product-kind-line">
                     <strong>{escape(display["type"])}</strong>
-                    {size_html}
                   </span>
                   <span class="product-variant-line">{escape(display["variant"])}</span>
                 </a>
