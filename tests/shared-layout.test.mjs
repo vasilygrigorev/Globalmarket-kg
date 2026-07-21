@@ -184,3 +184,38 @@ test("mobile product cards avoid unreadably small supporting text", () => {
   assert.match(css, new RegExp(`${sharedGrid} \\.product-visual \\.marketing-badge\\s*\\{[^}]*font-size:\\s*11px;`, "s"));
   assert.match(css, new RegExp(`${sharedGrid} \\.compact-add-button::before\\s*\\{[^}]*font-size:\\s*13px;`, "s"));
 });
+
+test("home and related-product renderers follow one complete card contract", () => {
+  const app = read("app.js");
+  const generator = read("scripts/generate_product_pages.py");
+  const css = read("styles.css");
+  const requiredClasses = [
+    "product-card",
+    "product-visual",
+    "placeholder-brand",
+    "favorite-button",
+    "marketing-badges",
+    "product-image-link",
+    "product-image",
+    "product-info",
+    "product-title-button product-copy",
+    "product-brand-line",
+    "product-brand-name",
+    "product-size-line",
+    "product-kind-line",
+    "product-variant-line",
+    "price-stack",
+    "price-action-row",
+    "compact-add-button",
+  ];
+
+  for (const className of requiredClasses) {
+    assert.ok(app.includes(className), `homepage card is missing ${className}`);
+    assert.ok(generator.includes(className), `related-product card is missing ${className}`);
+  }
+
+  const sharedSelector = ":where(body.home-page .product-grid, body.product-page .related-grid)";
+  for (const element of [".product-card", ".product-visual", ".product-info", ".price", ".compact-add-button"]) {
+    assert.ok(css.includes(`${sharedSelector} ${element}`), `shared card CSS is missing ${element}`);
+  }
+});
