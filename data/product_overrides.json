@@ -1538,10 +1538,19 @@
   "prd_70c1f5d616a6": {
     "brand": "Clear",
     "category_id": "hair",
-    "clean_title": "Clear Men Legend CR7 шампунь 400 мл",
-    "description": "Мужской шампунь Clear Men Legend CR7 для ежедневного ухода за волосами. Объем 400 мл.",
-    "product_type": "шампунь",
-    "short_title": "Clear Men CR7 400 мл"
+    "clean_title": "Clear Men Legend by CR7 шампунь против перхоти 400 мл",
+    "description": "Clear Men Legend by CR7 — мужской шампунь против перхоти с натуральной морской солью. Формула очищает волосы и кожу головы и помогает контролировать видимые проявления перхоти при регулярном использовании. Объём 400 мл; нанесите на влажные волосы и кожу головы, вспеньте и тщательно смойте.",
+    "galleryImages": [
+      "assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
+      "assets/products/clear/clear-men-legend-cr7-600ml-final-front.png",
+      "assets/products/clear/clear-men-legend-cr7-600ml-final-back.png"
+    ],
+    "image": "assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
+    "notes": [
+      "2026-07-22: пользователь подтвердил, что опубликованные фотографии относятся к продаваемой позиции 400 мл с кодом 1С 753. Галерея перенесена с ошибочно связанной позиции 600 мл; старые сведения о штрихкоде 600 мл не используются в публичном описании."
+    ],
+    "product_type": "мужской шампунь против перхоти",
+    "short_title": "Clear Legend by CR7 400 мл"
   },
   "prd_71d2d567002b": {
     "brand": "Downy",
@@ -1948,19 +1957,13 @@
     "brand": "Clear",
     "category_id": "hair",
     "clean_title": "Clear Men Legend by CR7 шампунь 600 мл",
-    "description": "Мужской шампунь Clear Men Legend by CR7 против перхоти, объём 600 мл. На этикетке указана линейка Legend by CR7 и компонент natural sea salt / натуральная морская соль. Штрихкод: 6221155081546.",
-    "galleryImages": [
-      "assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
-      "assets/products/clear/clear-men-legend-cr7-600ml-final-front.png",
-      "assets/products/clear/clear-men-legend-cr7-600ml-final-back.png"
-    ],
-    "image": "assets/products/clear/clear-men-legend-cr7-600ml-card-front.png",
+    "description": "Clear Men Legend by CR7 — мужской шампунь против перхоти в формате 600 мл. Эта отдельная позиция временно отсутствует в продаже и не должна использовать фотографии или остатки товара 400 мл.",
     "notes": [
-      "Исходное распознавание до обработки фото: CLEAR Men Legend by CR7; для мужчин; 600 ml; anti-dandruff shampoo; Legend with natural sea salt / с натуральной морской солью; на задней этикетке также указано sea salt; способ применения: нанести на влажные волосы и кожу головы, тщательно смыть, при необходимости повторить; штрихкод 6221155081546. Made in Egypt / Unilever Mashreq и batch/date требуют ручной проверки по оригиналу. Фото обновлено из /Users/macmini/shopfoto2/product_photos_final_package на улучшенную final-версию 1254x1254.\n\n2026-06-07: Основной картинкой поставлена дизайнерская карточка товара `assets/products/clear/clear-men-legend-cr7-600ml-card-front.png`. Предыдущее фото: `assets/products/clear/clear-men-legend-cr7-600ml-final-front.png`.",
-      "2026-06-10: restored missing front image in Clear 600 ml product gallery."
+      "2026-07-22: пользователь подтвердил отсутствие 600 мл в продаже. Ошибочно привязанные фотографии перенесены на позицию 400 мл с кодом 1С 753."
     ],
     "product_type": "мужской шампунь против перхоти",
-    "short_title": "Clear Legend by CR7 600 мл"
+    "short_title": "Clear Legend by CR7 600 мл",
+    "visibility": "hidden"
   },
   "prd_8ecb44018700": {
     "badge": "Sunsilk",

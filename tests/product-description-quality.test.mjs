@@ -51,6 +51,7 @@ const curatedProductIds = [
   "prd_f027d150c31a", "prd_7ac05b86dfd8", "prd_6c3fa744cf67",
   "prd_48a2b18d3de6", "prd_539a47bdb383", "prd_d53b7b8bf384",
   "prd_bf0dc63d18a6", "prd_fbc4a5e759ac",
+  "prd_70c1f5d616a6",
 ];
 
 const productsById = new Map(catalog.products.map((product) => [product.id, product]));
@@ -62,7 +63,7 @@ const forbiddenPublicPhrases = [
 ];
 
 test("curated product descriptions remain useful and public", () => {
-  assert.equal(curatedProductIds.length, 128);
+  assert.equal(curatedProductIds.length, 129);
   for (const productId of curatedProductIds) {
     const product = productsById.get(productId);
     assert.ok(product, `${productId}: missing from public catalog`);

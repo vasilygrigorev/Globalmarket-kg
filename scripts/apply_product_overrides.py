@@ -38,6 +38,10 @@ def main():
             missing.append(product_id)
             continue
 
+        visibility = values.get("visibility")
+        if visibility not in {None, "storefront", "hidden"}:
+            raise SystemExit(f"{product_id}: unsupported visibility override {visibility!r}")
+
         conn.execute(
             """
             update products
@@ -49,6 +53,7 @@ def main():
                 image_id = ?,
                 notes = ?,
                 status = 'active',
+                visibility = coalesce(?, visibility),
                 search_text = lower(?),
                 updated_at = ?
             where product_id = ?
@@ -61,6 +66,7 @@ def main():
                 values["product_type"],
                 values.get("image"),
                 notes_text,
+                visibility,
                 " ".join(
                     [
                         values["clean_title"],

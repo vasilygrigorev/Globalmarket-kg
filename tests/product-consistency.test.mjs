@@ -32,6 +32,19 @@ test("product-pages manifest matches the catalog (unified data)", () => {
   assert.deepEqual(bad, [], `manifest/catalog mismatches: ${bad.slice(0, 6).join(", ")}`);
 });
 
+test("Clear Legend CR7 publishes the stocked 400 ml SKU, never the unavailable 600 ml SKU", () => {
+  const stocked = byId.get("prd_70c1f5d616a6");
+  assert.ok(stocked, "400 ml Clear Legend CR7 is missing");
+  assert.match(stocked.title, /400 мл/);
+  assert.ok(firstImage(stocked), "400 ml Clear Legend CR7 has no product photo");
+  assert.equal(byId.has("prd_8d15b250f536"), false, "unavailable 600 ml SKU is public");
+
+  const oldSlug = "clear-men-legend-by-cr7-shampun-600-ml-50f536";
+  const newSlug = "clear-men-legend-by-cr7-shampun-protiv-perhoti-400-ml-d616a6";
+  assert.equal(existsSync(join(ROOT, "product", oldSlug, "index.html")), false);
+  assert.match(read("_redirects"), new RegExp(`/product/${oldSlug}/ /product/${newSlug}/ 301`));
+});
+
 test("each generated product page reflects the catalog price", () => {
   const bad = [];
   for (const e of pages) {

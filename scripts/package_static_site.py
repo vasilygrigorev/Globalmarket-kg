@@ -17,6 +17,7 @@ ROOT_FILES = [
     "404.html",
     "site.webmanifest",
     "_headers",
+    "_redirects",
     "sitemap.xml",
     "robots.txt",
 ]
