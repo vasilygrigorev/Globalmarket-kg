@@ -219,3 +219,12 @@ test("home and related-product renderers follow one complete card contract", () 
     assert.ok(css.includes(`${sharedSelector} ${element}`), `shared card CSS is missing ${element}`);
   }
 });
+
+test("product detail typography cannot override shared product cards", () => {
+  const generator = read("scripts/generate_product_pages.py");
+  assert.match(generator, /\.product-detail-info \{\{/);
+  assert.match(generator, /\.price-box \.price \{\{/);
+  assert.doesNotMatch(generator, /^\s*\.product-info \{\{/m);
+  assert.doesNotMatch(generator, /^\s*\.price \{\{/m);
+  assert.match(generator, /<section class="product-detail-info">/);
+});

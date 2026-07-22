@@ -46,7 +46,7 @@ test("curated product descriptions remain useful and public", () => {
     const html = fs.readFileSync(path.join(root, page.path, "index.html"), "utf8");
     assert.ok(html.includes('<p class="description">'), `${productId}: description block missing`);
     assert.ok(
-      html.includes("body.product-page .product-info .description { display: block;"),
+      html.includes("body.product-page .product-detail-info .description { display: block;"),
       `${productId}: mobile description visibility override missing`,
     );
     assert.ok(html.includes(description.replaceAll("&", "&amp;")), `${productId}: generated page has stale description`);

@@ -623,7 +623,7 @@ def render_page(product, related, slug, landing_lookup=None):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(meta_description)}">
   <meta name="twitter:image" content="{escape(absolute_url(main_image))}">
-  <link rel="stylesheet" href="/styles.css?v=20260721-shared-product-card-v1">
+  <link rel="stylesheet" href="/styles.css?v=20260721-shared-product-card-v2">
   <script type="application/ld+json">{json_ld}</script>
   <script type="application/ld+json">{breadcrumb_json_ld}</script>
   <style>
@@ -648,7 +648,7 @@ def render_page(product, related, slug, landing_lookup=None):
     .gallery-thumb.active {{ border-color: #1f1f1f; background: #fff; }}
     .gallery-thumb img {{ width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }}
     .gallery-thumb span {{ overflow: hidden; font-size: 11px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; text-align: center; }}
-    .product-info {{ display: grid; gap: 18px; padding: 28px 26px 26px; }}
+    .product-detail-info {{ display: grid; gap: 18px; padding: 28px 26px 26px; }}
     .product-breadcrumbs {{ display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: #777; font-size: 13px; line-height: 1.35; }}
     .product-breadcrumbs a {{ color: inherit; text-decoration: none; }}
     .product-breadcrumbs a:hover {{ color: #111; }}
@@ -659,11 +659,11 @@ def render_page(product, related, slug, landing_lookup=None):
     .size-line {{ flex: 0 0 auto; color: #555; font-size: clamp(20px, 4.5vw, 30px); font-weight: 300; line-height: 1.1; white-space: nowrap; }}
     .type {{ margin: 0; font-size: clamp(24px, 5vw, 34px); font-weight: 800; line-height: 1.12; }}
     .variant {{ margin: 0; color: #777; font-size: 19px; line-height: 1.35; }}
-    body.product-page .product-info .description {{ display: block; min-height: 0; overflow: visible; margin: 0; color: #666; font-size: 18px; line-height: 1.55; -webkit-line-clamp: unset; }}
+    body.product-page .product-detail-info .description {{ display: block; min-height: 0; overflow: visible; margin: 0; color: #666; font-size: 18px; line-height: 1.55; -webkit-line-clamp: unset; }}
     .price-box {{ display: grid; gap: 4px; padding: 16px; border: 1px solid #e4e4e7; border-radius: 8px; background: #f5f5f6; }}
     .price-box span,
     .price-box small {{ color: #777; }}
-    .price {{ font-size: 38px; font-weight: 850; line-height: 1; }}
+    .price-box .price {{ font-size: 38px; font-weight: 850; line-height: 1; }}
     .som-sign {{ display: inline-block; padding-bottom: 0.03em; border-bottom: 0.06em solid currentColor; line-height: 0.88; }}
     .specs {{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }}
     .specs div {{ padding: 12px; border: 1px solid #e4e4e7; border-radius: 8px; background: #fff; }}
@@ -709,7 +709,7 @@ def render_page(product, related, slug, landing_lookup=None):
       .page {{ max-width: none; padding: 0; }}
       .product-shell {{ border-radius: 0; box-shadow: none; }}
       .related {{ padding: 0 8px; }}
-      .product-info {{ padding: 26px 18px 20px; }}
+      .product-detail-info {{ padding: 26px 18px 20px; }}
       .icon-action {{ width: 44px; height: 44px; }}
       .specs {{ grid-template-columns: 1fr; }}
       .related-grid {{ grid-template-columns: repeat(2, 1fr); }}
@@ -717,7 +717,7 @@ def render_page(product, related, slug, landing_lookup=None):
     }}
     @media (min-width: 860px) {{
       .product-shell {{ display: grid; grid-template-columns: minmax(0, 52%) minmax(320px, 48%); }}
-      .product-info {{ padding-top: 58px; }}
+      .product-detail-info {{ padding-top: 58px; }}
       .gallery-thumbs {{ background: #fff; }}
       .top-actions {{ left: 16px; right: 16px; }}
     }}
@@ -751,7 +751,7 @@ def render_page(product, related, slug, landing_lookup=None):
         <img class="media-main" src="/{escape(main_image)}" alt="{escape(title)}" data-main-image>
         {render_gallery(images, title)}
       </section>
-      <section class="product-info">
+      <section class="product-detail-info">
         {visual_breadcrumbs(product, links)}
         <div class="title-block">
           <div class="brand-row">
