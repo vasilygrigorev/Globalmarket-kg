@@ -1916,6 +1916,7 @@ textarea {
 }
 
 .cabinet-avatar {
+  position: relative;
   display: grid;
   place-items: center;
   width: 54px;
@@ -1924,8 +1925,31 @@ textarea {
   border-radius: 50%;
   color: #9b9aa5;
   background: #fafafd;
-  font-size: 22px;
-  font-weight: 750;
+}
+
+.cabinet-avatar::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.cabinet-avatar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 25px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-bottom: 0;
+  border-radius: 16px 16px 0 0;
+  transform: translateX(-50%);
 }
 
 .cabinet-identity {
@@ -4638,6 +4662,16 @@ body.product-page {
     padding-bottom: 8px;
     border-bottom: 0;
     box-shadow: none;
+  }
+
+  body.home-page {
+    --site-header-height: 107px;
+  }
+
+  body.home-page .site-header,
+  body.home-page .site-header.header-floating {
+    min-height: 107px;
+    padding-bottom: 8px;
   }
 
   body.home-page .hero {

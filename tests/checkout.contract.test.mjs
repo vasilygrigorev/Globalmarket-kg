@@ -14,6 +14,7 @@ const read = (rel) => readFileSync(join(ROOT, rel), "utf8");
 
 const html = read("index.html");
 const appJs = read("app.js");
+const css = read("styles.css");
 const ordersFn = read("functions/api/orders.js");
 const apiDoc = read("docs/api-orders.md");
 const productPagesGen = read("scripts/generate_product_pages.py");
@@ -50,11 +51,19 @@ test("cart opens guest checkout directly and SMS login stays in the cabinet", ()
 
 test("logged-in cabinet has a compact WB-inspired profile header", () => {
   assert.match(html, /id="cabinetGreetingName"/);
-  assert.match(html, /id="cabinetAvatarInitial"/);
+  assert.ok(!html.includes('id="cabinetAvatarInitial"'));
+  assert.match(html, /<span class="cabinet-avatar" aria-hidden="true"><\/span>/);
   assert.match(html, /id="cabinetNotificationButton"/);
   assert.match(appJs, /cabinetGreetingName\.textContent = firstName/);
   assert.match(html, /<details class="cabinet-block" id="profileBlock">/);
   assert.match(html, /id="myOrdersLogoutButton"/);
+});
+
+test("cabinet visibility and fresh assets prevent mixed old/new mobile layout", () => {
+  assert.match(html, /styles\.css\?v=20260722-cabinet-v3/);
+  assert.match(html, /app\.js\?v=20260722-cabinet-v3/);
+  assert.match(css, /\.my-orders-account\[hidden\],[\s\S]*?\.cabinet-login-card\[hidden\][\s\S]*?display:\s*none/);
+  assert.ok(!/>К<\/span>/.test(html), "cabinet must not render a letter avatar");
 });
 
 test("guest checkout explains automatic manager email delivery", () => {

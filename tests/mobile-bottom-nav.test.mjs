@@ -139,6 +139,7 @@ test("cabinet contains profile, compact orders, wholesale and contact without du
   assert.match(indexHtml, /id="myOrdersResults"/);
   assert.match(indexHtml, /id="wholesaleBlock"/);
   assert.match(indexHtml, /id="contactBlock"/);
+  assert.match(read("styles.css"), /body\.home-page \.site-header,[\s\S]*?min-height:\s*107px;[\s\S]*?padding-bottom:\s*8px;/);
 });
 
 test("logged-in cabinet shows an empty-orders state with a link back to the catalog", () => {

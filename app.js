@@ -79,7 +79,6 @@ const modalTopActions = document.querySelector("#modalTopActions");
 const customerCardTitle = document.querySelector("#customerCardTitle");
 const customerCardText = document.querySelector("#customerCardText");
 const cabinetGreetingName = document.querySelector("#cabinetGreetingName");
-const cabinetAvatarInitial = document.querySelector("#cabinetAvatarInitial");
 const cabinetPhone = document.querySelector("#cabinetPhone");
 const cabinetNotificationButton = document.querySelector("#cabinetNotificationButton");
 const cabinetNotificationBadge = document.querySelector("#cabinetNotificationBadge");
@@ -2886,7 +2885,6 @@ function renderCabinet(profile) {
   const role = profile?.role || "retail";
   const firstName = String(profile?.name || "").trim().split(/\s+/)[0] || "Клиент";
   if (cabinetGreetingName) cabinetGreetingName.textContent = firstName;
-  if (cabinetAvatarInitial) cabinetAvatarInitial.textContent = firstName.slice(0, 1).toUpperCase();
   if (cabinetPhone) cabinetPhone.textContent = profile?.phone || "";
   renderCabinetProfile(profile);
   renderWholesaleBlock(role);
