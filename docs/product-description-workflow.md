@@ -69,3 +69,19 @@ Lenor scent boosters, Ariel All-in-1 PODS, Dove hair care and antiperspirants,
 Rexona Antibacterial + Invisible, and TRESemmé Volume. Where no exact regional
 official page was available, wording was limited to what is visible on the
 local package; no adjacent variant claims were imported.
+
+## Remaining Photographed Pages: 2026-07-22
+
+The remaining 68 weak-copy generated product pages were completed as a final
+photographed-page batch. Exact front/back assets were reviewed in contact
+sheets and individually where the product format was ambiguous. The batch
+covers Pantene and Herbal Essences shampoos, TRESemmé, sun protection, baby
+oil, Colgate toothbrushes, deodorant sticks, Gillette and BIC shaving products,
+Dash and Dalli laundry care, Concord tools, and Banduff plasters.
+
+Descriptions stay within the exact pack and product-family evidence, separate
+breakage-related hair fall from medical hair loss, avoid treatment claims for
+plasters, and include conservative use guidance for sun protection, aerosols,
+razors, and laundry capsules. With this batch, every one of the 186 generated
+photographed product pages passes the description quality heuristic. Catalog
+rows without generated photo pages remain a separate future workflow.
