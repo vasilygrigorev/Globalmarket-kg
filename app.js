@@ -2863,12 +2863,14 @@ function renderWholesaleBlock(role) {
   if (!wholesaleStatusText || !wholesaleForm) return;
   if (role === "wholesale") {
     wholesaleStatusText.textContent = "У вас оптовый доступ.";
+    wholesaleForm.hidden = true;
   } else if (role === "wholesale_pending") {
     wholesaleStatusText.textContent = "Предыдущая заявка отправлена. Можно отправить ещё одну.";
+    wholesaleForm.hidden = false;
   } else {
     wholesaleStatusText.textContent = "";
+    wholesaleForm.hidden = false;
   }
-  wholesaleForm.hidden = false;
 }
 
 function fillCabinetForms(profile) {
