@@ -72,6 +72,24 @@ test("perfume products keep a single card image", () => {
   assert.deepEqual(bad, [], `perfume not single card image: ${bad.join(", ")}`);
 });
 
+test("perfume copy says original branded perfume on tap, never on draught", () => {
+  const perfume = products.filter((p) => p.categoryId === "perfume" || p.category === "Парфюм 5 мл");
+  const bad = perfume.filter((p) =>
+    p.productType !== "оригинальные духи на распив"
+      || !/Оригинальные брендовые духи/.test(p.description || "")
+      || !/на распив/.test(p.description || "")
+      || /на разлив/.test(`${p.productType || ""} ${p.description || ""}`)
+  ).map((p) => p.id);
+  assert.deepEqual(bad, [], `incorrect perfume wording: ${bad.join(", ")}`);
+
+  const mislabeled = products.filter((p) =>
+    p.categoryId !== "perfume"
+      && p.category !== "Парфюм 5 мл"
+      && /духи на распив|парфюм на разлив/i.test(p.productType || "")
+  ).map((p) => p.id);
+  assert.deepEqual(mislabeled, [], `non-perfume products mislabeled as decants: ${mislabeled.join(", ")}`);
+});
+
 test("related-product cards link to real pages and reference images that exist on disk", () => {
   // render_related() / product_tile_html() in scripts/generate_product_pages.py
   // emit full .product-card tiles (same as the home page): the image link

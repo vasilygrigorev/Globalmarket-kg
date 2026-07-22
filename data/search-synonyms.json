@@ -244,7 +244,7 @@
       "label": "Парфюм",
       "aliases": ["парфюм", "духи", "parfum", "perfume", "парфюмерия"],
       "terms": ["парфюм", "духи", "parfum", "perfume"],
-      "landingTerms": ["парфюм на разлив", "духи"],
+      "landingTerms": ["духи на распив", "оригинальные духи"],
       "categories": ["Парфюм 5 мл"],
       "categoryIds": ["perfume"],
       "productKinds": ["perfume_decant"],

@@ -275,8 +275,11 @@ def display_product_type(product):
     # Mirrors display_product_type() in scripts/generate_product_pages.py.
     product_type = product.get("productType") or ""
     category = product.get("category") or "товар"
+    category_id = product.get("categoryId") or ""
     title = product.get("title") or ""
     lower = f"{product_type} {category} {title}".lower()
+    if category_id == "perfume" or category == "Парфюм 5 мл":
+        return "оригинальные духи на распив"
     if "ополаскив" in lower or "кондиционер для белья" in lower:
         return "ополаскиватель"
     if "гель для стирки" in lower:
@@ -293,8 +296,6 @@ def display_product_type(product):
         return "кассеты для станка"
     if "станок" in lower:
         return "станок для бритья"
-    if "парфюм" in lower:
-        return "парфюм на разлив"
     return product_type or category
 
 
