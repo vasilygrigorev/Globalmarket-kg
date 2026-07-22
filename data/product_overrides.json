@@ -73,7 +73,7 @@
     "brand": "Gillette",
     "category_id": "deodorants",
     "clean_title": "Gillette Antiperspirant Arctic Ice гель-дезодорант 70 мл",
-    "description": "Гель-антиперспирант Gillette Arctic Ice с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+    "description": "Gillette Arctic Ice — прозрачный гель-антиперспирант с прохладным свежим ароматом. Формат стика удобно наносится непосредственно на сухую кожу подмышек, а заявленная на упаковке защита рассчитана до 48 часов. Объём 70 мл; не наносите средство на раздражённую или повреждённую кожу.",
     "galleryImages": [
       "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg",
       "assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-front.jpg",
@@ -134,7 +134,7 @@
     "brand": "TRESemmé",
     "category_id": "hair",
     "clean_title": "TRESemmé Volume шампунь 828 мл",
-    "description": "Шампунь TRESemmé Volume для придания объёма волосам. Объём 828 мл, формула с collagen & peptide complex.",
+    "description": "TRESemmé Volume — шампунь для тонких волос, которым не хватает объёма. Формула с комплексом коллагена и пептидов очищает волосы без излишнего утяжеления и помогает придать им более объёмный вид. Объём 828 мл; нанесите на влажные волосы, вспеньте, тщательно смойте и при необходимости используйте кондиционер только по длине.",
     "galleryImages": [
       "assets/products/tresemme/tresemme-volume-828ml-card-front.jpg",
       "assets/products/tresemme/tresemme-volume-828ml-front.jpg",
@@ -205,7 +205,7 @@
     "brand": "Rexona",
     "category_id": "deodorants",
     "clean_title": "Rexona Men Antibacterial + Invisible дезодорант-стик 40 г",
-    "description": "Дезодорант-антиперспирант Rexona Antibacterial + Invisible, 10x антибактериальная защита, 48 часов. Объём 40 г.",
+    "description": "Rexona Men Antibacterial + Invisible — мужской антиперспирант-стик для защиты от пота и запаха. Вариант сочетает антибактериальную защиту от запаха с формулой, предназначенной для уменьшения заметных следов дезодоранта на одежде; заявленное действие — до 48 часов. Масса 40 г; наносите тонким слоем только на чистую сухую кожу подмышек.",
     "galleryImages": [
       "assets/products/rexona/rexona-stick-antibacterial-40g-card-front.jpg",
       "assets/products/rexona/rexona-stick-antibacterial-40g-front.jpg",
@@ -259,7 +259,7 @@
     "brand": "Gillette Venus",
     "category_id": "shaving",
     "clean_title": "Gillette Venus Simply Basic одноразовые станки 5 шт",
-    "description": "Одноразовые станки Gillette Venus Simply Basic для мягкого бритья. В упаковке 5 штук.",
+    "description": "Gillette Simply Venus Basic — одноразовые женские станки с двумя лезвиями для простого повседневного бритья. Узкая головка удобна для труднодоступных участков, а смазывающая полоска помогает улучшить скольжение. В упаковке 5 станков.",
     "galleryImages": [
       "assets/products/gillette/gillette-venus-simply-basic-5-raw-card-front.jpg",
       "assets/products/gillette/gillette-venus-simply-basic-5-raw-front.jpg",
@@ -449,7 +449,7 @@
     "badge": "Lenor",
     "brand": "Lenor",
     "clean_title": "Lenor Gold Orchid парфюм для белья 210 г",
-    "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Gold Orchid. Формат: 210 г.",
+    "description": "Lenor Gold Orchid — парфюмированные гранулы с тёплым цветочно-ванильным ароматом для белья. Гранулы используются вместе с обычным средством для стирки и позволяют менять интенсивность аромата дозировкой. Насыпьте их в пустой барабан до загрузки белья; формат 210 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg",
       "assets/products/lenor/lenor-gold-orchid-210g-front.jpg",
@@ -573,7 +573,7 @@
     "brand": "Head & Shoulders",
     "category_id": "hair",
     "clean_title": "Head & Shoulders Menthol шампунь 400 мл",
-    "description": "Шампунь Head & Shoulders Menthol для ощущения свежести и ежедневного ухода. Объем 400 мл.",
+    "description": "Head & Shoulders Menthol Fresh — шампунь против перхоти с освежающим ментолом. Формула Derma & Pure предназначена для очищения волос и кожи головы и помогает защищать от видимых хлопьев перхоти при регулярном использовании. Объём 400 мл; нанесите на влажные волосы, помассируйте кожу головы, вспеньте и тщательно смойте.",
     "galleryImages": [
       "assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-card-front.jpg",
       "assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-front.jpg",
@@ -681,7 +681,7 @@
     "brand": "Gillette",
     "category_id": "shaving",
     "clean_title": "Gillette Sensitive пена для бритья 200 мл",
-    "description": "Пена для бритья Gillette Series Sensitive для чувствительной кожи, помогает сделать бритье более комфортным. Объем 200 мл.",
+    "description": "Gillette Series Sensitive — пена для бритья, разработанная для чувствительной кожи. Плотная пена помогает смягчить щетину, создать скользящий слой между кожей и лезвием и сделать бритьё комфортнее. Объём 200 мл; встряхните баллон, нанесите пену на влажную кожу и после бритья тщательно смойте.",
     "image": "assets/products/gillette/gillette-foam-sensitive-200ml-card-front.jpg",
     "notes": "2026-06-15: фото из Petya album telegram-8767964230-20260615: card/front/back. Сопоставлено с 1C позицией Shaving Foam (200) Sensitive.",
     "product_type": "пена для бритья",
@@ -733,7 +733,7 @@
     "brand": "Ariel",
     "category_id": "laundry",
     "clean_title": "Ariel All in 1 Universal капсулы 15 шт",
-    "description": "Капсулы Ariel All in 1 Universal для удобной стирки. В упаковке 15 штук.",
+    "description": "Ariel All in 1 Universal — капсулы для автоматической стирки белого, светлого и смешанного белья. Многокамерная капсула быстро растворяется в воде и высвобождает средство для удаления повседневных и засохших пятен. В упаковке 15 капсул; положите капсулу в глубину пустого барабана сухими руками, затем загрузите бельё.",
     "galleryImages": [
       "assets/products/ariel/ariel-all-in-1-universal-caps-15-card-front.jpg",
       "assets/products/ariel/ariel-all-in-1-universal-caps-15-front.jpg",
@@ -1236,7 +1236,7 @@
     "badge": "Lenor",
     "brand": "Lenor",
     "clean_title": "Lenor Cool Cotton парфюм для белья 155 г",
-    "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Cool Cotton. Формат: 155 г.",
+    "description": "Lenor Cool Cotton — парфюмированные гранулы со свежим хлопковым ароматом для белья. Это отдельная ароматическая добавка к обычному средству для стирки, а не порошок или кондиционер; количество гранул определяет интенсивность аромата. Насыпьте гранулы в пустой барабан до загрузки белья; формат 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg",
       "assets/products/lenor/lenor-cool-cotton-155g-front.jpg",
@@ -1318,7 +1318,7 @@
     "brand": "Dove",
     "category_id": "hair",
     "clean_title": "Dove Hair Fall Rescue шампунь 680 мл",
-    "description": "Dove Hair Fall Rescue шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+    "description": "Dove Hair Fall Rescue — укрепляющий шампунь для волос, склонных к ломкости. Питательная формула помогает ухаживать за ослабленными волосами и уменьшать их выпадение, связанное именно с ломкостью, а не с медицинскими причинами. Объём 680 мл; нанесите на влажные волосы, вспеньте и тщательно смойте.",
     "galleryImages": [
       "assets/products/dove/dove-hair-fall-rescue-680ml-card-front.jpg",
       "assets/products/dove/dove-hair-fall-rescue-680ml-front.jpg",
@@ -1376,7 +1376,7 @@
     "brand": "Head & Shoulders",
     "category_id": "hair",
     "clean_title": "Head & Shoulders Classic шампунь 400 мл",
-    "description": "Классический шампунь Head & Shoulders для ежедневного ухода за волосами. Объем 400 мл.",
+    "description": "Head & Shoulders Classic — классический шампунь против перхоти для регулярного очищения волос и кожи головы. Формула Derma & Pure помогает защищать от видимых хлопьев перхоти, зуда и сухости, связанных с перхотью, при регулярном использовании. Объём 400 мл; нанесите на влажные волосы, вспеньте и тщательно смойте.",
     "galleryImages": [
       "assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-card-front.jpg",
       "assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-front.jpg",
@@ -1488,7 +1488,7 @@
     "brand": "Dash",
     "category_id": "germany",
     "clean_title": "Dash Color Frische стиральный порошок 1,17 кг",
-    "description": "Немецкий стиральный порошок Dash Color Frische для цветного белья. Упаковка 1,17 кг, около 18 стирок.",
+    "description": "Dash Color Frische — стиральный порошок для цветного белья. Формула 3 в 1 предназначена для очищения тканей и поддержания свежести и яркого вида цветных вещей. Упаковка 1,17 кг рассчитана примерно на 18 стирок; выбирайте дозировку по жёсткости воды, загрузке и степени загрязнения.",
     "galleryImages": [
       "assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg",
       "assets/products/dash/dash-color-frische-powder-1-17kg-front.jpg",
@@ -1721,7 +1721,7 @@
     "brand": "Comfort",
     "category_id": "laundry",
     "clean_title": "Comfort Spring кондиционер для белья 1 л",
-    "description": "Comfort Spring кондиционер для белья 1 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+    "description": "Comfort Spring Dew — кондиционер для белья со свежим весенним ароматом. Средство используется на этапе полоскания, помогает смягчить ткани и придаёт им длительное ощущение свежести. Объём 1 л рассчитан примерно на 9 стирок по маркировке упаковки; наливайте кондиционер в предназначенный для него отсек стиральной машины.",
     "galleryImages": [
       "assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-card-front.jpg",
       "assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-front.jpg",
@@ -1922,7 +1922,7 @@
     "brand": "Dove",
     "category_id": "deodorants",
     "clean_title": "Dove Men +Care Clean Comfort дезодорант-стик 40 г",
-    "description": "Дезодорант-антиперспирант Dove Men +Care Clean Comfort, 48 часов защиты, технология увлажнения. Объём 40 г.",
+    "description": "Dove Men+Care Clean Comfort — мужской антиперспирант-стик с чистым свежим ароматом. Формула с увлажняющей технологией помогает ухаживать за кожей подмышек, одновременно обеспечивая защиту от пота и запаха до 48 часов. Масса 40 г; наносите средство тонким слоем на чистую сухую кожу.",
     "galleryImages": [
       "assets/products/dove/dove-stick-men-clean-comfort-40g-card-front.jpg",
       "assets/products/dove/dove-stick-men-clean-comfort-40g-front.jpg",
@@ -2063,7 +2063,7 @@
     "brand": "Head & Shoulders",
     "category_id": "hair",
     "clean_title": "Head & Shoulders Dry Scalp шампунь 400 мл",
-    "description": "Шампунь Head & Shoulders Dry Scalp для ухода за кожей головы и волосами. Объем 400 мл.",
+    "description": "Head & Shoulders Dry Scalp — шампунь против перхоти для сухой кожи головы. Формула Derma & Pure очищает волосы и помогает защищать от видимых хлопьев перхоти, зуда и сухости при регулярном использовании. Объём 400 мл; нанесите на влажные волосы и кожу головы, вспеньте и тщательно смойте.",
     "galleryImages": [
       "assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-card-front.jpg",
       "assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-front.jpg",
@@ -2078,7 +2078,7 @@
     "brand": "Gillette Venus",
     "category_id": "shaving",
     "clean_title": "Gillette Venus Smooth станок 1 шт",
-    "description": "Женский станок Gillette Venus Smooth с 3 лезвиями для гладкого бритья.",
+    "description": "Gillette Venus Smooth — многоразовый женский станок со сменной кассетой на три лезвия. Смазывающая полоска помогает головке плавнее скользить, а округлая подвижная кассета удобна для бритья контуров тела. В комплекте ручка и одна кассета; сменные кассеты Venus подходят к многоразовым ручкам этой линейки.",
     "galleryImages": [
       "assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
       "assets/products/gillette/gillette-venus-smooth-razor-1-raw-front.jpg",
@@ -2306,7 +2306,7 @@
     "brand": "Gillette",
     "category_id": "deodorants",
     "clean_title": "Gillette Antiperspirant Cool Wave гель-дезодорант 70 мл",
-    "description": "Гель-антиперспирант Gillette Cool Wave с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+    "description": "Gillette Cool Wave — прозрачный гель-антиперспирант с чистым свежим ароматом. Формат стика удобно наносится непосредственно на сухую кожу подмышек, а заявленная на упаковке защита рассчитана до 48 часов. Объём 70 мл; не наносите средство на раздражённую или повреждённую кожу.",
     "galleryImages": [
       "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg",
       "assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-front.jpg",
@@ -2410,7 +2410,7 @@
     "brand": "Head & Shoulders",
     "category_id": "hair",
     "clean_title": "Head & Shoulders Soothing Scalp шампунь 400 мл",
-    "description": "Шампунь Head & Shoulders Soothing Scalp для мягкого ежедневного ухода. Объем 400 мл.",
+    "description": "Head & Shoulders Soothing Scalp Care — шампунь против перхоти для мягкого ухода за кожей головы. Формула Derma & Pure с растительными ароматическими компонентами очищает волосы и помогает защищать от видимых хлопьев перхоти при регулярном использовании. Объём 400 мл; нанесите на влажные волосы и кожу головы, вспеньте и тщательно смойте.",
     "galleryImages": [
       "assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-card-front.jpg",
       "assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-front.jpg",
@@ -2507,7 +2507,7 @@
     "brand": "Dove",
     "category_id": "body",
     "clean_title": "Dove Advanced Care Original спрей-дезодорант, 250 мл",
-    "description": "Спрей-антиперспирант Dove Advanced Care Original с технологией тройного увлажнения, защита 72 часа. Объём 250 мл.",
+    "description": "Dove Advanced Care Original — аэрозольный антиперспирант с классическим ароматом Dove. Формула с технологией тройного увлажнения ухаживает за кожей подмышек, а заявленная защита от пота и запаха рассчитана до 72 часов. Объём 250 мл; встряхните баллон и распыляйте короткими нажатиями с расстояния около 15 см.",
     "galleryImages": [
       "assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg",
       "assets/products/dove/dove-advanced-care-original-250ml-front.jpg",
@@ -2553,7 +2553,7 @@
     "brand": "Ariel",
     "category_id": "laundry",
     "clean_title": "Ariel All in 1 Color капсулы 15 шт",
-    "description": "Капсулы Ariel All in 1 Color для стирки цветного белья. В упаковке 15 штук.",
+    "description": "Ariel All in 1 Color — капсулы для автоматической стирки цветного белья. Многокамерная капсула растворяется в воде и высвобождает средство для удаления повседневных пятен, сохраняя яркий вид цветных вещей. В упаковке 15 капсул; положите капсулу в глубину пустого барабана сухими руками, затем загрузите бельё.",
     "galleryImages": [
       "assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg",
       "assets/products/ariel/ariel-all-in-1-color-caps-15-front.jpg",
@@ -2683,7 +2683,7 @@
     "brand": "Fairy",
     "category_id": "home_cleaning",
     "clean_title": "Fairy Lavender средство для посуды 600 мл",
-    "description": "Средство Fairy Lavender для мытья посуды с ароматом лаванды. Объем 600 мл.",
+    "description": "Fairy Refreshing Lavender — жидкое средство для ручного мытья посуды с ароматом лаванды. Формула помогает удалять жир и повседневные пищевые загрязнения с тарелок, чашек, столовых приборов и другой моющейся посуды. Объём 600 мл; используйте небольшое количество средства и тщательно ополаскивайте посуду водой.",
     "galleryImages": [
       "assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-card-front.jpg",
       "assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-front.jpg",
@@ -2698,7 +2698,7 @@
     "brand": "Gillette",
     "category_id": "shaving",
     "clean_title": "Gillette Blue3 одноразовые станки 3 шт",
-    "description": "Одноразовые станки Gillette Blue3 Comfort для комфортного бритья. В упаковке 3 штуки.",
+    "description": "Gillette Blue3 Comfort — одноразовые мужские станки с тремя лезвиями для повседневного бритья. Смазывающая полоска помогает головке легче скользить по коже, а рельефная ручка обеспечивает уверенный захват. В упаковке 3 станка.",
     "galleryImages": [
       "assets/products/gillette/gillette-blue3-3-raw-card-front.jpg",
       "assets/products/gillette/gillette-blue3-3-raw-front.jpg",
@@ -2716,7 +2716,7 @@
     "brand": "Comfort",
     "category_id": "laundry",
     "clean_title": "Comfort Flora Soft кондиционер для белья 1 л",
-    "description": "Comfort Flora Soft кондиционер для белья 1 л для мягкости и свежести белья. Наличие и детали заказа подтвердит менеджер.",
+    "description": "Comfort Flora Soft — кондиционер для белья с насыщенным цветочным ароматом. Средство используется на этапе полоскания, помогает смягчить ткани и придаёт им длительное ощущение свежести. Объём 1 л рассчитан примерно на 9 стирок по маркировке упаковки; наливайте кондиционер в предназначенный для него отсек стиральной машины.",
     "galleryImages": [
       "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-card-front.jpg",
       "assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-front.jpg",
@@ -2786,7 +2786,7 @@
     "badge": "Lenor",
     "brand": "Lenor",
     "clean_title": "Lenor Spring Awakening парфюм для белья 155 г",
-    "description": "Парфюмированные гранулы Lenor Unstoppables для добавления аромата белью во время стирки. Вариант: Spring Awakening. Формат: 155 г.",
+    "description": "Lenor Spring Awakening — парфюмированные гранулы для усиления аромата белья во время стирки. Это ароматическая добавка, а не моющее средство или кондиционер; интенсивность можно регулировать количеством гранул. Насыпьте гранулы в пустой барабан до загрузки белья; формат 155 г.",
     "galleryImages": [
       "assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg",
       "assets/products/lenor/lenor-spring-awakening-155g-front.jpg",
@@ -3012,7 +3012,7 @@
     "brand": "Gillette",
     "category_id": "deodorants",
     "clean_title": "Gillette Antiperspirant Power Rush гель-дезодорант 70 мл",
-    "description": "Гель-антиперспирант Gillette Power Rush с защитой от запаха и пота до 48 часов. Объём 70 мл.",
+    "description": "Gillette Power Rush — прозрачный гель-антиперспирант с насыщенным свежим ароматом. Формат стика удобно наносится непосредственно на сухую кожу подмышек, а заявленная на упаковке защита рассчитана до 48 часов. Объём 70 мл; не наносите средство на раздражённую или повреждённую кожу.",
     "galleryImages": [
       "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-card-front.jpg",
       "assets/products/gillette/gillette-antiperspirant-power-rush-70ml-front.jpg",
@@ -3029,7 +3029,7 @@
     "brand": "Dove",
     "category_id": "hair",
     "clean_title": "Dove Straight & Silky шампунь 680 мл",
-    "description": "Dove Straight & Silky шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+    "description": "Dove Straight & Silky — шампунь для непослушных и склонных к пушению волос. Питательная формула помогает разглаживать поверхность волос, поддерживать мягкость и делать их более послушными при укладке. Объём 680 мл; нанесите на влажные волосы, вспеньте и тщательно смойте.",
     "galleryImages": [
       "assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
       "assets/products/dove/dove-straight-silky-680ml-front.jpg",
@@ -3247,7 +3247,7 @@
     "brand": "Dash",
     "category_id": "germany",
     "clean_title": "Dash Active Frische гель для стирки 1,1 л",
-    "description": "Немецкий гель Dash Active Frische для повседневной стирки. Объем 1,1 л, около 20 стирок.",
+    "description": "Dash Active Frische — универсальный жидкий гель для машинной стирки белого и светлого белья. Формула 3 в 1 предназначена для очищения повседневных загрязнений и сохранения свежего аромата вещей. Объём 1,1 л рассчитан примерно на 20 стирок; дозируйте средство по инструкции на упаковке.",
     "galleryImages": [
       "assets/products/dash/dash-active-frische-gel-1-1l-card-front.jpg",
       "assets/products/dash/dash-active-frische-gel-1-1l-front.jpg",
@@ -3430,7 +3430,7 @@
     "brand": "Dove",
     "category_id": "hair",
     "clean_title": "Dove Nourishing Oil Care шампунь 680 мл",
-    "description": "Dove Nourishing Oil Care шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+    "description": "Dove Nourishing Oil Care — шампунь для сухих, непослушных и склонных к пушению волос. Формула с лёгкими питательными маслами помогает смягчать волосы, разглаживать их поверхность и облегчать расчёсывание. Объём 680 мл; нанесите на влажные волосы, вспеньте и тщательно смойте.",
     "galleryImages": [
       "assets/products/dove/dove-nourishing-oil-care-680ml-card-front.jpg",
       "assets/products/dove/dove-nourishing-oil-care-680ml-front.jpg",
@@ -3494,7 +3494,7 @@
     "brand": "Dove",
     "category_id": "hair",
     "clean_title": "Dove Intensive Repair шампунь 680 мл",
-    "description": "Dove Intensive Repair шампунь 680 мл для ухода за волосами. Наличие и детали заказа подтвердит менеджер.",
+    "description": "Dove Intensive Repair — восстанавливающий шампунь для повреждённых волос. Формула предназначена для очищения и ухода за ослабленными участками волос, помогая сделать их более гладкими, мягкими и ухоженными. Объём 680 мл; нанесите на влажные волосы, вспеньте и тщательно смойте.",
     "galleryImages": [
       "assets/products/dove/dove-intensive-repair-680ml-card-front.jpg",
       "assets/products/dove/dove-intensive-repair-680ml-front.jpg",
@@ -3567,7 +3567,7 @@
     "brand": "Colgate",
     "category_id": "oral",
     "clean_title": "Colgate Extra Clean зубная щётка",
-    "description": "Зубная щётка Colgate Extra Clean с чистящим наконечником для задних зубов и очистителем языка.",
+    "description": "Colgate Extra Clean — зубная щётка средней жёсткости для ежедневной гигиены полости рта. Чистящий наконечник помогает добраться до дальних зубов, разноуровневые щетинки очищают поверхность зубов, а обратная сторона головки предназначена для языка. Рекомендуется менять щётку примерно каждые 3 месяца или раньше при износе щетины.",
     "galleryImages": [
       "assets/products/colgate/colgate-extra-clean-card-front.jpg",
       "assets/products/colgate/colgate-extra-clean-front.jpg",

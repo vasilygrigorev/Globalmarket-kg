@@ -18,6 +18,16 @@ const curatedProductIds = [
   "prd_96f0268a48e0", "prd_40d21a2a86d6", "prd_3fd39e5d8314",
   "prd_165eafb70eb3", "prd_e993df33c857", "prd_6d023c2652c2",
   "prd_83037f3d35df", "prd_06e5daf553c4", "prd_0e763c9c3654",
+  "prd_cbc7943d5965", "prd_0fffb16fcaee", "prd_f5192ea22a74",
+  "prd_d0f02fd7d3b0", "prd_20736a33272d", "prd_19a727030e6b",
+  "prd_56516b8b34c7", "prd_c980a01a8dba", "prd_6280c4c29502",
+  "prd_b2586efc6925", "prd_6ac15f7b2cff", "prd_94f09d0e25fc",
+  "prd_9499434568a7", "prd_ebd75b1e7557", "prd_081404d81ef8",
+  "prd_ded7b0409c9c", "prd_bd8fab362271", "prd_e165f2a765a7",
+  "prd_a9ee2b0ab49d", "prd_f724e0973fa5", "prd_5c4dde48386b",
+  "prd_fc72d049dab9", "prd_26f86cee34e8", "prd_2acd534839ea",
+  "prd_0d95e9b49711", "prd_b8b5bfec07e5", "prd_cc0deb97f256",
+  "prd_79ae12d5e324", "prd_8b3a9f34a763", "prd_096618ced7c1",
 ];
 
 const productsById = new Map(catalog.products.map((product) => [product.id, product]));
@@ -29,7 +39,7 @@ const forbiddenPublicPhrases = [
 ];
 
 test("curated product descriptions remain useful and public", () => {
-  assert.equal(curatedProductIds.length, 30);
+  assert.equal(curatedProductIds.length, 60);
   for (const productId of curatedProductIds) {
     const product = productsById.get(productId);
     assert.ok(product, `${productId}: missing from public catalog`);

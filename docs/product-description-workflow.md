@@ -54,3 +54,18 @@ python3 scripts/apply_product_overrides.py
 python3 scripts/build_public_catalog.py
 python3 scripts/generate_product_pages.py
 ```
+
+## Second Batch: 2026-07-22
+
+Thirty more photographed products were selected from the remaining weak-copy
+pages by net 1C sales quantity from 2025-07-11 through 2026-07-10. This batch
+covers Gillette, Head & Shoulders, Lenor, Dove, Ariel, Dash, Comfort, Colgate,
+Rexona, Fairy, and TRESemmé.
+
+Each exact local front/back package was checked before writing. Family-level
+claims and usage guidance were cross-checked against official manufacturer
+pages for Gillette Venus, Colgate Extra Clean, Head & Shoulders Menthol Fresh,
+Lenor scent boosters, Ariel All-in-1 PODS, Dove hair care and antiperspirants,
+Rexona Antibacterial + Invisible, and TRESemmé Volume. Where no exact regional
+official page was available, wording was limited to what is visible on the
+local package; no adjacent variant claims were imported.
