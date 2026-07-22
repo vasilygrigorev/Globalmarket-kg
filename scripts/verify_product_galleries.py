@@ -14,6 +14,7 @@ KNOWN_EXCEPTIONS = {
     "prd_296bd01a7c1f": "Pantene Sheer Volume 600 ml: missing back photo in 2026-06-10 Petya album; user requested publication.",
     "prd_e8a318ef10d2": "Colgate 360 Optic White toothbrush: the -102856-01-back.jpg from the same Petya batch is a mismatch (text/branding says Charcoal Gold, matches -102856-03's own back) — no real back photo exists yet.",
     "prd_b61ba7c4268e": "Colgate MaxFresh toothbrush: the -103856-01-back.jpg from the same Petya batch is byte-identical (md5) to Colgate MaxWhite's back photo — a photographer mixup, no real back photo exists yet.",
+    "prd_70c1f5d616a6": "Clear Men Legend by CR7 400 ml: the old back photo is labeled 600 ml; publish card + front only until the exact 400 ml back is photographed.",
 }
 
 # Raw/temporary-file markers that must never appear in a PUBLISHED image path —

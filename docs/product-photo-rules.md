@@ -37,6 +37,7 @@ Known exception as of 2026-07-08 (mismatched back, not just missing):
 
 - `prd_e8a318ef10d2` / `Colgate 360 Optic White зубная щётка`: its own back photo is a mismatch (text/branding matches a different "360" variant); currently card + front only.
 - `prd_b61ba7c4268e` / `Colgate MaxFresh зубная щётка`: its own back photo is byte-identical (md5) to Colgate MaxWhite's back — a photographer duplicate; currently card + front only.
+- `prd_70c1f5d616a6` / `Clear Men Legend by CR7 шампунь 400 мл`: the former back image is explicitly labeled 600 ml and belongs to the unavailable SKU; publish card + front only until the exact 400 ml back is photographed.
 
 
 Run before deployment after product-photo changes:
