@@ -10,6 +10,7 @@
   ],
   "menu": [
     { "label": "Главная", "href": "/#top" },
+    { "label": "Личный кабинет", "href": "/#myOrders" },
     { "label": "Стирка", "category": "Стирка и уход за бельем" },
     { "label": "Детское", "audience": "kids" },
     { "label": "Европа", "collection": "europe" },
@@ -22,7 +23,7 @@
     { "label": "Тело", "category": "Уход за телом" },
     { "label": "Зубы", "category": "Зубная гигиена" },
     { "label": "Оформление", "href": "/#checkout" },
-    { "label": "Мои заказы", "href": "/#myOrders" }
+    { "label": "Контакты", "href": "/#contacts" }
   ],
   "banners": [
     {

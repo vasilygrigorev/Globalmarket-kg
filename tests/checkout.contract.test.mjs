@@ -60,7 +60,7 @@ test("logged-in cabinet has a compact WB-inspired profile header", () => {
 });
 
 test("cabinet visibility and fresh assets prevent mixed old/new mobile layout", () => {
-  assert.match(html, /styles\.css\?v=20260722-cabinet-v3/);
+  assert.match(html, /styles\.css\?v=20260722-desktop-cart-v1/);
   assert.match(html, /app\.js\?v=20260722-cabinet-v6/);
   assert.match(css, /\.my-orders-account\[hidden\],[\s\S]*?\.cabinet-login-card\[hidden\][\s\S]*?display:\s*none/);
   assert.ok(!/>К<\/span>/.test(html), "cabinet must not render a letter avatar");

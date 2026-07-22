@@ -52,6 +52,9 @@ def render_header(config):
     <span class="cart-separator" aria-hidden="true">:</span>
     <span id="cartCount" data-cart-count>0</span>
   </button>
+  <a class="cabinet-button" href="/#myOrders" aria-label="Личный кабинет" title="Личный кабинет">
+    <span class="cabinet-icon" aria-hidden="true"></span>
+  </a>
   <nav class="category-menu" id="categoryMenu" aria-label="Меню" hidden></nav>
 </header>"""
 
@@ -63,7 +66,7 @@ def render_footer(config):
         if item.get("href") and item.get("label")
     )
     footer_text = escape(config.get("footerText", ""))
-    return f"""<footer class="site-footer" aria-label="Информация о магазине">
+    return f"""<footer class="site-footer" id="contacts" aria-label="Информация о магазине">
   <div class="site-footer-inner">
     <a class="footer-brand" href="/#top" aria-label="Global Market KG">
       <span class="footer-wordmark-text" aria-hidden="true"><span class="footer-wordmark-global">GLOBAL</span><span class="footer-wordmark-market">MARKET</span></span>

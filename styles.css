@@ -410,31 +410,85 @@ select {
 .cart-bag-icon {
   position: relative;
   display: block;
-  width: 17px;
-  height: 17px;
+  width: 22px;
+  height: 21px;
+  color: currentColor;
+  background:
+    radial-gradient(circle, currentColor 0 1.45px, transparent 1.65px) 7px 17px / 4px 4px no-repeat,
+    radial-gradient(circle, currentColor 0 1.45px, transparent 1.65px) 16px 17px / 4px 4px no-repeat;
 }
 
 .cart-bag-icon::before {
   content: "";
   position: absolute;
-  left: 2px;
-  bottom: 1px;
-  width: 13px;
-  height: 11px;
-  border: 1.6px solid var(--ink);
-  border-radius: 2px 2px 5px 5px;
+  left: 5px;
+  top: 6px;
+  width: 14px;
+  height: 8px;
+  border: 1.7px solid currentColor;
+  border-top: 0;
+  border-radius: 1px 1px 4px 4px;
+  transform: skewX(-10deg);
 }
 
 .cart-bag-icon::after {
   content: "";
   position: absolute;
-  left: 5px;
-  top: 0;
+  left: 1px;
+  top: 3px;
+  width: 6px;
+  height: 4px;
+  border: 0;
+  border-top: 1.7px solid currentColor;
+  border-radius: 0;
+  transform: rotate(18deg);
+}
+
+.cabinet-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+}
+
+.cabinet-button:hover {
+  border-color: rgba(0, 124, 119, 0.34);
+  color: var(--accent-dark);
+}
+
+.cabinet-icon {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.cabinet-icon::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 6px;
   width: 7px;
   height: 7px;
-  border: 1.6px solid var(--ink);
-  border-bottom: 0;
-  border-radius: 8px 8px 0 0;
+  border: 1.8px solid currentColor;
+  border-radius: 50%;
+}
+
+.cabinet-icon::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 2px;
+  width: 14px;
+  height: 8px;
+  border: 1.8px solid currentColor;
+  border-radius: 9px 9px 3px 3px;
 }
 
 .floating-cart-button .cart-bag-icon::before,
@@ -4426,7 +4480,7 @@ body.product-page {
   }
 
   .site-header {
-    grid-template-columns: 42px minmax(198px, 262px) minmax(260px, 1fr) auto;
+    grid-template-columns: 42px minmax(198px, 262px) minmax(260px, 1fr) auto 40px;
     gap: 12px;
     padding: 10px clamp(18px, 4vw, 56px);
   }
@@ -4442,7 +4496,53 @@ body.product-page {
   }
 
   .cart-button {
-    min-width: 86px;
+    min-width: 74px;
+  }
+
+  .cabinet-button {
+    display: inline-flex;
+  }
+
+  :where(body.home-page .product-grid, body.product-page .related-grid) .price-action-row {
+    display: block;
+  }
+
+  :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    min-height: 40px;
+    margin-top: 8px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 9px;
+    color: transparent;
+    background: linear-gradient(135deg, #009b91, #007d7a);
+    box-shadow: 0 7px 16px rgba(0, 104, 100, 0.15);
+    font-size: 0;
+  }
+
+  :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button::before {
+    content: "В корзину";
+    position: static;
+    width: auto;
+    height: auto;
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 750;
+    transform: none;
+  }
+
+  :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button.added {
+    background: #177d55;
+  }
+
+  :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button.added::before {
+    content: "Добавлено";
   }
 }
 

@@ -624,7 +624,7 @@ def render_page(product, related, slug, landing_lookup=None):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(meta_description)}">
   <meta name="twitter:image" content="{escape(absolute_url(main_image))}">
-  <link rel="stylesheet" href="/styles.css?v=20260721-shared-product-card-v2">
+  <link rel="stylesheet" href="/styles.css?v=20260722-desktop-cart-v1">
   <script type="application/ld+json">{json_ld}</script>
   <script type="application/ld+json">{breadcrumb_json_ld}</script>
   <style>
@@ -632,8 +632,8 @@ def render_page(product, related, slug, landing_lookup=None):
     * {{ box-sizing: border-box; }}
     body.product-page {{ margin: 0; padding-top: var(--site-header-height, 58px); }}
     button, a {{ -webkit-tap-highlight-color: transparent; }}
-    .page {{ max-width: 980px; margin: 0 auto; padding: 14px; }}
-    .product-shell {{ position: relative; overflow: hidden; background: #fff; border-radius: 8px; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.08); }}
+    .page {{ max-width: 1440px; margin: 0 auto; padding: 14px; }}
+    .product-shell {{ position: relative; overflow: hidden; max-width: 980px; margin: 0 auto; background: #fff; border-radius: 8px; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.08); }}
     .top-actions {{ position: absolute; inset: 12px 12px auto 12px; z-index: 3; display: flex; justify-content: space-between; pointer-events: none; }}
     .top-actions > div {{ display: flex; gap: 8px; pointer-events: auto; }}
     .icon-action {{ display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid rgba(214, 216, 220, 0.72); border-radius: 8px; background: rgba(255, 255, 255, 0.92); color: #1f1f1f; box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08); cursor: pointer; text-decoration: none; }}
@@ -687,7 +687,7 @@ def render_page(product, related, slug, landing_lookup=None):
        styles.css (loaded above) so they render identically to home-page
        catalog cards — same brand pill, like button, badges, price, add
        button. Only the grid container itself is defined here. */
-    .related-grid {{ display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }}
+    .related-grid {{ display: grid; grid-template-columns: repeat(4, minmax(240px, 1fr)); gap: 14px; }}
     body.product-page .site-header {{ z-index: 20; }}
     .site-footer {{ margin: 32px auto 0; padding: 28px 18px calc(32px + env(safe-area-inset-bottom)); color: rgba(239, 255, 251, 0.82); background: linear-gradient(120deg, #002d3b, #005461 60%, #008f89); border: 0; }}
     .site-footer-inner {{ display: grid; gap: 18px; max-width: 980px; margin: 0 auto; }}
