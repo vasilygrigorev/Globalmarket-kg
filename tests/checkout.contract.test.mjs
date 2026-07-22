@@ -48,11 +48,13 @@ test("cart opens guest checkout directly and SMS login stays in the cabinet", ()
   assert.match(appJs, /checkoutForm\.scrollIntoView\(\{ behavior: "smooth", block: "start" \}\)/);
 });
 
-test("logged-in cabinet has a compact personalized welcome", () => {
+test("logged-in cabinet has a compact WB-inspired profile header", () => {
   assert.match(html, /id="cabinetGreetingName"/);
-  assert.match(html, /Здравствуйте,/);
+  assert.match(html, /id="cabinetAvatarInitial"/);
+  assert.match(html, /id="cabinetNotificationButton"/);
   assert.match(appJs, /cabinetGreetingName\.textContent = firstName/);
   assert.match(html, /<details class="cabinet-block" id="profileBlock">/);
+  assert.match(html, /id="myOrdersLogoutButton"/);
 });
 
 test("guest checkout explains automatic manager email delivery", () => {
@@ -228,10 +230,21 @@ test("profile form saves via /api/customer-profile and never submits the phone f
 
 test("wholesale application form posts to /api/wholesale-application and shows the confirmation text", () => {
   assert.match(html, /id="wholesaleForm"/);
-  assert.match(html, /Подать заявку на оптовый доступ/);
+  for (const field of ["shop_name", "address", "phone"]) {
+    assert.match(html, new RegExp(`id="wholesaleForm"[\\s\\S]*?name="${field}"`));
+  }
   const wholesaleHandler = appJs.match(/wholesaleForm\?\.addEventListener\("submit", async \(event\) => \{[\s\S]*?\n\}\);/)[0];
   assert.match(wholesaleHandler, /fetch\("\/api\/wholesale-application"/);
   assert.match(wholesaleHandler, /Заявка отправлена\. Менеджер подтвердит доступ\./);
+});
+
+test("contact form posts all visible fields to the manager endpoint", () => {
+  assert.match(html, /id="contactForm"/);
+  for (const field of ["name", "phone", "email", "message"]) {
+    assert.match(html, new RegExp(`id="contactForm"[\\s\\S]*?name="${field}"`));
+  }
+  const handler = appJs.match(/contactForm\?\.addEventListener\("submit", async \(event\) => \{[\s\S]*?\n\}\);/)[0];
+  assert.match(handler, /fetch\("\/api\/contact-request"/);
 });
 
 test("the old 'после регистрации' wording never regresses into app.js, index.html, or the static page generators", () => {

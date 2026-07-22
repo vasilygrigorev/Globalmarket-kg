@@ -66,6 +66,8 @@ def main():
                 "functions/api/customer-profile.test.mjs",
                 "functions/api/customer-profile.integration.test.mjs",
                 "functions/api/wholesale-application.test.mjs",
+                "functions/api/manager-email.test.mjs",
+                "functions/api/contact-request.test.mjs",
                 "functions/api/wholesale-application.integration.test.mjs",
                 "admin/admin.logic.test.mjs",
                 "admin/admin.dom.test.mjs",

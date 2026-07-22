@@ -231,20 +231,22 @@
       </section>
 
       <section class="checkout-section my-orders-section" id="myOrders">
-        <div>
-          <p class="eyebrow">Мои заказы</p>
-          <h2>Личный кабинет</h2>
-          <p>Заказы, избранное и персональные данные в одном месте. Войти можно по номеру телефона и коду из SMS.</p>
-        </div>
-
         <div class="my-orders-account" id="myOrdersAccount" hidden>
-          <div class="cabinet-account-row">
-            <div class="cabinet-welcome">
-              <p class="cabinet-welcome-label">Личный кабинет</p>
-              <h3>Здравствуйте, <span id="cabinetGreetingName">Клиент</span></h3>
-              <p class="cabinet-welcome-meta"><span id="cabinetRoleBadge" class="cabinet-role-badge"></span></p>
+          <header class="cabinet-profile-header">
+            <span class="cabinet-avatar" id="cabinetAvatarInitial" aria-hidden="true">К</span>
+            <div class="cabinet-identity">
+              <h2 id="cabinetGreetingName">Клиент</h2>
+              <p id="cabinetPhone"></p>
             </div>
-            <button class="secondary-link" type="button" id="myOrdersLogoutButton">Выйти</button>
+            <button class="cabinet-notification-button" id="cabinetNotificationButton" type="button" aria-label="Уведомления" aria-expanded="false" aria-controls="cabinetNotifications">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" /></svg>
+              <span class="cabinet-notification-badge" id="cabinetNotificationBadge" hidden></span>
+            </button>
+          </header>
+
+          <div class="cabinet-notifications" id="cabinetNotifications" hidden>
+            <strong>Уведомления</strong>
+            <div id="cabinetNotificationList"></div>
           </div>
 
           <details class="cabinet-block" id="profileBlock">
@@ -262,82 +264,106 @@
                 Адрес
                 <input name="address" autocomplete="street-address" />
               </label>
-              <button class="secondary-link" type="submit">Сохранить</button>
+              <div class="cabinet-form-actions">
+                <button class="secondary-link" type="submit">Сохранить</button>
+                <button class="cabinet-logout-button" type="button" id="myOrdersLogoutButton">Выйти</button>
+              </div>
               <p class="form-status" id="profileStatus" role="status"></p>
             </form>
           </details>
 
-          <details class="cabinet-block" id="favoritesBlock" open>
-            <summary>Избранное</summary>
-            <div id="myOrdersFavorites" class="cabinet-favorites"></div>
+          <details class="cabinet-block" id="ordersBlock">
+            <summary>Мои заказы</summary>
+            <p class="cabinet-section-title">Прошлые заказы</p>
+            <div class="my-orders-results" id="myOrdersResults"></div>
           </details>
 
           <details class="cabinet-block" id="wholesaleBlock">
-            <summary>Оптовый доступ</summary>
+            <summary>Заявка на опт</summary>
             <p id="wholesaleStatusText" class="cabinet-hint"></p>
-            <button class="secondary-link" type="button" id="wholesaleApplyButton" hidden>Подать заявку на оптовый доступ</button>
-            <form class="customer-form" id="wholesaleForm" hidden>
-              <label>
-                Имя
-                <input name="name" autocomplete="name" required />
-              </label>
-              <label>
-                Телефон
-                <input name="phone" type="tel" autocomplete="tel" required />
-              </label>
+            <form class="customer-form cabinet-inner-form" id="wholesaleForm">
               <label>
                 Название магазина
-                <input name="shop_name" autocomplete="organization" />
+                <input name="shop_name" autocomplete="organization" required />
               </label>
               <label>
-                Город
-                <input name="city" autocomplete="address-level2" />
+                Адрес
+                <input name="address" autocomplete="street-address" required />
               </label>
               <label>
-                Комментарий
-                <textarea name="comment" rows="3" placeholder="Что и сколько обычно закупаете"></textarea>
+                Контактный телефон
+                <input name="phone" type="tel" autocomplete="tel" required />
               </label>
               <button class="primary-button" type="submit">Отправить заявку</button>
               <p class="form-status" id="wholesaleStatus" role="status"></p>
             </form>
           </details>
+
+          <details class="cabinet-block" id="contactBlock">
+            <summary>Связь</summary>
+            <form class="customer-form cabinet-inner-form" id="contactForm">
+              <label>
+                Имя
+                <input name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Контактный телефон
+                <input name="phone" type="tel" autocomplete="tel" required />
+              </label>
+              <label>
+                Email
+                <input name="email" type="email" autocomplete="email" />
+              </label>
+              <label>
+                Сообщение
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+              <button class="primary-button" type="submit">Отправить</button>
+              <p class="form-status" id="contactStatus" role="status"></p>
+            </form>
+          </details>
         </div>
 
-        <form class="customer-form my-orders-login-form" id="myOrdersLoginForm">
-          <label>
-            Телефон / WhatsApp
-            <input name="loginPhone" type="tel" autocomplete="tel" required />
-          </label>
-          <button class="primary-button" type="submit">Получить код по SMS</button>
-          <p class="form-status" id="myOrdersLoginStatus" role="status"></p>
-        </form>
-
-        <form class="customer-form my-orders-otp-form" id="myOrdersOtpForm" hidden>
-          <label>
-            Код из SMS
-            <input name="otpCode" autocomplete="one-time-code" inputmode="numeric" required />
-          </label>
-          <button class="primary-button" type="submit">Войти</button>
-          <p class="form-status" id="myOrdersOtpStatus" role="status"></p>
-        </form>
-
-        <details class="my-orders-fallback" id="myOrdersFallback">
-          <summary>Проверить заказ без входа (по коду)</summary>
-          <form class="customer-form my-orders-form" id="myOrdersForm">
+        <div class="cabinet-login-card" id="cabinetLoginCard">
+          <div class="cabinet-login-heading">
+            <span class="cabinet-avatar" aria-hidden="true">К</span>
+            <h2>Войти</h2>
+          </div>
+          <form class="customer-form my-orders-login-form" id="myOrdersLoginForm">
             <label>
               Телефон / WhatsApp
-              <input name="lookupPhone" type="tel" autocomplete="tel" required />
+              <input name="loginPhone" type="tel" autocomplete="tel" required />
             </label>
-            <label>
-              Код заказа
-              <input name="lookupCode" autocomplete="off" required placeholder="Например, GM7K9X" />
-            </label>
-            <button class="secondary-link" type="submit">Показать заказ</button>
-            <p class="form-status" id="myOrdersStatus" role="status"></p>
+            <button class="primary-button" type="submit">Получить код по SMS</button>
+            <p class="form-status" id="myOrdersLoginStatus" role="status"></p>
           </form>
-        </details>
 
-        <div class="my-orders-results" id="myOrdersResults" hidden></div>
+          <form class="customer-form my-orders-otp-form" id="myOrdersOtpForm" hidden>
+            <label>
+              Код из SMS
+              <input name="otpCode" autocomplete="one-time-code" inputmode="numeric" required />
+            </label>
+            <button class="primary-button" type="submit">Войти</button>
+            <p class="form-status" id="myOrdersOtpStatus" role="status"></p>
+          </form>
+
+          <details class="my-orders-fallback" id="myOrdersFallback">
+            <summary>Проверить заказ по коду</summary>
+            <form class="customer-form my-orders-form" id="myOrdersForm">
+              <label>
+                Телефон / WhatsApp
+                <input name="lookupPhone" type="tel" autocomplete="tel" required />
+              </label>
+              <label>
+                Код заказа
+                <input name="lookupCode" autocomplete="off" required placeholder="Например, GM7K9X" />
+              </label>
+              <button class="secondary-link" type="submit">Показать заказ</button>
+              <p class="form-status" id="myOrdersStatus" role="status"></p>
+            </form>
+            <div class="my-orders-results" id="myOrdersLookupResults" hidden></div>
+          </details>
+        </div>
       </section>
     </main>
 
@@ -427,6 +453,6 @@
     </nav>
     <!-- END shared-bottom-nav -->
 
-    <script src="app.js?v=20260720-cabinet-header-v1"></script>
+    <script src="app.js?v=20260722-cabinet-v2"></script>
   </body>
 </html>

@@ -59,7 +59,9 @@ const formStatus = document.querySelector("#formStatus");
 const myOrdersForm = document.querySelector("#myOrdersForm");
 const myOrdersStatus = document.querySelector("#myOrdersStatus");
 const myOrdersResults = document.querySelector("#myOrdersResults");
+const myOrdersLookupResults = document.querySelector("#myOrdersLookupResults");
 const myOrdersAccount = document.querySelector("#myOrdersAccount");
+const cabinetLoginCard = document.querySelector("#cabinetLoginCard");
 const myOrdersLogoutButton = document.querySelector("#myOrdersLogoutButton");
 const myOrdersLoginForm = document.querySelector("#myOrdersLoginForm");
 const myOrdersLoginStatus = document.querySelector("#myOrdersLoginStatus");
@@ -76,14 +78,20 @@ const productModalContent = document.querySelector("#productModalContent");
 const modalTopActions = document.querySelector("#modalTopActions");
 const customerCardTitle = document.querySelector("#customerCardTitle");
 const customerCardText = document.querySelector("#customerCardText");
-const cabinetRoleBadge = document.querySelector("#cabinetRoleBadge");
 const cabinetGreetingName = document.querySelector("#cabinetGreetingName");
+const cabinetAvatarInitial = document.querySelector("#cabinetAvatarInitial");
+const cabinetPhone = document.querySelector("#cabinetPhone");
+const cabinetNotificationButton = document.querySelector("#cabinetNotificationButton");
+const cabinetNotificationBadge = document.querySelector("#cabinetNotificationBadge");
+const cabinetNotifications = document.querySelector("#cabinetNotifications");
+const cabinetNotificationList = document.querySelector("#cabinetNotificationList");
 const profileForm = document.querySelector("#profileForm");
 const profileStatus = document.querySelector("#profileStatus");
 const wholesaleStatusText = document.querySelector("#wholesaleStatusText");
-const wholesaleApplyButton = document.querySelector("#wholesaleApplyButton");
 const wholesaleForm = document.querySelector("#wholesaleForm");
 const wholesaleStatus = document.querySelector("#wholesaleStatus");
+const contactForm = document.querySelector("#contactForm");
+const contactStatus = document.querySelector("#contactStatus");
 const siteHeader = document.querySelector(".site-header");
 const toggleSearchButton = document.querySelector("#toggleSearch");
 const toggleMenuButton = document.querySelector("#toggleMenu");
@@ -101,7 +109,6 @@ const bottomNavCartLink = document.querySelector("#bottomNavCart");
 const bottomNavCabinetLink = document.querySelector("#bottomNavCabinet");
 const bottomNavFavoritesCount = document.querySelector("#bottomNavFavoritesCount");
 const bottomNavCartCount = document.querySelector("#bottomNavCartCount");
-const myOrdersFavorites = document.querySelector("#myOrdersFavorites");
 let activeZoomImage = null;
 
 let recentlyViewedIds = loadRecentlyViewed();
@@ -600,7 +607,6 @@ function toggleFavorite(productId) {
   renderFavoriteFilter();
   renderProducts();
   renderRecentlyViewed();
-  renderCabinetFavorites();
 }
 
 function loadRecentlyViewed() {
@@ -1068,36 +1074,6 @@ function renderFavoriteFilter() {
     bottomNavFavoritesCount.hidden = count === 0;
   }
   bottomNavFavoritesLink?.classList.toggle("active", state.favoriteOnly);
-}
-
-function cabinetFavoriteProducts() {
-  return products.filter((product) => favoriteIds.has(product.id));
-}
-
-function renderCabinetFavorites() {
-  if (!myOrdersFavorites) return;
-  const favorites = cabinetFavoriteProducts();
-  if (!favorites.length) {
-    myOrdersFavorites.innerHTML = `
-      <p class="cabinet-hint">Пока нет избранных товаров.</p>
-      <a class="secondary-link" href="#catalog">В каталог</a>
-    `;
-    return;
-  }
-  myOrdersFavorites.innerHTML = favorites
-    .map(
-      (product) => `
-        <article class="cabinet-favorite-item">
-          <img class="cabinet-favorite-image ${hasProductImage(product) ? "" : "fallback-image"}" src="${escapeHtml(productCardImage(product))}" alt="${escapeHtml(product.title)}" loading="lazy" />
-          <div class="cabinet-favorite-copy">
-            <strong>${escapeHtml(product.title)}</strong>
-            <span>${formatPriceHtml(productPrice(product))}</span>
-          </div>
-          <button class="icon-button" type="button" data-favorite="${product.id}" aria-label="Убрать из избранного">×</button>
-        </article>
-      `,
-    )
-    .join("");
 }
 
 function renderCategoryMenu() {
@@ -2009,7 +1985,13 @@ function revealSmartHeader() {
 
 function updateBackToTopButton() {
   if (!backToTopButton) return;
-  const shouldShow = window.scrollY > 900 && !cartDrawer.classList.contains("open") && !productModal.classList.contains("open");
+  const cabinetSection = document.querySelector("#myOrders");
+  const cabinetTop = cabinetSection ? window.scrollY + cabinetSection.getBoundingClientRect().top : Infinity;
+  const cabinetVisible = window.scrollY >= cabinetTop - 80;
+  const shouldShow = window.scrollY > 900
+    && !cabinetVisible
+    && !cartDrawer.classList.contains("open")
+    && !productModal.classList.contains("open");
   backToTopButton.hidden = !shouldShow;
   backToTopButton.classList.toggle("show", shouldShow);
 }
@@ -2044,10 +2026,12 @@ function updateBottomNavActiveSection() {
   const cabinetSection = document.querySelector("#myOrders");
   if (!catalogSection || !cabinetSection) return;
   const probeY = window.scrollY + window.innerHeight * 0.3;
+  const catalogTop = window.scrollY + catalogSection.getBoundingClientRect().top;
+  const cabinetTop = window.scrollY + cabinetSection.getBoundingClientRect().top;
   let current = bottomNavHomeLink;
-  if (probeY >= cabinetSection.offsetTop) {
+  if (probeY >= cabinetTop) {
     current = bottomNavCabinetLink;
-  } else if (probeY >= catalogSection.offsetTop) {
+  } else if (probeY >= catalogTop) {
     current = bottomNavCatalogLink;
   }
   [bottomNavHomeLink, bottomNavCatalogLink, bottomNavCabinetLink].forEach((link) => {
@@ -2391,11 +2375,23 @@ bottomNavCartLink?.addEventListener("click", (event) => {
   setCartOpen(true);
 });
 
+function scrollCabinetToTop(behavior = "smooth") {
+  const cabinetSection = document.querySelector("#myOrders");
+  if (!cabinetSection) return;
+  const top = window.scrollY + cabinetSection.getBoundingClientRect().top;
+  window.scrollTo({ top, behavior });
+}
+
 bottomNavCabinetLink?.addEventListener("click", (event) => {
-  if (!document.querySelector("#myOrders")) return;
+  const cabinetSection = document.querySelector("#myOrders");
+  if (!cabinetSection) return;
   event.preventDefault();
-  scrollToSection("#myOrders");
+  scrollCabinetToTop();
 });
+
+if (window.location.hash === "#myOrders") {
+  window.addEventListener("load", () => requestAnimationFrame(() => scrollCabinetToTop("auto")), { once: true });
+}
 
 cartItems.addEventListener("click", (event) => {
   const qtyButton = event.target.closest("[data-qty]");
@@ -2686,41 +2682,48 @@ checkoutForm.addEventListener("submit", async (event) => {
 // submit handler so the markup shape is easy to eyeball/test.
 function myOrderCardHtml(order) {
   const items = (order.items || [])
-    .map((item) => `<li>${escapeHtml(item.title || "Товар")} — ${item.qty} x ${formatPrice(item.price_kgs)}</li>`)
+    .map((item) => `<li><span>${escapeHtml(item.title || "Товар")}</span><span>${item.qty} × ${formatPrice(item.price_kgs)}</span></li>`)
     .join("");
   const created = order.created_at ? new Date(order.created_at).toLocaleDateString("ru-RU") : "";
+  const itemCount = (order.items || []).reduce((sum, item) => sum + Math.max(0, Number(item.qty) || 0), 0);
+  const details = [order.address, order.customer_comment].filter(Boolean);
   return `
-    <article class="my-order-card">
-      <div class="my-order-card-head">
+    <details class="my-order-card">
+      <summary>
+        <span class="my-order-summary-main">
+          <strong>${escapeHtml(created || "Заказ")}</strong>
+          <small>${itemCount} ${itemCount === 1 ? "товар" : "товаров"} · ${escapeHtml(order.status_label || order.status || "")}</small>
+        </span>
+        <span class="my-order-card-total">${formatPrice(order.total_kgs)}</span>
+      </summary>
+      <div class="my-order-card-details">
         <span class="my-order-card-code">Заказ ${escapeHtml(order.code || "")}</span>
-        <span>${escapeHtml(created)}</span>
+        <ul class="my-order-card-items">${items}</ul>
+        ${details.length ? `<p>${details.map((value) => escapeHtml(value)).join(" · ")}</p>` : ""}
       </div>
-      <div>Статус: ${escapeHtml(order.status_label || order.status || "")}</div>
-      <ul class="my-order-card-items">${items}</ul>
-      <div class="my-order-card-total">Итого: ${formatPrice(order.total_kgs)}</div>
-    </article>
+    </details>
   `;
 }
 
-function renderMyOrders(orders, { emptyState = false } = {}) {
-  if (!myOrdersResults) return;
+function renderMyOrders(orders, { emptyState = false, target = myOrdersResults } = {}) {
+  if (!target) return;
   if (!orders || !orders.length) {
     if (emptyState) {
-      myOrdersResults.hidden = false;
-      myOrdersResults.innerHTML = `
+      target.hidden = false;
+      target.innerHTML = `
         <div class="my-orders-empty">
           <p>У вас пока нет заказов.</p>
           <a class="secondary-link" href="#catalog">В каталог</a>
         </div>
       `;
     } else {
-      myOrdersResults.hidden = true;
-      myOrdersResults.innerHTML = "";
+      target.hidden = true;
+      target.innerHTML = "";
     }
     return;
   }
-  myOrdersResults.hidden = false;
-  myOrdersResults.innerHTML = orders.map(myOrderCardHtml).join("");
+  target.hidden = false;
+  target.innerHTML = orders.map(myOrderCardHtml).join("");
 }
 
 myOrdersForm?.addEventListener("submit", async (event) => {
@@ -2732,7 +2735,7 @@ myOrdersForm?.addEventListener("submit", async (event) => {
   const submitButton = event.currentTarget.querySelector("button[type='submit']");
   if (submitButton) submitButton.disabled = true;
   myOrdersStatus.textContent = "Ищем ваши заказы…";
-  renderMyOrders(null);
+  renderMyOrders(null, { target: myOrdersLookupResults });
   try {
     const res = await fetch("/api/customer-orders", {
       method: "POST",
@@ -2742,14 +2745,14 @@ myOrdersForm?.addEventListener("submit", async (event) => {
     const data = await res.json().catch(() => null);
     if (data && data.ok && Array.isArray(data.orders) && data.orders.length) {
       myOrdersStatus.textContent = `Найдено заказов: ${data.orders.length}`;
-      renderMyOrders(data.orders);
+      renderMyOrders(data.orders, { target: myOrdersLookupResults });
     } else {
       myOrdersStatus.textContent = "Заказы не найдены. Проверьте телефон и код заказа.";
-      renderMyOrders(null);
+      renderMyOrders(null, { target: myOrdersLookupResults });
     }
   } catch {
     myOrdersStatus.textContent = "Не получилось проверить заказы. Попробуйте ещё раз или напишите менеджеру в WhatsApp.";
-    renderMyOrders(null);
+    renderMyOrders(null, { target: myOrdersLookupResults });
   } finally {
     if (submitButton) submitButton.disabled = false;
   }
@@ -2791,6 +2794,7 @@ let pendingOtpToken = null;
 
 function showLoggedOutView() {
   if (myOrdersAccount) myOrdersAccount.hidden = true;
+  if (cabinetLoginCard) cabinetLoginCard.hidden = false;
   if (myOrdersLoginForm) myOrdersLoginForm.hidden = false;
   if (myOrdersOtpForm) myOrdersOtpForm.hidden = true;
   if (myOrdersFallback) myOrdersFallback.hidden = false;
@@ -2800,6 +2804,7 @@ function showLoggedOutView() {
 
 function showLoggedInView() {
   if (myOrdersAccount) myOrdersAccount.hidden = false;
+  if (cabinetLoginCard) cabinetLoginCard.hidden = true;
   if (myOrdersLoginForm) myOrdersLoginForm.hidden = true;
   if (myOrdersOtpForm) myOrdersOtpForm.hidden = true;
   if (myOrdersFallback) myOrdersFallback.hidden = true;
@@ -2848,13 +2853,6 @@ async function fetchMyOrdersSession() {
   }
 }
 
-const CABINET_ROLE_LABELS = {
-  retail: "",
-  registered: "Клиент",
-  wholesale_pending: "Заявка на опт: на рассмотрении",
-  wholesale: "Оптовый клиент",
-};
-
 function renderCabinetProfile(profile) {
   if (!profileForm) return;
   profileForm.elements.name.value = profile?.name || "";
@@ -2863,18 +2861,24 @@ function renderCabinetProfile(profile) {
 }
 
 function renderWholesaleBlock(role) {
-  if (!wholesaleStatusText || !wholesaleApplyButton || !wholesaleForm) return;
+  if (!wholesaleStatusText || !wholesaleForm) return;
   if (role === "wholesale") {
     wholesaleStatusText.textContent = "У вас оптовый доступ.";
-    wholesaleApplyButton.hidden = true;
     wholesaleForm.hidden = true;
   } else if (role === "wholesale_pending") {
     wholesaleStatusText.textContent = "Заявка отправлена. Менеджер подтвердит доступ.";
-    wholesaleApplyButton.hidden = true;
     wholesaleForm.hidden = true;
   } else {
-    wholesaleStatusText.textContent = "Оптовые цены доступны после подтверждения менеджером.";
-    wholesaleApplyButton.hidden = false;
+    wholesaleStatusText.textContent = "";
+    wholesaleForm.hidden = false;
+  }
+}
+
+function fillCabinetForms(profile) {
+  if (wholesaleForm) wholesaleForm.elements.phone.value = profile?.phone || "";
+  if (contactForm) {
+    contactForm.elements.name.value = profile?.name || "";
+    contactForm.elements.phone.value = profile?.phone || "";
   }
 }
 
@@ -2882,10 +2886,24 @@ function renderCabinet(profile) {
   const role = profile?.role || "retail";
   const firstName = String(profile?.name || "").trim().split(/\s+/)[0] || "Клиент";
   if (cabinetGreetingName) cabinetGreetingName.textContent = firstName;
-  if (cabinetRoleBadge) cabinetRoleBadge.textContent = CABINET_ROLE_LABELS[role] || "";
+  if (cabinetAvatarInitial) cabinetAvatarInitial.textContent = firstName.slice(0, 1).toUpperCase();
+  if (cabinetPhone) cabinetPhone.textContent = profile?.phone || "";
   renderCabinetProfile(profile);
   renderWholesaleBlock(role);
-  renderCabinetFavorites();
+  fillCabinetForms(profile);
+}
+
+function renderCabinetNotifications(orders) {
+  if (!cabinetNotificationList || !cabinetNotificationBadge) return;
+  const recent = Array.isArray(orders) ? orders.slice(0, 3) : [];
+  cabinetNotificationBadge.hidden = recent.length === 0;
+  cabinetNotificationBadge.textContent = String(recent.length);
+  cabinetNotificationList.innerHTML = recent.length
+    ? recent.map((order) => {
+        const date = order.created_at ? new Date(order.created_at).toLocaleDateString("ru-RU") : "";
+        return `<p><strong>${escapeHtml(order.status_label || "Заказ принят")}</strong><span>${escapeHtml(date)} · ${formatPrice(order.total_kgs)}</span></p>`;
+      }).join("")
+    : '<p class="cabinet-hint">Новых уведомлений нет.</p>';
 }
 
 function refreshPricingViews() {
@@ -2901,7 +2919,9 @@ async function checkMyOrdersSession() {
     showLoggedInView();
     renderCabinet(profile);
     const data = await fetchMyOrdersSession();
-    renderMyOrders(data ? data.orders : null, { emptyState: true });
+    const orders = data ? data.orders : null;
+    renderMyOrders(orders, { emptyState: true });
+    renderCabinetNotifications(orders);
   } else {
     showLoggedOutView();
   }
@@ -2985,6 +3005,8 @@ myOrdersLogoutButton?.addEventListener("click", async () => {
   state.session = null;
   sessionPromise = null;
   renderMyOrders(null);
+  renderCabinetNotifications(null);
+  if (cabinetNotifications) cabinetNotifications.hidden = true;
   showLoggedOutView();
   myOrdersLoginForm?.reset();
   myOrdersOtpForm?.reset();
@@ -2992,10 +3014,11 @@ myOrdersLogoutButton?.addEventListener("click", async () => {
   refreshPricingViews();
 });
 
-myOrdersFavorites?.addEventListener("click", (event) => {
-  const removeButton = event.target.closest("[data-favorite]");
-  if (!removeButton) return;
-  toggleFavorite(removeButton.dataset.favorite);
+cabinetNotificationButton?.addEventListener("click", () => {
+  if (!cabinetNotifications) return;
+  const opening = cabinetNotifications.hidden;
+  cabinetNotifications.hidden = !opening;
+  cabinetNotificationButton.setAttribute("aria-expanded", String(opening));
 });
 
 profileForm?.addEventListener("submit", async (event) => {
@@ -3030,19 +3053,6 @@ profileForm?.addEventListener("submit", async (event) => {
   }
 });
 
-wholesaleApplyButton?.addEventListener("click", () => {
-  wholesaleApplyButton.hidden = true;
-  if (wholesaleForm) {
-    wholesaleForm.hidden = false;
-    if (state.session) {
-      if (!wholesaleForm.elements.name.value) wholesaleForm.elements.name.value = state.session.name || "";
-      if (!wholesaleForm.elements.phone.value) wholesaleForm.elements.phone.value = state.session.phone || "";
-      if (!wholesaleForm.elements.city.value) wholesaleForm.elements.city.value = state.session.city || "";
-    }
-    wholesaleForm.querySelector("input[name='name']")?.focus();
-  }
-});
-
 wholesaleForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
   if (!wholesaleStatus) return;
@@ -3055,11 +3065,10 @@ wholesaleForm?.addEventListener("submit", async (event) => {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
-        name: formData.get("name"),
+        name: state.session?.name || formData.get("shop_name"),
         phone: formData.get("phone"),
         shop_name: formData.get("shop_name"),
-        city: formData.get("city"),
-        comment: formData.get("comment"),
+        address: formData.get("address"),
       }),
     });
     const data = await res.json().catch(() => null);
@@ -3069,13 +3078,44 @@ wholesaleForm?.addEventListener("submit", async (event) => {
       if (state.session) {
         state.session = { ...state.session, role: "wholesale_pending" };
         renderWholesaleBlock("wholesale_pending");
-        if (cabinetRoleBadge) cabinetRoleBadge.textContent = CABINET_ROLE_LABELS.wholesale_pending;
       }
     } else {
       wholesaleStatus.textContent = "Не получилось отправить заявку. Попробуйте ещё раз или напишите менеджеру в WhatsApp.";
     }
   } catch {
     wholesaleStatus.textContent = "Не получилось отправить заявку. Попробуйте ещё раз или напишите менеджеру в WhatsApp.";
+  } finally {
+    if (submitButton) submitButton.disabled = false;
+  }
+});
+
+contactForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (!contactStatus) return;
+  const formData = new FormData(event.currentTarget);
+  const submitButton = event.currentTarget.querySelector("button[type='submit']");
+  if (submitButton) submitButton.disabled = true;
+  contactStatus.textContent = "Отправляем…";
+  try {
+    const res = await fetch("/api/contact-request", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        name: formData.get("name"),
+        phone: formData.get("phone"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+      }),
+    });
+    const data = await res.json().catch(() => null);
+    if (data && data.ok) {
+      contactStatus.textContent = "Сообщение отправлено. Мы свяжемся с вами.";
+      event.currentTarget.elements.message.value = "";
+    } else {
+      contactStatus.textContent = "Не получилось отправить сообщение. Попробуйте ещё раз.";
+    }
+  } catch {
+    contactStatus.textContent = "Не получилось отправить сообщение. Попробуйте ещё раз.";
   } finally {
     if (submitButton) submitButton.disabled = false;
   }

@@ -1,7 +1,7 @@
 // Marketplace-style mobile bottom nav contract — no network, no browser.
 // Guards the fixed bottom nav (Главная/Каталог/Избранное/Корзина/Кабинет) on
 // both the homepage and every generated product page, plus the cabinet
-// additions (favorites list, empty-orders state) built for it.
+// additions (compact orders and account forms) built for it.
 // Run: node --test tests/mobile-bottom-nav.test.mjs
 
 import test from "node:test";
@@ -70,6 +70,9 @@ test("catalog nav entry points at the real catalog section", () => {
 test("cabinet nav entry points at the real Мои заказы / личный кабинет section", () => {
   assert.match(indexHtml, /id="bottomNavCabinet" href="\/#myOrders"/);
   assert.match(indexHtml, /id="myOrders"/);
+  assert.match(appJs, /window\.scrollY \+ cabinetSection\.getBoundingClientRect\(\)\.top/);
+  assert.match(appJs, /window\.location\.hash === "#myOrders"/);
+  assert.match(appJs, /const cabinetVisible = window\.scrollY >= cabinetTop - 80/);
 });
 
 test("bottom nav degrades to plain links (works from a product page, a different document, without app.js state)", () => {
@@ -126,25 +129,27 @@ test("every generated product page includes the bottom nav and its badge script"
   assert.match(productGen, /bottomNavCartCount/);
 });
 
-test("cabinet shows a favorites block (телефон/заказы/избранное/опт all present)", () => {
-  assert.match(indexHtml, /id="favoritesBlock"/);
-  assert.match(indexHtml, /id="myOrdersFavorites"/);
-  assert.match(appJs, /function renderCabinetFavorites/);
-  assert.match(appJs, /Пока нет избранных товаров/);
-  // Existing cabinet content this must not regress.
-  assert.match(indexHtml, /id="profileBlock"/); // phone
-  assert.match(indexHtml, /id="myOrdersResults"/); // orders
-  assert.match(indexHtml, /id="wholesaleBlock"/); // wholesale application
+test("cabinet contains profile, compact orders, wholesale and contact without duplicate favorites", () => {
+  assert.ok(!indexHtml.includes('id="favoritesBlock"'));
+  assert.ok(!indexHtml.includes('id="myOrdersFavorites"'));
+  assert.ok(!appJs.includes("renderCabinetFavorites"));
+  assert.match(indexHtml, /id="profileBlock"/);
+  assert.match(indexHtml, /id="ordersBlock"/);
+  assert.match(indexHtml, /Прошлые заказы/);
+  assert.match(indexHtml, /id="myOrdersResults"/);
+  assert.match(indexHtml, /id="wholesaleBlock"/);
+  assert.match(indexHtml, /id="contactBlock"/);
 });
 
 test("logged-in cabinet shows an empty-orders state with a link back to the catalog", () => {
   assert.match(appJs, /emptyState/);
   assert.match(appJs, /У вас пока нет заказов/);
-  assert.match(appJs, /renderMyOrders\(data \? data\.orders : null, \{ emptyState: true \}\)/);
+  assert.match(appJs, /renderMyOrders\(orders, \{ emptyState: true \}\)/);
 });
 
-test("logged-out cabinet still shows a clear phone-login prompt (unchanged)", () => {
-  assert.match(indexHtml, /Войти можно по номеру телефона и коду из SMS/);
+test("logged-out cabinet still shows a compact phone-login card", () => {
+  assert.match(indexHtml, /id="cabinetLoginCard"/);
+  assert.match(indexHtml, />Войти</);
   assert.match(indexHtml, /id="myOrdersLoginForm"/);
 });
 

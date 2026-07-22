@@ -23,6 +23,7 @@
 //   SESSION_SIGNING_SECRET       random string, only ever known server-side
 
 import { signSession, buildSessionCookie, SESSION_TTL_SECONDS } from "../session.js";
+import { maskPhone, sendManagerEmail } from "../manager-email.js";
 
 function json(data, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(data), {
@@ -190,15 +191,19 @@ async function linkPastOrders(env, phoneDigits, customerId) {
 async function ensureCustomerRecord(env, phoneDigits) {
   try {
     let customer = await findCustomerByPhone(env, phoneDigits);
+    let created = false;
     if (!customer) {
       customer = await createCustomerFromOrderHistory(env, phoneDigits);
+      created = Boolean(customer);
     }
     if (customer?.id) {
       await linkPastOrders(env, phoneDigits, customer.id).catch(() => {});
     }
+    return created;
   } catch {
     // Non-fatal — functions/api/customer-profile.js creates the row lazily
     // on first profile save if this step didn't run.
+    return false;
   }
 }
 
@@ -238,7 +243,17 @@ export async function onRequestPost(context) {
     }
 
     await deleteOtpRequest(env, normalized.token);
-    await ensureCustomerRecord(env, otpRequest.phone_digits);
+    const customerCreated = await ensureCustomerRecord(env, otpRequest.phone_digits);
+    if (customerCreated) {
+      try {
+        await sendManagerEmail(env, {
+          subject: "Новая регистрация на Global Market KG",
+          text: `Новый клиент подтвердил номер по SMS: ${maskPhone(otpRequest.phone_digits)}`,
+        });
+      } catch {
+        // Registration and login must never fail because email is unavailable.
+      }
+    }
 
     const exp = Math.floor(Date.now() / 1000) + SESSION_TTL_SECONDS;
     const sessionToken = await signSession({ phone: otpRequest.phone_digits, exp }, env.SESSION_SIGNING_SECRET);

@@ -11,6 +11,7 @@
 // supabase/migrations/0004_customer_roles_wholesale.sql.
 
 import { str, digitsOnly } from "./orders.js";
+import { sendManagerEmail } from "./manager-email.js";
 
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
@@ -34,11 +35,27 @@ export function normalizeWholesaleApplication(payload) {
       name,
       phone: str(payload.phone, 60),
       shop_name: str(payload.shop_name, 200),
-      city: str(payload.city, 200),
+      // The current database column is named city. Keep using it until the
+      // schema is migrated, while the cabinet presents the clearer address field.
+      city: str(payload.address || payload.city, 300),
       comment: str(payload.comment, 2000),
       status: "pending",
     },
     phoneDigits,
+  };
+}
+
+export function buildWholesaleEmail(application) {
+  return {
+    subject: `Новая заявка на опт — ${application.shop_name || application.name}`,
+    text: [
+      "Новая заявка на оптовый доступ",
+      "",
+      `Контакт: ${application.name}`,
+      `Магазин: ${application.shop_name || "не указан"}`,
+      `Адрес: ${application.city || "не указан"}`,
+      `Телефон: ${application.phone}`,
+    ].join("\n"),
   };
 }
 
@@ -122,7 +139,14 @@ export async function onRequestPost(context) {
 
     await insertApplication(env, { ...normalized.application, customer_id: customerId });
 
-    return json({ ok: true });
+    let email = { attempted: false, sent: false };
+    try {
+      email = await sendManagerEmail(env, buildWholesaleEmail(normalized.application));
+    } catch (error) {
+      email = { attempted: true, sent: false, reason: String(error?.message || error) };
+    }
+
+    return json({ ok: true, email_notification: email });
   } catch (error) {
     // Not 502/504: Cloudflare's proxied custom domain intercepts gateway-class
     // status codes and replaces the body with its own generic error page
