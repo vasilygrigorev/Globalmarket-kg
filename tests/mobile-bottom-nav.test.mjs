@@ -72,6 +72,7 @@ test("cabinet nav entry points at the real Мои заказы / личный к
   assert.match(indexHtml, /id="myOrders"/);
   assert.match(appJs, /window\.scrollY \+ cabinetSection\.getBoundingClientRect\(\)\.top/);
   assert.match(appJs, /window\.location\.hash === "#myOrders"/);
+  assert.match(appJs, /await loadCatalog\(\)[\s\S]*?scrollCabinetToTop\("auto"\)/);
   assert.match(appJs, /const cabinetVisible = window\.scrollY >= cabinetTop - 80/);
 });
 

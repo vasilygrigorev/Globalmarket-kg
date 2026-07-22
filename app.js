@@ -3137,6 +3137,9 @@ async function initStorefront() {
   await ensureSession();
   refreshPricingViews();
   updateBottomNavActiveSection();
+  if (window.location.hash === "#myOrders") {
+    requestAnimationFrame(() => scrollCabinetToTop("auto"));
+  }
 }
 
 initStorefront().catch((error) => {
