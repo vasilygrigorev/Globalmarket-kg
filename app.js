@@ -2863,14 +2863,12 @@ function renderWholesaleBlock(role) {
   if (!wholesaleStatusText || !wholesaleForm) return;
   if (role === "wholesale") {
     wholesaleStatusText.textContent = "У вас оптовый доступ.";
-    wholesaleForm.hidden = true;
   } else if (role === "wholesale_pending") {
-    wholesaleStatusText.textContent = "Заявка отправлена. Менеджер подтвердит доступ.";
-    wholesaleForm.hidden = true;
+    wholesaleStatusText.textContent = "Предыдущая заявка отправлена. Можно отправить ещё одну.";
   } else {
     wholesaleStatusText.textContent = "";
-    wholesaleForm.hidden = false;
   }
+  wholesaleForm.hidden = false;
 }
 
 function fillCabinetForms(profile) {
@@ -3071,8 +3069,7 @@ wholesaleForm?.addEventListener("submit", async (event) => {
     });
     const data = await res.json().catch(() => null);
     if (data && data.ok) {
-      wholesaleStatus.textContent = "Заявка отправлена. Менеджер подтвердит доступ.";
-      wholesaleForm.hidden = true;
+      wholesaleStatus.textContent = "Заявка отправлена. При необходимости можно отправить ещё одну.";
       if (state.session) {
         state.session = { ...state.session, role: "wholesale_pending" };
         renderWholesaleBlock("wholesale_pending");

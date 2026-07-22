@@ -61,7 +61,7 @@ test("logged-in cabinet has a compact WB-inspired profile header", () => {
 
 test("cabinet visibility and fresh assets prevent mixed old/new mobile layout", () => {
   assert.match(html, /styles\.css\?v=20260722-cabinet-v3/);
-  assert.match(html, /app\.js\?v=20260722-cabinet-v4/);
+  assert.match(html, /app\.js\?v=20260722-cabinet-v5/);
   assert.match(css, /\.my-orders-account\[hidden\],[\s\S]*?\.cabinet-login-card\[hidden\][\s\S]*?display:\s*none/);
   assert.ok(!/>К<\/span>/.test(html), "cabinet must not render a letter avatar");
 });
@@ -244,7 +244,11 @@ test("wholesale application form posts to /api/wholesale-application and shows t
   }
   const wholesaleHandler = appJs.match(/wholesaleForm\?\.addEventListener\("submit", async \(event\) => \{[\s\S]*?\n\}\);/)[0];
   assert.match(wholesaleHandler, /fetch\("\/api\/wholesale-application"/);
-  assert.match(wholesaleHandler, /Заявка отправлена\. Менеджер подтвердит доступ\./);
+  assert.match(wholesaleHandler, /Заявка отправлена\. При необходимости можно отправить ещё одну\./);
+  assert.ok(!/wholesaleForm\.hidden = true/.test(wholesaleHandler), "successful submission must keep the form visible");
+  const roleRenderer = appJs.match(/function renderWholesaleBlock\(role\) \{[\s\S]*?\n\}/)[0];
+  assert.match(roleRenderer, /wholesaleForm\.hidden = false/);
+  assert.ok(!/wholesaleForm\.hidden = true/.test(roleRenderer), "pending/approved status must not hide the form");
 });
 
 test("contact form posts all visible fields to the manager endpoint", () => {
