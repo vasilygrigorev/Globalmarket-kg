@@ -359,6 +359,18 @@ function productShareUrl(product) {
   return url.toString();
 }
 
+function trackedProductShareUrl(product, attribution = {}) {
+  const url = new URL(productShareUrl(product), window.location.origin);
+  ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach((key) => {
+    url.searchParams.delete(key);
+  });
+  url.searchParams.set("utm_source", attribution.source || "share");
+  url.searchParams.set("utm_medium", attribution.medium || "referral");
+  url.searchParams.set("utm_campaign", attribution.campaign || "product_share");
+  url.searchParams.set("utm_content", product.sourceCode || product.id);
+  return url.toString();
+}
+
 const translitMap = {
   а: "a",
   б: "b",
@@ -483,7 +495,7 @@ async function shareProduct(productId, triggerButton) {
   const shareData = {
     title: product.title,
     text: productShareText(product),
-    url: productShareUrl(product),
+    url: trackedProductShareUrl(product),
   };
 
   try {

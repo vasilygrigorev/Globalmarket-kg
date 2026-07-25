@@ -83,6 +83,7 @@ def main():
                 "tests/header-menu.test.mjs",
                 "tests/storefront-layout.test.mjs",
                 "tests/mobile-bottom-nav.test.mjs",
+                "tests/product-share-attribution.test.mjs",
                 "tests/fresh-products.test.mjs",
                 "tests/product-pages.test.mjs",
                 "tests/shared-layout.test.mjs",

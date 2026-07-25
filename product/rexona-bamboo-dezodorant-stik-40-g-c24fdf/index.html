@@ -150,6 +150,7 @@
     .bottom-page-action { display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 0 13px; border: 1px solid #d2d2d7; border-radius: 8px; color: #1d1d1f; background: rgba(255, 255, 255, 0.92); font-weight: 750; text-decoration: none; cursor: pointer; }
     .bottom-page-action svg { width: 18px; height: 18px; }
     .bottom-page-action svg path { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
+    .bottom-page-action.smm-share { display: none; }
     .bottom-page-action.top { margin-left: auto; }
     @media (max-width: 720px) {
       body.product-page { padding-top: var(--site-header-height, 92px); }
@@ -164,6 +165,14 @@
       .specs { grid-template-columns: 1fr; }
       .related-grid { grid-template-columns: repeat(2, 1fr); }
       .bottom-page-actions { padding: 0 18px; }
+      .bottom-page-action.smm-share:not([hidden]) {
+        display: inline-flex;
+        color: #fff;
+        border-color: transparent;
+        background: linear-gradient(135deg, #087f78, #16b7aa);
+        box-shadow: 0 7px 18px rgba(8, 127, 120, 0.22);
+      }
+      .bottom-page-action.smm-share span { display: none; }
     }
     @media (min-width: 860px) {
       .product-shell { display: grid; grid-template-columns: minmax(0, 52%) minmax(320px, 48%); }
@@ -1183,6 +1192,10 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"></path><path d="M6.5 10.5V20h11v-9.5"></path></svg>
         <span>Главная</span>
       </a>
+      <button class="bottom-page-action smm-share" type="button" data-smm-share aria-label="Поделиться для Instagram" title="Поделиться для Instagram" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a3 3 0 1 0-2.83-4A3 3 0 0 0 18 8Z"></path><path d="M6 15a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path><path d="M18 16a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path><path d="m8.59 16.51 6.83-3.42"></path><path d="m8.59 7.49 6.83 3.42"></path></svg>
+        <span>Instagram</span>
+      </button>
       <button class="bottom-page-action top" type="button" data-scroll-top aria-label="Наверх">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"></path><path d="m6 11 6-6 6 6"></path></svg>
         <span>Наверх</span>
@@ -1239,7 +1252,7 @@
   </a>
 </nav>
   <script>
-    const product = {"id": "prd_56cefec24fdf", "title": "Rexona Bamboo дезодорант-стик 40 г", "price": 300, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Rexona%20Bamboo%20%D0%B4%D0%B5%D0%B7%D0%BE%D0%B4%D0%BE%D1%80%D0%B0%D0%BD%D1%82-%D1%81%D1%82%D0%B8%D0%BA%2040%20%D0%B3%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20300%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/rexona-bamboo-dezodorant-stik-40-g-c24fdf/"};
+    const product = {"id": "prd_56cefec24fdf", "code": "prd_56cefec24fdf", "title": "Rexona Bamboo дезодорант-стик 40 г", "description": "Rexona Bamboo — женский антиперспирант-стик со свежим ароматом бамбука. Формат стика удобно наносится непосредственно на сухую кожу подмышек, а заявленная защита от пота и запаха рассчитана до 48 часов. Масса 40 г; не наносите средство на раздражённую или повреждённую кожу.", "price": 300, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Rexona%20Bamboo%20%D0%B4%D0%B5%D0%B7%D0%BE%D0%B4%D0%BE%D1%80%D0%B0%D0%BD%D1%82-%D1%81%D1%82%D0%B8%D0%BA%2040%20%D0%B3%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20300%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/rexona-bamboo-dezodorant-stik-40-g-c24fdf/"};
     const cartKey = "globalMarketCartDraft";
     const favoritesKey = "globalMarketFavorites";
     const recentlyViewedKey = "globalMarketRecentlyViewed";
@@ -1432,18 +1445,64 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    document.querySelector("[data-share]")?.addEventListener("click", async () => {
-      const shareData = { title: product.title, text: product.title, url: product.url };
+    function trackedShareUrl(source, medium, campaign) {
+      const url = new URL(product.url, window.location.origin);
+      ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach((key) => {
+        url.searchParams.delete(key);
+      });
+      url.searchParams.set("utm_source", source);
+      url.searchParams.set("utm_medium", medium);
+      url.searchParams.set("utm_campaign", campaign);
+      url.searchParams.set("utm_content", product.code || product.id);
+      return url.toString();
+    }
+
+    async function shareProductLink(shareData, button) {
       try {
         if (navigator.share) await navigator.share(shareData);
         else {
           await navigator.clipboard.writeText(`${shareData.text}\n${shareData.url}`);
-          const button = document.querySelector("[data-share]");
           button?.classList.add("active");
           window.setTimeout(() => button?.classList.remove("active"), 900);
         }
       } catch (_) {}
+    }
+
+    document.querySelector("[data-share]")?.addEventListener("click", async (event) => {
+      await shareProductLink({
+        title: product.title,
+        text: product.title,
+        url: trackedShareUrl("share", "referral", "product_share"),
+      }, event.currentTarget);
     });
+
+    function browserAdminSession() {
+      for (let index = 0; index < localStorage.length; index += 1) {
+        const key = localStorage.key(index);
+        if (!key?.startsWith("sb-") || !key.endsWith("-auth-token")) continue;
+        try {
+          const value = JSON.parse(localStorage.getItem(key));
+          const user = value?.user || value?.currentSession?.user || value?.session?.user;
+          if (user?.app_metadata?.is_admin === true) return true;
+        } catch (_) {}
+      }
+      return false;
+    }
+
+    const smmShareButton = document.querySelector("[data-smm-share]");
+    if (smmShareButton && browserAdminSession()) {
+      smmShareButton.hidden = false;
+      smmShareButton.addEventListener("click", async () => {
+        const price = Number(product.price || 0).toLocaleString("ru-RU");
+        const description = String(product.description || "").trim().slice(0, 180);
+        const text = [product.title, `${price} сом`, description].filter(Boolean).join("\n");
+        await shareProductLink({
+          title: product.title,
+          text,
+          url: trackedShareUrl("instagram", "organic_social", "smm_product"),
+        }, smmShareButton);
+      });
+    }
 
     document.querySelector("[data-favorite]")?.addEventListener("click", () => {
       const ids = new Set(readJson(favoritesKey, []));
