@@ -31,8 +31,10 @@ test("generated product pages share customer and Instagram links with separate U
 
 test("Instagram share action is mobile-only and hidden unless a Supabase admin session exists", () => {
   assert.match(productGenerator, /data-smm-share[^>]*hidden/);
-  assert.match(productGenerator, /\.bottom-page-action\.smm-share\s*\{\{\s*display:\s*none/);
-  assert.match(productGenerator, /@media \(max-width: 720px\)[\s\S]*?\.bottom-page-action\.smm-share:not\(\[hidden\]\)/);
+  assert.match(productGenerator, /\.icon-action\.smm-share\s*\{\{\s*display:\s*none/);
+  assert.match(productGenerator, /@media \(max-width: 720px\)[\s\S]*?\.icon-action\.smm-share:not\(\[hidden\]\)/);
+  assert.match(productGenerator, /class="top-share-stack"[\s\S]*?data-share[\s\S]*?data-smm-share/);
+  assert.doesNotMatch(productGenerator, /class="bottom-page-action smm-share"/);
   assert.match(productGenerator, /user\?\.app_metadata\?\.is_admin === true/);
   assert.match(productGenerator, /smmShareButton\.hidden = false/);
 });

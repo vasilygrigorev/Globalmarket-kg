@@ -638,12 +638,17 @@ def render_page(product, related, slug, landing_lookup=None):
     .product-shell {{ position: relative; overflow: hidden; max-width: 980px; margin: 0 auto; background: #fff; border-radius: 8px; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.08); }}
     .top-actions {{ position: absolute; inset: 12px 12px auto 12px; z-index: 3; display: flex; justify-content: space-between; pointer-events: none; }}
     .top-actions > div {{ display: flex; gap: 8px; pointer-events: auto; }}
+    .top-actions-right {{ align-items: flex-start; }}
+    .top-share-stack {{ display: flex; flex-direction: column; gap: 8px; }}
     .icon-action {{ display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid rgba(214, 216, 220, 0.72); border-radius: 8px; background: rgba(255, 255, 255, 0.92); color: #1f1f1f; box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08); cursor: pointer; text-decoration: none; }}
     .icon-action svg {{ width: 21px; height: 21px; }}
     .icon-action svg circle,
+    .icon-action svg rect,
     .icon-action svg path {{ fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.1; }}
     .icon-action .heart-path {{ fill: rgba(255, 255, 255, 0.08); stroke-width: 2.45; }}
     .icon-action.active {{ color: #d70015; background: rgba(255, 246, 247, 0.94); }}
+    .icon-action.smm-share {{ display: none; color: #fff; border-color: transparent; background: linear-gradient(135deg, #7c3aed, #db2777 55%, #f97316); box-shadow: 0 10px 22px rgba(190, 24, 93, 0.24); }}
+    .icon-action.smm-share .instagram-dot {{ fill: currentColor; stroke: none; }}
     .visual-panel {{ background: #fff; }}
     .media-main {{ display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; }}
     .gallery-thumbs {{ display: flex; gap: 10px; padding: 14px 16px 18px; overflow-x: auto; background: #f7f7f8; }}
@@ -703,7 +708,6 @@ def render_page(product, related, slug, landing_lookup=None):
     .bottom-page-action {{ display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 0 13px; border: 1px solid #d2d2d7; border-radius: 8px; color: #1d1d1f; background: rgba(255, 255, 255, 0.92); font-weight: 750; text-decoration: none; cursor: pointer; }}
     .bottom-page-action svg {{ width: 18px; height: 18px; }}
     .bottom-page-action svg path {{ fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }}
-    .bottom-page-action.smm-share {{ display: none; }}
     .bottom-page-action.top {{ margin-left: auto; }}
     @media (max-width: 720px) {{
       body.product-page {{ padding-top: var(--site-header-height, 92px); }}
@@ -715,17 +719,10 @@ def render_page(product, related, slug, landing_lookup=None):
       .related {{ padding: 0 8px; }}
       .product-detail-info {{ padding: 26px 18px 20px; }}
       .icon-action {{ width: 44px; height: 44px; }}
+      .icon-action.smm-share:not([hidden]) {{ display: grid; }}
       .specs {{ grid-template-columns: 1fr; }}
       .related-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .bottom-page-actions {{ padding: 0 18px; }}
-      .bottom-page-action.smm-share:not([hidden]) {{
-        display: inline-flex;
-        color: #fff;
-        border-color: transparent;
-        background: linear-gradient(135deg, #087f78, #16b7aa);
-        box-shadow: 0 7px 18px rgba(8, 127, 120, 0.22);
-      }}
-      .bottom-page-action.smm-share span {{ display: none; }}
     }}
     @media (min-width: 860px) {{
       .product-shell {{ display: grid; grid-template-columns: minmax(0, 52%) minmax(320px, 48%); }}
@@ -745,18 +742,27 @@ def render_page(product, related, slug, landing_lookup=None):
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"></path></svg>
           </button>
         </div>
-        <div>
+        <div class="top-actions-right">
           <button class="icon-action" type="button" data-favorite aria-label="Добавить в избранное" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path class="heart-path" d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
           </button>
-          <button class="icon-action" type="button" data-share aria-label="Поделиться товаром">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="18" cy="5" r="3"></circle>
-              <circle cx="6" cy="12" r="3"></circle>
-              <circle cx="18" cy="19" r="3"></circle>
-              <path d="m8.6 10.6 6.8-4.2M8.6 13.4l6.8 4.2"></path>
-            </svg>
-          </button>
+          <div class="top-share-stack">
+            <button class="icon-action" type="button" data-share aria-label="Поделиться товаром">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <path d="m8.6 10.6 6.8-4.2M8.6 13.4l6.8 4.2"></path>
+              </svg>
+            </button>
+            <button class="icon-action smm-share" type="button" data-smm-share aria-label="Поделиться для Instagram" title="Поделиться для Instagram" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle class="instagram-dot" cx="17.5" cy="6.8" r="1"></circle>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
       <section class="visual-panel">
@@ -800,10 +806,6 @@ def render_page(product, related, slug, landing_lookup=None):
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"></path><path d="M6.5 10.5V20h11v-9.5"></path></svg>
         <span>Главная</span>
       </a>
-      <button class="bottom-page-action smm-share" type="button" data-smm-share aria-label="Поделиться для Instagram" title="Поделиться для Instagram" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a3 3 0 1 0-2.83-4A3 3 0 0 0 18 8Z"></path><path d="M6 15a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path><path d="M18 16a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path><path d="m8.59 16.51 6.83-3.42"></path><path d="m8.59 7.49 6.83 3.42"></path></svg>
-        <span>Instagram</span>
-      </button>
       <button class="bottom-page-action top" type="button" data-scroll-top aria-label="Наверх">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"></path><path d="m6 11 6-6 6 6"></path></svg>
         <span>Наверх</span>
