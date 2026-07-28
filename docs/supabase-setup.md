@@ -80,6 +80,12 @@ RLS is enabled on all five tables with **no anonymous policies**, so the public
   ```
   Helper: `public.is_admin()` reads that claim. `public.set_updated_at()` keeps
   `updated_at` fresh on `customers` and `orders`.
+- **SMM:** authenticated users with `app_metadata.is_smm = true` may use the
+  admin login only to unlock tracked Instagram sharing on product pages. This
+  flag does not satisfy `public.is_admin()`, so RLS keeps orders, customers, and
+  manager actions unavailable to the SMM account. Short staff logins are mapped
+  in the browser to `<login>@staff.globalmarket.kg`; create the Supabase Auth
+  user with that technical email and never publish or store its password in git.
 
 ## Next frontend integration step (not done yet)
 

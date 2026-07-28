@@ -153,6 +153,22 @@ export function isAdminSession(session) {
   return session?.user?.app_metadata?.is_admin === true;
 }
 
+// SMM users may authenticate through the admin entry point only to unlock the
+// tracked Instagram share action. They never receive the admin orders view.
+export function isSmmSession(session) {
+  return session?.user?.app_metadata?.is_smm === true;
+}
+
+// Supabase password auth uses an email identity. Staff may enter a short login;
+// map it to a private technical domain so the UI never needs to expose that
+// implementation detail. Real email addresses continue to work for owners.
+export function adminLoginEmail(identity) {
+  const value = String(identity || "").trim().toLowerCase();
+  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return value;
+  if (/^[a-z0-9._-]{3,40}$/.test(value)) return `${value}@staff.globalmarket.kg`;
+  return "";
+}
+
 // Build the PostgREST `.or(...)` filter for a phone/name search (or null).
 // Strips characters that would break the or-filter grammar.
 export function buildSearchOr(q) {
@@ -484,8 +500,9 @@ export function shouldAutoRefresh({ enabled, view, hidden, page } = {}) {
 // Which view to show given the current auth session. Pure (no DOM).
 export function nextView(session) {
   if (!session) return "login";
-  if (!isAdminSession(session)) return "access";
-  return "list";
+  if (isAdminSession(session)) return "list";
+  if (isSmmSession(session)) return "smm";
+  return "access";
 }
 
 // "N позиций · M шт" summary for an order's items, with correct Russian plural

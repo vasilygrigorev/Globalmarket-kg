@@ -9,7 +9,9 @@ import {
   money,
   when,
   isConfigured,
+  adminLoginEmail,
   isAdminSession,
+  isSmmSession,
   buildSearchOr,
   isValidStatus,
   friendlyError,
@@ -89,6 +91,21 @@ test("isAdminSession requires explicit app_metadata.is_admin", () => {
   assert.equal(isAdminSession({ user: { app_metadata: { role: "admin" } } }), false);
   assert.equal(isAdminSession({ user: {} }), false);
   assert.equal(isAdminSession(null), false);
+});
+
+test("isSmmSession requires explicit app_metadata.is_smm", () => {
+  assert.equal(isSmmSession({ user: { app_metadata: { is_smm: true } } }), true);
+  assert.equal(isSmmSession({ user: { app_metadata: { is_smm: false } } }), false);
+  assert.equal(isSmmSession({ user: { app_metadata: { role: "smm" } } }), false);
+  assert.equal(isSmmSession({ user: {} }), false);
+  assert.equal(isSmmSession(null), false);
+});
+
+test("adminLoginEmail maps staff logins without exposing a technical email", () => {
+  assert.equal(adminLoginEmail(" albina "), "albina@staff.globalmarket.kg");
+  assert.equal(adminLoginEmail("Owner@Example.com"), "owner@example.com");
+  assert.equal(adminLoginEmail("a"), "");
+  assert.equal(adminLoginEmail("альбина"), "");
 });
 
 test("buildSearchOr sanitizes and returns null when empty", () => {
@@ -244,11 +261,13 @@ test("renderOrderDetail includes a customer WhatsApp link when phone present", (
   assert.ok(!noPhone.includes("Написать клиенту в WhatsApp"));
 });
 
-test("nextView routes by session + admin flag", () => {
+test("nextView keeps SMM separate from customer orders", () => {
   assert.equal(nextView(null), "login");
   assert.equal(nextView({ user: { app_metadata: {} } }), "access");
   assert.equal(nextView({ user: { app_metadata: { is_admin: false } } }), "access");
+  assert.equal(nextView({ user: { app_metadata: { is_smm: true } } }), "smm");
   assert.equal(nextView({ user: { app_metadata: { is_admin: true } } }), "list");
+  assert.equal(nextView({ user: { app_metadata: { is_admin: true, is_smm: true } } }), "list");
 });
 
 test("renderItemsRows shows empty placeholder or escaped rows", () => {

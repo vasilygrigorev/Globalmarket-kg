@@ -7,6 +7,7 @@ import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 import {
   esc,
   isConfigured,
+  adminLoginEmail,
   buildSearchOr,
   friendlyError,
   emptyOrdersMessage,
@@ -65,6 +66,7 @@ function setView(name) {
   currentView = name;
   show($("loginView"), name === "login");
   show($("accessView"), name === "access");
+  show($("smmView"), name === "smm");
   show($("listView"), name === "list");
   show($("detailView"), name === "detail");
 }
@@ -148,6 +150,9 @@ async function refreshSessionUI() {
   const view = nextView(session);
   if (view === "access") {
     $("accessEmail").textContent = session.user.email || "текущий пользователь";
+  }
+  if (view === "smm") {
+    $("smmEmail").textContent = session.user.email || "SMM-пользователь";
   }
   setView(view);
   if (view === "list") { loadOrders(); loadStats(); loadWholesaleApplications(); }
@@ -411,10 +416,17 @@ function wire() {
     const btn = e.currentTarget.querySelector("button[type='submit']");
     show(err, false);
     if (btn) { btn.disabled = true; btn.textContent = loginButtonLabel(true); }
+    const email = adminLoginEmail($("email").value);
+    if (!email) {
+      if (btn) { btn.disabled = false; btn.textContent = loginButtonLabel(false); }
+      err.textContent = "Введите логин латиницей или email.";
+      show(err, true);
+      return;
+    }
     let error;
     try {
       ({ error } = await supabase.auth.signInWithPassword({
-        email: $("email").value.trim(),
+        email,
         password: $("password").value,
       }));
     } catch (ex) {

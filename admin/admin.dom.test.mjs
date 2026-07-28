@@ -37,7 +37,7 @@ const dynamic = dynamicIds(logicJs);
 const referenced = referencedIds(adminJs);
 
 const REQUIRED = [
-  "loginView", "accessView", "listView", "detailView",
+  "loginView", "accessView", "smmView", "smmEmail", "listView", "detailView",
   "ordersBody", "statusFilter", "periodFilter", "search", "refresh", "signOut",
   "ordersCount", "ordersTotal",
 ];
@@ -92,6 +92,19 @@ test("admin runtime files never contain a service_role reference (anon-only)", (
 
 test("admin.js uses the anon key (not a service role) for the Supabase client", () => {
   assert.match(adminJs, /createClient\(\s*window\.GM_SUPABASE_URL\s*,\s*window\.GM_SUPABASE_ANON_KEY/);
+});
+
+test("SMM users get a share-only view without loading customer orders", () => {
+  assert.match(logicJs, /app_metadata\?\.is_smm === true/);
+  assert.match(logicJs, /if \(isSmmSession\(session\)\) return "smm"/);
+  assert.match(adminJs, /show\(\$\("smmView"\), name === "smm"\)/);
+  assert.match(html, /Заказы и персональные данные клиентов[\s\S]*закрыты/);
+});
+
+test("staff may sign in with a short login while Supabase still receives an email", () => {
+  assert.match(html, /placeholder="Логин или email"/);
+  assert.match(logicJs, /staff\.globalmarket\.kg/);
+  assert.match(adminJs, /signInWithPassword\(\{[\s\S]*?\bemail,/);
 });
 
 test("CSS defines state classes used by JS (.banner, .ok, .hidden)", () => {

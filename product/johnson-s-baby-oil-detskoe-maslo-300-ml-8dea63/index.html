@@ -1114,21 +1114,24 @@
       }, event.currentTarget);
     });
 
-    function browserAdminSession() {
+    function browserSmmSession() {
       for (let index = 0; index < localStorage.length; index += 1) {
         const key = localStorage.key(index);
         if (!key?.startsWith("sb-") || !key.endsWith("-auth-token")) continue;
         try {
           const value = JSON.parse(localStorage.getItem(key));
           const user = value?.user || value?.currentSession?.user || value?.session?.user;
-          if (user?.app_metadata?.is_admin === true) return true;
+          if (
+            user?.app_metadata?.is_admin === true
+            || user?.app_metadata?.is_smm === true
+          ) return true;
         } catch (_) {}
       }
       return false;
     }
 
     const smmShareButton = document.querySelector("[data-smm-share]");
-    if (smmShareButton && browserAdminSession()) {
+    if (smmShareButton && browserSmmSession()) {
       smmShareButton.hidden = false;
       smmShareButton.addEventListener("click", async () => {
         const price = Number(product.price || 0).toLocaleString("ru-RU");
