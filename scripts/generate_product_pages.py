@@ -587,12 +587,18 @@ def render_page(product, related, slug, landing_lookup=None):
         },
         ensure_ascii=False,
     )
-    action = (
+    purchase_action = (
         f"""
-        <div class="modal-actions">
+        <div class="modal-actions product-purchase-actions">
           <button class="primary-action" type="button" data-add-cart>В корзину</button>
-          <a class="secondary-action" href="/#checkout" data-checkout>К оформлению</a>
+          <a class="secondary-action" href="/?checkout=1#checkoutForm" data-checkout>К оформлению</a>
         </div>
+        """
+        if is_in_stock(product)
+        else ""
+    )
+    support_action = (
+        f"""
         <a class="whatsapp-action" href="{escape(whatsapp)}" rel="noopener">Заказать сразу в WhatsApp</a>
         <a class="whatsapp-action" href="{escape(whatsapp_question)}" rel="noopener">Спросить в WhatsApp</a>
         """
@@ -656,6 +662,9 @@ def render_page(product, related, slug, landing_lookup=None):
     .gallery-thumb.active {{ border-color: #1f1f1f; background: #fff; }}
     .gallery-thumb img {{ width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }}
     .gallery-thumb span {{ overflow: hidden; font-size: 11px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; text-align: center; }}
+    .product-purchase-strip {{ padding: 0 16px 18px; background: #f7f7f8; }}
+    .product-purchase-actions {{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }}
+    .product-purchase-actions > * {{ width: 100%; min-width: 0; }}
     .product-detail-info {{ display: grid; gap: 18px; padding: 28px 26px 26px; }}
     .product-breadcrumbs {{ display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: #777; font-size: 13px; line-height: 1.35; }}
     .product-breadcrumbs a {{ color: inherit; text-decoration: none; }}
@@ -720,6 +729,7 @@ def render_page(product, related, slug, landing_lookup=None):
       .product-detail-info {{ padding: 26px 18px 20px; }}
       .icon-action {{ width: 44px; height: 44px; }}
       .icon-action.smm-share:not([hidden]) {{ display: grid; }}
+      .product-purchase-strip {{ padding: 0 10px 14px; }}
       .specs {{ grid-template-columns: 1fr; }}
       .related-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .bottom-page-actions {{ padding: 0 18px; }}
@@ -768,6 +778,7 @@ def render_page(product, related, slug, landing_lookup=None):
       <section class="visual-panel">
         <img class="media-main" src="/{escape(main_image)}" alt="{escape(title)}" data-main-image>
         {render_gallery(images, title)}
+        {f'<div class="product-purchase-strip">{purchase_action}</div>' if purchase_action else ''}
       </section>
       <section class="product-detail-info">
         {visual_breadcrumbs(product, links)}
@@ -793,7 +804,7 @@ def render_page(product, related, slug, landing_lookup=None):
           {f'<div><dt>Подборка</dt><dd>{collection_spec}</dd></div>' if collection_spec else ''}
         </dl>
         <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 10 000 <span class="som-sign">с</span>.</div>
-        {action}
+        {support_action}
       </section>
     </article>
     {render_related(related)}
@@ -1077,7 +1088,11 @@ def render_page(product, related, slug, landing_lookup=None):
     }});
 
     document.querySelector("[data-add-cart]")?.addEventListener("click", addToCart);
-    document.querySelector("[data-checkout]")?.addEventListener("click", () => addToCart({{ increment: false }}));
+    document.querySelector("[data-checkout]")?.addEventListener("click", (event) => {{
+      event.preventDefault();
+      addToCart({{ increment: false }});
+      window.location.href = event.currentTarget.href;
+    }});
 
     document.querySelectorAll("[data-gallery-image]").forEach((button) => {{
       button.addEventListener("click", () => {{

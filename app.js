@@ -1018,6 +1018,29 @@ function applyBottomNavParamsFromUrl() {
   }
 }
 
+// Product pages navigate here only after saving the selected product into the
+// shared cart draft. Wait until the catalog and pricing have rendered before
+// scrolling, otherwise hundreds of asynchronously inserted cards above the
+// checkout section push the form far below the viewport.
+function applyProductCheckoutFromUrl() {
+  const params = mergedUrlParams();
+  if (params.get("checkout") !== "1" || !checkoutForm) return;
+  setCartOpen(false);
+  requestAnimationFrame(() => {
+    updateSiteHeaderHeight();
+    checkoutForm.scrollIntoView({ behavior: "auto", block: "start" });
+    const url = new URL(window.location.href);
+    url.searchParams.delete("checkout");
+    url.hash = "checkoutForm";
+    window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+    window.setTimeout(() => {
+      const firstEmptyRequired = [...checkoutForm.querySelectorAll("input[required]")]
+        .find((input) => !input.value.trim());
+      (firstEmptyRequired || checkoutForm.querySelector("input"))?.focus({ preventScroll: true });
+    }, 100);
+  });
+}
+
 function renderQuickCategories(catalogCategories) {
   const categories = catalogCategories.length
     ? catalogCategories.filter((category) => category.id !== "germany")
@@ -3147,6 +3170,7 @@ async function initStorefront() {
   await loadCatalog();
   await ensureSession();
   refreshPricingViews();
+  applyProductCheckoutFromUrl();
   updateBottomNavActiveSection();
   if (window.location.hash === "#myOrders") {
     requestAnimationFrame(() => scrollCabinetToTop("auto"));
