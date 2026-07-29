@@ -98,6 +98,7 @@ def main():
                 "tests/catalog-discount-system.test.mjs",
                 "tests/seo-consistency.test.mjs",
                 "tests/home-seo.test.mjs",
+                "tests/instagram-bio-link.test.mjs",
                 "tests/robots-sitemap.test.mjs",
                 "tests/headers-manifest.test.mjs",
                 "tests/landing-pages.test.mjs",
