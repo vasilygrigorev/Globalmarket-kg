@@ -3927,7 +3927,7 @@ textarea {
     order: 2;
     z-index: 2;
     margin: 16px var(--gm-mobile-storefront-gutter) 2px;
-    padding: 7px 8px 5px;
+    padding: 3px 5px 1px;
     border: 0;
     border-radius: 18px;
     background: #ffffff;
@@ -3940,7 +3940,7 @@ textarea {
 
   body.home-page .quick-category-grid {
     display: flex !important;
-    gap: 6px;
+    gap: 4px;
     overflow-x: auto;
     padding: 0 1px;
     scrollbar-width: none;
@@ -3953,9 +3953,10 @@ textarea {
 
   body.home-page .quick-category {
     display: grid;
-    flex: 0 0 78px;
-    grid-template-rows: 72px auto;
-    gap: 2px;
+    flex: 0 0 96px;
+    grid-template-rows: 88px max-content;
+    gap: 0;
+    aspect-ratio: auto;
     min-height: 0;
     padding: 0;
     overflow: visible;
@@ -3969,8 +3970,8 @@ textarea {
   body.home-page .quick-category img {
     position: static;
     display: block;
-    width: 72px;
-    height: 72px;
+    width: 88px;
+    height: 88px;
     margin: 0 auto;
     padding: 0;
     border: 0;
@@ -3988,21 +3989,21 @@ textarea {
 
   body.home-page .quick-category strong {
     position: static;
-    display: -webkit-box;
+    display: block;
     width: auto;
     height: auto;
-    overflow: hidden;
+    overflow: visible;
     margin: 0;
     color: #29434a;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0;
-    line-height: 1.08;
+    line-height: 1.05;
     text-align: center;
     text-transform: none;
-    white-space: normal;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    white-space: nowrap;
+    -webkit-box-orient: initial;
+    -webkit-line-clamp: unset;
     clip: auto;
   }
 

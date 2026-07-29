@@ -86,13 +86,18 @@ test("CSS renders the marketplace category rail and fresh products on the mobile
   );
   assert.match(
     mobile,
-    /body\.home-page\s+\.quick-category img\s*\{[^}]*width:\s*72px;[^}]*height:\s*72px/s,
+    /body\.home-page\s+\.quick-category img\s*\{[^}]*width:\s*88px;[^}]*height:\s*88px/s,
     "mobile category icons should fill the compact rail",
   );
   assert.match(
     mobile,
-    /body\.home-page\s+\.quick-category strong\s*\{[^}]*font-size:\s*12px/s,
+    /body\.home-page\s+\.quick-category strong\s*\{[^}]*font-size:\s*13px/s,
     "mobile category labels should remain comfortably readable",
+  );
+  assert.match(
+    mobile,
+    /body\.home-page\s+\.quick-category\s*\{[^}]*aspect-ratio:\s*auto/s,
+    "legacy portrait tile ratio must not leave empty space below category labels",
   );
   assert.match(mobile, /\.fresh-products(-heading|-row)?\s*\{/, "fresh-products mobile styling missing");
 });

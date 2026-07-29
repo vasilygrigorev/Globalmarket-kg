@@ -62,7 +62,7 @@ test("every tile category is a real catalog category", () => {
 });
 
 test("home page cache-busts the current category assets", () => {
-  assert.match(indexHtml, /styles\.css\?v=20260729-category-rail-v2/);
+  assert.match(indexHtml, /styles\.css\?v=20260729-category-rail-v3/);
   assert.match(indexHtml, /app\.js\?v=20260729-category-icons-v2/);
 });
 
