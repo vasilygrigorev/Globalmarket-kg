@@ -13,6 +13,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (rel) => readFileSync(join(ROOT, rel), "utf8");
 
 const appJs = read("app.js");
+const indexHtml = read("index.html");
 
 // Extract the quickCategoryCards = [ ... ] block and parse one tile per line.
 function parseTiles() {
@@ -58,6 +59,11 @@ test("every tile image exists on disk", () => {
 test("every tile category is a real catalog category", () => {
   const bad = tiles.filter((t) => t.category && !categories.has(t.category)).map((t) => `${t.title}→${t.category}`);
   assert.deepEqual(bad, [], `tiles pointing at unknown categories: ${bad.join(", ")}`);
+});
+
+test("home page cache-busts the current category assets", () => {
+  assert.match(indexHtml, /styles\.css\?v=20260729-category-rail-v2/);
+  assert.match(indexHtml, /app\.js\?v=20260729-category-icons-v2/);
 });
 
 test("Детское uses the kids audience and excludes Dove deodorants", () => {

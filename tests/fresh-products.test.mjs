@@ -84,6 +84,16 @@ test("CSS renders the marketplace category rail and fresh products on the mobile
     /body\.home-page\s+\.catalog-directory\s*\{[^}]*display:\s*none/s,
     "the redundant breadcrumb stays hidden on the redesigned home; category access is the rail plus header menu",
   );
+  assert.match(
+    mobile,
+    /body\.home-page\s+\.quick-category img\s*\{[^}]*width:\s*72px;[^}]*height:\s*72px/s,
+    "mobile category icons should fill the compact rail",
+  );
+  assert.match(
+    mobile,
+    /body\.home-page\s+\.quick-category strong\s*\{[^}]*font-size:\s*12px/s,
+    "mobile category labels should remain comfortably readable",
+  );
   assert.match(mobile, /\.fresh-products(-heading|-row)?\s*\{/, "fresh-products mobile styling missing");
 });
 
