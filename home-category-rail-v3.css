@@ -1,0 +1,36 @@
+@media (max-width: 680px) {
+  body.home-page .quick-categories {
+    padding: 3px 5px 1px;
+  }
+
+  body.home-page .quick-category-grid {
+    gap: 4px;
+    padding: 0 1px;
+  }
+
+  body.home-page .quick-category {
+    flex: 0 0 96px;
+    grid-template-rows: 88px max-content;
+    gap: 0;
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+
+  body.home-page .quick-category img {
+    width: 88px;
+    height: 88px;
+  }
+
+  body.home-page .quick-category strong {
+    display: block;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.05;
+    white-space: nowrap;
+    -webkit-box-orient: initial;
+    -webkit-line-clamp: unset;
+  }
+}

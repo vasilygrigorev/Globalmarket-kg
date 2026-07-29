@@ -13,6 +13,7 @@ ROOT_FILES = [
     "index.html",
     "app.js",
     "styles.css",
+    "home-category-rail-v3.css",
     "privacy.html",
     "404.html",
     "site.webmanifest",
