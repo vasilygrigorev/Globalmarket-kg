@@ -1,6 +1,6 @@
 @media (max-width: 680px) {
   body.home-page .quick-categories {
-    padding: 3px 5px 1px;
+    padding: 4px 5px 7px;
   }
 
   body.home-page .quick-category-grid {
@@ -9,16 +9,16 @@
   }
 
   body.home-page .quick-category {
-    flex: 0 0 96px;
-    grid-template-rows: 88px max-content;
+    flex: 0 0 90px;
+    grid-template-rows: 82px max-content;
     gap: 0;
     aspect-ratio: auto;
     min-height: 0;
   }
 
   body.home-page .quick-category img {
-    width: 88px;
-    height: 88px;
+    width: 82px;
+    height: 82px;
   }
 
   body.home-page .quick-category strong {

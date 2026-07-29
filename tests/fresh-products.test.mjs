@@ -86,7 +86,7 @@ test("CSS renders the marketplace category rail and fresh products on the mobile
   );
   assert.match(
     mobile,
-    /body\.home-page\s+\.quick-category img\s*\{[^}]*width:\s*88px;[^}]*height:\s*88px/s,
+    /body\.home-page\s+\.quick-category img\s*\{[^}]*width:\s*82px;[^}]*height:\s*82px/s,
     "mobile category icons should fill the compact rail",
   );
   assert.match(

@@ -3927,7 +3927,7 @@ textarea {
     order: 2;
     z-index: 2;
     margin: 16px var(--gm-mobile-storefront-gutter) 2px;
-    padding: 3px 5px 1px;
+    padding: 4px 5px 7px;
     border: 0;
     border-radius: 18px;
     background: #ffffff;
@@ -3953,8 +3953,8 @@ textarea {
 
   body.home-page .quick-category {
     display: grid;
-    flex: 0 0 96px;
-    grid-template-rows: 88px max-content;
+    flex: 0 0 90px;
+    grid-template-rows: 82px max-content;
     gap: 0;
     aspect-ratio: auto;
     min-height: 0;
@@ -3970,8 +3970,8 @@ textarea {
   body.home-page .quick-category img {
     position: static;
     display: block;
-    width: 88px;
-    height: 88px;
+    width: 82px;
+    height: 82px;
     margin: 0 auto;
     padding: 0;
     border: 0;
