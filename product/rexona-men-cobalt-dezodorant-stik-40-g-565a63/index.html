@@ -96,6 +96,7 @@
     .icon-action.active { color: #d70015; background: rgba(255, 246, 247, 0.94); }
     .icon-action.smm-share { display: none; color: #fff; border-color: transparent; background: linear-gradient(135deg, #7c3aed, #db2777 55%, #f97316); box-shadow: 0 10px 22px rgba(190, 24, 93, 0.24); }
     .icon-action.smm-share .instagram-dot { fill: currentColor; stroke: none; }
+    .share-feedback { position: fixed; left: 50%; bottom: calc(82px + env(safe-area-inset-bottom)); z-index: 40; width: max-content; max-width: calc(100vw - 32px); transform: translateX(-50%); padding: 11px 14px; border-radius: 8px; color: #fff; background: rgba(20, 24, 28, 0.94); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22); font-size: 14px; font-weight: 750; text-align: center; }
     .visual-panel { background: #fff; }
     .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; }
     .gallery-thumbs { display: flex; gap: 10px; padding: 14px 16px 18px; overflow-x: auto; background: #f7f7f8; }
@@ -244,6 +245,7 @@
           </div>
         </div>
       </div>
+      <div class="share-feedback" data-share-feedback role="status" aria-live="polite" hidden></div>
       <section class="visual-panel">
         <img class="media-main" src="/assets/products/rexona/rexona-stick-cobalt-40g-card-front.jpg" alt="Rexona Men Cobalt дезодорант-стик 40 г" data-main-image>
         <div class="gallery-thumbs" aria-label="Фотографии товара">
@@ -1465,15 +1467,67 @@
       return url.toString();
     }
 
-    async function shareProductLink(shareData, button) {
+    const shareFeedback = document.querySelector("[data-share-feedback]");
+    let shareFeedbackTimer = 0;
+
+    function showShareFeedback(message) {
+      if (!shareFeedback) return;
+      window.clearTimeout(shareFeedbackTimer);
+      shareFeedback.textContent = message;
+      shareFeedback.hidden = false;
+      shareFeedbackTimer = window.setTimeout(() => {
+        shareFeedback.hidden = true;
+      }, 2200);
+    }
+
+    function legacyCopyText(text) {
+      const field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      let copied = false;
       try {
-        if (navigator.share) await navigator.share(shareData);
-        else {
-          await navigator.clipboard.writeText(`${shareData.text}\n${shareData.url}`);
-          button?.classList.add("active");
-          window.setTimeout(() => button?.classList.remove("active"), 900);
-        }
+        copied = document.execCommand("copy");
       } catch (_) {}
+      field.remove();
+      return copied;
+    }
+
+    async function copyShareText(shareData) {
+      const text = [shareData.text, shareData.url].filter(Boolean).join("\n");
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch (_) {
+        return legacyCopyText(text);
+      }
+    }
+
+    async function shareProductLink(shareData, button) {
+      if (typeof navigator.share === "function") {
+        try {
+          if (typeof navigator.canShare !== "function" || navigator.canShare(shareData)) {
+            await navigator.share(shareData);
+            return true;
+          }
+        } catch (error) {
+          if (error?.name === "AbortError") return false;
+        }
+      }
+
+      const copied = await copyShareText(shareData);
+      if (copied) {
+        button?.classList.add("active");
+        window.setTimeout(() => button?.classList.remove("active"), 900);
+        showShareFeedback("Текст и ссылка скопированы");
+        return true;
+      }
+
+      showShareFeedback("Не удалось открыть меню. Обновите страницу и попробуйте снова.");
+      return false;
     }
 
     document.querySelector("[data-share]")?.addEventListener("click", async (event) => {

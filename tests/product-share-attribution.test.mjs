@@ -41,6 +41,15 @@ test("Instagram share action is mobile-only and hidden unless an admin or SMM se
   assert.match(productGenerator, /smmShareButton\.hidden = false/);
 });
 
+test("product sharing falls back to visible clipboard feedback when native sharing fails", () => {
+  assert.match(productGenerator, /typeof navigator\.share === "function"/);
+  assert.match(productGenerator, /error\?\.name === "AbortError"/);
+  assert.match(productGenerator, /await copyShareText\(shareData\)/);
+  assert.match(productGenerator, /document\.execCommand\("copy"\)/);
+  assert.match(productGenerator, /data-share-feedback[^>]*role="status"[^>]*aria-live="polite"/);
+  assert.match(productGenerator, /showShareFeedback\("Текст и ссылка скопированы"\)/);
+});
+
 test("product canonical URL remains clean and is not replaced by a tracked URL", () => {
   assert.match(productGenerator, /<link rel="canonical" href="\{escape\(canonical\)\}"/);
   assert.doesNotMatch(productGenerator, /<link rel="canonical"[^>]*utm_/);
