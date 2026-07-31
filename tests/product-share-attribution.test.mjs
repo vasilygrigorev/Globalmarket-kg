@@ -50,6 +50,14 @@ test("product sharing falls back to visible clipboard feedback when native shari
   assert.match(productGenerator, /showShareFeedback\("Текст и ссылка скопированы"\)/);
 });
 
+test("product share buttons handle direct mobile pointer gestures", () => {
+  assert.match(productGenerator, /touch-action: manipulation/);
+  assert.match(productGenerator, /button\.addEventListener\("pointerup"/);
+  assert.match(productGenerator, /lastTouchShareAt < 800/);
+  assert.match(productGenerator, /bindShareButton\(document\.querySelector\("\[data-share\]"\)/);
+  assert.match(productGenerator, /bindShareButton\(smmShareButton/);
+});
+
 test("product canonical URL remains clean and is not replaced by a tracked URL", () => {
   assert.match(productGenerator, /<link rel="canonical" href="\{escape\(canonical\)\}"/);
   assert.doesNotMatch(productGenerator, /<link rel="canonical"[^>]*utm_/);

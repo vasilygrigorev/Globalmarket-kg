@@ -86,8 +86,8 @@
     .top-actions { position: absolute; inset: 12px 12px auto 12px; z-index: 3; display: flex; justify-content: space-between; pointer-events: none; }
     .top-actions > div { display: flex; gap: 8px; pointer-events: auto; }
     .top-actions-right { align-items: flex-start; }
-    .top-share-stack { display: flex; flex-direction: column; gap: 8px; }
-    .icon-action { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid rgba(214, 216, 220, 0.72); border-radius: 8px; background: rgba(255, 255, 255, 0.92); color: #1f1f1f; box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08); cursor: pointer; text-decoration: none; }
+    .top-share-stack { display: flex; flex-direction: column; gap: 8px; pointer-events: auto; }
+    .icon-action { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid rgba(214, 216, 220, 0.72); border-radius: 8px; background: rgba(255, 255, 255, 0.92); color: #1f1f1f; box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08); cursor: pointer; pointer-events: auto; touch-action: manipulation; user-select: none; -webkit-user-select: none; text-decoration: none; }
     .icon-action svg { width: 21px; height: 21px; }
     .icon-action svg circle,
     .icon-action svg rect,
@@ -1160,13 +1160,37 @@
       return false;
     }
 
-    document.querySelector("[data-share]")?.addEventListener("click", async (event) => {
-      await shareProductLink({
+    function bindShareButton(button, makeShareData) {
+      if (!button) return;
+      let lastTouchShareAt = 0;
+
+      const runShare = async () => {
+        button.classList.add("active");
+        window.setTimeout(() => button.classList.remove("active"), 650);
+        await shareProductLink(makeShareData(), button);
+      };
+
+      button.addEventListener("pointerup", (event) => {
+        if (event.pointerType !== "touch" && event.pointerType !== "pen") return;
+        event.preventDefault();
+        lastTouchShareAt = Date.now();
+        void runShare();
+      });
+
+      button.addEventListener("click", (event) => {
+        if (Date.now() - lastTouchShareAt < 800) {
+          event.preventDefault();
+          return;
+        }
+        void runShare();
+      });
+    }
+
+    bindShareButton(document.querySelector("[data-share]"), () => ({
         title: product.title,
         text: product.title,
         url: trackedShareUrl("share", "referral", "product_share"),
-      }, event.currentTarget);
-    });
+    }));
 
     function browserSmmSession() {
       for (let index = 0; index < localStorage.length; index += 1) {
@@ -1187,15 +1211,15 @@
     const smmShareButton = document.querySelector("[data-smm-share]");
     if (smmShareButton && browserSmmSession()) {
       smmShareButton.hidden = false;
-      smmShareButton.addEventListener("click", async () => {
+      bindShareButton(smmShareButton, () => {
         const price = Number(product.price || 0).toLocaleString("ru-RU");
         const description = String(product.description || "").trim().slice(0, 180);
         const text = [product.title, `${price} сом`, description].filter(Boolean).join("\n");
-        await shareProductLink({
+        return {
           title: product.title,
           text,
           url: trackedShareUrl("instagram", "organic_social", "smm_product"),
-        }, smmShareButton);
+        };
       });
     }
 
