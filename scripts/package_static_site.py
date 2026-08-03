@@ -32,6 +32,7 @@ DATA_FILES = [
 ]
 
 ASSET_EXCLUDES = {
+    "category-cards",
     "document_inbox",
     "product_sources",
     "telegram_inbox",

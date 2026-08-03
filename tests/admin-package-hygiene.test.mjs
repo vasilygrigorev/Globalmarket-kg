@@ -27,6 +27,10 @@ test("packager copies admin but excludes example/test/spec files", () => {
   }
 });
 
+test("packager excludes retired category cards from production", () => {
+  assert.match(packager, /ASSET_EXCLUDES\s*=\s*\{[\s\S]*?"category-cards"/);
+});
+
 test("package verifier forbids admin config templates", () => {
   assert.match(verifier, /admin\/config\.example\.js/);
   assert.match(verifier, /Forbidden admin config\/template leaked/);

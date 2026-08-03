@@ -5,6 +5,12 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Cross-Origin-Opener-Policy: same-origin
 
+/
+  Cache-Control: no-store
+
+/index.html
+  Cache-Control: no-store
+
 /app.js
   Cache-Control: public, max-age=0, must-revalidate
 
@@ -13,3 +19,9 @@
 
 /data/site-config.json
   Cache-Control: no-store
+
+/home-category-rail-v4.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/category-icons/*
+  Cache-Control: public, max-age=31536000, immutable

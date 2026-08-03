@@ -52,7 +52,9 @@ test("every tile has a title and at least one target", () => {
 });
 
 test("every tile image exists on disk", () => {
-  const missing = tiles.filter((t) => !t.image || !existsSync(join(ROOT, t.image))).map((t) => t.title);
+  const missing = tiles
+    .filter((t) => !t.image || !existsSync(join(ROOT, t.image.split("?")[0])))
+    .map((t) => t.title);
   assert.deepEqual(missing, [], `tiles with missing images: ${missing.join(", ")}`);
 });
 
@@ -62,9 +64,12 @@ test("every tile category is a real catalog category", () => {
 });
 
 test("home page cache-busts the current category assets", () => {
-  assert.match(indexHtml, /styles\.css\?v=20260729-category-rail-v3/);
-  assert.match(indexHtml, /home-category-rail-v4\.css/);
-  assert.match(indexHtml, /app\.js\?v=20260729-category-icons-v2/);
+  assert.match(indexHtml, /styles\.css\?v=20260803-category-cache-v4/);
+  assert.match(indexHtml, /home-category-rail-v4\.css\?v=20260803-category-cache-v4/);
+  assert.match(indexHtml, /app\.js\?v=20260803-category-icons-v3/);
+  assert.ok(tiles.every((tile) => tile.image.endsWith("?v=20260803-cutout-v3")));
+  assert.match(appJs, /currentCategoryIconByTitle\.get\(card\.title\) \|\| card\.image/);
+  assert.match(appJs, /if \(event\.persisted\) window\.location\.reload\(\)/);
 });
 
 test("Детское uses the kids audience and excludes Dove deodorants", () => {

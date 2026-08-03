@@ -23,9 +23,10 @@ def load_json(path):
 def path_exists(url_path):
     if not url_path or not url_path.startswith("/"):
         return False
-    if url_path in GENERATED_LOCAL_PATHS:
+    parsed_path = urlparse(url_path).path
+    if parsed_path in GENERATED_LOCAL_PATHS:
         return True
-    return (ROOT / url_path.lstrip("/")).exists()
+    return (ROOT / parsed_path.lstrip("/")).exists()
 
 
 def parse_local_href(href):

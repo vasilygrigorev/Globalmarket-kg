@@ -164,18 +164,23 @@ let promoBanners = [
 ];
 
 let quickCategoryCards = [
-  { title: "Стирка", category: "Стирка и уход за бельем", image: "assets/category-icons/laundry-generic.png" },
-  { title: "Детское", audience: "kids", image: "assets/category-icons/kids-generic.png" },
-  { title: "Европа", collection: "europe", image: "assets/category-icons/europe-generic.png" },
-  { title: "Бритье", category: "Бритье", image: "assets/category-icons/shaving-generic.png" },
-  { title: "Дезодоранты", category: "Дезодоранты", image: "assets/category-icons/deodorants-generic.png" },
-  { title: "Волосы", category: "Уход за волосами", image: "assets/category-icons/hair-generic.png" },
-  { title: "Чистка", category: "Уборка и чистота", image: "assets/category-icons/cleaning-generic.png" },
-  { title: "Парфюм", category: "Парфюм 5 мл", image: "assets/category-icons/perfume-generic.png" },
-  { title: "Кремы", category: "Уход за телом", query: "крем", image: "assets/category-icons/creams-generic.png" },
-  { title: "Тело", category: "Уход за телом", image: "assets/category-icons/body-generic.png" },
-  { title: "Зубы", category: "Зубная гигиена", image: "assets/category-icons/oral-generic.png" },
+  { title: "Стирка", category: "Стирка и уход за бельем", image: "assets/category-icons/laundry-generic.png?v=20260803-cutout-v3" },
+  { title: "Детское", audience: "kids", image: "assets/category-icons/kids-generic.png?v=20260803-cutout-v3" },
+  { title: "Европа", collection: "europe", image: "assets/category-icons/europe-generic.png?v=20260803-cutout-v3" },
+  { title: "Бритье", category: "Бритье", image: "assets/category-icons/shaving-generic.png?v=20260803-cutout-v3" },
+  { title: "Дезодоранты", category: "Дезодоранты", image: "assets/category-icons/deodorants-generic.png?v=20260803-cutout-v3" },
+  { title: "Волосы", category: "Уход за волосами", image: "assets/category-icons/hair-generic.png?v=20260803-cutout-v3" },
+  { title: "Чистка", category: "Уборка и чистота", image: "assets/category-icons/cleaning-generic.png?v=20260803-cutout-v3" },
+  { title: "Парфюм", category: "Парфюм 5 мл", image: "assets/category-icons/perfume-generic.png?v=20260803-cutout-v3" },
+  { title: "Кремы", category: "Уход за телом", query: "крем", image: "assets/category-icons/creams-generic.png?v=20260803-cutout-v3" },
+  { title: "Тело", category: "Уход за телом", image: "assets/category-icons/body-generic.png?v=20260803-cutout-v3" },
+  { title: "Зубы", category: "Зубная гигиена", image: "assets/category-icons/oral-generic.png?v=20260803-cutout-v3" },
 ];
+const currentCategoryIconByTitle = new Map(quickCategoryCards.map((card) => [card.title, card.image]));
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) window.location.reload();
+});
 
 let activeHeroIndex = 0;
 let heroTimer = null;
@@ -274,7 +279,10 @@ async function loadSiteConfig() {
       if (activeBanners.length) promoBanners = activeBanners;
     }
     if (Array.isArray(siteConfig.quickCategories) && siteConfig.quickCategories.length) {
-      quickCategoryCards = siteConfig.quickCategories;
+      quickCategoryCards = siteConfig.quickCategories.map((card) => ({
+        ...card,
+        image: currentCategoryIconByTitle.get(card.title) || card.image,
+      }));
     }
   } catch (error) {
     console.warn("Не удалось загрузить настройки сайта", error);
