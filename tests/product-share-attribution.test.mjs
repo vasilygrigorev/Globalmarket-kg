@@ -41,6 +41,16 @@ test("Instagram share action is mobile-only and hidden unless an admin or SMM se
   assert.match(productGenerator, /smmShareButton\.hidden = false/);
 });
 
+test("Instagram share sends only the tracked current-page URL", () => {
+  assert.match(
+    productGenerator,
+    /bindShareButton\(smmShareButton, \(\) => \(\{\{\s*url: trackedShareUrl\("instagram", "organic_social", "smm_product"\),\s*\}\}\)\);/,
+  );
+  assert.doesNotMatch(productGenerator, /const price = Number\(product\.price/);
+  assert.doesNotMatch(productGenerator, /const description = String\(product\.description/);
+  assert.doesNotMatch(productGenerator, /text = \[product\.title/);
+});
+
 test("product sharing falls back to visible clipboard feedback when native sharing fails", () => {
   assert.match(productGenerator, /typeof navigator\.share === "function"/);
   assert.match(productGenerator, /error\?\.name === "AbortError"/);

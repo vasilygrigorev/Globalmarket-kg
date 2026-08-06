@@ -1063,16 +1063,9 @@
     const smmShareButton = document.querySelector("[data-smm-share]");
     if (smmShareButton && browserSmmSession()) {
       smmShareButton.hidden = false;
-      bindShareButton(smmShareButton, () => {
-        const price = Number(product.price || 0).toLocaleString("ru-RU");
-        const description = String(product.description || "").trim().slice(0, 180);
-        const text = [product.title, `${price} сом`, description].filter(Boolean).join("\n");
-        return {
-          title: product.title,
-          text,
-          url: trackedShareUrl("instagram", "organic_social", "smm_product"),
-        };
-      });
+      bindShareButton(smmShareButton, () => ({
+        url: trackedShareUrl("instagram", "organic_social", "smm_product"),
+      }));
     }
 
     document.querySelector("[data-favorite]")?.addEventListener("click", () => {
