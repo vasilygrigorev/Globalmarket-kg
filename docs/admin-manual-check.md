@@ -7,14 +7,14 @@ Preview: `https://shared-layout-preview.globalmarket-kg.pages.dev/admin/`
 
 ## Before you start
 
-- `admin/config.js` exists locally with the **anon** (publishable) key only
-  (never service_role); it is git-ignored.
+- `admin/config.public.js` is included in the deployment and contains only the
+  **anon** (publishable) key, never a service-role credential.
 - `python3 scripts/check_backend_env_shape.py` shows no forbidden secret.
 
 ## Steps
 
-1. **Not configured** (only if `config.js` is missing): the page shows the
-   "Админка не настроена" banner. Expected.
+1. **Configuration** — open `/admin/`: the login form must appear, without an
+   "Админка не настроена" banner.
 2. **Login** — open `/admin/`, you should see "Вход для менеджера".
    - Wrong password → red banner with a readable message; button returns from
      "Входим…" to "Войти".

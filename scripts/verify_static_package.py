@@ -337,19 +337,27 @@ def verify_functions(package, errors):
 
 
 def verify_admin(package, errors):
-    """Admin page should ship runtime files, but never example/local config."""
+    """Admin page should ship its runtime and public config, but never local templates."""
     admin_dir = package / "admin"
     if not admin_dir.is_dir():
         fail(errors, "Missing admin/ directory")
         return
-    for rel in ("admin/index.html", "admin/admin.js", "admin/admin.logic.js"):
+    for rel in ("admin/index.html", "admin/admin.js", "admin/admin.logic.js", "admin/config.public.js"):
         if not (package / rel).is_file():
             fail(errors, f"Missing admin runtime file: {rel}")
-    # Note: admin/config.js (PUBLIC anon key only) is intentionally deployed when
-    # the owner provides it — do NOT forbid it here. Templates must not ship.
+    public_config = package / "admin" / "config.public.js"
+    if public_config.is_file():
+        config_text = public_config.read_text(encoding="utf-8", errors="ignore")
+        if "GM_SUPABASE_URL" not in config_text or "GM_SUPABASE_ANON_KEY" not in config_text:
+            fail(errors, "admin/config.public.js must define URL and anon browser key")
+        if "service_role" in config_text.lower():
+            fail(errors, "admin/config.public.js must not contain a service-role credential")
+    # The published config contains only public Supabase browser values.
+    # Local config and templates must never be shipped.
     forbidden = (
         "admin/config.example.js",
         "admin/config.js.example",
+        "admin/config.js",
         "admin/config.local.js",
     )
     for rel in forbidden:

@@ -125,13 +125,12 @@ def main():
         )
 
     # Admin orders page (static; gated at runtime by Supabase auth + RLS).
-    # Ship index.html + admin.js (+ admin/config.js if the owner created it).
-    # Never ship the *.example.* template.
+    # Ship the tracked public config, but never a local override or template.
     if (ROOT / "admin").exists():
         copy_tree(
             ROOT / "admin",
             output / "admin",
-            exclude_globs={"*.example.*", "*.test.*", "*.spec.*"},
+            exclude_globs={"*.example.*", "*.test.*", "*.spec.*", "config.js", "config.local.js"},
         )
 
     if args.include_reports:

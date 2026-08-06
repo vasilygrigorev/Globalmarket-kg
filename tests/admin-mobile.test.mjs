@@ -38,7 +38,7 @@ test("filter inputs give mobile keyboards sensible action hints", () => {
   assert.match(html, /id="minAmount"[^>]*enterkeyhint="done"/);
 });
 
-test("admin loads config.js (optional) then admin.js as a module", () => {
-  assert.match(html, /<script src="config\.js" onerror="window\.__gmConfigMissing=true"><\/script>/);
+test("admin loads its public config then admin.js as a module", () => {
+  assert.match(html, /<script src="config\.public\.js" onerror="window\.__gmConfigMissing=true"><\/script>/);
   assert.match(html, /<script type="module" src="admin\.js"><\/script>/);
 });

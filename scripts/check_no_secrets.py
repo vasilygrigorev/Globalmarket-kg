@@ -6,7 +6,7 @@ Scans either git-tracked files (default) or a built deploy package
 
 - Supabase keys / JWTs (anon and service_role keys are JWTs: `eyJ...`).
 - `.env` files (any committed env file).
-- `admin/config.js` (must stay git-ignored; only the *.example.* template is OK).
+- local `admin/config.js` (must stay git-ignored).
 - An explicit service-role assignment carrying a real value.
 
 It deliberately does NOT flag plain mentions of the word "service_role" in
@@ -64,9 +64,10 @@ def scan_file(path, rel, mode):
     if name == ".env" or name.startswith(".env."):
         findings.append(f"{rel}: committed .env file")
         return findings
-    # admin/config.js holds the PUBLIC anon key and is deployed on purpose, but it
-    # must never be git-committed. So: error if tracked; allowed in a package.
+    # Local config is never committed. The tracked config.public.js is browser
+    # configuration and may hold only the Supabase publishable anon key.
     is_admin_config = rel_posix == "admin/config.js"
+    is_published_admin_config = rel_posix == "admin/config.public.js"
     if is_admin_config and mode == "git":
         findings.append(f"{rel}: admin/config.js must be git-ignored, not committed")
         return findings
@@ -78,8 +79,8 @@ def scan_file(path, rel, mode):
         text = path.read_text(encoding="utf-8", errors="ignore")
     except Exception:
         return findings
-    # The anon key (a JWT) legitimately lives in a deployed admin/config.js.
-    if not is_admin_config:
+    # A browser anon key may legitimately be a JWT in the deployed public config.
+    if not (is_admin_config or is_published_admin_config):
         for m in JWT_RE.finditer(text):
             if not is_placeholder(m.group(0)):
                 findings.append(f"{rel}: looks like a JWT/Supabase key ({m.group(0)[:12]}…)")

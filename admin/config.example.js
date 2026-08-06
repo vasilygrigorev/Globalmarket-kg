@@ -1,5 +1,5 @@
-// Copy this file to admin/config.js and fill in your project's PUBLIC values.
-// admin/config.js is git-ignored and must NOT be committed.
+// Template for the published admin/config.public.js browser configuration.
+// It must contain only public values; never put server credentials here.
 //
 // Only the Supabase URL and the *anon* (publishable) key go here.
 // NEVER put the service_role key in this file — it stays server-side only.

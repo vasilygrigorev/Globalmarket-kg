@@ -65,7 +65,7 @@
     </header>
     <main>
       <div id="notConfigured" class="banner hidden">
-        Админка не настроена: добавьте <code>admin/config.js</code> (см. <code>admin/config.example.js</code>) с URL и anon-ключом Supabase.
+        Админка не настроена: не загрузилась публичная конфигурация Supabase. Обратитесь к администратору сайта.
       </div>
 
       <section id="loginView" class="card hidden" style="max-width: 420px; margin: 8vh auto;">
@@ -175,7 +175,7 @@
       </section>
     </main>
 
-    <script src="config.js" onerror="window.__gmConfigMissing=true"></script>
+    <script src="config.public.js" onerror="window.__gmConfigMissing=true"></script>
     <script type="module" src="admin.js"></script>
   </body>
 </html>

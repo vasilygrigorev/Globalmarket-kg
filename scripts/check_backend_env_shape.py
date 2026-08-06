@@ -7,13 +7,13 @@ of files to display them. It only reports present/missing and valid/invalid for:
 - SUPABASE_URL                env var, must start with https:// if present
 - SUPABASE_SERVICE_ROLE_KEY   env var, present/missing only (value never shown)
 - MANAGER_WHATSAPP            env var, optional; digits-only if present
-- admin/config.js             optional local file; if present, must define
+- admin/config.public.js      published browser config; must define
                               GM_SUPABASE_URL + GM_SUPABASE_ANON_KEY and must NOT
                               contain a service_role value (that would be a leak)
 
 Exit codes:
 - 0  shape looks fine (or only missing vars, which is normal before go-live)
-- 1  a real safety problem (service_role found in admin/config.js), OR --strict
+- 1  a real safety problem (service_role found in admin/config.public.js), OR --strict
      was passed and something required is missing/invalid.
 
 Run: python3 scripts/check_backend_env_shape.py [--strict]
@@ -25,14 +25,14 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ADMIN_CONFIG = ROOT / "admin" / "config.js"
+ADMIN_CONFIG = ROOT / "admin" / "config.public.js"
 SERVICE_ROLE_ASSIGN_RE = re.compile(
     r"service_role[\"'\s:=]+[A-Za-z0-9._-]{20,}", re.IGNORECASE
 )
 
 
 def inspect_config_text(text):
-    """Pure check of an admin/config.js body. Returns booleans only — no values."""
+    """Pure check of an admin/config.public.js body. Returns booleans only."""
     return {
         "has_url": "GM_SUPABASE_URL" in text,
         "has_anon": "GM_SUPABASE_ANON_KEY" in text,
@@ -77,20 +77,20 @@ def main():
         lines.append("MANAGER_WHATSAPP: present, INVALID (must be digits only)")
         issues += 1
 
-    # admin/config.js — local presence allowed; check shape + leak, never print values
+    # Published browser config — check shape + leak, never print values.
     if ADMIN_CONFIG.exists():
         info = inspect_config_text(ADMIN_CONFIG.read_text(encoding="utf-8", errors="ignore"))
-        lines.append(f"admin/config.js: present (GM_SUPABASE_URL: {'set' if info['has_url'] else 'missing'}, "
+        lines.append(f"admin/config.public.js: present (GM_SUPABASE_URL: {'set' if info['has_url'] else 'missing'}, "
                      f"GM_SUPABASE_ANON_KEY: {'set' if info['has_anon'] else 'missing'})")
         if not (info["has_url"] and info["has_anon"]):
             issues += 1
         if info["has_service_role"]:
-            lines.append("admin/config.js: SERVICE_ROLE present — FORBIDDEN (anon key only!)")
+            lines.append("admin/config.public.js: SERVICE_ROLE present — FORBIDDEN (anon key only!)")
             hard_fail += 1
-        # An admin/config.js with a JWT is fine (anon key is public); we do not
+        # An admin/config.public.js with a JWT is fine (anon key is public); we do not
         # print it. We only forbid service_role above.
     else:
-        lines.append("admin/config.js: not present (add locally at go-live; git-ignored)")
+        lines.append("admin/config.public.js: not present (required for the published admin)")
 
     print("Backend env/config shape (no values shown):")
     for line in lines:

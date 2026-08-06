@@ -62,8 +62,8 @@ test("dynamic detail ids come from admin.logic.js, not index.html", () => {
   }
 });
 
-test("admin page loads config.js (optional) then admin.js as a module", () => {
-  assert.match(html, /<script src="config\.js" onerror="window\.__gmConfigMissing=true"><\/script>/);
+test("admin page loads its public config then admin.js as a module", () => {
+  assert.match(html, /<script src="config\.public\.js" onerror="window\.__gmConfigMissing=true"><\/script>/);
   assert.match(html, /<script type="module" src="admin\.js"><\/script>/);
 });
 

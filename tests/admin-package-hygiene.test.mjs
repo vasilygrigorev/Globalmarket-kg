@@ -16,13 +16,14 @@ const read = (rel) => readFileSync(join(ROOT, rel), "utf8");
 
 const packager = read("scripts/package_static_site.py");
 const verifier = read("scripts/verify_static_package.py");
+const publicConfig = read("admin/config.public.js");
 
 test("packager copies admin but excludes example/test/spec files", () => {
   // The admin copy_tree call must carry an exclude set for these globs.
   const adminCopy = packager.match(/copy_tree\(\s*ROOT \/ "admin"[\s\S]*?\)/);
   assert.ok(adminCopy, "admin copy_tree call not found in packager");
   const src = adminCopy[0];
-  for (const glob of ["*.example.*", "*.test.*", "*.spec.*"]) {
+  for (const glob of ["*.example.*", "*.test.*", "*.spec.*", "config.js", "config.local.js"]) {
     assert.ok(src.includes(glob), `admin copy must exclude ${glob}`);
   }
 });
@@ -36,8 +37,14 @@ test("package verifier forbids admin config templates", () => {
   assert.match(verifier, /Forbidden admin config\/template leaked/);
 });
 
-test("package verifier requires the three admin runtime files", () => {
-  for (const rel of ["admin/index.html", "admin/admin.js", "admin/admin.logic.js"]) {
+test("package verifier requires the admin runtime and public browser config", () => {
+  for (const rel of ["admin/index.html", "admin/admin.js", "admin/admin.logic.js", "admin/config.public.js"]) {
     assert.ok(verifier.includes(rel), `verifier must require ${rel}`);
   }
+});
+
+test("published admin config contains only browser client settings", () => {
+  assert.match(publicConfig, /GM_SUPABASE_URL/);
+  assert.match(publicConfig, /GM_SUPABASE_ANON_KEY/);
+  assert.doesNotMatch(publicConfig, /service_role/i);
 });
