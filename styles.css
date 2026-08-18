@@ -4284,6 +4284,11 @@ textarea {
     font-size: 0;
   }
 
+  body.home-page .product-grid .compact-add-button {
+    background: linear-gradient(135deg, #df3d45, #b7232c);
+    box-shadow: 0 5px 11px rgba(183, 35, 44, 0.24);
+  }
+
   :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button::before {
     content: "В корзину";
     color: #ffffff;
@@ -4294,6 +4299,10 @@ textarea {
 
   :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button.added {
     background: #177d55;
+  }
+
+  body.home-page .product-grid .compact-add-button.added {
+    background: #a8202a;
   }
 
   :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button.added::before {
@@ -4526,6 +4535,11 @@ body.product-page {
     font-size: 0;
   }
 
+  body.home-page .product-grid .compact-add-button {
+    background: linear-gradient(135deg, #df3d45, #b7232c);
+    box-shadow: 0 7px 16px rgba(183, 35, 44, 0.2);
+  }
+
   :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button::before {
     content: "В корзину";
     position: static;
@@ -4540,6 +4554,10 @@ body.product-page {
 
   :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button.added {
     background: #177d55;
+  }
+
+  body.home-page .product-grid .compact-add-button.added {
+    background: #a8202a;
   }
 
   :where(body.home-page .product-grid, body.product-page .related-grid) .compact-add-button.added::before {
