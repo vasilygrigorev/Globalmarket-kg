@@ -1,0 +1,27 @@
+name: Supabase heartbeat
+
+on:
+  schedule:
+    # Runs three times daily. GitHub scheduling is UTC.
+    - cron: '17 4,12,20 * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  heartbeat:
+    name: Database activity check
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Trigger protected read-only database heartbeat
+        env:
+          HEARTBEAT_SECRET: ${{ secrets.SUPABASE_HEARTBEAT_SECRET }}
+        run: |
+          set -euo pipefail
+          test -n "$HEARTBEAT_SECRET"
+          curl --fail-with-body --silent --show-error \
+            --retry 3 --retry-delay 5 \
+            -H "x-supabase-heartbeat-secret: $HEARTBEAT_SECRET" \
+            "https://globalmarket.kg/api/internal/supabase-heartbeat" \
+            | jq -e '.ok == true' > /dev/null
