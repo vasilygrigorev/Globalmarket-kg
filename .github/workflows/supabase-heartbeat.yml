@@ -20,8 +20,13 @@ jobs:
         run: |
           set -euo pipefail
           test -n "$HEARTBEAT_SECRET"
-          curl --fail-with-body --silent --show-error \
-            --retry 3 --retry-delay 5 \
-            -H "x-supabase-heartbeat-secret: $HEARTBEAT_SECRET" \
-            "https://globalmarket.kg/api/internal/supabase-heartbeat" \
-            | jq -e '.ok == true' > /dev/null
+          # Supabase counts sustained user database activity over a week.
+          # Three tiny reads per run means nine protected, read-only queries a day.
+          for request_number in 1 2 3; do
+            curl --fail-with-body --silent --show-error \
+              --retry 3 --retry-delay 5 \
+              -H "x-supabase-heartbeat-secret: $HEARTBEAT_SECRET" \
+              "https://globalmarket.kg/api/internal/supabase-heartbeat" \
+              | jq -e '.ok == true' > /dev/null
+            if [ "$request_number" -lt 3 ]; then sleep 20; fi
+          done
