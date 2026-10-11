@@ -10,7 +10,9 @@ from pathlib import Path
 from classify_taxonomy import related_rank_key
 
 ROOT = Path(__file__).resolve().parents[1]
-CATALOG_PATH = ROOT / "data" / "public-catalog.json"
+PUBLIC_CATALOG_PATH = ROOT / "data" / "public-catalog.json"
+PAGE_CATALOG_PATH = ROOT / "data" / "page-catalog.json"
+SLUG_REGISTRY_PATH = ROOT / "data" / "product-slug-registry.json"
 PRODUCT_PAGES_MANIFEST_PATH = ROOT / "data" / "product-pages.json"
 LANDING_PAGES_MANIFEST_PATH = ROOT / "data" / "landing-pages.json"
 OUTPUT_ROOT = ROOT / "product"
@@ -66,8 +68,40 @@ def slugify(value):
     return value or "product"
 
 
+def load_slug_registry():
+    if not SLUG_REGISTRY_PATH.exists():
+        return {"schemaVersion": 1, "byId": {}, "bySourceCode": {}}
+    registry = json.loads(SLUG_REGISTRY_PATH.read_text(encoding="utf-8"))
+    registry.setdefault("schemaVersion", 1)
+    registry.setdefault("byId", {})
+    registry.setdefault("bySourceCode", {})
+    return registry
+
+
+SLUG_REGISTRY = load_slug_registry()
+
+
 def product_slug(product):
-    return f"{slugify(product.get('title', 'product'))}-{product.get('id', '')[-6:]}"
+    product_id = str(product.get("id") or "")
+    source_code = str(product.get("sourceCode") or product.get("code") or "").strip()
+    slug = SLUG_REGISTRY["bySourceCode"].get(source_code) if source_code else ""
+    slug = slug or SLUG_REGISTRY["byId"].get(product_id)
+    if not slug:
+        suffix = product_id[-6:] or source_code or "item"
+        slug = f"{slugify(product.get('title', 'product'))}-{suffix}"
+    if product_id:
+        SLUG_REGISTRY["byId"][product_id] = slug
+    if source_code:
+        SLUG_REGISTRY["bySourceCode"][source_code] = slug
+    return slug
+
+
+def write_slug_registry():
+    SLUG_REGISTRY["source"] = "append-only stable URL registry"
+    SLUG_REGISTRY_PATH.write_text(
+        json.dumps(SLUG_REGISTRY, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
 
 def escape(value):
@@ -147,6 +181,60 @@ def product_images(product):
     return [image] if image_exists(image) else []
 
 
+def protected_legacy_slug(product):
+    product_id = str(product.get("id") or "")
+    source_code = str(product.get("sourceCode") or product.get("code") or "").strip()
+    return bool(
+        (product_id and SLUG_REGISTRY["byId"].get(product_id))
+        or (source_code and SLUG_REGISTRY["bySourceCode"].get(source_code))
+    )
+
+
+def placeholder_image(product):
+    category_id = str(product.get("categoryId") or "")
+    product_type = str(product.get("productType") or "").lower()
+    title = str(product.get("title") or "").lower()
+    text = f"{product_type} {title}"
+    if category_id == "laundry":
+        if "капсул" in text:
+            return "assets/placeholders/laundry-capsules.svg"
+        if "гель" in text:
+            return "assets/placeholders/laundry-gel.svg"
+        if "ополаскив" in text or "кондиционер" in text:
+            return "assets/placeholders/fabric-softener.svg"
+        return "assets/placeholders/laundry-powder.svg"
+    if category_id == "hair":
+        return "assets/placeholders/conditioner.svg" if "кондиционер" in text else "assets/placeholders/shampoo.svg"
+    if category_id == "shaving":
+        return "assets/placeholders/shaving.svg"
+    if category_id == "oral":
+        return "assets/placeholders/toothpaste.svg"
+    if category_id == "food":
+        return "assets/placeholders/food.svg"
+    if "посуд" in text:
+        return "assets/placeholders/dish.svg"
+    if "дезодоран" in text or "антиперспиран" in text:
+        return "assets/placeholders/deodorant-spray.svg"
+    if "гель для душа" in text:
+        return "assets/placeholders/shower-gel.svg"
+    if category_id == "home_cleaning":
+        return "assets/placeholders/cleaning.svg"
+    return "assets/placeholders/generic.svg"
+
+
+def page_images(product):
+    images = product_images(product)
+    if images:
+        return images
+    placeholder = placeholder_image(product)
+    # Every product that is currently for sale needs a real, shareable product
+    # page even while its exact photo is still waiting for approval. Historical
+    # URLs remain protected too, but an inactive product without a known URL or
+    # an approved photo is not invented just to inflate the sitemap.
+    needs_placeholder_page = is_in_stock(product) or protected_legacy_slug(product)
+    return [placeholder] if needs_placeholder_page and image_exists(placeholder) else []
+
+
 def missing_product_images(product):
     gallery = product.get("galleryImages") or []
     images = gallery if gallery else ([product.get("image")] if product.get("image") else [])
@@ -154,17 +242,15 @@ def missing_product_images(product):
 
 
 def is_in_stock(product):
-    return product.get("status") == "active"
+    return product.get("status") == "active" and product.get("inStock") is not False
 
 
 def skip_reason(product):
-    if not is_in_stock(product):
-        return "товар скрыт или не активен"
     if not product.get("retailPriceKgs"):
         return "нет розничной цены"
     if missing_product_images(product):
         return "есть ссылки на отсутствующие изображения"
-    if not product_images(product):
+    if not page_images(product):
         return "нет существующих фото"
     return ""
 
@@ -391,6 +477,8 @@ def absolute_url(path):
 
 
 def build_json_ld(product, canonical, images):
+    public_catalog = json.loads(PUBLIC_CATALOG_PATH.read_text(encoding="utf-8"))
+    price_valid_from = public_catalog.get("latestStockDate") or date.today().isoformat()
     data = {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -407,12 +495,23 @@ def build_json_ld(product, canonical, images):
             "url": canonical,
             "priceCurrency": "KGS",
             "price": str(product.get("retailPriceKgs")),
+            "validFrom": price_valid_from,
             "priceValidUntil": f"{date.today().year + 1}-12-31",
             "itemCondition": "https://schema.org/NewCondition",
             "availability": "https://schema.org/InStock" if is_in_stock(product) else "https://schema.org/OutOfStock",
             "seller": {
                 "@type": "Organization",
+                "@id": f"{SITE_URL}/#organization",
                 "name": "Global Market KG",
+            },
+            "hasMerchantReturnPolicy": {
+                "@id": f"{SITE_URL}/delivery-and-returns/#return-policy",
+            },
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "hasShippingService": {
+                    "@id": f"{SITE_URL}/delivery-and-returns/#shipping-policy",
+                },
             },
         },
     }
@@ -459,7 +558,6 @@ def render_gallery(images, title):
         f"""
         <button class="gallery-thumb {'active' if index == 0 else ''}" type="button" data-gallery-image="/{escape(image)}" aria-label="{escape(image_label(image, index))}">
           <img src="/{escape(image)}" alt="{escape(title)} - {escape(image_label(image, index))}" loading="lazy">
-          <span>{escape(image_label(image, index))}</span>
         </button>
         """
         for index, image in enumerate(images)
@@ -557,7 +655,7 @@ def render_page(product, related, slug, landing_lookup=None):
     footer_partial = load_partial(FOOTER_PARTIAL_PATH)
     bottom_nav_partial = load_partial(BOTTOM_NAV_PARTIAL_PATH)
     links = product_landing_links(product, landing_lookup or {"category": {}, "brand": {}, "collection": {}})
-    images = product_images(product)
+    images = page_images(product)
     main_image = images[0]
     title = product.get("title", "Товар")
     description = product.get("description") or f"{title} в Global Market KG."
@@ -582,21 +680,34 @@ def render_page(product, related, slug, landing_lookup=None):
             "title": title,
             "description": description,
             "price": product.get("retailPriceKgs", 0),
+            "inStock": is_in_stock(product),
             "whatsapp": whatsapp,
             "url": canonical,
         },
         ensure_ascii=False,
     )
-    purchase_action = (
-        f"""
+    purchase_controls = (
+        """
         <div class="modal-actions product-purchase-actions">
           <button class="primary-action" type="button" data-add-cart>В корзину</button>
           <a class="secondary-action" href="/?checkout=1#checkoutForm" data-checkout>К оформлению</a>
         </div>
         """
         if is_in_stock(product)
-        else ""
+        else """
+        <div class="out-of-stock-panel" role="status">
+          <strong>Сейчас нет в наличии</strong>
+          <span>Карточка и описание сохранены. Когда товар снова поступит, он автоматически вернётся в каталог.</span>
+        </div>
+        """
     )
+    purchase_action = f"""
+        <div class="purchase-price">
+          <strong>{price_with_discount_html(product)}</strong>
+          <small>Клиентская цена: скидка 3% при входе</small>
+        </div>
+        {purchase_controls}
+    """
     support_action = (
         f"""
         <a class="whatsapp-action" href="{escape(whatsapp)}" rel="noopener">Заказать сразу в WhatsApp</a>
@@ -604,8 +715,7 @@ def render_page(product, related, slug, landing_lookup=None):
         """
         if is_in_stock(product)
         else (
-            '<p class="stock-note">Нет в наличии. Посмотрите похожие товары ниже.</p>'
-            f'<a class="whatsapp-action" href="{escape(whatsapp_question)}" rel="noopener">Спросить в WhatsApp</a>'
+            f'<a class="whatsapp-action" href="{escape(whatsapp_question)}" rel="noopener">Уточнить поступление в WhatsApp</a>'
         )
     )
     return f"""<!doctype html>
@@ -632,7 +742,7 @@ def render_page(product, related, slug, landing_lookup=None):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(meta_description)}">
   <meta name="twitter:image" content="{escape(absolute_url(main_image))}">
-  <link rel="stylesheet" href="/styles.css?v=20260722-desktop-cart-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
   <script type="application/ld+json">{json_ld}</script>
   <script type="application/ld+json">{breadcrumb_json_ld}</script>
   <style>
@@ -657,38 +767,49 @@ def render_page(product, related, slug, landing_lookup=None):
     .icon-action.smm-share .instagram-dot {{ fill: currentColor; stroke: none; }}
     .share-feedback {{ position: fixed; left: 50%; bottom: calc(82px + env(safe-area-inset-bottom)); z-index: 40; width: max-content; max-width: calc(100vw - 32px); transform: translateX(-50%); padding: 11px 14px; border-radius: 8px; color: #fff; background: rgba(20, 24, 28, 0.94); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22); font-size: 14px; font-weight: 750; text-align: center; }}
     .visual-panel {{ background: #fff; }}
-    .media-main {{ display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; }}
+    .media-main {{ display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-drag: none; overscroll-behavior-x: contain; }}
+    .media-main:active {{ cursor: grabbing; }}
+    .media-main:focus-visible {{ outline: 3px solid #07958f; outline-offset: -3px; }}
     .gallery-thumbs {{ display: flex; gap: 10px; padding: 14px 16px 18px; overflow-x: auto; background: #f7f7f8; }}
-    .gallery-thumb {{ display: grid; flex: 0 0 76px; gap: 5px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }}
+    .gallery-thumb {{ display: block; flex: 0 0 76px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }}
     .gallery-thumb.active {{ border-color: #1f1f1f; background: #fff; }}
     .gallery-thumb img {{ width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }}
-    .gallery-thumb span {{ overflow: hidden; font-size: 11px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; text-align: center; }}
-    .product-purchase-strip {{ padding: 0 16px 18px; background: #f7f7f8; }}
+    .gallery-thumb span {{ display: none; }}
+    .product-purchase-strip {{ padding: 12px 16px 18px; background: #f7f7f8; }}
     .product-purchase-actions {{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }}
     .product-purchase-actions > * {{ width: 100%; min-width: 0; }}
-    .product-detail-info {{ display: grid; gap: 18px; padding: 28px 26px 26px; }}
+    .purchase-price {{ display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 0 0 14px; text-align: center; }}
+    .purchase-price strong {{ font-weight: inherit; }}
+    .purchase-price .price-group {{ display: flex; align-items: baseline; justify-content: center; gap: 10px; }}
+    .purchase-price .price {{ color: #132e36; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 38px; font-weight: 300; line-height: 1.05; }}
+    .purchase-price .price-original {{ color: #8a8f94; font-size: 20px; font-weight: 500; }}
+    .purchase-price small {{ color: #777; font-size: 13px; }}
+    .out-of-stock-panel {{ display: grid; gap: 5px; padding: 14px 16px; border: 1px solid #d7e2e2; border-radius: 8px; color: #28484d; background: #eef7f6; text-align: center; }}
+    .out-of-stock-panel strong {{ font-size: 18px; }}
+    .out-of-stock-panel span {{ color: #5e7276; font-size: 14px; line-height: 1.4; }}
+    .product-detail-info {{ display: grid; gap: 12px; padding: 22px; }}
     .product-breadcrumbs {{ display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: #777; font-size: 13px; line-height: 1.35; }}
     .product-breadcrumbs a {{ color: inherit; text-decoration: none; }}
     .product-breadcrumbs a:hover {{ color: #111; }}
     .crumb-separator {{ color: #b0b0b6; }}
-    .title-block {{ display: grid; gap: 8px; }}
+    .title-block {{ display: grid; gap: 4px; }}
     .brand-row {{ display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }}
     h1 {{ margin: 0; font-size: clamp(38px, 7vw, 58px); font-weight: 300; line-height: 1.05; }}
     .size-line {{ flex: 0 0 auto; color: #555; font-size: clamp(20px, 4.5vw, 30px); font-weight: 300; line-height: 1.1; white-space: nowrap; }}
     .type {{ margin: 0; font-size: clamp(24px, 5vw, 34px); font-weight: 800; line-height: 1.12; }}
     .variant {{ margin: 0; color: #777; font-size: 19px; line-height: 1.35; }}
-    body.product-page .product-detail-info .description {{ display: block; min-height: 0; overflow: visible; margin: 0; color: #666; font-size: 18px; line-height: 1.55; -webkit-line-clamp: unset; }}
-    .price-box {{ display: grid; gap: 4px; padding: 16px; border: 1px solid #e4e4e7; border-radius: 8px; background: #f5f5f6; }}
+    body.product-page .product-detail-info .description {{ display: block; min-height: 0; overflow: visible; margin: 0; padding: 0; border: 0; color: #555; background: transparent; font-size: 18px; line-height: 1.45; -webkit-line-clamp: unset; }}
+    .price-box {{ display: grid; gap: 4px; padding: 0; border: 0; background: transparent; }}
     .price-box span,
     .price-box small {{ color: #777; }}
     .price-box .price {{ font-size: 38px; font-weight: 850; line-height: 1; }}
     .som-sign {{ display: inline-block; padding-bottom: 0.03em; border-bottom: 0.06em solid currentColor; line-height: 0.88; }}
-    .specs {{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }}
-    .specs div {{ padding: 12px; border: 1px solid #e4e4e7; border-radius: 8px; background: #fff; }}
-    .specs dt {{ color: #777; font-size: 13px; }}
-    .specs dd {{ margin: 4px 0 0; font-weight: 800; }}
+    .specs {{ display: flex; flex-wrap: wrap; gap: 7px 18px; margin: 2px 0 0; }}
+    .specs div {{ display: flex; align-items: baseline; gap: 5px; min-width: 0; padding: 0; border: 0; background: transparent; }}
+    .specs dt {{ color: #777; font-size: 12px; white-space: nowrap; }}
+    .specs dd {{ min-width: 0; margin: 0; font-size: 14px; font-weight: 750; }}
     .specs dd a {{ color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }}
-    .note {{ padding: 13px 14px; border-radius: 8px; color: #666; background: #f5f5f6; line-height: 1.45; }}
+    .note {{ padding: 0; border: 0; color: #666; background: transparent; line-height: 1.4; }}
     .modal-actions {{ display: flex; gap: 12px; flex-wrap: wrap; }}
     .primary-action,
     .secondary-action,
@@ -727,11 +848,12 @@ def render_page(product, related, slug, landing_lookup=None):
       .page {{ max-width: none; padding: 0; }}
       .product-shell {{ border-radius: 0; box-shadow: none; }}
       .related {{ padding: 0 8px; }}
-      .product-detail-info {{ padding: 26px 18px 20px; }}
+      .product-detail-info {{ padding: 18px 16px; }}
       .icon-action {{ width: 44px; height: 44px; }}
       .icon-action.smm-share:not([hidden]) {{ display: grid; }}
-      .product-purchase-strip {{ padding: 0 10px 14px; }}
-      .specs {{ grid-template-columns: 1fr; }}
+      .product-purchase-strip {{ padding: 10px 10px 14px; }}
+      .purchase-price .price {{ font-size: 34px; }}
+      .specs {{ gap: 7px 14px; }}
       .related-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .bottom-page-actions {{ padding: 0 18px; }}
     }}
@@ -780,7 +902,7 @@ def render_page(product, related, slug, landing_lookup=None):
       <section class="visual-panel">
         <img class="media-main" src="/{escape(main_image)}" alt="{escape(title)}" data-main-image>
         {render_gallery(images, title)}
-        {f'<div class="product-purchase-strip">{purchase_action}</div>' if purchase_action else ''}
+        <div class="product-purchase-strip">{purchase_action}</div>
       </section>
       <section class="product-detail-info">
         {visual_breadcrumbs(product, links)}
@@ -793,11 +915,6 @@ def render_page(product, related, slug, landing_lookup=None):
           <p class="variant">{escape(display["variant"])}</p>
         </div>
         <p class="description">{escape(description)}</p>
-        <div class="price-box">
-          <span>Ваша цена{f" · скидка {int(product['discountPercent'])}%" if has_discount(product) else ""}</span>
-          <strong>{price_with_discount_html(product)}</strong>
-          <small>Клиентская цена: скидка 3% при входе</small>
-        </div>
         <dl class="specs">
           <div><dt>Бренд</dt><dd>{spec_value(brand_with_country(product), (links.get("brand") or {}).get("path", ""))}</dd></div>
           <div><dt>Категория</dt><dd>{spec_value(product.get("category") or "Товар", (links.get("category") or {}).get("path", ""))}</dd></div>
@@ -805,7 +922,7 @@ def render_page(product, related, slug, landing_lookup=None):
           <div><dt>Единица</dt><dd>{escape(product.get("unit") or "шт")}</dd></div>
           {f'<div><dt>Подборка</dt><dd>{collection_spec}</dd></div>' if collection_spec else ''}
         </dl>
-        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 10 000 <span class="som-sign">с</span>.</div>
+        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 5 000 <span class="som-sign">с</span>.</div>
         {support_action}
       </section>
     </article>
@@ -974,6 +1091,7 @@ def render_page(product, related, slug, landing_lookup=None):
           const params = new URLSearchParams();
           if (item.collection) params.set("collection", item.collection);
           if (item.category) params.set("category", item.category);
+          if (item.section) params.set("section", item.section);
           if (item.audience) params.set("audience", item.audience);
           if (item.query) params.set("query", item.query);
           if (item.label) params.set("label", item.label);
@@ -1168,14 +1286,58 @@ def render_page(product, related, slug, landing_lookup=None):
       window.location.href = event.currentTarget.href;
     }});
 
-    document.querySelectorAll("[data-gallery-image]").forEach((button) => {{
-      button.addEventListener("click", () => {{
-        const image = button.dataset.galleryImage;
-        const mainImage = document.querySelector("[data-main-image]");
-        if (mainImage && image) mainImage.src = image;
-        document.querySelectorAll("[data-gallery-image]").forEach((item) => item.classList.toggle("active", item === button));
+    const galleryButtons = [...document.querySelectorAll("[data-gallery-image]")];
+    const mainImage = document.querySelector("[data-main-image]");
+    let activeGalleryIndex = Math.max(0, galleryButtons.findIndex((item) => item.classList.contains("active")));
+
+    function selectGalleryImage(index) {{
+      if (!mainImage || !galleryButtons.length) return;
+      const nextIndex = Math.max(0, Math.min(index, galleryButtons.length - 1));
+      const button = galleryButtons[nextIndex];
+      const image = button?.dataset.galleryImage;
+      if (!image) return;
+      activeGalleryIndex = nextIndex;
+      mainImage.src = image;
+      mainImage.alt = button.querySelector("img")?.alt || product.title;
+      mainImage.setAttribute("aria-label", `Фото ${{nextIndex + 1}} из ${{galleryButtons.length}}`);
+      galleryButtons.forEach((item, itemIndex) => {{
+        const active = itemIndex === nextIndex;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-current", active ? "true" : "false");
       }});
+      button.scrollIntoView({{ behavior: "smooth", block: "nearest", inline: "center" }});
+    }}
+
+    galleryButtons.forEach((button, index) => {{
+      button.addEventListener("click", () => selectGalleryImage(index));
+      button.setAttribute("aria-current", index === activeGalleryIndex ? "true" : "false");
     }});
+
+    if (mainImage && galleryButtons.length > 1) {{
+      let swipeStart = null;
+      mainImage.tabIndex = 0;
+      mainImage.setAttribute("aria-label", `Фото ${{activeGalleryIndex + 1}} из ${{galleryButtons.length}}`);
+      mainImage.addEventListener("dragstart", (event) => event.preventDefault());
+      mainImage.addEventListener("pointerdown", (event) => {{
+        if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
+        swipeStart = {{ pointerId: event.pointerId, x: event.clientX, y: event.clientY }};
+        mainImage.setPointerCapture?.(event.pointerId);
+      }});
+      mainImage.addEventListener("pointerup", (event) => {{
+        if (!swipeStart || swipeStart.pointerId !== event.pointerId) return;
+        const deltaX = event.clientX - swipeStart.x;
+        const deltaY = event.clientY - swipeStart.y;
+        swipeStart = null;
+        if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.2) return;
+        selectGalleryImage(activeGalleryIndex + (deltaX < 0 ? 1 : -1));
+      }});
+      mainImage.addEventListener("pointercancel", () => {{ swipeStart = null; }});
+      mainImage.addEventListener("keydown", (event) => {{
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        selectGalleryImage(activeGalleryIndex + (event.key === "ArrowRight" ? 1 : -1));
+      }});
+    }}
 
     updateFavoriteButton();
     syncGridFavoriteButtons();
@@ -1210,7 +1372,8 @@ def render_page(product, related, slug, landing_lookup=None):
 
 
 def load_products():
-    catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+    catalog_path = PAGE_CATALOG_PATH if PAGE_CATALOG_PATH.exists() else PUBLIC_CATALOG_PATH
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
     return catalog.get("products", [])
 
 
@@ -1227,6 +1390,7 @@ def write_product_page(product, products, landing_lookup=None):
     slug = product_slug(product)
     related = related_products(product, products)
     page = render_page(product, related, slug, landing_lookup)
+    page = "\n".join(line.rstrip() for line in page.splitlines()) + "\n"
     target = OUTPUT_ROOT / slug / "index.html"
     validate_page(page, product)
     previous = target.read_text(encoding="utf-8") if target.exists() else None
@@ -1243,6 +1407,7 @@ def write_product_page(product, products, landing_lookup=None):
         "path": target.relative_to(ROOT),
         "related_count": len(related),
         "image_count": len(product_images(product)),
+        "page_image": page_images(product)[0],
     }
 
 
@@ -1302,6 +1467,7 @@ def write_manifest(results):
         pages.append(
             {
                 "id": product.get("id"),
+                "sourceCode": product.get("sourceCode") or product.get("code"),
                 "slug": slug,
                 "path": f"/product/{slug}/",
                 "url": f"{SITE_URL}/product/{slug}/",
@@ -1311,7 +1477,9 @@ def write_manifest(results):
                 "categoryId": product.get("categoryId"),
                 "collections": product.get("collections") or [],
                 "retailPriceKgs": product.get("retailPriceKgs"),
-                "image": f"/{product_images(product)[0]}" if product_images(product) else "",
+                "status": product.get("status"),
+                "inStock": is_in_stock(product),
+                "image": f"/{item['page_image']}" if item.get("page_image") else "",
                 "imageCount": item.get("image_count", 0),
                 "relatedCount": item.get("related_count", 0),
             }
@@ -1326,10 +1494,42 @@ def write_manifest(results):
     PRODUCT_PAGES_MANIFEST_PATH.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def sync_public_catalog_page_paths(results):
+    """Publish exact generated paths instead of making the browser guess slugs.
+
+    Titles are curated and may change while an old URL must remain stable. The
+    append-only registry is authoritative, so the storefront receives the path
+    selected by this generator after every build.
+    """
+    if not PUBLIC_CATALOG_PATH.exists():
+        return
+    catalog = json.loads(PUBLIC_CATALOG_PATH.read_text(encoding="utf-8"))
+    paths_by_id = {
+        str(item["product"].get("id")): f"/product/{item['slug']}/"
+        for item in results
+        if item.get("status") != "failed" and item.get("product", {}).get("id")
+    }
+    missing = []
+    for product in catalog.get("products") or []:
+        product_id = str(product.get("id") or "")
+        path = paths_by_id.get(product_id)
+        if not path:
+            missing.append(product_id)
+            product.pop("productPagePath", None)
+            continue
+        product["productPagePath"] = path
+    if missing:
+        raise ValueError(f"active products without generated product pages: {missing[:10]}")
+    PUBLIC_CATALOG_PATH.write_text(
+        json.dumps(catalog, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate static product pages for Global Market KG.")
     group = parser.add_mutually_exclusive_group()
-    group.add_argument("--all", action="store_true", help="Generate pages for all active priced products with existing photos.")
+    group.add_argument("--all", action="store_true", help="Generate pages for all priced historical products with existing photos.")
     group.add_argument("--product-id", help="Generate one page by product id.")
     parser.add_argument("--report", action="store_true", help="Write outputs/product-pages-report.md.")
     return parser.parse_args()
@@ -1377,6 +1577,8 @@ def main():
         write_report(results, skipped, mode)
     if args.all:
         write_manifest(results)
+        write_slug_registry()
+        sync_public_catalog_page_paths(results)
 
     failed = [item for item in results if item["status"] == "failed"]
     for item in results[:10]:

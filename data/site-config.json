@@ -11,17 +11,18 @@
   "menu": [
     { "label": "Главная", "href": "/#top" },
     { "label": "Личный кабинет", "href": "/#myOrders" },
-    { "label": "Стирка", "category": "Стирка и уход за бельем" },
-    { "label": "Детское", "audience": "kids" },
-    { "label": "Европа", "collection": "europe" },
-    { "label": "Бритье", "category": "Бритье" },
-    { "label": "Дезодоранты", "category": "Дезодоранты" },
-    { "label": "Волосы", "category": "Уход за волосами" },
-    { "label": "Чистка", "category": "Уборка и чистота" },
-    { "label": "Парфюм", "category": "Парфюм 5 мл" },
-    { "label": "Кремы", "category": "Уход за телом", "query": "крем" },
-    { "label": "Тело", "category": "Уход за телом" },
-    { "label": "Зубы", "category": "Зубная гигиена" },
+    { "label": "Стирка", "section": "laundry" },
+    { "label": "Кухня", "section": "kitchen" },
+    { "label": "Ванная", "section": "bathroom" },
+    { "label": "Тело", "section": "body" },
+    { "label": "Кремы", "section": "creams" },
+    { "label": "Бритьё", "section": "shaving" },
+    { "label": "Зубы", "section": "oral" },
+    { "label": "Волосы", "section": "hair" },
+    { "label": "Парфюм", "section": "perfume" },
+    { "label": "Дом и уют", "section": "home" },
+    { "label": "Детское", "href": "/?audience=kids&label=Детское#catalog" },
+    { "label": "Европа", "href": "/collection/europe/" },
     { "label": "Оформление", "href": "/#checkout" },
     { "label": "Контакты", "href": "/#contacts" }
   ],
@@ -35,65 +36,57 @@
       "active": true
     },
     {
-      "image": "/assets/hero-promo-downy-dark.jpg",
-      "alt": "Ополаскиватели Downy в темной синей прачечной",
-      "eyebrow": "Downy",
-      "title": "Свежесть для белья",
-      "href": "/?category=Стирка%20и%20уход%20за%20бельем&query=Downy&label=Downy#catalog",
-      "active": true
-    },
-    {
-      "image": "/assets/hero-promo-clear-dark.jpg",
-      "alt": "Шампуни Clear Men в темной синей ванной",
-      "eyebrow": "Уход за волосами",
-      "title": "Clear Men",
-      "href": "/?category=Уход%20за%20волосами&query=Clear&label=Clear%20Men#catalog",
-      "active": true
-    },
-    {
-      "image": "/assets/hero-promo-dalli-autumn.jpg",
-      "alt": "Средства Dalli на осеннем фоне",
-      "eyebrow": "Dalli",
-      "title": "Стирка для всей семьи",
-      "href": "/?collection=europe&query=Dalli&label=Dalli#catalog",
-      "active": true
-    },
-    {
-      "image": "/assets/hero-promo-dash-green.jpg",
-      "alt": "Средства Dash на зеленом тропическом фоне",
-      "eyebrow": "Dash",
-      "title": "Свежая стирка",
-      "href": "/?collection=europe&query=Dash&label=Dash#catalog",
-      "active": true
-    },
-    {
       "image": "/assets/hero-promo-pink-stuff.jpg",
       "alt": "Средства The Pink Stuff на розовом фоне",
       "eyebrow": "The Pink Stuff",
       "title": "Чистота и блеск",
-      "href": "/?category=Уборка%20и%20чистота&label=Чистка#catalog",
+      "href": "/?query=The%20Pink%20Stuff&label=The%20Pink%20Stuff#catalog",
+      "active": true
+    },
+    {
+      "image": "/assets/banners/hero-felce-azzurra-v1.webp",
+      "alt": "Оригинальные товары Felce Azzurra для стирки и ухода",
+      "eyebrow": "Felce Azzurra",
+      "title": "Свежесть из Италии",
+      "href": "/?collection=europe&query=Felce%20Azzurra&label=Felce%20Azzurra#catalog",
+      "active": true
+    },
+    {
+      "image": "/assets/banners/hero-dalli-dash-v1.webp",
+      "alt": "Средства Dalli и Dash для стирки",
+      "eyebrow": "Dalli + Dash",
+      "title": "Чистота для всей семьи",
+      "href": "/?category=Стирка%20и%20уход%20за%20бельем&label=Dalli%20%2B%20Dash#catalog",
+      "active": true
+    },
+    {
+      "image": "/assets/banners/hero-dr-beckmann-v1.webp",
+      "alt": "Специализированные средства Dr. Beckmann для стирки и уборки",
+      "eyebrow": "Dr. Beckmann",
+      "title": "Эксперт по чистоте",
+      "href": "/?category=Уборка%20и%20чистота&label=Dr.%20Beckmann#catalog",
       "active": true
     }
   ],
   "quickCategories": [
-    { "title": "Стирка", "category": "Стирка и уход за бельем", "image": "/assets/category-icons/laundry-generic.png?v=20260803-cutout-v3" },
-    { "title": "Детское", "audience": "kids", "image": "/assets/category-icons/kids-generic.png?v=20260803-cutout-v3" },
-    { "title": "Европа", "collection": "europe", "image": "/assets/category-icons/europe-generic.png?v=20260803-cutout-v3" },
-    { "title": "Бритье", "category": "Бритье", "image": "/assets/category-icons/shaving-generic.png?v=20260803-cutout-v3" },
-    { "title": "Дезодоранты", "category": "Дезодоранты", "image": "/assets/category-icons/deodorants-generic.png?v=20260803-cutout-v3" },
-    { "title": "Волосы", "category": "Уход за волосами", "image": "/assets/category-icons/hair-generic.png?v=20260803-cutout-v3" },
-    { "title": "Чистка", "category": "Уборка и чистота", "image": "/assets/category-icons/cleaning-generic.png?v=20260803-cutout-v3" },
-    { "title": "Парфюм", "category": "Парфюм 5 мл", "image": "/assets/category-icons/perfume-generic.png?v=20260803-cutout-v3" },
-    { "title": "Кремы", "category": "Уход за телом", "query": "крем", "image": "/assets/category-icons/creams-generic.png?v=20260803-cutout-v3" },
-    { "title": "Тело", "category": "Уход за телом", "image": "/assets/category-icons/body-generic.png?v=20260803-cutout-v3" },
-    { "title": "Зубы", "category": "Зубная гигиена", "image": "/assets/category-icons/oral-generic.png?v=20260803-cutout-v3" }
+    { "title": "Стирка", "section": "laundry", "image": "/assets/category-icons/laundry-generic.png?v=20261011-retail-recovery-v1" },
+    { "title": "Кухня", "section": "kitchen", "image": "/assets/category-icons/cleaning-generic.png?v=20261011-retail-recovery-v1" },
+    { "title": "Ванная", "section": "bathroom", "image": "/assets/category-icons/body-generic.png?v=20261011-retail-recovery-v1" },
+    { "title": "Тело", "section": "body", "image": "/assets/category-icons/deodorants-generic.png?v=20261011-retail-recovery-v1" },
+    { "title": "Кремы", "section": "creams", "image": "/assets/category-icons/creams-generic.png?v=20261011-retail-recovery-v1" },
+    { "title": "Бритьё", "section": "shaving", "image": "/assets/category-icons/shaving-generic.png?v=20261011-retail-recovery-v1" },
+    { "title": "Зубы", "section": "oral", "image": "/assets/category-icons/oral-generic.png?v=20261011-retail-recovery-v1" },
+    { "title": "Волосы", "section": "hair", "image": "/assets/category-icons/hair-generic.png?v=20261011-retail-recovery-v1" },
+    { "title": "Парфюм", "section": "perfume", "image": "/assets/category-icons/perfume-generic.png?v=20261011-retail-recovery-v1" },
+    { "title": "Дом и уют", "section": "home", "image": "/assets/category-icons/europe-generic.png?v=20261011-retail-recovery-v1" }
   ],
   "footerLinks": [
     { "label": "Каталог", "href": "/#catalog" },
     { "label": "Разделы", "href": "/catalog/" },
     { "label": "Оформление", "href": "/#checkout" },
     { "label": "Мои заказы", "href": "/#myOrders" },
+    { "label": "Доставка и возврат", "href": "/delivery-and-returns/" },
     { "label": "Политика конфиденциальности", "href": "/privacy.html" }
   ],
-  "footerText": "Контакты, условия доставки и реквизиты добавим после финального согласования."
+  "footerText": "ИП Григорьев Василий Владимирович · ИНН 21509198010011"
 }

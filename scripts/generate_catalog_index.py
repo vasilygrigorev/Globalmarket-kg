@@ -115,7 +115,7 @@ def render_page(pages):
   <meta name="twitter:title" content="Разделы магазина Global Market KG">
   <meta name="twitter:description" content="Категории, подборки и бренды Global Market KG.">
   <meta name="twitter:image" content="{SITE_URL}/assets/hero-green-wide-v1.png">
-  <link rel="stylesheet" href="/styles.css?v=20260715-ocean-market">
+  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
   <script type="application/ld+json">{json_ld}</script>
   <style>
     body.catalog-index-page {{ margin: 0; padding-top: var(--site-header-height, 58px); background: #edf5f4; color: #162a32; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }}

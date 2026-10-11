@@ -4,6 +4,8 @@
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Cross-Origin-Opener-Policy: same-origin
+  X-GlobalMarket-Release: 20261011-retail-full-recovery-v1
+  X-GlobalMarket-Analytics-Release: 20261011-retail-full-recovery-v1
 
 /
   Cache-Control: no-store
@@ -25,3 +27,9 @@
 
 /assets/category-icons/*
   Cache-Control: public, max-age=31536000, immutable
+
+/assets/google-consent.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/google-consent.js
+  Cache-Control: public, max-age=0, must-revalidate

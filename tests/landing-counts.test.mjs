@@ -2,7 +2,8 @@
 // A landing page's `count` is the number of catalog products in that facet. This
 // guards that category/collection landing counts stay in sync with the catalog
 // (so a stale import can't leave "84 products" on a page that now has fewer), and
-// that brand landing pages are non-empty.
+// that current brand landing pages are non-empty. Explicitly retained legacy
+// URLs may be empty while stock is absent, but must stay marked as such.
 // Run: node --test tests/landing-counts.test.mjs
 
 import test from "node:test";
@@ -40,10 +41,15 @@ test("collection landing counts equal the catalog count for that collection", ()
   assert.deepEqual(bad, [], `collection count drift: ${bad.join(", ")}`);
 });
 
-test("brand landing pages are non-empty and count-consistent (shown <= count)", () => {
+test("brand landing pages are count-consistent; only retained legacy URLs may be empty", () => {
   const bad = pages
     .filter((p) => p.type === "brand")
-    .filter((p) => !Number.isInteger(p.count) || p.count <= 0 || (Number.isInteger(p.shown) && p.shown > p.count))
+    .filter((p) => (
+      !Number.isInteger(p.count)
+      || p.count < 0
+      || (p.count === 0 && p.retainedLegacy !== true)
+      || (Number.isInteger(p.shown) && p.shown > p.count)
+    ))
     .map((p) => `${p.slug}: count=${p.count} shown=${p.shown}`);
   assert.deepEqual(bad, [], `brand count issues: ${bad.join(", ")}`);
 });

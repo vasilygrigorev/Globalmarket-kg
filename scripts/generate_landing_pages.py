@@ -549,7 +549,7 @@ def render_page(target, products, product_page_by_id, all_targets):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(description)}">
   <meta name="twitter:image" content="{escape(share_image)}">
-  <link rel="stylesheet" href="/styles.css?v=20260720-product-search-policy-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
   <script type="application/ld+json">{breadcrumb_json_ld(target, canonical)}</script>
   <script type="application/ld+json">{item_list_json_ld(products, product_page_by_id)}</script>
   <style>
@@ -848,9 +848,56 @@ def brand_targets(products, product_page_by_id):
     return targets
 
 
+LEGACY_LANDING_TARGETS = [
+    {"type": "brand", "slug": "arm-hammer", "title": "Arm & Hammer"},
+    {"type": "brand", "slug": "clear", "title": "Clear"},
+    {"type": "brand", "slug": "comfort", "title": "Comfort"},
+    {"type": "brand", "slug": "downy", "title": "Downy"},
+]
+
+
+def retained_landing_targets(current_targets):
+    """Keep every previously generated landing URL append-only."""
+    prior = []
+    if LANDING_PAGES_PATH.exists():
+        prior.extend((load_json(LANDING_PAGES_PATH).get("pages") or []))
+    prior.extend(LEGACY_LANDING_TARGETS)
+    existing = {(item.get("type"), item.get("slug")) for item in current_targets}
+    retained = []
+    for item in prior:
+        page_type = item.get("type")
+        slug = item.get("slug")
+        title = item.get("title")
+        if not page_type or not slug or not title or (page_type, slug) in existing:
+            continue
+        target = {
+            "type": page_type,
+            "slug": slug,
+            "title": title,
+            "path": f"/{page_type}/{slug}/",
+            "retainedLegacy": True,
+        }
+        if page_type == "brand":
+            target["brand"] = title
+            target["catalogHref"] = f"/?query={quote(title)}&label={quote(title)}#catalog"
+            target["seoTerms"] = [title, f"товары {title}", f"{title} купить Бишкек"]
+        elif page_type == "category":
+            target["category"] = title
+            target["catalogHref"] = f"/?category={quote(title)}&label={quote(title)}#catalog"
+        elif page_type == "collection":
+            target["collection"] = slug
+            target["catalogHref"] = f"/?collection={quote(slug)}&label={quote(title)}#catalog"
+        else:
+            continue
+        retained.append(target)
+        existing.add((page_type, slug))
+    return current_targets + retained
+
+
 def write_landing_page(target, html_text):
     page_path = ROOT / target["path"].strip("/") / "index.html"
     page_path.parent.mkdir(parents=True, exist_ok=True)
+    html_text = "\n".join(line.rstrip() for line in html_text.splitlines()) + "\n"
     old = page_path.read_text(encoding="utf-8") if page_path.exists() else ""
     page_path.write_text(html_text, encoding="utf-8")
     return "created" if not old else ("updated" if old != html_text else "unchanged")
@@ -866,7 +913,9 @@ def main():
     search_synonyms = load_json(SEARCH_SYNONYMS_PATH)
     product_page_by_id = {item["id"]: item for item in product_pages_manifest.get("pages", [])}
     products = catalog.get("products", [])
-    targets = category_targets(catalog) + collection_targets(catalog) + brand_targets(products, product_page_by_id)
+    targets = retained_landing_targets(
+        category_targets(catalog) + collection_targets(catalog) + brand_targets(products, product_page_by_id)
+    )
     manifest_pages = []
     rows = []
 
@@ -885,6 +934,7 @@ def main():
                 "count": len(matched),
                 "seoTerms": seo_terms(target),
                 "shown": min(36, sum(1 for product in matched if product_image(product) and product.get("id") in product_page_by_id)),
+                "retainedLegacy": bool(target.get("retainedLegacy")),
             }
         )
         rows.append((status, target, len(matched)))

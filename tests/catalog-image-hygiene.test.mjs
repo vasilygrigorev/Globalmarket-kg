@@ -22,7 +22,9 @@ const products = JSON.parse(read("data/public-catalog.json")).products || [];
 const galleryNames = products.flatMap((p) => (p.galleryImages || []).map((u) => String(u).split("/").pop().toLowerCase()));
 const galleryPaths = products.flatMap((p) => (p.galleryImages || []).map((u) => String(u)));
 
-const ALLOWED_SUFFIX = /(?:-card-front|-front|-back|card-front-v\d+)\.(?:jpg|jpeg|png|webp)$/;
+// New approved photos are content-addressed (`card-front-<sha>.jpg`) so an
+// overwritten Telegram file can never silently change an existing gallery.
+const ALLOWED_SUFFIX = /(?:^|-)(?:card-front(?:-v\d+)?|front|back)(?:-[0-9a-f]{12})?\.(?:jpg|jpeg|png|webp)$/;
 // Markers that indicate a raw/temporary/derived file that must not be published.
 // Mirrors scripts/verify_product_galleries.py RAW_LEFTOVER_MARKER (adds
 // "telegram-" so an unsorted bot export can never be referenced directly).

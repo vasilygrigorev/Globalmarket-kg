@@ -27,6 +27,7 @@ HASHED_FILES = [
 ]
 
 PUBLIC_ASSET_EXCLUDES = {
+    "category-cards",
     "document_inbox",
     "product_sources",
     "telegram_inbox",

@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Dash Active Frische гель для стирки 3,6 л">
   <meta name="twitter:description" content="Dash Active Frische 2in1 — жидкое универсальное средство для стирки с ароматом кондиционера. Формула предназначена для очищения и свежести белого и светлог">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20260722-desktop-cart-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -43,12 +43,23 @@
     "url": "https://globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/",
     "priceCurrency": "KGS",
     "price": "2090",
+    "validFrom": "2026-10-10",
     "priceValidUntil": "2027-12-31",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
+      "@id": "https://globalmarket.kg/#organization",
       "name": "Global Market KG"
+    },
+    "hasMerchantReturnPolicy": {
+      "@id": "https://globalmarket.kg/delivery-and-returns/#return-policy"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "hasShippingService": {
+        "@id": "https://globalmarket.kg/delivery-and-returns/#shipping-policy"
+      }
     }
   }
 }</script>
@@ -98,38 +109,49 @@
     .icon-action.smm-share .instagram-dot { fill: currentColor; stroke: none; }
     .share-feedback { position: fixed; left: 50%; bottom: calc(82px + env(safe-area-inset-bottom)); z-index: 40; width: max-content; max-width: calc(100vw - 32px); transform: translateX(-50%); padding: 11px 14px; border-radius: 8px; color: #fff; background: rgba(20, 24, 28, 0.94); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22); font-size: 14px; font-weight: 750; text-align: center; }
     .visual-panel { background: #fff; }
-    .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; }
+    .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-drag: none; overscroll-behavior-x: contain; }
+    .media-main:active { cursor: grabbing; }
+    .media-main:focus-visible { outline: 3px solid #07958f; outline-offset: -3px; }
     .gallery-thumbs { display: flex; gap: 10px; padding: 14px 16px 18px; overflow-x: auto; background: #f7f7f8; }
-    .gallery-thumb { display: grid; flex: 0 0 76px; gap: 5px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }
+    .gallery-thumb { display: block; flex: 0 0 76px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }
     .gallery-thumb.active { border-color: #1f1f1f; background: #fff; }
     .gallery-thumb img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
-    .gallery-thumb span { overflow: hidden; font-size: 11px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; text-align: center; }
-    .product-purchase-strip { padding: 0 16px 18px; background: #f7f7f8; }
+    .gallery-thumb span { display: none; }
+    .product-purchase-strip { padding: 12px 16px 18px; background: #f7f7f8; }
     .product-purchase-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .product-purchase-actions > * { width: 100%; min-width: 0; }
-    .product-detail-info { display: grid; gap: 18px; padding: 28px 26px 26px; }
+    .purchase-price { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 0 0 14px; text-align: center; }
+    .purchase-price strong { font-weight: inherit; }
+    .purchase-price .price-group { display: flex; align-items: baseline; justify-content: center; gap: 10px; }
+    .purchase-price .price { color: #132e36; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 38px; font-weight: 300; line-height: 1.05; }
+    .purchase-price .price-original { color: #8a8f94; font-size: 20px; font-weight: 500; }
+    .purchase-price small { color: #777; font-size: 13px; }
+    .out-of-stock-panel { display: grid; gap: 5px; padding: 14px 16px; border: 1px solid #d7e2e2; border-radius: 8px; color: #28484d; background: #eef7f6; text-align: center; }
+    .out-of-stock-panel strong { font-size: 18px; }
+    .out-of-stock-panel span { color: #5e7276; font-size: 14px; line-height: 1.4; }
+    .product-detail-info { display: grid; gap: 12px; padding: 22px; }
     .product-breadcrumbs { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: #777; font-size: 13px; line-height: 1.35; }
     .product-breadcrumbs a { color: inherit; text-decoration: none; }
     .product-breadcrumbs a:hover { color: #111; }
     .crumb-separator { color: #b0b0b6; }
-    .title-block { display: grid; gap: 8px; }
+    .title-block { display: grid; gap: 4px; }
     .brand-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
     h1 { margin: 0; font-size: clamp(38px, 7vw, 58px); font-weight: 300; line-height: 1.05; }
     .size-line { flex: 0 0 auto; color: #555; font-size: clamp(20px, 4.5vw, 30px); font-weight: 300; line-height: 1.1; white-space: nowrap; }
     .type { margin: 0; font-size: clamp(24px, 5vw, 34px); font-weight: 800; line-height: 1.12; }
     .variant { margin: 0; color: #777; font-size: 19px; line-height: 1.35; }
-    body.product-page .product-detail-info .description { display: block; min-height: 0; overflow: visible; margin: 0; color: #666; font-size: 18px; line-height: 1.55; -webkit-line-clamp: unset; }
-    .price-box { display: grid; gap: 4px; padding: 16px; border: 1px solid #e4e4e7; border-radius: 8px; background: #f5f5f6; }
+    body.product-page .product-detail-info .description { display: block; min-height: 0; overflow: visible; margin: 0; padding: 0; border: 0; color: #555; background: transparent; font-size: 18px; line-height: 1.45; -webkit-line-clamp: unset; }
+    .price-box { display: grid; gap: 4px; padding: 0; border: 0; background: transparent; }
     .price-box span,
     .price-box small { color: #777; }
     .price-box .price { font-size: 38px; font-weight: 850; line-height: 1; }
     .som-sign { display: inline-block; padding-bottom: 0.03em; border-bottom: 0.06em solid currentColor; line-height: 0.88; }
-    .specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }
-    .specs div { padding: 12px; border: 1px solid #e4e4e7; border-radius: 8px; background: #fff; }
-    .specs dt { color: #777; font-size: 13px; }
-    .specs dd { margin: 4px 0 0; font-weight: 800; }
+    .specs { display: flex; flex-wrap: wrap; gap: 7px 18px; margin: 2px 0 0; }
+    .specs div { display: flex; align-items: baseline; gap: 5px; min-width: 0; padding: 0; border: 0; background: transparent; }
+    .specs dt { color: #777; font-size: 12px; white-space: nowrap; }
+    .specs dd { min-width: 0; margin: 0; font-size: 14px; font-weight: 750; }
     .specs dd a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .note { padding: 13px 14px; border-radius: 8px; color: #666; background: #f5f5f6; line-height: 1.45; }
+    .note { padding: 0; border: 0; color: #666; background: transparent; line-height: 1.4; }
     .modal-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .primary-action,
     .secondary-action,
@@ -168,11 +190,12 @@
       .page { max-width: none; padding: 0; }
       .product-shell { border-radius: 0; box-shadow: none; }
       .related { padding: 0 8px; }
-      .product-detail-info { padding: 26px 18px 20px; }
+      .product-detail-info { padding: 18px 16px; }
       .icon-action { width: 44px; height: 44px; }
       .icon-action.smm-share:not([hidden]) { display: grid; }
-      .product-purchase-strip { padding: 0 10px 14px; }
-      .specs { grid-template-columns: 1fr; }
+      .product-purchase-strip { padding: 10px 10px 14px; }
+      .purchase-price .price { font-size: 34px; }
+      .specs { gap: 7px 14px; }
       .related-grid { grid-template-columns: repeat(2, 1fr); }
       .bottom-page-actions { padding: 0 18px; }
     }
@@ -183,6 +206,24 @@
       .top-actions { left: 16px; right: 16px; }
     }
   </style>
+  <!-- BEGIN shared-analytics-head -->
+<meta name="google-site-verification" content="960zpLbWQpecqn6ZhlIecGVl0zt3SRKtzPd800egMo4">
+<link rel="stylesheet" href="/assets/google-consent.css?v=20261011-retail-full-recovery-v1">
+<script id="gmk-google-tag-bootstrap">
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+window.gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500
+});
+window.gtag('js', new Date());
+</script>
+<script async id="gmk-google-tag-loader" src="https://www.googletagmanager.com/gtag/js?id=G-9KZK8Y4S7K"></script>
+<script defer id="gmk-google-consent-script" src="/assets/google-consent.js?v=20261011-retail-full-recovery-v1"></script>
+<!-- END shared-analytics-head -->
 </head>
 <body class="product-page">
   <header class="site-header" data-smart-header>
@@ -251,27 +292,30 @@
         <div class="gallery-thumbs" aria-label="Фотографии товара">
         <button class="gallery-thumb active" type="button" data-gallery-image="/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg" aria-label="Лицевая">
           <img src="/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg" alt="Dash Active Frische гель для стирки 3,6 л - Лицевая" loading="lazy">
-          <span>Лицевая</span>
         </button>
-        
+
 
         <button class="gallery-thumb " type="button" data-gallery-image="/assets/products/dash/dash-active-frische-gel-3-6l-front.jpg" aria-label="Лицевая">
           <img src="/assets/products/dash/dash-active-frische-gel-3-6l-front.jpg" alt="Dash Active Frische гель для стирки 3,6 л - Лицевая" loading="lazy">
-          <span>Лицевая</span>
         </button>
-        
+
 
         <button class="gallery-thumb " type="button" data-gallery-image="/assets/products/dash/dash-active-frische-gel-3-6l-back.jpg" aria-label="Обратная">
           <img src="/assets/products/dash/dash-active-frische-gel-3-6l-back.jpg" alt="Dash Active Frische гель для стирки 3,6 л - Обратная" loading="lazy">
-          <span>Обратная</span>
         </button>
         </div>
         <div class="product-purchase-strip">
+        <div class="purchase-price">
+          <strong><span class="price">2 090 <span class="som-sign">с</span></span></strong>
+          <small>Клиентская цена: скидка 3% при входе</small>
+        </div>
+
         <div class="modal-actions product-purchase-actions">
           <button class="primary-action" type="button" data-add-cart>В корзину</button>
           <a class="secondary-action" href="/?checkout=1#checkoutForm" data-checkout>К оформлению</a>
         </div>
-        </div>
+
+    </div>
       </section>
       <section class="product-detail-info">
         <nav class="product-breadcrumbs" aria-label="Навигация"><a href="/#top">Главная</a><span class="crumb-separator">/</span><a href="/brand/dash/">Dash</a><span class="crumb-separator">/</span><span>Dash Active Frische гель для стирки 3,6 л</span></nav>
@@ -284,11 +328,6 @@
           <p class="variant">Active Frische</p>
         </div>
         <p class="description">Dash Active Frische 2in1 — жидкое универсальное средство для стирки с ароматом кондиционера. Формула предназначена для очищения и свежести белого и светлого белья; температурный диапазон на упаковке указан от 20 до 95 °C. Объём 3,6 л рассчитан примерно на 80 стирок при стандартной дозировке.</p>
-        <div class="price-box">
-          <span>Ваша цена</span>
-          <strong><span class="price">2 090 <span class="som-sign">с</span></span></strong>
-          <small>Клиентская цена: скидка 3% при входе</small>
-        </div>
         <dl class="specs">
           <div><dt>Бренд</dt><dd><a href="/brand/dash/">Dash (Германия)</a></dd></div>
           <div><dt>Категория</dt><dd>Европа</dd></div>
@@ -296,17 +335,165 @@
           <div><dt>Единица</dt><dd>шт</dd></div>
           <div><dt>Подборка</dt><dd><a href="/collection/europe/">Европа</a></dd></div>
         </dl>
-        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 10 000 <span class="som-sign">с</span>.</div>
-        
+        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 5 000 <span class="som-sign">с</span>.</div>
+
         <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Dash%20Active%20Frische%20%D0%B3%D0%B5%D0%BB%D1%8C%20%D0%B4%D0%BB%D1%8F%20%D1%81%D1%82%D0%B8%D1%80%D0%BA%D0%B8%203%2C6%20%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%202%20090%20%D1%81%D0%BE%D0%BC." rel="noopener">Заказать сразу в WhatsApp</a>
         <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%83%3A%20Dash%20Active%20Frische%20%D0%B3%D0%B5%D0%BB%D1%8C%20%D0%B4%D0%BB%D1%8F%20%D1%81%D1%82%D0%B8%D1%80%D0%BA%D0%B8%203%2C6%20%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%202%20090%20%D1%81%D0%BE%D0%BC.%20https%3A//globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/" rel="noopener">Спросить в WhatsApp</a>
-        
+
       </section>
     </article>
-    
+
     <section class="related">
       <h2>Похожие товары</h2>
       <div class="related-grid">
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3053" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-gel-2-25l-50stir-colorwaschmittel-c_3053/" data-product-link="prd_1c_3053" aria-label="Открыть DASH GEL (2.25L)(50стир) Colorwaschmittel">
+                  <img class="product-image" src="/assets/products/registry/1c-3053/card-front-0b2e371dda58.jpg" alt="DASH GEL (2.25L)(50стир) Colorwaschmittel" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-gel-2-25l-50stir-colorwaschmittel-c_3053/" data-product-link="prd_1c_3053">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dash</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">GEL 50стир Colorwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>DASH GEL (2.25L)(50стир) Colorwaschmittel - гель для стирки для домашней стирки. Формат: 2.25L. Для цветных тканей. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 495 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3053" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 450 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3054" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-gel-2-25l-50stir-vollwaschmittel-c_3054/" data-product-link="prd_1c_3054" aria-label="Открыть DASH GEL (2.25L)(50стир) Vollwaschmittel">
+                  <img class="product-image" src="/assets/products/registry/1c-3054/card-front-847f17905e34.jpg" alt="DASH GEL (2.25L)(50стир) Vollwaschmittel" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-gel-2-25l-50stir-vollwaschmittel-c_3054/" data-product-link="prd_1c_3054">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dash</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">GEL 50стир Vollwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>DASH GEL (2.25L)(50стир) Vollwaschmittel - гель для стирки для домашней стирки. Формат: 2.25L. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 495 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3054" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 450 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3059" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-gel-4-5l-100stir-colorwaschmittel-c_3059/" data-product-link="prd_1c_3059" aria-label="Открыть DASH GEL (4.5L)(100стир) Colorwaschmittel">
+                  <img class="product-image" src="/assets/products/registry/1c-3059/card-front-81ae78979e5d.jpg" alt="DASH GEL (4.5L)(100стир) Colorwaschmittel" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-gel-4-5l-100stir-colorwaschmittel-c_3059/" data-product-link="prd_1c_3059">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dash</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">GEL 100стир Colorwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>DASH GEL (4.5L)(100стир) Colorwaschmittel - гель для стирки для домашней стирки. Формат: 4.5L. Для цветных тканей. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 590 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3059" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 512 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3058" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-gel-5l-100stir-vollwaschmittel-c_3058/" data-product-link="prd_1c_3058" aria-label="Открыть DASH GEL (5L)(100стир) Vollwaschmittel">
+                  <img class="product-image" src="/assets/products/registry/1c-3058/card-front-dc12d17fb379.jpg" alt="DASH GEL (5L)(100стир) Vollwaschmittel" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-gel-5l-100stir-vollwaschmittel-c_3058/" data-product-link="prd_1c_3058">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dash</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">GEL 100стир Vollwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>DASH GEL (5L)(100стир) Vollwaschmittel - гель для стирки для домашней стирки. Формат: 5L. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 590 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3058" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 512 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
                 <span class="placeholder-brand">Dash</span>
@@ -377,6 +564,228 @@
                     <button class="add-button compact-add-button" type="button" data-add="prd_96f0268a48e0" aria-label="Добавить в корзину">В корзину</button>
                   </div>
                   <span class="registered-price-note">Цена при входе: 2 027 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Burti</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3037" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/burti-color-laundry-gel-1-45-l-c_3037/" data-product-link="prd_1c_3037" aria-label="Открыть Burti Color laundry gel 1.45 L">
+                  <img class="product-image" src="/assets/products/burti/burti-3037-card-front.jpg" alt="Burti Color laundry gel 1.45 L" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/burti-color-laundry-gel-1-45-l-c_3037/" data-product-link="prd_1c_3037">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Burti</span>
+                    <span class="product-size-line">1,45 L</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>средство для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Color laundry gel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Burti Color laundry gel 1.45 L - средство для стирки для домашней стирки. Формат: 1.45 L. Для цветных тканей. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">890 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3037" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 863 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Burti</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3036" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/burti-liquid-laundry-gel-1-45-l-c_3036/" data-product-link="prd_1c_3036" aria-label="Открыть Burti Liquid laundry gel 1.45 L">
+                  <img class="product-image" src="/assets/products/burti/burti-3036-card-front.jpg" alt="Burti Liquid laundry gel 1.45 L" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/burti-liquid-laundry-gel-1-45-l-c_3036/" data-product-link="prd_1c_3036">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Burti</span>
+                    <span class="product-size-line">1,45 L</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>средство для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Liquid laundry gel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Burti Liquid laundry gel 1.45 L - средство для стирки для домашней стирки. Формат: 1.45 L. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">890 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3036" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 863 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Burti</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3038" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/burti-noir-laundry-gel-1-45-l-c_3038/" data-product-link="prd_1c_3038" aria-label="Открыть Burti Noir laundry gel 1.45 L">
+                  <img class="product-image" src="/assets/products/burti/burti-3038-card-front.jpg" alt="Burti Noir laundry gel 1.45 L" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/burti-noir-laundry-gel-1-45-l-c_3038/" data-product-link="prd_1c_3038">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Burti</span>
+                    <span class="product-size-line">1,45 L</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>средство для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Noir laundry gel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Burti Noir laundry gel 1.45 L - средство для стирки для домашней стирки. Формат: 1.45 L. Для тёмных и чёрных тканей. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">890 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3038" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 863 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Burti</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3040" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/burti-sport-outdoor-laundry-gel-1-45-l-c_3040/" data-product-link="prd_1c_3040" aria-label="Открыть Burti Sport &amp; Outdoor laundry gel 1.45 L">
+                  <img class="product-image" src="/assets/products/burti/burti-3040-card-front.jpg" alt="Burti Sport &amp; Outdoor laundry gel 1.45 L" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/burti-sport-outdoor-laundry-gel-1-45-l-c_3040/" data-product-link="prd_1c_3040">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Burti</span>
+                    <span class="product-size-line">1,45 L</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>средство для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Sport &amp; Outdoor laundry gel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Burti Sport &amp; Outdoor laundry gel 1.45 L - средство для стирки для домашней стирки. Формат: 1.45 L. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">890 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3040" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 863 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Burti</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3039" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/burti-wolle-seide-laundry-gel-1-45-l-c_3039/" data-product-link="prd_1c_3039" aria-label="Открыть Burti Wolle &amp; Seide laundry gel 1.45 L">
+                  <img class="product-image" src="/assets/products/burti/burti-3039-card-front.jpg" alt="Burti Wolle &amp; Seide laundry gel 1.45 L" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/burti-wolle-seide-laundry-gel-1-45-l-c_3039/" data-product-link="prd_1c_3039">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Burti</span>
+                    <span class="product-size-line">1,45 L</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>средство для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Wolle &amp; Seide laundry gel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Burti Wolle &amp; Seide laundry gel 1.45 L - средство для стирки для домашней стирки. Формат: 1.45 L. Для деликатных тканей. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">890 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3039" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 863 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3065" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-colorwaschmittel-laundry-gel-2-25-l-c_3065/" data-product-link="prd_1c_3065" aria-label="Открыть Dalli Colorwaschmittel laundry gel 2.25 L">
+                  <img class="product-image" src="/assets/products/dalli/dalli-3065-card-front.jpg" alt="Dalli Colorwaschmittel laundry gel 2.25 L" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-colorwaschmittel-laundry-gel-2-25-l-c_3065/" data-product-link="prd_1c_3065">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dalli</span>
+                    <span class="product-size-line">2,25 L</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>средство для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Colorwaschmittel laundry gel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Dalli Colorwaschmittel laundry gel 2.25 L - средство для стирки для домашней стирки. Формат: 2.25 L. Для цветных тканей. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 490 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3065" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 445 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
@@ -493,6 +902,117 @@
             </article>
 
             <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3060" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-gel-1-1l-20stir-black-wash-c_3060/" data-product-link="prd_1c_3060" aria-label="Открыть Dalli Gel (1.1L)(20стир) Black Wash">
+                  <img class="product-image" src="/assets/products/registry/1c-3060/card-front-d759b82d96fe.jpg" alt="Dalli Gel (1.1L)(20стир) Black Wash" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-gel-1-1l-20stir-black-wash-c_3060/" data-product-link="prd_1c_3060">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dalli</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Gel 20стир Black Wash</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Dalli Gel (1.1L)(20стир) Black Wash - гель для стирки для домашней стирки. Формат: 1.1L. Для тёмных и чёрных тканей. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">690 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3060" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 669 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_04fc40e495fd" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-heavy-duty-natural-freshness-laundry-gel-2-75-l-e495fd/" data-product-link="prd_04fc40e495fd" aria-label="Открыть Dalli Heavy Duty Natural Freshness laundry gel 2.75 L">
+                  <img class="product-image" src="/assets/products/dalli/dalli-2529-card-front.jpg" alt="Dalli Heavy Duty Natural Freshness laundry gel 2.75 L" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-heavy-duty-natural-freshness-laundry-gel-2-75-l-e495fd/" data-product-link="prd_04fc40e495fd">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dalli</span>
+                    <span class="product-size-line">2,75 L</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>средство для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Heavy Duty Natural Freshness laundry gel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Dalli — европейское средство для стирки. В наличии в Global Market KG.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 490 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_04fc40e495fd" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 445 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_f7193b473e7f" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-sensitive-laundry-gel-2-75-l-473e7f/" data-product-link="prd_f7193b473e7f" aria-label="Открыть Dalli Sensitive laundry gel 2.75 L">
+                  <img class="product-image" src="/assets/products/dalli/dalli-1937-card-front.jpg" alt="Dalli Sensitive laundry gel 2.75 L" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-sensitive-laundry-gel-2-75-l-473e7f/" data-product-link="prd_f7193b473e7f">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dalli</span>
+                    <span class="product-size-line">2,75 L</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>средство для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Sensitive laundry gel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Dalli — европейское средство для стирки. В наличии в Global Market KG.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 490 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_f7193b473e7f" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 445 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
               <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
                 <span class="placeholder-brand">Dalli</span>
                 <button class="favorite-button" type="button" data-favorite="prd_6c3fa744cf67" aria-label="Добавить в избранное" aria-pressed="false">
@@ -568,635 +1088,154 @@
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_894a7f6437d0" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">Felce Azzurra</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3107" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span></div>
 
-                <a class="product-image-link" href="/product/persil-high-foam-gel-dlya-stirki-3-l-1-l-6437d0/" data-product-link="prd_894a7f6437d0" aria-label="Открыть Persil High Foam гель для стирки 3 л + 1 л">
-                  <img class="product-image" src="/assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg" alt="Persil High Foam гель для стирки 3 л + 1 л" loading="lazy">
+                <a class="product-image-link" href="/product/felce-azzurra-active-color-laundry-liquid-1-595-l-c_3107/" data-product-link="prd_1c_3107" aria-label="Открыть Felce Azzurra Active Color laundry liquid 1.595 L">
+                  <img class="product-image" src="/assets/products/felce-azzurra/felce-azzurra-3107-card-front.jpg" alt="Felce Azzurra Active Color laundry liquid 1.595 L" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-high-foam-gel-dlya-stirki-3-l-1-l-6437d0/" data-product-link="prd_894a7f6437d0">
+                <a class="product-title-button product-copy" href="/product/felce-azzurra-active-color-laundry-liquid-1-595-l-c_3107/" data-product-link="prd_1c_3107">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">3 л + 1 л</span>
+                    <span class="product-brand-name">Felce Azzurra</span>
+                    <span class="product-size-line">1,595 L</span>
                   </span>
                   <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
+                    <strong>средство для стирки</strong>
                   </span>
-                  <span class="product-variant-line">High Foam</span>
+                  <span class="product-variant-line">Active Color laundry liquid</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Стирка и уход за бельем</span>
                 </div>
-                <p>Жидкий Persil Power Gel High Foam предназначен для стирки белья и ухода за стиральной машиной в рамках линейки Deep Clean. Средство помогает удалять повседневные загрязнения и поддерживать ощущение свежести после стирки. В комплекте канистры 2,9 л и 1 л, общий объём 3,9 л; используйте дозировку с упаковки.</p>
+                <p>Felce Azzurra Active Color laundry liquid 1.595 L - средство для стирки для домашней стирки. Формат: 1.595 L. Для цветных тканей. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">2 595 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_894a7f6437d0" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">1 195 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3107" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 2 517 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 1 159 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_1f9a545036b2" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">Felce Azzurra</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3105" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span></div>
 
-                <a class="product-image-link" href="/product/persil-lavender-gel-dlya-stirki-3-l-5036b2/" data-product-link="prd_1f9a545036b2" aria-label="Открыть Persil Lavender гель для стирки 3 л">
-                  <img class="product-image" src="/assets/products/persil/persil-lavender-gel-3l-card-front.jpg" alt="Persil Lavender гель для стирки 3 л" loading="lazy">
+                <a class="product-image-link" href="/product/felce-azzurra-laundry-liquid-original-1-595-l-c_3105/" data-product-link="prd_1c_3105" aria-label="Открыть Felce Azzurra laundry liquid Original 1.595 L">
+                  <img class="product-image" src="/assets/products/felce-azzurra/felce-azzurra-3105-card-front.jpg" alt="Felce Azzurra laundry liquid Original 1.595 L" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-lavender-gel-dlya-stirki-3-l-5036b2/" data-product-link="prd_1f9a545036b2">
+                <a class="product-title-button product-copy" href="/product/felce-azzurra-laundry-liquid-original-1-595-l-c_3105/" data-product-link="prd_1c_3105">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">3 л</span>
+                    <span class="product-brand-name">Felce Azzurra</span>
+                    <span class="product-size-line">1,595 L</span>
                   </span>
                   <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
+                    <strong>средство для стирки</strong>
                   </span>
-                  <span class="product-variant-line">Lavender</span>
+                  <span class="product-variant-line">laundry liquid Original</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Стирка и уход за бельем</span>
                 </div>
-                <p>Жидкий гель Persil Power Gel Lavender предназначен для машинной стирки и удаления повседневных загрязнений. Формула Deep Clean помогает очищать бельё и оставляет аромат лаванды. Объём 3 л; количество средства выбирайте по загрязнённости белья и инструкции на упаковке.</p>
+                <p>Felce Azzurra laundry liquid Original 1.595 L - средство для стирки для домашней стирки. Формат: 1.595 L. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">2 090 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_1f9a545036b2" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">1 195 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3105" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 2 027 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_0e763c9c3654" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/persil-lavender-gel-dlya-stirki-4-8-l-9c3654/" data-product-link="prd_0e763c9c3654" aria-label="Открыть Persil Lavender гель для стирки 4,8 л">
-                  <img class="product-image" src="/assets/products/persil/persil-lavender-gel-4-8l-card-front.jpg" alt="Persil Lavender гель для стирки 4,8 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-lavender-gel-dlya-stirki-4-8-l-9c3654/" data-product-link="prd_0e763c9c3654">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">4,8 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">Lavender</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Persil Power Gel Lavender — жидкое средство для машинной стирки в большом формате. Формула Deep Clean помогает удалять повседневные загрязнения и оставляет аромат лаванды. Объём 4,8 л; дозировку выбирайте по загрязнённости белья и инструкции на упаковке.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">3 200 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_0e763c9c3654" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 3 104 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_f19e014e94cf" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/persil-rose-gel-dlya-stirki-3-l-4e94cf/" data-product-link="prd_f19e014e94cf" aria-label="Открыть Persil Rose гель для стирки 3 л">
-                  <img class="product-image" src="/assets/products/persil/persil-rose-gel-3l-card-front.jpg" alt="Persil Rose гель для стирки 3 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-rose-gel-dlya-stirki-3-l-4e94cf/" data-product-link="prd_f19e014e94cf">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">3 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">Rose</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Жидкий гель Persil Power Gel Rose предназначен для машинной стирки и удаления повседневных загрязнений. Формула Deep Clean помогает очищать бельё и оставляет аромат розы. Фасовка на упаковке — 2,9 л; дозировку выбирайте по инструкции производителя.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">2 090 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_f19e014e94cf" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 027 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_c5f3a1dce862" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-                <span class="discount-badge">-20%</span>
-                <a class="product-image-link" href="/product/persil-rose-gel-dlya-stirki-3-l-1-l-dce862/" data-product-link="prd_c5f3a1dce862" aria-label="Открыть Persil Rose гель для стирки 3 л + 1 л">
-                  <img class="product-image" src="/assets/products/persil/persil-rose-gel-3l-plus-1l-raw-card-front.jpg" alt="Persil Rose гель для стирки 3 л + 1 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-rose-gel-dlya-stirki-3-l-1-l-dce862/" data-product-link="prd_c5f3a1dce862">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">3 л + 1 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">Rose</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Жидкий гель Persil Power Gel Rose предназначен для машинной стирки и удаления повседневных загрязнений. Формула Deep Clean помогает очищать бельё и оставляет аромат розы. В комплекте две канистры: 2,9 л и 1 л, общий объём 3,9 л; дозировку выбирайте по инструкции на упаковке.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price-group"><span class="price">2 595 <span class="som-sign">с</span></span><span class="price-original">3 244 <span class="som-sign">с</span></span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_c5f3a1dce862" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 517 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_682eb8c7e746" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/persil-rose-gel-dlya-stirki-4-8-l-c7e746/" data-product-link="prd_682eb8c7e746" aria-label="Открыть Persil Rose гель для стирки 4,8 л">
-                  <img class="product-image" src="/assets/products/persil/persil-rose-gel-4-8l-card-front.jpg" alt="Persil Rose гель для стирки 4,8 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-rose-gel-dlya-stirki-4-8-l-c7e746/" data-product-link="prd_682eb8c7e746">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">4,8 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">Rose</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Persil Power Gel Rose — жидкое средство для машинной стирки с ароматом розы. Формула Deep Clean предназначена для удаления повседневных загрязнений и поддержания свежести белья после стирки. Объём 4,8 л; выбирайте дозировку по жёсткости воды, загрузке и степени загрязнения согласно этикетке.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">3 200 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_682eb8c7e746" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 3 104 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_9df7a08005ce" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/persil-sensitive-gel-dlya-stirki-3-l-8005ce/" data-product-link="prd_9df7a08005ce" aria-label="Открыть Persil Sensitive гель для стирки 3 л">
-                  <img class="product-image" src="/assets/products/persil/persil-sensitive-gel-3l-card-front.jpg" alt="Persil Sensitive гель для стирки 3 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-sensitive-gel-dlya-stirki-3-l-8005ce/" data-product-link="prd_9df7a08005ce">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">3 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">Sensitive</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Persil Sensitive — жидкое средство для машинной стирки с марсельским мылом и миндальным молочком. На упаковке указаны дерматологическое тестирование и сочетание эффективного удаления пятен с бережным отношением к коже. Объём 3 л; применяйте средство в соответствии с дозировкой и указаниями на этикетке.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">2 090 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_9df7a08005ce" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 027 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_b0bf34e30459" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/persil-white-flower-gel-dlya-stirki-3-l-e30459/" data-product-link="prd_b0bf34e30459" aria-label="Открыть Persil White Flower гель для стирки 3 л">
-                  <img class="product-image" src="/assets/products/persil/persil-white-flower-gel-3l-card-front.jpg" alt="Persil White Flower гель для стирки 3 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-white-flower-gel-dlya-stirki-3-l-e30459/" data-product-link="prd_b0bf34e30459">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">3 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">White Flower</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Жидкий гель Persil Power Gel White Flowers предназначен для машинной стирки и удаления повседневных загрязнений. Формула Deep Clean помогает очищать бельё и оставляет аромат белых цветов. Объём 3 л; дозировку выбирайте по инструкции на упаковке.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">2 090 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_b0bf34e30459" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 027 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_77e4cc05435f" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/persil-white-flower-gel-dlya-stirki-3-l-1-l-05435f/" data-product-link="prd_77e4cc05435f" aria-label="Открыть Persil White Flower гель для стирки 3 л + 1 л">
-                  <img class="product-image" src="/assets/products/persil/persil-white-flower-gel-3l-plus-1l-raw-card-front.jpg" alt="Persil White Flower гель для стирки 3 л + 1 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-white-flower-gel-dlya-stirki-3-l-1-l-05435f/" data-product-link="prd_77e4cc05435f">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">3 л + 1 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">White Flower</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Жидкий гель Persil Power Gel White Flowers предназначен для машинной стирки и удаления повседневных загрязнений. Линия Deep Clean сочетает очищение белья со свежим цветочным ароматом. В комплекте две канистры: 2,9 л и 1 л, общий объём 3,9 л; дозировку выбирайте по инструкции на упаковке.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">2 595 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_77e4cc05435f" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 517 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_f0d3a0b9698b" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/persil-white-flower-gel-dlya-stirki-4-8-l-b9698b/" data-product-link="prd_f0d3a0b9698b" aria-label="Открыть Persil White Flower гель для стирки 4,8 л">
-                  <img class="product-image" src="/assets/products/persil/persil-white-flower-gel-4-8l-card-front.jpg" alt="Persil White Flower гель для стирки 4,8 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-white-flower-gel-dlya-stirki-4-8-l-b9698b/" data-product-link="prd_f0d3a0b9698b">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">4,8 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">White Flower</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Persil Power Gel White Flowers — жидкое средство для машинной стирки в большом семейном формате. Формула Deep Clean помогает удалять повседневные загрязнения и оставляет аромат белых цветов. Объём 4,8 л; дозировку выбирайте по загрязнённости белья и инструкции на упаковке.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">3 200 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_f0d3a0b9698b" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 3 104 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 1 159 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
-                <span class="placeholder-brand">Dash</span>
-                <button class="favorite-button" type="button" data-favorite="prd_6d023c2652c2" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_1939" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span></div>
 
-                <a class="product-image-link" href="/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/" data-product-link="prd_6d023c2652c2" aria-label="Открыть Dash Alpen Frische капсулы для стирки 60 шт">
-                  <img class="product-image" src="/assets/products/dash/dash-alpen-frische-caps-box-60-card-front.jpg" alt="Dash Alpen Frische капсулы для стирки 60 шт" loading="lazy">
+                <a class="product-image-link" href="/product/g-dalli-gel-2-75-50stir-vollwaschmittel-c_1939/" data-product-link="prd_1c_1939" aria-label="Открыть G.Dalli Gel (2.75)(50стир) Vollwaschmittel">
+                  <img class="product-image" src="/assets/products/registry/1c-1939/card-front-533927778646.jpg" alt="G.Dalli Gel (2.75)(50стир) Vollwaschmittel" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-2652c2/" data-product-link="prd_6d023c2652c2">
+                <a class="product-title-button product-copy" href="/product/g-dalli-gel-2-75-50stir-vollwaschmittel-c_1939/" data-product-link="prd_1c_1939">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Dash</span>
-                    <span class="product-size-line">60 шт</span>
+                    <span class="product-brand-name">Dalli</span>
+
                   </span>
                   <span class="product-kind-line">
-                    <strong>капсулы для стирки</strong>
+                    <strong>средство для стирки</strong>
                   </span>
-                  <span class="product-variant-line">Alpen Frische</span>
+                  <span class="product-variant-line">G. Gel 2.75 50стир Vollwaschmittel</span>
                 </a>
                 <div class="product-meta product-meta-compact">
-                  <span>Европа</span>
+                  <span>Стирка и уход за бельем</span>
                 </div>
-                <p>Dash Alpen Frische 3in1 — капсулы для автоматической стирки с заранее отмеренной дозой средства. Трёхкомпонентная формула на упаковке объединяет очищение тканей, уход за волокнами и свежий аромат. В коробке 60 капсул; кладите капсулу в барабан до загрузки белья и следуйте инструкции производителя.</p>
+                <p>G.Dalli Gel (2.75)(50стир) Vollwaschmittel — средство для стирки из актуальных остатков Global Market. Назначение, способ применения и меры предосторожности указаны на упаковке производителя.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">2 295 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_6d023c2652c2" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">1 490 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_1939" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 2 226 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
-                <span class="placeholder-brand">Dash</span>
-                <button class="favorite-button" type="button" data-favorite="prd_ac041a61a578" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-61a578/" data-product-link="prd_ac041a61a578" aria-label="Открыть Dash Alpen Frische капсулы для стирки 60 шт">
-                  <img class="product-image" src="/assets/products/dash/dash-alpen-frische-caps-60-card-front.jpg" alt="Dash Alpen Frische капсулы для стирки 60 шт" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dash-alpen-frische-kapsuly-dlya-stirki-60-sht-61a578/" data-product-link="prd_ac041a61a578">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dash</span>
-                    <span class="product-size-line">60 шт</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>капсулы для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">Alpen Frische</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Европа</span>
-                </div>
-                <p>Dash Alpen Frische 3in1 — капсулы для автоматической стирки белого и светлого белья. Заранее отмеренная многокомпонентная доза предназначена для очищения повседневных загрязнений, ухода за тканью и свежего аромата. В упаковке 60 капсул; кладите капсулу в пустой барабан сухими руками до загрузки белья.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">2 195 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_ac041a61a578" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 129 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
-                <span class="placeholder-brand">Dash</span>
-                <button class="favorite-button" type="button" data-favorite="prd_4db8a0f93b3f" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-f93b3f/" data-product-link="prd_4db8a0f93b3f" aria-label="Открыть Dash Color Frische капсулы для стирки 60 шт">
-                  <img class="product-image" src="/assets/products/dash/dash-color-frische-caps-box-60-card-front.jpg" alt="Dash Color Frische капсулы для стирки 60 шт" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-f93b3f/" data-product-link="prd_4db8a0f93b3f">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dash</span>
-                    <span class="product-size-line">60 шт</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>капсулы для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">Color Frische</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Европа</span>
-                </div>
-                <p>Dash Color Frische 3in1 — капсулы для автоматической стирки цветного белья в коробке XXL. Заранее отмеренная многокомпонентная доза предназначена для очищения тканей, ухода за цветом и придания свежего аромата. В упаковке 60 капсул; кладите одну капсулу в пустой барабан сухими руками, затем загружайте бельё.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">2 295 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_4db8a0f93b3f" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 226 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
-                <span class="placeholder-brand">Dash</span>
-                <button class="favorite-button" type="button" data-favorite="prd_33a2990e3c6a" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-0e3c6a/" data-product-link="prd_33a2990e3c6a" aria-label="Открыть Dash Color Frische капсулы для стирки 60 шт">
-                  <img class="product-image" src="/assets/products/dash/dash-color-frische-caps-60-card-front.jpg" alt="Dash Color Frische капсулы для стирки 60 шт" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-0e3c6a/" data-product-link="prd_33a2990e3c6a">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dash</span>
-                    <span class="product-size-line">60 шт</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>капсулы для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">Color Frische</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Европа</span>
-                </div>
-                <p>Dash Color Frische 3in1 — капсулы для автоматической стирки цветного белья в мягкой упаковке. Заранее отмеренная многокомпонентная доза предназначена для очищения тканей, ухода за цветом и придания свежего аромата. В упаковке 60 капсул; кладите капсулу в пустой барабан сухими руками до загрузки белья.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">2 195 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_33a2990e3c6a" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 129 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
-                <span class="placeholder-brand">Dash</span>
-                <button class="favorite-button" type="button" data-favorite="prd_6ac15f7b2cff" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/dash-color-frische-stiralnyy-poroshok-1-17-kg-7b2cff/" data-product-link="prd_6ac15f7b2cff" aria-label="Открыть Dash Color Frische стиральный порошок 1,17 кг">
-                  <img class="product-image" src="/assets/products/dash/dash-color-frische-powder-1-17kg-card-front.jpg" alt="Dash Color Frische стиральный порошок 1,17 кг" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dash-color-frische-stiralnyy-poroshok-1-17-kg-7b2cff/" data-product-link="prd_6ac15f7b2cff">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dash</span>
-                    <span class="product-size-line">1,17 кг</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>стиральный порошок</strong>
-                  </span>
-                  <span class="product-variant-line">Color Frische</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Европа</span>
-                </div>
-                <p>Dash Color Frische — стиральный порошок для цветного белья. Формула 3 в 1 предназначена для очищения тканей и поддержания свежести и яркого вида цветных вещей. Упаковка 1,17 кг рассчитана примерно на 18 стирок; выбирайте дозировку по жёсткости воды, загрузке и степени загрязнения.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">690 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_6ac15f7b2cff" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 669 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 1 445 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Ariel</span>
-                <button class="favorite-button" type="button" data-favorite="prd_bd8fab362271" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">OMO</span>
+                <button class="favorite-button" type="button" data-favorite="prd_2154ae462e29" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span></div>
 
-                <a class="product-image-link" href="/product/ariel-all-in-1-color-kapsuly-15-sht-362271/" data-product-link="prd_bd8fab362271" aria-label="Открыть Ariel All in 1 Color капсулы 15 шт">
-                  <img class="product-image" src="/assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg" alt="Ariel All in 1 Color капсулы 15 шт" loading="lazy">
+                <a class="product-image-link" href="/product/omo-gel-1-7l-sensitive-462e29/" data-product-link="prd_2154ae462e29" aria-label="Открыть OMO Gel (1.7L) Sensitive">
+                  <img class="product-image" src="/assets/products/registry/1c-1401/card-front-dfa73f03e35c.jpg" alt="OMO Gel (1.7L) Sensitive" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/ariel-all-in-1-color-kapsuly-15-sht-362271/" data-product-link="prd_bd8fab362271">
+                <a class="product-title-button product-copy" href="/product/omo-gel-1-7l-sensitive-462e29/" data-product-link="prd_2154ae462e29">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Ariel</span>
-                    <span class="product-size-line">15 шт</span>
+                    <span class="product-brand-name">OMO</span>
+
                   </span>
                   <span class="product-kind-line">
-                    <strong>капсулы для стирки</strong>
+                    <strong>гель для стирки</strong>
                   </span>
-                  <span class="product-variant-line">All in 1 Color капсулы</span>
+                  <span class="product-variant-line">Gel Sensitive</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Стирка и уход за бельем</span>
                 </div>
-                <p>Ariel All in 1 Color — капсулы для автоматической стирки цветного белья. Многокамерная капсула растворяется в воде и высвобождает средство для удаления повседневных пятен, сохраняя яркий вид цветных вещей. В упаковке 15 капсул; положите капсулу в глубину пустого барабана сухими руками, затем загрузите бельё.</p>
+                <p>OMO: гель для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 1.7 L, 1.7L.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">895 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_bd8fab362271" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">1 390 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_2154ae462e29" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 868 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Ariel</span>
-                <button class="favorite-button" type="button" data-favorite="prd_2acd534839ea" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/ariel-all-in-1-universal-kapsuly-15-sht-4839ea/" data-product-link="prd_2acd534839ea" aria-label="Открыть Ariel All in 1 Universal капсулы 15 шт">
-                  <img class="product-image" src="/assets/products/ariel/ariel-all-in-1-universal-caps-15-card-front.jpg" alt="Ariel All in 1 Universal капсулы 15 шт" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/ariel-all-in-1-universal-kapsuly-15-sht-4839ea/" data-product-link="prd_2acd534839ea">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Ariel</span>
-                    <span class="product-size-line">15 шт</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>капсулы для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">All in 1 Universal капсулы</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Ariel All in 1 Universal — капсулы для автоматической стирки белого, светлого и смешанного белья. Многокамерная капсула быстро растворяется в воде и высвобождает средство для удаления повседневных и засохших пятен. В упаковке 15 капсул; положите капсулу в глубину пустого барабана сухими руками, затем загрузите бельё.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">895 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_2acd534839ea" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 868 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 1 348 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 </div>
     </section>
-    
+
     <nav class="bottom-page-actions" aria-label="Навигация по странице">
       <button class="bottom-page-action" type="button" data-back>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"></path></svg>
@@ -1222,9 +1261,10 @@
       <a href="/catalog/">Разделы</a>
       <a href="/#checkout">Оформление</a>
       <a href="/#myOrders">Мои заказы</a>
+      <a href="/delivery-and-returns/">Доставка и возврат</a>
       <a href="/privacy.html">Политика конфиденциальности</a>
     </nav>
-    <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
+    <p>ИП Григорьев Василий Владимирович · ИНН 21509198010011</p>
   </div>
 </footer>
   <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Нижняя навигация">
@@ -1262,7 +1302,7 @@
   </a>
 </nav>
   <script>
-    const product = {"id": "prd_3fd39e5d8314", "code": "prd_3fd39e5d8314", "title": "Dash Active Frische гель для стирки 3,6 л", "description": "Dash Active Frische 2in1 — жидкое универсальное средство для стирки с ароматом кондиционера. Формула предназначена для очищения и свежести белого и светлого белья; температурный диапазон на упаковке указан от 20 до 95 °C. Объём 3,6 л рассчитан примерно на 80 стирок при стандартной дозировке.", "price": 2090, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Dash%20Active%20Frische%20%D0%B3%D0%B5%D0%BB%D1%8C%20%D0%B4%D0%BB%D1%8F%20%D1%81%D1%82%D0%B8%D1%80%D0%BA%D0%B8%203%2C6%20%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%202%20090%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/"};
+    const product = {"id": "prd_3fd39e5d8314", "code": "1902", "title": "Dash Active Frische гель для стирки 3,6 л", "description": "Dash Active Frische 2in1 — жидкое универсальное средство для стирки с ароматом кондиционера. Формула предназначена для очищения и свежести белого и светлого белья; температурный диапазон на упаковке указан от 20 до 95 °C. Объём 3,6 л рассчитан примерно на 80 стирок при стандартной дозировке.", "price": 2090, "inStock": true, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Dash%20Active%20Frische%20%D0%B3%D0%B5%D0%BB%D1%8C%20%D0%B4%D0%BB%D1%8F%20%D1%81%D1%82%D0%B8%D1%80%D0%BA%D0%B8%203%2C6%20%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%202%20090%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/dash-active-frische-gel-dlya-stirki-3-6-l-5d8314/"};
     const cartKey = "globalMarketCartDraft";
     const favoritesKey = "globalMarketFavorites";
     const recentlyViewedKey = "globalMarketRecentlyViewed";
@@ -1408,6 +1448,7 @@
           const params = new URLSearchParams();
           if (item.collection) params.set("collection", item.collection);
           if (item.category) params.set("category", item.category);
+          if (item.section) params.set("section", item.section);
           if (item.audience) params.set("audience", item.audience);
           if (item.query) params.set("query", item.query);
           if (item.label) params.set("label", item.label);
@@ -1602,14 +1643,58 @@
       window.location.href = event.currentTarget.href;
     });
 
-    document.querySelectorAll("[data-gallery-image]").forEach((button) => {
-      button.addEventListener("click", () => {
-        const image = button.dataset.galleryImage;
-        const mainImage = document.querySelector("[data-main-image]");
-        if (mainImage && image) mainImage.src = image;
-        document.querySelectorAll("[data-gallery-image]").forEach((item) => item.classList.toggle("active", item === button));
+    const galleryButtons = [...document.querySelectorAll("[data-gallery-image]")];
+    const mainImage = document.querySelector("[data-main-image]");
+    let activeGalleryIndex = Math.max(0, galleryButtons.findIndex((item) => item.classList.contains("active")));
+
+    function selectGalleryImage(index) {
+      if (!mainImage || !galleryButtons.length) return;
+      const nextIndex = Math.max(0, Math.min(index, galleryButtons.length - 1));
+      const button = galleryButtons[nextIndex];
+      const image = button?.dataset.galleryImage;
+      if (!image) return;
+      activeGalleryIndex = nextIndex;
+      mainImage.src = image;
+      mainImage.alt = button.querySelector("img")?.alt || product.title;
+      mainImage.setAttribute("aria-label", `Фото ${nextIndex + 1} из ${galleryButtons.length}`);
+      galleryButtons.forEach((item, itemIndex) => {
+        const active = itemIndex === nextIndex;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-current", active ? "true" : "false");
       });
+      button.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+
+    galleryButtons.forEach((button, index) => {
+      button.addEventListener("click", () => selectGalleryImage(index));
+      button.setAttribute("aria-current", index === activeGalleryIndex ? "true" : "false");
     });
+
+    if (mainImage && galleryButtons.length > 1) {
+      let swipeStart = null;
+      mainImage.tabIndex = 0;
+      mainImage.setAttribute("aria-label", `Фото ${activeGalleryIndex + 1} из ${galleryButtons.length}`);
+      mainImage.addEventListener("dragstart", (event) => event.preventDefault());
+      mainImage.addEventListener("pointerdown", (event) => {
+        if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
+        swipeStart = { pointerId: event.pointerId, x: event.clientX, y: event.clientY };
+        mainImage.setPointerCapture?.(event.pointerId);
+      });
+      mainImage.addEventListener("pointerup", (event) => {
+        if (!swipeStart || swipeStart.pointerId !== event.pointerId) return;
+        const deltaX = event.clientX - swipeStart.x;
+        const deltaY = event.clientY - swipeStart.y;
+        swipeStart = null;
+        if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.2) return;
+        selectGalleryImage(activeGalleryIndex + (deltaX < 0 ? 1 : -1));
+      });
+      mainImage.addEventListener("pointercancel", () => { swipeStart = null; });
+      mainImage.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        selectGalleryImage(activeGalleryIndex + (event.key === "ArrowRight" ? 1 : -1));
+      });
+    }
 
     updateFavoriteButton();
     syncGridFavoriteButtons();
@@ -1638,5 +1723,15 @@
       window.requestAnimationFrame(updateSmartHeader);
     }, { passive: true });
   </script>
+  <!-- BEGIN shared-analytics-consent -->
+<aside class="gmk-consent" data-nosnippet aria-label="Настройки аналитики">
+  <strong>Аналитика и рекламные измерения</strong>
+  <p>Анонимные события магазина отправляются в Google только с вашего согласия. Телефон, SMS-код, имя, адрес и текст заказа не передаются. <a href="/privacy.html">Подробнее</a></p>
+  <div class="gmk-consent-actions">
+    <button type="button" data-consent="granted">Разрешить</button>
+    <button type="button" data-consent="denied">Только необходимые</button>
+  </div>
+</aside>
+<!-- END shared-analytics-consent -->
 </body>
 </html>

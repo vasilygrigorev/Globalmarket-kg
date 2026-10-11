@@ -470,3 +470,10 @@ exceptions in `docs/product-photo-rules.md`).
 
 Пока не пришлют третье фото (или явное "публикуй как есть"), эти два
 товара останутся в статусе "review", без фото на сайте.
+
+## 2026-10-11 — recovered loose group awaiting exact identity
+
+`telegram-8767964230-20260619-110510-04-*` is a complete historical
+card/front/back trio recovered while rebuilding the approved asset archive.
+It is intentionally not mapped by visual similarity alone. Keep the originals,
+do not publish them, and wait for an exact 1C code or owner confirmation.

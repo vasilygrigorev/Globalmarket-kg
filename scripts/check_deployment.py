@@ -180,7 +180,8 @@ def main():
         add_error(errors, f"product-pages count mismatch: {product_pages_manifest.get('count')} != {len(manifest_pages)}")
     if landing_pages_manifest.get("count") != len(landing_pages):
         add_error(errors, f"landing-pages count mismatch: {landing_pages_manifest.get('count')} != {len(landing_pages)}")
-    expected_sitemap_count = len(manifest_pages) + len(landing_pages) + 3
+    # Static top-level pages: home, catalog, privacy, and delivery/returns.
+    expected_sitemap_count = len(manifest_pages) + len(landing_pages) + 4
     if sitemap_count and sitemap_count != expected_sitemap_count:
         add_error(errors, f"sitemap URL count mismatch: {sitemap_count} != {expected_sitemap_count}")
     if sitemap_product_count and manifest_pages and sitemap_product_count != len(manifest_pages):

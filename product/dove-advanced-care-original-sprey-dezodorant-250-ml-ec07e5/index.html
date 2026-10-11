@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Dove Advanced Care Original спрей-дезодорант, 250 мл">
   <meta name="twitter:description" content="Dove Advanced Care Original — аэрозольный антиперспирант с классическим ароматом Dove. Формула с технологией тройного увлажнения ухаживает за кожей подмыше">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20260722-desktop-cart-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -43,12 +43,23 @@
     "url": "https://globalmarket.kg/product/dove-advanced-care-original-sprey-dezodorant-250-ml-ec07e5/",
     "priceCurrency": "KGS",
     "price": "450",
+    "validFrom": "2026-10-10",
     "priceValidUntil": "2027-12-31",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
+      "@id": "https://globalmarket.kg/#organization",
       "name": "Global Market KG"
+    },
+    "hasMerchantReturnPolicy": {
+      "@id": "https://globalmarket.kg/delivery-and-returns/#return-policy"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "hasShippingService": {
+        "@id": "https://globalmarket.kg/delivery-and-returns/#shipping-policy"
+      }
     }
   }
 }</script>
@@ -98,38 +109,49 @@
     .icon-action.smm-share .instagram-dot { fill: currentColor; stroke: none; }
     .share-feedback { position: fixed; left: 50%; bottom: calc(82px + env(safe-area-inset-bottom)); z-index: 40; width: max-content; max-width: calc(100vw - 32px); transform: translateX(-50%); padding: 11px 14px; border-radius: 8px; color: #fff; background: rgba(20, 24, 28, 0.94); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22); font-size: 14px; font-weight: 750; text-align: center; }
     .visual-panel { background: #fff; }
-    .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; }
+    .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-drag: none; overscroll-behavior-x: contain; }
+    .media-main:active { cursor: grabbing; }
+    .media-main:focus-visible { outline: 3px solid #07958f; outline-offset: -3px; }
     .gallery-thumbs { display: flex; gap: 10px; padding: 14px 16px 18px; overflow-x: auto; background: #f7f7f8; }
-    .gallery-thumb { display: grid; flex: 0 0 76px; gap: 5px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }
+    .gallery-thumb { display: block; flex: 0 0 76px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }
     .gallery-thumb.active { border-color: #1f1f1f; background: #fff; }
     .gallery-thumb img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
-    .gallery-thumb span { overflow: hidden; font-size: 11px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; text-align: center; }
-    .product-purchase-strip { padding: 0 16px 18px; background: #f7f7f8; }
+    .gallery-thumb span { display: none; }
+    .product-purchase-strip { padding: 12px 16px 18px; background: #f7f7f8; }
     .product-purchase-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .product-purchase-actions > * { width: 100%; min-width: 0; }
-    .product-detail-info { display: grid; gap: 18px; padding: 28px 26px 26px; }
+    .purchase-price { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 0 0 14px; text-align: center; }
+    .purchase-price strong { font-weight: inherit; }
+    .purchase-price .price-group { display: flex; align-items: baseline; justify-content: center; gap: 10px; }
+    .purchase-price .price { color: #132e36; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 38px; font-weight: 300; line-height: 1.05; }
+    .purchase-price .price-original { color: #8a8f94; font-size: 20px; font-weight: 500; }
+    .purchase-price small { color: #777; font-size: 13px; }
+    .out-of-stock-panel { display: grid; gap: 5px; padding: 14px 16px; border: 1px solid #d7e2e2; border-radius: 8px; color: #28484d; background: #eef7f6; text-align: center; }
+    .out-of-stock-panel strong { font-size: 18px; }
+    .out-of-stock-panel span { color: #5e7276; font-size: 14px; line-height: 1.4; }
+    .product-detail-info { display: grid; gap: 12px; padding: 22px; }
     .product-breadcrumbs { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: #777; font-size: 13px; line-height: 1.35; }
     .product-breadcrumbs a { color: inherit; text-decoration: none; }
     .product-breadcrumbs a:hover { color: #111; }
     .crumb-separator { color: #b0b0b6; }
-    .title-block { display: grid; gap: 8px; }
+    .title-block { display: grid; gap: 4px; }
     .brand-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
     h1 { margin: 0; font-size: clamp(38px, 7vw, 58px); font-weight: 300; line-height: 1.05; }
     .size-line { flex: 0 0 auto; color: #555; font-size: clamp(20px, 4.5vw, 30px); font-weight: 300; line-height: 1.1; white-space: nowrap; }
     .type { margin: 0; font-size: clamp(24px, 5vw, 34px); font-weight: 800; line-height: 1.12; }
     .variant { margin: 0; color: #777; font-size: 19px; line-height: 1.35; }
-    body.product-page .product-detail-info .description { display: block; min-height: 0; overflow: visible; margin: 0; color: #666; font-size: 18px; line-height: 1.55; -webkit-line-clamp: unset; }
-    .price-box { display: grid; gap: 4px; padding: 16px; border: 1px solid #e4e4e7; border-radius: 8px; background: #f5f5f6; }
+    body.product-page .product-detail-info .description { display: block; min-height: 0; overflow: visible; margin: 0; padding: 0; border: 0; color: #555; background: transparent; font-size: 18px; line-height: 1.45; -webkit-line-clamp: unset; }
+    .price-box { display: grid; gap: 4px; padding: 0; border: 0; background: transparent; }
     .price-box span,
     .price-box small { color: #777; }
     .price-box .price { font-size: 38px; font-weight: 850; line-height: 1; }
     .som-sign { display: inline-block; padding-bottom: 0.03em; border-bottom: 0.06em solid currentColor; line-height: 0.88; }
-    .specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }
-    .specs div { padding: 12px; border: 1px solid #e4e4e7; border-radius: 8px; background: #fff; }
-    .specs dt { color: #777; font-size: 13px; }
-    .specs dd { margin: 4px 0 0; font-weight: 800; }
+    .specs { display: flex; flex-wrap: wrap; gap: 7px 18px; margin: 2px 0 0; }
+    .specs div { display: flex; align-items: baseline; gap: 5px; min-width: 0; padding: 0; border: 0; background: transparent; }
+    .specs dt { color: #777; font-size: 12px; white-space: nowrap; }
+    .specs dd { min-width: 0; margin: 0; font-size: 14px; font-weight: 750; }
     .specs dd a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .note { padding: 13px 14px; border-radius: 8px; color: #666; background: #f5f5f6; line-height: 1.45; }
+    .note { padding: 0; border: 0; color: #666; background: transparent; line-height: 1.4; }
     .modal-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .primary-action,
     .secondary-action,
@@ -168,11 +190,12 @@
       .page { max-width: none; padding: 0; }
       .product-shell { border-radius: 0; box-shadow: none; }
       .related { padding: 0 8px; }
-      .product-detail-info { padding: 26px 18px 20px; }
+      .product-detail-info { padding: 18px 16px; }
       .icon-action { width: 44px; height: 44px; }
       .icon-action.smm-share:not([hidden]) { display: grid; }
-      .product-purchase-strip { padding: 0 10px 14px; }
-      .specs { grid-template-columns: 1fr; }
+      .product-purchase-strip { padding: 10px 10px 14px; }
+      .purchase-price .price { font-size: 34px; }
+      .specs { gap: 7px 14px; }
       .related-grid { grid-template-columns: repeat(2, 1fr); }
       .bottom-page-actions { padding: 0 18px; }
     }
@@ -183,6 +206,24 @@
       .top-actions { left: 16px; right: 16px; }
     }
   </style>
+  <!-- BEGIN shared-analytics-head -->
+<meta name="google-site-verification" content="960zpLbWQpecqn6ZhlIecGVl0zt3SRKtzPd800egMo4">
+<link rel="stylesheet" href="/assets/google-consent.css?v=20261011-retail-full-recovery-v1">
+<script id="gmk-google-tag-bootstrap">
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+window.gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500
+});
+window.gtag('js', new Date());
+</script>
+<script async id="gmk-google-tag-loader" src="https://www.googletagmanager.com/gtag/js?id=G-9KZK8Y4S7K"></script>
+<script defer id="gmk-google-consent-script" src="/assets/google-consent.js?v=20261011-retail-full-recovery-v1"></script>
+<!-- END shared-analytics-head -->
 </head>
 <body class="product-page">
   <header class="site-header" data-smart-header>
@@ -251,27 +292,30 @@
         <div class="gallery-thumbs" aria-label="Фотографии товара">
         <button class="gallery-thumb active" type="button" data-gallery-image="/assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg" aria-label="Лицевая">
           <img src="/assets/products/dove/dove-advanced-care-original-250ml-card-front.jpg" alt="Dove Advanced Care Original спрей-дезодорант, 250 мл - Лицевая" loading="lazy">
-          <span>Лицевая</span>
         </button>
-        
+
 
         <button class="gallery-thumb " type="button" data-gallery-image="/assets/products/dove/dove-advanced-care-original-250ml-front.jpg" aria-label="Лицевая">
           <img src="/assets/products/dove/dove-advanced-care-original-250ml-front.jpg" alt="Dove Advanced Care Original спрей-дезодорант, 250 мл - Лицевая" loading="lazy">
-          <span>Лицевая</span>
         </button>
-        
+
 
         <button class="gallery-thumb " type="button" data-gallery-image="/assets/products/dove/dove-advanced-care-original-250ml-back.jpg" aria-label="Обратная">
           <img src="/assets/products/dove/dove-advanced-care-original-250ml-back.jpg" alt="Dove Advanced Care Original спрей-дезодорант, 250 мл - Обратная" loading="lazy">
-          <span>Обратная</span>
         </button>
         </div>
         <div class="product-purchase-strip">
+        <div class="purchase-price">
+          <strong><span class="price">450 <span class="som-sign">с</span></span></strong>
+          <small>Клиентская цена: скидка 3% при входе</small>
+        </div>
+
         <div class="modal-actions product-purchase-actions">
           <button class="primary-action" type="button" data-add-cart>В корзину</button>
           <a class="secondary-action" href="/?checkout=1#checkoutForm" data-checkout>К оформлению</a>
         </div>
-        </div>
+
+    </div>
       </section>
       <section class="product-detail-info">
         <nav class="product-breadcrumbs" aria-label="Навигация"><a href="/#top">Главная</a><span class="crumb-separator">/</span><a href="/category/body/">Уход за телом</a><span class="crumb-separator">/</span><a href="/brand/dove/">Dove</a><span class="crumb-separator">/</span><span>Dove Advanced Care Original спрей-дезодорант, 250 мл</span></nav>
@@ -284,29 +328,61 @@
           <p class="variant">Advanced Care Original</p>
         </div>
         <p class="description">Dove Advanced Care Original — аэрозольный антиперспирант с классическим ароматом Dove. Формула с технологией тройного увлажнения ухаживает за кожей подмышек, а заявленная защита от пота и запаха рассчитана до 72 часов. Объём 250 мл; встряхните баллон и распыляйте короткими нажатиями с расстояния около 15 см.</p>
-        <div class="price-box">
-          <span>Ваша цена</span>
-          <strong><span class="price">450 <span class="som-sign">с</span></span></strong>
-          <small>Клиентская цена: скидка 3% при входе</small>
-        </div>
         <dl class="specs">
           <div><dt>Бренд</dt><dd><a href="/brand/dove/">Dove</a></dd></div>
           <div><dt>Категория</dt><dd><a href="/category/body/">Уход за телом</a></dd></div>
           <div><dt>Тип товара</dt><dd>спрей-дезодорант</dd></div>
-          <div><dt>Единица</dt><dd>шт</dd></div>
-          
+          <div><dt>Единица</dt><dd>250 мл</dd></div>
+
         </dl>
-        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 10 000 <span class="som-sign">с</span>.</div>
-        
+        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 5 000 <span class="som-sign">с</span>.</div>
+
         <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Dove%20Advanced%20Care%20Original%20%D1%81%D0%BF%D1%80%D0%B5%D0%B9-%D0%B4%D0%B5%D0%B7%D0%BE%D0%B4%D0%BE%D1%80%D0%B0%D0%BD%D1%82%2C%20250%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20450%20%D1%81%D0%BE%D0%BC." rel="noopener">Заказать сразу в WhatsApp</a>
         <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%83%3A%20Dove%20Advanced%20Care%20Original%20%D1%81%D0%BF%D1%80%D0%B5%D0%B9-%D0%B4%D0%B5%D0%B7%D0%BE%D0%B4%D0%BE%D1%80%D0%B0%D0%BD%D1%82%2C%20250%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20450%20%D1%81%D0%BE%D0%BC.%20https%3A//globalmarket.kg/product/dove-advanced-care-original-sprey-dezodorant-250-ml-ec07e5/" rel="noopener">Спросить в WhatsApp</a>
-        
+
       </section>
     </article>
-    
+
     <section class="related">
       <h2>Похожие товары</h2>
       <div class="related-grid">
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">Dove</span>
+                <button class="favorite-button" type="button" data-favorite="prd_9fe2aaac57a2" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/dove-advanced-care-go-fresh-pomegranate-sprey-antiperspirant-250-ml-ac57a2/" data-product-link="prd_9fe2aaac57a2" aria-label="Открыть Dove Advanced Care Go Fresh Pomegranate спрей-антиперспирант 250 мл">
+                  <img class="product-image" src="/assets/products/dove/dove-2943-pomegranate-250ml-card-front.jpg" alt="Dove Advanced Care Go Fresh Pomegranate спрей-антиперспирант 250 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dove-advanced-care-go-fresh-pomegranate-sprey-antiperspirant-250-ml-ac57a2/" data-product-link="prd_9fe2aaac57a2">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dove</span>
+                    <span class="product-size-line">250 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>спрей-антиперспирант</strong>
+                  </span>
+                  <span class="product-variant-line">Advanced Care Go Fresh Pomegranate</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Дезодоранты</span>
+                </div>
+                <p>Dove Advanced Care Go Fresh Pomegranate &amp; Lemon Verbena — аэрозольный антиперспирант 250 мл с ароматом граната и лимонной вербены. На упаковке заявлены 0% спирта, увлажняющий крем и защита до 48 часов; наносите на чистую сухую кожу по инструкции.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">450 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_9fe2aaac57a2" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 436 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
                 <span class="placeholder-brand">Dove</span>
@@ -451,6 +527,265 @@
                     <button class="add-button compact-add-button" type="button" data-add="prd_f23090eb2627" aria-label="Добавить в корзину">В корзину</button>
                   </div>
                   <span class="registered-price-note">Цена при входе: 436 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_559" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-adrenalin-sprey-dezodorant-150-ml-1c_559/" data-product-link="prd_1c_559" aria-label="Открыть AXE Adrenalin спрей-дезодорант 150 мл">
+                  <img class="product-image" src="/assets/products/axe/axe-559-adrenalin-150ml-card-front.jpg" alt="AXE Adrenalin спрей-дезодорант 150 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-adrenalin-sprey-dezodorant-150-ml-1c_559/" data-product-link="prd_1c_559">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+                    <span class="product-size-line">150 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>спрей-дезодорант</strong>
+                  </span>
+                  <span class="product-variant-line">Adrenalin</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Дезодоранты</span>
+                </div>
+                <p>AXE Adrenalin — мужской аэрозольный дезодорант 150 мл с ароматом Adrenalin. Формат Non Stop Fresh предназначен для ежедневного поддержания свежести; распыляйте на чистую сухую кожу с расстояния, указанного производителем.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_559" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_1431" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-apollo-sprey-dezodorant-150-ml-c_1431/" data-product-link="prd_1c_1431" aria-label="Открыть AXE Apollo спрей-дезодорант 150 мл">
+                  <img class="product-image" src="/assets/products/axe/axe-1431-apollo-150ml-card-front.jpg" alt="AXE Apollo спрей-дезодорант 150 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-apollo-sprey-dezodorant-150-ml-c_1431/" data-product-link="prd_1c_1431">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+                    <span class="product-size-line">150 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>спрей-дезодорант</strong>
+                  </span>
+                  <span class="product-variant-line">Apollo</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Дезодоранты</span>
+                </div>
+                <p>AXE Apollo — мужской аэрозольный дезодорант 150 мл с ароматом Apollo. Формат Non Stop Fresh предназначен для ежедневного поддержания свежести; распыляйте на чистую сухую кожу с расстояния, указанного производителем.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_1431" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_ae530bcb06d3" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-black-sprey-dezodorant-150-ml-cb06d3/" data-product-link="prd_ae530bcb06d3" aria-label="Открыть AXE Black спрей-дезодорант 150 мл">
+                  <img class="product-image" src="/assets/products/axe/axe-901-black-150ml-card-front.jpg" alt="AXE Black спрей-дезодорант 150 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-black-sprey-dezodorant-150-ml-cb06d3/" data-product-link="prd_ae530bcb06d3">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+                    <span class="product-size-line">150 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>спрей-дезодорант</strong>
+                  </span>
+                  <span class="product-variant-line">Black</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Дезодоранты</span>
+                </div>
+                <p>AXE Black — мужской аэрозольный дезодорант 150 мл с ароматом Black. Формат Non Stop Fresh предназначен для ежедневного поддержания свежести; распыляйте на чистую сухую кожу с расстояния, указанного производителем.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_ae530bcb06d3" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_906" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-excite-sprey-dezodorant-150-ml-1c_906/" data-product-link="prd_1c_906" aria-label="Открыть AXE Excite спрей-дезодорант 150 мл">
+                  <img class="product-image" src="/assets/products/axe/axe-906-excite-150ml-card-front.jpg" alt="AXE Excite спрей-дезодорант 150 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-excite-sprey-dezodorant-150-ml-1c_906/" data-product-link="prd_1c_906">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+                    <span class="product-size-line">150 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>спрей-дезодорант</strong>
+                  </span>
+                  <span class="product-variant-line">Excite</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Дезодоранты</span>
+                </div>
+                <p>AXE Excite — мужской аэрозольный дезодорант 150 мл с ароматом Excite. Формат Non Stop Fresh предназначен для ежедневного поддержания свежести; распыляйте на чистую сухую кожу с расстояния, указанного производителем.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_906" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_908" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-gold-temptation-sprey-dezodorant-150-ml-1c_908/" data-product-link="prd_1c_908" aria-label="Открыть AXE Gold Temptation спрей-дезодорант 150 мл">
+                  <img class="product-image" src="/assets/products/axe/axe-908-gold-temptation-150ml-card-front.jpg" alt="AXE Gold Temptation спрей-дезодорант 150 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-gold-temptation-sprey-dezodorant-150-ml-1c_908/" data-product-link="prd_1c_908">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+                    <span class="product-size-line">150 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>спрей-дезодорант</strong>
+                  </span>
+                  <span class="product-variant-line">Gold Temptation</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Дезодоранты</span>
+                </div>
+                <p>AXE Gold Temptation — мужской аэрозольный дезодорант 150 мл с ароматом Gold Temptation. Формат Non Stop Fresh предназначен для ежедневного поддержания свежести; распыляйте на чистую сухую кожу с расстояния, указанного производителем.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_908" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_902" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-ice-chill-sprey-dezodorant-150-ml-1c_902/" data-product-link="prd_1c_902" aria-label="Открыть AXE Ice Chill спрей-дезодорант 150 мл">
+                  <img class="product-image" src="/assets/products/axe/axe-902-ice-chill-150ml-card-front.jpg" alt="AXE Ice Chill спрей-дезодорант 150 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-ice-chill-sprey-dezodorant-150-ml-1c_902/" data-product-link="prd_1c_902">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+                    <span class="product-size-line">150 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>спрей-дезодорант</strong>
+                  </span>
+                  <span class="product-variant-line">Ice Chill</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Дезодоранты</span>
+                </div>
+                <p>AXE Ice Chill — мужской аэрозольный дезодорант 150 мл с ароматом Ice Chill. Формат Non Stop Fresh предназначен для ежедневного поддержания свежести; распыляйте на чистую сухую кожу с расстояния, указанного производителем.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_902" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_2844" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-musk-sprey-dezodorant-150-ml-c_2844/" data-product-link="prd_1c_2844" aria-label="Открыть AXE Musk спрей-дезодорант 150 мл">
+                  <img class="product-image" src="/assets/products/axe/axe-2844-musk-150ml-card-front.jpg" alt="AXE Musk спрей-дезодорант 150 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-musk-sprey-dezodorant-150-ml-c_2844/" data-product-link="prd_1c_2844">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+                    <span class="product-size-line">150 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>спрей-дезодорант</strong>
+                  </span>
+                  <span class="product-variant-line">Musk</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Дезодоранты</span>
+                </div>
+                <p>AXE Musk — мужской аэрозольный дезодорант 150 мл с ароматом Musk. Формат Non Stop Fresh предназначен для ежедневного поддержания свежести; распыляйте на чистую сухую кожу с расстояния, указанного производителем.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_2844" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
@@ -679,294 +1014,72 @@
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Dove</span>
-                <button class="favorite-button" type="button" data-favorite="prd_21c8c8aa3e5d" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_2841" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
 
-                <a class="product-image-link" href="/product/dove-beauty-finish-dezodorant-stik-40-g-aa3e5d/" data-product-link="prd_21c8c8aa3e5d" aria-label="Открыть Dove Beauty Finish дезодорант-стик 40 г">
-                  <img class="product-image" src="/assets/products/dove/dove-stick-beauty-finish-40g-card-front.jpg" alt="Dove Beauty Finish дезодорант-стик 40 г" loading="lazy">
+                <a class="product-image-link" href="/product/axe-wild-spice-sprey-dezodorant-150-ml-c_2841/" data-product-link="prd_1c_2841" aria-label="Открыть AXE Wild Spice спрей-дезодорант 150 мл">
+                  <img class="product-image" src="/assets/products/axe/axe-2841-wild-spice-150ml-card-front.jpg" alt="AXE Wild Spice спрей-дезодорант 150 мл" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dove-beauty-finish-dezodorant-stik-40-g-aa3e5d/" data-product-link="prd_21c8c8aa3e5d">
+                <a class="product-title-button product-copy" href="/product/axe-wild-spice-sprey-dezodorant-150-ml-c_2841/" data-product-link="prd_1c_2841">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Dove</span>
-                    <span class="product-size-line">40 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>дезодорант-стик</strong>
-                  </span>
-                  <span class="product-variant-line">Beauty Finish</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Дезодоранты</span>
-                </div>
-                <p>Dove Beauty Finish — женский антиперспирант-стик с мягким цветочно-пудровым ароматом. Формула с увлажняющим кремом помогает ухаживать за кожей подмышек и обеспечивает заявленную защиту от пота и запаха до 48 часов. Масса 40 г; наносите тонким слоем на чистую сухую кожу.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">300 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_21c8c8aa3e5d" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 291 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Dove</span>
-                <button class="favorite-button" type="button" data-favorite="prd_8b3a9f34a763" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/dove-men-care-clean-comfort-dezodorant-stik-40-g-34a763/" data-product-link="prd_8b3a9f34a763" aria-label="Открыть Dove Men +Care Clean Comfort дезодорант-стик 40 г">
-                  <img class="product-image" src="/assets/products/dove/dove-stick-men-clean-comfort-40g-card-front.jpg" alt="Dove Men +Care Clean Comfort дезодорант-стик 40 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dove-men-care-clean-comfort-dezodorant-stik-40-g-34a763/" data-product-link="prd_8b3a9f34a763">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dove</span>
-                    <span class="product-size-line">40 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>дезодорант-стик</strong>
-                  </span>
-                  <span class="product-variant-line">Men +Care Clean Comfort</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Дезодоранты</span>
-                </div>
-                <p>Dove Men+Care Clean Comfort — мужской антиперспирант-стик с чистым свежим ароматом. Формула с увлажняющей технологией помогает ухаживать за кожей подмышек, одновременно обеспечивая защиту от пота и запаха до 48 часов. Масса 40 г; наносите средство тонким слоем на чистую сухую кожу.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">300 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_8b3a9f34a763" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 291 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Dove</span>
-                <button class="favorite-button" type="button" data-favorite="prd_f7a9d836005f" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/dove-original-dezodorant-stik-40-g-36005f/" data-product-link="prd_f7a9d836005f" aria-label="Открыть Dove Original дезодорант-стик 40 г">
-                  <img class="product-image" src="/assets/products/dove/dove-stick-original-40g-card-front.jpg" alt="Dove Original дезодорант-стик 40 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dove-original-dezodorant-stik-40-g-36005f/" data-product-link="prd_f7a9d836005f">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dove</span>
-                    <span class="product-size-line">40 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>дезодорант-стик</strong>
-                  </span>
-                  <span class="product-variant-line">Original</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Дезодоранты</span>
-                </div>
-                <p>Dove Original — антиперспирант-стик с классическим чистым ароматом. Формула с увлажняющим кремом помогает ухаживать за кожей подмышек и обеспечивает заявленную защиту от пота и запаха до 48 часов. Масса 40 г; наносите тонким слоем на чистую сухую кожу.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">300 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_f7a9d836005f" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 291 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Dove</span>
-                <button class="favorite-button" type="button" data-favorite="prd_cdc989a294f9" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/dove-go-fresh-cucumber-green-tea-dezodorant-stik-40-g-a294f9/" data-product-link="prd_cdc989a294f9" aria-label="Открыть Dove go fresh Cucumber &amp; Green Tea дезодорант-стик 40 г">
-                  <img class="product-image" src="/assets/products/dove/dove-stick-cucumber-40g-card-front.jpg" alt="Dove go fresh Cucumber &amp; Green Tea дезодорант-стик 40 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dove-go-fresh-cucumber-green-tea-dezodorant-stik-40-g-a294f9/" data-product-link="prd_cdc989a294f9">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dove</span>
-                    <span class="product-size-line">40 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>дезодорант-стик</strong>
-                  </span>
-                  <span class="product-variant-line">go fresh Cucumber &amp; Green Tea</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Дезодоранты</span>
-                </div>
-                <p>Дезодорант-антиперспирант Dove go fresh с ароматом огурца и зелёного чая, увлажняющий крем, защита 48 часов. Объём 40 г.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">300 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_cdc989a294f9" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 291 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Dove</span>
-                <button class="favorite-button" type="button" data-favorite="prd_23e1645a6a85" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/dove-go-fresh-pomegranate-lemon-verbena-dezodorant-stik-40-g-5a6a85/" data-product-link="prd_23e1645a6a85" aria-label="Открыть Dove go fresh Pomegranate &amp; Lemon Verbena дезодорант-стик 40 г">
-                  <img class="product-image" src="/assets/products/dove/dove-stick-pomegranate-40g-card-front.jpg" alt="Dove go fresh Pomegranate &amp; Lemon Verbena дезодорант-стик 40 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dove-go-fresh-pomegranate-lemon-verbena-dezodorant-stik-40-g-5a6a85/" data-product-link="prd_23e1645a6a85">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dove</span>
-                    <span class="product-size-line">40 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>дезодорант-стик</strong>
-                  </span>
-                  <span class="product-variant-line">go fresh Pomegranate &amp; Lemon Verbena</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Дезодоранты</span>
-                </div>
-                <p>Дезодорант-антиперспирант Dove go fresh с ароматом граната и вербены, увлажняющий крем, защита 48 часов. Объём 40 г.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">300 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_23e1645a6a85" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 291 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
-                <span class="placeholder-brand">Skin Doctor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_418f9f481516" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/skin-doctor-facial-sunscreen-spf60-sprey-100-ml-481516/" data-product-link="prd_418f9f481516" aria-label="Открыть Skin Doctor Facial Sunscreen SPF60+ спрей, 100 мл">
-                  <img class="product-image" src="/assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-card-front.jpg" alt="Skin Doctor Facial Sunscreen SPF60+ спрей, 100 мл" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/skin-doctor-facial-sunscreen-spf60-sprey-100-ml-481516/" data-product-link="prd_418f9f481516">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Skin Doctor</span>
-                    <span class="product-size-line">100 мл</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>солнцезащитный спрей</strong>
-                  </span>
-                  <span class="product-variant-line">Facial Sunscreen SPF60+ спрей</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Уход за телом</span>
-                </div>
-                <p>Солнцезащитный спрей для лица Skin Doctor, SPF60+ PA++++, лёгкая нежирная формула. Объём 100 мл. Солнцезащитка, спрей, для тела.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">350 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_418f9f481516" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 339 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
-                <span class="placeholder-brand">YC</span>
-                <button class="favorite-button" type="button" data-favorite="prd_45b58a935040" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/yc-white-sunscreen-spray-spf50-solntsezaschitnyy-sprey-150-ml-935040/" data-product-link="prd_45b58a935040" aria-label="Открыть YC White Sunscreen Spray SPF50 солнцезащитный спрей 150 мл">
-                  <img class="product-image" src="/assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg" alt="YC White Sunscreen Spray SPF50 солнцезащитный спрей 150 мл" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/yc-white-sunscreen-spray-spf50-solntsezaschitnyy-sprey-150-ml-935040/" data-product-link="prd_45b58a935040">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">YC</span>
+                    <span class="product-brand-name">AXE</span>
                     <span class="product-size-line">150 мл</span>
                   </span>
                   <span class="product-kind-line">
-                    <strong>солнцезащитный спрей</strong>
+                    <strong>спрей-дезодорант</strong>
                   </span>
-                  <span class="product-variant-line">White Sunscreen Spray SPF50</span>
+                  <span class="product-variant-line">Wild Spice</span>
                 </a>
                 <div class="product-meta product-meta-compact">
-                  <span>Уход за телом</span>
+                  <span>Дезодоранты</span>
                 </div>
-                <p>YC White Sunscreen Spray SPF50 — солнцезащитный спрей для лица и тела с защитой от UVA/UVB. Аэрозольный формат помогает равномерно распределять средство на открытых участках кожи, а лёгкая формула быстро впитывается. Объём 150 мл; распыляйте до выхода на солнце, не вдыхайте аэрозоль и регулярно обновляйте защиту.</p>
+                <p>AXE Wild Spice — мужской аэрозольный дезодорант 150 мл с ароматом Wild Spice. Формат Non Stop Fresh предназначен для ежедневного поддержания свежести; распыляйте на чистую сухую кожу с расстояния, указанного производителем.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">450 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_45b58a935040" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_2841" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 436 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Arm &amp; Hammer</span>
-                <button class="favorite-button" type="button" data-favorite="prd_16599c72dda7" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">Felce Azzurra</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3103" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
 
-                <a class="product-image-link" href="/product/arm-hammer-essentials-coconut-geranium-dezodorant-71-g-72dda7/" data-product-link="prd_16599c72dda7" aria-label="Открыть Arm &amp; Hammer Essentials Coconut Geranium дезодорант 71 г">
-                  <img class="product-image" src="/assets/products/arm-hammer/arm-hammer-essentials-coconut-geranium-71g-card-front.jpg" alt="Arm &amp; Hammer Essentials Coconut Geranium дезодорант 71 г" loading="lazy">
+                <a class="product-image-link" href="/product/felce-azzurra-men-deodorant-spray-cool-blue-150-ml-c_3103/" data-product-link="prd_1c_3103" aria-label="Открыть Felce Azzurra Men deodorant spray Cool Blue 150 ml">
+                  <img class="product-image" src="/assets/products/felce-azzurra/felce-azzurra-3103-card-front.jpg" alt="Felce Azzurra Men deodorant spray Cool Blue 150 ml" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/arm-hammer-essentials-coconut-geranium-dezodorant-71-g-72dda7/" data-product-link="prd_16599c72dda7">
+                <a class="product-title-button product-copy" href="/product/felce-azzurra-men-deodorant-spray-cool-blue-150-ml-c_3103/" data-product-link="prd_1c_3103">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Arm &amp; Hammer</span>
-                    <span class="product-size-line">71 г</span>
+                    <span class="product-brand-name">Felce Azzurra</span>
+                    <span class="product-size-line">150 мл</span>
                   </span>
                   <span class="product-kind-line">
                     <strong>дезодорант</strong>
                   </span>
-                  <span class="product-variant-line">Essentials Coconut Geranium</span>
+                  <span class="product-variant-line">Men deodorant spray Cool Blue</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Дезодоранты</span>
                 </div>
-                <p>Дезодорант Arm &amp; Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Coconut Geranium. Вес 2.5 oz (71 г).</p>
+                <p>Felce Azzurra Men deodorant spray Cool Blue 150 ml - дезодорант для ежедневной свежести и ухода. Формат: 150 мл. Наносите на чистую сухую кожу в соответствии с рекомендациями на упаковке.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
                     <span class="price">490 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_16599c72dda7" aria-label="Добавить в корзину">В корзину</button>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3103" aria-label="Добавить в корзину">В корзину</button>
                   </div>
                   <span class="registered-price-note">Цена при входе: 475 <span class="som-sign">с</span></span>
                 </div>
@@ -975,35 +1088,35 @@
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Arm &amp; Hammer</span>
-                <button class="favorite-button" type="button" data-favorite="prd_bc63389835c9" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">Felce Azzurra</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3104" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
 
-                <a class="product-image-link" href="/product/arm-hammer-essentials-juniper-berry-dezodorant-71-g-9835c9/" data-product-link="prd_bc63389835c9" aria-label="Открыть Arm &amp; Hammer Essentials Juniper Berry дезодорант 71 г">
-                  <img class="product-image" src="/assets/products/arm-hammer/arm-hammer-essentials-juniper-berry-71g-card-front.jpg" alt="Arm &amp; Hammer Essentials Juniper Berry дезодорант 71 г" loading="lazy">
+                <a class="product-image-link" href="/product/felce-azzurra-men-deodorant-spray-power-fresh-150-ml-c_3104/" data-product-link="prd_1c_3104" aria-label="Открыть Felce Azzurra Men deodorant spray Power Fresh 150 ml">
+                  <img class="product-image" src="/assets/products/felce-azzurra/felce-azzurra-3104-card-front.jpg" alt="Felce Azzurra Men deodorant spray Power Fresh 150 ml" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/arm-hammer-essentials-juniper-berry-dezodorant-71-g-9835c9/" data-product-link="prd_bc63389835c9">
+                <a class="product-title-button product-copy" href="/product/felce-azzurra-men-deodorant-spray-power-fresh-150-ml-c_3104/" data-product-link="prd_1c_3104">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Arm &amp; Hammer</span>
-                    <span class="product-size-line">71 г</span>
+                    <span class="product-brand-name">Felce Azzurra</span>
+                    <span class="product-size-line">150 мл</span>
                   </span>
                   <span class="product-kind-line">
                     <strong>дезодорант</strong>
                   </span>
-                  <span class="product-variant-line">Essentials Juniper Berry</span>
+                  <span class="product-variant-line">Men deodorant spray Power Fresh</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Дезодоранты</span>
                 </div>
-                <p>Дезодорант Arm &amp; Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Juniper Berry. Вес 2.5 oz (71 г).</p>
+                <p>Felce Azzurra Men deodorant spray Power Fresh 150 ml - дезодорант для ежедневной свежести и ухода. Формат: 150 мл. Наносите на чистую сухую кожу в соответствии с рекомендациями на упаковке.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
                     <span class="price">490 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_bc63389835c9" aria-label="Добавить в корзину">В корзину</button>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3104" aria-label="Добавить в корзину">В корзину</button>
                   </div>
                   <span class="registered-price-note">Цена при входе: 475 <span class="som-sign">с</span></span>
                 </div>
@@ -1012,35 +1125,35 @@
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Arm &amp; Hammer</span>
-                <button class="favorite-button" type="button" data-favorite="prd_e6202bbb1789" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">Felce Azzurra</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3097" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
 
-                <a class="product-image-link" href="/product/arm-hammer-essentials-rosemary-lavender-dezodorant-71-g-bb1789/" data-product-link="prd_e6202bbb1789" aria-label="Открыть Arm &amp; Hammer Essentials Rosemary Lavender дезодорант 71 г">
-                  <img class="product-image" src="/assets/products/arm-hammer/arm-hammer-essentials-rosemary-lavender-71g-card-front.jpg" alt="Arm &amp; Hammer Essentials Rosemary Lavender дезодорант 71 г" loading="lazy">
+                <a class="product-image-link" href="/product/felce-azzurra-deodorant-spray-fresco-150-ml-c_3097/" data-product-link="prd_1c_3097" aria-label="Открыть Felce Azzurra deodorant spray Fresco 150 ml">
+                  <img class="product-image" src="/assets/products/felce-azzurra/felce-azzurra-3097-card-front.jpg" alt="Felce Azzurra deodorant spray Fresco 150 ml" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/arm-hammer-essentials-rosemary-lavender-dezodorant-71-g-bb1789/" data-product-link="prd_e6202bbb1789">
+                <a class="product-title-button product-copy" href="/product/felce-azzurra-deodorant-spray-fresco-150-ml-c_3097/" data-product-link="prd_1c_3097">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Arm &amp; Hammer</span>
-                    <span class="product-size-line">71 г</span>
+                    <span class="product-brand-name">Felce Azzurra</span>
+                    <span class="product-size-line">150 мл</span>
                   </span>
                   <span class="product-kind-line">
                     <strong>дезодорант</strong>
                   </span>
-                  <span class="product-variant-line">Essentials Rosemary Lavender</span>
+                  <span class="product-variant-line">deodorant spray Fresco</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Дезодоранты</span>
                 </div>
-                <p>Дезодорант Arm &amp; Hammer Essentials с натуральными деодорантами, без алюминия, парабенов и фталатов. Аромат Rosemary Lavender. Вес 2.5 oz (71 г).</p>
+                <p>Felce Azzurra deodorant spray Fresco 150 ml - дезодорант для ежедневной свежести и ухода. Формат: 150 мл. Наносите на чистую сухую кожу в соответствии с рекомендациями на упаковке.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
                     <span class="price">490 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_e6202bbb1789" aria-label="Добавить в корзину">В корзину</button>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3097" aria-label="Добавить в корзину">В корзину</button>
                   </div>
                   <span class="registered-price-note">Цена при входе: 475 <span class="som-sign">с</span></span>
                 </div>
@@ -1049,154 +1162,80 @@
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Arm &amp; Hammer</span>
-                <button class="favorite-button" type="button" data-favorite="prd_7c7e94c7128f" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">Felce Azzurra</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3098" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
 
-                <a class="product-image-link" href="/product/arm-hammer-ultra-max-fresh-dezodorant-stik-28-g-c7128f/" data-product-link="prd_7c7e94c7128f" aria-label="Открыть Arm &amp; Hammer Ultra Max Fresh дезодорант-стик 28 г">
-                  <img class="product-image" src="/assets/products/arm-hammer/arm-hammer-ultra-max-fresh-28g-card-front.jpg" alt="Arm &amp; Hammer Ultra Max Fresh дезодорант-стик 28 г" loading="lazy">
+                <a class="product-image-link" href="/product/felce-azzurra-deodorant-spray-invisible-150-ml-c_3098/" data-product-link="prd_1c_3098" aria-label="Открыть Felce Azzurra deodorant spray Invisible 150 ml">
+                  <img class="product-image" src="/assets/products/felce-azzurra/felce-azzurra-3098-card-front.jpg" alt="Felce Azzurra deodorant spray Invisible 150 ml" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/arm-hammer-ultra-max-fresh-dezodorant-stik-28-g-c7128f/" data-product-link="prd_7c7e94c7128f">
+                <a class="product-title-button product-copy" href="/product/felce-azzurra-deodorant-spray-invisible-150-ml-c_3098/" data-product-link="prd_1c_3098">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Arm &amp; Hammer</span>
-                    <span class="product-size-line">28 г</span>
+                    <span class="product-brand-name">Felce Azzurra</span>
+                    <span class="product-size-line">150 мл</span>
                   </span>
                   <span class="product-kind-line">
-                    <strong>дезодорант-стик</strong>
+                    <strong>дезодорант</strong>
                   </span>
-                  <span class="product-variant-line">Ultra Max Fresh</span>
+                  <span class="product-variant-line">deodorant spray Invisible</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Дезодоранты</span>
                 </div>
-                <p>Arm &amp; Hammer Ultra Max Fresh — твёрдый антиперспирант с чистым свежим ароматом. Формула с пищевой содой предназначена для контроля запаха и влажности в течение дня, а компактный стик удобно брать с собой. Масса 28 г; наносите тонким слоем только на чистую сухую кожу подмышек.</p>
+                <p>Felce Azzurra deodorant spray Invisible 150 ml - дезодорант для ежедневной свежести и ухода. Формат: 150 мл. Наносите на чистую сухую кожу в соответствии с рекомендациями на упаковке.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">250 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_7c7e94c7128f" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">490 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3098" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 242 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 475 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Arm &amp; Hammer</span>
-                <button class="favorite-button" type="button" data-favorite="prd_e40df5ac7d15" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">Felce Azzurra</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3096" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
 
-                <a class="product-image-link" href="/product/arm-hammer-ultra-max-powder-fresh-dezodorant-stik-28-g-ac7d15/" data-product-link="prd_e40df5ac7d15" aria-label="Открыть Arm &amp; Hammer Ultra Max Powder Fresh дезодорант-стик 28 г">
-                  <img class="product-image" src="/assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg" alt="Arm &amp; Hammer Ultra Max Powder Fresh дезодорант-стик 28 г" loading="lazy">
+                <a class="product-image-link" href="/product/felce-azzurra-deodorant-spray-original-150-ml-c_3096/" data-product-link="prd_1c_3096" aria-label="Открыть Felce Azzurra deodorant spray Original 150 ml">
+                  <img class="product-image" src="/assets/products/felce-azzurra/felce-azzurra-3096-card-front.jpg" alt="Felce Azzurra deodorant spray Original 150 ml" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/arm-hammer-ultra-max-powder-fresh-dezodorant-stik-28-g-ac7d15/" data-product-link="prd_e40df5ac7d15">
+                <a class="product-title-button product-copy" href="/product/felce-azzurra-deodorant-spray-original-150-ml-c_3096/" data-product-link="prd_1c_3096">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Arm &amp; Hammer</span>
-                    <span class="product-size-line">28 г</span>
+                    <span class="product-brand-name">Felce Azzurra</span>
+                    <span class="product-size-line">150 мл</span>
                   </span>
                   <span class="product-kind-line">
-                    <strong>дезодорант-стик</strong>
+                    <strong>дезодорант</strong>
                   </span>
-                  <span class="product-variant-line">Ultra Max Powder Fresh</span>
+                  <span class="product-variant-line">deodorant spray Original</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Дезодоранты</span>
                 </div>
-                <p>Arm &amp; Hammer Ultra Max Powder Fresh — твёрдый антиперспирант с мягким пудровым ароматом. Формула с пищевой содой предназначена для контроля запаха и влажности в течение дня, а компактный стик удобно брать с собой. Масса 28 г; наносите тонким слоем только на чистую сухую кожу подмышек.</p>
+                <p>Felce Azzurra deodorant spray Original 150 ml - дезодорант для ежедневной свежести и ухода. Формат: 150 мл. Наносите на чистую сухую кожу в соответствии с рекомендациями на упаковке.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">250 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_e40df5ac7d15" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">490 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3096" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 242 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Gillette</span>
-                <button class="favorite-button" type="button" data-favorite="prd_081404d81ef8" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/gillette-antiperspirant-arctic-ice-gel-dezodorant-70-ml-d81ef8/" data-product-link="prd_081404d81ef8" aria-label="Открыть Gillette Antiperspirant Arctic Ice гель-дезодорант 70 мл">
-                  <img class="product-image" src="/assets/products/gillette/gillette-antiperspirant-arctic-ice-70ml-card-front.jpg" alt="Gillette Antiperspirant Arctic Ice гель-дезодорант 70 мл" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/gillette-antiperspirant-arctic-ice-gel-dezodorant-70-ml-d81ef8/" data-product-link="prd_081404d81ef8">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Gillette</span>
-                    <span class="product-size-line">70 мл</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель-дезодорант</strong>
-                  </span>
-                  <span class="product-variant-line">Antiperspirant Arctic Ice</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Дезодоранты</span>
-                </div>
-                <p>Gillette Arctic Ice — прозрачный гель-антиперспирант с прохладным свежим ароматом. Формат стика удобно наносится непосредственно на сухую кожу подмышек, а заявленная на упаковке защита рассчитана до 48 часов. Объём 70 мл; не наносите средство на раздражённую или повреждённую кожу.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">450 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_081404d81ef8" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 436 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
-                <span class="placeholder-brand">Gillette</span>
-                <button class="favorite-button" type="button" data-favorite="prd_a9ee2b0ab49d" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/gillette-antiperspirant-cool-wave-gel-dezodorant-70-ml-0ab49d/" data-product-link="prd_a9ee2b0ab49d" aria-label="Открыть Gillette Antiperspirant Cool Wave гель-дезодорант 70 мл">
-                  <img class="product-image" src="/assets/products/gillette/gillette-antiperspirant-cool-wave-70ml-card-front.jpg" alt="Gillette Antiperspirant Cool Wave гель-дезодорант 70 мл" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/gillette-antiperspirant-cool-wave-gel-dezodorant-70-ml-0ab49d/" data-product-link="prd_a9ee2b0ab49d">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Gillette</span>
-                    <span class="product-size-line">70 мл</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель-дезодорант</strong>
-                  </span>
-                  <span class="product-variant-line">Antiperspirant Cool Wave</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Дезодоранты</span>
-                </div>
-                <p>Gillette Cool Wave — прозрачный гель-антиперспирант с чистым свежим ароматом. Формат стика удобно наносится непосредственно на сухую кожу подмышек, а заявленная на упаковке защита рассчитана до 48 часов. Объём 70 мл; не наносите средство на раздражённую или повреждённую кожу.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">450 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_a9ee2b0ab49d" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 436 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 475 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 </div>
     </section>
-    
+
     <nav class="bottom-page-actions" aria-label="Навигация по странице">
       <button class="bottom-page-action" type="button" data-back>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"></path></svg>
@@ -1222,9 +1261,10 @@
       <a href="/catalog/">Разделы</a>
       <a href="/#checkout">Оформление</a>
       <a href="/#myOrders">Мои заказы</a>
+      <a href="/delivery-and-returns/">Доставка и возврат</a>
       <a href="/privacy.html">Политика конфиденциальности</a>
     </nav>
-    <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
+    <p>ИП Григорьев Василий Владимирович · ИНН 21509198010011</p>
   </div>
 </footer>
   <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Нижняя навигация">
@@ -1262,7 +1302,7 @@
   </a>
 </nav>
   <script>
-    const product = {"id": "prd_b8b5bfec07e5", "code": "prd_b8b5bfec07e5", "title": "Dove Advanced Care Original спрей-дезодорант, 250 мл", "description": "Dove Advanced Care Original — аэрозольный антиперспирант с классическим ароматом Dove. Формула с технологией тройного увлажнения ухаживает за кожей подмышек, а заявленная защита от пота и запаха рассчитана до 72 часов. Объём 250 мл; встряхните баллон и распыляйте короткими нажатиями с расстояния около 15 см.", "price": 450, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Dove%20Advanced%20Care%20Original%20%D1%81%D0%BF%D1%80%D0%B5%D0%B9-%D0%B4%D0%B5%D0%B7%D0%BE%D0%B4%D0%BE%D1%80%D0%B0%D0%BD%D1%82%2C%20250%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20450%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/dove-advanced-care-original-sprey-dezodorant-250-ml-ec07e5/"};
+    const product = {"id": "prd_b8b5bfec07e5", "code": "806", "title": "Dove Advanced Care Original спрей-дезодорант, 250 мл", "description": "Dove Advanced Care Original — аэрозольный антиперспирант с классическим ароматом Dove. Формула с технологией тройного увлажнения ухаживает за кожей подмышек, а заявленная защита от пота и запаха рассчитана до 72 часов. Объём 250 мл; встряхните баллон и распыляйте короткими нажатиями с расстояния около 15 см.", "price": 450, "inStock": true, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Dove%20Advanced%20Care%20Original%20%D1%81%D0%BF%D1%80%D0%B5%D0%B9-%D0%B4%D0%B5%D0%B7%D0%BE%D0%B4%D0%BE%D1%80%D0%B0%D0%BD%D1%82%2C%20250%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20450%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/dove-advanced-care-original-sprey-dezodorant-250-ml-ec07e5/"};
     const cartKey = "globalMarketCartDraft";
     const favoritesKey = "globalMarketFavorites";
     const recentlyViewedKey = "globalMarketRecentlyViewed";
@@ -1408,6 +1448,7 @@
           const params = new URLSearchParams();
           if (item.collection) params.set("collection", item.collection);
           if (item.category) params.set("category", item.category);
+          if (item.section) params.set("section", item.section);
           if (item.audience) params.set("audience", item.audience);
           if (item.query) params.set("query", item.query);
           if (item.label) params.set("label", item.label);
@@ -1602,14 +1643,58 @@
       window.location.href = event.currentTarget.href;
     });
 
-    document.querySelectorAll("[data-gallery-image]").forEach((button) => {
-      button.addEventListener("click", () => {
-        const image = button.dataset.galleryImage;
-        const mainImage = document.querySelector("[data-main-image]");
-        if (mainImage && image) mainImage.src = image;
-        document.querySelectorAll("[data-gallery-image]").forEach((item) => item.classList.toggle("active", item === button));
+    const galleryButtons = [...document.querySelectorAll("[data-gallery-image]")];
+    const mainImage = document.querySelector("[data-main-image]");
+    let activeGalleryIndex = Math.max(0, galleryButtons.findIndex((item) => item.classList.contains("active")));
+
+    function selectGalleryImage(index) {
+      if (!mainImage || !galleryButtons.length) return;
+      const nextIndex = Math.max(0, Math.min(index, galleryButtons.length - 1));
+      const button = galleryButtons[nextIndex];
+      const image = button?.dataset.galleryImage;
+      if (!image) return;
+      activeGalleryIndex = nextIndex;
+      mainImage.src = image;
+      mainImage.alt = button.querySelector("img")?.alt || product.title;
+      mainImage.setAttribute("aria-label", `Фото ${nextIndex + 1} из ${galleryButtons.length}`);
+      galleryButtons.forEach((item, itemIndex) => {
+        const active = itemIndex === nextIndex;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-current", active ? "true" : "false");
       });
+      button.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+
+    galleryButtons.forEach((button, index) => {
+      button.addEventListener("click", () => selectGalleryImage(index));
+      button.setAttribute("aria-current", index === activeGalleryIndex ? "true" : "false");
     });
+
+    if (mainImage && galleryButtons.length > 1) {
+      let swipeStart = null;
+      mainImage.tabIndex = 0;
+      mainImage.setAttribute("aria-label", `Фото ${activeGalleryIndex + 1} из ${galleryButtons.length}`);
+      mainImage.addEventListener("dragstart", (event) => event.preventDefault());
+      mainImage.addEventListener("pointerdown", (event) => {
+        if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
+        swipeStart = { pointerId: event.pointerId, x: event.clientX, y: event.clientY };
+        mainImage.setPointerCapture?.(event.pointerId);
+      });
+      mainImage.addEventListener("pointerup", (event) => {
+        if (!swipeStart || swipeStart.pointerId !== event.pointerId) return;
+        const deltaX = event.clientX - swipeStart.x;
+        const deltaY = event.clientY - swipeStart.y;
+        swipeStart = null;
+        if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.2) return;
+        selectGalleryImage(activeGalleryIndex + (deltaX < 0 ? 1 : -1));
+      });
+      mainImage.addEventListener("pointercancel", () => { swipeStart = null; });
+      mainImage.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        selectGalleryImage(activeGalleryIndex + (event.key === "ArrowRight" ? 1 : -1));
+      });
+    }
 
     updateFavoriteButton();
     syncGridFavoriteButtons();
@@ -1638,5 +1723,15 @@
       window.requestAnimationFrame(updateSmartHeader);
     }, { passive: true });
   </script>
+  <!-- BEGIN shared-analytics-consent -->
+<aside class="gmk-consent" data-nosnippet aria-label="Настройки аналитики">
+  <strong>Аналитика и рекламные измерения</strong>
+  <p>Анонимные события магазина отправляются в Google только с вашего согласия. Телефон, SMS-код, имя, адрес и текст заказа не передаются. <a href="/privacy.html">Подробнее</a></p>
+  <div class="gmk-consent-actions">
+    <button type="button" data-consent="granted">Разрешить</button>
+    <button type="button" data-consent="denied">Только необходимые</button>
+  </div>
+</aside>
+<!-- END shared-analytics-consent -->
 </body>
 </html>

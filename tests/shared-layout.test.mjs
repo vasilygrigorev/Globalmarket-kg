@@ -75,8 +75,8 @@ test("every product page has the consistent action set", () => {
     back: (h) => h.includes("data-back"),
     favorite: (h) => h.includes("data-favorite"),
     share: (h) => h.includes("data-share"),
-    "whatsapp-question": (h) => h.includes("Спросить в WhatsApp"),
-    "cart-or-oos": (h) => h.includes("data-add-cart") || h.includes("Нет в наличии"),
+    "whatsapp-question": (h) => /(?:Спросить|Уточнить поступление) в WhatsApp/.test(h),
+    "cart-or-oos": (h) => /<button\b[^>]*\bdata-add-cart\b/i.test(h) || h.includes("нет в наличии"),
   };
   for (const [name, fn] of Object.entries(checks)) {
     const bad = pages.filter((p) => !fn(p.html)).map((p) => p.slug);

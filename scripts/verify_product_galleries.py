@@ -20,7 +20,10 @@ KNOWN_EXCEPTIONS = {
 # Raw/temporary-file markers that must never appear in a PUBLISHED image path —
 # a Telegram export, OCR scratch file, or contact sheet is a working file, not a
 # finished product photo. Mirrors tests/catalog-image-hygiene.test.mjs.
-RAW_LEFTOVER_MARKER = re.compile(r"telegram-|ocr|contact|sheet|dup", re.IGNORECASE)
+RAW_LEFTOVER_MARKER = re.compile(
+    r"(?:telegram-|alt-front|alt-back|contact[-_]?sheet|\bsheet\b|ocr|screenshot|\bdup\b|\bcopy\b|untitled|без-названия|\.heic)",
+    re.IGNORECASE,
+)
 
 
 def path_hygiene_issues(pid, title, src):

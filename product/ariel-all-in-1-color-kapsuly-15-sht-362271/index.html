@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Ariel All in 1 Color капсулы 15 шт">
   <meta name="twitter:description" content="Ariel All in 1 Color — капсулы для автоматической стирки цветного белья. Многокамерная капсула растворяется в воде и высвобождает средство для удаления пов">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20260722-desktop-cart-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -42,13 +42,24 @@
     "@type": "Offer",
     "url": "https://globalmarket.kg/product/ariel-all-in-1-color-kapsuly-15-sht-362271/",
     "priceCurrency": "KGS",
-    "price": "895",
+    "price": "990",
+    "validFrom": "2026-10-10",
     "priceValidUntil": "2027-12-31",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
+      "@id": "https://globalmarket.kg/#organization",
       "name": "Global Market KG"
+    },
+    "hasMerchantReturnPolicy": {
+      "@id": "https://globalmarket.kg/delivery-and-returns/#return-policy"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "hasShippingService": {
+        "@id": "https://globalmarket.kg/delivery-and-returns/#shipping-policy"
+      }
     }
   }
 }</script>
@@ -98,38 +109,49 @@
     .icon-action.smm-share .instagram-dot { fill: currentColor; stroke: none; }
     .share-feedback { position: fixed; left: 50%; bottom: calc(82px + env(safe-area-inset-bottom)); z-index: 40; width: max-content; max-width: calc(100vw - 32px); transform: translateX(-50%); padding: 11px 14px; border-radius: 8px; color: #fff; background: rgba(20, 24, 28, 0.94); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22); font-size: 14px; font-weight: 750; text-align: center; }
     .visual-panel { background: #fff; }
-    .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; }
+    .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-drag: none; overscroll-behavior-x: contain; }
+    .media-main:active { cursor: grabbing; }
+    .media-main:focus-visible { outline: 3px solid #07958f; outline-offset: -3px; }
     .gallery-thumbs { display: flex; gap: 10px; padding: 14px 16px 18px; overflow-x: auto; background: #f7f7f8; }
-    .gallery-thumb { display: grid; flex: 0 0 76px; gap: 5px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }
+    .gallery-thumb { display: block; flex: 0 0 76px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }
     .gallery-thumb.active { border-color: #1f1f1f; background: #fff; }
     .gallery-thumb img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
-    .gallery-thumb span { overflow: hidden; font-size: 11px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; text-align: center; }
-    .product-purchase-strip { padding: 0 16px 18px; background: #f7f7f8; }
+    .gallery-thumb span { display: none; }
+    .product-purchase-strip { padding: 12px 16px 18px; background: #f7f7f8; }
     .product-purchase-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .product-purchase-actions > * { width: 100%; min-width: 0; }
-    .product-detail-info { display: grid; gap: 18px; padding: 28px 26px 26px; }
+    .purchase-price { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 0 0 14px; text-align: center; }
+    .purchase-price strong { font-weight: inherit; }
+    .purchase-price .price-group { display: flex; align-items: baseline; justify-content: center; gap: 10px; }
+    .purchase-price .price { color: #132e36; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 38px; font-weight: 300; line-height: 1.05; }
+    .purchase-price .price-original { color: #8a8f94; font-size: 20px; font-weight: 500; }
+    .purchase-price small { color: #777; font-size: 13px; }
+    .out-of-stock-panel { display: grid; gap: 5px; padding: 14px 16px; border: 1px solid #d7e2e2; border-radius: 8px; color: #28484d; background: #eef7f6; text-align: center; }
+    .out-of-stock-panel strong { font-size: 18px; }
+    .out-of-stock-panel span { color: #5e7276; font-size: 14px; line-height: 1.4; }
+    .product-detail-info { display: grid; gap: 12px; padding: 22px; }
     .product-breadcrumbs { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: #777; font-size: 13px; line-height: 1.35; }
     .product-breadcrumbs a { color: inherit; text-decoration: none; }
     .product-breadcrumbs a:hover { color: #111; }
     .crumb-separator { color: #b0b0b6; }
-    .title-block { display: grid; gap: 8px; }
+    .title-block { display: grid; gap: 4px; }
     .brand-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
     h1 { margin: 0; font-size: clamp(38px, 7vw, 58px); font-weight: 300; line-height: 1.05; }
     .size-line { flex: 0 0 auto; color: #555; font-size: clamp(20px, 4.5vw, 30px); font-weight: 300; line-height: 1.1; white-space: nowrap; }
     .type { margin: 0; font-size: clamp(24px, 5vw, 34px); font-weight: 800; line-height: 1.12; }
     .variant { margin: 0; color: #777; font-size: 19px; line-height: 1.35; }
-    body.product-page .product-detail-info .description { display: block; min-height: 0; overflow: visible; margin: 0; color: #666; font-size: 18px; line-height: 1.55; -webkit-line-clamp: unset; }
-    .price-box { display: grid; gap: 4px; padding: 16px; border: 1px solid #e4e4e7; border-radius: 8px; background: #f5f5f6; }
+    body.product-page .product-detail-info .description { display: block; min-height: 0; overflow: visible; margin: 0; padding: 0; border: 0; color: #555; background: transparent; font-size: 18px; line-height: 1.45; -webkit-line-clamp: unset; }
+    .price-box { display: grid; gap: 4px; padding: 0; border: 0; background: transparent; }
     .price-box span,
     .price-box small { color: #777; }
     .price-box .price { font-size: 38px; font-weight: 850; line-height: 1; }
     .som-sign { display: inline-block; padding-bottom: 0.03em; border-bottom: 0.06em solid currentColor; line-height: 0.88; }
-    .specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }
-    .specs div { padding: 12px; border: 1px solid #e4e4e7; border-radius: 8px; background: #fff; }
-    .specs dt { color: #777; font-size: 13px; }
-    .specs dd { margin: 4px 0 0; font-weight: 800; }
+    .specs { display: flex; flex-wrap: wrap; gap: 7px 18px; margin: 2px 0 0; }
+    .specs div { display: flex; align-items: baseline; gap: 5px; min-width: 0; padding: 0; border: 0; background: transparent; }
+    .specs dt { color: #777; font-size: 12px; white-space: nowrap; }
+    .specs dd { min-width: 0; margin: 0; font-size: 14px; font-weight: 750; }
     .specs dd a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .note { padding: 13px 14px; border-radius: 8px; color: #666; background: #f5f5f6; line-height: 1.45; }
+    .note { padding: 0; border: 0; color: #666; background: transparent; line-height: 1.4; }
     .modal-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .primary-action,
     .secondary-action,
@@ -168,11 +190,12 @@
       .page { max-width: none; padding: 0; }
       .product-shell { border-radius: 0; box-shadow: none; }
       .related { padding: 0 8px; }
-      .product-detail-info { padding: 26px 18px 20px; }
+      .product-detail-info { padding: 18px 16px; }
       .icon-action { width: 44px; height: 44px; }
       .icon-action.smm-share:not([hidden]) { display: grid; }
-      .product-purchase-strip { padding: 0 10px 14px; }
-      .specs { grid-template-columns: 1fr; }
+      .product-purchase-strip { padding: 10px 10px 14px; }
+      .purchase-price .price { font-size: 34px; }
+      .specs { gap: 7px 14px; }
       .related-grid { grid-template-columns: repeat(2, 1fr); }
       .bottom-page-actions { padding: 0 18px; }
     }
@@ -183,6 +206,24 @@
       .top-actions { left: 16px; right: 16px; }
     }
   </style>
+  <!-- BEGIN shared-analytics-head -->
+<meta name="google-site-verification" content="960zpLbWQpecqn6ZhlIecGVl0zt3SRKtzPd800egMo4">
+<link rel="stylesheet" href="/assets/google-consent.css?v=20261011-retail-full-recovery-v1">
+<script id="gmk-google-tag-bootstrap">
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+window.gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500
+});
+window.gtag('js', new Date());
+</script>
+<script async id="gmk-google-tag-loader" src="https://www.googletagmanager.com/gtag/js?id=G-9KZK8Y4S7K"></script>
+<script defer id="gmk-google-consent-script" src="/assets/google-consent.js?v=20261011-retail-full-recovery-v1"></script>
+<!-- END shared-analytics-head -->
 </head>
 <body class="product-page">
   <header class="site-header" data-smart-header>
@@ -251,27 +292,30 @@
         <div class="gallery-thumbs" aria-label="Фотографии товара">
         <button class="gallery-thumb active" type="button" data-gallery-image="/assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg" aria-label="Лицевая">
           <img src="/assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg" alt="Ariel All in 1 Color капсулы 15 шт - Лицевая" loading="lazy">
-          <span>Лицевая</span>
         </button>
-        
+
 
         <button class="gallery-thumb " type="button" data-gallery-image="/assets/products/ariel/ariel-all-in-1-color-caps-15-front.jpg" aria-label="Лицевая">
           <img src="/assets/products/ariel/ariel-all-in-1-color-caps-15-front.jpg" alt="Ariel All in 1 Color капсулы 15 шт - Лицевая" loading="lazy">
-          <span>Лицевая</span>
         </button>
-        
+
 
         <button class="gallery-thumb " type="button" data-gallery-image="/assets/products/ariel/ariel-all-in-1-color-caps-15-back.jpg" aria-label="Обратная">
           <img src="/assets/products/ariel/ariel-all-in-1-color-caps-15-back.jpg" alt="Ariel All in 1 Color капсулы 15 шт - Обратная" loading="lazy">
-          <span>Обратная</span>
         </button>
         </div>
         <div class="product-purchase-strip">
+        <div class="purchase-price">
+          <strong><span class="price">990 <span class="som-sign">с</span></span></strong>
+          <small>Клиентская цена: скидка 3% при входе</small>
+        </div>
+
         <div class="modal-actions product-purchase-actions">
           <button class="primary-action" type="button" data-add-cart>В корзину</button>
           <a class="secondary-action" href="/?checkout=1#checkoutForm" data-checkout>К оформлению</a>
         </div>
-        </div>
+
+    </div>
       </section>
       <section class="product-detail-info">
         <nav class="product-breadcrumbs" aria-label="Навигация"><a href="/#top">Главная</a><span class="crumb-separator">/</span><a href="/category/laundry/">Стирка и уход за бельем</a><span class="crumb-separator">/</span><a href="/brand/ariel/">Ariel</a><span class="crumb-separator">/</span><span>Ariel All in 1 Color капсулы 15 шт</span></nav>
@@ -284,26 +328,21 @@
           <p class="variant">All in 1 Color капсулы</p>
         </div>
         <p class="description">Ariel All in 1 Color — капсулы для автоматической стирки цветного белья. Многокамерная капсула растворяется в воде и высвобождает средство для удаления повседневных пятен, сохраняя яркий вид цветных вещей. В упаковке 15 капсул; положите капсулу в глубину пустого барабана сухими руками, затем загрузите бельё.</p>
-        <div class="price-box">
-          <span>Ваша цена</span>
-          <strong><span class="price">895 <span class="som-sign">с</span></span></strong>
-          <small>Клиентская цена: скидка 3% при входе</small>
-        </div>
         <dl class="specs">
           <div><dt>Бренд</dt><dd><a href="/brand/ariel/">Ariel</a></dd></div>
           <div><dt>Категория</dt><dd><a href="/category/laundry/">Стирка и уход за бельем</a></dd></div>
           <div><dt>Тип товара</dt><dd>капсулы для стирки</dd></div>
           <div><dt>Единица</dt><dd>шт</dd></div>
-          
+
         </dl>
-        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 10 000 <span class="som-sign">с</span>.</div>
-        
-        <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Ariel%20All%20in%201%20Color%20%D0%BA%D0%B0%D0%BF%D1%81%D1%83%D0%BB%D1%8B%2015%20%D1%88%D1%82%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20895%20%D1%81%D0%BE%D0%BC." rel="noopener">Заказать сразу в WhatsApp</a>
-        <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%83%3A%20Ariel%20All%20in%201%20Color%20%D0%BA%D0%B0%D0%BF%D1%81%D1%83%D0%BB%D1%8B%2015%20%D1%88%D1%82%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20895%20%D1%81%D0%BE%D0%BC.%20https%3A//globalmarket.kg/product/ariel-all-in-1-color-kapsuly-15-sht-362271/" rel="noopener">Спросить в WhatsApp</a>
-        
+        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 5 000 <span class="som-sign">с</span>.</div>
+
+        <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Ariel%20All%20in%201%20Color%20%D0%BA%D0%B0%D0%BF%D1%81%D1%83%D0%BB%D1%8B%2015%20%D1%88%D1%82%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20990%20%D1%81%D0%BE%D0%BC." rel="noopener">Заказать сразу в WhatsApp</a>
+        <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%83%3A%20Ariel%20All%20in%201%20Color%20%D0%BA%D0%B0%D0%BF%D1%81%D1%83%D0%BB%D1%8B%2015%20%D1%88%D1%82%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20990%20%D1%81%D0%BE%D0%BC.%20https%3A//globalmarket.kg/product/ariel-all-in-1-color-kapsuly-15-sht-362271/" rel="noopener">Спросить в WhatsApp</a>
+
       </section>
     </article>
-    
+
     <section class="related">
       <h2>Похожие товары</h2>
       <div class="related-grid">
@@ -336,10 +375,713 @@
                 <p>Ariel All in 1 Universal — капсулы для автоматической стирки белого, светлого и смешанного белья. Многокамерная капсула быстро растворяется в воде и высвобождает средство для удаления повседневных и засохших пятен. В упаковке 15 капсул; положите капсулу в глубину пустого барабана сухими руками, затем загрузите бельё.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">895 <span class="som-sign">с</span></span>
+                    <span class="price">990 <span class="som-sign">с</span></span>
                     <button class="add-button compact-add-button" type="button" data-add="prd_2acd534839ea" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 868 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 960 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3252" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-pods-3-v-1-alpine-lavage-65-kapsul-c_3252/" data-product-link="prd_1c_3252" aria-label="Открыть Ariel PODS 3-в-1 Alpine Lavage, 65 капсул">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-65-alpine-lavage-card-front.jpg" alt="Ariel PODS 3-в-1 Alpine Lavage, 65 капсул" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-pods-3-v-1-alpine-lavage-65-kapsul-c_3252/" data-product-link="prd_1c_3252">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">PODS 3-в-1 Alpine Lavage, 65 капсул</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel PODS 3-в-1 Alpine Lavage для стирки белья. В упаковке 65 капсул; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 990 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3252" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 900 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3242" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-pods-3-v-1-original-38-kapsul-c_3242/" data-product-link="prd_1c_3242" aria-label="Открыть Ariel PODS 3-в-1 Original, 38 капсул">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-3in1-original-38-card-front.jpg" alt="Ariel PODS 3-в-1 Original, 38 капсул" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-pods-3-v-1-original-38-kapsul-c_3242/" data-product-link="prd_1c_3242">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">PODS 3-в-1 Original, 38 капсул</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel PODS 3-в-1 Original для стирки белья. В упаковке 38 капсул; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 990 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3242" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 930 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3248" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-pods-all-in-1-color-50-kapsul-c_3248/" data-product-link="prd_1c_3248" aria-label="Открыть Ariel PODS All-in-1 Color, 50 капсул">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-50-color-card-front.jpg" alt="Ariel PODS All-in-1 Color, 50 капсул" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-pods-all-in-1-color-50-kapsul-c_3248/" data-product-link="prd_1c_3248">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">PODS All-in-1 Color, 50 капсул</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel PODS All-in-1 Color, 50 капсул для стирки белья. В упаковке 50 капсул; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 390 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3248" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 318 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3253" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-pods-all-in-1-color-65-kapsul-c_3253/" data-product-link="prd_1c_3253" aria-label="Открыть Ariel PODS All-in-1 Color, 65 капсул">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-65-color-card-front.jpg" alt="Ariel PODS All-in-1 Color, 65 капсул" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-pods-all-in-1-color-65-kapsul-c_3253/" data-product-link="prd_1c_3253">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">PODS All-in-1 Color, 65 капсул</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel PODS All-in-1 Color, 65 капсул для стирки белья. В упаковке 65 капсул; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 990 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3253" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 900 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3250" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-pods-all-in-1-lenor-anti-odor-60-kapsul-c_3250/" data-product-link="prd_1c_3250" aria-label="Открыть Ariel PODS All-in-1 Lenor Anti-Odor, 60 капсул">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-60-lenor-anti-odor-card-front.jpg" alt="Ariel PODS All-in-1 Lenor Anti-Odor, 60 капсул" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-pods-all-in-1-lenor-anti-odor-60-kapsul-c_3250/" data-product-link="prd_1c_3250">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">PODS All-in-enor Anti-Odor, 60 капсул</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel PODS All-in-1 Lenor Anti-Odor, 60 капсул для стирки белья. В упаковке 60 капсул; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 895 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3250" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 808 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3251" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-pods-all-in-1-mountain-spring-stain-65-kapsul-c_3251/" data-product-link="prd_1c_3251" aria-label="Открыть Ariel PODS All-in-1 Mountain Spring Stain, 65 капсул">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-65-mountain-spring-stain-card-front.jpg" alt="Ariel PODS All-in-1 Mountain Spring Stain, 65 капсул" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-pods-all-in-1-mountain-spring-stain-65-kapsul-c_3251/" data-product-link="prd_1c_3251">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">PODS All-in-1 Mountain Spring Stain, 65 капсул</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel PODS All-in-1 Mountain Spring Stain для стирки белья. В упаковке 65 капсул; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 990 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3251" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 900 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3249" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-pods-all-in-1-mountain-spring-60-kapsul-c_3249/" data-product-link="prd_1c_3249" aria-label="Открыть Ariel PODS All-in-1 Mountain Spring, 60 капсул">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-60-mountain-spring-card-front.jpg" alt="Ariel PODS All-in-1 Mountain Spring, 60 капсул" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-pods-all-in-1-mountain-spring-60-kapsul-c_3249/" data-product-link="prd_1c_3249">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">PODS All-in-1 Mountain Spring, 60 капсул</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel PODS All-in-1 Mountain Spring, 60 капсул для стирки белья. В упаковке 60 капсул; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 890 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3249" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 803 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3245" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-pods-platinum-lenor-44-kapsuly-c_3245/" data-product-link="prd_1c_3245" aria-label="Открыть Ariel PODS Platinum + Lenor, 44 капсулы">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-platinum-lenor-44-card-front.jpg" alt="Ariel PODS Platinum + Lenor, 44 капсулы" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-pods-platinum-lenor-44-kapsuly-c_3245/" data-product-link="prd_1c_3245">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">PODS Platinum + Lenor, 44 капсулы</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel PODS Platinum с ароматом Lenor для стирки белья. В упаковке 44 капсулы; используйте одну капсулу согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 190 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3245" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 124 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3247" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-pods-professional-original-50-kapsul-c_3247/" data-product-link="prd_1c_3247" aria-label="Открыть Ariel PODS Professional Original, 50 капсул">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-50-professional-original-card-front.jpg" alt="Ariel PODS Professional Original, 50 капсул" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-pods-professional-original-50-kapsul-c_3247/" data-product-link="prd_1c_3247">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">PODS Professional Original, 50 капсул</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel PODS Professional Original, 50 капсул для стирки белья. В упаковке 50 капсул; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 490 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3247" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 415 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3244" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-professional-color-44-kapsuly-c_3244/" data-product-link="prd_1c_3244" aria-label="Открыть Ariel Professional Color, 44 капсулы">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-professional-color-44-card-front.jpg" alt="Ariel Professional Color, 44 капсулы" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-professional-color-44-kapsuly-c_3244/" data-product-link="prd_1c_3244">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Professional Color, 44 капсулы</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel Professional Color для цветного белья. В упаковке 44 капсулы; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 190 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3244" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 124 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Ariel</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3254" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/ariel-professional-original-70-kapsul-c_3254/" data-product-link="prd_1c_3254" aria-label="Открыть Ariel Professional Original, 70 капсул">
+                  <img class="product-image" src="/assets/products/ariel/ariel-pods-professional-original-70-card-front.jpg" alt="Ariel Professional Original, 70 капсул" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/ariel-professional-original-70-kapsul-c_3254/" data-product-link="prd_1c_3254">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Ariel</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Professional Original, 70 капсул</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>Капсулы Ariel Professional Original для стирки белья. В упаковке 70 капсул; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">3 400 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3254" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 3 298 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dash</span>
+                <button class="favorite-button" type="button" data-favorite="prd_56abfd7d14b5" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dash-caps-2h60sht-bonux-gel-3in1-alpen-frische-7d14b5/" data-product-link="prd_56abfd7d14b5" aria-label="Открыть DASH CAPS (2х60шт+Bonux Gel) 3in1 Alpen Frische">
+                  <img class="product-image" src="/assets/products/registry/1c-1903/card-front-ec21e4f3b6a8.jpg" alt="DASH CAPS (2х60шт+Bonux Gel) 3in1 Alpen Frische" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dash-caps-2h60sht-bonux-gel-3in1-alpen-frische-7d14b5/" data-product-link="prd_56abfd7d14b5">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dash</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>товары из германии</strong>
+                  </span>
+                  <span class="product-variant-line">CAPS 2х+Bonux Gel 3in1 Alpen Frische</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>1G.DASH: товар для дома и личного ухода. Формат: 1 G, 60 шт.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">4 400 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_56abfd7d14b5" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 4 268 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_5ab8dc5b190f" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-caps-24sht-3in1-colorwaschmittel-5b190f/" data-product-link="prd_5ab8dc5b190f" aria-label="Открыть Dalli CAPS (24шт) 3in1 Colorwaschmittel">
+                  <img class="product-image" src="/assets/products/registry/1c-1879/card-front-b938544c9773.jpg" alt="Dalli CAPS (24шт) 3in1 Colorwaschmittel" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-caps-24sht-3in1-colorwaschmittel-5b190f/" data-product-link="prd_5ab8dc5b190f">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dalli</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>товары из германии</strong>
+                  </span>
+                  <span class="product-variant-line">CAPS 3in1 Colorwaschmittel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>G.Dalli: товар для дома и личного ухода. Формат: 24 шт, 24шт.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">990 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_5ab8dc5b190f" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 960 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">OMO</span>
+                <button class="favorite-button" type="button" data-favorite="prd_f6be4df71126" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/omo-pods-42sht-lavender-f71126/" data-product-link="prd_f6be4df71126" aria-label="Открыть OMO Pods (42шт) Lavender">
+                  <img class="product-image" src="/assets/products/registry/1c-950/card-front-639bad6aeb7a.jpg" alt="OMO Pods (42шт) Lavender" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/omo-pods-42sht-lavender-f71126/" data-product-link="prd_f6be4df71126">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">OMO</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Pods Lavender</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>OMO: капсулы для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 42 шт, 42шт.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">995 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_f6be4df71126" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 965 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">OMO</span>
+                <button class="favorite-button" type="button" data-favorite="prd_01f96c8462d9" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/omo-pods-42sht-marseille-8462d9/" data-product-link="prd_01f96c8462d9" aria-label="Открыть OMO Pods (42шт) Marseille">
+                  <img class="product-image" src="/assets/products/registry/1c-59/card-front-bb512d7febaa.jpg" alt="OMO Pods (42шт) Marseille" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/omo-pods-42sht-marseille-8462d9/" data-product-link="prd_01f96c8462d9">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">OMO</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Pods Marseille</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>OMO: капсулы для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 42 шт, 42шт.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">995 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_01f96c8462d9" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 965 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">OMO</span>
+                <button class="favorite-button" type="button" data-favorite="prd_c8d4900165dc" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/omo-pods-42sht-rose-blossom-0165dc/" data-product-link="prd_c8d4900165dc" aria-label="Открыть OMO Pods (42шт) Rose Blossom">
+                  <img class="product-image" src="/assets/products/registry/1c-1087/card-front-50d39dce2c32.jpg" alt="OMO Pods (42шт) Rose Blossom" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/omo-pods-42sht-rose-blossom-0165dc/" data-product-link="prd_c8d4900165dc">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">OMO</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Pods Rose Blossom</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>OMO: капсулы для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 42 шт, 42шт.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">995 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_c8d4900165dc" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 965 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">OMO</span>
+                <button class="favorite-button" type="button" data-favorite="prd_37105edabaec" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/omo-pods-42sht-white-orchid-dabaec/" data-product-link="prd_37105edabaec" aria-label="Открыть OMO Pods (42шт) White Orchid">
+                  <img class="product-image" src="/assets/products/registry/1c-60/card-front-918e56752f4e.jpg" alt="OMO Pods (42шт) White Orchid" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/omo-pods-42sht-white-orchid-dabaec/" data-product-link="prd_37105edabaec">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">OMO</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">Pods White Orchid</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Стирка и уход за бельем</span>
+                </div>
+                <p>OMO: капсулы для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 42 шт, 42шт.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">995 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_37105edabaec" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 965 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_b23a1bd2b12b" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-3in1-sport-outdoor-kapsuly-24-sht-d2b12b/" data-product-link="prd_b23a1bd2b12b" aria-label="Открыть Dalli 3in1 Sport &amp; Outdoor капсулы 24 шт">
+                  <img class="product-image" src="/assets/products/registry/1c-1889/card-front-c43762d9ced1.jpg" alt="Dalli 3in1 Sport &amp; Outdoor капсулы 24 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-3in1-sport-outdoor-kapsuly-24-sht-d2b12b/" data-product-link="prd_b23a1bd2b12b">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dalli</span>
+                    <span class="product-size-line">24 шт</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">3in1 Sport &amp; Outdoor капсулы</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Капсулы Dalli 3in1 Sport &amp; Outdoor для спортивной и повседневной одежды. В упаковке 24 штуки.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">990 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_b23a1bd2b12b" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 960 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Dalli</span>
+                <button class="favorite-button" type="button" data-favorite="prd_762c62113ca3" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dalli-3in1-vollwaschmittel-kapsuly-dlya-stirki-24-sht-113ca3/" data-product-link="prd_762c62113ca3" aria-label="Открыть Dalli 3in1 Vollwaschmittel капсулы 24 шт">
+                  <img class="product-image" src="/assets/products/stock-2026-09-07/1c-2526-card-front.jpg" alt="Dalli 3in1 Vollwaschmittel капсулы 24 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dalli-3in1-vollwaschmittel-kapsuly-dlya-stirki-24-sht-113ca3/" data-product-link="prd_762c62113ca3">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dalli</span>
+                    <span class="product-size-line">24 шт</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>капсулы для стирки</strong>
+                  </span>
+                  <span class="product-variant-line">3in1 Vollwaschmittel капсулы</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Европа</span>
+                </div>
+                <p>Немецкие капсулы Dalli 3in1 Vollwaschmittel для удобной стирки. В упаковке 24 штуки.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">990 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_762c62113ca3" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 960 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
@@ -491,712 +1233,9 @@
                 </div>
               </div>
             </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
-                <span class="placeholder-brand">Dash</span>
-                <button class="favorite-button" type="button" data-favorite="prd_4db8a0f93b3f" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-f93b3f/" data-product-link="prd_4db8a0f93b3f" aria-label="Открыть Dash Color Frische капсулы для стирки 60 шт">
-                  <img class="product-image" src="/assets/products/dash/dash-color-frische-caps-box-60-card-front.jpg" alt="Dash Color Frische капсулы для стирки 60 шт" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-f93b3f/" data-product-link="prd_4db8a0f93b3f">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dash</span>
-                    <span class="product-size-line">60 шт</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>капсулы для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">Color Frische</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Европа</span>
-                </div>
-                <p>Dash Color Frische 3in1 — капсулы для автоматической стирки цветного белья в коробке XXL. Заранее отмеренная многокомпонентная доза предназначена для очищения тканей, ухода за цветом и придания свежего аромата. В упаковке 60 капсул; кладите одну капсулу в пустой барабан сухими руками, затем загружайте бельё.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">2 295 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_4db8a0f93b3f" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 226 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
-                <span class="placeholder-brand">Dash</span>
-                <button class="favorite-button" type="button" data-favorite="prd_33a2990e3c6a" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-0e3c6a/" data-product-link="prd_33a2990e3c6a" aria-label="Открыть Dash Color Frische капсулы для стирки 60 шт">
-                  <img class="product-image" src="/assets/products/dash/dash-color-frische-caps-60-card-front.jpg" alt="Dash Color Frische капсулы для стирки 60 шт" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dash-color-frische-kapsuly-dlya-stirki-60-sht-0e3c6a/" data-product-link="prd_33a2990e3c6a">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dash</span>
-                    <span class="product-size-line">60 шт</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>капсулы для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">Color Frische</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Европа</span>
-                </div>
-                <p>Dash Color Frische 3in1 — капсулы для автоматической стирки цветного белья в мягкой упаковке. Заранее отмеренная многокомпонентная доза предназначена для очищения тканей, ухода за цветом и придания свежего аромата. В упаковке 60 капсул; кладите капсулу в пустой барабан сухими руками до загрузки белья.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">2 195 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_33a2990e3c6a" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 129 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Ariel</span>
-                <button class="favorite-button" type="button" data-favorite="prd_165eafb70eb3" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/ariel-fast-dissolving-kontsentrat-2-5-kg-b70eb3/" data-product-link="prd_165eafb70eb3" aria-label="Открыть Ariel Fast Dissolving концентрат 2,5 кг">
-                  <img class="product-image" src="/assets/products/ariel/ariel-fast-dissolving-2-5kg-card-front.jpg" alt="Ariel Fast Dissolving концентрат 2,5 кг" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/ariel-fast-dissolving-kontsentrat-2-5-kg-b70eb3/" data-product-link="prd_165eafb70eb3">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Ariel</span>
-                    <span class="product-size-line">2,5 кг</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>стиральный порошок</strong>
-                  </span>
-                  <span class="product-variant-line">Fast Dissolving концентрат</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Ariel Fast Dissolving — порошок для автоматической стирки, разработанный для быстрого растворения в воде. Средство предназначено для удаления повседневных пятен и подходит для использования в стиральных машинах автоматического типа. Вес 2,5 кг; дозируйте порошок по инструкции на коробке с учётом загрузки и степени загрязнения.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">1 595 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_165eafb70eb3" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 1 547 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Comfort</span>
-                <button class="favorite-button" type="button" data-favorite="prd_fd5eee161942" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/comfort-blue-love-kontsentrat-dlya-belya-1-5-l-161942/" data-product-link="prd_fd5eee161942" aria-label="Открыть Comfort Blue Love концентрат для белья 1,5 л">
-                  <img class="product-image" src="/assets/products/restored-history/prd_fd5eee161942-comfort-blue-love-концентрат-для-белья-1-5-л-card-front.jpg" alt="Comfort Blue Love концентрат для белья 1,5 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/comfort-blue-love-kontsentrat-dlya-belya-1-5-l-161942/" data-product-link="prd_fd5eee161942">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Comfort</span>
-                    <span class="product-size-line">1,5 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>ополаскиватель</strong>
-                  </span>
-                  <span class="product-variant-line">Blue Love концентрат для белья</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Comfort Blue Love — концентрированный кондиционер для белья со свежим цветочным ароматом. Средство добавляется на этапе полоскания, помогает смягчить ткани и придаёт им длительное ощущение свежести. Объём 1,5 л; наливайте кондиционер в предназначенный для него отсек стиральной машины по дозировке на упаковке.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">1 290 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_fd5eee161942" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 1 251 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Comfort</span>
-                <button class="favorite-button" type="button" data-favorite="prd_cc0deb97f256" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/comfort-flora-soft-konditsioner-dlya-belya-1-l-97f256/" data-product-link="prd_cc0deb97f256" aria-label="Открыть Comfort Flora Soft кондиционер для белья 1 л">
-                  <img class="product-image" src="/assets/products/restored-history/prd_cc0deb97f256-comfort-flora-soft-кондиционер-для-белья-1-л-card-front.jpg" alt="Comfort Flora Soft кондиционер для белья 1 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/comfort-flora-soft-konditsioner-dlya-belya-1-l-97f256/" data-product-link="prd_cc0deb97f256">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Comfort</span>
-                    <span class="product-size-line">1 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>ополаскиватель</strong>
-                  </span>
-                  <span class="product-variant-line">Flora Soft</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Comfort Flora Soft — кондиционер для белья с насыщенным цветочным ароматом. Средство используется на этапе полоскания, помогает смягчить ткани и придаёт им длительное ощущение свежести. Объём 1 л рассчитан примерно на 9 стирок по маркировке упаковки; наливайте кондиционер в предназначенный для него отсек стиральной машины.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">595 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_cc0deb97f256" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 577 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Comfort</span>
-                <button class="favorite-button" type="button" data-favorite="prd_733c019c32a5" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/comfort-iris-jasmine-kontsentrat-dlya-belya-1-5-l-9c32a5/" data-product-link="prd_733c019c32a5" aria-label="Открыть Comfort Iris &amp; Jasmine концентрат для белья 1,5 л">
-                  <img class="product-image" src="/assets/products/restored-history/prd_733c019c32a5-comfort-iris-jasmine-концентрат-для-белья-1-5-card-front.jpg" alt="Comfort Iris &amp; Jasmine концентрат для белья 1,5 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/comfort-iris-jasmine-kontsentrat-dlya-belya-1-5-l-9c32a5/" data-product-link="prd_733c019c32a5">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Comfort</span>
-                    <span class="product-size-line">1,5 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>ополаскиватель</strong>
-                  </span>
-                  <span class="product-variant-line">Iris &amp; Jasmine концентрат для белья</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Comfort Iris &amp; Jasmine — концентрированный кондиционер для белья с ароматом ириса и жасмина. Средство используется на этапе полоскания, помогает смягчить ткани и придаёт им выраженную цветочную свежесть. Объём 1,5 л; наливайте кондиционер в специальный отсек стиральной машины по дозировке на упаковке.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">1 290 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_733c019c32a5" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 1 251 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Comfort</span>
-                <button class="favorite-button" type="button" data-favorite="prd_79ae12d5e324" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/comfort-spring-konditsioner-dlya-belya-1-l-d5e324/" data-product-link="prd_79ae12d5e324" aria-label="Открыть Comfort Spring кондиционер для белья 1 л">
-                  <img class="product-image" src="/assets/products/restored-history/prd_79ae12d5e324-comfort-spring-кондиционер-для-белья-1-л-card-front.jpg" alt="Comfort Spring кондиционер для белья 1 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/comfort-spring-konditsioner-dlya-belya-1-l-d5e324/" data-product-link="prd_79ae12d5e324">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Comfort</span>
-                    <span class="product-size-line">1 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>ополаскиватель</strong>
-                  </span>
-                  <span class="product-variant-line">Spring</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Comfort Spring Dew — кондиционер для белья со свежим весенним ароматом. Средство используется на этапе полоскания, помогает смягчить ткани и придаёт им длительное ощущение свежести. Объём 1 л рассчитан примерно на 9 стирок по маркировке упаковки; наливайте кондиционер в предназначенный для него отсек стиральной машины.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">595 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_79ae12d5e324" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 577 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Downy</span>
-                <button class="favorite-button" type="button" data-favorite="prd_4180ad019486" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/downy-all-in-one-rose-garden-kontsentrat-1-l-019486/" data-product-link="prd_4180ad019486" aria-label="Открыть Downy All-in-One Rose Garden концентрат 1 л">
-                  <img class="product-image" src="/assets/products/downy/downy-concentrate-rose-garden-1l-card-front.png" alt="Downy All-in-One Rose Garden концентрат 1 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/downy-all-in-one-rose-garden-kontsentrat-1-l-019486/" data-product-link="prd_4180ad019486">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Downy</span>
-                    <span class="product-size-line">1 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>ополаскиватель</strong>
-                  </span>
-                  <span class="product-variant-line">All-in-One Rose Garden концентрат</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Концентрированный кондиционер Downy All-in-One Rose Garden, объём 1 л. Аромат Rose Garden / сад роз, до 27 стирок. По иконкам на этикетке: защита цвета, больше мягкости и более длительная свежесть. Штрихкод: 8700216311830.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">795 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_4180ad019486" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 771 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Downy</span>
-                <button class="favorite-button" type="button" data-favorite="prd_71d2d567002b" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/downy-all-in-one-vanilla-musk-kontsentrat-1-l-67002b/" data-product-link="prd_71d2d567002b" aria-label="Открыть Downy All-in-One Vanilla &amp; Musk концентрат 1 л">
-                  <img class="product-image" src="/assets/products/downy/downy-concentrate-vanilla-musk-1l-card-front.png" alt="Downy All-in-One Vanilla &amp; Musk концентрат 1 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/downy-all-in-one-vanilla-musk-kontsentrat-1-l-67002b/" data-product-link="prd_71d2d567002b">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Downy</span>
-                    <span class="product-size-line">1 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>ополаскиватель</strong>
-                  </span>
-                  <span class="product-variant-line">All-in-One Vanilla &amp; Musk концентрат</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Концентрированный кондиционер Downy All-in-One Vanilla &amp; Musk, объём 1 л. Аромат ваниль и мускус, до 25 стирок. На этикетке заявлены fresher, softer, brighter и свежесть до 30 дней от стирки до шкафа. Штрихкод: 8700216311588.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">795 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_71d2d567002b" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 771 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Downy</span>
-                <button class="favorite-button" type="button" data-favorite="prd_e9b3349a68aa" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/downy-fresh-valley-dew-konditsioner-dlya-belya-1-l-9a68aa/" data-product-link="prd_e9b3349a68aa" aria-label="Открыть Downy Fresh Valley Dew кондиционер для белья 1 л">
-                  <img class="product-image" src="/assets/products/downy/downy-fresh-valley-dew-1l-card-front.png" alt="Downy Fresh Valley Dew кондиционер для белья 1 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/downy-fresh-valley-dew-konditsioner-dlya-belya-1-l-9a68aa/" data-product-link="prd_e9b3349a68aa">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Downy</span>
-                    <span class="product-size-line">1 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>ополаскиватель</strong>
-                  </span>
-                  <span class="product-variant-line">Fresh Valley Dew</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Кондиционер для белья Downy Fresh Valley Dew, объём 1 л. Аромат Valley Dew / свежий аромат, до 9 стирок. По лицевой этикетке указано Fresh и до 7 дней свежести. Штрихкод: 5413149637924.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">595 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_e9b3349a68aa" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 577 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Lenor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_56516b8b34c7" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/lenor-cool-cotton-parfyum-dlya-belya-155-g-8b34c7/" data-product-link="prd_56516b8b34c7" aria-label="Открыть Lenor Cool Cotton парфюм для белья 155 г">
-                  <img class="product-image" src="/assets/products/lenor/lenor-cool-cotton-155g-card-front.jpg" alt="Lenor Cool Cotton парфюм для белья 155 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/lenor-cool-cotton-parfyum-dlya-belya-155-g-8b34c7/" data-product-link="prd_56516b8b34c7">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Lenor</span>
-                    <span class="product-size-line">155 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>парфюм для белья</strong>
-                  </span>
-                  <span class="product-variant-line">Cool Cotton</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Lenor Cool Cotton — парфюмированные гранулы со свежим хлопковым ароматом для белья. Это отдельная ароматическая добавка к обычному средству для стирки, а не порошок или кондиционер; количество гранул определяет интенсивность аромата. Насыпьте гранулы в пустой барабан до загрузки белья; формат 155 г.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">695 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_56516b8b34c7" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 674 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Lenor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_1710ac102a49" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/lenor-dreamy-jasmine-parfyum-dlya-belya-155-g-102a49/" data-product-link="prd_1710ac102a49" aria-label="Открыть Lenor Dreamy Jasmine парфюм для белья 155 г">
-                  <img class="product-image" src="/assets/products/lenor/lenor-dreamy-jasmine-155g-card-front.jpg" alt="Lenor Dreamy Jasmine парфюм для белья 155 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/lenor-dreamy-jasmine-parfyum-dlya-belya-155-g-102a49/" data-product-link="prd_1710ac102a49">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Lenor</span>
-                    <span class="product-size-line">155 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>парфюм для белья</strong>
-                  </span>
-                  <span class="product-variant-line">Dreamy Jasmine</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Lenor Unstoppables Dreamy Jasmine — парфюмированные гранулы с жасминовым ароматом для добавления во время стирки. Они используются вместе с обычным моющим средством и позволяют регулировать интенсивность аромата количеством гранул. Насыпьте гранулы в пустой барабан до загрузки белья; формат 155 г.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">695 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_1710ac102a49" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 674 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Lenor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_311be4dd4930" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/lenor-fresh-parfyum-dlya-belya-155-g-dd4930/" data-product-link="prd_311be4dd4930" aria-label="Открыть Lenor Fresh парфюм для белья 155 г">
-                  <img class="product-image" src="/assets/products/lenor/lenor-fresh-155g-card-front.jpg" alt="Lenor Fresh парфюм для белья 155 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/lenor-fresh-parfyum-dlya-belya-155-g-dd4930/" data-product-link="prd_311be4dd4930">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Lenor</span>
-                    <span class="product-size-line">155 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>парфюм для белья</strong>
-                  </span>
-                  <span class="product-variant-line">Fresh</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Lenor Unstoppables Fresh — парфюмированные гранулы, которые усиливают аромат белья во время стирки. Это дополнение к обычному моющему средству, а не порошок или кондиционер; интенсивность аромата можно регулировать количеством гранул. Насыпьте гранулы прямо в пустой барабан до загрузки белья; формат 155 г.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">695 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_311be4dd4930" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 674 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Lenor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_19a727030e6b" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/lenor-gold-orchid-parfyum-dlya-belya-210-g-030e6b/" data-product-link="prd_19a727030e6b" aria-label="Открыть Lenor Gold Orchid парфюм для белья 210 г">
-                  <img class="product-image" src="/assets/products/lenor/lenor-gold-orchid-210g-card-front.jpg" alt="Lenor Gold Orchid парфюм для белья 210 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/lenor-gold-orchid-parfyum-dlya-belya-210-g-030e6b/" data-product-link="prd_19a727030e6b">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Lenor</span>
-                    <span class="product-size-line">210 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>парфюм для белья</strong>
-                  </span>
-                  <span class="product-variant-line">Gold Orchid</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Lenor Gold Orchid — парфюмированные гранулы с тёплым цветочно-ванильным ароматом для белья. Гранулы используются вместе с обычным средством для стирки и позволяют менять интенсивность аромата дозировкой. Насыпьте их в пустой барабан до загрузки белья; формат 210 г.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">750 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_19a727030e6b" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 727 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Lenor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_594869df277e" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/lenor-jasmine-white-cedar-parfyum-dlya-belya-155-g-df277e/" data-product-link="prd_594869df277e" aria-label="Открыть Lenor Jasmine &amp; White Cedar парфюм для белья 155 г">
-                  <img class="product-image" src="/assets/products/lenor/lenor-jasmine-white-cedar-155g-card-front.jpg" alt="Lenor Jasmine &amp; White Cedar парфюм для белья 155 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/lenor-jasmine-white-cedar-parfyum-dlya-belya-155-g-df277e/" data-product-link="prd_594869df277e">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Lenor</span>
-                    <span class="product-size-line">155 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>парфюм для белья</strong>
-                  </span>
-                  <span class="product-variant-line">Jasmine &amp; White Cedar</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Lenor Unstoppables Jasmine &amp; White Cedar — парфюмированные гранулы с цветочно-древесным ароматом жасмина и белого кедра. Их добавляют к обычному средству для стирки, чтобы придать белью более выраженный аромат. Насыпьте гранулы прямо в пустой барабан до загрузки белья; формат 155 г.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">695 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_594869df277e" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 674 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Lenor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_40d21a2a86d6" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/lenor-northern-solstice-parfyum-dlya-belya-155-g-2a86d6/" data-product-link="prd_40d21a2a86d6" aria-label="Открыть Lenor Northern Solstice парфюм для белья 155 г">
-                  <img class="product-image" src="/assets/products/lenor/lenor-northern-solstice-155g-card-front.jpg" alt="Lenor Northern Solstice парфюм для белья 155 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/lenor-northern-solstice-parfyum-dlya-belya-155-g-2a86d6/" data-product-link="prd_40d21a2a86d6">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Lenor</span>
-                    <span class="product-size-line">155 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>парфюм для белья</strong>
-                  </span>
-                  <span class="product-variant-line">Northern Solstice</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Lenor Unstoppables Northern Solstice — парфюмированные гранулы для усиления аромата белья во время стирки. Это отдельная ароматическая добавка, которую используют вместе с обычным моющим средством; количество гранул определяет интенсивность аромата. Насыпьте их прямо в пустой барабан до загрузки белья; формат 155 г.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">695 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_40d21a2a86d6" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 674 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Lenor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_0fb16d2a0b60" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/lenor-sandalwood-eucalyptus-parfyum-dlya-belya-155-g-2a0b60/" data-product-link="prd_0fb16d2a0b60" aria-label="Открыть Lenor Sandalwood &amp; Eucalyptus парфюм для белья 155 г">
-                  <img class="product-image" src="/assets/products/lenor/lenor-sandalwood-eucalyptus-155g-card-front.jpg" alt="Lenor Sandalwood &amp; Eucalyptus парфюм для белья 155 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/lenor-sandalwood-eucalyptus-parfyum-dlya-belya-155-g-2a0b60/" data-product-link="prd_0fb16d2a0b60">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Lenor</span>
-                    <span class="product-size-line">155 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>парфюм для белья</strong>
-                  </span>
-                  <span class="product-variant-line">Sandalwood &amp; Eucalyptus</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Lenor Unstoppables Sandalwood &amp; Eucalyptus — парфюмированные гранулы с древесно-свежим ароматом сандала и эвкалипта. Это ароматическая добавка к стирке, а не замена порошку или кондиционеру; интенсивность можно регулировать количеством гранул. Насыпьте их прямо в пустой барабан до загрузки белья; формат 155 г.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">695 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_0fb16d2a0b60" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 674 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Lenor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_d0f02fd7d3b0" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/lenor-spring-awakening-parfyum-dlya-belya-155-g-d7d3b0/" data-product-link="prd_d0f02fd7d3b0" aria-label="Открыть Lenor Spring Awakening парфюм для белья 155 г">
-                  <img class="product-image" src="/assets/products/lenor/lenor-spring-awakening-155g-card-front.jpg" alt="Lenor Spring Awakening парфюм для белья 155 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/lenor-spring-awakening-parfyum-dlya-belya-155-g-d7d3b0/" data-product-link="prd_d0f02fd7d3b0">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Lenor</span>
-                    <span class="product-size-line">155 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>парфюм для белья</strong>
-                  </span>
-                  <span class="product-variant-line">Spring Awakening</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Lenor Spring Awakening — парфюмированные гранулы для усиления аромата белья во время стирки. Это ароматическая добавка, а не моющее средство или кондиционер; интенсивность можно регулировать количеством гранул. Насыпьте гранулы в пустой барабан до загрузки белья; формат 155 г.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">695 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_d0f02fd7d3b0" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 674 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
-                <span class="placeholder-brand">Persil</span>
-                <button class="favorite-button" type="button" data-favorite="prd_894a7f6437d0" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span></div>
-
-                <a class="product-image-link" href="/product/persil-high-foam-gel-dlya-stirki-3-l-1-l-6437d0/" data-product-link="prd_894a7f6437d0" aria-label="Открыть Persil High Foam гель для стирки 3 л + 1 л">
-                  <img class="product-image" src="/assets/products/persil/persil-high-foam-gel-3l-plus-1l-raw-card-front.jpg" alt="Persil High Foam гель для стирки 3 л + 1 л" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/persil-high-foam-gel-dlya-stirki-3-l-1-l-6437d0/" data-product-link="prd_894a7f6437d0">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Persil</span>
-                    <span class="product-size-line">3 л + 1 л</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>гель для стирки</strong>
-                  </span>
-                  <span class="product-variant-line">High Foam</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Стирка и уход за бельем</span>
-                </div>
-                <p>Жидкий Persil Power Gel High Foam предназначен для стирки белья и ухода за стиральной машиной в рамках линейки Deep Clean. Средство помогает удалять повседневные загрязнения и поддерживать ощущение свежести после стирки. В комплекте канистры 2,9 л и 1 л, общий объём 3,9 л; используйте дозировку с упаковки.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">2 595 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_894a7f6437d0" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 2 517 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
 </div>
     </section>
-    
+
     <nav class="bottom-page-actions" aria-label="Навигация по странице">
       <button class="bottom-page-action" type="button" data-back>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"></path></svg>
@@ -1222,9 +1261,10 @@
       <a href="/catalog/">Разделы</a>
       <a href="/#checkout">Оформление</a>
       <a href="/#myOrders">Мои заказы</a>
+      <a href="/delivery-and-returns/">Доставка и возврат</a>
       <a href="/privacy.html">Политика конфиденциальности</a>
     </nav>
-    <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
+    <p>ИП Григорьев Василий Владимирович · ИНН 21509198010011</p>
   </div>
 </footer>
   <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Нижняя навигация">
@@ -1262,7 +1302,7 @@
   </a>
 </nav>
   <script>
-    const product = {"id": "prd_bd8fab362271", "code": "prd_bd8fab362271", "title": "Ariel All in 1 Color капсулы 15 шт", "description": "Ariel All in 1 Color — капсулы для автоматической стирки цветного белья. Многокамерная капсула растворяется в воде и высвобождает средство для удаления повседневных пятен, сохраняя яркий вид цветных вещей. В упаковке 15 капсул; положите капсулу в глубину пустого барабана сухими руками, затем загрузите бельё.", "price": 895, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Ariel%20All%20in%201%20Color%20%D0%BA%D0%B0%D0%BF%D1%81%D1%83%D0%BB%D1%8B%2015%20%D1%88%D1%82%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20895%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/ariel-all-in-1-color-kapsuly-15-sht-362271/"};
+    const product = {"id": "prd_bd8fab362271", "code": "1105", "title": "Ariel All in 1 Color капсулы 15 шт", "description": "Ariel All in 1 Color — капсулы для автоматической стирки цветного белья. Многокамерная капсула растворяется в воде и высвобождает средство для удаления повседневных пятен, сохраняя яркий вид цветных вещей. В упаковке 15 капсул; положите капсулу в глубину пустого барабана сухими руками, затем загрузите бельё.", "price": 990, "inStock": true, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Ariel%20All%20in%201%20Color%20%D0%BA%D0%B0%D0%BF%D1%81%D1%83%D0%BB%D1%8B%2015%20%D1%88%D1%82%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20990%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/ariel-all-in-1-color-kapsuly-15-sht-362271/"};
     const cartKey = "globalMarketCartDraft";
     const favoritesKey = "globalMarketFavorites";
     const recentlyViewedKey = "globalMarketRecentlyViewed";
@@ -1408,6 +1448,7 @@
           const params = new URLSearchParams();
           if (item.collection) params.set("collection", item.collection);
           if (item.category) params.set("category", item.category);
+          if (item.section) params.set("section", item.section);
           if (item.audience) params.set("audience", item.audience);
           if (item.query) params.set("query", item.query);
           if (item.label) params.set("label", item.label);
@@ -1602,14 +1643,58 @@
       window.location.href = event.currentTarget.href;
     });
 
-    document.querySelectorAll("[data-gallery-image]").forEach((button) => {
-      button.addEventListener("click", () => {
-        const image = button.dataset.galleryImage;
-        const mainImage = document.querySelector("[data-main-image]");
-        if (mainImage && image) mainImage.src = image;
-        document.querySelectorAll("[data-gallery-image]").forEach((item) => item.classList.toggle("active", item === button));
+    const galleryButtons = [...document.querySelectorAll("[data-gallery-image]")];
+    const mainImage = document.querySelector("[data-main-image]");
+    let activeGalleryIndex = Math.max(0, galleryButtons.findIndex((item) => item.classList.contains("active")));
+
+    function selectGalleryImage(index) {
+      if (!mainImage || !galleryButtons.length) return;
+      const nextIndex = Math.max(0, Math.min(index, galleryButtons.length - 1));
+      const button = galleryButtons[nextIndex];
+      const image = button?.dataset.galleryImage;
+      if (!image) return;
+      activeGalleryIndex = nextIndex;
+      mainImage.src = image;
+      mainImage.alt = button.querySelector("img")?.alt || product.title;
+      mainImage.setAttribute("aria-label", `Фото ${nextIndex + 1} из ${galleryButtons.length}`);
+      galleryButtons.forEach((item, itemIndex) => {
+        const active = itemIndex === nextIndex;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-current", active ? "true" : "false");
       });
+      button.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+
+    galleryButtons.forEach((button, index) => {
+      button.addEventListener("click", () => selectGalleryImage(index));
+      button.setAttribute("aria-current", index === activeGalleryIndex ? "true" : "false");
     });
+
+    if (mainImage && galleryButtons.length > 1) {
+      let swipeStart = null;
+      mainImage.tabIndex = 0;
+      mainImage.setAttribute("aria-label", `Фото ${activeGalleryIndex + 1} из ${galleryButtons.length}`);
+      mainImage.addEventListener("dragstart", (event) => event.preventDefault());
+      mainImage.addEventListener("pointerdown", (event) => {
+        if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
+        swipeStart = { pointerId: event.pointerId, x: event.clientX, y: event.clientY };
+        mainImage.setPointerCapture?.(event.pointerId);
+      });
+      mainImage.addEventListener("pointerup", (event) => {
+        if (!swipeStart || swipeStart.pointerId !== event.pointerId) return;
+        const deltaX = event.clientX - swipeStart.x;
+        const deltaY = event.clientY - swipeStart.y;
+        swipeStart = null;
+        if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.2) return;
+        selectGalleryImage(activeGalleryIndex + (deltaX < 0 ? 1 : -1));
+      });
+      mainImage.addEventListener("pointercancel", () => { swipeStart = null; });
+      mainImage.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        selectGalleryImage(activeGalleryIndex + (event.key === "ArrowRight" ? 1 : -1));
+      });
+    }
 
     updateFavoriteButton();
     syncGridFavoriteButtons();
@@ -1638,5 +1723,15 @@
       window.requestAnimationFrame(updateSmartHeader);
     }, { passive: true });
   </script>
+  <!-- BEGIN shared-analytics-consent -->
+<aside class="gmk-consent" data-nosnippet aria-label="Настройки аналитики">
+  <strong>Аналитика и рекламные измерения</strong>
+  <p>Анонимные события магазина отправляются в Google только с вашего согласия. Телефон, SMS-код, имя, адрес и текст заказа не передаются. <a href="/privacy.html">Подробнее</a></p>
+  <div class="gmk-consent-actions">
+    <button type="button" data-consent="granted">Разрешить</button>
+    <button type="button" data-consent="denied">Только необходимые</button>
+  </div>
+</aside>
+<!-- END shared-analytics-consent -->
 </body>
 </html>

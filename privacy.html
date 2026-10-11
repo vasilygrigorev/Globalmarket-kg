@@ -24,8 +24,26 @@
     <link rel="apple-touch-icon" href="/assets/brand/globalmarket-tech-orb.jpg" />
     <meta name="theme-color" content="#003d49" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=20260720-product-search-policy-v1" />
-  </head>
+    <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1" />
+  <!-- BEGIN shared-analytics-head -->
+<meta name="google-site-verification" content="960zpLbWQpecqn6ZhlIecGVl0zt3SRKtzPd800egMo4">
+<link rel="stylesheet" href="/assets/google-consent.css?v=20261011-retail-full-recovery-v1">
+<script id="gmk-google-tag-bootstrap">
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+window.gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500
+});
+window.gtag('js', new Date());
+</script>
+<script async id="gmk-google-tag-loader" src="https://www.googletagmanager.com/gtag/js?id=G-9KZK8Y4S7K"></script>
+<script defer id="gmk-google-consent-script" src="/assets/google-consent.js?v=20261011-retail-full-recovery-v1"></script>
+<!-- END shared-analytics-head -->
+</head>
   <body class="legal-page">
     <header class="legal-header">
       <a class="legal-brand" href="/">Global <span>Market</span></a>
@@ -34,7 +52,7 @@
       <article class="legal-card">
         <p class="eyebrow">Global Market KG</p>
         <h1>Политика конфиденциальности</h1>
-        <p class="legal-updated">Дата обновления: 20 июля 2026 года</p>
+        <p class="legal-updated">Дата обновления: 11 октября 2026 года</p>
         <p class="legal-summary">
           Мы используем данные клиента только для работы магазина: оформления и сопровождения заказов,
           доставки, связи с менеджером, входа в личный кабинет и улучшения сервиса. Данные не продаются.
@@ -121,10 +139,27 @@
           </p>
         </section>
 
+        <section class="legal-section gmk-google-privacy">
+          <h2>9. Google Analytics и рекламные измерения</h2>
+          <p>
+            Google Tag запускается с аналитическим и рекламным хранилищем, запрещённым по умолчанию.
+            Только после согласия посетителя передаются обезличенные события: просмотр страницы или товара,
+            добавление в корзину, начало оформления, результат отправки заказа и результат SMS-входа.
+            Номер телефона, SMS-код, имя, адрес и текст заказа в Google не передаются.
+          </p>
+          <p>Выбор можно изменить в любое время на этой странице.</p>
+          <div class="gmk-consent-actions">
+            <button type="button" data-consent="granted">Разрешить аналитику</button>
+            <button type="button" data-consent="denied">Отказаться от аналитики</button>
+          </div>
+        </section>
+
         <section class="legal-section">
-          <h2>9. Контакты</h2>
+          <h2>10. Контакты</h2>
           <div class="legal-contact">
             <strong>Global Market KG</strong>
+            <span>Оператор: ИП Григорьев Василий Владимирович</span>
+            <span>ИНН: 21509198010011</span>
             <span>Email: <a href="mailto:globaldistkg@gmail.com">globaldistkg@gmail.com</a></span>
             <span>Телефон / WhatsApp: <a href="https://wa.me/996706771103">+996 706 771 103</a></span>
           </div>
@@ -132,9 +167,20 @@
             <a href="/">На главную</a>
             <a href="/#catalog">Каталог</a>
             <a href="/#checkout">Оформление заказа</a>
+            <a href="/delivery-and-returns/">Доставка и возврат</a>
           </nav>
         </section>
       </article>
     </main>
-  </body>
+  <!-- BEGIN shared-analytics-consent -->
+<aside class="gmk-consent" data-nosnippet aria-label="Настройки аналитики">
+  <strong>Аналитика и рекламные измерения</strong>
+  <p>Анонимные события магазина отправляются в Google только с вашего согласия. Телефон, SMS-код, имя, адрес и текст заказа не передаются. <a href="/privacy.html">Подробнее</a></p>
+  <div class="gmk-consent-actions">
+    <button type="button" data-consent="granted">Разрешить</button>
+    <button type="button" data-consent="denied">Только необходимые</button>
+  </div>
+</aside>
+<!-- END shared-analytics-consent -->
+</body>
 </html>

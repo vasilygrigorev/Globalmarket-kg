@@ -27,3 +27,32 @@ Current known exception:
 - `prd_e8a318ef10d2` / `Colgate 360 Optic White зубная щётка` has card + front only. Its own back photo from the 2026-07-06 Petya batch is a mismatch (matches a different variant's back).
 - `prd_b61ba7c4268e` / `Colgate MaxFresh зубная щётка` has card + front only. Its own back photo from the 2026-07-06 Petya batch is byte-identical (md5) to a different product's back — a photographer duplicate.
 - `prd_70c1f5d616a6` / `Clear Men Legend by CR7 шампунь 400 мл` has card + front only. The old back photo is visibly labeled 600 ml and must not be published for the stocked 400 ml SKU; request the exact 400 ml back photo.
+
+## Production Catalog Contract
+
+These rules are mandatory for Codex, Claude, Petya, and any other automation.
+
+- Petya is an intake and storage bot only. It may save photos, 1C exports, and documents, but it must never edit a storefront repository, build a release, change Cloudflare, or deploy.
+- `catalog-master.json` is append-only presentation history. A new 1C export updates stock, price, order, and current naming by `sourceCode`; it never replaces the master.
+- A code missing from the newest 1C balance becomes `inactive`, `inStock: false`, and `stockQuantity: 0`. Keep its stable ID, title corrections, description, taxonomy, approved gallery, and URL.
+- The retail public catalog contains only active in-stock products. The product-page catalog also contains retained historical out-of-stock products so search links do not break.
+- Every active product must have a generated static page even when its exact photo is not yet approved. Use the category-neutral placeholder and keep the page purchasable; never use `href="#"` and never substitute a similar product photo.
+- `data/page-catalog.json` is the retained non-service identity projection for page generation. It includes zero-stock history and must not be rebuilt from `data/public-catalog.json`.
+- `data/product-slug-registry.json` is append-only. Never regenerate a URL from a renamed product when a registered slug exists.
+- `productPagePath` is the only storefront source of truth for a product link. Do not guess a slug from `title`, and fail the build if an active product has no generated `productPagePath`.
+- Landing page URLs are append-only. A zero-product historical landing may remain only when it is explicitly marked `retainedLegacy: true`; do not silently delete or redirect it.
+- The primary category rail has exactly 10 ordered sections: Стирка, Кухня, Ванная, Тело, Кремы, Бритьё, Зубы, Волосы, Парфюм, Дом и уют. Детское and Европа are supplemental menu destinations.
+- Retail fresh arrivals use the exact opt virtual-group set and order when available; otherwise only `firstSeenAt == latestStockDate` is allowed as a fallback. A restock alone is never a new arrival.
+- Product photos must match the exact 1C product. Similar packaging, another size, another scent, or generated replacement text is forbidden.
+- Use the latest verified production release as the visual/behavioral baseline. Inventory data is data input, not UI source code.
+- Never deploy the repository root, Telegram folders, raw exports, or a temporary preview directory. Build an isolated static package and verify it first.
+- Raw Telegram/Petya paths are intake evidence only. Public galleries may reference only curated files under the repository `assets/` tree after exact 1C identity review.
+- Every inventory/photo release must pass the catalog history, gallery retention, stable URL, service-row exclusion, pricing, local-link, structured-data, and browser smoke gates.
+- Every public preview must send `X-Robots-Tag: noindex, nofollow, noarchive`, contain a matching robots meta tag, and disallow crawling in `robots.txt`.
+- Production remains unchanged until preview verification passes. Deploy the exact same package without preview-only noindex changes. Archive the exact deployed package, input/output master, checksums, deployment ID, and rollback ID.
+- Analytics must remain consent-aware. Never send phone numbers, SMS codes, names, addresses, order text, or other personal data to Google. Keep `_routes.json` limited to `/api/*` so static pages and SEO routes are not intercepted by the Pages Function.
+- The privacy and delivery/returns pages, legal footer, sitemap, and production indexing headers are release invariants.
+- Code `660` / Fairy Apple is intentionally held without a product photo until an exact image is confirmed. Do not restore an older or similar Fairy image.
+- Google Ads state is independent of a site release. A storefront deploy must not enable or modify advertising.
+
+The operational handoff is documented in [`docs/AI-HANDOFF-RULES.md`](docs/AI-HANDOFF-RULES.md).

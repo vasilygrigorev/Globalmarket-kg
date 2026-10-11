@@ -83,13 +83,19 @@ def validate_page(page):
         errors.append("missing shared site header")
     if 'class="site-footer"' not in html:
         errors.append("missing shared site footer")
-    if 'data-add-cart' not in html and "Нет в наличии" not in html:
+    is_out_of_stock = "https://schema.org/OutOfStock" in html
+    has_purchase_control = bool(re.search(r'<(?:button|a)\b[^>]*\bdata-add-cart\b', html, re.I))
+    if not has_purchase_control and not is_out_of_stock:
         errors.append("missing add-to-cart action")
+    if is_out_of_stock and has_purchase_control:
+        errors.append("out-of-stock page exposes add-to-cart action")
+    if is_out_of_stock and "Сейчас нет в наличии" not in html:
+        errors.append("out-of-stock page lacks informative status")
     if 'data-favorite' not in html:
         errors.append("missing favorite action")
     if 'data-share' not in html:
         errors.append("missing share action")
-    if "Спросить в WhatsApp" not in html:
+    if "Спросить в WhatsApp" not in html and "Уточнить поступление в WhatsApp" not in html:
         errors.append("missing WhatsApp question action")
 
     validate_json_ld(page, html, errors)

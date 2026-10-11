@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Fairy Lavender средство для посуды 600 мл">
   <meta name="twitter:description" content="Fairy Refreshing Lavender — жидкое средство для ручного мытья посуды с ароматом лаванды. Формула помогает удалять жир и повседневные пищевые загрязнения с ">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20260722-desktop-cart-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -43,12 +43,23 @@
     "url": "https://globalmarket.kg/product/fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba/",
     "priceCurrency": "KGS",
     "price": "450",
+    "validFrom": "2026-10-10",
     "priceValidUntil": "2027-12-31",
     "itemCondition": "https://schema.org/NewCondition",
-    "availability": "https://schema.org/InStock",
+    "availability": "https://schema.org/OutOfStock",
     "seller": {
       "@type": "Organization",
+      "@id": "https://globalmarket.kg/#organization",
       "name": "Global Market KG"
+    },
+    "hasMerchantReturnPolicy": {
+      "@id": "https://globalmarket.kg/delivery-and-returns/#return-policy"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "hasShippingService": {
+        "@id": "https://globalmarket.kg/delivery-and-returns/#shipping-policy"
+      }
     }
   }
 }</script>
@@ -98,38 +109,49 @@
     .icon-action.smm-share .instagram-dot { fill: currentColor; stroke: none; }
     .share-feedback { position: fixed; left: 50%; bottom: calc(82px + env(safe-area-inset-bottom)); z-index: 40; width: max-content; max-width: calc(100vw - 32px); transform: translateX(-50%); padding: 11px 14px; border-radius: 8px; color: #fff; background: rgba(20, 24, 28, 0.94); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22); font-size: 14px; font-weight: 750; text-align: center; }
     .visual-panel { background: #fff; }
-    .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; }
+    .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-drag: none; overscroll-behavior-x: contain; }
+    .media-main:active { cursor: grabbing; }
+    .media-main:focus-visible { outline: 3px solid #07958f; outline-offset: -3px; }
     .gallery-thumbs { display: flex; gap: 10px; padding: 14px 16px 18px; overflow-x: auto; background: #f7f7f8; }
-    .gallery-thumb { display: grid; flex: 0 0 76px; gap: 5px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }
+    .gallery-thumb { display: block; flex: 0 0 76px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }
     .gallery-thumb.active { border-color: #1f1f1f; background: #fff; }
     .gallery-thumb img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
-    .gallery-thumb span { overflow: hidden; font-size: 11px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; text-align: center; }
-    .product-purchase-strip { padding: 0 16px 18px; background: #f7f7f8; }
+    .gallery-thumb span { display: none; }
+    .product-purchase-strip { padding: 12px 16px 18px; background: #f7f7f8; }
     .product-purchase-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .product-purchase-actions > * { width: 100%; min-width: 0; }
-    .product-detail-info { display: grid; gap: 18px; padding: 28px 26px 26px; }
+    .purchase-price { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 0 0 14px; text-align: center; }
+    .purchase-price strong { font-weight: inherit; }
+    .purchase-price .price-group { display: flex; align-items: baseline; justify-content: center; gap: 10px; }
+    .purchase-price .price { color: #132e36; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 38px; font-weight: 300; line-height: 1.05; }
+    .purchase-price .price-original { color: #8a8f94; font-size: 20px; font-weight: 500; }
+    .purchase-price small { color: #777; font-size: 13px; }
+    .out-of-stock-panel { display: grid; gap: 5px; padding: 14px 16px; border: 1px solid #d7e2e2; border-radius: 8px; color: #28484d; background: #eef7f6; text-align: center; }
+    .out-of-stock-panel strong { font-size: 18px; }
+    .out-of-stock-panel span { color: #5e7276; font-size: 14px; line-height: 1.4; }
+    .product-detail-info { display: grid; gap: 12px; padding: 22px; }
     .product-breadcrumbs { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: #777; font-size: 13px; line-height: 1.35; }
     .product-breadcrumbs a { color: inherit; text-decoration: none; }
     .product-breadcrumbs a:hover { color: #111; }
     .crumb-separator { color: #b0b0b6; }
-    .title-block { display: grid; gap: 8px; }
+    .title-block { display: grid; gap: 4px; }
     .brand-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
     h1 { margin: 0; font-size: clamp(38px, 7vw, 58px); font-weight: 300; line-height: 1.05; }
     .size-line { flex: 0 0 auto; color: #555; font-size: clamp(20px, 4.5vw, 30px); font-weight: 300; line-height: 1.1; white-space: nowrap; }
     .type { margin: 0; font-size: clamp(24px, 5vw, 34px); font-weight: 800; line-height: 1.12; }
     .variant { margin: 0; color: #777; font-size: 19px; line-height: 1.35; }
-    body.product-page .product-detail-info .description { display: block; min-height: 0; overflow: visible; margin: 0; color: #666; font-size: 18px; line-height: 1.55; -webkit-line-clamp: unset; }
-    .price-box { display: grid; gap: 4px; padding: 16px; border: 1px solid #e4e4e7; border-radius: 8px; background: #f5f5f6; }
+    body.product-page .product-detail-info .description { display: block; min-height: 0; overflow: visible; margin: 0; padding: 0; border: 0; color: #555; background: transparent; font-size: 18px; line-height: 1.45; -webkit-line-clamp: unset; }
+    .price-box { display: grid; gap: 4px; padding: 0; border: 0; background: transparent; }
     .price-box span,
     .price-box small { color: #777; }
     .price-box .price { font-size: 38px; font-weight: 850; line-height: 1; }
     .som-sign { display: inline-block; padding-bottom: 0.03em; border-bottom: 0.06em solid currentColor; line-height: 0.88; }
-    .specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }
-    .specs div { padding: 12px; border: 1px solid #e4e4e7; border-radius: 8px; background: #fff; }
-    .specs dt { color: #777; font-size: 13px; }
-    .specs dd { margin: 4px 0 0; font-weight: 800; }
+    .specs { display: flex; flex-wrap: wrap; gap: 7px 18px; margin: 2px 0 0; }
+    .specs div { display: flex; align-items: baseline; gap: 5px; min-width: 0; padding: 0; border: 0; background: transparent; }
+    .specs dt { color: #777; font-size: 12px; white-space: nowrap; }
+    .specs dd { min-width: 0; margin: 0; font-size: 14px; font-weight: 750; }
     .specs dd a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .note { padding: 13px 14px; border-radius: 8px; color: #666; background: #f5f5f6; line-height: 1.45; }
+    .note { padding: 0; border: 0; color: #666; background: transparent; line-height: 1.4; }
     .modal-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .primary-action,
     .secondary-action,
@@ -168,11 +190,12 @@
       .page { max-width: none; padding: 0; }
       .product-shell { border-radius: 0; box-shadow: none; }
       .related { padding: 0 8px; }
-      .product-detail-info { padding: 26px 18px 20px; }
+      .product-detail-info { padding: 18px 16px; }
       .icon-action { width: 44px; height: 44px; }
       .icon-action.smm-share:not([hidden]) { display: grid; }
-      .product-purchase-strip { padding: 0 10px 14px; }
-      .specs { grid-template-columns: 1fr; }
+      .product-purchase-strip { padding: 10px 10px 14px; }
+      .purchase-price .price { font-size: 34px; }
+      .specs { gap: 7px 14px; }
       .related-grid { grid-template-columns: repeat(2, 1fr); }
       .bottom-page-actions { padding: 0 18px; }
     }
@@ -183,6 +206,24 @@
       .top-actions { left: 16px; right: 16px; }
     }
   </style>
+  <!-- BEGIN shared-analytics-head -->
+<meta name="google-site-verification" content="960zpLbWQpecqn6ZhlIecGVl0zt3SRKtzPd800egMo4">
+<link rel="stylesheet" href="/assets/google-consent.css?v=20261011-retail-full-recovery-v1">
+<script id="gmk-google-tag-bootstrap">
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+window.gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500
+});
+window.gtag('js', new Date());
+</script>
+<script async id="gmk-google-tag-loader" src="https://www.googletagmanager.com/gtag/js?id=G-9KZK8Y4S7K"></script>
+<script defer id="gmk-google-consent-script" src="/assets/google-consent.js?v=20261011-retail-full-recovery-v1"></script>
+<!-- END shared-analytics-head -->
 </head>
 <body class="product-page">
   <header class="site-header" data-smart-header>
@@ -251,27 +292,30 @@
         <div class="gallery-thumbs" aria-label="Фотографии товара">
         <button class="gallery-thumb active" type="button" data-gallery-image="/assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-card-front.jpg" aria-label="Лицевая">
           <img src="/assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-card-front.jpg" alt="Fairy Lavender средство для посуды 600 мл - Лицевая" loading="lazy">
-          <span>Лицевая</span>
         </button>
-        
+
 
         <button class="gallery-thumb " type="button" data-gallery-image="/assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-front.jpg" aria-label="Лицевая">
           <img src="/assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-front.jpg" alt="Fairy Lavender средство для посуды 600 мл - Лицевая" loading="lazy">
-          <span>Лицевая</span>
         </button>
-        
+
 
         <button class="gallery-thumb " type="button" data-gallery-image="/assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-back.jpg" aria-label="Обратная">
           <img src="/assets/products/restored-history/prd_c980a01a8dba-fairy-lavender-средство-для-посуды-600-мл-back.jpg" alt="Fairy Lavender средство для посуды 600 мл - Обратная" loading="lazy">
-          <span>Обратная</span>
         </button>
         </div>
         <div class="product-purchase-strip">
-        <div class="modal-actions product-purchase-actions">
-          <button class="primary-action" type="button" data-add-cart>В корзину</button>
-          <a class="secondary-action" href="/?checkout=1#checkoutForm" data-checkout>К оформлению</a>
+        <div class="purchase-price">
+          <strong><span class="price">450 <span class="som-sign">с</span></span></strong>
+          <small>Клиентская цена: скидка 3% при входе</small>
         </div>
+
+        <div class="out-of-stock-panel" role="status">
+          <strong>Сейчас нет в наличии</strong>
+          <span>Карточка и описание сохранены. Когда товар снова поступит, он автоматически вернётся в каталог.</span>
         </div>
+
+    </div>
       </section>
       <section class="product-detail-info">
         <nav class="product-breadcrumbs" aria-label="Навигация"><a href="/#top">Главная</a><span class="crumb-separator">/</span><a href="/category/home_cleaning/">Уборка и чистота</a><span class="crumb-separator">/</span><span>Fairy Lavender средство для посуды 600 мл</span></nav>
@@ -284,179 +328,911 @@
           <p class="variant">Lavender</p>
         </div>
         <p class="description">Fairy Refreshing Lavender — жидкое средство для ручного мытья посуды с ароматом лаванды. Формула помогает удалять жир и повседневные пищевые загрязнения с тарелок, чашек, столовых приборов и другой моющейся посуды. Объём 600 мл; используйте небольшое количество средства и тщательно ополаскивайте посуду водой.</p>
-        <div class="price-box">
-          <span>Ваша цена</span>
-          <strong><span class="price">450 <span class="som-sign">с</span></span></strong>
-          <small>Клиентская цена: скидка 3% при входе</small>
-        </div>
         <dl class="specs">
           <div><dt>Бренд</dt><dd>Fairy</dd></div>
           <div><dt>Категория</dt><dd><a href="/category/home_cleaning/">Уборка и чистота</a></dd></div>
           <div><dt>Тип товара</dt><dd>средство для посуды</dd></div>
           <div><dt>Единица</dt><dd>шт</dd></div>
-          
+
         </dl>
-        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 10 000 <span class="som-sign">с</span>.</div>
-        
-        <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Fairy%20Lavender%20%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%83%D0%B4%D1%8B%20600%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20450%20%D1%81%D0%BE%D0%BC." rel="noopener">Заказать сразу в WhatsApp</a>
-        <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%83%3A%20Fairy%20Lavender%20%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%83%D0%B4%D1%8B%20600%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20450%20%D1%81%D0%BE%D0%BC.%20https%3A//globalmarket.kg/product/fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba/" rel="noopener">Спросить в WhatsApp</a>
-        
+        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 5 000 <span class="som-sign">с</span>.</div>
+        <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%83%3A%20Fairy%20Lavender%20%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%83%D0%B4%D1%8B%20600%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20450%20%D1%81%D0%BE%D0%BC.%20https%3A//globalmarket.kg/product/fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba/" rel="noopener">Уточнить поступление в WhatsApp</a>
       </section>
     </article>
-    
+
     <section class="related">
       <h2>Похожие товары</h2>
       <div class="related-grid">
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
-                <span class="placeholder-brand">Jif</span>
-                <button class="favorite-button" type="button" data-favorite="prd_9174d6118ed3" aria-label="Добавить в избранное" aria-pressed="false">
+                <span class="placeholder-brand">Alio</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3048" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span></div>
 
-                <a class="product-image-link" href="/product/jif-lemon-chistyaschiy-krem-500-ml-118ed3/" data-product-link="prd_9174d6118ed3" aria-label="Открыть Jif Lemon чистящий крем 500 мл">
-                  <img class="product-image" src="/assets/products/jif/jif-cream-lemon-500ml-card-front.jpg" alt="Jif Lemon чистящий крем 500 мл" loading="lazy">
+                <a class="product-image-link" href="/product/alio-all-in-one-dishwasher-tablets-70-pcs-c_3048/" data-product-link="prd_1c_3048" aria-label="Открыть Alio All-in-One dishwasher tablets, 70 pcs">
+                  <img class="product-image" src="/assets/products/alio/alio-3048-card-front.jpg" alt="Alio All-in-One dishwasher tablets, 70 pcs" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/jif-lemon-chistyaschiy-krem-500-ml-118ed3/" data-product-link="prd_9174d6118ed3">
+                <a class="product-title-button product-copy" href="/product/alio-all-in-one-dishwasher-tablets-70-pcs-c_3048/" data-product-link="prd_1c_3048">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Jif</span>
-                    <span class="product-size-line">500 мл</span>
+                    <span class="product-brand-name">Alio</span>
+
                   </span>
                   <span class="product-kind-line">
-                    <strong>чистящее средство</strong>
+                    <strong>средство для дома</strong>
                   </span>
-                  <span class="product-variant-line">Lemon чистящий крем</span>
+                  <span class="product-variant-line">All-in-One dishwasher tablets, 70 pcs</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Уборка и чистота</span>
                 </div>
-                <p>Чистящий крем Jif Lemon предназначен для удаления жира и въевшейся грязи с моющихся твёрдых поверхностей. Кремовая текстура удобна для кухни и ванной, а лимонный вариант оставляет свежий аромат. Объём 500 мл; перед применением на деликатной поверхности проверьте средство на незаметном участке и следуйте этикетке.</p>
+                <p>Alio All-in-One dishwasher tablets, 70 pcs - средство для дома для посудомоечной машины. Формат: 70 шт. Поместите одну таблетку в отсек машины и используйте в соответствии с инструкцией к технике.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">550 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_9174d6118ed3" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">890 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3048" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 533 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 863 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 
             <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
-                <span class="placeholder-brand">Attar Collection</span>
-                <button class="favorite-button" type="button" data-favorite="prd_perfume_attar_annabella_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Alio</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3049" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
-                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+                <div class="marketing-badges"><span>Хит</span></div>
 
-                <a class="product-image-link" href="/product/attar-collection-annabella-parfyum-5-ml-la_5ml/" data-product-link="prd_perfume_attar_annabella_5ml" aria-label="Открыть Attar Collection Annabella парфюм 5 мл">
-                  <img class="product-image" src="/assets/products/perfume/attar-annabella-5ml-card-front.jpg" alt="Attar Collection Annabella парфюм 5 мл" loading="lazy">
+                <a class="product-image-link" href="/product/alio-classic-dishwasher-tablets-100-pcs-c_3049/" data-product-link="prd_1c_3049" aria-label="Открыть Alio Classic dishwasher tablets, 100 pcs">
+                  <img class="product-image" src="/assets/products/alio/alio-3049-card-front.jpg" alt="Alio Classic dishwasher tablets, 100 pcs" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/attar-collection-annabella-parfyum-5-ml-la_5ml/" data-product-link="prd_perfume_attar_annabella_5ml">
+                <a class="product-title-button product-copy" href="/product/alio-classic-dishwasher-tablets-100-pcs-c_3049/" data-product-link="prd_1c_3049">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Attar Collection</span>
-                    <span class="product-size-line">5 мл</span>
+                    <span class="product-brand-name">Alio</span>
+
                   </span>
                   <span class="product-kind-line">
-                    <strong>оригинальные духи на распив</strong>
+                    <strong>средство для дома</strong>
                   </span>
-                  <span class="product-variant-line">Annabella парфюм</span>
+                  <span class="product-variant-line">Classic dishwasher tablets, 100 pcs</span>
                 </a>
                 <div class="product-meta product-meta-compact">
-                  <span>Парфюм 5 мл</span>
+                  <span>Уборка и чистота</span>
                 </div>
-                <p>Оригинальные брендовые духи Attar Collection Annabella на распив, 5 мл. Аромат отливается из оригинального флакона в одноразовый защищённый атомайзер. По запросу процесс распива можно зафиксировать на видео и отправить в WhatsApp.</p>
+                <p>Alio Classic dishwasher tablets, 100 pcs - средство для дома для посудомоечной машины. Формат: 100 шт. Поместите одну таблетку в отсек машины и используйте в соответствии с инструкцией к технике.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">800 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_attar_annabella_5ml" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">1 095 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3049" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 776 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 1 062 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 
             <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
-                <span class="placeholder-brand">Attar Collection</span>
-                <button class="favorite-button" type="button" data-favorite="prd_perfume_attar_azora_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Dr. Beckmann</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3238" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
-                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
 
-                <a class="product-image-link" href="/product/attar-collection-azora-parfyum-5-ml-ra_5ml/" data-product-link="prd_perfume_attar_azora_5ml" aria-label="Открыть Attar Collection Azora парфюм 5 мл">
-                  <img class="product-image" src="/assets/products/perfume/attar-azora-5ml-card-front.jpg" alt="Attar Collection Azora парфюм 5 мл" loading="lazy">
+                <a class="product-image-link" href="/product/dr-beckmann-ochistitel-posudomoechnoy-mashiny-75-g-c_3238/" data-product-link="prd_1c_3238" aria-label="Открыть Dr. Beckmann очиститель посудомоечной машины, 75 г">
+                  <img class="product-image" src="/assets/products/dr-beckmann/dr-beckmann-dishwasher-cleaner-75g-card-front.jpg" alt="Dr. Beckmann очиститель посудомоечной машины, 75 г" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/attar-collection-azora-parfyum-5-ml-ra_5ml/" data-product-link="prd_perfume_attar_azora_5ml">
+                <a class="product-title-button product-copy" href="/product/dr-beckmann-ochistitel-posudomoechnoy-mashiny-75-g-c_3238/" data-product-link="prd_1c_3238">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Attar Collection</span>
-                    <span class="product-size-line">5 мл</span>
+                    <span class="product-brand-name">Dr. Beckmann</span>
+                    <span class="product-size-line">75 г</span>
                   </span>
                   <span class="product-kind-line">
-                    <strong>оригинальные духи на распив</strong>
+                    <strong>очиститель посудомоечной машины</strong>
                   </span>
-                  <span class="product-variant-line">Azora парфюм</span>
+                  <span class="product-variant-line">Очиститель Dr</span>
                 </a>
                 <div class="product-meta product-meta-compact">
-                  <span>Парфюм 5 мл</span>
+                  <span>Уборка и чистота</span>
                 </div>
-                <p>Оригинальные брендовые духи Attar Collection Azora на распив, 5 мл. Аромат отливается из оригинального флакона в одноразовый защищённый атомайзер. По запросу процесс распива можно зафиксировать на видео и отправить в WhatsApp.</p>
+                <p>Очиститель Dr. Beckmann для посудомоечной машины. Вес 75 г; используйте по инструкции производителя техники и средства.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">800 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_attar_azora_5ml" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">500 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3238" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 776 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 485 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 
             <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f3d6e4; --tone-b: #a85f88">
-                <span class="placeholder-brand">Attar Collection</span>
-                <button class="favorite-button" type="button" data-favorite="prd_perfume_attar_capella_5ml" aria-label="Добавить в избранное" aria-pressed="false">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Finish</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3194" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
-                <div class="marketing-badges"><span>Новинка</span><span>Хит</span></div>
+                <div class="marketing-badges"><span>Хит</span></div>
 
-                <a class="product-image-link" href="/product/attar-collection-capella-parfyum-5-ml-la_5ml/" data-product-link="prd_perfume_attar_capella_5ml" aria-label="Открыть Attar Collection Capella парфюм 5 мл">
-                  <img class="product-image" src="/assets/products/perfume/attar-capella-5ml-card-front.jpg" alt="Attar Collection Capella парфюм 5 мл" loading="lazy">
+                <a class="product-image-link" href="/product/finish-quantum-fresh-kapsuly-dlya-posudomoechnoy-mashiny-58-sht-c_3194/" data-product-link="prd_1c_3194" aria-label="Открыть Finish Quantum Fresh капсулы для посудомоечной машины 58 шт">
+                  <img class="product-image" src="/assets/products/finish/finish-3194-quantum-fresh-58-card-front.jpg" alt="Finish Quantum Fresh капсулы для посудомоечной машины 58 шт" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/attar-collection-capella-parfyum-5-ml-la_5ml/" data-product-link="prd_perfume_attar_capella_5ml">
+                <a class="product-title-button product-copy" href="/product/finish-quantum-fresh-kapsuly-dlya-posudomoechnoy-mashiny-58-sht-c_3194/" data-product-link="prd_1c_3194">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Attar Collection</span>
-                    <span class="product-size-line">5 мл</span>
+                    <span class="product-brand-name">Finish</span>
+                    <span class="product-size-line">58 шт</span>
                   </span>
                   <span class="product-kind-line">
-                    <strong>оригинальные духи на распив</strong>
+                    <strong>таблетки для посудомоечной машины</strong>
                   </span>
-                  <span class="product-variant-line">Capella парфюм</span>
+                  <span class="product-variant-line">Quantum Fresh капсулы для посудомоечной машины</span>
                 </a>
                 <div class="product-meta product-meta-compact">
-                  <span>Парфюм 5 мл</span>
+                  <span>Уборка и чистота</span>
                 </div>
-                <p>Оригинальные брендовые духи Attar Collection Capella на распив, 5 мл. Аромат отливается из оригинального флакона в одноразовый защищённый атомайзер. По запросу процесс распива можно зафиксировать на видео и отправить в WhatsApp.</p>
+                <p>Finish Quantum Fresh капсулы для посудомоечной машины 58 шт предназначены для автоматического мытья посуды. В упаковке 58 шт; используйте согласно инструкции производителя.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">800 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_perfume_attar_capella_5ml" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">2 095 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3194" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 776 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 2 032 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Finish</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3189" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/finish-ultimate-all-in-1-kapsuly-dlya-posudomoechnoy-mashiny-40-sht-c_3189/" data-product-link="prd_1c_3189" aria-label="Открыть Finish Ultimate All in 1 капсулы для посудомоечной машины 40 шт">
+                  <img class="product-image" src="/assets/products/finish/finish-3189-ultimate-all-in-1-40-card-front.jpg" alt="Finish Ultimate All in 1 капсулы для посудомоечной машины 40 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/finish-ultimate-all-in-1-kapsuly-dlya-posudomoechnoy-mashiny-40-sht-c_3189/" data-product-link="prd_1c_3189">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Finish</span>
+                    <span class="product-size-line">40 шт</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>таблетки для посудомоечной машины</strong>
+                  </span>
+                  <span class="product-variant-line">Ultimate All in 1 капсулы для посудомоечной машины</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Finish Ultimate All in 1 капсулы для посудомоечной машины 40 шт предназначены для автоматического мытья посуды. В упаковке 40 шт; используйте согласно инструкции производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 590 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3189" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 542 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Finish</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3193" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/finish-ultimate-citrus-kapsuly-dlya-posudomoechnoy-mashiny-54-sht-c_3193/" data-product-link="prd_1c_3193" aria-label="Открыть Finish Ultimate Citrus капсулы для посудомоечной машины 54 шт">
+                  <img class="product-image" src="/assets/products/finish/finish-3193-ultimate-citrus-54-card-front.jpg" alt="Finish Ultimate Citrus капсулы для посудомоечной машины 54 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/finish-ultimate-citrus-kapsuly-dlya-posudomoechnoy-mashiny-54-sht-c_3193/" data-product-link="prd_1c_3193">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Finish</span>
+                    <span class="product-size-line">54 шт</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>таблетки для посудомоечной машины</strong>
+                  </span>
+                  <span class="product-variant-line">Ultimate Citrus капсулы для посудомоечной машины</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Finish Ultimate Citrus капсулы для посудомоечной машины 54 шт предназначены для автоматического мытья посуды. В упаковке 54 шт; используйте согласно инструкции производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 095 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3193" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 032 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Finish</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3188" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/finish-ultimate-plus-citrus-kapsuly-dlya-posudomoechnoy-mashiny-36-sht-c_3188/" data-product-link="prd_1c_3188" aria-label="Открыть Finish Ultimate Plus Citrus капсулы для посудомоечной машины 36 шт">
+                  <img class="product-image" src="/assets/products/finish/finish-3188-ultimate-plus-citrus-36-card-front.jpg" alt="Finish Ultimate Plus Citrus капсулы для посудомоечной машины 36 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/finish-ultimate-plus-citrus-kapsuly-dlya-posudomoechnoy-mashiny-36-sht-c_3188/" data-product-link="prd_1c_3188">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Finish</span>
+                    <span class="product-size-line">36 шт</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>таблетки для посудомоечной машины</strong>
+                  </span>
+                  <span class="product-variant-line">Ultimate Plus Citrus капсулы для посудомоечной машины</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Finish Ultimate Plus Citrus капсулы для посудомоечной машины 36 шт предназначены для автоматического мытья посуды. В упаковке 36 шт; используйте согласно инструкции производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 490 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3188" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 445 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Finish</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3191" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/finish-ultimate-plus-citrus-kapsuly-dlya-posudomoechnoy-mashiny-48-sht-c_3191/" data-product-link="prd_1c_3191" aria-label="Открыть Finish Ultimate Plus Citrus капсулы для посудомоечной машины 48 шт">
+                  <img class="product-image" src="/assets/products/finish/finish-3191-ultimate-plus-citrus-48-card-front.jpg" alt="Finish Ultimate Plus Citrus капсулы для посудомоечной машины 48 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/finish-ultimate-plus-citrus-kapsuly-dlya-posudomoechnoy-mashiny-48-sht-c_3191/" data-product-link="prd_1c_3191">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Finish</span>
+                    <span class="product-size-line">48 шт</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>таблетки для посудомоечной машины</strong>
+                  </span>
+                  <span class="product-variant-line">Ultimate Plus Citrus капсулы для посудомоечной машины</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Finish Ultimate Plus Citrus капсулы для посудомоечной машины 48 шт предназначены для автоматического мытья посуды. В упаковке 48 шт; используйте согласно инструкции производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 890 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3191" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 833 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e5e2dc; --tone-b: #92968c">
+                <span class="placeholder-brand">Finish</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3195" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/finish-ultimate-plus-citrus-kapsuly-dlya-posudomoechnoy-mashiny-82-sht-c_3195/" data-product-link="prd_1c_3195" aria-label="Открыть Finish Ultimate Plus Citrus капсулы для посудомоечной машины 82 шт">
+                  <img class="product-image" src="/assets/products/registry/1c-3195/card-front-f827615686b1.jpg" alt="Finish Ultimate Plus Citrus капсулы для посудомоечной машины 82 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/finish-ultimate-plus-citrus-kapsuly-dlya-posudomoechnoy-mashiny-82-sht-c_3195/" data-product-link="prd_1c_3195">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Finish</span>
+                    <span class="product-size-line">82 шт</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>таблетки для посудомоечной машины</strong>
+                  </span>
+                  <span class="product-variant-line">Ultimate Plus Citrus капсулы для посудомоечной машины</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Finish Ultimate Plus Citrus 82 шт — капсулы для автоматического мытья посуды. Формат большой упаковки удобен для регулярного использования; применяйте одну капсулу на цикл согласно инструкции производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 990 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3195" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 900 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Finish</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3190" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/finish-ultimate-plus-fresh-kapsuly-dlya-posudomoechnoy-mashiny-48-sht-c_3190/" data-product-link="prd_1c_3190" aria-label="Открыть Finish Ultimate Plus Fresh капсулы для посудомоечной машины 48 шт">
+                  <img class="product-image" src="/assets/products/finish/finish-3190-ultimate-plus-fresh-48-card-front.jpg" alt="Finish Ultimate Plus Fresh капсулы для посудомоечной машины 48 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/finish-ultimate-plus-fresh-kapsuly-dlya-posudomoechnoy-mashiny-48-sht-c_3190/" data-product-link="prd_1c_3190">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Finish</span>
+                    <span class="product-size-line">48 шт</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>таблетки для посудомоечной машины</strong>
+                  </span>
+                  <span class="product-variant-line">Ultimate Plus Fresh капсулы для посудомоечной машины</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Finish Ultimate Plus Fresh капсулы для посудомоечной машины 48 шт предназначены для автоматического мытья посуды. В упаковке 48 шт; используйте согласно инструкции производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 890 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3190" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 833 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Finish</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3192" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/finish-ultimate-plus-fresh-kapsuly-dlya-posudomoechnoy-mashiny-54-sht-c_3192/" data-product-link="prd_1c_3192" aria-label="Открыть Finish Ultimate Plus Fresh капсулы для посудомоечной машины 54 шт">
+                  <img class="product-image" src="/assets/products/finish/finish-3192-ultimate-plus-fresh-54-card-front.jpg" alt="Finish Ultimate Plus Fresh капсулы для посудомоечной машины 54 шт" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/finish-ultimate-plus-fresh-kapsuly-dlya-posudomoechnoy-mashiny-54-sht-c_3192/" data-product-link="prd_1c_3192">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Finish</span>
+                    <span class="product-size-line">54 шт</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>таблетки для посудомоечной машины</strong>
+                  </span>
+                  <span class="product-variant-line">Ultimate Plus Fresh капсулы для посудомоечной машины</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Finish Ultimate Plus Fresh 54 шт — капсулы для посудомоечной машины с формулой Intensive Clean &amp; Shine и свежим ароматом. Предназначены для повседневного мытья посуды; используйте одну капсулу на цикл и соблюдайте рекомендации производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">2 095 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3192" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 2 032 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Twido</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3050" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/twido-classic-dishwasher-tablets-100-pcs-c_3050/" data-product-link="prd_1c_3050" aria-label="Открыть Twido Classic dishwasher tablets, 100 pcs">
+                  <img class="product-image" src="/assets/products/twido/twido-3050-card-front.jpg" alt="Twido Classic dishwasher tablets, 100 pcs" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/twido-classic-dishwasher-tablets-100-pcs-c_3050/" data-product-link="prd_1c_3050">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Twido</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>средство для дома</strong>
+                  </span>
+                  <span class="product-variant-line">Classic dishwasher tablets, 100 pcs</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Twido Classic dishwasher tablets, 100 pcs - средство для дома для посудомоечной машины. Формат: 100 шт. Поместите одну таблетку в отсек машины и используйте в соответствии с инструкцией к технике.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">1 190 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3050" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 1 154 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Dr. Beckmann</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3219" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/dr-beckmann-wc-reinigungst-cher-citrus-20-listov-c_3219/" data-product-link="prd_1c_3219" aria-label="Открыть Dr. Beckmann WC Reinigungstücher Citrus, 20 листов">
+                  <img class="product-image" src="/assets/products/dr-beckmann/dr-beckmann-wc-citrus-20-card-front.jpg" alt="Dr. Beckmann WC Reinigungstücher Citrus, 20 листов" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dr-beckmann-wc-reinigungst-cher-citrus-20-listov-c_3219/" data-product-link="prd_1c_3219">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dr. Beckmann</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>салфетки для очистки унитаза</strong>
+                  </span>
+                  <span class="product-variant-line">WC Reinigungstücher Citrus, истов</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Салфетки Dr. Beckmann для очистки унитаза с цитрусовым ароматом. В упаковке 20 листов; используйте по инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">500 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3219" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 485 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Dr. Beckmann</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3218" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/dr-beckmann-wc-reinigungst-cher-ocean-breeze-20-listov-c_3218/" data-product-link="prd_1c_3218" aria-label="Открыть Dr. Beckmann WC Reinigungstücher Ocean Breeze, 20 листов">
+                  <img class="product-image" src="/assets/products/dr-beckmann/dr-beckmann-wc-ocean-breeze-20-card-front.jpg" alt="Dr. Beckmann WC Reinigungstücher Ocean Breeze, 20 листов" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dr-beckmann-wc-reinigungst-cher-ocean-breeze-20-listov-c_3218/" data-product-link="prd_1c_3218">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dr. Beckmann</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>салфетки для очистки унитаза</strong>
+                  </span>
+                  <span class="product-variant-line">WC Reinigungstücher Ocean Breeze, истов</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Салфетки Dr. Beckmann для очистки унитаза с ароматом Ocean Breeze. В упаковке 20 листов; используйте по инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">500 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3218" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 485 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Dr. Beckmann</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3220" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dr-beckmann-wc-schaum-citrus-3-x-100-g-c_3220/" data-product-link="prd_1c_3220" aria-label="Открыть Dr. Beckmann WC-Schaum Citrus, 3 x 100 г">
+                  <img class="product-image" src="/assets/products/dr-beckmann/dr-beckmann-wc-foam-citrus-3x100g-card-front.jpg" alt="Dr. Beckmann WC-Schaum Citrus, 3 x 100 г" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dr-beckmann-wc-schaum-citrus-3-x-100-g-c_3220/" data-product-link="prd_1c_3220">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dr. Beckmann</span>
+                    <span class="product-size-line">100 г</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>средство для очистки унитаза</strong>
+                  </span>
+                  <span class="product-variant-line">WC-Schaum Citrus, 3 x</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Средство Dr. Beckmann WC-Schaum для очистки унитаза с цитрусовым ароматом. В упаковке 3 порции по 100 г.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">990 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3220" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 960 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Dr. Beckmann</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3240" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/dr-beckmann-ochistitel-steklokeramiki-250-g-c_3240/" data-product-link="prd_1c_3240" aria-label="Открыть Dr. Beckmann очиститель стеклокерамики, 250 г">
+                  <img class="product-image" src="/assets/products/dr-beckmann/dr-beckmann-glaskeramik-cleaner-250g-card-front.jpg" alt="Dr. Beckmann очиститель стеклокерамики, 250 г" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dr-beckmann-ochistitel-steklokeramiki-250-g-c_3240/" data-product-link="prd_1c_3240">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dr. Beckmann</span>
+                    <span class="product-size-line">250 г</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>очиститель стеклокерамики</strong>
+                  </span>
+                  <span class="product-variant-line">Средство Dr</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Средство Dr. Beckmann для очистки стеклокерамических поверхностей. Вес 250 г; используйте на остывшей поверхности по инструкции.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">500 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3240" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 485 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Dr. Beckmann</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3234" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/dr-beckmann-ochistitel-holodilnika-250-ml-c_3234/" data-product-link="prd_1c_3234" aria-label="Открыть Dr. Beckmann очиститель холодильника, 250 мл">
+                  <img class="product-image" src="/assets/products/dr-beckmann/dr-beckmann-fridge-cleaner-250ml-card-front.jpg" alt="Dr. Beckmann очиститель холодильника, 250 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dr-beckmann-ochistitel-holodilnika-250-ml-c_3234/" data-product-link="prd_1c_3234">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dr. Beckmann</span>
+                    <span class="product-size-line">250 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>очиститель холодильника</strong>
+                  </span>
+                  <span class="product-variant-line">Средство Dr</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Средство Dr. Beckmann для очистки внутренних поверхностей холодильника. Объём 250 мл; применяйте по инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">590 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3234" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 572 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Dr. Beckmann</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3236" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/dr-beckmann-skrebok-dlya-steklokeramicheskoy-plity-c_3236/" data-product-link="prd_1c_3236" aria-label="Открыть Dr. Beckmann скребок для стеклокерамической плиты">
+                  <img class="product-image" src="/assets/products/dr-beckmann/dr-beckmann-hob-scraper-card-front.jpg" alt="Dr. Beckmann скребок для стеклокерамической плиты" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/dr-beckmann-skrebok-dlya-steklokeramicheskoy-plity-c_3236/" data-product-link="prd_1c_3236">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Dr. Beckmann</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>скребок для плиты</strong>
+                  </span>
+                  <span class="product-variant-line">скребок для стеклокерамической плиты</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Скребок Dr. Beckmann для очистки стеклокерамической плиты. Используйте аккуратно на остывшей поверхности согласно инструкции.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">490 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3236" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 475 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Felce Azzurra</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3300" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/felce-azzurra-diffuzor-classico-125-ml-c_3300/" data-product-link="prd_1c_3300" aria-label="Открыть Felce Azzurra диффузор Classico, 125 мл">
+                  <img class="product-image" src="/assets/products/felce-azzurra/felce-azzurra-diffuser-classic-125ml-card-front.jpg" alt="Felce Azzurra диффузор Classico, 125 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/felce-azzurra-diffuzor-classico-125-ml-c_3300/" data-product-link="prd_1c_3300">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Felce Azzurra</span>
+                    <span class="product-size-line">125 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>аромадиффузор</strong>
+                  </span>
+                  <span class="product-variant-line">диффузор Classico</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Аромадиффузор Felce Azzurra Classico для дома. Объём 125 мл; используйте с палочками и размещайте на устойчивой поверхности.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">895 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3300" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 868 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Felce Azzurra</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3303" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/felce-azzurra-diffuzor-moon-flowers-125-ml-c_3303/" data-product-link="prd_1c_3303" aria-label="Открыть Felce Azzurra диффузор Moon Flowers, 125 мл">
+                  <img class="product-image" src="/assets/products/felce-azzurra/felce-azzurra-diffuser-moon-flowers-125ml-card-front.jpg" alt="Felce Azzurra диффузор Moon Flowers, 125 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/felce-azzurra-diffuzor-moon-flowers-125-ml-c_3303/" data-product-link="prd_1c_3303">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Felce Azzurra</span>
+                    <span class="product-size-line">125 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>аромадиффузор</strong>
+                  </span>
+                  <span class="product-variant-line">диффузор Moon Flowers</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Аромадиффузор Felce Azzurra Moon Flowers для дома. Объём 125 мл; используйте с палочками и размещайте на устойчивой поверхности.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">895 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3303" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 868 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Felce Azzurra</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3301" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/felce-azzurra-diffuzor-white-tea-osmanthus-125-ml-c_3301/" data-product-link="prd_1c_3301" aria-label="Открыть Felce Azzurra диффузор White Tea &amp; Osmanthus, 125 мл">
+                  <img class="product-image" src="/assets/products/felce-azzurra/felce-azzurra-diffuser-white-tea-osmanthus-125ml-card-front.jpg" alt="Felce Azzurra диффузор White Tea &amp; Osmanthus, 125 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/felce-azzurra-diffuzor-white-tea-osmanthus-125-ml-c_3301/" data-product-link="prd_1c_3301">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Felce Azzurra</span>
+                    <span class="product-size-line">125 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>аромадиффузор</strong>
+                  </span>
+                  <span class="product-variant-line">диффузор White Tea &amp; Osmanthus</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Аромадиффузор Felce Azzurra White Tea &amp; Osmanthus для дома. Объём 125 мл; используйте с палочками и размещайте на устойчивой поверхности.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">895 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3301" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 868 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">The Pink Stuff</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3072" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/the-pink-stuff-toilet-gel-750ml-c_3072/" data-product-link="prd_1c_3072" aria-label="Открыть THE PINK STUFF Toilet Gel (750ml)">
+                  <img class="product-image" src="/assets/products/the-pink-stuff/the-pink-stuff-3072-card-front.jpg" alt="THE PINK STUFF Toilet Gel (750ml)" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/the-pink-stuff-toilet-gel-750ml-c_3072/" data-product-link="prd_1c_3072">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">The Pink Stuff</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>разное</strong>
+                  </span>
+                  <span class="product-variant-line">Toilet Gel</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>THE PINK STUFF Toilet Gel (750ml) - разное для повседневного использования. Формат: 750мл. Перед применением ознакомьтесь с информацией и рекомендациями на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">495 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3072" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 480 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e4ded2; --tone-b: #a99076">
+                <span class="placeholder-brand">The Pink Stuff</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3260" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/the-pink-stuff-power-active-blok-dlya-unitaza-2x40-g-c_3260/" data-product-link="prd_1c_3260" aria-label="Открыть The Pink Stuff Power Active блок для унитаза, 2x40 г">
+                  <img class="product-image" src="/assets/products/the-pink-stuff/the-pink-stuff-power-active-rim-block-2x40g-card-front.jpg" alt="The Pink Stuff Power Active блок для унитаза, 2x40 г" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/the-pink-stuff-power-active-blok-dlya-unitaza-2x40-g-c_3260/" data-product-link="prd_1c_3260">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">The Pink Stuff</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>блок для унитаза</strong>
+                  </span>
+                  <span class="product-variant-line">Power Active , 2x</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Блок The Pink Stuff Power Active для поддержания чистоты унитаза. В упаковке два блока по 40 г; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">400 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3260" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 388 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #d7eadf; --tone-b: #6aa58f">
+                <span class="placeholder-brand">Air Wick</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3273" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/air-wick-pure-cotton-orchid-250-ml-c_3273/" data-product-link="prd_1c_3273" aria-label="Открыть Air Wick Pure Cotton &amp; Orchid, 250 мл">
+                  <img class="product-image" src="/assets/products/air-wick/air-wick-pure-cotton-orchid-250ml-card-front.jpg" alt="Air Wick Pure Cotton &amp; Orchid, 250 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/air-wick-pure-cotton-orchid-250-ml-c_3273/" data-product-link="prd_1c_3273">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Air Wick</span>
+                    <span class="product-size-line">250 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>освежитель воздуха</strong>
+                  </span>
+                  <span class="product-variant-line">Pure Cotton &amp; Orchid</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уборка и чистота</span>
+                </div>
+                <p>Аэрозольный освежитель воздуха Air Wick Pure с ароматом хлопка и орхидеи. Объём 250 мл; используйте согласно инструкции на упаковке.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">490 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3273" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 475 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 </div>
     </section>
-    
+
     <nav class="bottom-page-actions" aria-label="Навигация по странице">
       <button class="bottom-page-action" type="button" data-back>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"></path></svg>
@@ -482,9 +1258,10 @@
       <a href="/catalog/">Разделы</a>
       <a href="/#checkout">Оформление</a>
       <a href="/#myOrders">Мои заказы</a>
+      <a href="/delivery-and-returns/">Доставка и возврат</a>
       <a href="/privacy.html">Политика конфиденциальности</a>
     </nav>
-    <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
+    <p>ИП Григорьев Василий Владимирович · ИНН 21509198010011</p>
   </div>
 </footer>
   <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Нижняя навигация">
@@ -522,7 +1299,7 @@
   </a>
 </nav>
   <script>
-    const product = {"id": "prd_c980a01a8dba", "code": "prd_c980a01a8dba", "title": "Fairy Lavender средство для посуды 600 мл", "description": "Fairy Refreshing Lavender — жидкое средство для ручного мытья посуды с ароматом лаванды. Формула помогает удалять жир и повседневные пищевые загрязнения с тарелок, чашек, столовых приборов и другой моющейся посуды. Объём 600 мл; используйте небольшое количество средства и тщательно ополаскивайте посуду водой.", "price": 450, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Fairy%20Lavender%20%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%83%D0%B4%D1%8B%20600%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20450%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba/"};
+    const product = {"id": "prd_c980a01a8dba", "code": "105", "title": "Fairy Lavender средство для посуды 600 мл", "description": "Fairy Refreshing Lavender — жидкое средство для ручного мытья посуды с ароматом лаванды. Формула помогает удалять жир и повседневные пищевые загрязнения с тарелок, чашек, столовых приборов и другой моющейся посуды. Объём 600 мл; используйте небольшое количество средства и тщательно ополаскивайте посуду водой.", "price": 450, "inStock": false, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Fairy%20Lavender%20%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%83%D0%B4%D1%8B%20600%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20450%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/fairy-lavender-sredstvo-dlya-posudy-600-ml-1a8dba/"};
     const cartKey = "globalMarketCartDraft";
     const favoritesKey = "globalMarketFavorites";
     const recentlyViewedKey = "globalMarketRecentlyViewed";
@@ -668,6 +1445,7 @@
           const params = new URLSearchParams();
           if (item.collection) params.set("collection", item.collection);
           if (item.category) params.set("category", item.category);
+          if (item.section) params.set("section", item.section);
           if (item.audience) params.set("audience", item.audience);
           if (item.query) params.set("query", item.query);
           if (item.label) params.set("label", item.label);
@@ -862,14 +1640,58 @@
       window.location.href = event.currentTarget.href;
     });
 
-    document.querySelectorAll("[data-gallery-image]").forEach((button) => {
-      button.addEventListener("click", () => {
-        const image = button.dataset.galleryImage;
-        const mainImage = document.querySelector("[data-main-image]");
-        if (mainImage && image) mainImage.src = image;
-        document.querySelectorAll("[data-gallery-image]").forEach((item) => item.classList.toggle("active", item === button));
+    const galleryButtons = [...document.querySelectorAll("[data-gallery-image]")];
+    const mainImage = document.querySelector("[data-main-image]");
+    let activeGalleryIndex = Math.max(0, galleryButtons.findIndex((item) => item.classList.contains("active")));
+
+    function selectGalleryImage(index) {
+      if (!mainImage || !galleryButtons.length) return;
+      const nextIndex = Math.max(0, Math.min(index, galleryButtons.length - 1));
+      const button = galleryButtons[nextIndex];
+      const image = button?.dataset.galleryImage;
+      if (!image) return;
+      activeGalleryIndex = nextIndex;
+      mainImage.src = image;
+      mainImage.alt = button.querySelector("img")?.alt || product.title;
+      mainImage.setAttribute("aria-label", `Фото ${nextIndex + 1} из ${galleryButtons.length}`);
+      galleryButtons.forEach((item, itemIndex) => {
+        const active = itemIndex === nextIndex;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-current", active ? "true" : "false");
       });
+      button.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+
+    galleryButtons.forEach((button, index) => {
+      button.addEventListener("click", () => selectGalleryImage(index));
+      button.setAttribute("aria-current", index === activeGalleryIndex ? "true" : "false");
     });
+
+    if (mainImage && galleryButtons.length > 1) {
+      let swipeStart = null;
+      mainImage.tabIndex = 0;
+      mainImage.setAttribute("aria-label", `Фото ${activeGalleryIndex + 1} из ${galleryButtons.length}`);
+      mainImage.addEventListener("dragstart", (event) => event.preventDefault());
+      mainImage.addEventListener("pointerdown", (event) => {
+        if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
+        swipeStart = { pointerId: event.pointerId, x: event.clientX, y: event.clientY };
+        mainImage.setPointerCapture?.(event.pointerId);
+      });
+      mainImage.addEventListener("pointerup", (event) => {
+        if (!swipeStart || swipeStart.pointerId !== event.pointerId) return;
+        const deltaX = event.clientX - swipeStart.x;
+        const deltaY = event.clientY - swipeStart.y;
+        swipeStart = null;
+        if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.2) return;
+        selectGalleryImage(activeGalleryIndex + (deltaX < 0 ? 1 : -1));
+      });
+      mainImage.addEventListener("pointercancel", () => { swipeStart = null; });
+      mainImage.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        selectGalleryImage(activeGalleryIndex + (event.key === "ArrowRight" ? 1 : -1));
+      });
+    }
 
     updateFavoriteButton();
     syncGridFavoriteButtons();
@@ -898,5 +1720,15 @@
       window.requestAnimationFrame(updateSmartHeader);
     }, { passive: true });
   </script>
+  <!-- BEGIN shared-analytics-consent -->
+<aside class="gmk-consent" data-nosnippet aria-label="Настройки аналитики">
+  <strong>Аналитика и рекламные измерения</strong>
+  <p>Анонимные события магазина отправляются в Google только с вашего согласия. Телефон, SMS-код, имя, адрес и текст заказа не передаются. <a href="/privacy.html">Подробнее</a></p>
+  <div class="gmk-consent-actions">
+    <button type="button" data-consent="granted">Разрешить</button>
+    <button type="button" data-consent="denied">Только необходимые</button>
+  </div>
+</aside>
+<!-- END shared-analytics-consent -->
 </body>
 </html>

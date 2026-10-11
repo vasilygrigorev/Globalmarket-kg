@@ -13,6 +13,7 @@ STEPS = [
     ("Generate product pages", ["python3", "scripts/generate_product_pages.py", "--all", "--report"]),
     ("Generate landing pages", ["python3", "scripts/generate_landing_pages.py", "--report"]),
     ("Generate catalog index", ["python3", "scripts/generate_catalog_index.py", "--report"]),
+    ("Sync public analytics", ["python3", "scripts/sync_public_instrumentation.py"]),
     ("Validate landing pages", ["python3", "scripts/validate_landing_pages.py"]),
     ("Validate search synonyms", ["python3", "scripts/validate_search_synonyms.py"]),
     ("Validate product pages", ["python3", "scripts/validate_product_pages.py"]),
@@ -22,6 +23,7 @@ STEPS = [
     ("Generate build manifest", ["python3", "scripts/generate_build_manifest.py"]),
     ("Generate project stage report", ["python3", "scripts/generate_project_stage_report.py"]),
     ("Verify product galleries", ["python3", "scripts/verify_product_galleries.py"]),
+    ("Verify release invariants", ["python3", "scripts/verify_release_invariants.py"]),
     ("Check app.js syntax", ["node", "--check", "app.js"]),
     (
         "Check Python syntax",
@@ -42,6 +44,8 @@ STEPS = [
             "scripts/generate_build_manifest.py",
             "scripts/generate_project_stage_report.py",
             "scripts/generate_sitemap.py",
+            "scripts/sync_public_instrumentation.py",
+            "scripts/verify_release_invariants.py",
         ],
     ),
 ]

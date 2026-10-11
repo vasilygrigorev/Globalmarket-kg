@@ -37,13 +37,15 @@ test("app.js renders a fresh-products section from the catalog, not localStorage
   assert.match(appJs, /freshProductsSection\.hidden = items\.length === 0/);
   // Sourced from the in-memory catalog (`products`), not a recently-viewed-style
   // localStorage id list.
-  assert.match(appJs, /freshProducts\(limit = \d+\)[\s\S]*?const eligible = products\.filter/);
+  assert.match(appJs, /freshProducts\(limit = Number\.POSITIVE_INFINITY\)[\s\S]*?const eligible = products\.filter/);
 });
 
-test("selection uses only first-seen products from the latest 1C export", () => {
+test("selection prefers the explicit opt-parity list and uses first-seen only as a legacy fallback", () => {
   const match = appJs.match(/function freshProducts\(limit[\s\S]*?\n\}/);
   assert.ok(match, "freshProducts() body not found");
   const body = match[0];
+  assert.match(body, /freshArrival === true/);
+  assert.match(body, /freshArrivalRank/);
   assert.match(body, /firstSeenAt/);
   assert.match(body, /latestStockDate/);
   assert.doesNotMatch(body, /restockedAt/, "a restock must not make an existing product fresh");

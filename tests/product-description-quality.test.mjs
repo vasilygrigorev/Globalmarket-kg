@@ -4,7 +4,7 @@ import path from "node:path";
 import test from "node:test";
 
 const root = path.resolve(import.meta.dirname, "..");
-const catalog = JSON.parse(fs.readFileSync(path.join(root, "data/public-catalog.json"), "utf8"));
+const catalog = JSON.parse(fs.readFileSync(path.join(root, "data/page-catalog.json"), "utf8"));
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "data/product-pages.json"), "utf8"));
 
 const curatedProductIds = [
@@ -62,11 +62,11 @@ const forbiddenPublicPhrases = [
   "наличие и детали заказа подтвердит менеджер",
 ];
 
-test("curated product descriptions remain useful and public", () => {
+test("curated product descriptions survive stock changes and remain on retained pages", () => {
   assert.equal(curatedProductIds.length, 129);
   for (const productId of curatedProductIds) {
     const product = productsById.get(productId);
-    assert.ok(product, `${productId}: missing from public catalog`);
+    assert.ok(product, `${productId}: missing from retained page catalog`);
     const description = product.description.trim();
     const sentences = description.match(/[.!?](?:\s|$)/g) || [];
     assert.ok(description.length >= 150, `${productId}: description is too short`);

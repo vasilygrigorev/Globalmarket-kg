@@ -4,6 +4,8 @@ Use this checklist before committing and deploying Global Market KG production c
 
 ## 1. Review Scope
 
+Read `docs/AI-HANDOFF-RULES.md`. Confirm Petya did not edit or deploy the site and confirm the working branch starts from the currently verified production baseline.
+
 Check what changed:
 
 ```bash
@@ -50,6 +52,7 @@ Do not include unrelated raw photo files, old screenshots, Telegram inbox files,
 
 ```bash
 python3 scripts/package_static_site.py --include-reports
+python3 scripts/verify_release_invariants.py --site-root /private/tmp/globalmarket-static-build
 ```
 
 Expected:
@@ -58,11 +61,27 @@ Expected:
 - `Package OK`;
 - product pages count is not unexpectedly lower than before;
 - gallery verification reports zero contract errors.
+- all previous production slugs still exist;
+- every active product has a generated `productPagePath` and a real static page, including products using a neutral placeholder;
+- no approved gallery shrank;
+- inactive products retain informative pages without purchase controls;
+- service code `2322` is absent from public output.
 
 ## 3. Preview
 
+Never deploy an indexable preview. First copy the immutable package to a separate
+preview directory, add `X-Robots-Tag: noindex, nofollow, noarchive`, add an HTML
+noindex meta tag to every page, and use preview-only `robots.txt` with
+`Disallow: /`. Do not apply those changes to the production package.
+
 ```bash
-/Users/macmini/.npm/_npx/d77349f55c2be1c0/node_modules/.bin/wrangler pages deploy /private/tmp/globalmarket-static-build --project-name globalmarket-kg --branch shared-layout-preview --commit-dirty=true
+python3 scripts/make_noindex_preview.py \
+  /private/tmp/globalmarket-static-build \
+  /private/tmp/globalmarket-static-preview
+```
+
+```bash
+/Users/macmini/.npm/_npx/d77349f55c2be1c0/node_modules/.bin/wrangler pages deploy /private/tmp/globalmarket-static-preview --project-name globalmarket-kg --branch shared-layout-preview --commit-dirty=true
 ```
 
 Preview:
@@ -86,6 +105,9 @@ The script checks:
 - `sitemap.xml` opens and parses;
 - `robots.txt` opens;
 - preview reports are present when requested.
+
+Also verify with `curl -I` that the preview returns `X-Robots-Tag`, while the
+production homepage does not return that header.
 
 Optional real-browser check:
 

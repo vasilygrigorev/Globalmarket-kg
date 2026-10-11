@@ -30,8 +30,8 @@
     <link rel="apple-touch-icon" href="/assets/brand/globalmarket-tech-orb.jpg" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=20260818-button-rollback-v1" />
-    <link rel="stylesheet" href="/home-category-rail-v4.css?v=20260803-category-cache-v4" />
+    <link rel="stylesheet" href="styles.css?v=20261011-retail-recovery-v1" />
+    <link rel="stylesheet" href="/home-category-rail-v4.css?v=20261011-retail-recovery-v1" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -62,7 +62,25 @@
         }
       }
     </script>
-  </head>
+  <!-- BEGIN shared-analytics-head -->
+<meta name="google-site-verification" content="960zpLbWQpecqn6ZhlIecGVl0zt3SRKtzPd800egMo4">
+<link rel="stylesheet" href="/assets/google-consent.css?v=20261011-retail-full-recovery-v1">
+<script id="gmk-google-tag-bootstrap">
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+window.gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500
+});
+window.gtag('js', new Date());
+</script>
+<script async id="gmk-google-tag-loader" src="https://www.googletagmanager.com/gtag/js?id=G-9KZK8Y4S7K"></script>
+<script defer id="gmk-google-consent-script" src="/assets/google-consent.js?v=20261011-retail-full-recovery-v1"></script>
+<!-- END shared-analytics-head -->
+</head>
 <body class="home-page">
     <!-- BEGIN shared-header -->
     <header class="site-header" data-smart-header>
@@ -135,7 +153,7 @@
           <span>быстрая связь с менеджером</span>
         </article>
         <article>
-          <strong><span id="deliveryThreshold">10 000</span> сом</strong>
+          <strong><span id="deliveryThreshold">5 000</span> сом</strong>
           <span>порог бесплатной доставки</span>
         </article>
       </section>
@@ -204,7 +222,7 @@
           <h2>Заказ менеджеру</h2>
           <p>Оставьте контакты и адрес. После оформления откроется WhatsApp с готовым сообщением для менеджера. Оформить заказ можно без входа.</p>
           <div class="checkout-note">
-            Бесплатная доставка от <strong><span id="deliveryThresholdCheckout">10 000</span> сом</strong>. Если сумма меньше, условия доставки согласуются вручную.
+            Бесплатная доставка от <strong><span id="deliveryThresholdCheckout">5 000</span> сом</strong>. Если сумма меньше, условия доставки согласуются вручную.
           </div>
         </div>
         <form class="checkout-form" id="checkoutForm">
@@ -381,9 +399,10 @@
           <a href="/catalog/">Разделы</a>
           <a href="/#checkout">Оформление</a>
           <a href="/#myOrders">Мои заказы</a>
+          <a href="/delivery-and-returns/">Доставка и возврат</a>
           <a href="/privacy.html">Политика конфиденциальности</a>
         </nav>
-        <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
+        <p>ИП Григорьев Василий Владимирович · ИНН 21509198010011</p>
       </div>
     </footer>
     <!-- END shared-footer -->
@@ -456,6 +475,16 @@
     </nav>
     <!-- END shared-bottom-nav -->
 
-    <script src="app.js?v=20260803-category-icons-v3"></script>
-  </body>
+    <script src="app.js?v=20261011-retail-recovery-v1"></script>
+  <!-- BEGIN shared-analytics-consent -->
+<aside class="gmk-consent" data-nosnippet aria-label="Настройки аналитики">
+  <strong>Аналитика и рекламные измерения</strong>
+  <p>Анонимные события магазина отправляются в Google только с вашего согласия. Телефон, SMS-код, имя, адрес и текст заказа не передаются. <a href="/privacy.html">Подробнее</a></p>
+  <div class="gmk-consent-actions">
+    <button type="button" data-consent="granted">Разрешить</button>
+    <button type="button" data-consent="denied">Только необходимые</button>
+  </div>
+</aside>
+<!-- END shared-analytics-consent -->
+</body>
 </html>

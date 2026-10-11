@@ -18,6 +18,7 @@ ROOT_FILES = [
     "404.html",
     "site.webmanifest",
     "_headers",
+    "_routes.json",
     "_redirects",
     "sitemap.xml",
     "robots.txt",
@@ -114,6 +115,7 @@ def main():
     copy_tree(ROOT / "category", output / "category")
     copy_tree(ROOT / "collection", output / "collection")
     copy_tree(ROOT / "brand", output / "brand")
+    copy_tree(ROOT / "delivery-and-returns", output / "delivery-and-returns")
 
     # Cloudflare Pages Functions: ship functions/ so /api/* routes deploy.
     # Exclude tests/specs and dotfiles — only runtime handlers should ship.
@@ -154,6 +156,18 @@ def main():
     if args.include_reports:
         verify_command.append("--require-reports")
     subprocess.run(verify_command, cwd=ROOT, check=True)
+    subprocess.run(
+        [
+            "python3",
+            "scripts/verify_release_invariants.py",
+            "--site-root",
+            str(output),
+            "--source-root",
+            str(ROOT),
+        ],
+        cwd=ROOT,
+        check=True,
+    )
 
     print(f"Package: {output}")
     print(f"Files: {count_files(output)}")

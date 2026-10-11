@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Johnson&#x27;s Baby Oil детское масло 200 мл">
   <meta name="twitter:description" content="Johnson&#x27;s Baby Oil — детское масло для ухода за кожей после купания. Оно помогает удерживать влагу и смягчать кожу, особенно при нанесении тонким слоем на ">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20260722-desktop-cart-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -43,12 +43,23 @@
     "url": "https://globalmarket.kg/product/johnson-s-baby-oil-detskoe-maslo-200-ml-1c7d9c/",
     "priceCurrency": "KGS",
     "price": "295",
+    "validFrom": "2026-10-10",
     "priceValidUntil": "2027-12-31",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
+      "@id": "https://globalmarket.kg/#organization",
       "name": "Global Market KG"
+    },
+    "hasMerchantReturnPolicy": {
+      "@id": "https://globalmarket.kg/delivery-and-returns/#return-policy"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "hasShippingService": {
+        "@id": "https://globalmarket.kg/delivery-and-returns/#shipping-policy"
+      }
     }
   }
 }</script>
@@ -98,38 +109,49 @@
     .icon-action.smm-share .instagram-dot { fill: currentColor; stroke: none; }
     .share-feedback { position: fixed; left: 50%; bottom: calc(82px + env(safe-area-inset-bottom)); z-index: 40; width: max-content; max-width: calc(100vw - 32px); transform: translateX(-50%); padding: 11px 14px; border-radius: 8px; color: #fff; background: rgba(20, 24, 28, 0.94); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22); font-size: 14px; font-weight: 750; text-align: center; }
     .visual-panel { background: #fff; }
-    .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; }
+    .media-main { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 0; border-radius: 0; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-drag: none; overscroll-behavior-x: contain; }
+    .media-main:active { cursor: grabbing; }
+    .media-main:focus-visible { outline: 3px solid #07958f; outline-offset: -3px; }
     .gallery-thumbs { display: flex; gap: 10px; padding: 14px 16px 18px; overflow-x: auto; background: #f7f7f8; }
-    .gallery-thumb { display: grid; flex: 0 0 76px; gap: 5px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }
+    .gallery-thumb { display: block; flex: 0 0 76px; padding: 6px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background: rgba(255, 255, 255, 0.6); color: #555; cursor: pointer; }
     .gallery-thumb.active { border-color: #1f1f1f; background: #fff; }
     .gallery-thumb img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
-    .gallery-thumb span { overflow: hidden; font-size: 11px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; text-align: center; }
-    .product-purchase-strip { padding: 0 16px 18px; background: #f7f7f8; }
+    .gallery-thumb span { display: none; }
+    .product-purchase-strip { padding: 12px 16px 18px; background: #f7f7f8; }
     .product-purchase-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .product-purchase-actions > * { width: 100%; min-width: 0; }
-    .product-detail-info { display: grid; gap: 18px; padding: 28px 26px 26px; }
+    .purchase-price { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 0 0 14px; text-align: center; }
+    .purchase-price strong { font-weight: inherit; }
+    .purchase-price .price-group { display: flex; align-items: baseline; justify-content: center; gap: 10px; }
+    .purchase-price .price { color: #132e36; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 38px; font-weight: 300; line-height: 1.05; }
+    .purchase-price .price-original { color: #8a8f94; font-size: 20px; font-weight: 500; }
+    .purchase-price small { color: #777; font-size: 13px; }
+    .out-of-stock-panel { display: grid; gap: 5px; padding: 14px 16px; border: 1px solid #d7e2e2; border-radius: 8px; color: #28484d; background: #eef7f6; text-align: center; }
+    .out-of-stock-panel strong { font-size: 18px; }
+    .out-of-stock-panel span { color: #5e7276; font-size: 14px; line-height: 1.4; }
+    .product-detail-info { display: grid; gap: 12px; padding: 22px; }
     .product-breadcrumbs { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: #777; font-size: 13px; line-height: 1.35; }
     .product-breadcrumbs a { color: inherit; text-decoration: none; }
     .product-breadcrumbs a:hover { color: #111; }
     .crumb-separator { color: #b0b0b6; }
-    .title-block { display: grid; gap: 8px; }
+    .title-block { display: grid; gap: 4px; }
     .brand-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
     h1 { margin: 0; font-size: clamp(38px, 7vw, 58px); font-weight: 300; line-height: 1.05; }
     .size-line { flex: 0 0 auto; color: #555; font-size: clamp(20px, 4.5vw, 30px); font-weight: 300; line-height: 1.1; white-space: nowrap; }
     .type { margin: 0; font-size: clamp(24px, 5vw, 34px); font-weight: 800; line-height: 1.12; }
     .variant { margin: 0; color: #777; font-size: 19px; line-height: 1.35; }
-    body.product-page .product-detail-info .description { display: block; min-height: 0; overflow: visible; margin: 0; color: #666; font-size: 18px; line-height: 1.55; -webkit-line-clamp: unset; }
-    .price-box { display: grid; gap: 4px; padding: 16px; border: 1px solid #e4e4e7; border-radius: 8px; background: #f5f5f6; }
+    body.product-page .product-detail-info .description { display: block; min-height: 0; overflow: visible; margin: 0; padding: 0; border: 0; color: #555; background: transparent; font-size: 18px; line-height: 1.45; -webkit-line-clamp: unset; }
+    .price-box { display: grid; gap: 4px; padding: 0; border: 0; background: transparent; }
     .price-box span,
     .price-box small { color: #777; }
     .price-box .price { font-size: 38px; font-weight: 850; line-height: 1; }
     .som-sign { display: inline-block; padding-bottom: 0.03em; border-bottom: 0.06em solid currentColor; line-height: 0.88; }
-    .specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }
-    .specs div { padding: 12px; border: 1px solid #e4e4e7; border-radius: 8px; background: #fff; }
-    .specs dt { color: #777; font-size: 13px; }
-    .specs dd { margin: 4px 0 0; font-weight: 800; }
+    .specs { display: flex; flex-wrap: wrap; gap: 7px 18px; margin: 2px 0 0; }
+    .specs div { display: flex; align-items: baseline; gap: 5px; min-width: 0; padding: 0; border: 0; background: transparent; }
+    .specs dt { color: #777; font-size: 12px; white-space: nowrap; }
+    .specs dd { min-width: 0; margin: 0; font-size: 14px; font-weight: 750; }
     .specs dd a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .note { padding: 13px 14px; border-radius: 8px; color: #666; background: #f5f5f6; line-height: 1.45; }
+    .note { padding: 0; border: 0; color: #666; background: transparent; line-height: 1.4; }
     .modal-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .primary-action,
     .secondary-action,
@@ -168,11 +190,12 @@
       .page { max-width: none; padding: 0; }
       .product-shell { border-radius: 0; box-shadow: none; }
       .related { padding: 0 8px; }
-      .product-detail-info { padding: 26px 18px 20px; }
+      .product-detail-info { padding: 18px 16px; }
       .icon-action { width: 44px; height: 44px; }
       .icon-action.smm-share:not([hidden]) { display: grid; }
-      .product-purchase-strip { padding: 0 10px 14px; }
-      .specs { grid-template-columns: 1fr; }
+      .product-purchase-strip { padding: 10px 10px 14px; }
+      .purchase-price .price { font-size: 34px; }
+      .specs { gap: 7px 14px; }
       .related-grid { grid-template-columns: repeat(2, 1fr); }
       .bottom-page-actions { padding: 0 18px; }
     }
@@ -183,6 +206,24 @@
       .top-actions { left: 16px; right: 16px; }
     }
   </style>
+  <!-- BEGIN shared-analytics-head -->
+<meta name="google-site-verification" content="960zpLbWQpecqn6ZhlIecGVl0zt3SRKtzPd800egMo4">
+<link rel="stylesheet" href="/assets/google-consent.css?v=20261011-retail-full-recovery-v1">
+<script id="gmk-google-tag-bootstrap">
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+window.gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500
+});
+window.gtag('js', new Date());
+</script>
+<script async id="gmk-google-tag-loader" src="https://www.googletagmanager.com/gtag/js?id=G-9KZK8Y4S7K"></script>
+<script defer id="gmk-google-consent-script" src="/assets/google-consent.js?v=20261011-retail-full-recovery-v1"></script>
+<!-- END shared-analytics-head -->
 </head>
 <body class="product-page">
   <header class="site-header" data-smart-header>
@@ -251,27 +292,30 @@
         <div class="gallery-thumbs" aria-label="Фотографии товара">
         <button class="gallery-thumb active" type="button" data-gallery-image="/assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg" aria-label="Лицевая">
           <img src="/assets/products/johnsons/johnsons-baby-oil-200ml-raw-card-front.jpg" alt="Johnson&#x27;s Baby Oil детское масло 200 мл - Лицевая" loading="lazy">
-          <span>Лицевая</span>
         </button>
-        
+
 
         <button class="gallery-thumb " type="button" data-gallery-image="/assets/products/johnsons/johnsons-baby-oil-200ml-raw-front.jpg" aria-label="Лицевая">
           <img src="/assets/products/johnsons/johnsons-baby-oil-200ml-raw-front.jpg" alt="Johnson&#x27;s Baby Oil детское масло 200 мл - Лицевая" loading="lazy">
-          <span>Лицевая</span>
         </button>
-        
+
 
         <button class="gallery-thumb " type="button" data-gallery-image="/assets/products/johnsons/johnsons-baby-oil-200ml-raw-back.jpg" aria-label="Обратная">
           <img src="/assets/products/johnsons/johnsons-baby-oil-200ml-raw-back.jpg" alt="Johnson&#x27;s Baby Oil детское масло 200 мл - Обратная" loading="lazy">
-          <span>Обратная</span>
         </button>
         </div>
         <div class="product-purchase-strip">
+        <div class="purchase-price">
+          <strong><span class="price">295 <span class="som-sign">с</span></span></strong>
+          <small>Клиентская цена: скидка 3% при входе</small>
+        </div>
+
         <div class="modal-actions product-purchase-actions">
           <button class="primary-action" type="button" data-add-cart>В корзину</button>
           <a class="secondary-action" href="/?checkout=1#checkoutForm" data-checkout>К оформлению</a>
         </div>
-        </div>
+
+    </div>
       </section>
       <section class="product-detail-info">
         <nav class="product-breadcrumbs" aria-label="Навигация"><a href="/#top">Главная</a><span class="crumb-separator">/</span><a href="/category/body/">Уход за телом</a><span class="crumb-separator">/</span><a href="/brand/johnson-s/">Johnson&#x27;s</a><span class="crumb-separator">/</span><span>Johnson&#x27;s Baby Oil детское масло 200 мл</span></nav>
@@ -284,26 +328,21 @@
           <p class="variant">Baby Oil детское масло</p>
         </div>
         <p class="description">Johnson&#x27;s Baby Oil — детское масло для ухода за кожей после купания. Оно помогает удерживать влагу и смягчать кожу, особенно при нанесении тонким слоем на ещё влажную кожу. Объём 200 мл; предназначено только для наружного применения, храните вдали от детей во избежание случайного вдыхания или проглатывания.</p>
-        <div class="price-box">
-          <span>Ваша цена</span>
-          <strong><span class="price">295 <span class="som-sign">с</span></span></strong>
-          <small>Клиентская цена: скидка 3% при входе</small>
-        </div>
         <dl class="specs">
           <div><dt>Бренд</dt><dd><a href="/brand/johnson-s/">Johnson&#x27;s</a></dd></div>
           <div><dt>Категория</dt><dd><a href="/category/body/">Уход за телом</a></dd></div>
           <div><dt>Тип товара</dt><dd>масло для тела</dd></div>
           <div><dt>Единица</dt><dd>шт</dd></div>
-          
+
         </dl>
-        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 10 000 <span class="som-sign">с</span>.</div>
-        
+        <div class="note">Наличие, оплату и доставку подтверждает менеджер. Бесплатная доставка от 5 000 <span class="som-sign">с</span>.</div>
+
         <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Johnson%27s%20Baby%20Oil%20%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%20200%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20295%20%D1%81%D0%BE%D0%BC." rel="noopener">Заказать сразу в WhatsApp</a>
         <a class="whatsapp-action" href="https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%83%3A%20Johnson%27s%20Baby%20Oil%20%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%20200%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20295%20%D1%81%D0%BE%D0%BC.%20https%3A//globalmarket.kg/product/johnson-s-baby-oil-detskoe-maslo-200-ml-1c7d9c/" rel="noopener">Спросить в WhatsApp</a>
-        
+
       </section>
     </article>
-    
+
     <section class="related">
       <h2>Похожие товары</h2>
       <div class="related-grid">
@@ -340,6 +379,598 @@
                     <button class="add-button compact-add-button" type="button" data-add="prd_0b8a7c8dea63" aria-label="Добавить в корзину">В корзину</button>
                   </div>
                   <span class="registered-price-note">Цена при входе: 339 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">SunMed</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3043" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/sunmed-sunblock-lotion-spf50-200-ml-kids-c_3043/" data-product-link="prd_1c_3043" aria-label="Открыть SunMed Sunblock Lotion SPF50 200 мл Kids">
+                  <img class="product-image" src="/assets/products/sunmed/sunmed-3043-card-front.jpg" alt="SunMed Sunblock Lotion SPF50 200 мл Kids" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/sunmed-sunblock-lotion-spf50-200-ml-kids-c_3043/" data-product-link="prd_1c_3043">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">SunMed</span>
+                    <span class="product-size-line">200 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>детский солнцезащитный крем</strong>
+                  </span>
+                  <span class="product-variant-line">Sunblock Lotion SPF50 Kids</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>SunMed — оригинальный европейский детский солнцезащитный крем. В наличии в Global Market KG.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">795 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3043" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 771 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">SunMed</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3045" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span></div>
+
+                <a class="product-image-link" href="/product/sunmed-sunblock-spray-spf50-220-ml-kids-c_3045/" data-product-link="prd_1c_3045" aria-label="Открыть SunMed Sunblock Spray SPF50 220 мл Kids">
+                  <img class="product-image" src="/assets/products/sunmed/sunmed-3045-card-front.jpg" alt="SunMed Sunblock Spray SPF50 220 мл Kids" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/sunmed-sunblock-spray-spf50-220-ml-kids-c_3045/" data-product-link="prd_1c_3045">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">SunMed</span>
+                    <span class="product-size-line">220 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>детский солнцезащитный спрей</strong>
+                  </span>
+                  <span class="product-variant-line">Sunblock Spray SPF50 Kids</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>SunMed — оригинальный европейский детский солнцезащитный спрей. В наличии в Global Market KG.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">795 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3045" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 771 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_69255e678e02" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-gel-dush-250-apollo-678e02/" data-product-link="prd_69255e678e02" aria-label="Открыть AXE Гель/душ (250) Apollo">
+                  <img class="product-image" src="/assets/products/registry/1c-1421/card-front-1f2a69d23f1a.jpg" alt="AXE Гель/душ (250) Apollo" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-gel-dush-250-apollo-678e02/" data-product-link="prd_69255e678e02">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для душа</strong>
+                  </span>
+                  <span class="product-variant-line">Гель/душ 250 Apollo</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>AXE Гель/душ (250) Apollo — гель для душа для ежедневного очищения кожи. Нанесите на влажную кожу, вспеньте и тщательно смойте; меры предосторожности указаны на упаковке производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_69255e678e02" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_7f8c87f18def" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-gel-dush-250-dark-temptation-f18def/" data-product-link="prd_7f8c87f18def" aria-label="Открыть AXE Гель/душ (250) Dark Temptation">
+                  <img class="product-image" src="/assets/products/registry/1c-1031/card-front-5d497919cb8b.jpg" alt="AXE Гель/душ (250) Dark Temptation" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-gel-dush-250-dark-temptation-f18def/" data-product-link="prd_7f8c87f18def">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для душа</strong>
+                  </span>
+                  <span class="product-variant-line">Гель/душ 250 Dark Temptation</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>AXE Гель/душ (250) Dark Temptation — гель для душа для ежедневного очищения кожи. Нанесите на влажную кожу, вспеньте и тщательно смойте; меры предосторожности указаны на упаковке производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_7f8c87f18def" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_8d1e84c634d1" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-gel-dush-250-excite-c634d1/" data-product-link="prd_8d1e84c634d1" aria-label="Открыть AXE Гель/душ (250) Excite">
+                  <img class="product-image" src="/assets/products/registry/1c-1433/card-front-deb38fb3d5b9.jpg" alt="AXE Гель/душ (250) Excite" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-gel-dush-250-excite-c634d1/" data-product-link="prd_8d1e84c634d1">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для душа</strong>
+                  </span>
+                  <span class="product-variant-line">Гель/душ 250 Excite</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>AXE Гель/душ (250) Excite — гель для душа для ежедневного очищения кожи. Нанесите на влажную кожу, вспеньте и тщательно смойте; меры предосторожности указаны на упаковке производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_8d1e84c634d1" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_e65bca4dbba8" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-gel-dush-250-sport-blast-4dbba8/" data-product-link="prd_e65bca4dbba8" aria-label="Открыть AXE Гель/душ (250) Sport Blast">
+                  <img class="product-image" src="/assets/products/registry/1c-1687/card-front-b0162b8cbc81.jpg" alt="AXE Гель/душ (250) Sport Blast" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-gel-dush-250-sport-blast-4dbba8/" data-product-link="prd_e65bca4dbba8">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для душа</strong>
+                  </span>
+                  <span class="product-variant-line">Гель/душ 250 Sport Blast</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>AXE Гель/душ (250) Sport Blast — гель для душа для ежедневного очищения кожи. Нанесите на влажную кожу, вспеньте и тщательно смойте; меры предосторожности указаны на упаковке производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">290 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_e65bca4dbba8" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 281 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #e1d8f3; --tone-b: #8e78bd">
+                <span class="placeholder-brand">AXE</span>
+                <button class="favorite-button" type="button" data-favorite="prd_2f2a1e227d8b" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/axe-gel-dush-400-africa-227d8b/" data-product-link="prd_2f2a1e227d8b" aria-label="Открыть AXE Гель/душ (400) Africa">
+                  <img class="product-image" src="/assets/products/registry/1c-1797/card-front-796943dbfcbc.jpg" alt="AXE Гель/душ (400) Africa" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/axe-gel-dush-400-africa-227d8b/" data-product-link="prd_2f2a1e227d8b">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">AXE</span>
+
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для душа</strong>
+                  </span>
+                  <span class="product-variant-line">Гель/душ 400 Africa</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>AXE Гель/душ (400) Africa — гель для душа для ежедневного очищения кожи. Нанесите на влажную кожу, вспеньте и тщательно смойте; меры предосторожности указаны на упаковке производителя.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">450 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_2f2a1e227d8b" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 436 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">Cliff</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3032" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/cliff-shower-gel-acapulco-250-ml-c_3032/" data-product-link="prd_1c_3032" aria-label="Открыть Cliff shower gel Acapulco 250 ml">
+                  <img class="product-image" src="/assets/products/cliff/cliff-3032-card-front.jpg" alt="Cliff shower gel Acapulco 250 ml" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/cliff-shower-gel-acapulco-250-ml-c_3032/" data-product-link="prd_1c_3032">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Cliff</span>
+                    <span class="product-size-line">250 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для душа</strong>
+                  </span>
+                  <span class="product-variant-line">shower gel Acapulco</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>Cliff shower gel Acapulco 250 ml - средство для ухода за телом для ежедневной гигиены и ухода за телом. Формат: 250 мл. Нанесите на влажную кожу, вспеньте и смойте водой.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">495 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3032" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 480 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">Cliff</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3033" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/cliff-shower-gel-arctic-250-ml-c_3033/" data-product-link="prd_1c_3033" aria-label="Открыть Cliff shower gel Arctic 250 ml">
+                  <img class="product-image" src="/assets/products/cliff/cliff-3033-card-front.jpg" alt="Cliff shower gel Arctic 250 ml" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/cliff-shower-gel-arctic-250-ml-c_3033/" data-product-link="prd_1c_3033">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Cliff</span>
+                    <span class="product-size-line">250 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для душа</strong>
+                  </span>
+                  <span class="product-variant-line">shower gel Arctic</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>Cliff shower gel Arctic 250 ml - средство для ухода за телом для ежедневной гигиены и ухода за телом. Формат: 250 мл. Нанесите на влажную кожу, вспеньте и смойте водой.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">495 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3033" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 480 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">Cliff</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3034" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/cliff-shower-gel-life-250-ml-c_3034/" data-product-link="prd_1c_3034" aria-label="Открыть Cliff shower gel Life 250 ml">
+                  <img class="product-image" src="/assets/products/cliff/cliff-3034-card-front.jpg" alt="Cliff shower gel Life 250 ml" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/cliff-shower-gel-life-250-ml-c_3034/" data-product-link="prd_1c_3034">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Cliff</span>
+                    <span class="product-size-line">250 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>гель для душа</strong>
+                  </span>
+                  <span class="product-variant-line">shower gel Life</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>Cliff shower gel Life 250 ml - средство для ухода за телом для ежедневной гигиены и ухода за телом. Формат: 250 мл. Нанесите на влажную кожу, вспеньте и смойте водой.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">495 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3034" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 480 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">Cussons</span>
+                <button class="favorite-button" type="button" data-favorite="prd_7ea551495133" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/cussons-creations-peace-bottled-apple-pena-dlya-vanny-500-ml-495133/" data-product-link="prd_7ea551495133" aria-label="Открыть Cussons пена для ванны Apple 500 мл">
+                  <img class="product-image" src="/assets/products/stock-2026-09-07/1c-244-card-front.jpg" alt="Cussons пена для ванны Apple 500 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/cussons-creations-peace-bottled-apple-pena-dlya-vanny-500-ml-495133/" data-product-link="prd_7ea551495133">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Cussons</span>
+                    <span class="product-size-line">500 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>пена для ванны</strong>
+                  </span>
+                  <span class="product-variant-line">Apple</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>Пена для ванны Cussons Apple для ароматной ванны и ухода за телом. Объем 500 мл.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">230 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_7ea551495133" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 223 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">Cussons</span>
+                <button class="favorite-button" type="button" data-favorite="prd_76fa6e266408" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/cussons-pena-dlya-vanny-apricot-500-ml-266408/" data-product-link="prd_76fa6e266408" aria-label="Открыть Cussons пена для ванны Apricot 500 мл">
+                  <img class="product-image" src="/assets/products/registry/1c-133/card-front-e4015899a1f6.jpg" alt="Cussons пена для ванны Apricot 500 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/cussons-pena-dlya-vanny-apricot-500-ml-266408/" data-product-link="prd_76fa6e266408">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Cussons</span>
+                    <span class="product-size-line">500 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>пена для ванны</strong>
+                  </span>
+                  <span class="product-variant-line">Apricot</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>Пена для ванны Cussons Apricot для ароматной ванны и ухода за телом. Объем 500 мл.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">230 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_76fa6e266408" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 223 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">Cussons</span>
+                <button class="favorite-button" type="button" data-favorite="prd_0a8f4b1bdcb6" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/cussons-creations-magnolia-almond-milk-pena-dlya-vanny-500-ml-1bdcb6/" data-product-link="prd_0a8f4b1bdcb6" aria-label="Открыть Cussons пена для ванны Magnolia 500 мл">
+                  <img class="product-image" src="/assets/products/stock-2026-09-07/1c-750-card-front.jpg" alt="Cussons пена для ванны Magnolia 500 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/cussons-creations-magnolia-almond-milk-pena-dlya-vanny-500-ml-1bdcb6/" data-product-link="prd_0a8f4b1bdcb6">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Cussons</span>
+                    <span class="product-size-line">500 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>пена для ванны</strong>
+                  </span>
+                  <span class="product-variant-line">Magnolia</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>Пена для ванны Cussons Magnolia для ароматной ванны и ухода за телом. Объем 500 мл.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">230 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_0a8f4b1bdcb6" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 223 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">Cussons</span>
+                <button class="favorite-button" type="button" data-favorite="prd_41aae31f87a5" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/cussons-creations-mallow-magic-pena-dlya-vanny-500-ml-1f87a5/" data-product-link="prd_41aae31f87a5" aria-label="Открыть Cussons пена для ванны Marshmallow 500 мл">
+                  <img class="product-image" src="/assets/products/stock-2026-09-07/1c-707-card-front.jpg" alt="Cussons пена для ванны Marshmallow 500 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/cussons-creations-mallow-magic-pena-dlya-vanny-500-ml-1f87a5/" data-product-link="prd_41aae31f87a5">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Cussons</span>
+                    <span class="product-size-line">500 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>пена для ванны</strong>
+                  </span>
+                  <span class="product-variant-line">Marshmallow</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>Пена для ванны Cussons Marshmallow для ароматной ванны и ухода за телом. Объем 500 мл.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">230 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_41aae31f87a5" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 223 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">Cussons</span>
+                <button class="favorite-button" type="button" data-favorite="prd_8b31b49260e5" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/cussons-creations-paradise-fruits-pena-dlya-vanny-500-ml-9260e5/" data-product-link="prd_8b31b49260e5" aria-label="Открыть Cussons пена для ванны Paradise Fruits 500 мл">
+                  <img class="product-image" src="/assets/products/stock-2026-09-07/1c-1702-card-front.jpg" alt="Cussons пена для ванны Paradise Fruits 500 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/cussons-creations-paradise-fruits-pena-dlya-vanny-500-ml-9260e5/" data-product-link="prd_8b31b49260e5">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Cussons</span>
+                    <span class="product-size-line">500 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>пена для ванны</strong>
+                  </span>
+                  <span class="product-variant-line">Paradise Fruits</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>Пена для ванны Cussons Paradise Fruits для ароматной ванны и ухода за телом. Объем 500 мл.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">230 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_8b31b49260e5" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 223 <span class="som-sign">с</span></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card ">
+              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
+                <span class="placeholder-brand">Cussons</span>
+                <button class="favorite-button" type="button" data-favorite="prd_eb2cd134029c" aria-label="Добавить в избранное" aria-pressed="false">
+                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
+                </button>
+                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
+
+                <a class="product-image-link" href="/product/cussons-creations-to-the-moon-and-back-space-candy-pena-dlya-vanny-500-ml-34029c/" data-product-link="prd_eb2cd134029c" aria-label="Открыть Cussons пена для ванны Space Candy 500 мл">
+                  <img class="product-image" src="/assets/products/stock-2026-09-07/1c-862-card-front.jpg" alt="Cussons пена для ванны Space Candy 500 мл" loading="lazy">
+                </a>
+              </div>
+              <div class="product-info">
+                <a class="product-title-button product-copy" href="/product/cussons-creations-to-the-moon-and-back-space-candy-pena-dlya-vanny-500-ml-34029c/" data-product-link="prd_eb2cd134029c">
+                  <span class="product-brand-line">
+                    <span class="product-brand-name">Cussons</span>
+                    <span class="product-size-line">500 мл</span>
+                  </span>
+                  <span class="product-kind-line">
+                    <strong>пена для ванны</strong>
+                  </span>
+                  <span class="product-variant-line">Space Candy</span>
+                </a>
+                <div class="product-meta product-meta-compact">
+                  <span>Уход за телом</span>
+                </div>
+                <p>Пена для ванны Cussons Space Candy для ароматной ванны и ухода за телом. Объем 500 мл.</p>
+                <div class="price-stack">
+                  <div class="price-action-row">
+                    <span class="price">230 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_eb2cd134029c" aria-label="Добавить в корзину">В корзину</button>
+                  </div>
+                  <span class="registered-price-note">Цена при входе: 223 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
@@ -495,338 +1126,116 @@
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
                 <span class="placeholder-brand">Dove</span>
-                <button class="favorite-button" type="button" data-favorite="prd_f23090eb2627" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/dove-go-fresh-apple-white-tea-sprey-dezodorant-250-ml-eb2627/" data-product-link="prd_f23090eb2627" aria-label="Открыть Dove go fresh Apple &amp; White Tea спрей-дезодорант, 250 мл">
-                  <img class="product-image" src="/assets/products/dove/dove-go-fresh-apple-white-tea-250ml-card-front.jpg" alt="Dove go fresh Apple &amp; White Tea спрей-дезодорант, 250 мл" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/dove-go-fresh-apple-white-tea-sprey-dezodorant-250-ml-eb2627/" data-product-link="prd_f23090eb2627">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Dove</span>
-                    <span class="product-size-line">250 мл</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>спрей-дезодорант</strong>
-                  </span>
-                  <span class="product-variant-line">go fresh Apple &amp; White Tea</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Уход за телом</span>
-                </div>
-                <p>Спрей-дезодорант Dove go fresh с ароматом яблока и белого чая, увлажняющий крем, защита 48 часов. Объём 250 мл.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">450 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_f23090eb2627" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 436 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
-                <span class="placeholder-brand">Skin Doctor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_23e9c6bb855b" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/skin-doctor-face-body-moisturizing-sunblock-spf60-170-g-bb855b/" data-product-link="prd_23e9c6bb855b" aria-label="Открыть Skin Doctor Face &amp; Body Moisturizing Sunblock SPF60, 170 г">
-                  <img class="product-image" src="/assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-card-front.jpg" alt="Skin Doctor Face &amp; Body Moisturizing Sunblock SPF60, 170 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/skin-doctor-face-body-moisturizing-sunblock-spf60-170-g-bb855b/" data-product-link="prd_23e9c6bb855b">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Skin Doctor</span>
-                    <span class="product-size-line">170 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>солнцезащитный крем</strong>
-                  </span>
-                  <span class="product-variant-line">Face &amp; Body Moisturizing Sunblock SPF60</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Уход за телом</span>
-                </div>
-                <p>Солнцезащитный увлажняющий крем Skin Doctor для лица и тела, SPF60, с витамином E. Объём 170 г. Солнцезащитка, крем, для тела.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">300 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_23e9c6bb855b" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 291 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
-                <span class="placeholder-brand">Skin Doctor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_91d95a5103ac" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/skin-doctor-face-body-sun-cream-spf50-150-g-5103ac/" data-product-link="prd_91d95a5103ac" aria-label="Открыть Skin Doctor Face &amp; Body Sun Cream SPF50, 150 г">
-                  <img class="product-image" src="/assets/products/skin-doctor/skin-doctor-sd665-spf50-150g-card-front.jpg" alt="Skin Doctor Face &amp; Body Sun Cream SPF50, 150 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/skin-doctor-face-body-sun-cream-spf50-150-g-5103ac/" data-product-link="prd_91d95a5103ac">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Skin Doctor</span>
-                    <span class="product-size-line">150 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>солнцезащитный крем</strong>
-                  </span>
-                  <span class="product-variant-line">Face &amp; Body Sun Cream SPF50</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Уход за телом</span>
-                </div>
-                <p>Солнцезащитный крем Skin Doctor для лица и тела, SPF50, с витамином E и алоэ вера. Объём 150 г. Солнцезащитка, крем, для тела.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">350 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_91d95a5103ac" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 339 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
-                <span class="placeholder-brand">Skin Doctor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_418f9f481516" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/skin-doctor-facial-sunscreen-spf60-sprey-100-ml-481516/" data-product-link="prd_418f9f481516" aria-label="Открыть Skin Doctor Facial Sunscreen SPF60+ спрей, 100 мл">
-                  <img class="product-image" src="/assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-card-front.jpg" alt="Skin Doctor Facial Sunscreen SPF60+ спрей, 100 мл" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/skin-doctor-facial-sunscreen-spf60-sprey-100-ml-481516/" data-product-link="prd_418f9f481516">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">Skin Doctor</span>
-                    <span class="product-size-line">100 мл</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>солнцезащитный спрей</strong>
-                  </span>
-                  <span class="product-variant-line">Facial Sunscreen SPF60+ спрей</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Уход за телом</span>
-                </div>
-                <p>Солнцезащитный спрей для лица Skin Doctor, SPF60+ PA++++, лёгкая нежирная формула. Объём 100 мл. Солнцезащитка, спрей, для тела.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">350 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_418f9f481516" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 339 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
-                <span class="placeholder-brand">Skin Doctor</span>
-                <button class="favorite-button" type="button" data-favorite="prd_cc2d1fc489e2" aria-label="Добавить в избранное" aria-pressed="false">
+                <button class="favorite-button" type="button" data-favorite="prd_9f6d2674faac" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span></div>
 
-                <a class="product-image-link" href="/product/skin-doctor-sunblock-60-summer-solntsezaschitnyy-krem-200-ml-c489e2/" data-product-link="prd_cc2d1fc489e2" aria-label="Открыть Skin Doctor Sunblock 60 Summer солнцезащитный крем 200 мл">
-                  <img class="product-image" src="/assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg" alt="Skin Doctor Sunblock 60 Summer солнцезащитный крем 200 мл" loading="lazy">
+                <a class="product-image-link" href="/product/dove-calming-gel-dlya-dusha-750-ml-74faac/" data-product-link="prd_9f6d2674faac" aria-label="Открыть Dove Calming гель для душа 750 мл">
+                  <img class="product-image" src="/assets/products/stock-2026-09-07/1c-1057-card-front.jpg" alt="Dove Calming гель для душа 750 мл" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/skin-doctor-sunblock-60-summer-solntsezaschitnyy-krem-200-ml-c489e2/" data-product-link="prd_cc2d1fc489e2">
+                <a class="product-title-button product-copy" href="/product/dove-calming-gel-dlya-dusha-750-ml-74faac/" data-product-link="prd_9f6d2674faac">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">Skin Doctor</span>
-                    <span class="product-size-line">200 мл</span>
+                    <span class="product-brand-name">Dove</span>
+                    <span class="product-size-line">750 мл</span>
                   </span>
                   <span class="product-kind-line">
-                    <strong>солнцезащитный крем</strong>
+                    <strong>гель для душа</strong>
                   </span>
-                  <span class="product-variant-line">Sunblock 60 Summer</span>
+                  <span class="product-variant-line">Calming</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Уход за телом</span>
                 </div>
-                <p>Солнцезащитный крем Skin Doctor Sunblock 60 Summer с коллагеном и витамином E, защита до 8 часов. Объём 200 мл.</p>
+                <p>Гель для душа Dove Calming для мягкого очищения кожи. Объем 750 мл.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">550 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_cc2d1fc489e2" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">790 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_9f6d2674faac" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 533 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 766 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 
             <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
-                <span class="placeholder-brand">YC</span>
-                <button class="favorite-button" type="button" data-favorite="prd_b1d27dff5c3e" aria-label="Добавить в избранное" aria-pressed="false">
+              <div class="product-visual" style="--tone-a: #f4d5df; --tone-b: #b66f91">
+                <span class="placeholder-brand">Dove</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3203" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
 
-                <a class="product-image-link" href="/product/yc-sunscreen-uv-protection-spf50-solntsezaschitnyy-krem-100-g-ff5c3e/" data-product-link="prd_b1d27dff5c3e" aria-label="Открыть YC Sunscreen UV Protection SPF50 солнцезащитный крем 100 г">
-                  <img class="product-image" src="/assets/products/yc/yc-sunscreen-spf50-100g-card-front.jpg" alt="YC Sunscreen UV Protection SPF50 солнцезащитный крем 100 г" loading="lazy">
+                <a class="product-image-link" href="/product/dove-men-care-active-fresh-gel-dlya-dusha-400-ml-c_3203/" data-product-link="prd_1c_3203" aria-label="Открыть Dove Men+Care Active Fresh гель для душа 400 мл">
+                  <img class="product-image" src="/assets/products/dove/dove-men-3203-active-fresh-card-front.jpg" alt="Dove Men+Care Active Fresh гель для душа 400 мл" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/yc-sunscreen-uv-protection-spf50-solntsezaschitnyy-krem-100-g-ff5c3e/" data-product-link="prd_b1d27dff5c3e">
+                <a class="product-title-button product-copy" href="/product/dove-men-care-active-fresh-gel-dlya-dusha-400-ml-c_3203/" data-product-link="prd_1c_3203">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">YC</span>
-                    <span class="product-size-line">100 г</span>
+                    <span class="product-brand-name">Dove</span>
+                    <span class="product-size-line">400 мл</span>
                   </span>
                   <span class="product-kind-line">
-                    <strong>солнцезащитный крем</strong>
+                    <strong>гель для душа</strong>
                   </span>
-                  <span class="product-variant-line">Sunscreen UV Protection SPF50</span>
+                  <span class="product-variant-line">Men+Care Active Fresh</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Уход за телом</span>
                 </div>
-                <p>YC Sunscreen UV Protection SPF50 — солнцезащитный крем для лица и тела с фильтрами UVA/UVB. Формула с алоэ вера и витаминами E и B3 помогает защищать кожу от солнечного излучения и поддерживать комфорт при нанесении. Масса 100 г; наносите щедро до выхода на солнце и регулярно обновляйте защиту.</p>
+                <p>Dove Men+Care Active Fresh гель для душа 400 мл подходит для ежедневного очищения кожи. Аромат указан в названии варианта; объем 400 мл.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">300 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_b1d27dff5c3e" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">495 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3203" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 291 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 480 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 
             <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
-                <span class="placeholder-brand">YC</span>
-                <button class="favorite-button" type="button" data-favorite="prd_8f967f2becb0" aria-label="Добавить в избранное" aria-pressed="false">
+              <div class="product-visual" style="--tone-a: #f2dfc6; --tone-b: #d58d79">
+                <span class="placeholder-brand">Dove</span>
+                <button class="favorite-button" type="button" data-favorite="prd_1c_3204" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
                 <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
 
-                <a class="product-image-link" href="/product/yc-sunscreen-uv-protection-spf60-solntsezaschitnyy-krem-100-g-2becb0/" data-product-link="prd_8f967f2becb0" aria-label="Открыть YC Sunscreen UV Protection SPF60 солнцезащитный крем 100 г">
-                  <img class="product-image" src="/assets/products/yc/yc-sunscreen-spf60-100g-card-front.jpg" alt="YC Sunscreen UV Protection SPF60 солнцезащитный крем 100 г" loading="lazy">
+                <a class="product-image-link" href="/product/dove-men-care-clean-comfort-gel-dlya-dusha-400-ml-c_3204/" data-product-link="prd_1c_3204" aria-label="Открыть Dove Men+Care Clean Comfort гель для душа 400 мл">
+                  <img class="product-image" src="/assets/products/dove/dove-men-3204-clean-comfort-card-front.jpg" alt="Dove Men+Care Clean Comfort гель для душа 400 мл" loading="lazy">
                 </a>
               </div>
               <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/yc-sunscreen-uv-protection-spf60-solntsezaschitnyy-krem-100-g-2becb0/" data-product-link="prd_8f967f2becb0">
+                <a class="product-title-button product-copy" href="/product/dove-men-care-clean-comfort-gel-dlya-dusha-400-ml-c_3204/" data-product-link="prd_1c_3204">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">YC</span>
-                    <span class="product-size-line">100 г</span>
+                    <span class="product-brand-name">Dove</span>
+                    <span class="product-size-line">400 мл</span>
                   </span>
                   <span class="product-kind-line">
-                    <strong>солнцезащитный крем</strong>
+                    <strong>гель для душа</strong>
                   </span>
-                  <span class="product-variant-line">Sunscreen UV Protection SPF60</span>
+                  <span class="product-variant-line">Men+Care Clean Comfort</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Уход за телом</span>
                 </div>
-                <p>YC Sunscreen UV Protection SPF60 — солнцезащитный крем для лица и тела с фильтрами UVA/UVB. Формула с алоэ вера и витаминами E и B3 помогает защищать кожу от солнечного излучения и поддерживать комфорт при нанесении. Масса 100 г; наносите щедро до выхода на солнце и регулярно обновляйте защиту.</p>
+                <p>Dove Men+Care Clean Comfort гель для душа 400 мл подходит для ежедневного очищения кожи. Аромат указан в названии варианта; объем 400 мл.</p>
                 <div class="price-stack">
                   <div class="price-action-row">
-                    <span class="price">300 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_8f967f2becb0" aria-label="Добавить в корзину">В корзину</button>
+                    <span class="price">495 <span class="som-sign">с</span></span>
+                    <button class="add-button compact-add-button" type="button" data-add="prd_1c_3204" aria-label="Добавить в корзину">В корзину</button>
                   </div>
-                  <span class="registered-price-note">Цена при входе: 291 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
-                <span class="placeholder-brand">YC</span>
-                <button class="favorite-button" type="button" data-favorite="prd_f50077a08461" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/yc-sunscreen-uv-protection-spf70-solntsezaschitnyy-krem-100-g-a08461/" data-product-link="prd_f50077a08461" aria-label="Открыть YC Sunscreen UV Protection SPF70 солнцезащитный крем 100 г">
-                  <img class="product-image" src="/assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg" alt="YC Sunscreen UV Protection SPF70 солнцезащитный крем 100 г" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/yc-sunscreen-uv-protection-spf70-solntsezaschitnyy-krem-100-g-a08461/" data-product-link="prd_f50077a08461">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">YC</span>
-                    <span class="product-size-line">100 г</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>солнцезащитный крем</strong>
-                  </span>
-                  <span class="product-variant-line">Sunscreen UV Protection SPF70</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Уход за телом</span>
-                </div>
-                <p>YC Sunscreen UV Protection SPF70 — солнцезащитный крем для лица и тела с фильтрами UVA/UVB. Формула с алоэ вера и витаминами E и B3 помогает защищать кожу от солнечного излучения и поддерживать комфорт при нанесении. Масса 100 г; наносите щедро до выхода на солнце и регулярно обновляйте защиту.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">300 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_f50077a08461" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 291 <span class="som-sign">с</span></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card ">
-              <div class="product-visual" style="--tone-a: #f2d9c7; --tone-b: #c7876a">
-                <span class="placeholder-brand">YC</span>
-                <button class="favorite-button" type="button" data-favorite="prd_45b58a935040" aria-label="Добавить в избранное" aria-pressed="false">
-                  <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
-                </button>
-                <div class="marketing-badges"><span>Хит</span><span>Выгодно</span></div>
-
-                <a class="product-image-link" href="/product/yc-white-sunscreen-spray-spf50-solntsezaschitnyy-sprey-150-ml-935040/" data-product-link="prd_45b58a935040" aria-label="Открыть YC White Sunscreen Spray SPF50 солнцезащитный спрей 150 мл">
-                  <img class="product-image" src="/assets/products/yc/yc-white-sunscreen-spray-spf50-150ml-card-front.jpg" alt="YC White Sunscreen Spray SPF50 солнцезащитный спрей 150 мл" loading="lazy">
-                </a>
-              </div>
-              <div class="product-info">
-                <a class="product-title-button product-copy" href="/product/yc-white-sunscreen-spray-spf50-solntsezaschitnyy-sprey-150-ml-935040/" data-product-link="prd_45b58a935040">
-                  <span class="product-brand-line">
-                    <span class="product-brand-name">YC</span>
-                    <span class="product-size-line">150 мл</span>
-                  </span>
-                  <span class="product-kind-line">
-                    <strong>солнцезащитный спрей</strong>
-                  </span>
-                  <span class="product-variant-line">White Sunscreen Spray SPF50</span>
-                </a>
-                <div class="product-meta product-meta-compact">
-                  <span>Уход за телом</span>
-                </div>
-                <p>YC White Sunscreen Spray SPF50 — солнцезащитный спрей для лица и тела с защитой от UVA/UVB. Аэрозольный формат помогает равномерно распределять средство на открытых участках кожи, а лёгкая формула быстро впитывается. Объём 150 мл; распыляйте до выхода на солнце, не вдыхайте аэрозоль и регулярно обновляйте защиту.</p>
-                <div class="price-stack">
-                  <div class="price-action-row">
-                    <span class="price">450 <span class="som-sign">с</span></span>
-                    <button class="add-button compact-add-button" type="button" data-add="prd_45b58a935040" aria-label="Добавить в корзину">В корзину</button>
-                  </div>
-                  <span class="registered-price-note">Цена при входе: 436 <span class="som-sign">с</span></span>
+                  <span class="registered-price-note">Цена при входе: 480 <span class="som-sign">с</span></span>
                 </div>
               </div>
             </article>
 </div>
     </section>
-    
+
     <nav class="bottom-page-actions" aria-label="Навигация по странице">
       <button class="bottom-page-action" type="button" data-back>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"></path></svg>
@@ -852,9 +1261,10 @@
       <a href="/catalog/">Разделы</a>
       <a href="/#checkout">Оформление</a>
       <a href="/#myOrders">Мои заказы</a>
+      <a href="/delivery-and-returns/">Доставка и возврат</a>
       <a href="/privacy.html">Политика конфиденциальности</a>
     </nav>
-    <p>Контакты, условия доставки и реквизиты добавим после финального согласования.</p>
+    <p>ИП Григорьев Василий Владимирович · ИНН 21509198010011</p>
   </div>
 </footer>
   <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Нижняя навигация">
@@ -892,7 +1302,7 @@
   </a>
 </nav>
   <script>
-    const product = {"id": "prd_96fe6b1c7d9c", "code": "prd_96fe6b1c7d9c", "title": "Johnson's Baby Oil детское масло 200 мл", "description": "Johnson's Baby Oil — детское масло для ухода за кожей после купания. Оно помогает удерживать влагу и смягчать кожу, особенно при нанесении тонким слоем на ещё влажную кожу. Объём 200 мл; предназначено только для наружного применения, храните вдали от детей во избежание случайного вдыхания или проглатывания.", "price": 295, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Johnson%27s%20Baby%20Oil%20%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%20200%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20295%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/johnson-s-baby-oil-detskoe-maslo-200-ml-1c7d9c/"};
+    const product = {"id": "prd_96fe6b1c7d9c", "code": "780", "title": "Johnson's Baby Oil детское масло 200 мл", "description": "Johnson's Baby Oil — детское масло для ухода за кожей после купания. Оно помогает удерживать влагу и смягчать кожу, особенно при нанесении тонким слоем на ещё влажную кожу. Объём 200 мл; предназначено только для наружного применения, храните вдали от детей во избежание случайного вдыхания или проглатывания.", "price": 295, "inStock": true, "whatsapp": "https://wa.me/996706771103?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%3A%20Johnson%27s%20Baby%20Oil%20%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%20200%20%D0%BC%D0%BB%2C%20%D1%86%D0%B5%D0%BD%D0%B0%20295%20%D1%81%D0%BE%D0%BC.", "url": "https://globalmarket.kg/product/johnson-s-baby-oil-detskoe-maslo-200-ml-1c7d9c/"};
     const cartKey = "globalMarketCartDraft";
     const favoritesKey = "globalMarketFavorites";
     const recentlyViewedKey = "globalMarketRecentlyViewed";
@@ -1038,6 +1448,7 @@
           const params = new URLSearchParams();
           if (item.collection) params.set("collection", item.collection);
           if (item.category) params.set("category", item.category);
+          if (item.section) params.set("section", item.section);
           if (item.audience) params.set("audience", item.audience);
           if (item.query) params.set("query", item.query);
           if (item.label) params.set("label", item.label);
@@ -1232,14 +1643,58 @@
       window.location.href = event.currentTarget.href;
     });
 
-    document.querySelectorAll("[data-gallery-image]").forEach((button) => {
-      button.addEventListener("click", () => {
-        const image = button.dataset.galleryImage;
-        const mainImage = document.querySelector("[data-main-image]");
-        if (mainImage && image) mainImage.src = image;
-        document.querySelectorAll("[data-gallery-image]").forEach((item) => item.classList.toggle("active", item === button));
+    const galleryButtons = [...document.querySelectorAll("[data-gallery-image]")];
+    const mainImage = document.querySelector("[data-main-image]");
+    let activeGalleryIndex = Math.max(0, galleryButtons.findIndex((item) => item.classList.contains("active")));
+
+    function selectGalleryImage(index) {
+      if (!mainImage || !galleryButtons.length) return;
+      const nextIndex = Math.max(0, Math.min(index, galleryButtons.length - 1));
+      const button = galleryButtons[nextIndex];
+      const image = button?.dataset.galleryImage;
+      if (!image) return;
+      activeGalleryIndex = nextIndex;
+      mainImage.src = image;
+      mainImage.alt = button.querySelector("img")?.alt || product.title;
+      mainImage.setAttribute("aria-label", `Фото ${nextIndex + 1} из ${galleryButtons.length}`);
+      galleryButtons.forEach((item, itemIndex) => {
+        const active = itemIndex === nextIndex;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-current", active ? "true" : "false");
       });
+      button.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+
+    galleryButtons.forEach((button, index) => {
+      button.addEventListener("click", () => selectGalleryImage(index));
+      button.setAttribute("aria-current", index === activeGalleryIndex ? "true" : "false");
     });
+
+    if (mainImage && galleryButtons.length > 1) {
+      let swipeStart = null;
+      mainImage.tabIndex = 0;
+      mainImage.setAttribute("aria-label", `Фото ${activeGalleryIndex + 1} из ${galleryButtons.length}`);
+      mainImage.addEventListener("dragstart", (event) => event.preventDefault());
+      mainImage.addEventListener("pointerdown", (event) => {
+        if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
+        swipeStart = { pointerId: event.pointerId, x: event.clientX, y: event.clientY };
+        mainImage.setPointerCapture?.(event.pointerId);
+      });
+      mainImage.addEventListener("pointerup", (event) => {
+        if (!swipeStart || swipeStart.pointerId !== event.pointerId) return;
+        const deltaX = event.clientX - swipeStart.x;
+        const deltaY = event.clientY - swipeStart.y;
+        swipeStart = null;
+        if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.2) return;
+        selectGalleryImage(activeGalleryIndex + (deltaX < 0 ? 1 : -1));
+      });
+      mainImage.addEventListener("pointercancel", () => { swipeStart = null; });
+      mainImage.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        selectGalleryImage(activeGalleryIndex + (event.key === "ArrowRight" ? 1 : -1));
+      });
+    }
 
     updateFavoriteButton();
     syncGridFavoriteButtons();
@@ -1268,5 +1723,15 @@
       window.requestAnimationFrame(updateSmartHeader);
     }, { passive: true });
   </script>
+  <!-- BEGIN shared-analytics-consent -->
+<aside class="gmk-consent" data-nosnippet aria-label="Настройки аналитики">
+  <strong>Аналитика и рекламные измерения</strong>
+  <p>Анонимные события магазина отправляются в Google только с вашего согласия. Телефон, SMS-код, имя, адрес и текст заказа не передаются. <a href="/privacy.html">Подробнее</a></p>
+  <div class="gmk-consent-actions">
+    <button type="button" data-consent="granted">Разрешить</button>
+    <button type="button" data-consent="denied">Только необходимые</button>
+  </div>
+</aside>
+<!-- END shared-analytics-consent -->
 </body>
 </html>

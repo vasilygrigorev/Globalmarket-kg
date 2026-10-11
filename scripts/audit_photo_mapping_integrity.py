@@ -19,6 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG_PATH = ROOT / "data" / "public-catalog.json"
+PAGE_CATALOG_PATH = ROOT / "data" / "page-catalog.json"
 DB_PATH = ROOT / "data" / "store.db"
 MANUAL_PRODUCTS_PATH = ROOT / "data" / "manual_products.json"
 OVERRIDES_PATH = ROOT / "data" / "product_overrides.json"
@@ -53,6 +54,11 @@ def override_entries():
 
 def public_products():
     return load_json(CATALOG_PATH, {}).get("products", [])
+
+
+def retained_products():
+    """All known products, including zero-stock rows kept for future restock."""
+    return load_json(PAGE_CATALOG_PATH, {}).get("products", [])
 
 
 def manual_product_ids():
@@ -129,7 +135,8 @@ def best_candidates(override, products, limit=3):
 def audit():
     products = public_products()
     public_ids = {product.get("id") for product in products}
-    active_ids = db_product_ids() | manual_product_ids() | public_ids
+    retained_ids = {product.get("id") for product in retained_products() if product.get("id")}
+    known_ids = db_product_ids() | manual_product_ids() | public_ids | retained_ids
     allowlist = load_json(ALLOWLIST_PATH, {})
     allowed_hidden = set((allowlist.get("known_hidden_photo_overrides") or {}).keys())
     allowed_external = set((allowlist.get("known_external_override_ids") or {}).keys())
@@ -151,16 +158,21 @@ def audit():
             "candidates": [],
         }
 
-        if product_id not in active_ids:
+        if product_id not in known_ids:
             missing_photo_overrides.append(entry)
             if product_id not in allowed_external:
                 unexpected_missing.append(entry)
             continue
 
         if product_id not in public_ids:
-            entry["candidates"] = best_candidates(override, products)
             hidden_photo_overrides.append(entry)
-            if product_id not in allowed_hidden and entry["candidates"]:
+            # A row retained in page-catalog is intentionally out of stock. Its
+            # photo is durable and will return with the same identity after the
+            # next 1C receipt, so it is not a lost mapping. Candidate matching is
+            # only for identities that disappeared from the retained history.
+            if product_id not in retained_ids:
+                entry["candidates"] = best_candidates(override, products)
+            if product_id not in retained_ids and product_id not in allowed_hidden and entry["candidates"]:
                 suspected_lost_mappings.append(entry)
 
     return {

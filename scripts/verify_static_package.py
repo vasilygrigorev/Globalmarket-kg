@@ -20,6 +20,7 @@ REQUIRED_ROOT_FILES = {
     "404.html",
     "site.webmanifest",
     "_headers",
+    "_routes.json",
     "sitemap.xml",
     "robots.txt",
 }
@@ -28,6 +29,8 @@ REQUIRED_ASSET_FILES = {
     "assets/brand/icon-512.png",
     "assets/brand/globalmarket-tech-orb-tight.jpg",
     "assets/brand/globalmarket-tech-orb.jpg",
+    "assets/google-consent.css",
+    "assets/google-consent.js",
 }
 REQUIRED_DATA_FILES = {
     "public-catalog.json",
@@ -100,7 +103,7 @@ def verify_required_files(package, errors):
     for rel in sorted(REQUIRED_ASSET_FILES):
         if not (package / rel).is_file():
             fail(errors, f"Missing required asset: {rel}")
-    for dirname in ("assets", "product", "catalog", "category", "collection", "brand"):
+    for dirname in ("assets", "product", "catalog", "category", "collection", "brand", "delivery-and-returns"):
         if not (package / dirname).is_dir():
             fail(errors, f"Missing directory: {dirname}")
 
@@ -205,7 +208,7 @@ def verify_sitemap(package, catalog, errors):
         + sorted((package / "collection").glob("*/index.html"))
         + sorted((package / "brand").glob("*/index.html"))
     )
-    expected_count = len(product_pages) + len(landing_pages) + 3
+    expected_count = len(product_pages) + len(landing_pages) + 4
     if len(urls) != expected_count:
         fail(errors, f"sitemap.xml URL count mismatch: {len(urls)} != {expected_count}")
     product_ids_with_pages = {

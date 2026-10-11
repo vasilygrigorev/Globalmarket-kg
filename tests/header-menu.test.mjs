@@ -20,31 +20,32 @@ const indexHtml = read("index.html");
 const productGen = read("scripts/generate_product_pages.py");
 
 // Menu items that point at a product section (have a target), excluding plain links.
-const menuSections = (config.menu || []).filter((m) => m.category || m.audience || m.collection || m.query);
+const menuSections = (config.menu || []).filter((m) => m.section);
 
 // Quick-category tiles from app.js.
 const tileBlock = appJs.match(/let quickCategoryCards = \[([\s\S]*?)\];/)[1];
 const tiles = tileBlock.split("\n").filter((l) => l.includes("{")).map((l) => ({
   title: (l.match(/title:\s*"([^"]+)"/) || [])[1],
+  section: (l.match(/section:\s*"([^"]+)"/) || [])[1],
   category: (l.match(/category:\s*"([^"]+)"/) || [])[1],
   audience: (l.match(/audience:\s*"([^"]+)"/) || [])[1],
   collection: (l.match(/collection:\s*"([^"]+)"/) || [])[1],
   query: (l.match(/query:\s*"([^"]+)"/) || [])[1],
 }));
 
-test("menu has 11 product sections, each with a target", () => {
-  assert.equal(menuSections.length, 11);
+test("menu has the 10 approved primary product sections", () => {
+  assert.equal(menuSections.length, 10);
   for (const m of menuSections) {
     assert.ok(m.label, "menu section missing label");
-    assert.ok(m.category || m.audience || m.collection || m.query, `menu "${m.label}" has no target`);
+    assert.ok(m.section, `menu "${m.label}" has no section target`);
   }
 });
 
-test("quick-category strip has 11 tiles, each with a target", () => {
-  assert.equal(tiles.length, 11);
+test("quick-category strip has 10 tiles, each with a target", () => {
+  assert.equal(tiles.length, 10);
   for (const t of tiles) {
     assert.ok(t.title, "tile missing title");
-    assert.ok(t.category || t.audience || t.collection || t.query, `tile "${t.title}" has no target`);
+    assert.ok(t.section, `tile "${t.title}" has no section target`);
   }
 });
 
@@ -64,4 +65,11 @@ test("product pages read the menu from data/site-config.json (no per-page edits)
   assert.match(productGen, /\/data\/site-config\.json/);
   assert.match(productGen, /config\.menu/);
   assert.match(productGen, /#categoryMenu/);
+  assert.match(productGen, /if \(item\.section\) params\.set\("section", item\.section\)/);
+});
+
+test("supplemental Детское and Европа links remain available without duplicating the primary rail", () => {
+  const supplemental = new Map((config.menu || []).filter((item) => item.href).map((item) => [item.label, item.href]));
+  assert.match(supplemental.get("Детское") || "", /audience=kids/);
+  assert.equal(supplemental.get("Европа"), "/collection/europe/");
 });

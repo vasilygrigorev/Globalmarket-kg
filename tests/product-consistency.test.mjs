@@ -15,34 +15,48 @@ const read = (rel) => readFileSync(join(ROOT, rel), "utf8");
 
 const pages = JSON.parse(read("data/product-pages.json")).pages || [];
 const products = JSON.parse(read("data/public-catalog.json")).products || [];
-const byId = new Map(products.map((p) => [p.id, p]));
+const pageProducts = JSON.parse(read("data/page-catalog.json")).products || [];
+const publicById = new Map(products.map((p) => [p.id, p]));
+const pageById = new Map(pageProducts.map((p) => [p.id, p]));
 const firstImage = (p) => p.image || (p.galleryImages || [])[0] || "";
 const samePath = (a, b) => String(a || "").replace(/^\/+/, "") === String(b || "").replace(/^\/+/, "");
 
-test("product-pages manifest matches the catalog (unified data)", () => {
+test("product-pages manifest matches the retained page catalog (unified data)", () => {
   const bad = [];
   for (const e of pages) {
-    const p = byId.get(e.id);
-    if (!p) { bad.push(`${e.id}: not in catalog`); continue; }
+    const p = pageById.get(e.id);
+    if (!p) { bad.push(`${e.id}: not in page catalog`); continue; }
     if (e.title !== p.title) bad.push(`${e.id}: title`);
     if ((e.brand || "") !== (p.brand || "")) bad.push(`${e.id}: brand`);
     if (Number(e.retailPriceKgs) !== Number(p.retailPriceKgs)) bad.push(`${e.id}: price`);
-    if (!samePath(e.image, firstImage(p))) bad.push(`${e.id}: image`);
+    const sourceImage = firstImage(p);
+    if (sourceImage) {
+      if (!samePath(e.image, sourceImage) || Number(e.imageCount) < 1) bad.push(`${e.id}: image`);
+    } else {
+      const isApprovedPlaceholder = Number(e.imageCount) === 0
+        && /^\/?assets\/placeholders\/[a-z0-9-]+\.svg$/i.test(e.image || "");
+      if (!isApprovedPlaceholder) bad.push(`${e.id}: placeholder image`);
+    }
   }
   assert.deepEqual(bad, [], `manifest/catalog mismatches: ${bad.slice(0, 6).join(", ")}`);
 });
 
 test("Clear Legend CR7 publishes the stocked 400 ml SKU, never the unavailable 600 ml SKU", () => {
-  const stocked = byId.get("prd_70c1f5d616a6");
+  const stocked = publicById.get("prd_70c1f5d616a6");
   assert.ok(stocked, "400 ml Clear Legend CR7 is missing");
   assert.match(stocked.title, /400 мл/);
   assert.ok(firstImage(stocked), "400 ml Clear Legend CR7 has no product photo");
-  assert.equal(byId.has("prd_8d15b250f536"), false, "unavailable 600 ml SKU is public");
+  assert.equal(publicById.has("prd_8d15b250f536"), false, "unavailable 600 ml SKU is public");
 
   const oldSlug = "clear-men-legend-by-cr7-shampun-600-ml-50f536";
-  const newSlug = "clear-men-legend-by-cr7-shampun-protiv-perhoti-400-ml-d616a6";
-  assert.equal(existsSync(join(ROOT, "product", oldSlug, "index.html")), false);
-  assert.match(read("_redirects"), new RegExp(`/product/${oldSlug}/ /product/${newSlug}/ 301`));
+  const retained = pageById.get("prd_8d15b250f536");
+  assert.ok(retained, "the 600 ml historical card was deleted");
+  assert.equal(retained.inStock, false);
+  assert.equal(existsSync(join(ROOT, "product", oldSlug, "index.html")), true, "the historical URL was lost");
+  const html = read(`product/${oldSlug}/index.html`);
+  assert.match(html, /Сейчас нет в наличии/);
+  assert.match(html, /https:\/\/schema\.org\/OutOfStock/);
+  assert.doesNotMatch(read("_redirects"), new RegExp(`^/product/${oldSlug}/\\s`, "m"), "the retained page is shadowed by a redirect");
 });
 
 test("each generated product page reflects the catalog price", () => {

@@ -1,5 +1,5 @@
 {
-  "count": 39,
+  "count": 61,
   "pages": [
     {
       "type": "category",
@@ -7,7 +7,7 @@
       "title": "Стирка и уход за бельем",
       "path": "/category/laundry/",
       "url": "https://globalmarket.kg/category/laundry/",
-      "count": 53,
+      "count": 105,
       "seoTerms": [
         "порошок",
         "стиральный порошок",
@@ -17,7 +17,8 @@
         "средство для стирки",
         "стиральная машина"
       ],
-      "shown": 28
+      "shown": 36,
+      "retainedLegacy": false
     },
     {
       "type": "category",
@@ -25,7 +26,7 @@
       "title": "Уборка и чистота",
       "path": "/category/home_cleaning/",
       "url": "https://globalmarket.kg/category/home_cleaning/",
-      "count": 7,
+      "count": 85,
       "seoTerms": [
         "средство для стекол",
         "окна",
@@ -37,7 +38,8 @@
         "таблетки для посудомойки",
         "Fairy"
       ],
-      "shown": 2
+      "shown": 36,
+      "retainedLegacy": false
     },
     {
       "type": "category",
@@ -45,11 +47,12 @@
       "title": "Уход за волосами",
       "path": "/category/hair/",
       "url": "https://globalmarket.kg/category/hair/",
-      "count": 97,
+      "count": 90,
       "seoTerms": [
         "шампунь"
       ],
-      "shown": 30
+      "shown": 36,
+      "retainedLegacy": false
     },
     {
       "type": "category",
@@ -57,7 +60,7 @@
       "title": "Уход за телом",
       "path": "/category/body/",
       "url": "https://globalmarket.kg/category/body/",
-      "count": 81,
+      "count": 157,
       "seoTerms": [
         "мыло",
         "жидкое мыло",
@@ -69,7 +72,8 @@
         "солнцезащитный спрей",
         "крем для тела"
       ],
-      "shown": 15
+      "shown": 36,
+      "retainedLegacy": false
     },
     {
       "type": "category",
@@ -82,7 +86,8 @@
         "зубная паста",
         "зубная щетка"
       ],
-      "shown": 11
+      "shown": 23,
+      "retainedLegacy": false
     },
     {
       "type": "category",
@@ -90,7 +95,7 @@
       "title": "Дезодоранты",
       "path": "/category/deodorants/",
       "url": "https://globalmarket.kg/category/deodorants/",
-      "count": 73,
+      "count": 66,
       "seoTerms": [
         "дезодорант",
         "дезик",
@@ -99,7 +104,8 @@
         "спрей",
         "гель-дезодорант"
       ],
-      "shown": 24
+      "shown": 36,
+      "retainedLegacy": false
     },
     {
       "type": "category",
@@ -121,7 +127,8 @@
         "пена для бритья",
         "гель для бритья"
       ],
-      "shown": 26
+      "shown": 36,
+      "retainedLegacy": false
     },
     {
       "type": "category",
@@ -134,7 +141,8 @@
         "духи на распив",
         "оригинальные духи"
       ],
-      "shown": 22
+      "shown": 22,
+      "retainedLegacy": false
     },
     {
       "type": "category",
@@ -144,7 +152,8 @@
       "url": "https://globalmarket.kg/category/food/",
       "count": 6,
       "seoTerms": [],
-      "shown": 0
+      "shown": 0,
+      "retainedLegacy": false
     },
     {
       "type": "category",
@@ -152,14 +161,15 @@
       "title": "Разное",
       "path": "/category/other/",
       "url": "https://globalmarket.kg/category/other/",
-      "count": 75,
+      "count": 87,
       "seoTerms": [
         "мыло",
         "жидкое мыло",
         "мыло для рук",
         "хозяйственное мыло"
       ],
-      "shown": 11
+      "shown": 28,
+      "retainedLegacy": false
     },
     {
       "type": "collection",
@@ -167,7 +177,7 @@
       "title": "Европа",
       "path": "/collection/europe/",
       "url": "https://globalmarket.kg/collection/europe/",
-      "count": 32,
+      "count": 165,
       "seoTerms": [
         "Европа",
         "Германия",
@@ -175,7 +185,23 @@
         "Dalli",
         "Dash"
       ],
-      "shown": 17
+      "shown": 36,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "felce-azzurra",
+      "title": "Felce Azzurra",
+      "path": "/brand/felce-azzurra/",
+      "url": "https://globalmarket.kg/brand/felce-azzurra/",
+      "count": 63,
+      "seoTerms": [
+        "Felce Azzurra",
+        "товары Felce Azzurra",
+        "Felce Azzurra купить Бишкек"
+      ],
+      "shown": 36,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -183,27 +209,14 @@
       "title": "Concord",
       "path": "/brand/concord/",
       "url": "https://globalmarket.kg/brand/concord/",
-      "count": 44,
+      "count": 40,
       "seoTerms": [
         "Concord",
         "товары Concord",
         "Concord купить Бишкек"
       ],
-      "shown": 4
-    },
-    {
-      "type": "brand",
-      "slug": "dove",
-      "title": "Dove",
-      "path": "/brand/dove/",
-      "url": "https://globalmarket.kg/brand/dove/",
-      "count": 39,
-      "seoTerms": [
-        "Dove",
-        "товары Dove",
-        "Dove купить Бишкек"
-      ],
-      "shown": 14
+      "shown": 20,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -211,97 +224,14 @@
       "title": "Gillette",
       "path": "/brand/gillette/",
       "url": "https://globalmarket.kg/brand/gillette/",
-      "count": 33,
+      "count": 35,
       "seoTerms": [
         "Gillette",
         "товары Gillette",
         "Gillette купить Бишкек"
       ],
-      "shown": 14
-    },
-    {
-      "type": "brand",
-      "slug": "axe",
-      "title": "AXE",
-      "path": "/brand/axe/",
-      "url": "https://globalmarket.kg/brand/axe/",
-      "count": 16,
-      "seoTerms": [
-        "AXE",
-        "товары AXE",
-        "AXE купить Бишкек"
-      ],
-      "shown": 6
-    },
-    {
-      "type": "brand",
-      "slug": "colgate",
-      "title": "Colgate",
-      "path": "/brand/colgate/",
-      "url": "https://globalmarket.kg/brand/colgate/",
-      "count": 16,
-      "seoTerms": [
-        "Colgate",
-        "товары Colgate",
-        "Colgate купить Бишкек"
-      ],
-      "shown": 11
-    },
-    {
-      "type": "brand",
-      "slug": "pantene",
-      "title": "Pantene",
-      "path": "/brand/pantene/",
-      "url": "https://globalmarket.kg/brand/pantene/",
-      "count": 15,
-      "seoTerms": [
-        "Pantene",
-        "товары Pantene",
-        "Pantene купить Бишкек"
-      ],
-      "shown": 8
-    },
-    {
-      "type": "brand",
-      "slug": "persil",
-      "title": "Persil",
-      "path": "/brand/persil/",
-      "url": "https://globalmarket.kg/brand/persil/",
-      "count": 15,
-      "seoTerms": [
-        "Persil",
-        "товары Persil",
-        "Persil купить Бишкек"
-      ],
-      "shown": 10
-    },
-    {
-      "type": "brand",
-      "slug": "rexona",
-      "title": "Rexona",
-      "path": "/brand/rexona/",
-      "url": "https://globalmarket.kg/brand/rexona/",
-      "count": 14,
-      "seoTerms": [
-        "Rexona",
-        "товары Rexona",
-        "Rexona купить Бишкек"
-      ],
-      "shown": 5
-    },
-    {
-      "type": "brand",
-      "slug": "clear",
-      "title": "Clear",
-      "path": "/brand/clear/",
-      "url": "https://globalmarket.kg/brand/clear/",
-      "count": 12,
-      "seoTerms": [
-        "Clear",
-        "товары Clear",
-        "Clear купить Бишкек"
-      ],
-      "shown": 6
+      "shown": 34,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -309,13 +239,44 @@
       "title": "Dalli",
       "path": "/brand/dalli/",
       "url": "https://globalmarket.kg/brand/dalli/",
-      "count": 12,
+      "count": 28,
       "seoTerms": [
         "Dalli",
         "товары Dalli",
         "Dalli купить Бишкек"
       ],
-      "shown": 9
+      "shown": 23,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "pantene",
+      "title": "Pantene",
+      "path": "/brand/pantene/",
+      "url": "https://globalmarket.kg/brand/pantene/",
+      "count": 28,
+      "seoTerms": [
+        "Pantene",
+        "товары Pantene",
+        "Pantene купить Бишкек"
+      ],
+      "shown": 28,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "the-pink-stuff",
+      "title": "The Pink Stuff",
+      "path": "/brand/the-pink-stuff/",
+      "url": "https://globalmarket.kg/brand/the-pink-stuff/",
+      "count": 28,
+      "seoTerms": [
+        "The Pink Stuff",
+        "товары The Pink Stuff",
+        "The Pink Stuff купить Бишкек"
+      ],
+      "shown": 28,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -323,69 +284,59 @@
       "title": "Ariel",
       "path": "/brand/ariel/",
       "url": "https://globalmarket.kg/brand/ariel/",
-      "count": 10,
+      "count": 24,
       "seoTerms": [
         "Ariel",
         "товары Ariel",
         "Ariel купить Бишкек"
       ],
-      "shown": 3
+      "shown": 22,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
-      "slug": "lenor",
-      "title": "Lenor",
-      "path": "/brand/lenor/",
-      "url": "https://globalmarket.kg/brand/lenor/",
-      "count": 10,
+      "slug": "dr-beckmann",
+      "title": "Dr. Beckmann",
+      "path": "/brand/dr-beckmann/",
+      "url": "https://globalmarket.kg/brand/dr-beckmann/",
+      "count": 24,
       "seoTerms": [
-        "Lenor",
-        "товары Lenor",
-        "Lenor купить Бишкек"
+        "Dr. Beckmann",
+        "товары Dr. Beckmann",
+        "Dr. Beckmann купить Бишкек"
       ],
-      "shown": 8
+      "shown": 24,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
-      "slug": "bic",
-      "title": "BIC",
-      "path": "/brand/bic/",
-      "url": "https://globalmarket.kg/brand/bic/",
-      "count": 8,
+      "slug": "dove",
+      "title": "Dove",
+      "path": "/brand/dove/",
+      "url": "https://globalmarket.kg/brand/dove/",
+      "count": 23,
       "seoTerms": [
-        "BIC",
-        "товары BIC",
-        "BIC купить Бишкек"
+        "Dove",
+        "товары Dove",
+        "Dove купить Бишкек"
       ],
-      "shown": 7
+      "shown": 19,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
-      "slug": "dash",
-      "title": "Dash",
-      "path": "/brand/dash/",
-      "url": "https://globalmarket.kg/brand/dash/",
-      "count": 8,
+      "slug": "axe",
+      "title": "AXE",
+      "path": "/brand/axe/",
+      "url": "https://globalmarket.kg/brand/axe/",
+      "count": 22,
       "seoTerms": [
-        "Dash",
-        "товары Dash",
-        "Dash купить Бишкек"
+        "AXE",
+        "товары AXE",
+        "AXE купить Бишкек"
       ],
-      "shown": 8
-    },
-    {
-      "type": "brand",
-      "slug": "gillette-venus",
-      "title": "Gillette Venus",
-      "path": "/brand/gillette-venus/",
-      "url": "https://globalmarket.kg/brand/gillette-venus/",
-      "count": 8,
-      "seoTerms": [
-        "Gillette Venus",
-        "товары Gillette Venus",
-        "Gillette Venus купить Бишкек"
-      ],
-      "shown": 7
+      "shown": 19,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -393,13 +344,164 @@
       "title": "Head & Shoulders",
       "path": "/brand/head-shoulders/",
       "url": "https://globalmarket.kg/brand/head-shoulders/",
-      "count": 8,
+      "count": 22,
       "seoTerms": [
         "Head & Shoulders",
         "товары Head & Shoulders",
         "Head & Shoulders купить Бишкек"
       ],
-      "shown": 7
+      "shown": 22,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "febreze",
+      "title": "Febreze",
+      "path": "/brand/febreze/",
+      "url": "https://globalmarket.kg/brand/febreze/",
+      "count": 21,
+      "seoTerms": [
+        "Febreze",
+        "товары Febreze",
+        "Febreze купить Бишкек"
+      ],
+      "shown": 14,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "dash",
+      "title": "Dash",
+      "path": "/brand/dash/",
+      "url": "https://globalmarket.kg/brand/dash/",
+      "count": 19,
+      "seoTerms": [
+        "Dash",
+        "товары Dash",
+        "Dash купить Бишкек"
+      ],
+      "shown": 17,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "colgate",
+      "title": "Colgate",
+      "path": "/brand/colgate/",
+      "url": "https://globalmarket.kg/brand/colgate/",
+      "count": 18,
+      "seoTerms": [
+        "Colgate",
+        "товары Colgate",
+        "Colgate купить Бишкек"
+      ],
+      "shown": 17,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "kamill",
+      "title": "Kamill",
+      "path": "/brand/kamill/",
+      "url": "https://globalmarket.kg/brand/kamill/",
+      "count": 17,
+      "seoTerms": [
+        "Kamill",
+        "товары Kamill",
+        "Kamill купить Бишкек"
+      ],
+      "shown": 15,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "rexona",
+      "title": "Rexona",
+      "path": "/brand/rexona/",
+      "url": "https://globalmarket.kg/brand/rexona/",
+      "count": 17,
+      "seoTerms": [
+        "Rexona",
+        "товары Rexona",
+        "Rexona купить Бишкек"
+      ],
+      "shown": 14,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "glysolid",
+      "title": "Glysolid",
+      "path": "/brand/glysolid/",
+      "url": "https://globalmarket.kg/brand/glysolid/",
+      "count": 14,
+      "seoTerms": [
+        "Glysolid",
+        "товары Glysolid",
+        "Glysolid купить Бишкек"
+      ],
+      "shown": 14,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "lenor",
+      "title": "Lenor",
+      "path": "/brand/lenor/",
+      "url": "https://globalmarket.kg/brand/lenor/",
+      "count": 13,
+      "seoTerms": [
+        "Lenor",
+        "товары Lenor",
+        "Lenor купить Бишкек"
+      ],
+      "shown": 6,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "gillette-venus",
+      "title": "Gillette Venus",
+      "path": "/brand/gillette-venus/",
+      "url": "https://globalmarket.kg/brand/gillette-venus/",
+      "count": 10,
+      "seoTerms": [
+        "Gillette Venus",
+        "товары Gillette Venus",
+        "Gillette Venus купить Бишкек"
+      ],
+      "shown": 9,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "fa",
+      "title": "Fa",
+      "path": "/brand/fa/",
+      "url": "https://globalmarket.kg/brand/fa/",
+      "count": 9,
+      "seoTerms": [
+        "Fa",
+        "товары Fa",
+        "Fa купить Бишкек"
+      ],
+      "shown": 7,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "finish",
+      "title": "Finish",
+      "path": "/brand/finish/",
+      "url": "https://globalmarket.kg/brand/finish/",
+      "count": 8,
+      "seoTerms": [
+        "Finish",
+        "товары Finish",
+        "Finish купить Бишкек"
+      ],
+      "shown": 8,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -413,7 +515,23 @@
         "товары Attar Collection",
         "Attar Collection купить Бишкек"
       ],
-      "shown": 7
+      "shown": 7,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "bic",
+      "title": "BIC",
+      "path": "/brand/bic/",
+      "url": "https://globalmarket.kg/brand/bic/",
+      "count": 7,
+      "seoTerms": [
+        "BIC",
+        "товары BIC",
+        "BIC купить Бишкек"
+      ],
+      "shown": 7,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -427,35 +545,83 @@
         "товары Herbal Essences",
         "Herbal Essences купить Бишкек"
       ],
-      "shown": 7
+      "shown": 7,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
-      "slug": "downy",
-      "title": "Downy",
-      "path": "/brand/downy/",
-      "url": "https://globalmarket.kg/brand/downy/",
+      "slug": "omo",
+      "title": "OMO",
+      "path": "/brand/omo/",
+      "url": "https://globalmarket.kg/brand/omo/",
+      "count": 7,
+      "seoTerms": [
+        "OMO",
+        "товары OMO",
+        "OMO купить Бишкек"
+      ],
+      "shown": 6,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "burti",
+      "title": "Burti",
+      "path": "/brand/burti/",
+      "url": "https://globalmarket.kg/brand/burti/",
       "count": 6,
       "seoTerms": [
-        "Downy",
-        "товары Downy",
-        "Downy купить Бишкек"
+        "Burti",
+        "товары Burti",
+        "Burti купить Бишкек"
       ],
-      "shown": 3
+      "shown": 6,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
-      "slug": "arm-hammer",
-      "title": "Arm & Hammer",
-      "path": "/brand/arm-hammer/",
-      "url": "https://globalmarket.kg/brand/arm-hammer/",
-      "count": 5,
+      "slug": "cussons",
+      "title": "Cussons",
+      "path": "/brand/cussons/",
+      "url": "https://globalmarket.kg/brand/cussons/",
+      "count": 6,
       "seoTerms": [
-        "Arm & Hammer",
-        "товары Arm & Hammer",
-        "Arm & Hammer купить Бишкек"
+        "Cussons",
+        "товары Cussons",
+        "Cussons купить Бишкек"
       ],
-      "shown": 5
+      "shown": 6,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "st-ives",
+      "title": "St. Ives",
+      "path": "/brand/st-ives/",
+      "url": "https://globalmarket.kg/brand/st-ives/",
+      "count": 6,
+      "seoTerms": [
+        "St. Ives",
+        "товары St. Ives",
+        "St. Ives купить Бишкек"
+      ],
+      "shown": 6,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "syoss",
+      "title": "Syoss",
+      "path": "/brand/syoss/",
+      "url": "https://globalmarket.kg/brand/syoss/",
+      "count": 6,
+      "seoTerms": [
+        "Syoss",
+        "товары Syoss",
+        "Syoss купить Бишкек"
+      ],
+      "shown": 6,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -469,21 +635,98 @@
         "товары Chanel",
         "Chanel купить Бишкек"
       ],
-      "shown": 5
+      "shown": 5,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
-      "slug": "comfort",
-      "title": "Comfort",
-      "path": "/brand/comfort/",
-      "url": "https://globalmarket.kg/brand/comfort/",
+      "slug": "lady-speed-stick",
+      "title": "Lady Speed Stick",
+      "path": "/brand/lady-speed-stick/",
+      "url": "https://globalmarket.kg/brand/lady-speed-stick/",
+      "count": 5,
+      "seoTerms": [
+        "Lady Speed Stick",
+        "товары Lady Speed Stick",
+        "Lady Speed Stick купить Бишкек"
+      ],
+      "shown": 5,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "persil",
+      "title": "Persil",
+      "path": "/brand/persil/",
+      "url": "https://globalmarket.kg/brand/persil/",
+      "count": 5,
+      "seoTerms": [
+        "Persil",
+        "товары Persil",
+        "Persil купить Бишкек"
+      ],
+      "shown": 4,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "air-wick",
+      "title": "Air Wick",
+      "path": "/brand/air-wick/",
+      "url": "https://globalmarket.kg/brand/air-wick/",
       "count": 4,
       "seoTerms": [
-        "Comfort",
-        "товары Comfort",
-        "Comfort купить Бишкек"
+        "Air Wick",
+        "товары Air Wick",
+        "Air Wick купить Бишкек"
       ],
-      "shown": 4
+      "shown": 4,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "crest",
+      "title": "Crest",
+      "path": "/brand/crest/",
+      "url": "https://globalmarket.kg/brand/crest/",
+      "count": 4,
+      "seoTerms": [
+        "Crest",
+        "товары Crest",
+        "Crest купить Бишкек"
+      ],
+      "shown": 3,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "lux",
+      "title": "LUX",
+      "path": "/brand/lux/",
+      "url": "https://globalmarket.kg/brand/lux/",
+      "count": 4,
+      "seoTerms": [
+        "LUX",
+        "товары LUX",
+        "LUX купить Бишкек"
+      ],
+      "shown": 4,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "old-spice",
+      "title": "Old Spice",
+      "path": "/brand/old-spice/",
+      "url": "https://globalmarket.kg/brand/old-spice/",
+      "count": 4,
+      "seoTerms": [
+        "Old Spice",
+        "товары Old Spice",
+        "Old Spice купить Бишкек"
+      ],
+      "shown": 4,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -497,21 +740,23 @@
         "товары Skin Doctor",
         "Skin Doctor купить Бишкек"
       ],
-      "shown": 4
+      "shown": 4,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
-      "slug": "tresemm",
-      "title": "TRESemmé",
-      "path": "/brand/tresemm/",
-      "url": "https://globalmarket.kg/brand/tresemm/",
+      "slug": "sunmed",
+      "title": "SunMed",
+      "path": "/brand/sunmed/",
+      "url": "https://globalmarket.kg/brand/sunmed/",
       "count": 4,
       "seoTerms": [
-        "TRESemmé",
-        "товары TRESemmé",
-        "TRESemmé купить Бишкек"
+        "SunMed",
+        "товары SunMed",
+        "SunMed купить Бишкек"
       ],
-      "shown": 4
+      "shown": 4,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -525,21 +770,53 @@
         "товары YC",
         "YC купить Бишкек"
       ],
-      "shown": 4
+      "shown": 4,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
-      "slug": "section",
-      "title": "Пластырь",
-      "path": "/brand/section/",
-      "url": "https://globalmarket.kg/brand/section/",
+      "slug": "cliff",
+      "title": "Cliff",
+      "path": "/brand/cliff/",
+      "url": "https://globalmarket.kg/brand/cliff/",
       "count": 3,
       "seoTerms": [
-        "Пластырь",
-        "товары Пластырь",
-        "Пластырь купить Бишкек"
+        "Cliff",
+        "товары Cliff",
+        "Cliff купить Бишкек"
       ],
-      "shown": 2
+      "shown": 3,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "tresemm",
+      "title": "TRESemmé",
+      "path": "/brand/tresemm/",
+      "url": "https://globalmarket.kg/brand/tresemm/",
+      "count": 3,
+      "seoTerms": [
+        "TRESemmé",
+        "товары TRESemmé",
+        "TRESemmé купить Бишкек"
+      ],
+      "shown": 3,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "alio",
+      "title": "Alio",
+      "path": "/brand/alio/",
+      "url": "https://globalmarket.kg/brand/alio/",
+      "count": 2,
+      "seoTerms": [
+        "Alio",
+        "товары Alio",
+        "Alio купить Бишкек"
+      ],
+      "shown": 2,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -553,7 +830,8 @@
         "товары Chloé",
         "Chloé купить Бишкек"
       ],
-      "shown": 2
+      "shown": 2,
+      "retainedLegacy": false
     },
     {
       "type": "brand",
@@ -567,7 +845,98 @@
         "товары Johnson's",
         "Johnson's купить Бишкек"
       ],
-      "shown": 2
+      "shown": 2,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "trisa",
+      "title": "TRISA",
+      "path": "/brand/trisa/",
+      "url": "https://globalmarket.kg/brand/trisa/",
+      "count": 2,
+      "seoTerms": [
+        "TRISA",
+        "товары TRISA",
+        "TRISA купить Бишкек"
+      ],
+      "shown": 2,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "section",
+      "title": "Пластырь",
+      "path": "/brand/section/",
+      "url": "https://globalmarket.kg/brand/section/",
+      "count": 2,
+      "seoTerms": [
+        "Пластырь",
+        "товары Пластырь",
+        "Пластырь купить Бишкек"
+      ],
+      "shown": 2,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "arm-hammer",
+      "title": "Arm & Hammer",
+      "path": "/brand/arm-hammer/",
+      "url": "https://globalmarket.kg/brand/arm-hammer/",
+      "count": 1,
+      "seoTerms": [
+        "Arm & Hammer",
+        "товары Arm & Hammer",
+        "Arm & Hammer купить Бишкек"
+      ],
+      "shown": 1,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
+      "slug": "clear",
+      "title": "Clear",
+      "path": "/brand/clear/",
+      "url": "https://globalmarket.kg/brand/clear/",
+      "count": 1,
+      "seoTerms": [
+        "Clear",
+        "товары Clear",
+        "Clear купить Бишкек"
+      ],
+      "shown": 1,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
+      "slug": "comfort",
+      "title": "Comfort",
+      "path": "/brand/comfort/",
+      "url": "https://globalmarket.kg/brand/comfort/",
+      "count": 0,
+      "seoTerms": [
+        "Comfort",
+        "товары Comfort",
+        "Comfort купить Бишкек"
+      ],
+      "shown": 0,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
+      "slug": "downy",
+      "title": "Downy",
+      "path": "/brand/downy/",
+      "url": "https://globalmarket.kg/brand/downy/",
+      "count": 0,
+      "seoTerms": [
+        "Downy",
+        "товары Downy",
+        "Downy купить Бишкек"
+      ],
+      "shown": 0,
+      "retainedLegacy": true
     }
   ]
 }

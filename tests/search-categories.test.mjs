@@ -52,10 +52,11 @@ test("synonyms target only real catalog categories/categoryIds/collections/brand
   assert.deepEqual(bad, [], `synonyms with broken targets: ${bad.join(", ")}`);
 });
 
-const menuSections = (config.menu || []).filter((m) => m.category || m.audience || m.collection || m.query);
+const menuSections = (config.menu || []).filter((m) => m.section);
 const tileBlock = appJs.match(/let quickCategoryCards = \[([\s\S]*?)\];/)[1];
 const tiles = tileBlock.split("\n").filter((l) => l.includes("{")).map((l) => ({
   title: (l.match(/title:\s*"([^"]+)"/) || [])[1],
+  section: (l.match(/section:\s*"([^"]+)"/) || [])[1],
   category: (l.match(/category:\s*"([^"]+)"/) || [])[1],
   audience: (l.match(/audience:\s*"([^"]+)"/) || [])[1],
   collection: (l.match(/collection:\s*"([^"]+)"/) || [])[1],
@@ -68,6 +69,7 @@ test("menu and category tiles do not diverge by name", () => {
 test("menu/tile category & collection targets exist in the catalog", () => {
   const bad = [];
   for (const m of [...menuSections, ...tiles]) {
+    if (m.section && !products.some((product) => (product.sectionIds || []).includes(m.section))) bad.push(`section:${m.section}`);
     if (m.category && !cats.has(m.category)) bad.push(`category:${m.category}`);
     if (m.audience && !audiences.has(m.audience)) bad.push(`audience:${m.audience}`);
     if (m.collection && !colls.has(m.collection)) bad.push(`collection:${m.collection}`);

@@ -26,6 +26,7 @@ function parseTiles() {
     tiles.push({
       title: grab("title"),
       image: grab("image"),
+      section: grab("section"),
       category: grab("category"),
       audience: grab("audience"),
       collection: grab("collection"),
@@ -40,14 +41,14 @@ const catalog = JSON.parse(read("data/public-catalog.json"));
 const products = catalog.products || [];
 const categories = new Set((catalog.products || []).map((p) => p.category).filter(Boolean));
 
-test("there are 11 category tiles", () => {
-  assert.equal(tiles.length, 11);
+test("there are 10 approved primary category tiles", () => {
+  assert.equal(tiles.length, 10);
 });
 
 test("every tile has a title and at least one target", () => {
   for (const t of tiles) {
     assert.ok(t.title, `tile missing title: ${JSON.stringify(t)}`);
-    assert.ok(t.category || t.audience || t.collection || t.query, `tile "${t.title}" has no target`);
+    assert.ok(t.section || t.category || t.audience || t.collection || t.query, `tile "${t.title}" has no target`);
   }
 });
 
@@ -64,25 +65,24 @@ test("every tile category is a real catalog category", () => {
 });
 
 test("home page cache-busts the current category assets", () => {
-  assert.match(indexHtml, /styles\.css\?v=20260803-category-cache-v4/);
-  assert.match(indexHtml, /home-category-rail-v4\.css\?v=20260803-category-cache-v4/);
-  assert.match(indexHtml, /app\.js\?v=20260803-category-icons-v3/);
-  assert.ok(tiles.every((tile) => tile.image.endsWith("?v=20260803-cutout-v3")));
-  assert.match(appJs, /currentCategoryIconByTitle\.get\(card\.title\) \|\| card\.image/);
+  assert.match(indexHtml, /styles\.css\?v=20261011-retail-recovery-v1/);
+  assert.match(indexHtml, /home-category-rail-v4\.css\?v=20261011-retail-recovery-v1/);
+  assert.match(indexHtml, /app\.js\?v=20261011-retail-recovery-v1/);
+  assert.ok(tiles.every((tile) => tile.image.endsWith("?v=20261011-retail-recovery-v1")));
   assert.match(appJs, /if \(event\.persisted\) window\.location\.reload\(\)/);
 });
 
-test("Детское uses the kids audience and excludes Dove deodorants", () => {
-  const tile = tiles.find((item) => item.title === "Детское");
-  assert.ok(tile, "Детское tile is missing");
-  assert.equal(tile.audience, "kids");
-  assert.equal(tile.category, undefined, "Детское must not map to the whole body-care category");
-
-  const kids = products.filter((product) => product.inStock !== false && product.audience === "kids");
-  assert.ok(kids.length > 0, "catalog has no in-stock kids products");
-  const doveDeodorants = kids.filter((product) => {
-    const text = `${product.brand || ""} ${product.title || ""} ${product.productType || ""}`;
-    return /dove/i.test(text) && /(дезод|deodor)/i.test(text);
-  });
-  assert.deepEqual(doveDeodorants, [], "Dove deodorants leaked into Детское");
+test("primary tiles use the approved storefront section order", () => {
+  assert.deepEqual(
+    tiles.map((tile) => [tile.title, tile.section]),
+    [
+      ["Стирка", "laundry"], ["Кухня", "kitchen"], ["Ванная", "bathroom"],
+      ["Тело", "body"], ["Кремы", "creams"], ["Бритьё", "shaving"],
+      ["Зубы", "oral"], ["Волосы", "hair"], ["Парфюм", "perfume"],
+      ["Дом и уют", "home"],
+    ],
+  );
+  for (const tile of tiles) {
+    assert.ok(products.some((product) => (product.sectionIds || []).includes(tile.section)), `${tile.title}: empty section`);
+  }
 });

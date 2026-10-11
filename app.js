@@ -2,7 +2,7 @@ let products = [];
 let latestStockDate = "";
 let catalogSettings = {
   default_registered_discount_percent: 3,
-  free_delivery_threshold_kgs: 10000,
+  free_delivery_threshold_kgs: 5000,
   manager_whatsapp: "+996706771103",
 };
 
@@ -15,6 +15,7 @@ const customerDraftStorageKey = "globalMarketCustomerDraft";
 
 const state = {
   category: "Все",
+  section: "",
   audience: "",
   audienceLabel: "",
   query: "",
@@ -112,6 +113,7 @@ let activeZoomImage = null;
 
 let recentlyViewedIds = loadRecentlyViewed();
 let favoriteIds = new Set(loadFavorites());
+const homeFeaturedRandomRanks = new Map();
 
 let siteConfig = {};
 let searchSynonymGroups = [];
@@ -127,56 +129,47 @@ let promoBanners = [
     href: "#catalog",
   },
   {
-    image: "assets/hero-promo-downy-dark.jpg",
-    alt: "Ополаскиватели Downy в темной синей прачечной",
-    eyebrow: "Downy",
-    title: "Свежесть для белья",
-    href: "#catalog",
-  },
-  {
-    image: "assets/hero-promo-clear-dark.jpg",
-    alt: "Шампуни Clear Men в темной синей ванной",
-    eyebrow: "Уход за волосами",
-    title: "Clear Men",
-    href: "#catalog",
-  },
-  {
-    image: "assets/hero-promo-dalli-autumn.jpg",
-    alt: "Средства Dalli на осеннем фоне",
-    eyebrow: "Dalli",
-    title: "Стирка для всей семьи",
-    href: "#catalog",
-  },
-  {
-    image: "assets/hero-promo-dash-green.jpg",
-    alt: "Средства Dash на зеленом тропическом фоне",
-    eyebrow: "Dash",
-    title: "Свежая стирка",
-    href: "#catalog",
-  },
-  {
     image: "assets/hero-promo-pink-stuff.jpg",
     alt: "Средства The Pink Stuff на розовом фоне",
     eyebrow: "The Pink Stuff",
     title: "Чистота и блеск",
-    href: "#catalog",
+    href: "/?query=The%20Pink%20Stuff&label=The%20Pink%20Stuff#catalog",
+  },
+  {
+    image: "assets/banners/hero-felce-azzurra-v1.webp",
+    alt: "Оригинальные товары Felce Azzurra для стирки и ухода",
+    eyebrow: "Felce Azzurra",
+    title: "Свежесть из Италии",
+    href: "/?collection=europe&query=Felce%20Azzurra&label=Felce%20Azzurra#catalog",
+  },
+  {
+    image: "assets/banners/hero-dalli-dash-v1.webp",
+    alt: "Средства Dalli и Dash для стирки",
+    eyebrow: "Dalli + Dash",
+    title: "Чистота для всей семьи",
+    href: "/?category=Стирка%20и%20уход%20за%20бельем&label=Dalli%20%2B%20Dash#catalog",
+  },
+  {
+    image: "assets/banners/hero-dr-beckmann-v1.webp",
+    alt: "Специализированные средства Dr. Beckmann для стирки и уборки",
+    eyebrow: "Dr. Beckmann",
+    title: "Эксперт по чистоте",
+    href: "/?category=Уборка%20и%20чистота&label=Dr.%20Beckmann#catalog",
   },
 ];
 
 let quickCategoryCards = [
-  { title: "Стирка", category: "Стирка и уход за бельем", image: "assets/category-icons/laundry-generic.png?v=20260803-cutout-v3" },
-  { title: "Детское", audience: "kids", image: "assets/category-icons/kids-generic.png?v=20260803-cutout-v3" },
-  { title: "Европа", collection: "europe", image: "assets/category-icons/europe-generic.png?v=20260803-cutout-v3" },
-  { title: "Бритье", category: "Бритье", image: "assets/category-icons/shaving-generic.png?v=20260803-cutout-v3" },
-  { title: "Дезодоранты", category: "Дезодоранты", image: "assets/category-icons/deodorants-generic.png?v=20260803-cutout-v3" },
-  { title: "Волосы", category: "Уход за волосами", image: "assets/category-icons/hair-generic.png?v=20260803-cutout-v3" },
-  { title: "Чистка", category: "Уборка и чистота", image: "assets/category-icons/cleaning-generic.png?v=20260803-cutout-v3" },
-  { title: "Парфюм", category: "Парфюм 5 мл", image: "assets/category-icons/perfume-generic.png?v=20260803-cutout-v3" },
-  { title: "Кремы", category: "Уход за телом", query: "крем", image: "assets/category-icons/creams-generic.png?v=20260803-cutout-v3" },
-  { title: "Тело", category: "Уход за телом", image: "assets/category-icons/body-generic.png?v=20260803-cutout-v3" },
-  { title: "Зубы", category: "Зубная гигиена", image: "assets/category-icons/oral-generic.png?v=20260803-cutout-v3" },
+  { title: "Стирка", section: "laundry", image: "assets/category-icons/laundry-generic.png?v=20261011-retail-recovery-v1" },
+  { title: "Кухня", section: "kitchen", image: "assets/category-icons/cleaning-generic.png?v=20261011-retail-recovery-v1" },
+  { title: "Ванная", section: "bathroom", image: "assets/category-icons/body-generic.png?v=20261011-retail-recovery-v1" },
+  { title: "Тело", section: "body", image: "assets/category-icons/deodorants-generic.png?v=20261011-retail-recovery-v1" },
+  { title: "Кремы", section: "creams", image: "assets/category-icons/creams-generic.png?v=20261011-retail-recovery-v1" },
+  { title: "Бритьё", section: "shaving", image: "assets/category-icons/shaving-generic.png?v=20261011-retail-recovery-v1" },
+  { title: "Зубы", section: "oral", image: "assets/category-icons/oral-generic.png?v=20261011-retail-recovery-v1" },
+  { title: "Волосы", section: "hair", image: "assets/category-icons/hair-generic.png?v=20261011-retail-recovery-v1" },
+  { title: "Парфюм", section: "perfume", image: "assets/category-icons/perfume-generic.png?v=20261011-retail-recovery-v1" },
+  { title: "Дом и уют", section: "home", image: "assets/category-icons/europe-generic.png?v=20261011-retail-recovery-v1" },
 ];
-const currentCategoryIconByTitle = new Map(quickCategoryCards.map((card) => [card.title, card.image]));
 
 window.addEventListener("pageshow", (event) => {
   if (event.persisted) window.location.reload();
@@ -279,10 +272,7 @@ async function loadSiteConfig() {
       if (activeBanners.length) promoBanners = activeBanners;
     }
     if (Array.isArray(siteConfig.quickCategories) && siteConfig.quickCategories.length) {
-      quickCategoryCards = siteConfig.quickCategories.map((card) => ({
-        ...card,
-        image: currentCategoryIconByTitle.get(card.title) || card.image,
-      }));
+      quickCategoryCards = siteConfig.quickCategories;
     }
   } catch (error) {
     console.warn("Не удалось загрузить настройки сайта", error);
@@ -339,7 +329,51 @@ function productPrice(product) {
 }
 
 function hasProductImage(product) {
-  return Boolean(product.image || product.galleryImages?.length);
+  const isRealProductImage = (path) => typeof path === "string"
+    && path.trim() !== ""
+    && !path.includes("assets/placeholders/");
+  return isRealProductImage(product.image)
+    || (product.galleryImages || []).some(isRealProductImage);
+}
+
+const supplementalSectionIdsBySourceCode = {
+  "3067": ["kitchen", "bathroom"],
+  "3068": ["kitchen", "bathroom"],
+  "3069": ["kitchen", "bathroom"],
+  "3070": ["kitchen", "bathroom"],
+  "3071": ["bathroom"],
+  "3072": ["bathroom"],
+  "3073": ["bathroom"],
+  "3074": ["kitchen"],
+  "3075": ["kitchen", "bathroom"],
+  "3076": ["bathroom"],
+  "3084": ["kitchen", "bathroom"],
+  "3085": ["kitchen", "bathroom"],
+  "3087": ["kitchen", "bathroom"],
+  "3088": ["kitchen", "bathroom"],
+  "3089": ["kitchen", "bathroom"],
+  "3090": ["kitchen", "bathroom"],
+  "3092": ["kitchen", "bathroom"],
+  "3093": ["kitchen", "bathroom"],
+  "3094": ["kitchen", "bathroom"],
+  "3095": ["kitchen", "bathroom"],
+};
+
+function withSupplementalSections(product) {
+  const sourceCode = String(product.sourceCode || String(product.id || "").replace(/^prd_1c_/, ""));
+  const additions = supplementalSectionIdsBySourceCode[sourceCode] || [];
+  if (!additions.length) return product;
+  const sectionIds = [...new Set([...(product.sectionIds || []), ...additions, "home"])];
+  return { ...product, sectionIds };
+}
+
+// A customer should never have to scroll past empty placeholders to reach a
+// photographed product. Sorting still applies inside each group.
+function prioritizePhotographedProducts(items) {
+  return [
+    ...items.filter((product) => hasProductImage(product)),
+    ...items.filter((product) => !hasProductImage(product)),
+  ];
 }
 
 function fallbackImageFor(product) {
@@ -423,7 +457,7 @@ function slugifyProductTitle(value) {
 }
 
 function hasProductPage(product) {
-  return Boolean(product?.id && product?.retailPriceKgs && hasProductImage(product));
+  return Boolean(product?.id && product?.retailPriceKgs && product?.productPagePath);
 }
 
 function productPageSlug(product) {
@@ -431,7 +465,7 @@ function productPageSlug(product) {
 }
 
 function productPageUrl(product, absolute = false) {
-  const path = `/product/${productPageSlug(product)}/`;
+  const path = product?.productPagePath || `/product/${productPageSlug(product)}/`;
   return absolute ? new URL(path, window.location.origin).toString() : path;
 }
 
@@ -615,6 +649,23 @@ function isFavorite(productId) {
   return favoriteIds.has(productId);
 }
 
+function syncFavoriteButton(button, productId) {
+  const active = isFavorite(productId);
+  button.classList.toggle("active", active);
+  button.setAttribute("aria-pressed", String(active));
+  button.setAttribute("aria-label", active ? "Убрать из избранного" : "Добавить в избранное");
+  button.innerHTML = favoriteIcon(active);
+}
+
+function syncFavoriteButtons() {
+  productGrid?.querySelectorAll("[data-favorite]").forEach((button) => {
+    syncFavoriteButton(button, button.dataset.favorite);
+  });
+  modalTopActions?.querySelectorAll("[data-modal-favorite]").forEach((button) => {
+    syncFavoriteButton(button, button.dataset.modalFavorite);
+  });
+}
+
 function toggleFavorite(productId) {
   if (!productId) return;
   if (favoriteIds.has(productId)) {
@@ -624,8 +675,11 @@ function toggleFavorite(productId) {
   }
   saveFavorites();
   renderFavoriteFilter();
-  renderProducts();
-  renderRecentlyViewed();
+  // Keep the currently viewed card in place. Rebuilding the whole grid here
+  // made a just-tapped product look as though it had disappeared on mobile.
+  // Only the active favorites view needs its list re-filtered after removal.
+  if (state.favoriteOnly) renderProducts();
+  else syncFavoriteButtons();
 }
 
 function loadRecentlyViewed() {
@@ -679,7 +733,8 @@ function productSearchText(product) {
 
 function groupMatchesQuery(group, normalizedQuery) {
   const aliases = (group.aliases || []).map(normalizeSearchValue).filter(Boolean);
-  return aliases.some((alias) => normalizedQuery.includes(alias));
+  const paddedQuery = ` ${normalizedQuery} `;
+  return aliases.some((alias) => paddedQuery.includes(` ${alias} `));
 }
 
 function productMatchesSynonymGroup(product, group, text) {
@@ -981,6 +1036,7 @@ async function loadCatalog() {
   catalogSettings = { ...catalogSettings, ...catalog.settings };
   products = catalog.products.map((product) => ({
     ...product,
+    ...withSupplementalSections(product),
     price: product.retailPriceKgs,
     category: product.category || "Разное",
     description: product.description || "Товар в наличии. Детали заказа подтвердит менеджер.",
@@ -1060,14 +1116,18 @@ function renderQuickCategories(catalogCategories) {
       const count = countProductsForShortcut(card, countByCategory);
       const dataAttributes = [
         card.category ? `data-category="${escapeHtml(card.category)}"` : "",
+        card.section ? `data-section="${escapeHtml(card.section)}"` : "",
         card.audience ? `data-audience="${escapeHtml(card.audience)}"` : "",
         card.collection ? `data-collection="${escapeHtml(card.collection)}"` : "",
         card.query ? `data-query="${escapeHtml(card.query)}"` : "",
       ]
         .filter(Boolean)
         .join(" ");
+      const icon = card.spritePosition
+        ? `<span class="quick-category-icon" role="img" aria-label="${escapeHtml(card.title)}" style="--quick-category-sprite: url('${escapeHtml(card.image)}'); --quick-category-position: ${escapeHtml(card.spritePosition)}"></span>`
+        : `<img src="${escapeHtml(card.image)}" alt="" loading="lazy" />`;
       return `<button class="quick-category" type="button" ${dataAttributes} data-label="${escapeHtml(card.title)}">
-        <img src="${escapeHtml(card.image)}" alt="" loading="lazy" />
+        ${icon}
         <strong>${escapeHtml(card.title)}</strong>
         <small>${count} ${getProductWord(count)}</small>
       </button>`;
@@ -1078,14 +1138,15 @@ function renderQuickCategories(catalogCategories) {
 
 function productMatchesShortcut(product, item) {
   const matchesCategory = !item.category || item.category === "Все" || product.category === item.category;
+  const matchesSection = !item.section || (product.sectionIds || []).includes(item.section);
   const matchesAudience = !item.audience || product.audience === item.audience;
   const matchesCollection = !item.collection || productMatchesCollection(product, item.collection);
   const matchesQuery = !item.query || productMatchesSearchQuery(product, item.query);
-  return matchesCategory && matchesAudience && matchesCollection && matchesQuery;
+  return matchesCategory && matchesSection && matchesAudience && matchesCollection && matchesQuery;
 }
 
 function countProductsForShortcut(item, countByCategory = new Map()) {
-  if (!item.category && !item.audience && !item.collection && !item.query) return "";
+  if (!item.category && !item.section && !item.audience && !item.collection && !item.query) return "";
   if (item.category === "Все") return products.length;
   if (item.category && !item.audience && !item.collection && !item.query) return countByCategory.get(item.category) || 0;
   return products.filter((product) => productMatchesShortcut(product, item)).length;
@@ -1127,11 +1188,13 @@ function renderCategoryMenu() {
   categoryMenu.innerHTML = configuredItems
     .map((item) => {
       const count = countProductsForShortcut(item, countByCategory);
-      const isActive = (item.category && state.category === item.category && !state.collection && !state.audience)
+      const isActive = (item.category && state.category === item.category && !state.section && !state.collection && !state.audience)
+        || (item.section && state.section === item.section)
         || (item.audience && state.audience === item.audience)
         || (item.collection && state.collection === item.collection);
       const attributes = [
         item.category ? `data-category="${escapeHtml(item.category)}"` : "",
+        item.section ? `data-section="${escapeHtml(item.section)}"` : "",
         item.audience ? `data-audience="${escapeHtml(item.audience)}"` : "",
         item.collection ? `data-collection="${escapeHtml(item.collection)}"` : "",
         item.query ? `data-query="${escapeHtml(item.query)}"` : "",
@@ -1140,7 +1203,7 @@ function renderCategoryMenu() {
         .filter(Boolean)
         .join(" ");
       const content = `
-        <span class="category-menu-title">${escapeHtml(item.label || item.title || item.category || "Раздел")}</span>
+        <span class="category-menu-title">${escapeHtml(item.label || item.title || item.category || item.section || "Раздел")}</span>
         <span class="category-menu-count">${count ?? ""}</span>
       `;
       if (item.href) {
@@ -1160,6 +1223,7 @@ function setMenuOpen(isOpen) {
 
 function selectCategory(category) {
   state.category = category;
+  state.section = "";
   state.audience = "";
   state.audienceLabel = "";
   state.query = "";
@@ -1177,8 +1241,29 @@ function selectCategory(category) {
   renderProducts();
 }
 
+function selectSection(section, label = "") {
+  state.category = "Все";
+  state.section = section;
+  state.audience = "";
+  state.audienceLabel = "";
+  state.query = "";
+  state.label = label;
+  state.collection = "";
+  state.collectionLabel = "";
+  state.favoriteOnly = false;
+  state.visibleLimit = 60;
+  searchInput.value = "";
+  headerSearchInput.value = "";
+  renderCategories();
+  renderCategoryMenu();
+  renderCatalogDirectory();
+  renderFavoriteFilter();
+  renderProducts();
+}
+
 function selectQuery(query, label = "") {
   state.category = "Все";
+  state.section = "";
   state.audience = "";
   state.audienceLabel = "";
   state.query = query;
@@ -1198,6 +1283,7 @@ function selectQuery(query, label = "") {
 
 function selectCategoryQuery(category, query, label = "") {
   state.category = category;
+  state.section = "";
   state.audience = "";
   state.audienceLabel = "";
   state.query = query;
@@ -1217,6 +1303,7 @@ function selectCategoryQuery(category, query, label = "") {
 
 function selectCollection(collection, label = "") {
   state.category = "Все";
+  state.section = "";
   state.audience = "";
   state.audienceLabel = "";
   state.query = "";
@@ -1236,6 +1323,7 @@ function selectCollection(collection, label = "") {
 
 function selectCollectionQuery(collection, query, label = "") {
   state.category = "Все";
+  state.section = "";
   state.audience = "";
   state.audienceLabel = "";
   state.query = query;
@@ -1255,6 +1343,7 @@ function selectCollectionQuery(collection, query, label = "") {
 
 function selectAudience(audience, label = "", query = "") {
   state.category = "Все";
+  state.section = "";
   state.audience = audience;
   state.audienceLabel = label || audience;
   state.query = query;
@@ -1289,11 +1378,14 @@ function applyCatalogParamsFromUrl() {
   const params = mergedUrlParams();
   const collection = params.get("collection");
   const category = params.get("category");
+  const section = params.get("section");
   const audience = params.get("audience");
   const query = params.get("q") || params.get("query");
   const label = params.get("label") || "";
 
-  if (audience) {
+  if (section) {
+    selectSection(section, label);
+  } else if (audience) {
     selectAudience(audience, label || (audience === "kids" ? "Детское" : audience), query || "");
   } else if (collection && query) {
     selectCollectionQuery(collection, query, label || query);
@@ -1310,7 +1402,7 @@ function applyCatalogParamsFromUrl() {
   }
 
   if (window.location.hash.includes("catalog")) {
-    document.querySelector("#catalog")?.scrollIntoView({ behavior: "auto" });
+    scrollToCatalogResults("auto");
   }
   return true;
 }
@@ -1320,6 +1412,9 @@ function renderCatalogDirectory() {
   const parts = [{ title: "Главная", category: "Все" }];
   if (state.category !== "Все") {
     parts.push({ title: displayCategoryName(state.category), category: state.category });
+  }
+  if (state.section) {
+    parts.push({ title: state.label || state.section, section: state.section });
   }
   if (state.audience) {
     parts.push({ title: state.audienceLabel || state.audience, audience: state.audience });
@@ -1337,6 +1432,8 @@ function renderCatalogDirectory() {
         ? `data-query="${escapeHtml(part.query)}" data-label="${escapeHtml(part.title)}"`
         : part.audience
           ? `data-audience="${escapeHtml(part.audience)}" data-label="${escapeHtml(part.title)}"`
+        : part.section
+          ? `data-section="${escapeHtml(part.section)}" data-label="${escapeHtml(part.title)}"`
         : part.collection
           ? `data-collection="${escapeHtml(part.collection)}" data-label="${escapeHtml(part.title)}"`
           : `data-category="${escapeHtml(part.category)}"`;
@@ -1392,11 +1489,12 @@ function getVisibleProducts() {
   const filtered = products.filter((product) => {
     const matchesFavorite = !state.favoriteOnly || favoriteIds.has(product.id);
     const matchesCategory = state.category === "Все" || product.category === state.category;
+    const matchesSection = !state.section || (product.sectionIds || []).includes(state.section);
     const matchesAudience = !state.audience || product.audience === state.audience;
     const matchesCollection = productMatchesCollection(product, state.collection);
     const matchesPrice = productPrice(product) <= state.maxPrice;
     const matchesQuery = productMatchesSearchQuery(product, normalizedQuery);
-    return matchesFavorite && matchesCategory && matchesAudience && matchesCollection && matchesPrice && matchesQuery;
+    return matchesFavorite && matchesCategory && matchesSection && matchesAudience && matchesCollection && matchesPrice && matchesQuery;
   });
 
   const searchContext = state.sort === "featured" && normalizedQuery ? buildSearchContext(normalizedQuery) : null;
@@ -1407,11 +1505,15 @@ function getVisibleProducts() {
     return featuredProductCompare(a, b);
   });
 
-  if (state.sort === "featured" && state.category === "Все" && !state.audience && !state.collection && !normalizedQuery) {
-    return diversifyFeaturedProducts(sorted);
+  if (state.sort === "featured" && state.category === "Все" && !state.section && !state.audience && !state.collection && !normalizedQuery) {
+    return prioritizePhotographedProducts(homeFeaturedRotation(diversifyFeaturedProducts(sorted)));
   }
 
-  return sorted;
+  if (state.sort === "featured" && state.section && !normalizedQuery) {
+    return prioritizePhotographedProducts(diversifySectionProducts(sorted));
+  }
+
+  return prioritizePhotographedProducts(sorted);
 }
 
 function featuredProductCompare(a, b) {
@@ -1431,6 +1533,25 @@ function diversifyFeaturedProducts(sortedProducts) {
     ...diversifyProductGroup(photographed),
     ...diversifyProductGroup(withoutPhotos),
   ];
+}
+
+// A fresh first screen, without turning the catalog into random leftovers.
+// Today the pool is formed from stocked, photographed, high-quality products.
+// Later, popularityScore from views/orders can be supplied by the backend.
+function homeFeaturedRotation(sortedProducts) {
+  const pool = sortedProducts.filter((product) => hasProductImage(product) && product.status === "active");
+  const priority = pool.filter((product) => Number(product.popularityScore || product.rating || 0) >= 4.8 || product.discountPercent);
+  const selected = (priority.length >= 24 ? priority : pool).slice();
+  selected.sort((a, b) => stableHomeFeaturedRank(a) - stableHomeFeaturedRank(b));
+  const rotated = diversifyProductGroup(selected);
+  const seen = new Set(rotated.map((product) => product.id));
+  return [...rotated, ...sortedProducts.filter((product) => !seen.has(product.id))];
+}
+
+function stableHomeFeaturedRank(product) {
+  const key = String(product.id || product.sourceCode || product.title || "");
+  if (!homeFeaturedRandomRanks.has(key)) homeFeaturedRandomRanks.set(key, Math.random());
+  return homeFeaturedRandomRanks.get(key);
 }
 
 function diversifyProductGroup(sortedProducts) {
@@ -1479,6 +1600,51 @@ function diversifyProductGroup(sortedProducts) {
   return result;
 }
 
+// Sections should feel like a useful mixed shelf, not an alphabetically
+// adjacent run of the same product form. Shuffle within product-type buckets,
+// then take one card from each bucket in turns.
+function diversifySectionProducts(sortedProducts) {
+  const photographed = sortedProducts.filter((product) => hasProductImage(product));
+  const withoutPhotos = sortedProducts.filter((product) => !hasProductImage(product));
+  return [
+    ...diversifySectionProductGroup(photographed),
+    ...diversifySectionProductGroup(withoutPhotos),
+  ];
+}
+
+function diversifySectionProductGroup(sortedProducts) {
+  const buckets = new Map();
+  sortedProducts.forEach((product) => {
+    const key = product.productKind || product.productType || product.brand || "other";
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(product);
+  });
+  const keys = [...buckets.keys()];
+  for (let index = keys.length - 1; index > 0; index -= 1) {
+    const swap = Math.floor(Math.random() * (index + 1));
+    [keys[index], keys[swap]] = [keys[swap], keys[index]];
+  }
+  keys.forEach((key) => {
+    const bucket = buckets.get(key);
+    for (let index = bucket.length - 1; index > 0; index -= 1) {
+      const swap = Math.floor(Math.random() * (index + 1));
+      [bucket[index], bucket[swap]] = [bucket[swap], bucket[index]];
+    }
+  });
+  const result = [];
+  let added = true;
+  while (added) {
+    added = false;
+    keys.forEach((key) => {
+      const product = buckets.get(key)?.shift();
+      if (!product) return;
+      result.push(product);
+      added = true;
+    });
+  }
+  return result;
+}
+
 function freshProductGroup(product) {
   const text = `${product.productType || ""} ${product.title || ""} ${product.categoryId || ""}`.toLowerCase();
   if (/порош/.test(text)) return "01-powder";
@@ -1488,10 +1654,13 @@ function freshProductGroup(product) {
   return `10-${product.productType || product.categoryId || "other"}`.toLowerCase();
 }
 
-// Only stable 1C identities first seen in the latest stock export are fresh.
-// Round-robin by product type gives shoppers a broad overview instead of a
-// row filled with variants of one shampoo or detergent.
-function freshProducts(limit = 16) {
+// Prefer the explicit current-receipt selection shared with the opt catalog.
+// The first-seen calculation remains as a fallback for older catalog files.
+function freshProducts(limit = Number.POSITIVE_INFINITY) {
+  const currentArrival = products
+    .filter((product) => product.status === "active" && product.freshArrival === true)
+    .sort((a, b) => Number(a.freshArrivalRank ?? 999999) - Number(b.freshArrivalRank ?? 999999));
+  if (currentArrival.length) return currentArrival.slice(0, limit);
   if (!latestStockDate) return [];
   const eligible = products.filter((product) =>
     product.status === "active"
@@ -2168,6 +2337,8 @@ quickCategoryGrid.addEventListener("click", (event) => {
   const label = shortcut.dataset.label || "";
   if (shortcut.dataset.audience) {
     selectAudience(shortcut.dataset.audience, label, shortcut.dataset.query || "");
+  } else if (shortcut.dataset.section) {
+    selectSection(shortcut.dataset.section, label);
   } else if (shortcut.dataset.category && shortcut.dataset.query) {
     selectCategoryQuery(shortcut.dataset.category, shortcut.dataset.query, label);
   } else if (shortcut.dataset.collection) {
@@ -2177,7 +2348,7 @@ quickCategoryGrid.addEventListener("click", (event) => {
   } else {
     selectCategory(shortcut.dataset.category);
   }
-  document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
+  scrollToCatalogResults();
 });
 
 recentlyViewedRow?.addEventListener("click", (event) => {
@@ -2223,6 +2394,8 @@ catalogDirectory?.addEventListener("click", (event) => {
   if (!button) return;
   if (button.dataset.query) {
     selectQuery(button.dataset.query, button.dataset.label || button.dataset.query);
+  } else if (button.dataset.section) {
+    selectSection(button.dataset.section, button.dataset.label || button.dataset.section);
   } else if (button.dataset.audience) {
     selectAudience(button.dataset.audience, button.dataset.label || button.dataset.audience);
   } else if (button.dataset.collection) {
@@ -2230,7 +2403,7 @@ catalogDirectory?.addEventListener("click", (event) => {
   } else {
     selectCategory(button.dataset.category || "Все");
   }
-  document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
+  scrollToCatalogResults();
 });
 
 toggleMenuButton?.addEventListener("click", (event) => {
@@ -2249,9 +2422,11 @@ categoryMenu?.addEventListener("click", (event) => {
     setMenuOpen(false);
     return;
   }
-  const button = event.target.closest("[data-category], [data-audience], [data-collection], [data-query]");
+  const button = event.target.closest("[data-category], [data-section], [data-audience], [data-collection], [data-query]");
   if (!button) return;
-  if (button.dataset.audience) {
+  if (button.dataset.section) {
+    selectSection(button.dataset.section, button.dataset.label || button.dataset.section);
+  } else if (button.dataset.audience) {
     selectAudience(button.dataset.audience, button.dataset.label || button.dataset.audience, button.dataset.query || "");
   } else if (button.dataset.query && button.dataset.category) {
     selectCategoryQuery(button.dataset.category, button.dataset.query, button.dataset.label || button.dataset.query);
@@ -2263,7 +2438,7 @@ categoryMenu?.addEventListener("click", (event) => {
     selectCategory(button.dataset.category || "Все");
   }
   setMenuOpen(false);
-  document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
+  scrollToCatalogResults();
 });
 
 productGrid.addEventListener("click", (event) => {
@@ -2356,6 +2531,20 @@ function scrollToSection(selector) {
   document.querySelector(selector)?.scrollIntoView({ behavior: "smooth" });
 }
 
+// Category changes redraw the catalog below the fresh-arrivals shelf. Aim at
+// the visible catalog heading, not at the section wrapper above it. The smart
+// header is hidden after this navigation, so it must not reserve stale space.
+function scrollToCatalogResults(behavior = "smooth") {
+  const catalogResults = document.querySelector("#catalog .catalog-tools") || document.querySelector("#catalog");
+  if (!catalogResults) return;
+  // Rendering the filtered cards may change the page height. Two frames make
+  // the measurement run after that layout has settled on mobile browsers.
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    const top = window.scrollY + catalogResults.getBoundingClientRect().top - 8;
+    window.scrollTo({ top: Math.max(0, top), behavior });
+  }));
+}
+
 // "Главная" / logo: reset to the clean home view (no leftover category or
 // favorites filter) and scroll to the very top. Plain <a href="/#top"> would
 // otherwise land at the fixed-header offset, leaving the page looking a bit
@@ -2381,7 +2570,7 @@ bottomNavCatalogLink?.addEventListener("click", (event) => {
     renderFavoriteFilter();
     renderProducts();
   }
-  scrollToSection("#catalog");
+  scrollToCatalogResults();
 });
 
 bottomNavFavoritesLink?.addEventListener("click", (event) => {
@@ -2408,7 +2597,7 @@ bottomNavFavoritesLink?.addEventListener("click", (event) => {
   renderCatalogDirectory();
   renderFavoriteFilter();
   renderProducts();
-  if (enabling) scrollToSection("#catalog");
+  if (enabling) scrollToCatalogResults();
 });
 
 bottomNavCartLink?.addEventListener("click", (event) => {
@@ -2482,8 +2671,22 @@ sortSelect.addEventListener("change", (event) => {
 });
 
 loadMore.addEventListener("click", () => {
+  const scrollLeft = window.scrollX;
+  const scrollTop = window.scrollY;
+  const previousOverflowAnchor = document.documentElement.style.overflowAnchor;
+
+  loadMore.blur();
+  document.documentElement.style.overflowAnchor = "none";
   state.visibleLimit += 60;
   renderProducts();
+  window.scrollTo({ left: scrollLeft, top: scrollTop, behavior: "auto" });
+
+  requestAnimationFrame(() => {
+    window.scrollTo({ left: scrollLeft, top: scrollTop, behavior: "auto" });
+    requestAnimationFrame(() => {
+      document.documentElement.style.overflowAnchor = previousOverflowAnchor;
+    });
+  });
 });
 
 openCartButton?.addEventListener("click", () => setCartOpen(true));

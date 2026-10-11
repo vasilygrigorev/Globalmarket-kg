@@ -22,9 +22,22 @@ function pages() {
 }
 
 const all = pages();
+const publicCatalog = JSON.parse(readFileSync(join(ROOT, "data", "public-catalog.json"), "utf8"));
 
 test("there are generated product pages to check", () => {
   assert.ok(all.length >= 50, `expected many product pages, found ${all.length}`);
+});
+
+test("every active catalog product has an exact generated page path", () => {
+  const missing = publicCatalog.products.filter((product) => {
+    if (!/^\/product\/[^/]+\/$/.test(product.productPagePath || "")) return true;
+    return !existsSync(join(ROOT, product.productPagePath, "index.html"));
+  });
+  assert.deepEqual(
+    missing.map((product) => product.sourceCode || product.id),
+    [],
+    `active products without pages: ${missing.slice(0, 10).map((product) => product.title).join(", ")}`,
+  );
 });
 
 test("every product page carries social meta (og + twitter)", () => {
@@ -45,11 +58,11 @@ test("every product page has Product + BreadcrumbList JSON-LD", () => {
 });
 
 test("every product page offers WhatsApp question; in-stock pages also offer order", () => {
-  const noQuestion = all.filter((p) => !p.html.includes("Спросить в WhatsApp")).map((p) => p.slug);
+  const noQuestion = all.filter((p) => !/(?:Спросить|Уточнить поступление) в WhatsApp/.test(p.html)).map((p) => p.slug);
   assert.deepEqual(noQuestion, [], `pages missing WhatsApp question: ${noQuestion.slice(0, 5).join(", ")}`);
   // In-stock pages (have add-to-cart) must also have the order link.
   const badOrder = all
-    .filter((p) => p.html.includes("data-add-cart") && !p.html.includes("Заказать сразу в WhatsApp"))
+    .filter((p) => /<button\b[^>]*\bdata-add-cart\b/i.test(p.html) && !p.html.includes("Заказать сразу в WhatsApp"))
     .map((p) => p.slug);
   assert.deepEqual(badOrder, [], `in-stock pages missing order link: ${badOrder.slice(0, 5).join(", ")}`);
 });
