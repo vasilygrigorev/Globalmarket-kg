@@ -13889,8 +13889,8 @@
       "retailPriceKgs": 2190,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/laundry-capsules.svg",
-      "imageCount": 0,
+      "image": "/assets/products/ariel/ariel-pods-44-extra-stain-removal-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -13907,8 +13907,8 @@
       "retailPriceKgs": 2090,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/laundry-capsules.svg",
-      "imageCount": 0,
+      "image": "/assets/products/ariel/ariel-pods-44-original-todoen1-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -14141,8 +14141,8 @@
       "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/fabric-softener.svg",
-      "imageCount": 0,
+      "image": "/assets/products/lenor/lenor-softener-eclat-de-minuit-504g-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -14159,7 +14159,7 @@
       "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
-      "image": "/assets/products/lenor/lenor-softener-moonlight-lily-504g-card-front.jpg",
+      "image": "/assets/products/lenor/lenor-softener-moonlight-lily-504g-v2-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
     },
@@ -14195,8 +14195,8 @@
       "retailPriceKgs": 990,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/fabric-softener.svg",
-      "imageCount": 0,
+      "image": "/assets/products/lenor/lenor-softener-alpine-breeze-840g-60-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -15095,8 +15095,8 @@
       "retailPriceKgs": 290,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/generic.svg",
-      "imageCount": 0,
+      "image": "/assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-cherry-blossom-140g-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -15113,8 +15113,8 @@
       "retailPriceKgs": 290,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/generic.svg",
-      "imageCount": 0,
+      "image": "/assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-summer-night-140g-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {

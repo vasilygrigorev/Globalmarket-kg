@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import sys
 from pathlib import Path
@@ -39,7 +40,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--expected-base-group-count", type=int, default=16)
     parser.add_argument("--expected-fresh-count", type=int)
     parser.add_argument("--expected-source-report-count", type=int)
+    parser.add_argument(
+        "--allow-photo-only-product-changes",
+        action="store_true",
+        help=(
+            "Allow only image/galleryImages changes while requiring every other "
+            "product field and product order to match the baseline."
+        ),
+    )
     return parser.parse_args()
+
+
+def without_photo_fields(product: dict[str, Any]) -> dict[str, Any]:
+    row = copy.deepcopy(product)
+    row.pop("image", None)
+    row.pop("galleryImages", None)
+    return row
 
 
 def main() -> None:
@@ -52,7 +68,25 @@ def main() -> None:
     require(catalog.get("release") == args.release_id, "Catalog release ID is stale")
     require(audit.get("release") == args.release_id, "Fresh-arrivals audit is stale")
     require(manifest.get("release") == args.release_id, "Build manifest release ID is stale")
-    require(catalog.get("products") == baseline.get("products"), "Product records changed")
+    if args.allow_photo_only_product_changes:
+        current_products = catalog.get("products", [])
+        baseline_products = baseline.get("products", [])
+        require(
+            len(current_products) == len(baseline_products),
+            "Product count changed",
+        )
+        require(
+            [product.get("id") for product in current_products]
+            == [product.get("id") for product in baseline_products],
+            "Product order changed",
+        )
+        require(
+            [without_photo_fields(product) for product in current_products]
+            == [without_photo_fields(product) for product in baseline_products],
+            "A non-photo product field changed",
+        )
+    else:
+        require(catalog.get("products") == baseline.get("products"), "Product records changed")
 
     baseline_groups = [
         group for group in baseline["groups"] if group.get("id") != fresh.GROUP_ID
@@ -207,6 +241,7 @@ def main() -> None:
         "generatedAt",
         "groups",
         "freshArrivals",
+        *(("products",) if args.allow_photo_only_product_changes else ()),
     }
     for key in protected_top_level:
         require(catalog.get(key) == baseline.get(key), f"Protected catalog field changed: {key}")

@@ -87,6 +87,7 @@ def main():
                 "tests/product-share-attribution.test.mjs",
                 "tests/product-checkout-navigation.test.mjs",
                 "tests/fresh-products.test.mjs",
+                "tests/opt-fresh-arrivals-contract.test.mjs",
                 "tests/product-pages.test.mjs",
                 "tests/shared-layout.test.mjs",
                 "tests/search-categories.test.mjs",

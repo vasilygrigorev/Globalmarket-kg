@@ -1,5 +1,5 @@
 {
-  "count": 61,
+  "count": 62,
   "pages": [
     {
       "type": "category",
@@ -168,7 +168,7 @@
         "мыло для рук",
         "хозяйственное мыло"
       ],
-      "shown": 28,
+      "shown": 30,
       "retainedLegacy": false
     },
     {
@@ -290,7 +290,7 @@
         "товары Ariel",
         "Ariel купить Бишкек"
       ],
-      "shown": 22,
+      "shown": 24,
       "retainedLegacy": false
     },
     {
@@ -400,6 +400,21 @@
     },
     {
       "type": "brand",
+      "slug": "felce",
+      "title": "FELCE",
+      "path": "/brand/felce/",
+      "url": "https://globalmarket.kg/brand/felce/",
+      "count": 17,
+      "seoTerms": [
+        "FELCE",
+        "товары FELCE",
+        "FELCE купить Бишкек"
+      ],
+      "shown": 2,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
       "slug": "kamill",
       "title": "Kamill",
       "path": "/brand/kamill/",
@@ -455,7 +470,7 @@
         "товары Lenor",
         "Lenor купить Бишкек"
       ],
-      "shown": 6,
+      "shown": 8,
       "retainedLegacy": false
     },
     {

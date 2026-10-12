@@ -36553,8 +36553,12 @@
       "badge": "Ariel",
       "firstSeenAt": "2026-10-10",
       "category": "Стирка и уход за бельем",
-      "galleryImages": [],
-      "image": null,
+      "galleryImages": [
+        "assets/products/ariel/ariel-pods-44-extra-stain-removal-card-front.jpg",
+        "assets/products/ariel/ariel-pods-44-extra-stain-removal-front.jpg",
+        "assets/products/ariel/ariel-pods-44-extra-stain-removal-back.jpg"
+      ],
+      "image": "assets/products/ariel/ariel-pods-44-extra-stain-removal-card-front.jpg",
       "brand": "Ariel",
       "productKind": "laundry_capsules",
       "description": "Ariel: капсулы для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 44 шт.",
@@ -36606,8 +36610,12 @@
       "badge": "Ariel",
       "firstSeenAt": "2026-10-10",
       "category": "Стирка и уход за бельем",
-      "galleryImages": [],
-      "image": null,
+      "galleryImages": [
+        "assets/products/ariel/ariel-pods-44-original-todoen1-card-front.jpg",
+        "assets/products/ariel/ariel-pods-44-original-todoen1-front.jpg",
+        "assets/products/ariel/ariel-pods-44-original-todoen1-back.jpg"
+      ],
+      "image": "assets/products/ariel/ariel-pods-44-original-todoen1-card-front.jpg",
       "brand": "Ariel",
       "productKind": "laundry_capsules",
       "description": "Ariel: капсулы для стирки для ежедневного ухода за бельем и домашней стирки. Формат: 44 шт.",
@@ -37337,8 +37345,12 @@
       "badge": "Lenor",
       "firstSeenAt": "2026-10-10",
       "category": "Стирка и уход за бельем",
-      "galleryImages": [],
-      "image": null,
+      "galleryImages": [
+        "assets/products/lenor/lenor-softener-eclat-de-minuit-504g-card-front.jpg",
+        "assets/products/lenor/lenor-softener-eclat-de-minuit-504g-front.jpg",
+        "assets/products/lenor/lenor-softener-eclat-de-minuit-504g-back.jpg"
+      ],
+      "image": "assets/products/lenor/lenor-softener-eclat-de-minuit-504g-card-front.jpg",
       "brand": "Lenor",
       "productKind": "fabric_softener",
       "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 504 g, 504g.",
@@ -37390,11 +37402,11 @@
       "firstSeenAt": "2026-10-10",
       "category": "Стирка и уход за бельем",
       "galleryImages": [
-        "assets/products/lenor/lenor-softener-moonlight-lily-504g-card-front.jpg",
-        "assets/products/lenor/lenor-softener-moonlight-lily-504g-front.jpg",
-        "assets/products/lenor/lenor-softener-moonlight-lily-504g-back.jpg"
+        "assets/products/lenor/lenor-softener-moonlight-lily-504g-v2-card-front.jpg",
+        "assets/products/lenor/lenor-softener-moonlight-lily-504g-v2-front.jpg",
+        "assets/products/lenor/lenor-softener-moonlight-lily-504g-v2-back.jpg"
       ],
-      "image": "assets/products/lenor/lenor-softener-moonlight-lily-504g-card-front.jpg",
+      "image": "assets/products/lenor/lenor-softener-moonlight-lily-504g-v2-card-front.jpg",
       "brand": "Lenor",
       "productKind": "fabric_softener",
       "description": "Кондиционер Lenor Moonlight Lily для белья. Вес 504 г, до 36 стирок по данным упаковки; добавляйте в соответствующий отсек стиральной машины.",
@@ -37497,8 +37509,12 @@
       "badge": "Lenor",
       "firstSeenAt": "2026-10-10",
       "category": "Стирка и уход за бельем",
-      "galleryImages": [],
-      "image": null,
+      "galleryImages": [
+        "assets/products/lenor/lenor-softener-alpine-breeze-840g-60-card-front.jpg",
+        "assets/products/lenor/lenor-softener-alpine-breeze-840g-60-front.jpg",
+        "assets/products/lenor/lenor-softener-alpine-breeze-840g-60-back.jpg"
+      ],
+      "image": "assets/products/lenor/lenor-softener-alpine-breeze-840g-60-card-front.jpg",
       "brand": "Lenor",
       "productKind": "fabric_softener",
       "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 840 g, 840g.",
@@ -40056,8 +40072,12 @@
       "badge": "_",
       "firstSeenAt": "2026-10-10",
       "category": "Разное",
-      "galleryImages": [],
-      "image": null,
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-cherry-blossom-140g-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-cherry-blossom-140g-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-cherry-blossom-140g-back.jpg"
+      ],
+      "image": "assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-cherry-blossom-140g-card-front.jpg",
       "brand": "FELCE",
       "productKind": "air_freshener",
       "description": "FELCE: товар для дома и личного ухода. Формат: 140 g, 140g.",
@@ -40104,8 +40124,12 @@
       "badge": "_",
       "firstSeenAt": "2026-10-10",
       "category": "Разное",
-      "galleryImages": [],
-      "image": null,
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-summer-night-140g-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-summer-night-140g-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-summer-night-140g-back.jpg"
+      ],
+      "image": "assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-summer-night-140g-card-front.jpg",
       "brand": "FELCE",
       "productKind": "air_freshener",
       "description": "FELCE: товар для дома и личного ухода. Формат: 140 g, 140g.",

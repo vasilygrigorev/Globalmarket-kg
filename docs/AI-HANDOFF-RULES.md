@@ -114,14 +114,21 @@ If any gate fails, stop. Repair the source or master and rebuild; never patch on
 
 ## Current production baseline
 
-The accepted recovery baseline is release `2026-10-11-retail-full-recovery-v1`.
-It contains 721 active retail products, 838 retained product pages, 604 protected
-legacy product URLs, 61 landing pages, and 903 sitemap URLs. Any later release
-must explain a decrease in these retained-history counts before publication.
+The accepted retail baseline is release
+`20261012-retail-petya-missing-photo-v1`, Cloudflare Pages deployment
+`6bb923c1-d4cb-4fcc-a468-b78aad13a602`. It contains 721 active retail products,
+838 retained product pages, 604 protected legacy product URLs, 62 landing pages
+and 904 sitemap URLs. Immediate rollback is
+`001ebc78-2924-4a58-98c6-05b8863ec380`. Any later release must explain a
+decrease in these retained-history counts before publication.
 
 The accepted opt baseline is release
-`2026-10-12-opt-fresh-arrivals-recovery-v1`, Worker version
-`64351973-d985-4e19-9e86-dfd92d2658a0`. It contains 699 unchanged product
+`20261012-opt-petya-missing-photo-release-v1`, Worker version
+`a25f18a7-7d69-4eca-8379-44b509608f4c`. It contains 699 unchanged product
 records, 16 unchanged base 1C groups and a first virtual fresh-arrivals group
-with 97 current products. Immediate rollback is Worker version
-`2a2cd307-16d3-4978-862d-1843c873f722`.
+with 105 current products. Immediate rollback is Worker version
+`e3587979-b459-4cbd-b44b-84f985277e51`.
+
+Exact 2026-10-12 mappings, the Lenor correction and four retained pending
+photo triples are documented in
+[`docs/releases/2026-10-12-petya-missing-photo-release-v1.md`](releases/2026-10-12-petya-missing-photo-release-v1.md).

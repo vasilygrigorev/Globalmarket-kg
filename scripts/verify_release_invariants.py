@@ -130,9 +130,23 @@ def main():
         )
         require(not any(str(item.get("sourceCode")) == "2322" for item in all_products), "service code 2322 is in page catalog", errors)
         by_code = products_by_code(page_catalog)
-        for code in ("660", "3243", "3246"):
+        for code in ("660",):
             require(code in by_code and not gallery(by_code[code]), f"held code {code} received an unapproved photo", errors)
-        for code in ("3247", "3248", "3249", "3250", "3253", "3260"):
+        for code in (
+            "3243",
+            "3246",
+            "3247",
+            "3248",
+            "3249",
+            "3250",
+            "3253",
+            "3260",
+            "3269",
+            "3271",
+            "3285",
+            "3286",
+            "3288",
+        ):
             require(code in by_code and len(gallery(by_code[code])) == 3, f"approved code {code} does not have exactly three photos", errors)
         code_3260 = by_code.get("3260", {})
         require(code_3260.get("title") == "The Pink Stuff Power Active блок для унитаза, 2x40 г", "code 3260 title regressed", errors)
@@ -147,6 +161,10 @@ def main():
     current_by_code = products_by_code(current_master)
     lost_galleries = []
     for code, old in baseline_by_code.items():
+        if code == "660":
+            # Fairy Apple is deliberately held without a photo after the old
+            # baseline image was rejected as a non-exact product match.
+            continue
         old_gallery = gallery(old)
         if not old_gallery:
             continue
