@@ -1,6 +1,6 @@
 # Global Market KG: правила работы для другого чата или ИИ
 
-This document is the mandatory handoff for any agent changing the retail storefront.
+This document is the mandatory handoff for any agent changing the retail or opt storefront.
 
 ## Canonical locations
 
@@ -10,6 +10,8 @@ This document is the mandatory handoff for any agent changing the retail storefr
 - Immutable releases: `releases/<date>-<release-name>`
 - Production site: `https://globalmarket.kg`
 - Cloudflare Pages project: `globalmarket-kg`
+- Protected opt site: `https://opt.globalmarket.kg`
+- Cloudflare Worker: `globalmarket-opt-preview`
 
 Do not choose another old chat folder, Telegram download directory, or release copy as a new source tree.
 
@@ -18,6 +20,28 @@ Do not choose another old chat folder, Telegram download directory, or release c
 Petya receives and stores files. Petya must not interpret approval as permission to change either retail or opt, run a builder, commit, push, or deploy. A Codex chat performs analysis and implementation only after an explicit user request.
 
 Retail and opt are separate deliverables. Do not derive one public catalog from the other and do not deploy one while repairing the other unless the user explicitly asks for both.
+
+## Mandatory opt fresh-arrivals rule
+
+The first opt group is always the non-empty virtual group
+`group-fresh-arrivals` / `Свежие поступления`; it references the same product
+records as the original 1C groups and never duplicates or removes products.
+
+1. A large receipt is strictly over USD 10 000.
+2. Start with the latest large receipt.
+3. Include adjacent earlier large receipts while every gap between included
+   large receipts is at most 14 calendar days.
+4. The first earlier large receipt beyond 14 days is the excluded boundary.
+5. Include every small receipt newer than that boundary.
+6. Keep only products with current positive stock. Order them by selected
+   receipt, then by current 1C position.
+7. Keep each fresh product in its original 1C group as well.
+8. If a stock export arrives without a newer comprehensive receipt report,
+   re-filter the last verified receipt selection against current stock. Never
+   remove the group and never infer novelty from a restock or filename date.
+
+Build with `scripts/opt_fresh_arrivals.py` and block publication unless
+`scripts/verify_opt_fresh_arrivals.py` succeeds against the pre-build catalog.
 
 ## Correct inventory update
 
@@ -50,6 +74,9 @@ Current explicit hold: source code `660` / Fairy Apple has no approved exact pho
 ## Required release gates
 
 - Product/master counts must be explained and recorded.
+- Opt has `group-fresh-arrivals` first, non-empty and virtual; its audit release
+  and source hash match the catalog, all 16 base 1C groups are byte-for-byte
+  unchanged, and product records are unchanged by the fresh-arrivals step.
 - No product can expose a raw numeric 1C prefix as its retail title.
 - No currently approved gallery may shrink or change without explicit approval.
 - Every legacy slug from the previous production release must still resolve.
@@ -86,3 +113,10 @@ The accepted recovery baseline is release `2026-10-11-retail-full-recovery-v1`.
 It contains 721 active retail products, 838 retained product pages, 604 protected
 legacy product URLs, 61 landing pages, and 903 sitemap URLs. Any later release
 must explain a decrease in these retained-history counts before publication.
+
+The accepted opt baseline is release
+`2026-10-12-opt-fresh-arrivals-recovery-v1`, Worker version
+`64351973-d985-4e19-9e86-dfd92d2658a0`. It contains 699 unchanged product
+records, 16 unchanged base 1C groups and a first virtual fresh-arrivals group
+with 97 current products. Immediate rollback is Worker version
+`2a2cd307-16d3-4978-862d-1843c873f722`.
