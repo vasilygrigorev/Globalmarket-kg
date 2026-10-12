@@ -2196,7 +2196,9 @@
       "sectionIds": [
         "laundry"
       ],
-      "productPagePath": "/product/ariel-6kg-color-1cdee5/"
+      "productPagePath": "/product/ariel-6kg-color-1cdee5/",
+      "freshArrival": true,
+      "freshArrivalRank": 0
     },
     {
       "badge": "Felce Azzurra",
@@ -2381,7 +2383,9 @@
       "sectionIds": [
         "laundry"
       ],
-      "productPagePath": "/product/the-pink-stuff-laundry-liquid-960ml-bio-c_3079/"
+      "productPagePath": "/product/the-pink-stuff-laundry-liquid-960ml-bio-c_3079/",
+      "freshArrival": true,
+      "freshArrivalRank": 100
     },
     {
       "badge": "The Pink Stuff",
@@ -2446,7 +2450,9 @@
       "sectionIds": [
         "laundry"
       ],
-      "productPagePath": "/product/the-pink-stuff-laundry-liquid-960ml-color-c_3081/"
+      "productPagePath": "/product/the-pink-stuff-laundry-liquid-960ml-color-c_3081/",
+      "freshArrival": true,
+      "freshArrivalRank": 101
     },
     {
       "badge": "The Pink Stuff",
@@ -2511,7 +2517,9 @@
       "sectionIds": [
         "laundry"
       ],
-      "productPagePath": "/product/the-pink-stuff-laundry-liquid-960ml-sensitive-c_3080/"
+      "productPagePath": "/product/the-pink-stuff-laundry-liquid-960ml-sensitive-c_3080/",
+      "freshArrival": true,
+      "freshArrivalRank": 102
     },
     {
       "badge": "Ariel",
@@ -3901,7 +3909,9 @@
       "sectionIds": [
         "laundry"
       ],
-      "productPagePath": "/product/ariel-6kg-universal-9d1c72/"
+      "productPagePath": "/product/ariel-6kg-universal-9d1c72/",
+      "freshArrival": true,
+      "freshArrivalRank": 1
     },
     {
       "badge": "Felce Azzurra",
@@ -3965,7 +3975,9 @@
       "sectionIds": [
         "laundry"
       ],
-      "productPagePath": "/product/felce-azzurra-light-starch-spray-750-ml-c_3119/"
+      "productPagePath": "/product/felce-azzurra-light-starch-spray-750-ml-c_3119/",
+      "freshArrival": true,
+      "freshArrivalRank": 61
     },
     {
       "badge": "Felce Azzurra",
@@ -4026,7 +4038,9 @@
       "sectionIds": [
         "laundry"
       ],
-      "productPagePath": "/product/felce-azzurra-ironing-water-1-l-c_3118/"
+      "productPagePath": "/product/felce-azzurra-ironing-water-1-l-c_3118/",
+      "freshArrival": true,
+      "freshArrivalRank": 60
     },
     {
       "badge": "Ariel",
@@ -4508,7 +4522,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/the-pink-stuff-wrinkle-releaser-500ml-c_3082/"
+      "productPagePath": "/product/the-pink-stuff-wrinkle-releaser-500ml-c_3082/",
+      "freshArrival": true,
+      "freshArrivalRank": 90
     },
     {
       "badge": "The Pink Stuff",
@@ -4569,7 +4585,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/the-pink-stuff-stain-remover-sprey-500ml-c_3083/"
+      "productPagePath": "/product/the-pink-stuff-stain-remover-sprey-500ml-c_3083/",
+      "freshArrival": true,
+      "freshArrivalRank": 88
     },
     {
       "badge": "The Pink Stuff",
@@ -4635,7 +4653,9 @@
         "creams",
         "home"
       ],
-      "productPagePath": "/product/the-pink-stuff-miracle-cream-cleaners-500ml-c_3084/"
+      "productPagePath": "/product/the-pink-stuff-miracle-cream-cleaners-500ml-c_3084/",
+      "freshArrival": true,
+      "freshArrivalRank": 2
     },
     {
       "badge": "The Pink Stuff",
@@ -4697,7 +4717,9 @@
         "bathroom",
         "home"
       ],
-      "productPagePath": "/product/the-pink-stuff-toilet-gel-750ml-c_3072/"
+      "productPagePath": "/product/the-pink-stuff-toilet-gel-750ml-c_3072/",
+      "freshArrival": true,
+      "freshArrivalRank": 97
     },
     {
       "badge": "The Pink Stuff",
@@ -4759,7 +4781,9 @@
         "home",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-floor-cleaner-sprey-750ml-c_3085/"
+      "productPagePath": "/product/the-pink-stuff-floor-cleaner-sprey-750ml-c_3085/",
+      "freshArrival": true,
+      "freshArrivalRank": 93
     },
     {
       "badge": "The Pink Stuff",
@@ -4823,7 +4847,9 @@
         "kitchen",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-cleaning-paste-300g-tube-c_3068/"
+      "productPagePath": "/product/the-pink-stuff-cleaning-paste-300g-tube-c_3068/",
+      "freshArrival": true,
+      "freshArrivalRank": 86
     },
     {
       "badge": "The Pink Stuff",
@@ -4885,7 +4911,9 @@
         "home",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-bathroom-cleaner-750ml-c_3073/"
+      "productPagePath": "/product/the-pink-stuff-bathroom-cleaner-750ml-c_3073/",
+      "freshArrival": true,
+      "freshArrivalRank": 92
     },
     {
       "badge": "The Pink Stuff",
@@ -4949,7 +4977,9 @@
         "home",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-miracle-sower-shine-750ml-c_3071/"
+      "productPagePath": "/product/the-pink-stuff-miracle-sower-shine-750ml-c_3071/",
+      "freshArrival": true,
+      "freshArrivalRank": 96
     },
     {
       "badge": "The Pink Stuff",
@@ -5013,7 +5043,9 @@
         "kitchen",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-multi-purpose-cleaner-750ml-c_3069/"
+      "productPagePath": "/product/the-pink-stuff-multi-purpose-cleaner-750ml-c_3069/",
+      "freshArrival": true,
+      "freshArrivalRank": 94
     },
     {
       "badge": "The Pink Stuff",
@@ -5076,7 +5108,9 @@
         "home",
         "kitchen"
       ],
-      "productPagePath": "/product/the-pink-stuff-wash-up-sprey-500ml-c_3074/"
+      "productPagePath": "/product/the-pink-stuff-wash-up-sprey-500ml-c_3074/",
+      "freshArrival": true,
+      "freshArrivalRank": 89
     },
     {
       "badge": "The Pink Stuff",
@@ -5139,7 +5173,9 @@
         "home",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-floor-cleaner-1l-all-purpose-c_3075/"
+      "productPagePath": "/product/the-pink-stuff-floor-cleaner-1l-all-purpose-c_3075/",
+      "freshArrival": true,
+      "freshArrivalRank": 85
     },
     {
       "badge": "Fructies",
@@ -5258,7 +5294,9 @@
         "kitchen",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-microfiber-sponge-3pcs-c_3090/"
+      "productPagePath": "/product/the-pink-stuff-microfiber-sponge-3pcs-c_3090/",
+      "freshArrival": true,
+      "freshArrivalRank": 105
     },
     {
       "badge": "Felce Azzurra",
@@ -5323,7 +5361,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/felce-azzurra-air-freshener-gel-giardino-zen-140-g-c_3131/"
+      "productPagePath": "/product/felce-azzurra-air-freshener-gel-giardino-zen-140-g-c_3131/",
+      "freshArrival": true,
+      "freshArrivalRank": 40
     },
     {
       "badge": "Felce Azzurra",
@@ -5388,7 +5428,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/felce-azzurra-air-freshener-gel-pure-mountain-140-g-c_3130/"
+      "productPagePath": "/product/felce-azzurra-air-freshener-gel-pure-mountain-140-g-c_3130/",
+      "freshArrival": true,
+      "freshArrivalRank": 42
     },
     {
       "badge": "Felce Azzurra",
@@ -5453,7 +5495,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/felce-azzurra-air-freshener-gel-vanilla-monoi-140-g-c_3128/"
+      "productPagePath": "/product/felce-azzurra-air-freshener-gel-vanilla-monoi-140-g-c_3128/",
+      "freshArrival": true,
+      "freshArrivalRank": 44
     },
     {
       "badge": "Felce Azzurra",
@@ -5518,7 +5562,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/felce-azzurra-air-freshener-gel-lavanda-iris-140-g-c_3125/"
+      "productPagePath": "/product/felce-azzurra-air-freshener-gel-lavanda-iris-140-g-c_3125/",
+      "freshArrival": true,
+      "freshArrivalRank": 41
     },
     {
       "badge": "Signal",
@@ -7651,7 +7697,9 @@
         "bathroom",
         "hair"
       ],
-      "productPagePath": "/product/tresemme-shamp-828-anti-brekage-9ce064/"
+      "productPagePath": "/product/tresemme-shamp-828-anti-brekage-9ce064/",
+      "freshArrival": true,
+      "freshArrivalRank": 157
     },
     {
       "badge": "Royal",
@@ -7983,7 +8031,9 @@
         "bathroom",
         "hair"
       ],
-      "productPagePath": "/product/tresemm-silky-smooth-shampun-828-ml-b33667/"
+      "productPagePath": "/product/tresemm-silky-smooth-shampun-828-ml-b33667/",
+      "freshArrival": true,
+      "freshArrivalRank": 160
     },
     {
       "badge": "Syoss",
@@ -11257,7 +11307,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-bergamot-jasmine-650-ml-c_3135/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-bergamot-jasmine-650-ml-c_3135/",
+      "freshArrival": true,
+      "freshArrivalRank": 75
     },
     {
       "badge": "Felce Azzurra",
@@ -11323,7 +11375,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-coconut-bamboo-650-ml-c_3140/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-coconut-bamboo-650-ml-c_3140/",
+      "freshArrival": true,
+      "freshArrivalRank": 77
     },
     {
       "badge": "Felce Azzurra",
@@ -11389,7 +11443,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-ebony-vanilla-650-ml-c_3143/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-ebony-vanilla-650-ml-c_3143/",
+      "freshArrival": true,
+      "freshArrivalRank": 78
     },
     {
       "badge": "Felce Azzurra",
@@ -11455,7 +11511,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-hibiscus-pink-650-ml-c_3144/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-hibiscus-pink-650-ml-c_3144/",
+      "freshArrival": true,
+      "freshArrivalRank": 79
     },
     {
       "badge": "Felce Azzurra",
@@ -11588,7 +11646,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-white-musk-650-ml-c_3138/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-white-musk-650-ml-c_3138/",
+      "freshArrival": true,
+      "freshArrivalRank": 81
     },
     {
       "badge": "Glysolid",
@@ -11834,7 +11894,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-black-orchid-650-ml-c_3139/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-black-orchid-650-ml-c_3139/",
+      "freshArrival": true,
+      "freshArrivalRank": 76
     },
     {
       "badge": "Glysolid",
@@ -12355,7 +12417,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-amber-argan-650-ml-c_3137/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-amber-argan-650-ml-c_3137/",
+      "freshArrival": true,
+      "freshArrivalRank": 74
     },
     {
       "badge": "Skin Doctor",
@@ -12480,7 +12544,9 @@
       "sectionIds": [
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-intimate-wash-classic-250-ml-c_3156/"
+      "productPagePath": "/product/felce-azzurra-intimate-wash-classic-250-ml-c_3156/",
+      "freshArrival": true,
+      "freshArrivalRank": 56
     },
     {
       "badge": "Skin Doctor",
@@ -12950,7 +13016,9 @@
       "sectionIds": [
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-intimate-wash-fresco-250-ml-c_3157/"
+      "productPagePath": "/product/felce-azzurra-intimate-wash-fresco-250-ml-c_3157/",
+      "freshArrival": true,
+      "freshArrivalRank": 58
     },
     {
       "badge": "Skin Doctor",
@@ -13081,7 +13149,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-sea-salt-650-ml-c_3141/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-sea-salt-650-ml-c_3141/",
+      "freshArrival": true,
+      "freshArrivalRank": 80
     },
     {
       "badge": "Kamill",
@@ -13464,7 +13534,9 @@
       "sectionIds": [
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-intimate-wash-ultra-protect-250-ml-c_3159/"
+      "productPagePath": "/product/felce-azzurra-intimate-wash-ultra-protect-250-ml-c_3159/",
+      "freshArrival": true,
+      "freshArrivalRank": 59
     },
     {
       "badge": "Felce Azzurra",
@@ -13641,7 +13713,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-original-250-ml-c_3146/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-original-250-ml-c_3146/",
+      "freshArrival": true,
+      "freshArrivalRank": 69
     },
     {
       "badge": "D.S",
@@ -13757,7 +13831,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-gold-spice-250-ml-c_3149/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-gold-spice-250-ml-c_3149/",
+      "freshArrival": true,
+      "freshArrivalRank": 67
     },
     {
       "badge": "Felce Azzurra",
@@ -13888,7 +13964,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-mint-lime-250-ml-c_3147/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-mint-lime-250-ml-c_3147/",
+      "freshArrival": true,
+      "freshArrivalRank": 68
     },
     {
       "badge": "Felce Azzurra",
@@ -13956,7 +14034,9 @@
         "bathroom",
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-shower-gel-white-musk-250-ml-c_3148/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-white-musk-250-ml-c_3148/",
+      "freshArrival": true,
+      "freshArrivalRank": 72
     },
     {
       "badge": "Felce Azzurra",
@@ -14019,7 +14099,9 @@
       "sectionIds": [
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-liquid-soap-nourishing-300-ml-c_3162/"
+      "productPagePath": "/product/felce-azzurra-liquid-soap-nourishing-300-ml-c_3162/",
+      "freshArrival": true,
+      "freshArrivalRank": 63
     },
     {
       "badge": "Felce Azzurra",
@@ -14143,7 +14225,9 @@
       "sectionIds": [
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-liquid-soap-300ml-moisturizing-c_3163/"
+      "productPagePath": "/product/felce-azzurra-liquid-soap-300ml-moisturizing-c_3163/",
+      "freshArrival": true,
+      "freshArrivalRank": 62
     },
     {
       "badge": "Felce Azzurra",
@@ -14206,7 +14290,9 @@
       "sectionIds": [
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-liquid-soap-original-300-ml-c_3160/"
+      "productPagePath": "/product/felce-azzurra-liquid-soap-original-300-ml-c_3160/",
+      "freshArrival": true,
+      "freshArrivalRank": 64
     },
     {
       "badge": "Dove",
@@ -18119,7 +18205,9 @@
         "body",
         "perfume"
       ],
-      "productPagePath": "/product/felce-azzurra-deodorant-spray-original-150-ml-c_3096/"
+      "productPagePath": "/product/felce-azzurra-deodorant-spray-original-150-ml-c_3096/",
+      "freshArrival": true,
+      "freshArrivalRank": 52
     },
     {
       "badge": "Felce Azzurra",
@@ -18183,7 +18271,9 @@
         "body",
         "perfume"
       ],
-      "productPagePath": "/product/felce-azzurra-deodorant-spray-fresco-150-ml-c_3097/"
+      "productPagePath": "/product/felce-azzurra-deodorant-spray-fresco-150-ml-c_3097/",
+      "freshArrival": true,
+      "freshArrivalRank": 51
     },
     {
       "badge": "Rexona",
@@ -18423,7 +18513,9 @@
         "body",
         "perfume"
       ],
-      "productPagePath": "/product/felce-azzurra-men-deodorant-spray-cool-blue-150-ml-c_3103/"
+      "productPagePath": "/product/felce-azzurra-men-deodorant-spray-cool-blue-150-ml-c_3103/",
+      "freshArrival": true,
+      "freshArrivalRank": 65
     },
     {
       "badge": "Felce Azzurra",
@@ -18489,7 +18581,9 @@
         "body",
         "perfume"
       ],
-      "productPagePath": "/product/felce-azzurra-men-deodorant-spray-power-fresh-150-ml-c_3104/"
+      "productPagePath": "/product/felce-azzurra-men-deodorant-spray-power-fresh-150-ml-c_3104/",
+      "freshArrival": true,
+      "freshArrivalRank": 66
     },
     {
       "badge": "Lady Speed Stick",
@@ -21703,7 +21797,9 @@
         "bathroom",
         "shaving"
       ],
-      "productPagePath": "/product/fusion-stanok-1-c3c367/"
+      "productPagePath": "/product/fusion-stanok-1-c3c367/",
+      "freshArrival": true,
+      "freshArrivalRank": 155
     },
     {
       "badge": "Gillette",
@@ -24642,7 +24738,9 @@
         "europe"
       ],
       "sectionIds": [],
-      "productPagePath": "/product/felce-azzurra-deo-rollon-50ml-original-c_3099/"
+      "productPagePath": "/product/felce-azzurra-deo-rollon-50ml-original-c_3099/",
+      "freshArrival": true,
+      "freshArrivalRank": 50
     },
     {
       "badge": "Concord",
@@ -25014,7 +25112,9 @@
         "europe"
       ],
       "sectionIds": [],
-      "productPagePath": "/product/felce-azzurra-deo-rollon-50ml-fresco-c_3100/"
+      "productPagePath": "/product/felce-azzurra-deo-rollon-50ml-fresco-c_3100/",
+      "freshArrival": true,
+      "freshArrivalRank": 49
     },
     {
       "badge": "Concord",
@@ -34144,7 +34244,9 @@
         "bathroom",
         "hair"
       ],
-      "productPagePath": "/product/tresemm-clean-replenish-shampun-828-ml-d4b317/"
+      "productPagePath": "/product/tresemm-clean-replenish-shampun-828-ml-d4b317/",
+      "freshArrival": true,
+      "freshArrivalRank": 158
     },
     {
       "badge": "AXE",
@@ -34256,7 +34358,9 @@
         "bathroom",
         "hair"
       ],
-      "productPagePath": "/product/tresemm-color-shampun-828-ml-f59b18/"
+      "productPagePath": "/product/tresemm-color-shampun-828-ml-f59b18/",
+      "freshArrival": true,
+      "freshArrivalRank": 159
     },
     {
       "badge": "Dash",
@@ -34535,7 +34639,9 @@
         "bathroom",
         "shaving"
       ],
-      "productPagePath": "/product/gillette-fusion5-proglide-power-stanok-1-sht-5-smennyh-kasset-e71949/"
+      "productPagePath": "/product/gillette-fusion5-proglide-power-stanok-1-sht-5-smennyh-kasset-e71949/",
+      "freshArrival": true,
+      "freshArrivalRank": 156
     },
     {
       "badge": "The Pink Stuff",
@@ -34599,7 +34705,9 @@
         "bathroom",
         "home"
       ],
-      "productPagePath": "/product/the-pink-stuff-miracle-cleaning-paste-850-g-c_3067/"
+      "productPagePath": "/product/the-pink-stuff-miracle-cleaning-paste-850-g-c_3067/",
+      "freshArrival": true,
+      "freshArrivalRank": 98
     },
     {
       "badge": "The Pink Stuff",
@@ -34665,7 +34773,9 @@
       "sectionIds": [
         "laundry"
       ],
-      "productPagePath": "/product/the-pink-stuff-stain-remover-powder-1kg-whites-c_3077/"
+      "productPagePath": "/product/the-pink-stuff-stain-remover-powder-1kg-whites-c_3077/",
+      "freshArrival": true,
+      "freshArrivalRank": 84
     },
     {
       "badge": "The Pink Stuff",
@@ -34731,7 +34841,9 @@
       "sectionIds": [
         "laundry"
       ],
-      "productPagePath": "/product/the-pink-stuff-stain-remover-powder-1kg-color-c_3078/"
+      "productPagePath": "/product/the-pink-stuff-stain-remover-powder-1kg-color-c_3078/",
+      "freshArrival": true,
+      "freshArrivalRank": 83
     },
     {
       "badge": "The Pink Stuff",
@@ -34791,7 +34903,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/the-pink-stuff-carpet-upholstery-cleaner-500ml-c_3086/"
+      "productPagePath": "/product/the-pink-stuff-carpet-upholstery-cleaner-500ml-c_3086/",
+      "freshArrival": true,
+      "freshArrivalRank": 87
     },
     {
       "badge": "The Pink Stuff",
@@ -34856,7 +34970,9 @@
         "kitchen",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-nabor-s-elektroschetkoy-c_3087/"
+      "productPagePath": "/product/the-pink-stuff-nabor-s-elektroschetkoy-c_3087/",
+      "freshArrival": true,
+      "freshArrivalRank": 106
     },
     {
       "badge": "The Pink Stuff",
@@ -34922,7 +35038,9 @@
         "kitchen",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-sponge-dual-c_3088/"
+      "productPagePath": "/product/the-pink-stuff-sponge-dual-c_3088/",
+      "freshArrival": true,
+      "freshArrivalRank": 108
     },
     {
       "badge": "The Pink Stuff",
@@ -34985,7 +35103,9 @@
         "kitchen",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-squeezy-gubka-skrabber-c_3089/"
+      "productPagePath": "/product/the-pink-stuff-squeezy-gubka-skrabber-c_3089/",
+      "freshArrival": true,
+      "freshArrivalRank": 107
     },
     {
       "badge": "The Pink Stuff",
@@ -35045,7 +35165,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/the-pink-stuff-microfiber-cloth-3pcs-c_3091/"
+      "productPagePath": "/product/the-pink-stuff-microfiber-cloth-3pcs-c_3091/",
+      "freshArrival": true,
+      "freshArrivalRank": 104
     },
     {
       "badge": "The Pink Stuff",
@@ -35110,7 +35232,9 @@
         "kitchen",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-cleaning-wipes-72pcs-multi-purpose-c_3093/"
+      "productPagePath": "/product/the-pink-stuff-cleaning-wipes-72pcs-multi-purpose-c_3093/",
+      "freshArrival": true,
+      "freshArrivalRank": 91
     },
     {
       "badge": "The Pink Stuff",
@@ -35174,7 +35298,9 @@
         "kitchen",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-floor-wipes-20pcs-c_3094/"
+      "productPagePath": "/product/the-pink-stuff-floor-wipes-20pcs-c_3094/",
+      "freshArrival": true,
+      "freshArrivalRank": 103
     },
     {
       "badge": "The Pink Stuff",
@@ -35239,7 +35365,9 @@
         "kitchen",
         "bathroom"
       ],
-      "productPagePath": "/product/the-pink-stuff-paste-850g-sqeezy-kit-c_3095/"
+      "productPagePath": "/product/the-pink-stuff-paste-850g-sqeezy-kit-c_3095/",
+      "freshArrival": true,
+      "freshArrivalRank": 99
     },
     {
       "badge": "Felce Azzurra",
@@ -35298,7 +35426,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/felce-azzurra-fragrance-bags-3pcs-lavanda-iris-c_3120/"
+      "productPagePath": "/product/felce-azzurra-fragrance-bags-3pcs-lavanda-iris-c_3120/",
+      "freshArrival": true,
+      "freshArrivalRank": 54
     },
     {
       "badge": "Felce Azzurra",
@@ -35361,7 +35491,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/felce-azzurra-fragrance-bags-classico-3-pcs-c_3121/"
+      "productPagePath": "/product/felce-azzurra-fragrance-bags-classico-3-pcs-c_3121/",
+      "freshArrival": true,
+      "freshArrivalRank": 53
     },
     {
       "badge": "Felce Azzurra",
@@ -35426,7 +35558,9 @@
       "sectionIds": [
         "home"
       ],
-      "productPagePath": "/product/felce-azzurra-fragrance-bags-rose-lotus-3-pcs-c_3122/"
+      "productPagePath": "/product/felce-azzurra-fragrance-bags-rose-lotus-3-pcs-c_3122/",
+      "freshArrival": true,
+      "freshArrivalRank": 55
     },
     {
       "badge": "Felce Azzurra",
@@ -35488,7 +35622,9 @@
       "sectionIds": [
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-bar-soap-classic-100-g-c_3153/"
+      "productPagePath": "/product/felce-azzurra-bar-soap-classic-100-g-c_3153/",
+      "freshArrival": true,
+      "freshArrivalRank": 46
     },
     {
       "badge": "Felce Azzurra",
@@ -35552,7 +35688,9 @@
       "sectionIds": [
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-bar-soap-fresh-100-g-c_3154/"
+      "productPagePath": "/product/felce-azzurra-bar-soap-fresh-100-g-c_3154/",
+      "freshArrival": true,
+      "freshArrivalRank": 47
     },
     {
       "badge": "Felce Azzurra",
@@ -35617,7 +35755,9 @@
       "sectionIds": [
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-bar-soap-white-musk-100-g-c_3155/"
+      "productPagePath": "/product/felce-azzurra-bar-soap-white-musk-100-g-c_3155/",
+      "freshArrival": true,
+      "freshArrivalRank": 48
     },
     {
       "badge": "Felce Azzurra",
@@ -35674,7 +35814,9 @@
       "sectionIds": [
         "body"
       ],
-      "productPagePath": "/product/felce-azzurra-intim-wash-250ml-delicato-c_3158/"
+      "productPagePath": "/product/felce-azzurra-intim-wash-250ml-delicato-c_3158/",
+      "freshArrival": true,
+      "freshArrivalRank": 57
     },
     {
       "badge": "Finish",
@@ -36213,7 +36355,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-platinum-touch-of-lenor-4-55-kg-70-stirok-c_3255/"
+      "productPagePath": "/product/ariel-platinum-touch-of-lenor-4-55-kg-70-stirok-c_3255/",
+      "freshArrival": true,
+      "freshArrivalRank": 110
     },
     {
       "badge": "Ariel",
@@ -36268,7 +36412,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-platinum-extra-stain-removal-5-85-kg-90-stirok-c_3256/"
+      "productPagePath": "/product/ariel-platinum-extra-stain-removal-5-85-kg-90-stirok-c_3256/",
+      "freshArrival": true,
+      "freshArrivalRank": 111
     },
     {
       "badge": "Ariel",
@@ -36325,7 +36471,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-instant-dissolution-color-8-45-kg-130-stirok-c_3257/"
+      "productPagePath": "/product/ariel-instant-dissolution-color-8-45-kg-130-stirok-c_3257/",
+      "freshArrival": true,
+      "freshArrivalRank": 112
     },
     {
       "badge": "Ariel",
@@ -36379,7 +36527,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-color-stiralnyy-poroshok-9-1-kg-140-stirok-c_3258/"
+      "productPagePath": "/product/ariel-color-stiralnyy-poroshok-9-1-kg-140-stirok-c_3258/",
+      "freshArrival": true,
+      "freshArrivalRank": 113
     },
     {
       "badge": "Ariel",
@@ -36437,7 +36587,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-instant-dissolution-dlya-belogo-i-tsvetnogo-9-75-kg-130-stirok-c_3259/"
+      "productPagePath": "/product/ariel-instant-dissolution-dlya-belogo-i-tsvetnogo-9-75-kg-130-stirok-c_3259/",
+      "freshArrival": true,
+      "freshArrivalRank": 114
     },
     {
       "badge": "Ariel",
@@ -36492,7 +36644,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-3-v-1-original-38-kapsul-c_3242/"
+      "productPagePath": "/product/ariel-pods-3-v-1-original-38-kapsul-c_3242/",
+      "freshArrival": true,
+      "freshArrivalRank": 115
     },
     {
       "badge": "Ariel",
@@ -36547,7 +36701,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-professional-color-44-kapsuly-c_3244/"
+      "productPagePath": "/product/ariel-professional-color-44-kapsuly-c_3244/",
+      "freshArrival": true,
+      "freshArrivalRank": 116
     },
     {
       "badge": "Ariel",
@@ -36604,7 +36760,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-44-sht-extra-stain-removal-allin1-c_3246/"
+      "productPagePath": "/product/ariel-pods-44-sht-extra-stain-removal-allin1-c_3246/",
+      "freshArrival": true,
+      "freshArrivalRank": 117
     },
     {
       "badge": "Ariel",
@@ -36659,7 +36817,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-44-sht-original-todoen1-c_3243/"
+      "productPagePath": "/product/ariel-pods-44-sht-original-todoen1-c_3243/",
+      "freshArrival": true,
+      "freshArrivalRank": 118
     },
     {
       "badge": "Ariel",
@@ -36714,7 +36874,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-platinum-lenor-44-kapsuly-c_3245/"
+      "productPagePath": "/product/ariel-pods-platinum-lenor-44-kapsuly-c_3245/",
+      "freshArrival": true,
+      "freshArrivalRank": 119
     },
     {
       "badge": "Ariel",
@@ -36772,7 +36934,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-all-in-1-color-50-kapsul-c_3248/"
+      "productPagePath": "/product/ariel-pods-all-in-1-color-50-kapsul-c_3248/",
+      "freshArrival": true,
+      "freshArrivalRank": 3
     },
     {
       "badge": "Ariel",
@@ -36828,7 +36992,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-professional-original-50-kapsul-c_3247/"
+      "productPagePath": "/product/ariel-pods-professional-original-50-kapsul-c_3247/",
+      "freshArrival": true,
+      "freshArrivalRank": 120
     },
     {
       "badge": "Ariel",
@@ -36887,7 +37053,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-all-in-1-lenor-anti-odor-60-kapsul-c_3250/"
+      "productPagePath": "/product/ariel-pods-all-in-1-lenor-anti-odor-60-kapsul-c_3250/",
+      "freshArrival": true,
+      "freshArrivalRank": 121
     },
     {
       "badge": "Ariel",
@@ -36945,7 +37113,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-all-in-1-mountain-spring-60-kapsul-c_3249/"
+      "productPagePath": "/product/ariel-pods-all-in-1-mountain-spring-60-kapsul-c_3249/",
+      "freshArrival": true,
+      "freshArrivalRank": 122
     },
     {
       "badge": "Ariel",
@@ -37001,7 +37171,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-3-v-1-alpine-lavage-65-kapsul-c_3252/"
+      "productPagePath": "/product/ariel-pods-3-v-1-alpine-lavage-65-kapsul-c_3252/",
+      "freshArrival": true,
+      "freshArrivalRank": 123
     },
     {
       "badge": "Ariel",
@@ -37059,7 +37231,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-all-in-1-color-65-kapsul-c_3253/"
+      "productPagePath": "/product/ariel-pods-all-in-1-color-65-kapsul-c_3253/",
+      "freshArrival": true,
+      "freshArrivalRank": 124
     },
     {
       "badge": "Ariel",
@@ -37118,7 +37292,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-pods-all-in-1-mountain-spring-stain-65-kapsul-c_3251/"
+      "productPagePath": "/product/ariel-pods-all-in-1-mountain-spring-stain-65-kapsul-c_3251/",
+      "freshArrival": true,
+      "freshArrivalRank": 125
     },
     {
       "badge": "Ariel",
@@ -37173,7 +37349,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/ariel-professional-original-70-kapsul-c_3254/"
+      "productPagePath": "/product/ariel-professional-original-70-kapsul-c_3254/",
+      "freshArrival": true,
+      "freshArrivalRank": 126
     },
     {
       "badge": "Lenor",
@@ -37227,7 +37405,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/lenor-unstoppables-fresh-210-g-c_3290/"
+      "productPagePath": "/product/lenor-unstoppables-fresh-210-g-c_3290/",
+      "freshArrival": true,
+      "freshArrivalRank": 18
     },
     {
       "badge": "Lenor",
@@ -37283,7 +37463,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/lenor-unstoppables-bluebells-wild-berries-275-g-c_3289/"
+      "productPagePath": "/product/lenor-unstoppables-bluebells-wild-berries-275-g-c_3289/",
+      "freshArrival": true,
+      "freshArrivalRank": 19
     },
     {
       "badge": "Lenor",
@@ -37339,7 +37521,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/lenor-konditsioner-dlya-belya-alpine-fresh-504-g-36-stirok-c_3284/"
+      "productPagePath": "/product/lenor-konditsioner-dlya-belya-alpine-fresh-504-g-36-stirok-c_3284/",
+      "freshArrival": true,
+      "freshArrivalRank": 20
     },
     {
       "badge": "Lenor",
@@ -37395,7 +37579,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/lenor-softener-504g-eclat-de-minuit-36-c_3286/"
+      "productPagePath": "/product/lenor-softener-504g-eclat-de-minuit-36-c_3286/",
+      "freshArrival": true,
+      "freshArrivalRank": 21
     },
     {
       "badge": "Lenor",
@@ -37450,7 +37636,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/lenor-konditsioner-dlya-belya-moonlight-lily-504-g-36-stirok-c_3285/"
+      "productPagePath": "/product/lenor-konditsioner-dlya-belya-moonlight-lily-504-g-36-stirok-c_3285/",
+      "freshArrival": true,
+      "freshArrivalRank": 22
     },
     {
       "badge": "Lenor",
@@ -37503,7 +37691,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/lenor-sensitive-konditsioner-dlya-belya-504-g-c_3287/"
+      "productPagePath": "/product/lenor-sensitive-konditsioner-dlya-belya-504-g-c_3287/",
+      "freshArrival": true,
+      "freshArrivalRank": 23
     },
     {
       "badge": "Lenor",
@@ -37558,7 +37748,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/lenor-softener-840g-alpine-breeze-60-c_3288/"
+      "productPagePath": "/product/lenor-softener-840g-alpine-breeze-60-c_3288/",
+      "freshArrival": true,
+      "freshArrivalRank": 24
     },
     {
       "badge": "Lenor",
@@ -37610,7 +37802,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/lenor-wahsing-liquid-900ml-sensitive-cotton-c_3291/"
+      "productPagePath": "/product/lenor-wahsing-liquid-900ml-sensitive-cotton-c_3291/",
+      "freshArrival": true,
+      "freshArrivalRank": 25
     },
     {
       "badge": "_",
@@ -37661,7 +37855,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/vanish-stain-remover-750g-pink-powder-c_3292/"
+      "productPagePath": "/product/vanish-stain-remover-750g-pink-powder-c_3292/",
+      "freshArrival": true,
+      "freshArrivalRank": 26
     },
     {
       "badge": "Vanish",
@@ -37715,7 +37911,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/vanish-oxi-action-white-gel-pyatnovyvoditel-750-ml-c_3293/"
+      "productPagePath": "/product/vanish-oxi-action-white-gel-pyatnovyvoditel-750-ml-c_3293/",
+      "freshArrival": true,
+      "freshArrivalRank": 27
     },
     {
       "badge": "Fa",
@@ -37766,7 +37964,9 @@
         "телом"
       ],
       "collections": [],
-      "productPagePath": "/product/fa-men-attraction-force-gel-dlya-dusha-250-ml-c_3277/"
+      "productPagePath": "/product/fa-men-attraction-force-gel-dlya-dusha-250-ml-c_3277/",
+      "freshArrival": true,
+      "freshArrivalRank": 28
     },
     {
       "badge": "Fa",
@@ -37817,7 +38017,9 @@
         "телом"
       ],
       "collections": [],
-      "productPagePath": "/product/fa-men-caribbean-wave-gel-dlya-dusha-250-ml-c_3280/"
+      "productPagePath": "/product/fa-men-caribbean-wave-gel-dlya-dusha-250-ml-c_3280/",
+      "freshArrival": true,
+      "freshArrivalRank": 29
     },
     {
       "badge": "Fa",
@@ -37867,7 +38069,9 @@
         "телом"
       ],
       "collections": [],
-      "productPagePath": "/product/fa-gel-dush-men-250-lemon-fresh-c_3281/"
+      "productPagePath": "/product/fa-gel-dush-men-250-lemon-fresh-c_3281/",
+      "freshArrival": true,
+      "freshArrivalRank": 30
     },
     {
       "badge": "Fa",
@@ -37917,7 +38121,9 @@
         "телом"
       ],
       "collections": [],
-      "productPagePath": "/product/fa-men-speedster-gel-dlya-dusha-250-ml-c_3278/"
+      "productPagePath": "/product/fa-men-speedster-gel-dlya-dusha-250-ml-c_3278/",
+      "freshArrival": true,
+      "freshArrivalRank": 31
     },
     {
       "badge": "Fa",
@@ -37968,7 +38174,9 @@
         "телом"
       ],
       "collections": [],
-      "productPagePath": "/product/fa-men-xtra-cool-gel-dlya-dusha-250-ml-c_3279/"
+      "productPagePath": "/product/fa-men-xtra-cool-gel-dlya-dusha-250-ml-c_3279/",
+      "freshArrival": true,
+      "freshArrivalRank": 32
     },
     {
       "badge": "Air Wick",
@@ -38021,7 +38229,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/air-wick-pure-cotton-orchid-250-ml-c_3273/"
+      "productPagePath": "/product/air-wick-pure-cotton-orchid-250-ml-c_3273/",
+      "freshArrival": true,
+      "freshArrivalRank": 33
     },
     {
       "badge": "Air Wick",
@@ -38075,7 +38285,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/air-wick-pure-jasmine-flower-peony-250-ml-c_3274/"
+      "productPagePath": "/product/air-wick-pure-jasmine-flower-peony-250-ml-c_3274/",
+      "freshArrival": true,
+      "freshArrivalRank": 34
     },
     {
       "badge": "Air Wick",
@@ -38129,7 +38341,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/air-wick-pure-lavender-bluebells-250-ml-c_3275/"
+      "productPagePath": "/product/air-wick-pure-lavender-bluebells-250-ml-c_3275/",
+      "freshArrival": true,
+      "freshArrivalRank": 35
     },
     {
       "badge": "Air Wick",
@@ -38183,7 +38397,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/air-wick-pure-vanilla-shea-butter-250-ml-c_3276/"
+      "productPagePath": "/product/air-wick-pure-vanilla-shea-butter-250-ml-c_3276/",
+      "freshArrival": true,
+      "freshArrivalRank": 36
     },
     {
       "badge": "Lenor",
@@ -38441,7 +38657,9 @@
         "бритье"
       ],
       "collections": [],
-      "productPagePath": "/product/gillette-satin-care-avocado-twist-200-ml-c_3282/"
+      "productPagePath": "/product/gillette-satin-care-avocado-twist-200-ml-c_3282/",
+      "freshArrival": true,
+      "freshArrivalRank": 37
     },
     {
       "badge": "Gillette",
@@ -38493,7 +38711,9 @@
         "бритье"
       ],
       "collections": [],
-      "productPagePath": "/product/gillette-satin-care-lavender-touch-200-ml-c_3283/"
+      "productPagePath": "/product/gillette-satin-care-lavender-touch-200-ml-c_3283/",
+      "freshArrival": true,
+      "freshArrivalRank": 38
     },
     {
       "badge": "_",
@@ -38537,7 +38757,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-backofen-375-dlya-duhovok-c_3233/"
+      "productPagePath": "/product/dr-beckmann-backofen-375-dlya-duhovok-c_3233/",
+      "freshArrival": true,
+      "freshArrivalRank": 127
     },
     {
       "badge": "_",
@@ -38588,7 +38810,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-care-protection-250-chist-stir-mash-c_3230/"
+      "productPagePath": "/product/dr-beckmann-care-protection-250-chist-stir-mash-c_3230/",
+      "freshArrival": true,
+      "freshArrivalRank": 128
     },
     {
       "badge": "Dr. Beckmann",
@@ -38639,7 +38863,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-sredstvo-ot-sledov-dezodoranta-i-pota-250-ml-c_3235/"
+      "productPagePath": "/product/dr-beckmann-sredstvo-ot-sledov-dezodoranta-i-pota-250-ml-c_3235/",
+      "freshArrival": true,
+      "freshArrivalRank": 129
     },
     {
       "badge": "Dr. Beckmann",
@@ -38688,7 +38914,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-ochistitel-posudomoechnoy-mashiny-75-g-c_3238/"
+      "productPagePath": "/product/dr-beckmann-ochistitel-posudomoechnoy-mashiny-75-g-c_3238/",
+      "freshArrival": true,
+      "freshArrivalRank": 130
     },
     {
       "badge": "Dr. Beckmann",
@@ -38741,7 +38969,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-fleckenteufel-krov-i-belkovye-pyatna-50-ml-c_3222/"
+      "productPagePath": "/product/dr-beckmann-fleckenteufel-krov-i-belkovye-pyatna-50-ml-c_3222/",
+      "freshArrival": true,
+      "freshArrivalRank": 131
     },
     {
       "badge": "Dr. Beckmann",
@@ -38791,7 +39021,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-fleckenteufel-ofis-i-dom-50-ml-c_3223/"
+      "productPagePath": "/product/dr-beckmann-fleckenteufel-ofis-i-dom-50-ml-c_3223/",
+      "freshArrival": true,
+      "freshArrivalRank": 132
     },
     {
       "badge": "Dr. Beckmann",
@@ -38841,7 +39073,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-fleckenteufel-dezodorant-i-rzhavchina-50-ml-c_3221/"
+      "productPagePath": "/product/dr-beckmann-fleckenteufel-dezodorant-i-rzhavchina-50-ml-c_3221/",
+      "freshArrival": true,
+      "freshArrivalRank": 133
     },
     {
       "badge": "Dr. Beckmann",
@@ -38892,7 +39126,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-fleckenteufel-kosmetika-50-ml-c_3226/"
+      "productPagePath": "/product/dr-beckmann-fleckenteufel-kosmetika-50-ml-c_3226/",
+      "freshArrival": true,
+      "freshArrivalRank": 134
     },
     {
       "badge": "Dr. Beckmann",
@@ -38942,7 +39178,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-fleckenteufel-maslo-i-smazka-50-ml-c_3224/"
+      "productPagePath": "/product/dr-beckmann-fleckenteufel-maslo-i-smazka-50-ml-c_3224/",
+      "freshArrival": true,
+      "freshArrivalRank": 135
     },
     {
       "badge": "Dr. Beckmann",
@@ -38994,7 +39232,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-fleckenteufel-chernila-i-kley-50-ml-c_3225/"
+      "productPagePath": "/product/dr-beckmann-fleckenteufel-chernila-i-kley-50-ml-c_3225/",
+      "freshArrival": true,
+      "freshArrivalRank": 136
     },
     {
       "badge": "Dr. Beckmann",
@@ -39042,7 +39282,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-ochistitel-steklokeramiki-250-g-c_3240/"
+      "productPagePath": "/product/dr-beckmann-ochistitel-steklokeramiki-250-g-c_3240/",
+      "freshArrival": true,
+      "freshArrivalRank": 137
     },
     {
       "badge": "Dr. Beckmann",
@@ -39090,7 +39332,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-skrebok-dlya-steklokeramicheskoy-plity-c_3236/"
+      "productPagePath": "/product/dr-beckmann-skrebok-dlya-steklokeramicheskoy-plity-c_3236/",
+      "freshArrival": true,
+      "freshArrivalRank": 138
     },
     {
       "badge": "_",
@@ -39134,7 +39378,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-intensiv-glas-250-dlya-plit-c_3231/"
+      "productPagePath": "/product/dr-beckmann-intensiv-glas-250-dlya-plit-c_3231/",
+      "freshArrival": true,
+      "freshArrivalRank": 139
     },
     {
       "badge": "Dr. Beckmann",
@@ -39187,7 +39433,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-salfetki-dlya-intensivnogo-chernogo-8-sht-c_3241/"
+      "productPagePath": "/product/dr-beckmann-salfetki-dlya-intensivnogo-chernogo-8-sht-c_3241/",
+      "freshArrival": true,
+      "freshArrivalRank": 140
     },
     {
       "badge": "Dr. Beckmann",
@@ -39235,7 +39483,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-tabletki-dlya-ochistki-kofemashin-6-sht-c_3229/"
+      "productPagePath": "/product/dr-beckmann-tabletki-dlya-ochistki-kofemashin-6-sht-c_3229/",
+      "freshArrival": true,
+      "freshArrivalRank": 141
     },
     {
       "badge": "Dr. Beckmann",
@@ -39283,7 +39533,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-ochistitel-holodilnika-250-ml-c_3234/"
+      "productPagePath": "/product/dr-beckmann-ochistitel-holodilnika-250-ml-c_3234/",
+      "freshArrival": true,
+      "freshArrivalRank": 142
     },
     {
       "badge": "Dr. Beckmann",
@@ -39333,7 +39585,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-osvezhitel-dlya-holodilnika-40-g-c_3239/"
+      "productPagePath": "/product/dr-beckmann-osvezhitel-dlya-holodilnika-40-g-c_3239/",
+      "freshArrival": true,
+      "freshArrivalRank": 143
     },
     {
       "badge": "Dr. Beckmann",
@@ -39381,7 +39635,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-mylo-ot-pyaten-100-g-c_3237/"
+      "productPagePath": "/product/dr-beckmann-mylo-ot-pyaten-100-g-c_3237/",
+      "freshArrival": true,
+      "freshArrivalRank": 144
     },
     {
       "badge": "Dr. Beckmann",
@@ -39436,7 +39692,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-super-white-2-x-40-g-c_3228/"
+      "productPagePath": "/product/dr-beckmann-super-white-2-x-40-g-c_3228/",
+      "freshArrival": true,
+      "freshArrivalRank": 145
     },
     {
       "badge": "Dr. Beckmann",
@@ -39487,7 +39745,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-ochistitel-myagkoy-mebeli-400-ml-c_3232/"
+      "productPagePath": "/product/dr-beckmann-ochistitel-myagkoy-mebeli-400-ml-c_3232/",
+      "freshArrival": true,
+      "freshArrivalRank": 146
     },
     {
       "badge": "Dr. Beckmann",
@@ -39541,7 +39801,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-salfetki-dlya-stirki-sensitive-25-listov-c_3215/"
+      "productPagePath": "/product/dr-beckmann-salfetki-dlya-stirki-sensitive-25-listov-c_3215/",
+      "freshArrival": true,
+      "freshArrivalRank": 147
     },
     {
       "badge": "Dr. Beckmann",
@@ -39593,7 +39855,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-salfetki-dlya-stirki-universal-25-listov-c_3214/"
+      "productPagePath": "/product/dr-beckmann-salfetki-dlya-stirki-universal-25-listov-c_3214/",
+      "freshArrival": true,
+      "freshArrivalRank": 148
     },
     {
       "badge": "Gillette",
@@ -39640,7 +39904,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-washing-machine-cleaner-250ml-vinegar-c_3227/"
+      "productPagePath": "/product/dr-beckmann-washing-machine-cleaner-250ml-vinegar-c_3227/",
+      "freshArrival": true,
+      "freshArrivalRank": 149
     },
     {
       "badge": "Dr. Beckmann",
@@ -39694,7 +39960,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-wc-reinigungst-cher-citrus-20-listov-c_3219/"
+      "productPagePath": "/product/dr-beckmann-wc-reinigungst-cher-citrus-20-listov-c_3219/",
+      "freshArrival": true,
+      "freshArrivalRank": 150
     },
     {
       "badge": "Dr. Beckmann",
@@ -39749,7 +40017,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-wc-reinigungst-cher-ocean-breeze-20-listov-c_3218/"
+      "productPagePath": "/product/dr-beckmann-wc-reinigungst-cher-ocean-breeze-20-listov-c_3218/",
+      "freshArrival": true,
+      "freshArrivalRank": 151
     },
     {
       "badge": "Dr. Beckmann",
@@ -39801,7 +40071,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-wc-schaum-citrus-3-x-100-g-c_3220/"
+      "productPagePath": "/product/dr-beckmann-wc-schaum-citrus-3-x-100-g-c_3220/",
+      "freshArrival": true,
+      "freshArrivalRank": 152
     },
     {
       "badge": "Dr. Beckmann",
@@ -39858,7 +40130,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-salfetki-konditsioner-fr-hlingfrisch-28-listov-c_3216/"
+      "productPagePath": "/product/dr-beckmann-salfetki-konditsioner-fr-hlingfrisch-28-listov-c_3216/",
+      "freshArrival": true,
+      "freshArrivalRank": 153
     },
     {
       "badge": "Dr. Beckmann",
@@ -39914,7 +40188,9 @@
         "бельем"
       ],
       "collections": [],
-      "productPagePath": "/product/dr-beckmann-salfetki-konditsioner-sommerbl-te-28-listov-c_3217/"
+      "productPagePath": "/product/dr-beckmann-salfetki-konditsioner-sommerbl-te-28-listov-c_3217/",
+      "freshArrival": true,
+      "freshArrivalRank": 154
     },
     {
       "badge": "Felce Azzurra",
@@ -39963,7 +40239,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-diffuzor-classico-125-ml-c_3300/"
+      "productPagePath": "/product/felce-azzurra-diffuzor-classico-125-ml-c_3300/",
+      "freshArrival": true,
+      "freshArrivalRank": 4
     },
     {
       "badge": "Felce Azzurra",
@@ -40013,7 +40291,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-diffuzor-moon-flowers-125-ml-c_3303/"
+      "productPagePath": "/product/felce-azzurra-diffuzor-moon-flowers-125-ml-c_3303/",
+      "freshArrival": true,
+      "freshArrivalRank": 5
     },
     {
       "badge": "Felce Azzurra",
@@ -40066,7 +40346,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-diffuzor-white-tea-osmanthus-125-ml-c_3301/"
+      "productPagePath": "/product/felce-azzurra-diffuzor-white-tea-osmanthus-125-ml-c_3301/",
+      "freshArrival": true,
+      "freshArrivalRank": 6
     },
     {
       "badge": "_",
@@ -40118,7 +40400,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-freshener-gel-140g-cherry-bloss-c_3269/"
+      "productPagePath": "/product/felce-azzurra-air-freshener-gel-140g-cherry-bloss-c_3269/",
+      "freshArrival": true,
+      "freshArrivalRank": 39
     },
     {
       "badge": "_",
@@ -40170,7 +40454,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-freshener-gel-140g-summer-night-c_3271/"
+      "productPagePath": "/product/felce-azzurra-air-freshener-gel-140g-summer-night-c_3271/",
+      "freshArrival": true,
+      "freshArrivalRank": 43
     },
     {
       "badge": "_",
@@ -40219,7 +40505,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-freshener-gel-140g-white-musk-c_3270/"
+      "productPagePath": "/product/felce-azzurra-air-freshener-gel-140g-white-musk-c_3270/",
+      "freshArrival": true,
+      "freshArrivalRank": 45
     },
     {
       "badge": "_",
@@ -40264,7 +40552,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-room-electric-20g-classic-c_3294/"
+      "productPagePath": "/product/felce-azzurra-air-room-electric-20g-classic-c_3294/",
+      "freshArrival": true,
+      "freshArrivalRank": 7
     },
     {
       "badge": "_",
@@ -40310,7 +40600,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-room-refill-20g-cherry-blossom-c_3296/"
+      "productPagePath": "/product/felce-azzurra-air-room-refill-20g-cherry-blossom-c_3296/",
+      "freshArrival": true,
+      "freshArrivalRank": 8
     },
     {
       "badge": "_",
@@ -40358,7 +40650,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-room-refill-20g-lavender-iris-c_3295/"
+      "productPagePath": "/product/felce-azzurra-air-room-refill-20g-lavender-iris-c_3295/",
+      "freshArrival": true,
+      "freshArrivalRank": 9
     },
     {
       "badge": "_",
@@ -40404,7 +40698,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-room-refill-20g-moon-flowers-c_3299/"
+      "productPagePath": "/product/felce-azzurra-air-room-refill-20g-moon-flowers-c_3299/",
+      "freshArrival": true,
+      "freshArrivalRank": 10
     },
     {
       "badge": "_",
@@ -40449,7 +40745,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-room-refill-20g-vanilla-c_3298/"
+      "productPagePath": "/product/felce-azzurra-air-room-refill-20g-vanilla-c_3298/",
+      "freshArrival": true,
+      "freshArrivalRank": 11
     },
     {
       "badge": "_",
@@ -40497,7 +40795,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-room-refill-20g-white-musk-c_3297/"
+      "productPagePath": "/product/felce-azzurra-air-room-refill-20g-white-musk-c_3297/",
+      "freshArrival": true,
+      "freshArrivalRank": 12
     },
     {
       "badge": "_",
@@ -40542,7 +40842,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-spray-refill-250ml-bamboo-c_3306/"
+      "productPagePath": "/product/felce-azzurra-air-spray-refill-250ml-bamboo-c_3306/",
+      "freshArrival": true,
+      "freshArrivalRank": 13
     },
     {
       "badge": "_",
@@ -40587,7 +40889,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-spray-refill-250ml-classic-c_3304/"
+      "productPagePath": "/product/felce-azzurra-air-spray-refill-250ml-classic-c_3304/",
+      "freshArrival": true,
+      "freshArrivalRank": 14
     },
     {
       "badge": "_",
@@ -40633,7 +40937,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-spray-refill-250ml-moon-flower-c_3308/"
+      "productPagePath": "/product/felce-azzurra-air-spray-refill-250ml-moon-flower-c_3308/",
+      "freshArrival": true,
+      "freshArrivalRank": 15
     },
     {
       "badge": "_",
@@ -40679,7 +40985,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-spray-refill-250ml-sea-salt-c_3307/"
+      "productPagePath": "/product/felce-azzurra-air-spray-refill-250ml-sea-salt-c_3307/",
+      "freshArrival": true,
+      "freshArrivalRank": 16
     },
     {
       "badge": "_",
@@ -40727,7 +41035,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-air-spray-refill-250ml-white-tea-c_3305/"
+      "productPagePath": "/product/felce-azzurra-air-spray-refill-250ml-white-tea-c_3305/",
+      "freshArrival": true,
+      "freshArrivalRank": 17
     },
     {
       "badge": "_",
@@ -40772,7 +41082,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-shower-gel-250ml-shea-butter-c_3264/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-250ml-shea-butter-c_3264/",
+      "freshArrival": true,
+      "freshArrivalRank": 70
     },
     {
       "badge": "_",
@@ -40817,7 +41129,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-shower-gel-250ml-special-aran-c_3263/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-250ml-special-aran-c_3263/",
+      "freshArrival": true,
+      "freshArrivalRank": 71
     },
     {
       "badge": "_",
@@ -40864,7 +41178,9 @@
         "разное"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-shower-gel-650ml-almond-white-c_3262/"
+      "productPagePath": "/product/felce-azzurra-shower-gel-650ml-almond-white-c_3262/",
+      "freshArrival": true,
+      "freshArrivalRank": 73
     },
     {
       "badge": "Felce Azzurra",
@@ -40914,7 +41230,9 @@
         "телом"
       ],
       "collections": [],
-      "productPagePath": "/product/felce-azzurra-talk-classic-200-g-c_3265/"
+      "productPagePath": "/product/felce-azzurra-talk-classic-200-g-c_3265/",
+      "freshArrival": true,
+      "freshArrivalRank": 82
     },
     {
       "badge": "_",
@@ -40960,7 +41278,9 @@
         "чистота"
       ],
       "collections": [],
-      "productPagePath": "/product/the-pink-stuff-750ml-platinum-kitchen-cleaner-c_3261/"
+      "productPagePath": "/product/the-pink-stuff-750ml-platinum-kitchen-cleaner-c_3261/",
+      "freshArrival": true,
+      "freshArrivalRank": 95
     },
     {
       "badge": "_",
@@ -41023,7 +41343,9 @@
         "bathroom",
         "home"
       ],
-      "productPagePath": "/product/the-pink-stuff-power-active-blok-dlya-unitaza-2x40-g-c_3260/"
+      "productPagePath": "/product/the-pink-stuff-power-active-blok-dlya-unitaza-2x40-g-c_3260/",
+      "freshArrival": true,
+      "freshArrivalRank": 109
     }
   ]
 }

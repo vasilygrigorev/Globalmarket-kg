@@ -34,12 +34,20 @@ def parse_args() -> argparse.Namespace:
         dest="receipt_reports",
         type=Path,
     )
+    parser.add_argument(
+        "--receipt-ledger",
+        action="append",
+        dest="receipt_ledgers",
+        type=Path,
+        default=[],
+    )
     parser.add_argument("--audit", required=True, type=Path)
     parser.add_argument("--manifest", required=True, type=Path)
     parser.add_argument("--release-id", required=True)
     parser.add_argument("--expected-base-group-count", type=int, default=16)
     parser.add_argument("--expected-fresh-count", type=int)
     parser.add_argument("--expected-source-report-count", type=int)
+    parser.add_argument("--expected-receipt-ledger-count", type=int)
     parser.add_argument(
         "--allow-photo-only-product-changes",
         action="store_true",
@@ -133,6 +141,18 @@ def main() -> None:
     documents, report_period, report_sources = fresh.parse_receipt_reports(
         args.receipt_reports
     )
+    ledger_documents, ledger_sources = fresh.parse_receipt_ledgers(args.receipt_ledgers)
+    if ledger_documents:
+        ledger_period = {
+            "start": min(item["date"] for item in ledger_documents),
+            "end": max(item["date"] for item in ledger_documents),
+            "invalidReceiptRows": 0,
+            "incompletePriceReceiptRows": 0,
+            "sourceReportCount": 0,
+        }
+        documents, report_period = fresh.merge_receipt_document_sets(
+            [documents, ledger_documents], [report_period, ledger_period]
+        )
     selected, boundary = fresh.select_receipts(documents, report_period)
     expected_ids, expected_missing = fresh.expected_fresh_product_ids(catalog, selected)
     require(product_ids == expected_ids, "Fresh-arrivals set or order differs from the 1C rule")
@@ -161,6 +181,15 @@ def main() -> None:
         catalog.get("freshArrivals", {}).get("sourceReports") == report_sources,
         "Catalog fresh-arrivals metadata lost a report snapshot",
     )
+    require(
+        audit.get("authoritativeReceiptLedgers") == ledger_sources,
+        "Fresh-arrivals audit has stale authoritative receipt evidence",
+    )
+    require(
+        catalog.get("freshArrivals", {}).get("authoritativeReceiptLedgers")
+        == ledger_sources,
+        "Catalog fresh-arrivals metadata lost authoritative receipts",
+    )
     expected_source_set_hash = fresh.source_report_set_sha256(report_sources)
     require(
         audit.get("sourceReportSetSha256") == expected_source_set_hash,
@@ -175,6 +204,11 @@ def main() -> None:
         require(
             len(report_sources) == args.expected_source_report_count,
             "Unexpected number of merged receipt-report snapshots",
+        )
+    if args.expected_receipt_ledger_count is not None:
+        require(
+            len(ledger_sources) == args.expected_receipt_ledger_count,
+            "Unexpected number of authoritative receipt ledgers",
         )
     require(
         catalog.get("freshArrivals", {}).get("activeProductCount") == len(expected_ids),
@@ -221,6 +255,16 @@ def main() -> None:
         audit.get("algorithm", {}).get("largeClusterGapDays")
         == fresh.LARGE_CLUSTER_GAP_DAYS,
         "Large-receipt cluster window changed",
+    )
+    require(
+        audit.get("algorithm", {}).get("recentReceiptDays")
+        == fresh.RECENT_RECEIPT_DAYS,
+        "Recent-receipt window changed",
+    )
+    require(
+        audit.get("algorithm", {}).get("allReceiptsInsideRecentWindowIncluded")
+        is True,
+        "Recent receipt documents are not mandatory",
     )
     require(
         audit.get("algorithm", {}).get("firstVirtualGroupRequired") is True,

@@ -62,6 +62,44 @@ class ReceiptSnapshotMergeTest(unittest.TestCase):
         )
         self.assertEqual(boundary["number"], "R-19")
 
+    def test_authoritative_receipt_amount_wins_and_codes_are_unioned(self) -> None:
+        report = [receipt("2026-10-10", "R-31", 1_594.5, ["100", "101"])]
+        authoritative = [
+            {
+                **receipt("2026-10-10", "R-31", 13_768.0, ["100", "101", "102"]),
+                "amountComplete": True,
+                "authoritativeReceiptDocument": True,
+            }
+        ]
+        documents, _ = fresh.merge_receipt_document_sets(
+            [report, authoritative],
+            [
+                {"start": "2026-09-30", "end": "2026-10-12"},
+                {"start": "2026-10-10", "end": "2026-10-10"},
+            ],
+        )
+        self.assertEqual(documents[0]["observedLineValueUsd"], 13_768.0)
+        self.assertTrue(documents[0]["isLarge"])
+        self.assertTrue(documents[0]["authoritativeReceiptDocument"])
+        self.assertEqual(documents[0]["sourceCodes"], ["100", "101", "102"])
+
+    def test_every_receipt_inside_thirty_day_window_is_selected(self) -> None:
+        documents = [
+            receipt("2026-10-10", "R-40", 12_000, ["100"]),
+            receipt("2026-09-25", "R-30", 11_000, ["200"]),
+            receipt("2026-09-15", "R-29", 100, ["300"]),
+            receipt("2026-09-01", "R-20", 15_000, ["400"]),
+        ]
+        selected, boundary = fresh.select_receipts(
+            documents, {"start": "2026-09-01", "end": "2026-10-10"}
+        )
+        self.assertEqual(boundary["number"], "R-30")
+        self.assertEqual(
+            [item["number"] for item in selected],
+            ["R-40", "R-30", "R-29"],
+        )
+        self.assertTrue(all(item["includedByRecentWindow"] for item in selected))
+
 
 if __name__ == "__main__":
     unittest.main()

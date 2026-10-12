@@ -20,7 +20,7 @@ import json
 import mmap
 import re
 from collections import defaultdict
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -29,6 +29,7 @@ GROUP_ID = "group-fresh-arrivals"
 GROUP_TITLE = "Свежие поступления"
 LARGE_RECEIPT_USD = 10_000.0
 LARGE_CLUSTER_GAP_DAYS = 14
+RECENT_RECEIPT_DAYS = 30
 
 ANCHOR = "Оприходование ТМЦ".encode("cp1251")
 DOC_RE = re.compile(r"[А-Яа-яЁё]-\d{6,}")
@@ -107,9 +108,15 @@ def parse_receipt_documents(path: Path) -> tuple[list[dict[str, Any]], dict[str,
     }
 
     documents: dict[tuple[str, str], dict[str, Any]] = defaultdict(
-        lambda: {"signatures": set(), "sourceCodes": [], "observedLineValueUsd": 0.0}
+        lambda: {
+            "signatures": set(),
+            "sourceCodes": [],
+            "observedLineValueUsd": 0.0,
+            "missingPriceLineCount": 0,
+        }
     )
     invalid_rows = 0
+    incomplete_rows = 0
 
     with path.open("rb") as handle, mmap.mmap(handle.fileno(), 0, access=mmap.ACCESS_READ) as data:
         for anchor_at in positions(data, ANCHOR):
@@ -132,7 +139,7 @@ def parse_receipt_documents(path: Path) -> tuple[list[dict[str, Any]], dict[str,
                 quantity_end = low + quantity_match.end()
                 party_price = price_after(data, quantity_end, min(len(data), quantity_end + 220))
 
-            if not all((document_match, date_match, quantity_match, code_match, party_price is not None)):
+            if not all((document_match, date_match, quantity_match, code_match)):
                 invalid_rows += 1
                 continue
 
@@ -146,7 +153,11 @@ def parse_receipt_documents(path: Path) -> tuple[list[dict[str, Any]], dict[str,
             if signature in document["signatures"]:
                 continue
             document["signatures"].add(signature)
-            document["observedLineValueUsd"] += quantity * party_price
+            if party_price is None:
+                document["missingPriceLineCount"] += 1
+                incomplete_rows += 1
+            else:
+                document["observedLineValueUsd"] += quantity * party_price
             if source_code not in document["sourceCodes"]:
                 document["sourceCodes"].append(source_code)
 
@@ -159,11 +170,52 @@ def parse_receipt_documents(path: Path) -> tuple[list[dict[str, Any]], dict[str,
                 "observedLineValueUsd": round(values["observedLineValueUsd"], 2),
                 "isLarge": values["observedLineValueUsd"] > LARGE_RECEIPT_USD,
                 "sourceCodes": values["sourceCodes"],
+                "amountComplete": values["missingPriceLineCount"] == 0,
+                "missingPriceLineCount": values["missingPriceLineCount"],
+                "authoritativeReceiptDocument": False,
             }
         )
     parsed.sort(key=lambda item: (item["date"], item["number"]), reverse=True)
     report_period["invalidReceiptRows"] = invalid_rows
+    report_period["incompletePriceReceiptRows"] = incomplete_rows
     return parsed, report_period
+
+
+def parse_receipt_ledgers(
+    paths: list[Path],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    documents: list[dict[str, Any]] = []
+    sources: list[dict[str, Any]] = []
+    for path in paths:
+        payload = read_json(path)
+        source_documents = payload.get("documents")
+        if not isinstance(source_documents, list) or not source_documents:
+            raise RuntimeError(f"Receipt ledger is empty or invalid: {path}")
+        for item in source_documents:
+            codes = [str(code) for code in item.get("sourceCodes", [])]
+            if not item.get("date") or not item.get("number") or not codes:
+                raise RuntimeError(f"Incomplete receipt-ledger document in {path}")
+            value = float(item["totalAmountUsd"])
+            documents.append(
+                {
+                    "date": item["date"],
+                    "number": item["number"],
+                    "observedLineValueUsd": round(value, 2),
+                    "isLarge": value > LARGE_RECEIPT_USD,
+                    "sourceCodes": list(dict.fromkeys(codes)),
+                    "amountComplete": bool(item.get("amountComplete", True)),
+                    "missingPriceLineCount": 0,
+                    "authoritativeReceiptDocument": True,
+                }
+            )
+        sources.append(
+            {
+                "path": str(path),
+                "sha256": sha256(path),
+                "documentCount": len(source_documents),
+            }
+        )
+    return documents, sources
 
 
 def merge_receipt_document_sets(
@@ -184,19 +236,42 @@ def merge_receipt_document_sets(
                     "observedValuesUsd": [],
                     "sourceCodes": [],
                     "snapshotCount": 0,
+                    "amountObservations": [],
+                    "authoritativeReceiptDocument": False,
+                    "missingPriceLineCount": 0,
                 },
             )
             target["snapshotCount"] += 1
             target["observedValuesUsd"].append(document["observedLineValueUsd"])
+            target["amountObservations"].append(
+                {
+                    "value": document["observedLineValueUsd"],
+                    "complete": bool(document.get("amountComplete", True)),
+                    "authoritative": bool(document.get("authoritativeReceiptDocument")),
+                }
+            )
+            target["authoritativeReceiptDocument"] = (
+                target["authoritativeReceiptDocument"]
+                or bool(document.get("authoritativeReceiptDocument"))
+            )
+            target["missingPriceLineCount"] += int(
+                document.get("missingPriceLineCount") or 0
+            )
             for source_code in document["sourceCodes"]:
                 if source_code not in target["sourceCodes"]:
                     target["sourceCodes"].append(source_code)
 
     documents = []
     for target in merged.values():
-        observed_value = max(target.pop("observedValuesUsd"))
+        target.pop("observedValuesUsd")
+        observations = target.pop("amountObservations")
+        authoritative = [item for item in observations if item["authoritative"]]
+        complete = [item for item in observations if item["complete"]]
+        preferred = authoritative or complete or observations
+        observed_value = max(item["value"] for item in preferred)
         target["observedLineValueUsd"] = round(observed_value, 2)
         target["isLarge"] = observed_value > LARGE_RECEIPT_USD
+        target["amountComplete"] = any(item["complete"] for item in preferred)
         documents.append(target)
     documents.sort(key=lambda item: (item["date"], item["number"]), reverse=True)
 
@@ -208,7 +283,13 @@ def merge_receipt_document_sets(
         "invalidReceiptRows": sum(
             int(item.get("invalidReceiptRows") or 0) for item in report_periods
         ),
-        "sourceReportCount": len(report_periods),
+        "incompletePriceReceiptRows": sum(
+            int(item.get("incompletePriceReceiptRows") or 0)
+            for item in report_periods
+        ),
+        "sourceReportCount": sum(
+            int(item.get("sourceReportCount", 1)) for item in report_periods
+        ),
     }
     return documents, combined_period
 
@@ -272,18 +353,39 @@ def select_receipts(
         break
 
     if boundary:
-        selected = [item.copy() for item in documents if item["date"] > boundary["date"]]
+        cluster_selected = [
+            item.copy() for item in documents if item["date"] > boundary["date"]
+        ]
     else:
         period_start = report_period.get("start")
-        selected = [
+        cluster_selected = [
             item.copy()
             for item in documents
             if not period_start or item["date"] >= period_start
         ]
 
+    latest_date = max(date.fromisoformat(item["date"]) for item in documents)
+    recent_cutoff = (latest_date - timedelta(days=RECENT_RECEIPT_DAYS)).isoformat()
+    cluster_keys = {(item["date"], item["number"]) for item in cluster_selected}
+    recent_keys = {
+        (item["date"], item["number"])
+        for item in documents
+        if item["date"] >= recent_cutoff
+    }
+    selected_keys = cluster_keys | recent_keys
+    selected = [
+        item.copy()
+        for item in documents
+        if (item["date"], item["number"]) in selected_keys
+    ]
+
     included_keys = {(item["date"], item["number"]) for item in included_large}
     for item in selected:
         item["includedLargeReceipt"] = (item["date"], item["number"]) in included_keys
+        item["includedByRecentWindow"] = (
+            item["date"], item["number"]
+        ) in recent_keys
+        item["recentWindowCutoff"] = recent_cutoff
     return selected, boundary
 
 
@@ -294,6 +396,11 @@ def public_document(document: dict[str, Any]) -> dict[str, Any]:
         "observedLineValueUsd": document["observedLineValueUsd"],
         "isLarge": document["isLarge"],
         "includedLargeReceipt": document["includedLargeReceipt"],
+        "includedByRecentWindow": document.get("includedByRecentWindow", False),
+        "amountComplete": document.get("amountComplete", True),
+        "authoritativeReceiptDocument": document.get(
+            "authoritativeReceiptDocument", False
+        ),
         "sourceCodeCount": len(document["sourceCodes"]),
     }
     if "snapshotCount" in document:
@@ -332,6 +439,7 @@ def apply(
     *,
     catalog_path: Path,
     receipt_reports: list[Path],
+    receipt_ledgers: list[Path],
     audit_path: Path,
     manifest_path: Path,
     release_id: str,
@@ -346,6 +454,18 @@ def apply(
         )
 
     documents, report_period, report_sources = parse_receipt_reports(receipt_reports)
+    ledger_documents, ledger_sources = parse_receipt_ledgers(receipt_ledgers)
+    if ledger_documents:
+        ledger_period = {
+            "start": min(item["date"] for item in ledger_documents),
+            "end": max(item["date"] for item in ledger_documents),
+            "invalidReceiptRows": 0,
+            "incompletePriceReceiptRows": 0,
+            "sourceReportCount": 0,
+        }
+        documents, report_period = merge_receipt_document_sets(
+            [documents, ledger_documents], [report_period, ledger_period]
+        )
     selected, boundary = select_receipts(documents, report_period)
     product_ids, missing_codes = expected_fresh_product_ids(catalog, selected)
     if not product_ids:
@@ -380,13 +500,19 @@ def apply(
         "sourceReport": report_sources[-1]["path"],
         "sourceReportSha256": report_sources[-1]["sha256"],
         "sourceReports": report_sources,
+        "authoritativeReceiptLedgers": ledger_sources,
         "sourceReportSetSha256": source_report_set_sha256(report_sources),
         "reportPeriod": report_period,
         "largeReceiptThresholdUsd": LARGE_RECEIPT_USD,
         "largeReceiptClusterGapDays": LARGE_CLUSTER_GAP_DAYS,
+        "recentReceiptDays": RECENT_RECEIPT_DAYS,
+        "recentReceiptCutoff": selected[0]["recentWindowCutoff"],
         "largeReceiptGapInclusive": True,
         "sequentialReportSnapshotsMerged": True,
-        "sourceMergeRule": "union receipt documents and product codes; keep maximum observed document amount",
+        "sourceMergeRule": (
+            "union report evidence and authoritative receipt documents; receipt-document "
+            "amount wins, otherwise keep maximum complete observed amount"
+        ),
         "selectedFrom": min(item["date"] for item in selected),
         "selectedThrough": max(item["date"] for item in selected),
         "selectedReceiptDocuments": selected_documents,
@@ -437,6 +563,8 @@ def apply(
         "algorithm": {
             "largeReceiptUsd": LARGE_RECEIPT_USD,
             "largeClusterGapDays": LARGE_CLUSTER_GAP_DAYS,
+            "recentReceiptDays": RECENT_RECEIPT_DAYS,
+            "allReceiptsInsideRecentWindowIncluded": True,
             "gapInclusive": True,
             "boundaryExcluded": True,
             "smallReceiptsInsideWindowIncluded": True,
@@ -447,6 +575,7 @@ def apply(
         "sourceReport": metadata["sourceReport"],
         "sourceReportSha256": metadata["sourceReportSha256"],
         "sourceReports": report_sources,
+        "authoritativeReceiptLedgers": ledger_sources,
         "sourceReportSetSha256": metadata["sourceReportSetSha256"],
         "reportPeriod": report_period,
         "selectedDocuments": selected_documents,
@@ -478,6 +607,14 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         help="Verified sequential 1C report; repeat from oldest to newest",
     )
+    parser.add_argument(
+        "--receipt-ledger",
+        action="append",
+        dest="receipt_ledgers",
+        type=Path,
+        default=[],
+        help="Authoritative compact 1C receipt ledger; may be repeated",
+    )
     parser.add_argument("--audit", required=True, type=Path)
     parser.add_argument("--manifest", required=True, type=Path)
     parser.add_argument("--release-id", required=True)
@@ -491,6 +628,7 @@ def main() -> None:
     result = apply(
         catalog_path=args.catalog,
         receipt_reports=args.receipt_reports,
+        receipt_ledgers=args.receipt_ledgers,
         audit_path=args.audit,
         manifest_path=args.manifest,
         release_id=args.release_id,

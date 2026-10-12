@@ -43,9 +43,19 @@ records as the original 1C groups and never duplicates or removes products.
    verified sequential report snapshots before applying the window: preserve
    every receipt document, union its product codes, and keep the maximum
    observed document amount. A newer snapshot must never erase older evidence.
+10. Independently include every receipt whose date is within 30 calendar days
+    of the latest known receipt date. Union this recent set with the large-receipt
+    cluster above and de-duplicate documents.
+11. Import individual receipt documents as authoritative evidence. Their exact
+    document total overrides a partial cumulative-report estimate; product codes
+    from both sources are unioned. A cumulative sales report is analytical
+    evidence and must not be posted again as canonical stock movement.
 
 Build with `scripts/opt_fresh_arrivals.py` and block publication unless
 `scripts/verify_opt_fresh_arrivals.py` succeeds against the pre-build catalog.
+Then copy the exact opt set and order into retail with
+`scripts/apply_retail_fresh_arrivals.py` and require
+`scripts/verify_retail_fresh_arrivals.py` before the retail deploy.
 
 ## Correct inventory update
 
