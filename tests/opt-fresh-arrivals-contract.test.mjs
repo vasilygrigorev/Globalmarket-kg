@@ -16,7 +16,10 @@ test("opt fresh arrivals remain a mandatory first virtual group", () => {
   assert.match(builder, /GROUP_ID = "group-fresh-arrivals"/);
   assert.match(builder, /LARGE_RECEIPT_USD = 10_000\.0/);
   assert.match(builder, /LARGE_CLUSTER_GAP_DAYS = 14/);
+  assert.match(builder, /merge_receipt_document_sets/);
+  assert.match(builder, /action="append"/);
   assert.match(verifier, /Fresh arrivals is not the first group/);
   assert.match(verifier, /Base 1C groups or their order changed/);
   assert.match(verifier, /Fresh-arrivals audit is stale/);
+  assert.match(verifier, /Sequential 1C report snapshots were not merged/);
 });

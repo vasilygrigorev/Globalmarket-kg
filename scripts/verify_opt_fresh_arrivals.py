@@ -26,12 +26,19 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--catalog", required=True, type=Path)
     parser.add_argument("--baseline-catalog", required=True, type=Path)
-    parser.add_argument("--receipt-report", required=True, type=Path)
+    parser.add_argument(
+        "--receipt-report",
+        required=True,
+        action="append",
+        dest="receipt_reports",
+        type=Path,
+    )
     parser.add_argument("--audit", required=True, type=Path)
     parser.add_argument("--manifest", required=True, type=Path)
     parser.add_argument("--release-id", required=True)
     parser.add_argument("--expected-base-group-count", type=int, default=16)
     parser.add_argument("--expected-fresh-count", type=int)
+    parser.add_argument("--expected-source-report-count", type=int)
     return parser.parse_args()
 
 
@@ -89,7 +96,9 @@ def main() -> None:
         "Fresh group contains a zero-stock product",
     )
 
-    documents, report_period = fresh.parse_receipt_documents(args.receipt_report)
+    documents, report_period, report_sources = fresh.parse_receipt_reports(
+        args.receipt_reports
+    )
     selected, boundary = fresh.select_receipts(documents, report_period)
     expected_ids, expected_missing = fresh.expected_fresh_product_ids(catalog, selected)
     require(product_ids == expected_ids, "Fresh-arrivals set or order differs from the 1C rule")
@@ -102,14 +111,37 @@ def main() -> None:
         "Fresh-arrivals audit has stale missing-stock data",
     )
     require(
-        audit.get("sourceReportSha256") == fresh.sha256(args.receipt_report),
+        audit.get("sourceReportSha256") == report_sources[-1]["sha256"],
         "Fresh-arrivals source hash is stale",
     )
     require(
         catalog.get("freshArrivals", {}).get("sourceReportSha256")
-        == fresh.sha256(args.receipt_report),
+        == report_sources[-1]["sha256"],
         "Catalog fresh-arrivals metadata is stale",
     )
+    require(
+        audit.get("sourceReports") == report_sources,
+        "Fresh-arrivals audit does not match the complete report snapshot set",
+    )
+    require(
+        catalog.get("freshArrivals", {}).get("sourceReports") == report_sources,
+        "Catalog fresh-arrivals metadata lost a report snapshot",
+    )
+    expected_source_set_hash = fresh.source_report_set_sha256(report_sources)
+    require(
+        audit.get("sourceReportSetSha256") == expected_source_set_hash,
+        "Fresh-arrivals audit report-set hash is stale",
+    )
+    require(
+        catalog.get("freshArrivals", {}).get("sourceReportSetSha256")
+        == expected_source_set_hash,
+        "Catalog fresh-arrivals report-set hash is stale",
+    )
+    if args.expected_source_report_count is not None:
+        require(
+            len(report_sources) == args.expected_source_report_count,
+            "Unexpected number of merged receipt-report snapshots",
+        )
     require(
         catalog.get("freshArrivals", {}).get("activeProductCount") == len(expected_ids),
         "Catalog fresh-arrivals count is stale",
@@ -160,13 +192,22 @@ def main() -> None:
         audit.get("algorithm", {}).get("firstVirtualGroupRequired") is True,
         "Mandatory-first-group release gate is absent",
     )
+    require(
+        audit.get("algorithm", {}).get("sequentialReportSnapshotsMerged") is True,
+        "Sequential 1C report snapshots were not merged",
+    )
     require(boundary is not None, "Expected an excluded large-receipt boundary")
     require(
         audit.get("previousExcludedLargeReceipt", {}).get("number") == boundary["number"],
         "Boundary document in audit is stale",
     )
 
-    protected_top_level = set(baseline) - {"release", "generatedAt", "groups"}
+    protected_top_level = set(baseline) - {
+        "release",
+        "generatedAt",
+        "groups",
+        "freshArrivals",
+    }
     for key in protected_top_level:
         require(catalog.get(key) == baseline.get(key), f"Protected catalog field changed: {key}")
 

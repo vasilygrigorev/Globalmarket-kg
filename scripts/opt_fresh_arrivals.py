@@ -4,6 +4,12 @@
 The input catalog remains the source of truth for products, prices, stock,
 photos, roles and the sixteen 1C groups. This script only prepends a virtual
 group that references those same product IDs and writes auditable metadata.
+
+1C report snapshots are cumulative but not lossless: an older receipt or one
+of its product rows can disappear from a later snapshot. Therefore every
+verified sequential report is merged before the receipt-window rule is
+applied. A later snapshot may add evidence, but it cannot erase earlier
+receipt documents, product codes or an already observed document amount.
 """
 
 from __future__ import annotations
@@ -160,6 +166,89 @@ def parse_receipt_documents(path: Path) -> tuple[list[dict[str, Any]], dict[str,
     return parsed, report_period
 
 
+def merge_receipt_document_sets(
+    document_sets: list[list[dict[str, Any]]],
+    report_periods: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Merge cumulative 1C snapshots without allowing newer files to erase history."""
+
+    merged: dict[tuple[str, str], dict[str, Any]] = {}
+    for documents in document_sets:
+        for document in documents:
+            key = (document["date"], document["number"])
+            target = merged.setdefault(
+                key,
+                {
+                    "date": document["date"],
+                    "number": document["number"],
+                    "observedValuesUsd": [],
+                    "sourceCodes": [],
+                    "snapshotCount": 0,
+                },
+            )
+            target["snapshotCount"] += 1
+            target["observedValuesUsd"].append(document["observedLineValueUsd"])
+            for source_code in document["sourceCodes"]:
+                if source_code not in target["sourceCodes"]:
+                    target["sourceCodes"].append(source_code)
+
+    documents = []
+    for target in merged.values():
+        observed_value = max(target.pop("observedValuesUsd"))
+        target["observedLineValueUsd"] = round(observed_value, 2)
+        target["isLarge"] = observed_value > LARGE_RECEIPT_USD
+        documents.append(target)
+    documents.sort(key=lambda item: (item["date"], item["number"]), reverse=True)
+
+    starts = [item.get("start") for item in report_periods if item.get("start")]
+    ends = [item.get("end") for item in report_periods if item.get("end")]
+    combined_period = {
+        "start": min(starts) if starts else None,
+        "end": max(ends) if ends else None,
+        "invalidReceiptRows": sum(
+            int(item.get("invalidReceiptRows") or 0) for item in report_periods
+        ),
+        "sourceReportCount": len(report_periods),
+    }
+    return documents, combined_period
+
+
+def parse_receipt_reports(
+    paths: list[Path],
+) -> tuple[list[dict[str, Any]], dict[str, Any], list[dict[str, Any]]]:
+    if not paths:
+        raise RuntimeError("At least one 1C receipt report is required")
+
+    document_sets = []
+    report_periods = []
+    sources = []
+    for path in paths:
+        documents, report_period = parse_receipt_documents(path)
+        document_sets.append(documents)
+        report_periods.append(report_period)
+        sources.append(
+            {
+                "path": str(path),
+                "sha256": sha256(path),
+                "reportPeriod": report_period,
+                "receiptDocumentCount": len(documents),
+            }
+        )
+    documents, combined_period = merge_receipt_document_sets(
+        document_sets, report_periods
+    )
+    return documents, combined_period, sources
+
+
+def source_report_set_sha256(sources: list[dict[str, Any]]) -> str:
+    payload = json.dumps(
+        [{"path": item["path"], "sha256": item["sha256"]} for item in sources],
+        ensure_ascii=False,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
 def select_receipts(
     documents: list[dict[str, Any]], report_period: dict[str, Any]
 ) -> tuple[list[dict[str, Any]], dict[str, Any] | None]:
@@ -199,7 +288,7 @@ def select_receipts(
 
 
 def public_document(document: dict[str, Any]) -> dict[str, Any]:
-    return {
+    public = {
         "date": document["date"],
         "number": document["number"],
         "observedLineValueUsd": document["observedLineValueUsd"],
@@ -207,6 +296,9 @@ def public_document(document: dict[str, Any]) -> dict[str, Any]:
         "includedLargeReceipt": document["includedLargeReceipt"],
         "sourceCodeCount": len(document["sourceCodes"]),
     }
+    if "snapshotCount" in document:
+        public["snapshotCount"] = document["snapshotCount"]
+    return public
 
 
 def expected_fresh_product_ids(
@@ -239,7 +331,7 @@ def expected_fresh_product_ids(
 def apply(
     *,
     catalog_path: Path,
-    receipt_report: Path,
+    receipt_reports: list[Path],
     audit_path: Path,
     manifest_path: Path,
     release_id: str,
@@ -253,7 +345,7 @@ def apply(
             f"Expected {expected_base_group_count} base 1C groups, found {len(base_groups)}"
         )
 
-    documents, report_period = parse_receipt_documents(receipt_report)
+    documents, report_period, report_sources = parse_receipt_reports(receipt_reports)
     selected, boundary = select_receipts(documents, report_period)
     product_ids, missing_codes = expected_fresh_product_ids(catalog, selected)
     if not product_ids:
@@ -285,12 +377,16 @@ def apply(
     )
     metadata = {
         "title": GROUP_TITLE,
-        "sourceReport": str(receipt_report),
-        "sourceReportSha256": sha256(receipt_report),
+        "sourceReport": report_sources[-1]["path"],
+        "sourceReportSha256": report_sources[-1]["sha256"],
+        "sourceReports": report_sources,
+        "sourceReportSetSha256": source_report_set_sha256(report_sources),
         "reportPeriod": report_period,
         "largeReceiptThresholdUsd": LARGE_RECEIPT_USD,
         "largeReceiptClusterGapDays": LARGE_CLUSTER_GAP_DAYS,
         "largeReceiptGapInclusive": True,
+        "sequentialReportSnapshotsMerged": True,
+        "sourceMergeRule": "union receipt documents and product codes; keep maximum observed document amount",
         "selectedFrom": min(item["date"] for item in selected),
         "selectedThrough": max(item["date"] for item in selected),
         "selectedReceiptDocuments": selected_documents,
@@ -344,11 +440,14 @@ def apply(
             "gapInclusive": True,
             "boundaryExcluded": True,
             "smallReceiptsInsideWindowIncluded": True,
+            "sequentialReportSnapshotsMerged": True,
             "currentPositiveStockOnly": True,
             "firstVirtualGroupRequired": True,
         },
-        "sourceReport": str(receipt_report),
+        "sourceReport": metadata["sourceReport"],
         "sourceReportSha256": metadata["sourceReportSha256"],
+        "sourceReports": report_sources,
+        "sourceReportSetSha256": metadata["sourceReportSetSha256"],
         "reportPeriod": report_period,
         "selectedDocuments": selected_documents,
         "previousExcludedLargeReceipt": boundary_data,
@@ -371,7 +470,14 @@ def apply(
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--catalog", required=True, type=Path)
-    parser.add_argument("--receipt-report", required=True, type=Path)
+    parser.add_argument(
+        "--receipt-report",
+        required=True,
+        action="append",
+        dest="receipt_reports",
+        type=Path,
+        help="Verified sequential 1C report; repeat from oldest to newest",
+    )
     parser.add_argument("--audit", required=True, type=Path)
     parser.add_argument("--manifest", required=True, type=Path)
     parser.add_argument("--release-id", required=True)
@@ -384,7 +490,7 @@ def main() -> None:
     args = parse_args()
     result = apply(
         catalog_path=args.catalog,
-        receipt_report=args.receipt_report,
+        receipt_reports=args.receipt_reports,
         audit_path=args.audit,
         manifest_path=args.manifest,
         release_id=args.release_id,

@@ -39,6 +39,10 @@ records as the original 1C groups and never duplicates or removes products.
 8. If a stock export arrives without a newer comprehensive receipt report,
    re-filter the last verified receipt selection against current stock. Never
    remove the group and never infer novelty from a restock or filename date.
+9. A single cumulative 1C report is not a complete historical ledger. Merge all
+   verified sequential report snapshots before applying the window: preserve
+   every receipt document, union its product codes, and keep the maximum
+   observed document amount. A newer snapshot must never erase older evidence.
 
 Build with `scripts/opt_fresh_arrivals.py` and block publication unless
 `scripts/verify_opt_fresh_arrivals.py` succeeds against the pre-build catalog.
@@ -74,9 +78,10 @@ Current explicit hold: source code `660` / Fairy Apple has no approved exact pho
 ## Required release gates
 
 - Product/master counts must be explained and recorded.
-- Opt has `group-fresh-arrivals` first, non-empty and virtual; its audit release
-  and source hash match the catalog, all 16 base 1C groups are byte-for-byte
-  unchanged, and product records are unchanged by the fresh-arrivals step.
+- Opt has `group-fresh-arrivals` first, non-empty and virtual; its audit release,
+  complete report-snapshot list and report-set hash match the catalog, all 16
+  base 1C groups are byte-for-byte unchanged, and product records are unchanged
+  by the fresh-arrivals step.
 - No product can expose a raw numeric 1C prefix as its retail title.
 - No currently approved gallery may shrink or change without explicit approval.
 - Every legacy slug from the previous production release must still resolve.
