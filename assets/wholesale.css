@@ -113,6 +113,119 @@
   color: #fff;
 }
 
+.wholesale-brand-showcase {
+  padding: 15px 0 18px;
+  border-bottom: 1px solid var(--wholesale-line);
+  background: #f7faf9;
+}
+
+.wholesale-brand-showcase-inner {
+  width: min(100% - 32px, 1180px);
+  margin: 0 auto;
+}
+
+.wholesale-brand-showcase-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.wholesale-brand-showcase-heading h2,
+.wholesale-brand-showcase-heading p {
+  margin: 0;
+}
+
+.wholesale-brand-showcase-heading h2 {
+  color: var(--wholesale-deep);
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.wholesale-brand-showcase-heading p {
+  color: var(--wholesale-muted);
+  font-size: 13px;
+}
+
+.wholesale-brand-track {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.wholesale-brand-card {
+  position: relative;
+  height: 108px;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 78, 88, 0.16);
+  border-radius: 7px;
+  background: #e8f0ef;
+  box-shadow: 0 6px 18px rgba(0, 55, 65, 0.08);
+}
+
+.wholesale-brand-card::after {
+  position: absolute;
+  z-index: 1;
+  inset: 38% 0 0;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgba(0, 35, 44, 0.78));
+  pointer-events: none;
+}
+
+.wholesale-brand-card > img,
+.wholesale-brand-duo-media,
+.wholesale-brand-duo-media img {
+  width: 100%;
+  height: 100%;
+}
+
+.wholesale-brand-card > img,
+.wholesale-brand-duo-media img {
+  display: block;
+  object-fit: cover;
+}
+
+.wholesale-brand-card-dalli > img,
+.wholesale-brand-card-felce > img,
+.wholesale-brand-card-beckmann > img {
+  object-position: 76% center;
+}
+
+.wholesale-brand-card-pink > img {
+  object-position: 78% center;
+}
+
+.wholesale-brand-duo-media {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wholesale-brand-duo-media img:first-child {
+  object-position: 54% center;
+}
+
+.wholesale-brand-duo-media img:last-child {
+  object-position: center;
+}
+
+.wholesale-brand-card figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  bottom: 9px;
+  left: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-shadow: 0 1px 8px rgba(0, 27, 34, 0.58);
+}
+
 .wholesale-hero {
   position: relative;
   min-height: clamp(450px, 60vw, 660px);
@@ -239,15 +352,13 @@
 }
 
 .wholesale-section,
-.wholesale-brands,
 .wholesale-application,
 .wholesale-legal {
   width: min(100% - 32px, 1180px);
   margin: 0 auto;
 }
 
-.wholesale-section,
-.wholesale-brands {
+.wholesale-section {
   padding: 88px 0 12px;
 }
 
@@ -292,24 +403,6 @@
   margin-bottom: 0;
   color: var(--wholesale-muted);
   line-height: 1.55;
-}
-
-.wholesale-brands {
-  padding-bottom: 72px;
-}
-
-.wholesale-brand-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-}
-
-.wholesale-brand-list span {
-  padding: 11px 15px;
-  border: 1px solid var(--wholesale-line);
-  border-radius: 999px;
-  background: #fff;
-  font-weight: 700;
 }
 
 .wholesale-process {
@@ -599,6 +692,24 @@
     display: none;
   }
 
+  .wholesale-brand-track {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .wholesale-brand-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .wholesale-brand-card {
+    flex: 0 0 190px;
+    scroll-snap-align: start;
+  }
+
   .wholesale-hero {
     min-height: 620px;
     align-items: start;
@@ -678,6 +789,40 @@
     font-size: 13px;
   }
 
+  .wholesale-brand-showcase {
+    padding: 12px 0 14px;
+  }
+
+  .wholesale-brand-showcase-inner {
+    width: calc(100% - 28px);
+  }
+
+  .wholesale-brand-showcase-heading {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .wholesale-brand-showcase-heading h2 {
+    font-size: 17px;
+  }
+
+  .wholesale-brand-showcase-heading p {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+
+  .wholesale-brand-card {
+    height: 94px;
+    flex-basis: 166px;
+  }
+
+  .wholesale-brand-card figcaption {
+    right: 9px;
+    bottom: 8px;
+    left: 9px;
+    font-size: 14px;
+  }
+
   .wholesale-hero {
     min-height: 570px;
     background-position: 66% center;
@@ -710,14 +855,12 @@
 
   .wholesale-trust,
   .wholesale-section,
-  .wholesale-brands,
   .wholesale-application,
   .wholesale-legal {
     width: calc(100% - 28px);
   }
 
-  .wholesale-section,
-  .wholesale-brands {
+  .wholesale-section {
     padding-top: 64px;
   }
 
@@ -733,19 +876,6 @@
 
   .wholesale-audience-grid {
     gap: 22px;
-  }
-
-  .wholesale-brands {
-    padding-bottom: 58px;
-  }
-
-  .wholesale-brand-list {
-    gap: 7px;
-  }
-
-  .wholesale-brand-list span {
-    padding: 9px 12px;
-    font-size: 13px;
   }
 
   .wholesale-process {
