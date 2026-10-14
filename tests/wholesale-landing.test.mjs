@@ -24,7 +24,28 @@ test("wholesale landing is indexable, canonical, and targeted to Bishkek wholesa
   assert.match(wholesale, /name="robots" content="index,follow,max-image-preview:large"/);
   assert.match(wholesale, /rel="canonical" href="https:\/\/globalmarket\.kg\/opt\/"/);
   assert.match(wholesale, /<h1 id="wholesale-title">Бытовая химия оптом для магазинов<\/h1>/);
-  assert.match(wholesale, /wholesale-production-v1/);
+  assert.match(wholesale, /wholesale-brand-showcase-v1/);
+});
+
+test("recognizable brand showcase sits directly below the wordmark and before the hero", () => {
+  const headerEnd = wholesale.indexOf("</header>");
+  const brands = wholesale.indexOf('class="wholesale-brand-showcase"');
+  const hero = wholesale.indexOf('class="wholesale-hero"');
+  assert.ok(headerEnd < brands && brands < hero, "brand showcase must be between the header and hero");
+  for (const brand of ["Dalli / Dash", "The Pink Stuff", "Felce Azzurra", "Dr. Beckmann", "Kamill / Glysolid"]) {
+    assert.match(wholesale, new RegExp(brand.replace("/", "\\/")));
+  }
+  for (const asset of [
+    "/assets/banners/hero-dalli-dash-v1.webp",
+    "/assets/hero-promo-pink-stuff.jpg",
+    "/assets/banners/hero-felce-azzurra-v1.webp",
+    "/assets/banners/hero-dr-beckmann-v1.webp",
+    "/assets/products/kamill/kamill-3041-card-front.jpg",
+    "/assets/products/glysolid/glysolid-3018-card-front.jpg",
+  ]) {
+    assert.match(wholesale, new RegExp(asset.replaceAll("/", "\\/")));
+  }
+  assert.doesNotMatch(wholesale, /class="wholesale-brand-list"/);
 });
 
 test("wholesale structured data identifies the organization, page, service, and breadcrumb", () => {
