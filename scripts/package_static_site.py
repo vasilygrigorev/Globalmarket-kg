@@ -22,6 +22,7 @@ ROOT_FILES = [
     "_redirects",
     "sitemap.xml",
     "robots.txt",
+    "opt/index.html",
 ]
 
 DATA_FILES = [
