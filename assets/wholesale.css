@@ -1,41 +1,30 @@
 .wholesale-home-entry {
+  order: 3;
   width: min(100% - 30px, 1180px);
-  margin: 12px auto 16px;
+  margin: 5px auto 15px;
 }
 
 .wholesale-home-link {
   display: flex;
-  min-height: 68px;
+  min-height: 40px;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 13px 17px;
-  color: #effffd;
-  border: 1px solid rgba(88, 230, 211, 0.32);
-  border-radius: 8px;
-  background: #00535f;
-  box-shadow: 0 9px 24px rgba(0, 64, 73, 0.16);
-}
-
-.wholesale-home-link strong,
-.wholesale-home-link small {
-  display: block;
+  gap: 12px;
+  padding: 7px 13px;
+  color: #00535f;
+  border: 1px solid rgba(0, 101, 105, 0.25);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .wholesale-home-link strong {
-  font-size: clamp(16px, 2vw, 20px);
-  line-height: 1.2;
-}
-
-.wholesale-home-link small {
-  margin-top: 4px;
-  color: rgba(239, 255, 253, 0.74);
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.15;
 }
 
 .wholesale-home-arrow {
   flex: 0 0 auto;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1;
 }
@@ -594,6 +583,10 @@
     background: #007b78;
   }
 
+  .wholesale-home-link:hover {
+    color: #fff;
+  }
+
   .wholesale-button-secondary:hover,
   .wholesale-header-login:hover {
     background: rgba(255, 255, 255, 0.96);
@@ -663,16 +656,12 @@
 @media (max-width: 560px) {
   .wholesale-home-entry {
     width: calc(100% - 24px);
-    margin-top: 9px;
+    margin-top: 4px;
   }
 
   .wholesale-home-link {
-    min-height: 62px;
-    padding: 11px 14px;
-  }
-
-  .wholesale-home-link small {
-    display: none;
+    min-height: 38px;
+    padding: 6px 11px;
   }
 
   .wholesale-site-header {
