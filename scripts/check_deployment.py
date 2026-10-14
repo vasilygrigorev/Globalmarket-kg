@@ -106,6 +106,8 @@ def check_sitemap(body, errors):
         add_error(errors, "sitemap.xml does not include homepage")
     if "https://globalmarket.kg/privacy.html" not in urls:
         add_error(errors, "sitemap.xml does not include privacy page")
+    if "https://globalmarket.kg/opt/" not in urls:
+        add_error(errors, "sitemap.xml does not include wholesale landing page")
     product_urls = [url for url in urls if "/product/" in url]
     if not product_urls:
         add_error(errors, "sitemap.xml does not include product URLs")
@@ -124,6 +126,7 @@ def main():
 
     check_url(base_url, "/", "text/html", errors)
     check_url(base_url, "/catalog/", "text/html", errors)
+    check_url(base_url, "/opt/", "text/html", errors)
     config_body = check_url(base_url, "/data/site-config.json", "application/json", errors)
     synonyms_body = check_url(base_url, "/data/search-synonyms.json", "application/json", errors)
     catalog_body = check_url(base_url, "/data/public-catalog.json", "application/json", errors)
@@ -180,8 +183,8 @@ def main():
         add_error(errors, f"product-pages count mismatch: {product_pages_manifest.get('count')} != {len(manifest_pages)}")
     if landing_pages_manifest.get("count") != len(landing_pages):
         add_error(errors, f"landing-pages count mismatch: {landing_pages_manifest.get('count')} != {len(landing_pages)}")
-    # Static top-level pages: home, catalog, privacy, and delivery/returns.
-    expected_sitemap_count = len(manifest_pages) + len(landing_pages) + 4
+    # Static top-level pages: home, catalog, wholesale, privacy, and delivery/returns.
+    expected_sitemap_count = len(manifest_pages) + len(landing_pages) + 5
     if sitemap_count and sitemap_count != expected_sitemap_count:
         add_error(errors, f"sitemap URL count mismatch: {sitemap_count} != {expected_sitemap_count}")
     if sitemap_product_count and manifest_pages and sitemap_product_count != len(manifest_pages):
