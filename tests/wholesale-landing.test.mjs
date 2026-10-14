@@ -24,27 +24,33 @@ test("wholesale landing is indexable, canonical, and targeted to Bishkek wholesa
   assert.match(wholesale, /name="robots" content="index,follow,max-image-preview:large"/);
   assert.match(wholesale, /rel="canonical" href="https:\/\/globalmarket\.kg\/opt\/"/);
   assert.match(wholesale, /<h1 id="wholesale-title">Бытовая химия оптом для магазинов<\/h1>/);
-  assert.match(wholesale, /wholesale-brand-showcase-v1/);
+  assert.match(wholesale, /wholesale-brand-logos-v1/);
 });
 
-test("recognizable brand showcase sits directly below the wordmark and before the hero", () => {
+test("official brand logos form a static two-row grid below the wordmark", () => {
   const headerEnd = wholesale.indexOf("</header>");
   const brands = wholesale.indexOf('class="wholesale-brand-showcase"');
   const hero = wholesale.indexOf('class="wholesale-hero"');
   assert.ok(headerEnd < brands && brands < hero, "brand showcase must be between the header and hero");
-  for (const brand of ["Dalli / Dash", "The Pink Stuff", "Felce Azzurra", "Dr. Beckmann", "Kamill / Glysolid"]) {
-    assert.match(wholesale, new RegExp(brand.replace("/", "\\/")));
+  for (const brand of ["Dalli", "Dash", "The Pink Stuff", "Felce Azzurra", "Dr. Beckmann", "Kamill", "Glysolid"]) {
+    assert.match(wholesale, new RegExp(`alt="${brand.replace(".", "\\.")}"`));
   }
   for (const asset of [
-    "/assets/banners/hero-dalli-dash-v1.webp",
-    "/assets/hero-promo-pink-stuff.jpg",
-    "/assets/banners/hero-felce-azzurra-v1.webp",
-    "/assets/banners/hero-dr-beckmann-v1.webp",
-    "/assets/products/kamill/kamill-3041-card-front.jpg",
-    "/assets/products/glysolid/glysolid-3018-card-front.jpg",
+    "/assets/brands/wholesale/dalli.webp",
+    "/assets/brands/wholesale/dash.webp",
+    "/assets/brands/wholesale/the-pink-stuff.webp",
+    "/assets/brands/wholesale/felce-azzurra.webp",
+    "/assets/brands/wholesale/dr-beckmann.webp",
+    "/assets/brands/wholesale/kamill.webp",
+    "/assets/brands/wholesale/glysolid.webp",
   ]) {
     assert.match(wholesale, new RegExp(asset.replaceAll("/", "\\/")));
   }
+  const css = read("assets/wholesale.css");
+  assert.match(css, /\.wholesale-brand-track\s*\{[^}]*grid-template-columns:\s*repeat\(8,/s);
+  assert.match(css, /\.wholesale-brand-card:nth-child\(5\)\s*\{[^}]*grid-column:\s*2\s*\/\s*span\s*2/s);
+  assert.doesNotMatch(css, /\.wholesale-brand-track\s*\{[^}]*overflow-x:\s*auto/s);
+  assert.doesNotMatch(css, /\.wholesale-brand-track\s*\{[^}]*scroll-snap-type/s);
   assert.doesNotMatch(wholesale, /class="wholesale-brand-list"/);
 });
 
