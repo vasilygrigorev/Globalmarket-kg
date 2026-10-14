@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="YC Sunscreen UV Protection SPF70 солнцезащитный крем 100 г">
   <meta name="twitter:description" content="YC Sunscreen UV Protection SPF70 — солнцезащитный крем для лица и тела с фильтрами UVA/UVB. Формула с алоэ вера и витаминами E и B3 помогает защищать кожу ">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/yc/yc-sunscreen-spf70-100g-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261014-retail-sections-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -1458,7 +1458,8 @@ window.gtag('js', new Date());
         categoryMenu.innerHTML = items
           .map((item) => {
             const href = catalogHref(item);
-            return `<a href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
+            const className = item.groupStart ? ' class="category-menu-group-start"' : "";
+            return `<a${className} href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
           })
           .join("");
       } catch (_) {

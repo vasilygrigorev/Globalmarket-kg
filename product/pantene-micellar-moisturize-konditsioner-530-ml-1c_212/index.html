@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Pantene Micellar Moisturize кондиционер 530 мл">
   <meta name="twitter:description" content="Pantene Micellar Moisturize кондиционер 530 мл дополняет уход после шампуня и помогает сделать волосы более послушными. Наносите по инструкции на упаковке;">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/pantene/pantene-212-micellar-moisturize-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261014-retail-sections-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -1458,7 +1458,8 @@ window.gtag('js', new Date());
         categoryMenu.innerHTML = items
           .map((item) => {
             const href = catalogHref(item);
-            return `<a href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
+            const className = item.groupStart ? ' class="category-menu-group-start"' : "";
+            return `<a${className} href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
           })
           .join("");
       } catch (_) {

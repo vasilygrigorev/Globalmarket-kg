@@ -33,4 +33,19 @@
     -webkit-box-orient: initial;
     -webkit-line-clamp: unset;
   }
+
+  body.home-page .quick-category--group-start {
+    margin-inline-start: 18px;
+  }
+
+  body.home-page .quick-category--group-start::before {
+    position: absolute;
+    top: 7px;
+    bottom: 2px;
+    left: -12px;
+    display: block;
+    width: 1px;
+    content: "";
+    background: #cbdcdd;
+  }
 }

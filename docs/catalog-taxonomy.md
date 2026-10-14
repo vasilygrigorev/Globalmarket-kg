@@ -89,6 +89,40 @@ When backend work starts, the same taxonomy can be stored in PostgreSQL, Supabas
 
 The current static fields map directly to those tables later, so this taxonomy step does not require rewriting the storefront now.
 
+## Storefront purpose sections (2026-10)
+
+The horizontal rail and menu use one generated many-to-many axis in
+`sectionIds` / `sectionLabels`. Its practical sections stay in this exact order:
+
+1. Стирка (`laundry`)
+2. Чистка (`cleaning`)
+3. Кухня (`kitchen`)
+4. Ванная (`bathroom`)
+5. Волосы (`hair`)
+6. Тело (`body`)
+7. Зубы (`oral`)
+8. Бритьё (`shaving`)
+9. Парфюм (`perfume`)
+10. Дом и уют (`home`)
+11. Прочее (`other`)
+
+After a visible divider, the rail continues with protected brand queries:
+Dalli / Dash, Pink Stuff, Felce Azzurra, Dr. Beckmann, Kamill / Glysolid.
+These are not duplicate purpose categories and do not replace `brand`.
+
+A product may belong to several practical sections. Hair, body, oral and
+shaving products can also be found through Ванная; kitchen cleaning products
+can be in both Чистка and Кухня. Fragrance-purpose products are cross-listed in
+Парфюм: perfume/EDT, deodorants and body sprays, home fragrance and air
+fresheners, diffusers/fragrance bags, and laundry perfume. Ordinary scented
+soap, shampoo or detergent is not treated as perfume solely because it has a
+scent. `other` is used only when no practical purpose can be identified safely.
+
+The source of truth is `scripts/classify_taxonomy.py`. Apply it to retained and
+active catalog projections with `scripts/apply_storefront_taxonomy.py`; do not
+maintain a separate browser-only map. The release gate rejects missing,
+deprecated or unknown section ids.
+
 ## Fine-grained taxonomy for recommendations (2026-07)
 
 The broad categories (laundry, hair, shaving, …) are too coarse for the

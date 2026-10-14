@@ -73,9 +73,14 @@ Then copy the exact opt set and order into retail with
 10. Preserve every registered slug from `data/product-slug-registry.json`.
 11. Generate and write an exact `productPagePath` for every active product. Storefront code must use that path directly and must never recreate it from the current title.
 12. Generate a static page for every active product. If no exact photo is approved, use the category-neutral placeholder, record `imageCount: 0`, and keep the real product link and purchase controls. Never use `href="#"` or a similar product photo.
-13. Keep the 10 primary storefront sections in this exact order: Стирка,
-    Кухня, Ванная, Тело, Кремы, Бритьё, Зубы, Волосы, Парфюм, Дом и уют.
-    Детское and Европа remain supplemental menu links, not duplicate rail tiles.
+13. Keep the 16 storefront shortcuts in this exact order: Стирка, Чистка,
+    Кухня, Ванная, Волосы, Тело, Зубы, Бритьё, Парфюм, Дом и уют, Прочее,
+    then a visible divider, then Dalli / Dash, Pink Stuff, Felce Azzurra,
+    Dr. Beckmann, Kamill / Glysolid. The first 11 read `sectionIds`; the last
+    five are brand queries. Детское and Европа remain supplemental menu links.
+    Generate many-to-many `sectionIds` with `scripts/classify_taxonomy.py` and
+    `scripts/apply_storefront_taxonomy.py`; never restore browser-only product
+    overrides. Fragrance-purpose products must also appear in `perfume`.
 14. Copy the exact opt `Свежие поступления` set/order into `freshArrival` and
     `freshArrivalRank` when that virtual group exists. If the matching opt
     projection has no such group, use only `firstSeenAt == latestStockDate` as

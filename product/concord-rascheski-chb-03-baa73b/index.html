@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Concord Расчески (CHB 03)">
   <meta name="twitter:description" content="Concord: товар для дома и личного ухода.">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/registry/1c-1972/card-front-f1b955cb4edf.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261014-retail-sections-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -1199,7 +1199,7 @@ window.gtag('js', new Date());
 
             <article class="product-card ">
               <div class="product-visual" style="--tone-a: #e4ded2; --tone-b: #a99076">
-                <span class="placeholder-brand">FELCE</span>
+                <span class="placeholder-brand">Felce Azzurra</span>
                 <button class="favorite-button" type="button" data-favorite="prd_1c_3269" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.4-8.8 10.2-8.8 10.2S3.2 14 3.2 8.6A4.8 4.8 0 0 1 12 5.9a4.8 4.8 0 0 1 8.8 2.7Z"></path></svg>
                 </button>
@@ -1212,13 +1212,13 @@ window.gtag('js', new Date());
               <div class="product-info">
                 <a class="product-title-button product-copy" href="/product/felce-azzurra-air-freshener-gel-140g-cherry-bloss-c_3269/" data-product-link="prd_1c_3269">
                   <span class="product-brand-line">
-                    <span class="product-brand-name">FELCE</span>
+                    <span class="product-brand-name">Felce Azzurra</span>
 
                   </span>
                   <span class="product-kind-line">
                     <strong>разное</strong>
                   </span>
-                  <span class="product-variant-line">AZZURRA Air Freshener Gel Cherry Bloss</span>
+                  <span class="product-variant-line">Air Freshener Gel Cherry Bloss</span>
                 </a>
                 <div class="product-meta product-meta-compact">
                   <span>Разное</span>
@@ -1458,7 +1458,8 @@ window.gtag('js', new Date());
         categoryMenu.innerHTML = items
           .map((item) => {
             const href = catalogHref(item);
-            return `<a href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
+            const className = item.groupStart ? ' class="category-menu-group-start"' : "";
+            return `<a${className} href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
           })
           .join("");
       } catch (_) {

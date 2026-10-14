@@ -159,16 +159,22 @@ let promoBanners = [
 ];
 
 let quickCategoryCards = [
-  { title: "Стирка", section: "laundry", image: "assets/category-icons/laundry-generic.png?v=20261011-retail-recovery-v1" },
-  { title: "Кухня", section: "kitchen", image: "assets/category-icons/cleaning-generic.png?v=20261011-retail-recovery-v1" },
-  { title: "Ванная", section: "bathroom", image: "assets/category-icons/body-generic.png?v=20261011-retail-recovery-v1" },
-  { title: "Тело", section: "body", image: "assets/category-icons/deodorants-generic.png?v=20261011-retail-recovery-v1" },
-  { title: "Кремы", section: "creams", image: "assets/category-icons/creams-generic.png?v=20261011-retail-recovery-v1" },
-  { title: "Бритьё", section: "shaving", image: "assets/category-icons/shaving-generic.png?v=20261011-retail-recovery-v1" },
-  { title: "Зубы", section: "oral", image: "assets/category-icons/oral-generic.png?v=20261011-retail-recovery-v1" },
-  { title: "Волосы", section: "hair", image: "assets/category-icons/hair-generic.png?v=20261011-retail-recovery-v1" },
-  { title: "Парфюм", section: "perfume", image: "assets/category-icons/perfume-generic.png?v=20261011-retail-recovery-v1" },
-  { title: "Дом и уют", section: "home", image: "assets/category-icons/europe-generic.png?v=20261011-retail-recovery-v1" },
+  { title: "Стирка", section: "laundry", image: "assets/category-icons/laundry-generic.png?v=20261014-retail-sections-v1" },
+  { title: "Чистка", section: "cleaning", image: "assets/products/the-pink-stuff/the-pink-stuff-3067-front.jpg?v=20261014-retail-sections-v1" },
+  { title: "Кухня", section: "kitchen", image: "assets/products/finish/finish-3194-quantum-fresh-58-front.jpg?v=20261014-retail-sections-v1" },
+  { title: "Ванная", section: "bathroom", image: "assets/products/the-pink-stuff/the-pink-stuff-3073-front.jpg?v=20261014-retail-sections-v1" },
+  { title: "Волосы", section: "hair", image: "assets/category-icons/hair-generic.png?v=20261014-retail-sections-v1" },
+  { title: "Тело", section: "body", image: "assets/category-icons/body-generic.png?v=20261014-retail-sections-v1" },
+  { title: "Зубы", section: "oral", image: "assets/category-icons/oral-generic.png?v=20261014-retail-sections-v1" },
+  { title: "Бритьё", section: "shaving", image: "assets/category-icons/shaving-generic.png?v=20261014-retail-sections-v1" },
+  { title: "Парфюм", section: "perfume", image: "assets/category-icons/perfume-generic.png?v=20261014-retail-sections-v1" },
+  { title: "Дом и уют", section: "home", image: "assets/products/air-wick/air-wick-pure-cotton-orchid-250ml-front.jpg?v=20261014-retail-sections-v1" },
+  { title: "Прочее", section: "other", image: "assets/products/concord/concord-6401-3-front.jpg?v=20261014-retail-sections-v1" },
+  { title: "Dalli / Dash", query: "Dalli|Dash", groupStart: true, image: "assets/products/dalli/dalli-colorwaschmittel-powder-6kg-front.jpg?v=20261014-retail-sections-v1" },
+  { title: "Pink Stuff", query: "The Pink Stuff", image: "assets/products/the-pink-stuff/the-pink-stuff-3067-front.jpg?v=20261014-retail-sections-v1" },
+  { title: "Felce Azzurra", query: "Felce Azzurra", image: "assets/products/felce-azzurra/felce-azzurra-3096-front.jpg?v=20261014-retail-sections-v1" },
+  { title: "Dr. Beckmann", query: "Dr. Beckmann", image: "assets/products/dr-beckmann/dr-beckmann-deo-schweiss-250ml-front.jpg?v=20261014-retail-sections-v1" },
+  { title: "Kamill / Glysolid", query: "Kamill|Glysolid", image: "assets/products/kamill/kamill-3004-front.jpg?v=20261014-retail-sections-v1" },
 ];
 
 window.addEventListener("pageshow", (event) => {
@@ -334,37 +340,6 @@ function hasProductImage(product) {
     && !path.includes("assets/placeholders/");
   return isRealProductImage(product.image)
     || (product.galleryImages || []).some(isRealProductImage);
-}
-
-const supplementalSectionIdsBySourceCode = {
-  "3067": ["kitchen", "bathroom"],
-  "3068": ["kitchen", "bathroom"],
-  "3069": ["kitchen", "bathroom"],
-  "3070": ["kitchen", "bathroom"],
-  "3071": ["bathroom"],
-  "3072": ["bathroom"],
-  "3073": ["bathroom"],
-  "3074": ["kitchen"],
-  "3075": ["kitchen", "bathroom"],
-  "3076": ["bathroom"],
-  "3084": ["kitchen", "bathroom"],
-  "3085": ["kitchen", "bathroom"],
-  "3087": ["kitchen", "bathroom"],
-  "3088": ["kitchen", "bathroom"],
-  "3089": ["kitchen", "bathroom"],
-  "3090": ["kitchen", "bathroom"],
-  "3092": ["kitchen", "bathroom"],
-  "3093": ["kitchen", "bathroom"],
-  "3094": ["kitchen", "bathroom"],
-  "3095": ["kitchen", "bathroom"],
-};
-
-function withSupplementalSections(product) {
-  const sourceCode = String(product.sourceCode || String(product.id || "").replace(/^prd_1c_/, ""));
-  const additions = supplementalSectionIdsBySourceCode[sourceCode] || [];
-  if (!additions.length) return product;
-  const sectionIds = [...new Set([...(product.sectionIds || []), ...additions, "home"])];
-  return { ...product, sectionIds };
 }
 
 // A customer should never have to scroll past empty placeholders to reach a
@@ -1036,7 +1011,6 @@ async function loadCatalog() {
   catalogSettings = { ...catalogSettings, ...catalog.settings };
   products = catalog.products.map((product) => ({
     ...product,
-    ...withSupplementalSections(product),
     price: product.retailPriceKgs,
     category: product.category || "Разное",
     description: product.description || "Товар в наличии. Детали заказа подтвердит менеджер.",
@@ -1126,7 +1100,8 @@ function renderQuickCategories(catalogCategories) {
       const icon = card.spritePosition
         ? `<span class="quick-category-icon" role="img" aria-label="${escapeHtml(card.title)}" style="--quick-category-sprite: url('${escapeHtml(card.image)}'); --quick-category-position: ${escapeHtml(card.spritePosition)}"></span>`
         : `<img src="${escapeHtml(card.image)}" alt="" loading="lazy" />`;
-      return `<button class="quick-category" type="button" ${dataAttributes} data-label="${escapeHtml(card.title)}">
+      const className = card.groupStart ? "quick-category quick-category--group-start" : "quick-category";
+      return `<button class="${className}" type="button" ${dataAttributes} data-label="${escapeHtml(card.title)}">
         ${icon}
         <strong>${escapeHtml(card.title)}</strong>
         <small>${count} ${getProductWord(count)}</small>
@@ -1206,10 +1181,13 @@ function renderCategoryMenu() {
         <span class="category-menu-title">${escapeHtml(item.label || item.title || item.category || item.section || "Раздел")}</span>
         <span class="category-menu-count">${count ?? ""}</span>
       `;
+      const itemClasses = [isActive ? "active" : "", item.groupStart ? "category-menu-group-start" : ""]
+        .filter(Boolean)
+        .join(" ");
       if (item.href) {
-        return `<a class="${isActive ? "active" : ""}" href="${escapeHtml(item.href)}">${content}</a>`;
+        return `<a class="${itemClasses}" href="${escapeHtml(item.href)}">${content}</a>`;
       }
-      return `<button class="${isActive ? "active" : ""}" type="button" ${attributes}>${content}</button>`;
+      return `<button class="${itemClasses}" type="button" ${attributes}>${content}</button>`;
     })
     .join("");
 }

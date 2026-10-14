@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="THE PINK STUFF Cleaning Paste (300g) Tube">
   <meta name="twitter:description" content="THE PINK STUFF Cleaning Paste (300g) Tube - уборка и чистота для повседневного использования. Формат: 300g. Перед применением ознакомьтесь с информацией и ">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/the-pink-stuff/the-pink-stuff-3068-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261014-retail-sections-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -1458,7 +1458,8 @@ window.gtag('js', new Date());
         categoryMenu.innerHTML = items
           .map((item) => {
             const href = catalogHref(item);
-            return `<a href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
+            const className = item.groupStart ? ' class="category-menu-group-start"' : "";
+            return `<a${className} href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
           })
           .join("");
       } catch (_) {

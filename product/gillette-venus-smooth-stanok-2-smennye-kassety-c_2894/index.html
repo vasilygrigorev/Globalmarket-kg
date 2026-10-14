@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Gillette Venus Smooth станок + 2 сменные кассеты">
   <meta name="twitter:description" content="Gillette Venus Smooth — набор с одним станком и двумя сменными кассетами с тремя лезвиями. Подходит для гладкого бритья тела; используйте с подходящим сред">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/gillette/gillette-venus-2894-smooth-1-plus-2-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261014-retail-sections-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -1458,7 +1458,8 @@ window.gtag('js', new Date());
         categoryMenu.innerHTML = items
           .map((item) => {
             const href = catalogHref(item);
-            return `<a href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
+            const className = item.groupStart ? ' class="category-menu-group-start"' : "";
+            return `<a${className} href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
           })
           .join("");
       } catch (_) {

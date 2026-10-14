@@ -194,7 +194,7 @@
       "title": "Felce Azzurra",
       "path": "/brand/felce-azzurra/",
       "url": "https://globalmarket.kg/brand/felce-azzurra/",
-      "count": 63,
+      "count": 80,
       "seoTerms": [
         "Felce Azzurra",
         "товары Felce Azzurra",
@@ -224,13 +224,28 @@
       "title": "Gillette",
       "path": "/brand/gillette/",
       "url": "https://globalmarket.kg/brand/gillette/",
-      "count": 35,
+      "count": 34,
       "seoTerms": [
         "Gillette",
         "товары Gillette",
         "Gillette купить Бишкек"
       ],
       "shown": 34,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "the-pink-stuff",
+      "title": "The Pink Stuff",
+      "path": "/brand/the-pink-stuff/",
+      "url": "https://globalmarket.kg/brand/the-pink-stuff/",
+      "count": 29,
+      "seoTerms": [
+        "The Pink Stuff",
+        "товары The Pink Stuff",
+        "The Pink Stuff купить Бишкек"
+      ],
+      "shown": 28,
       "retainedLegacy": false
     },
     {
@@ -250,6 +265,21 @@
     },
     {
       "type": "brand",
+      "slug": "dr-beckmann",
+      "title": "Dr. Beckmann",
+      "path": "/brand/dr-beckmann/",
+      "url": "https://globalmarket.kg/brand/dr-beckmann/",
+      "count": 28,
+      "seoTerms": [
+        "Dr. Beckmann",
+        "товары Dr. Beckmann",
+        "Dr. Beckmann купить Бишкек"
+      ],
+      "shown": 24,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
       "slug": "pantene",
       "title": "Pantene",
       "path": "/brand/pantene/",
@@ -265,21 +295,6 @@
     },
     {
       "type": "brand",
-      "slug": "the-pink-stuff",
-      "title": "The Pink Stuff",
-      "path": "/brand/the-pink-stuff/",
-      "url": "https://globalmarket.kg/brand/the-pink-stuff/",
-      "count": 28,
-      "seoTerms": [
-        "The Pink Stuff",
-        "товары The Pink Stuff",
-        "The Pink Stuff купить Бишкек"
-      ],
-      "shown": 28,
-      "retainedLegacy": false
-    },
-    {
-      "type": "brand",
       "slug": "ariel",
       "title": "Ariel",
       "path": "/brand/ariel/",
@@ -289,21 +304,6 @@
         "Ariel",
         "товары Ariel",
         "Ariel купить Бишкек"
-      ],
-      "shown": 24,
-      "retainedLegacy": false
-    },
-    {
-      "type": "brand",
-      "slug": "dr-beckmann",
-      "title": "Dr. Beckmann",
-      "path": "/brand/dr-beckmann/",
-      "url": "https://globalmarket.kg/brand/dr-beckmann/",
-      "count": 24,
-      "seoTerms": [
-        "Dr. Beckmann",
-        "товары Dr. Beckmann",
-        "Dr. Beckmann купить Бишкек"
       ],
       "shown": 24,
       "retainedLegacy": false
@@ -396,21 +396,6 @@
         "Colgate купить Бишкек"
       ],
       "shown": 17,
-      "retainedLegacy": false
-    },
-    {
-      "type": "brand",
-      "slug": "felce",
-      "title": "FELCE",
-      "path": "/brand/felce/",
-      "url": "https://globalmarket.kg/brand/felce/",
-      "count": 17,
-      "seoTerms": [
-        "FELCE",
-        "товары FELCE",
-        "FELCE купить Бишкек"
-      ],
-      "shown": 2,
       "retainedLegacy": false
     },
     {
@@ -892,6 +877,21 @@
       ],
       "shown": 2,
       "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "felce",
+      "title": "FELCE",
+      "path": "/brand/felce/",
+      "url": "https://globalmarket.kg/brand/felce/",
+      "count": 0,
+      "seoTerms": [
+        "FELCE",
+        "товары FELCE",
+        "FELCE купить Бишкек"
+      ],
+      "shown": 0,
+      "retainedLegacy": true
     },
     {
       "type": "brand",

@@ -7,12 +7,14 @@ Run:  python3 scripts/classify_taxonomy_test.py
 import unittest
 
 from classify_taxonomy import (
+    canonical_brand,
     classify_product_kind,
     classify_audience,
     classify_attributes,
     classify_form,
     classify_use_area,
     classify_search_terms,
+    classify_storefront_sections,
     enrich,
     rank_related,
     related_rank_key,
@@ -281,6 +283,47 @@ class Attributes(unittest.TestCase):
         self.assertEqual(e["form"], "gel")
         self.assertEqual(e["useArea"], "laundry")
         self.assertIn("persil", e["searchTerms"])
+        self.assertEqual(e["sectionIds"], ["laundry"])
+        self.assertEqual(e["sectionLabels"], ["Стирка"])
+
+
+class StorefrontSections(unittest.TestCase):
+    def test_canonical_brand_families(self):
+        self.assertEqual(canonical_brand(prod(title="THE PINK STUFF Kitchen Cleaner", brand="THE")), "The Pink Stuff")
+        self.assertEqual(canonical_brand(prod(title="Dr.Beckmann Washing Machine Cleaner", brand="Gillette")), "Dr. Beckmann")
+        self.assertEqual(canonical_brand(prod(title="FELCE AZZURRA Air Room Refill", brand="FELCE")), "Felce Azzurra")
+
+    def test_multi_purpose_products_use_multiple_sections(self):
+        self.assertEqual(
+            classify_storefront_sections(
+                prod(sourceCode="3261", categoryId="home_cleaning", title="THE PINK STUFF Platinum Kitchen Cleaner")
+            ),
+            ["cleaning", "kitchen"],
+        )
+        self.assertEqual(
+            classify_storefront_sections(
+                prod(categoryId="deodorants", title="Dove Body Spray 250 ml", productKind="deodorant_spray")
+            ),
+            ["bathroom", "body", "perfume"],
+        )
+
+    def test_fragrance_products_are_parallel_perfume_and_home(self):
+        self.assertEqual(
+            classify_storefront_sections(
+                prod(categoryId="other", title="Felce Azzurra Air Room Refill White Musk", productKind="")
+            ),
+            ["perfume", "home"],
+        )
+
+    def test_other_is_a_real_fallback_not_a_trap(self):
+        self.assertEqual(
+            classify_storefront_sections(prod(categoryId="other", title="Concord Ножницы", productKind="scissors")),
+            ["other"],
+        )
+        self.assertEqual(
+            classify_storefront_sections(prod(categoryId="other", title="BONUX Gel 1,485L", productKind="")),
+            ["laundry"],
+        )
 
 
 class Form(unittest.TestCase):

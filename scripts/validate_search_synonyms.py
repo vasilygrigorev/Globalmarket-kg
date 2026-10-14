@@ -152,7 +152,8 @@ def validate_synonyms_shape(synonyms):
 
 def group_matches_query(group, normalized_query):
     aliases = [normalize(alias) for alias in group.get("aliases") or []]
-    return any(alias and alias in normalized_query for alias in aliases)
+    padded_query = f" {normalized_query} "
+    return any(alias and f" {alias} " in padded_query for alias in aliases)
 
 
 def product_matches_group(product, group, text):

@@ -742,7 +742,7 @@ def render_page(product, related, slug, landing_lookup=None):
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(meta_description)}">
   <meta name="twitter:image" content="{escape(absolute_url(main_image))}">
-  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261014-retail-sections-v1">
   <script type="application/ld+json">{json_ld}</script>
   <script type="application/ld+json">{breadcrumb_json_ld}</script>
   <style>
@@ -1101,7 +1101,8 @@ def render_page(product, related, slug, landing_lookup=None):
         categoryMenu.innerHTML = items
           .map((item) => {{
             const href = catalogHref(item);
-            return `<a href="${{href}}"><span class="category-menu-title">${{item.label || "Раздел"}}</span></a>`;
+            const className = item.groupStart ? ' class="category-menu-group-start"' : "";
+            return `<a${{className}} href="${{href}}"><span class="category-menu-title">${{item.label || "Раздел"}}</span></a>`;
           }})
           .join("");
       }} catch (_) {{

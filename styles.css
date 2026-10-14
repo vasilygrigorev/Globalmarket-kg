@@ -579,6 +579,13 @@ select {
   font-size: 12px;
 }
 
+.category-menu .category-menu-group-start {
+  margin-top: 12px;
+  border-top: 1px solid rgba(210, 210, 215, 0.9);
+  border-radius: 0 0 9px 9px;
+  padding-top: 14px;
+}
+
 .hero {
   position: relative;
   min-height: min(620px, calc(100vh - 68px));
@@ -869,6 +876,21 @@ h2 {
 
 .quick-category small {
   display: none;
+}
+
+.quick-category--group-start {
+  margin-inline-start: 18px;
+}
+
+.quick-category--group-start::before {
+  position: absolute;
+  top: 7px;
+  bottom: 18px;
+  left: -14px;
+  display: block;
+  width: 1px;
+  content: "";
+  background: #cbdcdd;
 }
 
 .catalog-directory {

@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="Pantene Damage Repair шампунь 600 мл">
   <meta name="twitter:description" content="Pantene Pro-V Damage Repair — восстанавливающий шампунь для повреждённых и ослабленных волос. Формула очищает волосы и помогает ухаживать за повреждёнными ">
   <meta name="twitter:image" content="https://globalmarket.kg/assets/products/pantene/pantene-damage-repair-600ml-card-front.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20261011-retail-recovery-v1">
+  <link rel="stylesheet" href="/styles.css?v=20261014-retail-sections-v1">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
@@ -1452,7 +1452,8 @@ window.gtag('js', new Date());
         categoryMenu.innerHTML = items
           .map((item) => {
             const href = catalogHref(item);
-            return `<a href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
+            const className = item.groupStart ? ' class="category-menu-group-start"' : "";
+            return `<a${className} href="${href}"><span class="category-menu-title">${item.label || "Раздел"}</span></a>`;
           })
           .join("");
       } catch (_) {

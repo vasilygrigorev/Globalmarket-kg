@@ -31,6 +31,7 @@ function parseTiles() {
       audience: grab("audience"),
       collection: grab("collection"),
       query: grab("query"),
+      groupStart: /groupStart:\s*true/.test(line),
     });
   }
   return tiles;
@@ -41,8 +42,8 @@ const catalog = JSON.parse(read("data/public-catalog.json"));
 const products = catalog.products || [];
 const categories = new Set((catalog.products || []).map((p) => p.category).filter(Boolean));
 
-test("there are 10 approved primary category tiles", () => {
-  assert.equal(tiles.length, 10);
+test("there are 16 approved purpose and brand category tiles", () => {
+  assert.equal(tiles.length, 16);
 });
 
 test("every tile has a title and at least one target", () => {
@@ -65,24 +66,42 @@ test("every tile category is a real catalog category", () => {
 });
 
 test("home page cache-busts the current category assets", () => {
-  assert.match(indexHtml, /styles\.css\?v=20261011-retail-recovery-v1/);
-  assert.match(indexHtml, /home-category-rail-v4\.css\?v=20261011-retail-recovery-v1/);
-  assert.match(indexHtml, /app\.js\?v=20261011-retail-recovery-v1/);
-  assert.ok(tiles.every((tile) => tile.image.endsWith("?v=20261011-retail-recovery-v1")));
+  assert.match(indexHtml, /styles\.css\?v=20261014-retail-sections-v1/);
+  assert.match(indexHtml, /home-category-rail-v4\.css\?v=20261014-retail-sections-v1/);
+  assert.match(indexHtml, /app\.js\?v=20261014-retail-sections-v1/);
+  assert.ok(tiles.every((tile) => tile.image.endsWith("?v=20261014-retail-sections-v1")));
   assert.match(appJs, /if \(event\.persisted\) window\.location\.reload\(\)/);
 });
 
-test("primary tiles use the approved storefront section order", () => {
+test("tiles use the approved storefront order and targets", () => {
   assert.deepEqual(
-    tiles.map((tile) => [tile.title, tile.section]),
+    tiles.map((tile) => [tile.title, tile.section ? "section" : "query", tile.section || tile.query]),
     [
-      ["Стирка", "laundry"], ["Кухня", "kitchen"], ["Ванная", "bathroom"],
-      ["Тело", "body"], ["Кремы", "creams"], ["Бритьё", "shaving"],
-      ["Зубы", "oral"], ["Волосы", "hair"], ["Парфюм", "perfume"],
-      ["Дом и уют", "home"],
+      ["Стирка", "section", "laundry"], ["Чистка", "section", "cleaning"],
+      ["Кухня", "section", "kitchen"], ["Ванная", "section", "bathroom"],
+      ["Волосы", "section", "hair"], ["Тело", "section", "body"],
+      ["Зубы", "section", "oral"], ["Бритьё", "section", "shaving"],
+      ["Парфюм", "section", "perfume"], ["Дом и уют", "section", "home"],
+      ["Прочее", "section", "other"], ["Dalli / Dash", "query", "Dalli|Dash"],
+      ["Pink Stuff", "query", "The Pink Stuff"], ["Felce Azzurra", "query", "Felce Azzurra"],
+      ["Dr. Beckmann", "query", "Dr. Beckmann"], ["Kamill / Glysolid", "query", "Kamill|Glysolid"],
     ],
   );
   for (const tile of tiles) {
-    assert.ok(products.some((product) => (product.sectionIds || []).includes(tile.section)), `${tile.title}: empty section`);
+    if (tile.section) {
+      assert.ok(products.some((product) => (product.sectionIds || []).includes(tile.section)), `${tile.title}: empty section`);
+    }
+    if (tile.query) {
+      const brands = tile.query.split("|");
+      assert.ok(products.some((product) => brands.includes(product.brand)), `${tile.title}: empty brand query`);
+    }
   }
+});
+
+test("brand tiles have one visible group break before Dalli / Dash", () => {
+  const breaks = tiles.map((tile, index) => ({ tile, index })).filter(({ tile }) => tile.groupStart);
+  assert.equal(breaks.length, 1);
+  assert.equal(breaks[0].index, 11);
+  assert.equal(breaks[0].tile.title, "Dalli / Dash");
+  assert.match(appJs, /quick-category--group-start/);
 });

@@ -4,7 +4,7 @@
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Cross-Origin-Opener-Policy: same-origin
-  X-GlobalMarket-Release: 20261012-retail-sales-report-fresh-arrivals-v1
+  X-GlobalMarket-Release: 20261014-retail-sections-v1
   X-GlobalMarket-Analytics-Release: 20261011-retail-full-recovery-v1
 
 /

@@ -31,6 +31,63 @@ import re
 
 AUDIENCES = ("men", "women", "kids", "unisex", "family", "unknown")
 
+STOREFRONT_SECTION_ORDER = (
+    "laundry",
+    "cleaning",
+    "kitchen",
+    "bathroom",
+    "hair",
+    "body",
+    "oral",
+    "shaving",
+    "perfume",
+    "home",
+    "other",
+)
+
+STOREFRONT_SECTION_LABELS = {
+    "laundry": "Стирка",
+    "cleaning": "Чистка",
+    "kitchen": "Кухня",
+    "bathroom": "Ванная",
+    "hair": "Волосы",
+    "body": "Тело",
+    "oral": "Зубы",
+    "shaving": "Бритьё",
+    "perfume": "Парфюм",
+    "home": "Дом и уют",
+    "other": "Прочее",
+}
+
+
+def canonical_brand(product):
+    """Return the approved storefront spelling for protected brand families.
+
+    Raw 1C names sometimes shorten Felce Azzurra to ``FELCE`` or infer a
+    brand from the first title token (``THE`` / ``Gillette``).  The title is a
+    stronger signal for these five owner-approved brand groups, and keeping
+    one spelling prevents duplicate brand pages and incomplete shortcuts.
+    """
+    current = str(product.get("brand") or "").strip()
+    text = f"{current} {product.get('title') or ''}".lower()
+    normalized = re.sub(r"[^a-z0-9а-яё]+", " ", text, flags=re.I)
+
+    if "pink stuff" in normalized:
+        return "The Pink Stuff"
+    if re.search(r"\bdr\s*beckmann\b", normalized):
+        return "Dr. Beckmann"
+    if "felce azzurra" in normalized or current.upper() == "FELCE":
+        return "Felce Azzurra"
+    if re.search(r"\bglysolid\b", normalized):
+        return "Glysolid"
+    if re.search(r"\bkamill\b", normalized):
+        return "Kamill"
+    if re.search(r"\bdalli\b", normalized):
+        return "Dalli"
+    if re.search(r"\bdash\b", normalized):
+        return "Dash"
+    return current
+
 
 def _text(product):
     parts = [
@@ -506,9 +563,194 @@ def classify_search_terms(product):
     return seen
 
 
+# --- storefront sections ---------------------------------------------------
+
+_LAUNDRY_KINDS = {
+    "washing_powder", "laundry_gel", "laundry_capsules", "fabric_softener",
+}
+_CLEANING_KINDS = {
+    "dishwashing_liquid", "cleaning_cream", "surface_cleaner", "toilet_cleaner",
+}
+_HAIR_KINDS = {"shampoo", "conditioner", "hair_mask", "hair_dye", "hair_oil", "comb"}
+_BODY_KINDS = {
+    "sunscreen", "shower_gel", "bath_foam", "body_lotion", "body_cream",
+    "body_oil", "bath_salt", "peel_mask", "soap", "deodorant_stick",
+    "deodorant_spray", "deodorant_rollon", "deodorant_gel", "mineral_deodorant",
+}
+_ORAL_KINDS = {"toothpaste", "toothbrush"}
+_SHAVING_KINDS = {
+    "shaving_gel", "shaving_foam", "razor", "blade_cartridge", "shaving_brush",
+    "aftershave_balm",
+}
+_PERSONAL_KINDS = _HAIR_KINDS | _BODY_KINDS | _ORAL_KINDS | _SHAVING_KINDS
+_FRAGRANCE_KINDS = {
+    "perfume_decant", "deodorant_stick", "deodorant_spray", "deodorant_rollon",
+    "deodorant_gel", "mineral_deodorant", "air_freshener",
+}
+_MISC_KINDS = {
+    "nail_clipper", "scissors", "foot_file", "plaster", "wet_wipes",
+    "cotton_swabs", "tea", "ground_coffee", "manicure_set",
+}
+
+# The Pink Stuff contains genuinely multi-purpose products.  These mappings
+# were manually reviewed against their exact product names and preserve the
+# owner's earlier kitchen/bathroom decisions without a browser-only patch.
+_PINK_STUFF_KITCHEN_CODES = {
+    "3067", "3068", "3069", "3070", "3074", "3076", "3084", "3087",
+    "3088", "3089", "3090", "3092", "3093", "3095", "3261",
+}
+_PINK_STUFF_BATHROOM_CODES = {
+    "3067", "3068", "3069", "3070", "3071", "3072", "3073", "3075",
+    "3076", "3084", "3085", "3087", "3088", "3089", "3090", "3092",
+    "3093", "3095", "3260",
+}
+
+
+def _storefront_title(product):
+    return str(product.get("title") or "").lower().replace("ё", "е")
+
+
+def classify_storefront_sections(product, product_kind=None):
+    """Return all practical storefront sections for a product.
+
+    Sections are deliberately many-to-many.  A dishwasher cleaner can be in
+    both ``cleaning`` and ``kitchen``; deodorants are in ``body`` and
+    ``perfume``; shaving, hair, oral and bath products also remain discoverable
+    from ``bathroom``.  ``other`` is a real catch-all, not a substitute for a
+    purpose that can be identified confidently.
+    """
+    cid = str(product.get("categoryId") or "").lower()
+    kind = product_kind if product_kind is not None else (
+        product.get("productKind") or classify_product_kind(product)
+    )
+    title = _storefront_title(product)
+    code = str(product.get("sourceCode") or product.get("code") or "").strip()
+    sections = set()
+
+    fragrance_only = _has(title, "eau de toilette", " edt") and not _has(
+        title, "deodor", "дезодоран", "body spray"
+    )
+    home_fragrance = kind == "air_freshener" or _has(
+        title,
+        "fragrance bag", "air freshener", "air room", "air spray",
+        "освежител", "ароматизатор", "диффузор", "diffuser",
+    )
+
+    laundry_text = _has(
+        title,
+        "waschmittel", "стиральн", "для стир", "laundry", "bonux gel",
+        "omo gel", "persil gel", "detergent sheet", "fleckenteufel",
+        "пятновывод", "от пятен", "stain remover", "wrinkle releaser",
+        "washing machine cleaner", "intensiv schwarz", "super white",
+        "deo-schweiss", "следов дезодоранта и пота",
+    )
+    is_laundry = kind in _LAUNDRY_KINDS or laundry_text or (
+        not kind and cid in {"laundry", "germany"}
+    )
+    if is_laundry:
+        sections.add("laundry")
+
+    cleaning_text = _has(
+        title,
+        "cleaner", "cleaning", "чистящее", "чистящий", "уборк",
+        "моющее ср-во", "моющее средство", "scrubber", "скраббер",
+        "губка", "губки", "микрофибр", "скребок", "пятновывод",
+        "stain remover", "wash up", "dishwasher", "посудомо", "для посуд",
+        "backofen", " oven", "духов", "стеклокерами", "для плит",
+        "coffee machine", "кофемаш", "очиститель холодиль", "floor wipes",
+        "carpet", "upholstery", "туалет", "wc-",
+    )
+    is_cleaning = kind in _CLEANING_KINDS or cleaning_text or (
+        cid == "home_cleaning" and kind not in _PERSONAL_KINDS and not home_fragrance
+    )
+    if is_cleaning:
+        sections.add("cleaning")
+
+    is_kitchen = kind == "dishwashing_liquid" or _has(
+        title,
+        "kitchen", "wash up", "dishwasher", "для посуд", "посудомо",
+        "backofen", " oven", "духов", "стеклокерами", "для плит", "hob",
+        "coffee machine", "кофемаш", "холодильн",
+    ) or code in _PINK_STUFF_KITCHEN_CODES
+    if _has(title, "моющее ср-во", "моющее средство") and cid == "other":
+        is_kitchen = True
+    if is_kitchen:
+        sections.add("kitchen")
+
+    is_hair = kind in _HAIR_KINDS or (not kind and cid == "hair") or _has(
+        title, "shampoo", "шампун", "conditioner", "расчес"
+    )
+    if kind in _SHAVING_KINDS:
+        is_hair = False
+    if is_hair:
+        sections.add("hair")
+
+    deodorant_text = _has(
+        title, "deo rollon", "deo spray", "deodor", "дезодоран", "body spray",
+        "anti-perspirant", "antiperspirant",
+    )
+    is_body = kind in _BODY_KINDS or (not kind and cid in {"body", "deodorants"}) or _has(
+        title,
+        "shower gel", "гель для душ", "intimate wash", "intim wash",
+        "body lotion", "крем для рук", "крем для тела", "мыло",
+    ) or deodorant_text
+    if fragrance_only:
+        is_body = False
+    if is_body:
+        sections.add("body")
+
+    is_oral = kind in _ORAL_KINDS or (not kind and cid == "oral") or _has(
+        title, "зуб", "tooth", "oral-", "oral b"
+    )
+    if fragrance_only:
+        is_oral = False
+    if is_oral:
+        sections.add("oral")
+
+    is_shaving = kind in _SHAVING_KINDS or (not kind and cid == "shaving") or _has(
+        title,
+        "брить", "razor", "gillette venus", "blue-3", "blue3", "mach3",
+        "fusion", "proglide", "помазок", "soleil bella",
+    )
+    if is_shaving:
+        sections.add("shaving")
+
+    is_bathroom = (
+        is_hair or is_body or is_oral or is_shaving or kind == "toilet_cleaner"
+        or _has(title, "bathroom", "для ванн", "ванной", "туалет", "wc-", "для душевой")
+        or code in _PINK_STUFF_BATHROOM_CODES
+    )
+    if is_bathroom:
+        sections.add("bathroom")
+
+    fragrance_text = _has(
+        title,
+        "parfum", "perfume", "eau de toilette", " edt", "body spray",
+        "fragrance bag", "laundry fragrance", "air freshener", "air room",
+        "air spray", "освежител", "ароматизатор", "диффузор", "diffuser",
+        "парфюм для белья", "laundry perfume",
+    )
+    if cid == "perfume" or kind in _FRAGRANCE_KINDS or fragrance_text:
+        sections.add("perfume")
+
+    if home_fragrance or kind in {"wet_wipes", "cotton_swabs"}:
+        sections.add("home")
+
+    # Food and miscellaneous accessories need a discoverable home, but a raw
+    # ``other`` category does not keep a confidently recognized detergent or
+    # deodorant trapped in Прочее.
+    if cid == "food" or (kind in _MISC_KINDS and not home_fragrance):
+        sections.add("other")
+    if not sections:
+        sections.add("other")
+
+    return [section for section in STOREFRONT_SECTION_ORDER if section in sections]
+
+
 def enrich(product):
     """Return the taxonomy fields to merge onto a product (additive)."""
     product_kind = classify_product_kind(product)
+    section_ids = classify_storefront_sections(product, product_kind)
     return {
         "productKind": product_kind,
         "audience": classify_audience(product),
@@ -516,6 +758,8 @@ def enrich(product):
         "form": classify_form(product, product_kind),
         "useArea": classify_use_area(product, product_kind),
         "searchTerms": classify_search_terms(product),
+        "sectionIds": section_ids,
+        "sectionLabels": [STOREFRONT_SECTION_LABELS[section] for section in section_ids],
     }
 
 

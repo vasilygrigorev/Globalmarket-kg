@@ -13,7 +13,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from classify_taxonomy import enrich
+from classify_taxonomy import canonical_brand, enrich
 from import_stock import CATEGORIES, description_for, detect_brand, product_type
 
 
@@ -292,6 +292,7 @@ def finalize_product(product):
     if result.get("categoryId") in CATEGORY_TITLES:
         result["category"] = CATEGORY_TITLES[result["categoryId"]]
     result["title"] = clean_import_title(result.get("title"))
+    result["brand"] = canonical_brand(result)
     result["status"] = "active" if is_active(product) else "inactive"
     result["inStock"] = result["status"] == "active"
     code = source_code(result)

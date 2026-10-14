@@ -52,7 +52,7 @@ test("synonyms target only real catalog categories/categoryIds/collections/brand
   assert.deepEqual(bad, [], `synonyms with broken targets: ${bad.join(", ")}`);
 });
 
-const menuSections = (config.menu || []).filter((m) => m.section);
+const menuShortcuts = (config.menu || []).filter((m) => m.section || m.query);
 const tileBlock = appJs.match(/let quickCategoryCards = \[([\s\S]*?)\];/)[1];
 const tiles = tileBlock.split("\n").filter((l) => l.includes("{")).map((l) => ({
   title: (l.match(/title:\s*"([^"]+)"/) || [])[1],
@@ -60,19 +60,24 @@ const tiles = tileBlock.split("\n").filter((l) => l.includes("{")).map((l) => ({
   category: (l.match(/category:\s*"([^"]+)"/) || [])[1],
   audience: (l.match(/audience:\s*"([^"]+)"/) || [])[1],
   collection: (l.match(/collection:\s*"([^"]+)"/) || [])[1],
+  query: (l.match(/query:\s*"([^"]+)"/) || [])[1],
 }));
 
 test("menu and category tiles do not diverge by name", () => {
-  assert.deepEqual(tiles.map((t) => t.title).sort(), menuSections.map((m) => m.label).sort());
+  assert.deepEqual(tiles.map((t) => t.title).sort(), menuShortcuts.map((m) => m.label).sort());
 });
 
 test("menu/tile category & collection targets exist in the catalog", () => {
   const bad = [];
-  for (const m of [...menuSections, ...tiles]) {
+  for (const m of [...menuShortcuts, ...tiles]) {
     if (m.section && !products.some((product) => (product.sectionIds || []).includes(m.section))) bad.push(`section:${m.section}`);
     if (m.category && !cats.has(m.category)) bad.push(`category:${m.category}`);
     if (m.audience && !audiences.has(m.audience)) bad.push(`audience:${m.audience}`);
     if (m.collection && !colls.has(m.collection)) bad.push(`collection:${m.collection}`);
+    if (m.query) {
+      const alternatives = m.query.split("|").map((value) => value.trim()).filter(Boolean);
+      if (!products.some((product) => alternatives.includes(product.brand))) bad.push(`query:${m.query}`);
+    }
   }
   assert.deepEqual([...new Set(bad)], [], `nav targets not in catalog: ${[...new Set(bad)].join(", ")}`);
 });

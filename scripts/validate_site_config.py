@@ -52,9 +52,13 @@ def product_matches(product, params):
         return False
     if params.get("collection") and params["collection"] not in (product.get("collections") or []):
         return False
-    query = (params.get("query") or params.get("q") or "").strip().lower()
-    if query and query not in text_blob(product):
+    if params.get("section") and params["section"] not in (product.get("sectionIds") or []):
         return False
+    query = (params.get("query") or params.get("q") or "").strip().lower()
+    if query:
+        alternatives = [term.strip() for term in query.split("|") if term.strip()]
+        if not alternatives or not any(term in text_blob(product) for term in alternatives):
+            return False
     return True
 
 
@@ -87,9 +91,11 @@ def count_matches(products, item):
         params["audience"] = item["audience"]
     if item.get("collection") and "collection" not in params:
         params["collection"] = item["collection"]
+    if item.get("section") and "section" not in params:
+        params["section"] = item["section"]
     if item.get("query") and "query" not in params:
         params["query"] = item["query"]
-    if not any(params.get(key) for key in ("category", "audience", "collection", "query", "q")):
+    if not any(params.get(key) for key in ("category", "audience", "collection", "section", "query", "q")):
         return None
     return sum(1 for product in products if product_matches(product, params))
 
@@ -138,7 +144,7 @@ def main():
             label, matches = validate_link_item(section, index, item, products, warnings, errors)
             if section == "banners" and not item_is_active(item):
                 continue
-            rows.append((section, label, item.get("href") or item.get("category") or item.get("collection") or "", matches))
+            rows.append((section, label, item.get("href") or item.get("section") or item.get("category") or item.get("collection") or item.get("query") or "", matches))
 
     for index, item in enumerate(config.get("footerLinks", [])):
         label = item.get("label") or f"#{index + 1}"

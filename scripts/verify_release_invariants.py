@@ -27,18 +27,30 @@ EXPECTED_BANNERS = [
     "/assets/banners/hero-dalli-dash-v1.webp",
     "/assets/banners/hero-dr-beckmann-v1.webp",
 ]
-EXPECTED_PRIMARY_SECTIONS = [
-    ("Стирка", "laundry"),
-    ("Кухня", "kitchen"),
-    ("Ванная", "bathroom"),
-    ("Тело", "body"),
-    ("Кремы", "creams"),
-    ("Бритьё", "shaving"),
-    ("Зубы", "oral"),
-    ("Волосы", "hair"),
-    ("Парфюм", "perfume"),
-    ("Дом и уют", "home"),
+EXPECTED_PRIMARY_SHORTCUTS = [
+    ("Стирка", "section", "laundry"),
+    ("Чистка", "section", "cleaning"),
+    ("Кухня", "section", "kitchen"),
+    ("Ванная", "section", "bathroom"),
+    ("Волосы", "section", "hair"),
+    ("Тело", "section", "body"),
+    ("Зубы", "section", "oral"),
+    ("Бритьё", "section", "shaving"),
+    ("Парфюм", "section", "perfume"),
+    ("Дом и уют", "section", "home"),
+    ("Прочее", "section", "other"),
+    ("Dalli / Dash", "query", "Dalli|Dash"),
+    ("Pink Stuff", "query", "The Pink Stuff"),
+    ("Felce Azzurra", "query", "Felce Azzurra"),
+    ("Dr. Beckmann", "query", "Dr. Beckmann"),
+    ("Kamill / Glysolid", "query", "Kamill|Glysolid"),
 ]
+EXPECTED_SECTION_IDS = {
+    value for _, target_type, value in EXPECTED_PRIMARY_SHORTCUTS if target_type == "section"
+}
+EXPECTED_SECTION_LABELS = {
+    value: label for label, target_type, value in EXPECTED_PRIMARY_SHORTCUTS if target_type == "section"
+}
 
 
 def load_json(path):
@@ -51,6 +63,18 @@ def products_by_code(document):
         for product in document.get("products", [])
         if str(product.get("sourceCode") or product.get("code") or "").strip()
     }
+
+
+def source_code(product):
+    return str(product.get("sourceCode") or product.get("code") or "").strip()
+
+
+def shortcut_signature(item, label_field):
+    if item.get("section"):
+        return (item.get(label_field), "section", item.get("section"))
+    if item.get("query"):
+        return (item.get(label_field), "query", item.get("query"))
+    return None
 
 
 def gallery(product):
@@ -120,6 +144,31 @@ def main():
         and re.match(rf"^\s*{re.escape(str(item.get('sourceCode')))}(?:\s|[-:])", str(item.get("title") or ""), re.I)
     ]
     require(not raw_titles, f"raw 1C code prefixes remain in {len(raw_titles)} public titles", errors)
+    products_without_sections = [source_code(item) for item in public_products if not item.get("sectionIds")]
+    require(not products_without_sections, f"active products without storefront sections: {', '.join(products_without_sections[:20])}", errors)
+    invalid_sections = sorted({
+        section
+        for item in public_products
+        for section in (item.get("sectionIds") or [])
+        if section not in EXPECTED_SECTION_IDS
+    })
+    require(not invalid_sections, f"unknown/deprecated storefront sections remain: {', '.join(invalid_sections)}", errors)
+    bad_section_labels = [
+        source_code(item)
+        for item in public_products
+        if item.get("sectionLabels") != [EXPECTED_SECTION_LABELS[section] for section in item.get("sectionIds", [])]
+    ]
+    require(not bad_section_labels, f"storefront section labels do not match ids: {', '.join(bad_section_labels[:20])}", errors)
+    fragrance_kinds = {
+        "perfume_decant", "deodorant_stick", "deodorant_spray", "deodorant_rollon",
+        "deodorant_gel", "mineral_deodorant", "air_freshener",
+    }
+    missing_perfume_crosslist = [
+        source_code(item)
+        for item in public_products
+        if item.get("productKind") in fragrance_kinds and "perfume" not in (item.get("sectionIds") or [])
+    ]
+    require(not missing_perfume_crosslist, f"fragrance products missing from perfume: {', '.join(missing_perfume_crosslist[:20])}", errors)
 
     if page_catalog:
         all_products = page_catalog.get("products", [])
@@ -227,10 +276,17 @@ def main():
 
     banner_images = [item.get("image") for item in config.get("banners", []) if item.get("active") is not False]
     require(banner_images == EXPECTED_BANNERS, f"banner set/order changed: {banner_images}", errors)
-    menu_sections = [(item.get("label"), item.get("section")) for item in config.get("menu", []) if item.get("section")]
-    quick_sections = [(item.get("title"), item.get("section")) for item in config.get("quickCategories", [])]
-    require(menu_sections == EXPECTED_PRIMARY_SECTIONS, f"primary menu sections changed: {menu_sections}", errors)
-    require(quick_sections == EXPECTED_PRIMARY_SECTIONS, f"quick category sections changed: {quick_sections}", errors)
+    menu_shortcuts = [
+        shortcut_signature(item, "label") for item in config.get("menu", [])
+        if item.get("section") or item.get("query")
+    ]
+    quick_shortcuts = [shortcut_signature(item, "title") for item in config.get("quickCategories", [])]
+    require(menu_shortcuts == EXPECTED_PRIMARY_SHORTCUTS, f"primary menu shortcuts changed: {menu_shortcuts}", errors)
+    require(quick_shortcuts == EXPECTED_PRIMARY_SHORTCUTS, f"quick category shortcuts changed: {quick_shortcuts}", errors)
+    menu_group_starts = [item.get("label") for item in config.get("menu", []) if item.get("groupStart")]
+    quick_group_starts = [item.get("title") for item in config.get("quickCategories", []) if item.get("groupStart")]
+    require(menu_group_starts == ["Dalli / Dash"], f"menu brand divider changed: {menu_group_starts}", errors)
+    require(quick_group_starts == ["Dalli / Dash"], f"quick-category brand divider changed: {quick_group_starts}", errors)
     supplemental = {item.get("label"): item.get("href") for item in config.get("menu", []) if item.get("href")}
     require("audience=kids" in str(supplemental.get("Детское") or ""), "supplemental Детское link is missing", errors)
     require(supplemental.get("Европа") == "/collection/europe/", "supplemental Европа link is missing", errors)
@@ -268,7 +324,7 @@ def main():
     require("AW-18474068233" in consent_js and "order_submitted" in consent_js, "Google Ads/order measurement was lost", errors)
 
     headers = (site / "_headers").read_text(encoding="utf-8")
-    require("20261011-retail-full-recovery-v1" in headers, "release verification header is missing", errors)
+    require("20261014-retail-sections-v1" in headers, "release verification header is missing", errors)
 
     app = (site / "app.js").read_text(encoding="utf-8")
     require('loadMore.addEventListener("click"' in app and "previousOverflowAnchor" in app, "load-more scroll preservation missing", errors)
