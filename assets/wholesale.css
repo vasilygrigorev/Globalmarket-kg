@@ -150,80 +150,88 @@
 
 .wholesale-brand-track {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 10px;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .wholesale-brand-card {
-  position: relative;
-  height: 108px;
+  display: flex;
+  grid-column: span 2;
+  height: 78px;
   min-width: 0;
-  margin: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
   overflow: hidden;
-  border: 1px solid rgba(0, 78, 88, 0.16);
+  border: 1px solid rgba(0, 78, 88, 0.14);
   border-radius: 7px;
-  background: #e8f0ef;
-  box-shadow: 0 6px 18px rgba(0, 55, 65, 0.08);
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(0, 55, 65, 0.07);
 }
 
-.wholesale-brand-card::after {
-  position: absolute;
-  z-index: 1;
-  inset: 38% 0 0;
-  content: "";
-  background: linear-gradient(180deg, transparent, rgba(0, 35, 44, 0.78));
-  pointer-events: none;
+.wholesale-brand-card:nth-child(5) {
+  grid-column: 2 / span 2;
 }
 
-.wholesale-brand-card > img,
-.wholesale-brand-duo-media,
-.wholesale-brand-duo-media img {
-  width: 100%;
-  height: 100%;
+.wholesale-brand-card:nth-child(6) {
+  grid-column: 4 / span 2;
 }
 
-.wholesale-brand-card > img,
-.wholesale-brand-duo-media img {
+.wholesale-brand-card:nth-child(7) {
+  grid-column: 6 / span 2;
+}
+
+.wholesale-brand-card img {
   display: block;
-  object-fit: cover;
+  width: auto;
+  max-width: 82%;
+  height: auto;
+  max-height: 58px;
+  object-fit: contain;
 }
 
-.wholesale-brand-card-dalli > img,
-.wholesale-brand-card-felce > img,
-.wholesale-brand-card-beckmann > img {
-  object-position: 76% center;
+.wholesale-brand-card-dalli img,
+.wholesale-brand-card-dash img {
+  max-height: 64px;
 }
 
-.wholesale-brand-card-pink > img {
-  object-position: 78% center;
+.wholesale-brand-card-pink {
+  background: #ec2185;
 }
 
-.wholesale-brand-duo-media {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.wholesale-brand-card-pink img {
+  max-width: 72%;
+  max-height: 60px;
 }
 
-.wholesale-brand-duo-media img:first-child {
-  object-position: 54% center;
+.wholesale-brand-card-felce {
+  background: #1b2f59;
 }
 
-.wholesale-brand-duo-media img:last-child {
-  object-position: center;
+.wholesale-brand-card-felce img {
+  max-width: 72%;
 }
 
-.wholesale-brand-card figcaption {
-  position: absolute;
-  z-index: 2;
-  right: 10px;
-  bottom: 9px;
-  left: 10px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1.15;
-  text-shadow: 0 1px 8px rgba(0, 27, 34, 0.58);
+.wholesale-brand-card-beckmann img {
+  max-width: 78%;
+}
+
+.wholesale-brand-card-kamill {
+  background: #f8fcf5;
+}
+
+.wholesale-brand-card-kamill img {
+  max-width: 68%;
+}
+
+.wholesale-brand-card-glysolid {
+  background: #c91d3d;
+}
+
+.wholesale-brand-card-glysolid img {
+  max-width: 74%;
 }
 
 .wholesale-hero {
@@ -692,24 +700,6 @@
     display: none;
   }
 
-  .wholesale-brand-track {
-    display: flex;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .wholesale-brand-track::-webkit-scrollbar {
-    display: none;
-  }
-
-  .wholesale-brand-card {
-    flex: 0 0 190px;
-    scroll-snap-align: start;
-  }
-
   .wholesale-hero {
     min-height: 620px;
     align-items: start;
@@ -812,15 +802,22 @@
   }
 
   .wholesale-brand-card {
-    height: 94px;
-    flex-basis: 166px;
+    height: 68px;
+    padding: 8px 6px;
   }
 
-  .wholesale-brand-card figcaption {
-    right: 9px;
-    bottom: 8px;
-    left: 9px;
-    font-size: 14px;
+  .wholesale-brand-track {
+    gap: 7px;
+  }
+
+  .wholesale-brand-card img {
+    max-width: 90%;
+    max-height: 52px;
+  }
+
+  .wholesale-brand-card-dalli img,
+  .wholesale-brand-card-dash img {
+    max-height: 56px;
   }
 
   .wholesale-hero {
