@@ -120,6 +120,7 @@ def main():
                 "tests/raw-photo-triage.test.mjs",
                 "tests/override-schema-guard.test.mjs",
                 "tests/storefront-a11y.test.mjs",
+                "tests/wholesale-landing.test.mjs",
             ],
         ),
         ("Check admin/admin.js syntax", ["node", "--check", "admin/admin.js"]),

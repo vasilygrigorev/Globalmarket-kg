@@ -307,7 +307,15 @@ def main():
     routes = load_json(site / "_routes.json")
     require(routes == {"version": 1, "include": ["/api/*"], "exclude": []}, "Cloudflare function routes are not restricted to /api/*", errors)
 
-    public_html_paths = [site / "index.html", site / "privacy.html", policy_path, site / "catalog" / "index.html"]
+    wholesale_path = site / "opt" / "index.html"
+    require(wholesale_path.exists(), "public wholesale landing page is missing", errors)
+    wholesale_html = wholesale_path.read_text(encoding="utf-8") if wholesale_path.exists() else ""
+    require('rel="canonical" href="https://globalmarket.kg/opt/"' in wholesale_html, "wholesale canonical URL is missing", errors)
+    require('content="index,follow,max-image-preview:large"' in wholesale_html, "wholesale page is not explicitly indexable", errors)
+    require("https://globalmarket.kg/opt/" in (site / "sitemap.xml").read_text(encoding="utf-8"), "wholesale page is missing from sitemap", errors)
+    require("generate_lead" in (site / "assets" / "wholesale.js").read_text(encoding="utf-8"), "wholesale lead measurement is missing", errors)
+
+    public_html_paths = [site / "index.html", site / "privacy.html", policy_path, site / "catalog" / "index.html", wholesale_path]
     for dirname in ("category", "collection", "brand", "product"):
         public_html_paths.extend((site / dirname).glob("*/index.html"))
     for path in public_html_paths:
@@ -324,7 +332,7 @@ def main():
     require("AW-18474068233" in consent_js and "order_submitted" in consent_js, "Google Ads/order measurement was lost", errors)
 
     headers = (site / "_headers").read_text(encoding="utf-8")
-    require("20261014-retail-sections-v1" in headers, "release verification header is missing", errors)
+    require("20261014-retail-wholesale-landing-v1" in headers, "release verification header is missing", errors)
 
     app = (site / "app.js").read_text(encoding="utf-8")
     require('loadMore.addEventListener("click"' in app and "previousOverflowAnchor" in app, "load-more scroll preservation missing", errors)

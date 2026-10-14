@@ -71,7 +71,7 @@
       setConsent(consentButton.dataset.consent);
       return;
     }
-    const action = event.target.closest("[data-add],[data-modal-add],[data-fresh-add],[data-recent-add],[data-product-link],[data-open-product],[data-quick-order],[data-ask-product],[data-share-product],#checkoutLink,#modalCheckoutLink");
+    const action = event.target.closest("[data-add],[data-modal-add],[data-fresh-add],[data-recent-add],[data-product-link],[data-open-product],[data-quick-order],[data-ask-product],[data-share-product],[data-wholesale-entry],#checkoutLink,#modalCheckoutLink");
     if (!action) return;
     const itemId = productIdFrom(action);
     const common = itemId ? { item_id: itemId } : {};
@@ -87,6 +87,11 @@
       window.gmkAnalyticsEvent("contact", { ...common, method: "product_whatsapp" });
     } else if (action.matches("[data-share-product]")) {
       window.gmkAnalyticsEvent("share", { ...common, method: "product_share" });
+    } else if (action.matches("[data-wholesale-entry]")) {
+      window.gmkAnalyticsEvent("select_content", {
+        content_type: "wholesale_landing",
+        item_id: "/opt/",
+      });
     }
   }, true);
 

@@ -23,6 +23,7 @@ REQUIRED_ROOT_FILES = {
     "_routes.json",
     "sitemap.xml",
     "robots.txt",
+    "opt/index.html",
 }
 REQUIRED_ASSET_FILES = {
     "assets/brand/icon-192.png",
@@ -103,7 +104,7 @@ def verify_required_files(package, errors):
     for rel in sorted(REQUIRED_ASSET_FILES):
         if not (package / rel).is_file():
             fail(errors, f"Missing required asset: {rel}")
-    for dirname in ("assets", "product", "catalog", "category", "collection", "brand", "delivery-and-returns"):
+    for dirname in ("assets", "product", "catalog", "category", "collection", "brand", "delivery-and-returns", "opt"):
         if not (package / dirname).is_dir():
             fail(errors, f"Missing directory: {dirname}")
 
@@ -202,13 +203,15 @@ def verify_sitemap(package, catalog, errors):
     urls = [node.find("sm:loc", ns).text for node in root.findall("sm:url", ns) if node.find("sm:loc", ns) is not None]
     if "https://globalmarket.kg/" not in urls:
         fail(errors, "sitemap.xml does not include homepage")
+    if "https://globalmarket.kg/opt/" not in urls:
+        fail(errors, "sitemap.xml does not include wholesale landing page")
     product_pages = sorted((package / "product").glob("*/index.html"))
     landing_pages = (
         sorted((package / "category").glob("*/index.html"))
         + sorted((package / "collection").glob("*/index.html"))
         + sorted((package / "brand").glob("*/index.html"))
     )
-    expected_count = len(product_pages) + len(landing_pages) + 4
+    expected_count = len(product_pages) + len(landing_pages) + 5
     if len(urls) != expected_count:
         fail(errors, f"sitemap.xml URL count mismatch: {len(urls)} != {expected_count}")
     product_ids_with_pages = {

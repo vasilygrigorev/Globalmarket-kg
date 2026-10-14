@@ -30,7 +30,12 @@ def strip_marked(text: str, start: str, end: str) -> str:
 
 
 def public_pages() -> list[Path]:
-    pages = [ROOT / "index.html", ROOT / "privacy.html", ROOT / "delivery-and-returns" / "index.html"]
+    pages = [
+        ROOT / "index.html",
+        ROOT / "privacy.html",
+        ROOT / "delivery-and-returns" / "index.html",
+        ROOT / "opt" / "index.html",
+    ]
     pages.extend((ROOT / "catalog").glob("*/index.html"))
     if (ROOT / "catalog" / "index.html").exists():
         pages.append(ROOT / "catalog" / "index.html")

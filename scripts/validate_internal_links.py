@@ -12,6 +12,7 @@ DEFAULT_REPORT = ROOT / "outputs" / "internal-links-report.md"
 HTML_GLOBS = (
     "index.html",
     "catalog/index.html",
+    "opt/index.html",
     "privacy.html",
     "category/*/index.html",
     "collection/*/index.html",

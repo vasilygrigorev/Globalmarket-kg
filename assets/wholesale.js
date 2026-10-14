@@ -7,11 +7,38 @@
   const isProduction = window.location.hostname === "globalmarket.kg";
   if (!isProduction && previewNote) previewNote.hidden = false;
 
+  function track(name, params = {}) {
+    if (typeof window.gmkAnalyticsEvent === "function") {
+      window.gmkAnalyticsEvent(name, params);
+    }
+  }
+
   function setStatus(message, state = "") {
     status.textContent = message;
     if (state) status.dataset.state = state;
     else delete status.dataset.state;
   }
+
+  document.addEventListener("click", (event) => {
+    const action = event.target.closest("[data-wholesale-action]");
+    if (!action) return;
+    const actionName = action.dataset.wholesaleAction;
+    if (actionName === "whatsapp") {
+      track("contact", { method: "wholesale_whatsapp", lead_type: "wholesale" });
+      return;
+    }
+    track("select_content", {
+      content_type: "wholesale",
+      item_id: actionName || "wholesale_action",
+    });
+  });
+
+  let formStarted = false;
+  form.addEventListener("input", () => {
+    if (formStarted) return;
+    formStarted = true;
+    track("wholesale_application_started", { method: "site_form" });
+  }, { once: true });
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -42,9 +69,11 @@
       });
       const result = await response.json().catch(() => ({}));
       if (!response.ok || !result.ok) throw new Error(result.error || "request_failed");
+      track("generate_lead", { method: "site_form", lead_type: "wholesale_application" });
       form.reset();
       setStatus("Заявка отправлена. Менеджер свяжется с вами.", "success");
     } catch {
+      track("wholesale_application_failed", { method: "site_form" });
       setStatus("Не получилось отправить заявку. Напишите менеджеру в WhatsApp.", "error");
     } finally {
       submit.disabled = false;

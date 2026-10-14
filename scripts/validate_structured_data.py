@@ -48,6 +48,10 @@ def validate_file(path):
     elif rel == "catalog/index.html":
         if "ItemList" not in types:
             errors.append("catalog index missing ItemList JSON-LD")
+    elif rel == "opt/index.html":
+        for required in ("Organization", "WebPage", "Service", "BreadcrumbList"):
+            if required not in types:
+                errors.append(f"wholesale landing missing {required} JSON-LD")
     elif rel.startswith("category/") or rel.startswith("collection/") or rel.startswith("brand/"):
         for required in ("BreadcrumbList", "ItemList"):
             if required not in types:
@@ -64,6 +68,7 @@ def validate():
     pages = [
         ROOT / "index.html",
         ROOT / "catalog" / "index.html",
+        ROOT / "opt" / "index.html",
         *sorted((ROOT / "category").glob("*/index.html")),
         *sorted((ROOT / "collection").glob("*/index.html")),
         *sorted((ROOT / "brand").glob("*/index.html")),

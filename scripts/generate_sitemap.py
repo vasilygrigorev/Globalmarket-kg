@@ -87,6 +87,7 @@ def main():
     urls = [
         (f"{BASE_URL}/", "1.0", "daily"),
         (f"{BASE_URL}/catalog/", "0.8", "weekly"),
+        (f"{BASE_URL}/opt/", "0.7", "weekly"),
         (f"{BASE_URL}/delivery-and-returns/", "0.4", "monthly"),
         (f"{BASE_URL}/privacy.html", "0.2", "monthly"),
     ]
