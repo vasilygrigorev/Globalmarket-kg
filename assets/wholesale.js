@@ -70,6 +70,9 @@
       const result = await response.json().catch(() => ({}));
       if (!response.ok || !result.ok) throw new Error(result.error || "request_failed");
       track("generate_lead", { method: "site_form", lead_type: "wholesale_application" });
+      if (typeof window.gmkWholesaleLeadConversion === "function") {
+        window.gmkWholesaleLeadConversion();
+      }
       form.reset();
       setStatus("Заявка отправлена. Менеджер свяжется с вами.", "success");
     } catch {

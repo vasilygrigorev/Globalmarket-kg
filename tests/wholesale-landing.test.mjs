@@ -39,6 +39,8 @@ test("wholesale structured data identifies the organization, page, service, and 
 
 test("wholesale measurement records anonymous funnel events only", () => {
   assert.match(wholesaleJs, /track\("generate_lead", \{ method: "site_form", lead_type: "wholesale_application" \}\)/);
+  assert.match(wholesaleJs, /gmkWholesaleLeadConversion/);
+  assert.match(consentJs, /window\.gmkWholesaleLeadConversion/);
   assert.match(wholesaleJs, /track\("contact", \{ method: "wholesale_whatsapp", lead_type: "wholesale" \}\)/);
   assert.match(consentJs, /\[data-wholesale-entry\]/);
   assert.doesNotMatch(wholesaleJs, /track\("[^"\n]+"[^\n]*(phone|shop_name|name|address|comment)/);

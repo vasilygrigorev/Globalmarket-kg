@@ -2,7 +2,8 @@
   "use strict";
 
   const measurementId = "G-9KZK8Y4S7K";
-  const adsDestinationId = "AW-18474068233";
+  const adsDestinationIds = ["AW-18474068233", "AW-18473846742"];
+  const wholesaleLeadDestination = "AW-18473846742/i7tRCJa62pwdENaPgulE";
   const storageKey = "gmk_google_consent_v1";
   let analyticsConfigured = false;
 
@@ -30,9 +31,11 @@
       allow_ad_personalization_signals: true,
       send_page_view: true,
     });
-    window.gtag("config", adsDestinationId, {
-      allow_google_signals: true,
-      allow_ad_personalization_signals: true,
+    adsDestinationIds.forEach((destinationId) => {
+      window.gtag("config", destinationId, {
+        allow_google_signals: true,
+        allow_ad_personalization_signals: true,
+      });
     });
   }
 
@@ -56,6 +59,16 @@
     if (readConsent() !== "granted") return;
     enableAnalytics();
     window.gtag("event", name, params || {});
+  };
+
+  window.gmkWholesaleLeadConversion = () => {
+    if (readConsent() !== "granted") return;
+    enableAnalytics();
+    window.gtag("event", "conversion", {
+      send_to: wholesaleLeadDestination,
+      value: 1,
+      currency: "USD",
+    });
   };
 
   function productIdFrom(node) {
