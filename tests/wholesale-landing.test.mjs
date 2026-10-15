@@ -13,10 +13,15 @@ const wholesaleJs = read("assets/wholesale.js");
 const consentJs = read("assets/google-consent.js");
 
 test("homepage wholesale entry is compact and follows fresh products", () => {
+  const wholesaleCss = read("assets/wholesale.css");
   assert.ok(home.indexOf('id="freshProducts"') < home.indexOf('class="wholesale-home-entry"'));
   assert.ok(home.indexOf('class="wholesale-home-entry"') < home.indexOf('id="recentlyViewed"'));
   assert.match(home, /href="\/opt\/" data-wholesale-entry/);
-  assert.match(read("assets/wholesale.css"), /\.wholesale-home-entry\s*\{[^}]*order:\s*3;/s);
+  assert.match(wholesaleCss, /\.wholesale-home-entry\s*\{[^}]*order:\s*3;/s);
+  assert.match(
+    wholesaleCss,
+    /\.wholesale-home-link\s*\{[^}]*color:\s*#fff;[^}]*background:\s*linear-gradient\(135deg,\s*#009b91,\s*#007d7a\);/s,
+  );
 });
 
 test("wholesale landing is indexable, canonical, and targeted to Bishkek wholesale search", () => {
