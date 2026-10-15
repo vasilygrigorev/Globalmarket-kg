@@ -22,6 +22,8 @@ test("homepage wholesale entry is compact and follows fresh products", () => {
     wholesaleCss,
     /\.wholesale-home-link\s*\{[^}]*color:\s*#fff;[^}]*background:\s*linear-gradient\(135deg,\s*#009b91,\s*#007d7a\);/s,
   );
+  assert.match(home, /\/assets\/wholesale\.css\?v=20261015-wholesale-official-logos-v1/);
+  assert.match(wholesale, /\/assets\/wholesale\.css\?v=20261015-wholesale-official-logos-v1/);
 });
 
 test("wholesale landing is indexable, canonical, and targeted to Bishkek wholesale search", () => {
@@ -29,7 +31,7 @@ test("wholesale landing is indexable, canonical, and targeted to Bishkek wholesa
   assert.match(wholesale, /name="robots" content="index,follow,max-image-preview:large"/);
   assert.match(wholesale, /rel="canonical" href="https:\/\/globalmarket\.kg\/opt\/"/);
   assert.match(wholesale, /<h1 id="wholesale-title">Бытовая химия оптом для магазинов<\/h1>/);
-  assert.match(wholesale, /wholesale-brand-logos-v1/);
+  assert.match(wholesale, /20261015-wholesale-official-logos-v1/);
 });
 
 test("official brand logos form a static two-row grid below the wordmark", () => {

@@ -332,7 +332,7 @@ def main():
     require("AW-18474068233" in consent_js and "order_submitted" in consent_js, "Google Ads/order measurement was lost", errors)
 
     headers = (site / "_headers").read_text(encoding="utf-8")
-    require("20261014-retail-wholesale-landing-v1" in headers, "release verification header is missing", errors)
+    require("20261015-retail-wholesale-official-logos-v1" in headers, "release verification header is missing", errors)
 
     app = (site / "app.js").read_text(encoding="utf-8")
     require('loadMore.addEventListener("click"' in app and "previousOverflowAnchor" in app, "load-more scroll preservation missing", errors)
