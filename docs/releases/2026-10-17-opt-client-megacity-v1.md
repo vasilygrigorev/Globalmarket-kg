@@ -1,5 +1,9 @@
 # Opt client Megacity release
 
+Superseded on 2026-10-17 by
+[`2026-10-17-opt-client-megacity-seven-v1.md`](2026-10-17-opt-client-megacity-seven-v1.md).
+Do not restore this release's three-contractor scope during later opt updates.
+
 Production release: `20261017-opt-client-megacity-v1`
 
 ## Scope

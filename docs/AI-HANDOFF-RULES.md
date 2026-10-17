@@ -137,14 +137,15 @@ and 904 sitemap URLs. Immediate rollback is
 `001ebc78-2924-4a58-98c6-05b8863ec380`. Any later release must explain a
 decrease in these retained-history counts before publication.
 
-The accepted opt baseline is release `20261017-opt-client-megacity-v1`, Worker
-version `a96b4c09-40a3-4b1a-a974-97572659164b`. It contains 699 unchanged
+The accepted opt baseline is release `20261017-opt-client-megacity-seven-v1`, Worker
+version `30f79cad-e2b3-41fc-baed-122de3bee0e2`. It contains 699 unchanged
 product records, 16 unchanged base 1C groups and a first virtual fresh-arrivals
-group with 161 current products. It adds only the stock-hidden `megacity`
-client policy: three exact 1C Mega City contractors and KGS prices calculated
-server-side from exact source 1C USD multiplied by 95. Immediate rollback is
-Worker version `7c2c3966-1f2c-46f6-8b16-4ce1be3dcd02`; the pre-change Worker is
-`b985877a-b12b-41a0-a0f9-85f217347e3e`.
+group with 161 current products. The stock-hidden `megacity` account sees only
+seven account-private destinations named `Мегасити 1` through `Мегасити 7`;
+do not restore its former 1C contractors or add these seven rows to the shared
+contractor directory. Its KGS prices are calculated server-side from exact
+source 1C USD multiplied by 95. Immediate rollback is Worker version
+`a96b4c09-40a3-4b1a-a974-97572659164b`.
 
 Account-specific pricing must never overwrite `public/data/catalog.json`.
 Apply it in the authenticated catalog projection and repeat the same rule in
