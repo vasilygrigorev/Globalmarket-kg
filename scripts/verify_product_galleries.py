@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import hashlib
 import json
 import re
 import sys
@@ -24,6 +25,26 @@ RAW_LEFTOVER_MARKER = re.compile(
     r"(?:telegram-|alt-front|alt-back|contact[-_]?sheet|\bsheet\b|ocr|screenshot|\bdup\b|\bcopy\b|untitled|без-названия|\.heic)",
     re.IGNORECASE,
 )
+
+# This approved gallery arrived with all three filenames present but the image
+# contents shifted by one role. Keep a content check here so a later stock/photo
+# rebuild cannot silently put the back panel first again.
+EXPECTED_CONTENT_ROLE_HASHES = {
+    "assets/products/dr-beckmann/dr-beckmann-fleckenteufel-oil-grease-50ml-card-front.jpg":
+        "f651d6a2cf70fa058294d4651793f2bd5d551090a07897b839bfb5db23d5cd67",
+    "assets/products/dr-beckmann/dr-beckmann-fleckenteufel-oil-grease-50ml-front.jpg":
+        "d88ee4e9d3c33d54ffb0f469bb7eb3fbfe0b8a6dfeabeebd46ddc18a9c869f33",
+    "assets/products/dr-beckmann/dr-beckmann-fleckenteufel-oil-grease-50ml-back.jpg":
+        "dad035cfd068dcd5880d843e479c5af58719a4e2ace4b5bcfa7d85d05b686512",
+}
+
+
+def sha256(path):
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def path_hygiene_issues(pid, title, src):
@@ -116,6 +137,15 @@ def main():
         if pid in KNOWN_EXCEPTIONS:
             exceptions_present.append((pid, product.get("title"), KNOWN_EXCEPTIONS[pid]))
         issues.extend(check_gallery(product))
+
+    for relative, expected_hash in EXPECTED_CONTENT_ROLE_HASHES.items():
+        path = ROOT / relative
+        if not path.is_file():
+            issues.append(f"missing content-role guard file {relative}")
+        elif sha256(path) != expected_hash:
+            issues.append(
+                f"content-role mismatch for {relative}: expected {expected_hash}, got {sha256(path)}"
+            )
 
     print(f"Products total: {len(products)}")
     print(f"Products with real product photos: {len(photographed)}")
