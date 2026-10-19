@@ -7,6 +7,7 @@ package and the append-only catalog master. It intentionally fails closed.
 
 import argparse
 import json
+import os
 import re
 from pathlib import Path
 
@@ -18,7 +19,10 @@ DEFAULT_PREVIOUS = Path(
 )
 DEFAULT_BASELINE_MASTER = DEFAULT_PREVIOUS.parent / "inventory" / "catalog-master-after.json"
 DEFAULT_CURRENT_MASTER = Path(
-    "/Users/macmini/Library/CloudStorage/Dropbox/CodexProjects/GlobalMarketKG/catalog-master.json"
+    os.environ.get(
+        "GLOBALMARKET_CURRENT_MASTER",
+        "/Users/macmini/Library/CloudStorage/Dropbox/CodexProjects/GlobalMarketKG/catalog-master.json",
+    )
 )
 EXPECTED_BANNERS = [
     "/assets/hero-green-wide-v1.png",
@@ -332,7 +336,8 @@ def main():
     require("AW-18474068233" in consent_js and "order_submitted" in consent_js, "Google Ads/order measurement was lost", errors)
 
     headers = (site / "_headers").read_text(encoding="utf-8")
-    require("20261015-retail-wholesale-official-logos-v1" in headers, "release verification header is missing", errors)
+    expected_release = str(current_master.get("sourceRelease") or "").strip()
+    require(expected_release and expected_release in headers, "release verification header is missing", errors)
 
     app = (site / "app.js").read_text(encoding="utf-8")
     require('loadMore.addEventListener("click"' in app and "previousOverflowAnchor" in app, "load-more scroll preservation missing", errors)

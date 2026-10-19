@@ -334,12 +334,25 @@ def build_slug_registry(previous_site, baseline_products):
         product = baseline_by_id.get(product_id)
         if product and source_code(product):
             by_source_code[source_code(product)] = slug
-    return {
+    generated = {
         "schemaVersion": 1,
         "source": str(previous_site),
         "byId": dict(sorted(by_id.items())),
         "bySourceCode": dict(sorted(by_source_code.items(), key=lambda item: item[0])),
     }
+    # The verified working tree can contain stable URLs created after the
+    # historical baseline release.  Recovery is append-only for URL identity:
+    # never replace that newer registry with an older subset.
+    if SLUG_REGISTRY_PATH.exists():
+        existing = load_json(SLUG_REGISTRY_PATH)
+        generated["byId"].update(existing.get("byId") or {})
+        generated["bySourceCode"].update(existing.get("bySourceCode") or {})
+        generated["source"] = existing.get("source") or generated["source"]
+        generated["byId"] = dict(sorted(generated["byId"].items()))
+        generated["bySourceCode"] = dict(
+            sorted(generated["bySourceCode"].items(), key=lambda item: item[0])
+        )
+    return generated
 
 
 def category_rows(products, baseline_public):
@@ -375,6 +388,10 @@ def main():
     parser.add_argument("--current-master", default=str(DEFAULT_CURRENT_MASTER))
     parser.add_argument("--baseline-release", default=str(DEFAULT_BASELINE_RELEASE))
     parser.add_argument("--master-output", help="Optional recovered full master output path.")
+    parser.add_argument(
+        "--release-id",
+        help="Release id recorded in the recovered master; defaults to the current master value.",
+    )
     args = parser.parse_args()
 
     baseline_release = Path(args.baseline_release).expanduser().resolve()
@@ -427,7 +444,9 @@ def main():
 
     recovered_master = copy.deepcopy(current_master)
     recovered_master["updatedAt"] = generated_at
-    recovered_master["sourceRelease"] = "20261011-retail-recovery-v2"
+    recovered_master["sourceRelease"] = (
+        args.release_id or current_master.get("sourceRelease") or "retail-catalog-recovery"
+    )
     recovered_master["products"] = recovered
     recovered_master["stats"] = {
         "productRecords": len(recovered),

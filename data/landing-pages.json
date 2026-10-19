@@ -7,7 +7,7 @@
       "title": "Стирка и уход за бельем",
       "path": "/category/laundry/",
       "url": "https://globalmarket.kg/category/laundry/",
-      "count": 105,
+      "count": 93,
       "seoTerms": [
         "порошок",
         "стиральный порошок",
@@ -26,7 +26,7 @@
       "title": "Уборка и чистота",
       "path": "/category/home_cleaning/",
       "url": "https://globalmarket.kg/category/home_cleaning/",
-      "count": 85,
+      "count": 86,
       "seoTerms": [
         "средство для стекол",
         "окна",
@@ -47,7 +47,7 @@
       "title": "Уход за волосами",
       "path": "/category/hair/",
       "url": "https://globalmarket.kg/category/hair/",
-      "count": 90,
+      "count": 89,
       "seoTerms": [
         "шампунь"
       ],
@@ -60,7 +60,7 @@
       "title": "Уход за телом",
       "path": "/category/body/",
       "url": "https://globalmarket.kg/category/body/",
-      "count": 157,
+      "count": 154,
       "seoTerms": [
         "мыло",
         "жидкое мыло",
@@ -81,12 +81,12 @@
       "title": "Зубная гигиена",
       "path": "/category/oral/",
       "url": "https://globalmarket.kg/category/oral/",
-      "count": 28,
+      "count": 26,
       "seoTerms": [
         "зубная паста",
         "зубная щетка"
       ],
-      "shown": 23,
+      "shown": 21,
       "retainedLegacy": false
     },
     {
@@ -95,7 +95,7 @@
       "title": "Дезодоранты",
       "path": "/category/deodorants/",
       "url": "https://globalmarket.kg/category/deodorants/",
-      "count": 66,
+      "count": 58,
       "seoTerms": [
         "дезодорант",
         "дезик",
@@ -113,7 +113,7 @@
       "title": "Бритье",
       "path": "/category/shaving/",
       "url": "https://globalmarket.kg/category/shaving/",
-      "count": 55,
+      "count": 48,
       "seoTerms": [
         "бритье",
         "товары для бритья",
@@ -161,7 +161,7 @@
       "title": "Разное",
       "path": "/category/other/",
       "url": "https://globalmarket.kg/category/other/",
-      "count": 87,
+      "count": 84,
       "seoTerms": [
         "мыло",
         "жидкое мыло",
@@ -177,7 +177,7 @@
       "title": "Европа",
       "path": "/collection/europe/",
       "url": "https://globalmarket.kg/collection/europe/",
-      "count": 165,
+      "count": 166,
       "seoTerms": [
         "Европа",
         "Германия",
@@ -194,7 +194,7 @@
       "title": "Felce Azzurra",
       "path": "/brand/felce-azzurra/",
       "url": "https://globalmarket.kg/brand/felce-azzurra/",
-      "count": 80,
+      "count": 81,
       "seoTerms": [
         "Felce Azzurra",
         "товары Felce Azzurra",
@@ -224,13 +224,13 @@
       "title": "Gillette",
       "path": "/brand/gillette/",
       "url": "https://globalmarket.kg/brand/gillette/",
-      "count": 34,
+      "count": 32,
       "seoTerms": [
         "Gillette",
         "товары Gillette",
         "Gillette купить Бишкек"
       ],
-      "shown": 34,
+      "shown": 32,
       "retainedLegacy": false
     },
     {
@@ -239,43 +239,13 @@
       "title": "The Pink Stuff",
       "path": "/brand/the-pink-stuff/",
       "url": "https://globalmarket.kg/brand/the-pink-stuff/",
-      "count": 29,
+      "count": 30,
       "seoTerms": [
         "The Pink Stuff",
         "товары The Pink Stuff",
         "The Pink Stuff купить Бишкек"
       ],
-      "shown": 28,
-      "retainedLegacy": false
-    },
-    {
-      "type": "brand",
-      "slug": "dalli",
-      "title": "Dalli",
-      "path": "/brand/dalli/",
-      "url": "https://globalmarket.kg/brand/dalli/",
-      "count": 28,
-      "seoTerms": [
-        "Dalli",
-        "товары Dalli",
-        "Dalli купить Бишкек"
-      ],
-      "shown": 23,
-      "retainedLegacy": false
-    },
-    {
-      "type": "brand",
-      "slug": "dr-beckmann",
-      "title": "Dr. Beckmann",
-      "path": "/brand/dr-beckmann/",
-      "url": "https://globalmarket.kg/brand/dr-beckmann/",
-      "count": 28,
-      "seoTerms": [
-        "Dr. Beckmann",
-        "товары Dr. Beckmann",
-        "Dr. Beckmann купить Бишкек"
-      ],
-      "shown": 24,
+      "shown": 29,
       "retainedLegacy": false
     },
     {
@@ -295,32 +265,32 @@
     },
     {
       "type": "brand",
-      "slug": "ariel",
-      "title": "Ariel",
-      "path": "/brand/ariel/",
-      "url": "https://globalmarket.kg/brand/ariel/",
-      "count": 24,
+      "slug": "dalli",
+      "title": "Dalli",
+      "path": "/brand/dalli/",
+      "url": "https://globalmarket.kg/brand/dalli/",
+      "count": 27,
       "seoTerms": [
-        "Ariel",
-        "товары Ariel",
-        "Ariel купить Бишкек"
+        "Dalli",
+        "товары Dalli",
+        "Dalli купить Бишкек"
       ],
-      "shown": 24,
+      "shown": 23,
       "retainedLegacy": false
     },
     {
       "type": "brand",
-      "slug": "dove",
-      "title": "Dove",
-      "path": "/brand/dove/",
-      "url": "https://globalmarket.kg/brand/dove/",
-      "count": 23,
+      "slug": "dr-beckmann",
+      "title": "Dr. Beckmann",
+      "path": "/brand/dr-beckmann/",
+      "url": "https://globalmarket.kg/brand/dr-beckmann/",
+      "count": 25,
       "seoTerms": [
-        "Dove",
-        "товары Dove",
-        "Dove купить Бишкек"
+        "Dr. Beckmann",
+        "товары Dr. Beckmann",
+        "Dr. Beckmann купить Бишкек"
       ],
-      "shown": 19,
+      "shown": 22,
       "retainedLegacy": false
     },
     {
@@ -355,17 +325,32 @@
     },
     {
       "type": "brand",
-      "slug": "febreze",
-      "title": "Febreze",
-      "path": "/brand/febreze/",
-      "url": "https://globalmarket.kg/brand/febreze/",
+      "slug": "dove",
+      "title": "Dove",
+      "path": "/brand/dove/",
+      "url": "https://globalmarket.kg/brand/dove/",
       "count": 21,
       "seoTerms": [
-        "Febreze",
-        "товары Febreze",
-        "Febreze купить Бишкек"
+        "Dove",
+        "товары Dove",
+        "Dove купить Бишкек"
       ],
-      "shown": 14,
+      "shown": 17,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "ariel",
+      "title": "Ariel",
+      "path": "/brand/ariel/",
+      "url": "https://globalmarket.kg/brand/ariel/",
+      "count": 19,
+      "seoTerms": [
+        "Ariel",
+        "товары Ariel",
+        "Ariel купить Бишкек"
+      ],
+      "shown": 19,
       "retainedLegacy": false
     },
     {
@@ -385,17 +370,17 @@
     },
     {
       "type": "brand",
-      "slug": "colgate",
-      "title": "Colgate",
-      "path": "/brand/colgate/",
-      "url": "https://globalmarket.kg/brand/colgate/",
-      "count": 18,
+      "slug": "febreze",
+      "title": "Febreze",
+      "path": "/brand/febreze/",
+      "url": "https://globalmarket.kg/brand/febreze/",
+      "count": 19,
       "seoTerms": [
-        "Colgate",
-        "товары Colgate",
-        "Colgate купить Бишкек"
+        "Febreze",
+        "товары Febreze",
+        "Febreze купить Бишкек"
       ],
-      "shown": 17,
+      "shown": 14,
       "retainedLegacy": false
     },
     {
@@ -430,6 +415,21 @@
     },
     {
       "type": "brand",
+      "slug": "colgate",
+      "title": "Colgate",
+      "path": "/brand/colgate/",
+      "url": "https://globalmarket.kg/brand/colgate/",
+      "count": 16,
+      "seoTerms": [
+        "Colgate",
+        "товары Colgate",
+        "Colgate купить Бишкек"
+      ],
+      "shown": 15,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
       "slug": "glysolid",
       "title": "Glysolid",
       "path": "/brand/glysolid/",
@@ -441,36 +441,6 @@
         "Glysolid купить Бишкек"
       ],
       "shown": 14,
-      "retainedLegacy": false
-    },
-    {
-      "type": "brand",
-      "slug": "lenor",
-      "title": "Lenor",
-      "path": "/brand/lenor/",
-      "url": "https://globalmarket.kg/brand/lenor/",
-      "count": 13,
-      "seoTerms": [
-        "Lenor",
-        "товары Lenor",
-        "Lenor купить Бишкек"
-      ],
-      "shown": 8,
-      "retainedLegacy": false
-    },
-    {
-      "type": "brand",
-      "slug": "gillette-venus",
-      "title": "Gillette Venus",
-      "path": "/brand/gillette-venus/",
-      "url": "https://globalmarket.kg/brand/gillette-venus/",
-      "count": 10,
-      "seoTerms": [
-        "Gillette Venus",
-        "товары Gillette Venus",
-        "Gillette Venus купить Бишкек"
-      ],
-      "shown": 9,
       "retainedLegacy": false
     },
     {
@@ -501,6 +471,21 @@
         "Finish купить Бишкек"
       ],
       "shown": 8,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "lenor",
+      "title": "Lenor",
+      "path": "/brand/lenor/",
+      "url": "https://globalmarket.kg/brand/lenor/",
+      "count": 8,
+      "seoTerms": [
+        "Lenor",
+        "товары Lenor",
+        "Lenor купить Бишкек"
+      ],
+      "shown": 7,
       "retainedLegacy": false
     },
     {
@@ -550,21 +535,6 @@
     },
     {
       "type": "brand",
-      "slug": "omo",
-      "title": "OMO",
-      "path": "/brand/omo/",
-      "url": "https://globalmarket.kg/brand/omo/",
-      "count": 7,
-      "seoTerms": [
-        "OMO",
-        "товары OMO",
-        "OMO купить Бишкек"
-      ],
-      "shown": 6,
-      "retainedLegacy": false
-    },
-    {
-      "type": "brand",
       "slug": "burti",
       "title": "Burti",
       "path": "/brand/burti/",
@@ -589,6 +559,21 @@
         "Cussons",
         "товары Cussons",
         "Cussons купить Бишкек"
+      ],
+      "shown": 6,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "omo",
+      "title": "OMO",
+      "path": "/brand/omo/",
+      "url": "https://globalmarket.kg/brand/omo/",
+      "count": 6,
+      "seoTerms": [
+        "OMO",
+        "товары OMO",
+        "OMO купить Бишкек"
       ],
       "shown": 6,
       "retainedLegacy": false
@@ -640,30 +625,15 @@
     },
     {
       "type": "brand",
-      "slug": "lady-speed-stick",
-      "title": "Lady Speed Stick",
-      "path": "/brand/lady-speed-stick/",
-      "url": "https://globalmarket.kg/brand/lady-speed-stick/",
+      "slug": "gillette-venus",
+      "title": "Gillette Venus",
+      "path": "/brand/gillette-venus/",
+      "url": "https://globalmarket.kg/brand/gillette-venus/",
       "count": 5,
       "seoTerms": [
-        "Lady Speed Stick",
-        "товары Lady Speed Stick",
-        "Lady Speed Stick купить Бишкек"
-      ],
-      "shown": 5,
-      "retainedLegacy": false
-    },
-    {
-      "type": "brand",
-      "slug": "persil",
-      "title": "Persil",
-      "path": "/brand/persil/",
-      "url": "https://globalmarket.kg/brand/persil/",
-      "count": 5,
-      "seoTerms": [
-        "Persil",
-        "товары Persil",
-        "Persil купить Бишкек"
+        "Gillette Venus",
+        "товары Gillette Venus",
+        "Gillette Venus купить Бишкек"
       ],
       "shown": 4,
       "retainedLegacy": false
@@ -715,15 +685,15 @@
     },
     {
       "type": "brand",
-      "slug": "old-spice",
-      "title": "Old Spice",
-      "path": "/brand/old-spice/",
-      "url": "https://globalmarket.kg/brand/old-spice/",
+      "slug": "persil",
+      "title": "Persil",
+      "path": "/brand/persil/",
+      "url": "https://globalmarket.kg/brand/persil/",
       "count": 4,
       "seoTerms": [
-        "Old Spice",
-        "товары Old Spice",
-        "Old Spice купить Бишкек"
+        "Persil",
+        "товары Persil",
+        "Persil купить Бишкек"
       ],
       "shown": 4,
       "retainedLegacy": false
@@ -784,6 +754,21 @@
         "Cliff",
         "товары Cliff",
         "Cliff купить Бишкек"
+      ],
+      "shown": 3,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "old-spice",
+      "title": "Old Spice",
+      "path": "/brand/old-spice/",
+      "url": "https://globalmarket.kg/brand/old-spice/",
+      "count": 3,
+      "seoTerms": [
+        "Old Spice",
+        "товары Old Spice",
+        "Old Spice купить Бишкек"
       ],
       "shown": 3,
       "retainedLegacy": false
@@ -880,6 +865,21 @@
     },
     {
       "type": "brand",
+      "slug": "lady-speed-stick",
+      "title": "Lady Speed Stick",
+      "path": "/brand/lady-speed-stick/",
+      "url": "https://globalmarket.kg/brand/lady-speed-stick/",
+      "count": 1,
+      "seoTerms": [
+        "Lady Speed Stick",
+        "товары Lady Speed Stick",
+        "Lady Speed Stick купить Бишкек"
+      ],
+      "shown": 1,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
       "slug": "felce",
       "title": "FELCE",
       "path": "/brand/felce/",
@@ -899,13 +899,13 @@
       "title": "Arm & Hammer",
       "path": "/brand/arm-hammer/",
       "url": "https://globalmarket.kg/brand/arm-hammer/",
-      "count": 1,
+      "count": 0,
       "seoTerms": [
         "Arm & Hammer",
         "товары Arm & Hammer",
         "Arm & Hammer купить Бишкек"
       ],
-      "shown": 1,
+      "shown": 0,
       "retainedLegacy": true
     },
     {

@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/generate_product_pages.py",
   "siteUrl": "https://globalmarket.kg",
-  "count": 838,
+  "count": 840,
   "pages": [
     {
       "id": "prd_d0bc9026f5ab",
@@ -142,7 +142,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 2690,
+      "retailPriceKgs": 2695,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/laundry-powder.svg",
@@ -238,7 +238,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 1490,
+      "retailPriceKgs": 1495,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dalli/dalli-3063-card-front.jpg",
@@ -258,7 +258,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 1490,
+      "retailPriceKgs": 1495,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dalli/dalli-3061-card-front.jpg",
@@ -278,7 +278,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 1490,
+      "retailPriceKgs": 1495,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dalli/dalli-3066-card-front.jpg",
@@ -298,7 +298,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 2690,
+      "retailPriceKgs": 2695,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-3055/card-front-d693f06a8016.jpg",
@@ -318,7 +318,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 2690,
+      "retailPriceKgs": 2695,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dash/dash-3056-card-front.jpg",
@@ -654,7 +654,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 3200,
+      "retailPriceKgs": 3300,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2653/card-front-0a42767f1caa.jpg",
@@ -788,7 +788,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 990,
+      "retailPriceKgs": 895,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-all-in-1-universal-caps-15-card-front.jpg",
@@ -864,7 +864,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 1390,
+      "retailPriceKgs": 1395,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1401/card-front-dfa73f03e35c.jpg",
@@ -1034,7 +1034,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 990,
+      "retailPriceKgs": 895,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-all-in-1-color-caps-15-card-front.jpg",
@@ -1072,7 +1072,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3115-card-front.jpg",
@@ -1092,7 +1092,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3113-card-front.jpg",
@@ -1112,7 +1112,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3114-card-front.jpg",
@@ -1152,7 +1152,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 990,
+      "retailPriceKgs": 995,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3123-card-front.jpg",
@@ -1170,7 +1170,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 1390,
+      "retailPriceKgs": 1395,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-951/card-front-06e6ece96544.jpg",
@@ -1210,7 +1210,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3116-card-front.jpg",
@@ -1230,7 +1230,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3117-card-front.jpg",
@@ -1266,7 +1266,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 3200,
+      "retailPriceKgs": 3300,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2654/card-front-ae89748a0b70.jpg",
@@ -1286,7 +1286,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 690,
+      "retailPriceKgs": 695,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3119-card-front.jpg",
@@ -1508,7 +1508,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 1490,
+      "retailPriceKgs": 1495,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/laundry-powder.svg",
@@ -1528,7 +1528,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 1490,
+      "retailPriceKgs": 1495,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/laundry-powder.svg",
@@ -1546,7 +1546,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 1190,
+      "retailPriceKgs": 1195,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/twido/twido-3050-card-front.jpg",
@@ -1564,7 +1564,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 1095,
+      "retailPriceKgs": 1190,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/alio/alio-3049-card-front.jpg",
@@ -1702,7 +1702,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 550,
+      "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/the-pink-stuff/the-pink-stuff-3085-card-front.jpg",
@@ -1881,8 +1881,8 @@
         "europe"
       ],
       "retailPriceKgs": 300,
-      "status": "inactive",
-      "inStock": false,
+      "status": "active",
+      "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3124-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -2056,7 +2056,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/restored-history/prd_9499434568a7-head-shoulders-dry-scalp-шампунь-400-мл-card-front.jpg",
@@ -2074,7 +2074,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/restored-history/prd_b2586efc6925-head-shoulders-soothing-scalp-шампунь-400-мл-card-front.jpg",
@@ -2092,7 +2092,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-952-card-front.jpg",
@@ -2128,7 +2128,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/restored-history/prd_6280c4c29502-head-shoulders-classic-шампунь-400-мл-card-front.jpg",
@@ -2182,7 +2182,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/restored-history/prd_20736a33272d-head-shoulders-menthol-шампунь-400-мл-card-front.jpg",
@@ -2200,7 +2200,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 450,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2393/card-front-a9d7b00f6984.jpg",
@@ -2218,7 +2218,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 450,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1736/card-front-9a4819d4ed48.jpg",
@@ -2236,7 +2236,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 450,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2394/card-front-568e7a616b0d.jpg",
@@ -2254,7 +2254,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 450,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-765/card-front-0e5a17b98666.jpg",
@@ -2308,7 +2308,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/pantene/pantene-289-collagen-conditioner-card-front.jpg",
@@ -2398,7 +2398,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 750,
+      "retailPriceKgs": 790,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dove/dove-straight-silky-680ml-card-front.jpg",
@@ -2436,7 +2436,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3101-card-front.jpg",
@@ -2511,8 +2511,8 @@
         "europe"
       ],
       "retailPriceKgs": 300,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3102-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -2530,7 +2530,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3132-card-front.jpg",
@@ -2566,7 +2566,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 450,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-872/card-front-d4be3233a5f7.jpg",
@@ -2800,7 +2800,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-204/card-front-c46d0638a791.jpg",
@@ -2836,7 +2836,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-261/card-front-38acfc662e79.jpg",
@@ -2980,7 +2980,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2199/card-front-8eb5c01e0824.jpg",
@@ -2998,7 +2998,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1737/card-front-3f4437cd73e8.jpg",
@@ -3214,7 +3214,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 170,
+      "retailPriceKgs": 180,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/shampoo.svg",
@@ -3234,7 +3234,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 795,
+      "retailPriceKgs": 850,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/sunmed/sunmed-3044-card-front.jpg",
@@ -3254,7 +3254,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 795,
+      "retailPriceKgs": 850,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/sunmed/sunmed-3045-card-front.jpg",
@@ -3314,7 +3314,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 295,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3007-card-front.jpg",
@@ -3388,7 +3388,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 220,
+      "retailPriceKgs": 240,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3004-card-front.jpg",
@@ -3428,7 +3428,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 220,
+      "retailPriceKgs": 240,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3010-card-front.jpg",
@@ -3448,7 +3448,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 220,
+      "retailPriceKgs": 240,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3011-card-front.jpg",
@@ -3468,7 +3468,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 220,
+      "retailPriceKgs": 240,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3006-card-front.jpg",
@@ -3488,7 +3488,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 220,
+      "retailPriceKgs": 240,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3009-card-front.jpg",
@@ -3508,7 +3508,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 650,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3015-card-front.jpg",
@@ -3528,7 +3528,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 650,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3016-card-front.jpg",
@@ -3548,7 +3548,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 650,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3017-card-front.jpg",
@@ -3566,7 +3566,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -3698,7 +3698,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 100,
+      "retailPriceKgs": 110,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/glysolid/glysolid-3023-card-front.jpg",
@@ -3735,8 +3735,8 @@
       "categoryId": "body",
       "collections": [],
       "retailPriceKgs": 1090,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/dove/dove-159-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -3882,7 +3882,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/johnsons/johnsons-baby-oil-300ml-raw-card-front.jpg",
@@ -3972,7 +3972,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1841/card-front-21ee6d90985e.jpg",
@@ -4027,8 +4027,8 @@
       "categoryId": "body",
       "collections": [],
       "retailPriceKgs": 790,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/stock-2026-09-07/1c-1057-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -4062,7 +4062,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 240,
+      "retailPriceKgs": 250,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/glysolid/glysolid-3025-card-front.jpg",
@@ -4100,7 +4100,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3142-card-front.jpg",
@@ -4120,7 +4120,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3135-card-front.jpg",
@@ -4140,7 +4140,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3140-card-front.jpg",
@@ -4160,7 +4160,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3143-card-front.jpg",
@@ -4180,7 +4180,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3144-card-front.jpg",
@@ -4200,7 +4200,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3134-card-front.jpg",
@@ -4220,7 +4220,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3138-card-front.jpg",
@@ -4238,7 +4238,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/glysolid/glysolid-3028-card-front.jpg",
@@ -4276,7 +4276,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-3145/card-front-e26ac324c37f.jpg",
@@ -4296,7 +4296,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3139-card-front.jpg",
@@ -4440,7 +4440,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/glysolid/glysolid-3026-card-front.jpg",
@@ -4460,7 +4460,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3137-card-front.jpg",
@@ -4478,7 +4478,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/skin-doctor/skin-doctor-sd-ss-f60p100-spf60-100ml-card-front.jpg",
@@ -4552,7 +4552,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -4570,7 +4570,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/glysolid/glysolid-3027-card-front.jpg",
@@ -4588,7 +4588,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 550,
+      "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/skin-doctor/skin-doctor-sunblock-summer-spf60-200ml-card-front.jpg",
@@ -4624,7 +4624,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 550,
+      "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -4716,7 +4716,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/skin-doctor/skin-doctor-sd622-spf60-170g-card-front.jpg",
@@ -4756,7 +4756,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3141-card-front.jpg",
@@ -4776,7 +4776,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 130,
+      "retailPriceKgs": 140,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3012-card-front.jpg",
@@ -4796,7 +4796,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 130,
+      "retailPriceKgs": 140,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3013-card-front.jpg",
@@ -4816,7 +4816,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 130,
+      "retailPriceKgs": 140,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3041-card-front.jpg",
@@ -4836,7 +4836,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 130,
+      "retailPriceKgs": 140,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/kamill/kamill-3014-card-front.jpg",
@@ -4895,8 +4895,8 @@
         "europe"
       ],
       "retailPriceKgs": 450,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3161-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -4932,7 +4932,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3146-card-front.jpg",
@@ -4970,7 +4970,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3149-card-front.jpg",
@@ -4990,7 +4990,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3152-card-front.jpg",
@@ -5010,7 +5010,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3147-card-front.jpg",
@@ -5030,7 +5030,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3148-card-front.jpg",
@@ -5070,7 +5070,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3150-card-front.jpg",
@@ -5476,7 +5476,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -5494,7 +5494,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 250,
+      "retailPriceKgs": 260,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -5712,7 +5712,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 650,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -5843,7 +5843,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-360-optic-white-card-front.jpg",
       "imageCount": 2,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_77566889af78",
@@ -5861,7 +5861,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-360-whole-mouth-clean-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_09feb137fd5e",
@@ -5879,7 +5879,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-360-charcoal-gold-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_9fe19a4044b7",
@@ -5897,7 +5897,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-360-charcoal-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_f3ed12b53668",
@@ -5915,7 +5915,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-zigzag-charcoal-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_773d5cd63456",
@@ -5933,7 +5933,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-double-action-charcoal-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_f5192ea22a74",
@@ -5951,7 +5951,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-extra-clean-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_66dd4882eecf",
@@ -5969,7 +5969,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-zigzag-3pcs-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_b61ba7c4268e",
@@ -5987,7 +5987,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-maxfresh-card-front.jpg",
       "imageCount": 2,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_1cb756e99bac",
@@ -6005,7 +6005,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-maxwhite-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_01bb2ae7ab06",
@@ -6023,7 +6023,7 @@
       "inStock": true,
       "image": "/assets/products/registry/1c-1609/card-front-247d92ed5738.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_bca38e1fa11e",
@@ -6041,7 +6041,7 @@
       "inStock": true,
       "image": "/assets/products/colgate/colgate-deep-clean-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_3ba2ef7da69a",
@@ -6059,7 +6059,7 @@
       "inStock": true,
       "image": "/assets/placeholders/toothpaste.svg",
       "imageCount": 0,
-      "relatedCount": 23
+      "relatedCount": 21
     },
     {
       "id": "prd_4f7a9fa2b279",
@@ -6072,12 +6072,12 @@
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/toothpaste.svg",
       "imageCount": 0,
-      "relatedCount": 23
+      "relatedCount": 21
     },
     {
       "id": "prd_bb62befe5cbe",
@@ -6090,12 +6090,12 @@
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
-      "retailPriceKgs": 100,
+      "retailPriceKgs": 110,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/toothpaste.svg",
       "imageCount": 0,
-      "relatedCount": 23
+      "relatedCount": 21
     },
     {
       "id": "prd_ac92e0a863f6",
@@ -6113,7 +6113,7 @@
       "inStock": true,
       "image": "/assets/placeholders/toothpaste.svg",
       "imageCount": 0,
-      "relatedCount": 23
+      "relatedCount": 21
     },
     {
       "id": "prd_4249080dc511",
@@ -6131,7 +6131,7 @@
       "inStock": true,
       "image": "/assets/products/crest/crest-336-cavity-protection-extra-fresh-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_e44861b3a8db",
@@ -6144,12 +6144,12 @@
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
-      "retailPriceKgs": 170,
+      "retailPriceKgs": 180,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-343/card-front-7db0b559c805.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_1065eef3c7b1",
@@ -6163,11 +6163,11 @@
       "categoryId": "oral",
       "collections": [],
       "retailPriceKgs": 60,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/registry/1c-353/card-front-4becf40f33f4.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 21
     },
     {
       "id": "prd_96afa8b03b40",
@@ -6185,7 +6185,7 @@
       "inStock": true,
       "image": "/assets/products/registry/1c-2794/card-front-25de76272175.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_1c_898",
@@ -6203,7 +6203,7 @@
       "inStock": true,
       "image": "/assets/placeholders/toothpaste.svg",
       "imageCount": 0,
-      "relatedCount": 23
+      "relatedCount": 21
     },
     {
       "id": "prd_b63755a295b7",
@@ -6253,8 +6253,8 @@
       "categoryId": "deodorants",
       "collections": [],
       "retailPriceKgs": 550,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/registry/1c-2866/card-front-28de0d48c1f0.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -6474,7 +6474,7 @@
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2838/card-front-754000d1f972.jpg",
@@ -6493,8 +6493,8 @@
       "categoryId": "deodorants",
       "collections": [],
       "retailPriceKgs": 595,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/stock-2026-09-07/1c-1481-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -6622,7 +6622,7 @@
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/rexona/rexona-stick-antibacterial-40g-card-front.jpg",
@@ -6677,8 +6677,8 @@
       "categoryId": "deodorants",
       "collections": [],
       "retailPriceKgs": 350,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/lady/lady-speed-stick-1217-wild-freesia-65-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -6712,7 +6712,7 @@
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/rexona/rexona-stick-bamboo-40g-card-front.jpg",
@@ -6730,7 +6730,7 @@
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/deodorant-spray.svg",
@@ -6785,8 +6785,8 @@
       "categoryId": "deodorants",
       "collections": [],
       "retailPriceKgs": 250,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/arm-hammer/arm-hammer-ultra-max-powder-fresh-28g-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -6820,7 +6820,7 @@
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1408/card-front-2b2459bf820a.jpg",
@@ -6892,7 +6892,7 @@
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/rexona/rexona-stick-v8-40g-card-front.jpg",
@@ -6910,7 +6910,7 @@
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/deodorant-spray.svg",
@@ -6928,7 +6928,7 @@
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/rexona/rexona-stick-cobalt-40g-card-front.jpg",
@@ -6946,7 +6946,7 @@
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/rexona/rexona-stick-extra-cool-40g-card-front.jpg",
@@ -6964,7 +6964,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 290,
+      "retailPriceKgs": 295,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1031/card-front-5d497919cb8b.jpg",
@@ -6982,7 +6982,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 290,
+      "retailPriceKgs": 295,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1421/card-front-1f2a69d23f1a.jpg",
@@ -7018,7 +7018,7 @@
       "category": "Дезодоранты",
       "categoryId": "deodorants",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dove/dove-stick-men-clean-comfort-40g-card-front.jpg",
@@ -7036,7 +7036,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 290,
+      "retailPriceKgs": 295,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1433/card-front-deb38fb3d5b9.jpg",
@@ -7054,7 +7054,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 290,
+      "retailPriceKgs": 295,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1687/card-front-b0162b8cbc81.jpg",
@@ -7163,8 +7163,8 @@
       "categoryId": "deodorants",
       "collections": [],
       "retailPriceKgs": 695,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/deodorant-spray.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -7450,7 +7450,7 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 250,
+      "retailPriceKgs": 260,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/gillette/gillette-blue-pivot-5-raw-card-front.jpg",
@@ -7486,7 +7486,7 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 1595,
+      "retailPriceKgs": 1690,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-1400-card-front.jpg",
@@ -7594,7 +7594,7 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 2090,
+      "retailPriceKgs": 2095,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2950/card-front-4d6f4baeb25a.jpg",
@@ -7613,8 +7613,8 @@
       "categoryId": "shaving",
       "collections": [],
       "retailPriceKgs": 230,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/gillette/gillette-venus-simply-4-raw-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -7631,8 +7631,8 @@
       "categoryId": "shaving",
       "collections": [],
       "retailPriceKgs": 795,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/registry/1c-594/card-front-c5f5a931c8de.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -7720,7 +7720,7 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 2095,
+      "retailPriceKgs": 2190,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/gillette/gillette-venus-comfortglide-breeze-cartridges-8-card-front.jpg",
@@ -7793,8 +7793,8 @@
       "categoryId": "shaving",
       "collections": [],
       "retailPriceKgs": 690,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/stock-2026-09-07/1c-584-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -7810,7 +7810,7 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 2095,
+      "retailPriceKgs": 2190,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/gillette/gillette-venus-extra-smooth-cartridges-8-card-front.jpg",
@@ -7846,7 +7846,7 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 290,
+      "retailPriceKgs": 295,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-971-card-front.jpg",
@@ -8081,8 +8081,8 @@
       "categoryId": "shaving",
       "collections": [],
       "retailPriceKgs": 495,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/gillette/gillette-venus-smooth-razor-1-raw-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -8152,7 +8152,7 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 450,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/restored-history/prd_13dbf4e592aa-concord-станок-d-652-card-front.jpg",
@@ -8188,7 +8188,7 @@
       "category": "Продукты",
       "categoryId": "food",
       "collections": [],
-      "retailPriceKgs": 890,
+      "retailPriceKgs": 895,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/food.svg",
@@ -8206,7 +8206,7 @@
       "category": "Продукты",
       "categoryId": "food",
       "collections": [],
-      "retailPriceKgs": 890,
+      "retailPriceKgs": 895,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/food.svg",
@@ -8458,7 +8458,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 2395,
+      "retailPriceKgs": 2490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dalli/dalli-colorwaschmittel-gel-5l-card-front.jpg",
@@ -8558,7 +8558,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 2090,
+      "retailPriceKgs": 2095,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dash/dash-active-frische-gel-3-6l-card-front.jpg",
@@ -8598,7 +8598,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 2090,
+      "retailPriceKgs": 2095,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dash/dash-color-frische-gel-3-6l-card-front.jpg",
@@ -8794,7 +8794,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 170,
+      "retailPriceKgs": 180,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -8848,7 +8848,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 240,
+      "retailPriceKgs": 250,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -8994,7 +8994,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2780/card-front-39fb3b7af3bd.jpg",
@@ -9012,7 +9012,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2782/card-front-6b6dad5415ee.jpg",
@@ -9066,7 +9066,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 240,
+      "retailPriceKgs": 250,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -9084,7 +9084,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 170,
+      "retailPriceKgs": 180,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/concord/concord-6425-3-card-front.jpg",
@@ -9120,7 +9120,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1972/card-front-f1b955cb4edf.jpg",
@@ -9156,7 +9156,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2351/card-front-c23c97b5526f.jpg",
@@ -9174,7 +9174,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2779/card-front-caf8b7632a94.jpg",
@@ -9300,7 +9300,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 450,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2437/card-front-248631203d64.jpg",
@@ -9354,7 +9354,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 450,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1968/card-front-f09049764e34.jpg",
@@ -9372,7 +9372,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 240,
+      "retailPriceKgs": 250,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -9390,7 +9390,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -9408,7 +9408,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 450,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-2178/card-front-26bff2618030.jpg",
@@ -9462,7 +9462,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -9588,7 +9588,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-362-card-front.jpg",
@@ -9606,7 +9606,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -9624,7 +9624,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -9696,7 +9696,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-2676-card-front.jpg",
@@ -9714,7 +9714,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 390,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -10218,7 +10218,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 2095,
+      "retailPriceKgs": 2190,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/finish/finish-3194-quantum-fresh-58-card-front.jpg",
@@ -10290,7 +10290,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 1590,
+      "retailPriceKgs": 1595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/finish/finish-3189-ultimate-all-in-1-40-card-front.jpg",
@@ -10326,7 +10326,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 650,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-3164-card-front.jpg",
@@ -10381,11 +10381,11 @@
       "categoryId": "oral",
       "collections": [],
       "retailPriceKgs": 250,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/colgate/colgate-3176-total-charcoal-clean-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 21
     },
     {
       "id": "prd_1c_3169",
@@ -10470,7 +10470,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 790,
+      "retailPriceKgs": 795,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/head/head-shoulders-2389-men-old-spice-550-card-front.jpg",
@@ -10614,7 +10614,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 650,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/head/head-shoulders-3165-men-old-spice-400-card-front.jpg",
@@ -10632,7 +10632,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 650,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/head/head-shoulders-3166-men-sport-fresh-400-card-front.jpg",
@@ -10835,7 +10835,7 @@
       "inStock": true,
       "image": "/assets/products/crest/crest-3205-cavity-protection-freshness-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_1c_332",
@@ -10853,7 +10853,7 @@
       "inStock": true,
       "image": "/assets/products/crest/crest-332-cavity-protection-herbal-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_1c_3175",
@@ -10866,12 +10866,12 @@
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
-      "retailPriceKgs": 250,
+      "retailPriceKgs": 260,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/colgate/colgate-3175-total-advanced-white-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_1c_798",
@@ -10884,12 +10884,12 @@
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
-      "retailPriceKgs": 190,
+      "retailPriceKgs": 195,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/colgate/colgate-798-maxfresh-spicy-fresh-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_1c_316",
@@ -10902,12 +10902,12 @@
       "category": "Зубная гигиена",
       "categoryId": "oral",
       "collections": [],
-      "retailPriceKgs": 190,
+      "retailPriceKgs": 195,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/colgate/colgate-316-maxwhite-crystal-mint-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_cbc7943d5965",
@@ -10939,8 +10939,8 @@
       "categoryId": "shaving",
       "collections": [],
       "retailPriceKgs": 495,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/stock-2026-09-07/1c-2759-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -10997,7 +10997,7 @@
       "inStock": false,
       "image": "/assets/products/stock-2026-09-07/1c-313-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 21
     },
     {
       "id": "prd_d366e1fed898",
@@ -11010,7 +11010,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-363-card-front.jpg",
@@ -11028,7 +11028,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-365-card-front.jpg",
@@ -11046,7 +11046,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-367-card-front.jpg",
@@ -11100,7 +11100,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-646-card-front.jpg",
@@ -11118,7 +11118,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-700-card-front.jpg",
@@ -11154,7 +11154,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-795-card-front.jpg",
@@ -11173,8 +11173,8 @@
       "categoryId": "deodorants",
       "collections": [],
       "retailPriceKgs": 295,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/stock-2026-09-07/1c-805-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -11195,7 +11195,7 @@
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-948-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 22
+      "relatedCount": 20
     },
     {
       "id": "prd_0b41f9a7c16a",
@@ -11280,7 +11280,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-1522-card-front.jpg",
@@ -11352,7 +11352,7 @@
       "category": "Уход за волосами",
       "categoryId": "hair",
       "collections": [],
-      "retailPriceKgs": 790,
+      "retailPriceKgs": 795,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-1788-card-front.jpg",
@@ -11370,7 +11370,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-2328-card-front.jpg",
@@ -11388,7 +11388,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-2329-card-front.jpg",
@@ -11406,7 +11406,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-2332-card-front.jpg",
@@ -11429,7 +11429,7 @@
       "inStock": false,
       "image": "/assets/products/stock-2026-09-07/1c-2691-card-front.jpg",
       "imageCount": 3,
-      "relatedCount": 23
+      "relatedCount": 21
     },
     {
       "id": "prd_ad2c228a7f19",
@@ -11442,7 +11442,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-2751-card-front.jpg",
@@ -11532,7 +11532,7 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 2195,
+      "retailPriceKgs": 2290,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-3180-card-front.jpg",
@@ -11551,8 +11551,8 @@
       "categoryId": "shaving",
       "collections": [],
       "retailPriceKgs": 495,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/stock-2026-09-07/1c-3182-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -11568,7 +11568,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-3187-card-front.jpg",
@@ -11623,8 +11623,8 @@
       "categoryId": "deodorants",
       "collections": [],
       "retailPriceKgs": 295,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/stock-2026-09-07/1c-3210-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -11640,7 +11640,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/stock-2026-09-07/1c-3211-card-front.jpg",
@@ -12003,8 +12003,8 @@
       "categoryId": "deodorants",
       "collections": [],
       "retailPriceKgs": 350,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/registry/1c-1219/card-front-1c7b348e33f5.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -12038,7 +12038,7 @@
       "category": "Бритье",
       "categoryId": "shaving",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-3183/card-front-10bfbaf953d2.jpg",
@@ -12093,8 +12093,8 @@
       "categoryId": "shaving",
       "collections": [],
       "retailPriceKgs": 495,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/registry/1c-3181/card-front-820ef7fcd3df.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -12818,7 +12818,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 4400,
+      "retailPriceKgs": 4500,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1903/card-front-ec21e4f3b6a8.jpg",
@@ -12857,8 +12857,8 @@
         "europe"
       ],
       "retailPriceKgs": 1490,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/laundry-powder.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -12875,8 +12875,8 @@
       "categoryId": "other",
       "collections": [],
       "retailPriceKgs": 390,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/generic.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -13300,7 +13300,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 1795,
+      "retailPriceKgs": 1890,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/the-pink-stuff/the-pink-stuff-3087-scrubber-kit-card-front.jpg",
@@ -13360,7 +13360,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 450,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/the-pink-stuff/the-pink-stuff-3091-card-front.jpg",
@@ -13380,9 +13380,9 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 1895,
-      "status": "inactive",
-      "inStock": false,
+      "retailPriceKgs": 2095,
+      "status": "active",
+      "inStock": true,
       "image": "/assets/products/the-pink-stuff/the-pink-stuff-3092-window-cleaning-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -13460,7 +13460,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/cleaning.svg",
@@ -13480,7 +13480,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3121-card-front.jpg",
@@ -13500,7 +13500,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3122-card-front.jpg",
@@ -13520,7 +13520,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 190,
+      "retailPriceKgs": 195,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3153-card-front.jpg",
@@ -13540,7 +13540,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 190,
+      "retailPriceKgs": 195,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3154-card-front.jpg",
@@ -13560,7 +13560,7 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 190,
+      "retailPriceKgs": 195,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-3155-card-front.jpg",
@@ -13616,7 +13616,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1816/card-front-09ebe6b78d24.jpg",
@@ -13634,7 +13634,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-995/card-front-aac7cfe4f43a.jpg",
@@ -13652,7 +13652,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/registry/1c-1206/card-front-2155e3cc7833.jpg",
@@ -13671,8 +13671,8 @@
       "categoryId": "other",
       "collections": [],
       "retailPriceKgs": 1690,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/generic.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -13689,8 +13689,8 @@
       "categoryId": "other",
       "collections": [],
       "retailPriceKgs": 2790,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/generic.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -13743,8 +13743,8 @@
       "categoryId": "other",
       "collections": [],
       "retailPriceKgs": 390,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/generic.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -13761,8 +13761,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 2990,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/ariel/ariel-platinum-touch-of-lenor-4-55kg-70-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -13779,8 +13779,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 3990,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/ariel/ariel-platinum-extra-stain-5-85kg-90-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -13797,8 +13797,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 5900,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/ariel/ariel-instant-dissolution-color-8-45kg-130-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -13815,8 +13815,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 5990,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/ariel/ariel-color-9-1kg-140-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -13833,8 +13833,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 5900,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/ariel/ariel-instant-dissolution-whites-colors-9-75kg-130-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -13850,7 +13850,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 1990,
+      "retailPriceKgs": 1795,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-3in1-original-38-card-front.jpg",
@@ -13868,7 +13868,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2190,
+      "retailPriceKgs": 2090,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-professional-color-44-card-front.jpg",
@@ -13886,7 +13886,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2190,
+      "retailPriceKgs": 2090,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-44-extra-stain-removal-card-front.jpg",
@@ -13904,7 +13904,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2090,
+      "retailPriceKgs": 1990,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-44-original-todoen1-card-front.jpg",
@@ -13922,7 +13922,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2190,
+      "retailPriceKgs": 1995,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-platinum-lenor-44-card-front.jpg",
@@ -13940,7 +13940,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2390,
+      "retailPriceKgs": 2195,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-50-color-card-front.jpg",
@@ -13958,7 +13958,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2490,
+      "retailPriceKgs": 2295,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-50-professional-original-card-front.jpg",
@@ -13976,7 +13976,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2895,
+      "retailPriceKgs": 2695,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-60-lenor-anti-odor-card-front.jpg",
@@ -13994,7 +13994,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2890,
+      "retailPriceKgs": 2695,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-60-mountain-spring-card-front.jpg",
@@ -14012,7 +14012,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2990,
+      "retailPriceKgs": 2890,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-65-alpine-lavage-card-front.jpg",
@@ -14030,7 +14030,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2990,
+      "retailPriceKgs": 2895,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-65-color-card-front.jpg",
@@ -14048,7 +14048,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 2990,
+      "retailPriceKgs": 2895,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-65-mountain-spring-stain-card-front.jpg",
@@ -14066,7 +14066,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 3400,
+      "retailPriceKgs": 3200,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/ariel/ariel-pods-professional-original-70-card-front.jpg",
@@ -14121,8 +14121,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 595,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/lenor/lenor-softener-alpine-fresh-504g-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -14427,8 +14427,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 895,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/fabric-softener.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -14445,8 +14445,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 895,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/fabric-softener.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -14463,8 +14463,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 895,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/fabric-softener.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -14481,8 +14481,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 895,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/fabric-softener.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -14553,8 +14553,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 490,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/placeholders/laundry-powder.svg",
       "imageCount": 0,
       "relatedCount": 24
@@ -14570,7 +14570,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 550,
+      "retailPriceKgs": 495,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-deo-schweiss-250ml-card-front.jpg",
@@ -14588,7 +14588,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 500,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-dishwasher-cleaner-75g-card-front.jpg",
@@ -14606,7 +14606,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 295,
+      "retailPriceKgs": 290,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-fleckenteufel-blut-eiweiss-50ml-card-front.jpg",
@@ -14624,7 +14624,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 295,
+      "retailPriceKgs": 290,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-fleckenteufel-buero-heim-50ml-card-front.jpg",
@@ -14642,7 +14642,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 295,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-fleckenteufel-deo-rost-50ml-card-front.jpg",
@@ -14660,7 +14660,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 295,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-fleckenteufel-kosmetik-50ml-card-front.jpg",
@@ -14678,7 +14678,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 295,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-fleckenteufel-oil-grease-50ml-card-front.jpg",
@@ -14696,7 +14696,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 350,
+      "retailPriceKgs": 300,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-fleckenteufel-stifte-tinte-50ml-card-front.jpg",
@@ -14714,7 +14714,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 500,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-glaskeramik-cleaner-250g-card-front.jpg",
@@ -14732,7 +14732,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 490,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-hob-scraper-card-front.jpg",
@@ -14769,8 +14769,8 @@
       "categoryId": "laundry",
       "collections": [],
       "retailPriceKgs": 350,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/dr-beckmann/dr-beckmann-intensiv-schwarz-8-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -14786,7 +14786,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-coffee-machine-tabs-6-card-front.jpg",
@@ -14804,7 +14804,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-fridge-cleaner-250ml-card-front.jpg",
@@ -14822,7 +14822,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 590,
+      "retailPriceKgs": 550,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-fridge-freshener-40g-card-front.jpg",
@@ -14840,7 +14840,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 240,
+      "retailPriceKgs": 220,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-stain-soap-100g-card-front.jpg",
@@ -14858,7 +14858,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 300,
+      "retailPriceKgs": 295,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-super-white-2x40g-card-front.jpg",
@@ -14877,8 +14877,8 @@
       "categoryId": "home_cleaning",
       "collections": [],
       "retailPriceKgs": 695,
-      "status": "active",
-      "inStock": true,
+      "status": "inactive",
+      "inStock": false,
       "image": "/assets/products/dr-beckmann/dr-beckmann-upholstery-cleaner-400ml-card-front.jpg",
       "imageCount": 3,
       "relatedCount": 24
@@ -14894,7 +14894,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 795,
+      "retailPriceKgs": 790,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-detergent-sheets-sensitive-25-card-front.jpg",
@@ -14912,7 +14912,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 795,
+      "retailPriceKgs": 790,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-detergent-sheets-universal-25-card-front.jpg",
@@ -14948,7 +14948,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 500,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-wc-citrus-20-card-front.jpg",
@@ -14966,7 +14966,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 500,
+      "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-wc-ocean-breeze-20-card-front.jpg",
@@ -14984,7 +14984,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 990,
+      "retailPriceKgs": 895,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-wc-foam-citrus-3x100g-card-front.jpg",
@@ -15002,7 +15002,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 750,
+      "retailPriceKgs": 690,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-softener-sheets-fruhlingfrisch-28-card-front.jpg",
@@ -15020,7 +15020,7 @@
       "category": "Стирка и уход за бельем",
       "categoryId": "laundry",
       "collections": [],
-      "retailPriceKgs": 750,
+      "retailPriceKgs": 690,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/dr-beckmann/dr-beckmann-softener-sheets-sommerblute-28-card-front.jpg",
@@ -15092,7 +15092,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 290,
+      "retailPriceKgs": 300,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-cherry-blossom-140g-card-front.jpg",
@@ -15110,7 +15110,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 290,
+      "retailPriceKgs": 300,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-air-freshener-gel-summer-night-140g-card-front.jpg",
@@ -15128,7 +15128,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 290,
+      "retailPriceKgs": 300,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15146,7 +15146,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 990,
+      "retailPriceKgs": 1090,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15164,7 +15164,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15182,7 +15182,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15200,7 +15200,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15218,7 +15218,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15236,7 +15236,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 495,
+      "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15254,7 +15254,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 690,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15272,7 +15272,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 690,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15290,7 +15290,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 690,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15308,7 +15308,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 690,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15326,7 +15326,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 690,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15344,7 +15344,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 295,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15362,7 +15362,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 295,
+      "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15380,7 +15380,7 @@
       "category": "Разное",
       "categoryId": "other",
       "collections": [],
-      "retailPriceKgs": 550,
+      "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/generic.svg",
@@ -15398,7 +15398,7 @@
       "category": "Уход за телом",
       "categoryId": "body",
       "collections": [],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/felce-azzurra/felce-azzurra-talcum-classic-200g-card-front.jpg",
@@ -15416,7 +15416,7 @@
       "category": "Уборка и чистота",
       "categoryId": "home_cleaning",
       "collections": [],
-      "retailPriceKgs": 595,
+      "retailPriceKgs": 690,
       "status": "active",
       "inStock": true,
       "image": "/assets/placeholders/cleaning.svg",
@@ -15436,11 +15436,51 @@
       "collections": [
         "europe"
       ],
-      "retailPriceKgs": 400,
+      "retailPriceKgs": 450,
       "status": "active",
       "inStock": true,
       "image": "/assets/products/the-pink-stuff/the-pink-stuff-power-active-rim-block-2x40g-card-front.jpg",
       "imageCount": 3,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_1c_3302",
+      "sourceCode": "3302",
+      "slug": "felce-azzurra-bamboo-lotus-aromadiffuzor-125-ml-c_3302",
+      "path": "/product/felce-azzurra-bamboo-lotus-aromadiffuzor-125-ml-c_3302/",
+      "url": "https://globalmarket.kg/product/felce-azzurra-bamboo-lotus-aromadiffuzor-125-ml-c_3302/",
+      "title": "Felce Azzurra Bamboo & Lotus аромадиффузор, 125 мл",
+      "brand": "Felce Azzurra",
+      "category": "Разное",
+      "categoryId": "other",
+      "collections": [
+        "europe"
+      ],
+      "retailPriceKgs": 895,
+      "status": "active",
+      "inStock": true,
+      "image": "/assets/placeholders/generic.svg",
+      "imageCount": 0,
+      "relatedCount": 24
+    },
+    {
+      "id": "prd_1c_3268",
+      "sourceCode": "3268",
+      "slug": "felce-azzurra-orchid-parfyum-dlya-belya-220-ml-c_3268",
+      "path": "/product/felce-azzurra-orchid-parfyum-dlya-belya-220-ml-c_3268/",
+      "url": "https://globalmarket.kg/product/felce-azzurra-orchid-parfyum-dlya-belya-220-ml-c_3268/",
+      "title": "Felce Azzurra Orchid парфюм для белья, 220 мл",
+      "brand": "Felce Azzurra",
+      "category": "Стирка и уход за бельем",
+      "categoryId": "laundry",
+      "collections": [
+        "europe"
+      ],
+      "retailPriceKgs": 995,
+      "status": "active",
+      "inStock": true,
+      "image": "/assets/placeholders/laundry-powder.svg",
+      "imageCount": 0,
       "relatedCount": 24
     }
   ]
