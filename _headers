@@ -4,7 +4,7 @@
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Cross-Origin-Opener-Policy: same-origin
-  X-GlobalMarket-Release: 20261020-petya-photo-update-v1
+  X-GlobalMarket-Release: 20261020-petya-photo-update-v2
   X-GlobalMarket-Analytics-Release: 20261011-retail-full-recovery-v1
 
 /

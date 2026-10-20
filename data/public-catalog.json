@@ -36635,7 +36635,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "fabric_softener",
-      "image": null,
+      "image": "assets/products/lenor/lenor-3291-sensitive-cotton-washing-liquid-900ml-card-front.jpg",
       "form": "liquid",
       "rating": 4.8,
       "useArea": "laundry",
@@ -36660,7 +36660,11 @@
       "id": "prd_1c_3291",
       "icon": "🫧",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/lenor/lenor-3291-sensitive-cotton-washing-liquid-900ml-card-front.jpg",
+        "assets/products/lenor/lenor-3291-sensitive-cotton-washing-liquid-900ml-front.jpg",
+        "assets/products/lenor/lenor-3291-sensitive-cotton-washing-liquid-900ml-back.jpg"
+      ],
       "searchTerms": [
         "lenor",
         "wahsing",
@@ -36695,7 +36699,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "washing_powder",
-      "image": null,
+      "image": "assets/products/vanish/vanish-3292-oxi-action-pink-powder-750g-card-front.jpg",
       "form": "powder",
       "rating": 4.8,
       "useArea": "laundry",
@@ -36720,7 +36724,11 @@
       "id": "prd_1c_3292",
       "icon": "✨",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/vanish/vanish-3292-oxi-action-pink-powder-750g-card-front.jpg",
+        "assets/products/vanish/vanish-3292-oxi-action-pink-powder-750g-front.jpg",
+        "assets/products/vanish/vanish-3292-oxi-action-pink-powder-750g-back.jpg"
+      ],
       "searchTerms": [
         "vanish",
         "stain",
@@ -39467,7 +39475,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3296-cherry-blossom-refill-20ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -39490,7 +39498,11 @@
       "id": "prd_1c_3296",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3296-cherry-blossom-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3296-cherry-blossom-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3296-cherry-blossom-refill-20ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -39523,7 +39535,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3295-lavender-iris-refill-20ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -39548,7 +39560,11 @@
       "id": "prd_1c_3295",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3295-lavender-iris-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3295-lavender-iris-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3295-lavender-iris-refill-20ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -39700,7 +39716,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3297-white-musk-refill-20ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -39725,7 +39741,11 @@
       "id": "prd_1c_3297",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3297-white-musk-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3297-white-musk-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3297-white-musk-refill-20ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -39758,7 +39778,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3306-bamboo-lotus-spray-refill-250ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -39781,7 +39801,11 @@
       "id": "prd_1c_3306",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3306-bamboo-lotus-spray-refill-250ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3306-bamboo-lotus-spray-refill-250ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3306-bamboo-lotus-spray-refill-250ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -39813,7 +39837,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3304-classico-spray-refill-250ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -39836,7 +39860,11 @@
       "id": "prd_1c_3304",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3304-classico-spray-refill-250ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3304-classico-spray-refill-250ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3304-classico-spray-refill-250ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -39868,7 +39896,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3308-moon-flowers-spray-refill-250ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -39891,7 +39919,11 @@
       "id": "prd_1c_3308",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3308-moon-flowers-spray-refill-250ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3308-moon-flowers-spray-refill-250ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3308-moon-flowers-spray-refill-250ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -39924,7 +39956,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3307-sea-salt-magnolia-spray-refill-250ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -39947,7 +39979,11 @@
       "id": "prd_1c_3307",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3307-sea-salt-magnolia-spray-refill-250ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3307-sea-salt-magnolia-spray-refill-250ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3307-sea-salt-magnolia-spray-refill-250ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -39980,7 +40016,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "tea",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3305-white-tea-osmanthus-spray-refill-250ml-card-front.jpg",
       "form": "card_only",
       "rating": 4.8,
       "useArea": "food",
@@ -40005,7 +40041,11 @@
       "id": "prd_1c_3305",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3305-white-tea-osmanthus-spray-refill-250ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3305-white-tea-osmanthus-spray-refill-250ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3305-white-tea-osmanthus-spray-refill-250ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -40394,7 +40434,7 @@
     {
       "firstSeenAt": "2026-10-19",
       "productKind": "",
-      "image": "",
+      "image": "assets/products/felce-azzurra/felce-azzurra-3302-bamboo-lotus-diffuser-120ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -40423,7 +40463,11 @@
       "id": "prd_1c_3302",
       "icon": "",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3302-bamboo-lotus-diffuser-120ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3302-bamboo-lotus-diffuser-120ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3302-bamboo-lotus-diffuser-120ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",

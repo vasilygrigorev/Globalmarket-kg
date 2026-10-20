@@ -59864,8 +59864,12 @@
       "sourceCode": "3291",
       "title": "Lenor Wahsing Liquid (900ml) Sensitive Cotton",
       "description": "Lenor: кондиционер для белья для ежедневного ухода за бельем и домашней стирки. Формат: 900 ml, 900ml.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/lenor/lenor-3291-sensitive-cotton-washing-liquid-900ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/lenor/lenor-3291-sensitive-cotton-washing-liquid-900ml-card-front.jpg",
+        "assets/products/lenor/lenor-3291-sensitive-cotton-washing-liquid-900ml-front.jpg",
+        "assets/products/lenor/lenor-3291-sensitive-cotton-washing-liquid-900ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "Lenor",
@@ -59933,8 +59937,12 @@
       "sourceCode": "3292",
       "title": "Vanish Stain Remover (750g) Pink Powder",
       "description": "Vanish: стиральный порошок для ежедневного ухода за бельем и домашней стирки. Формат: 750 g, 750g.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/vanish/vanish-3292-oxi-action-pink-powder-750g-card-front.jpg",
+      "galleryImages": [
+        "assets/products/vanish/vanish-3292-oxi-action-pink-powder-750g-card-front.jpg",
+        "assets/products/vanish/vanish-3292-oxi-action-pink-powder-750g-front.jpg",
+        "assets/products/vanish/vanish-3292-oxi-action-pink-powder-750g-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -63550,8 +63558,12 @@
       "sourceCode": "3296",
       "title": "FELCE AZZURRA Air Room Refill (20g) Cherry Blossom",
       "description": "FELCE: товар для дома и личного ухода. Формат: 20 g, 20g.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3296-cherry-blossom-refill-20ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3296-cherry-blossom-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3296-cherry-blossom-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3296-cherry-blossom-refill-20ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -63615,8 +63627,12 @@
       "sourceCode": "3295",
       "title": "FELCE AZZURRA Air Room Refill (20g) Lavender/Iris",
       "description": "FELCE: товар для дома и личного ухода. Формат: 20 g, 20g.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3295-lavender-iris-refill-20ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3295-lavender-iris-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3295-lavender-iris-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3295-lavender-iris-refill-20ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -63819,8 +63835,12 @@
       "sourceCode": "3297",
       "title": "FELCE AZZURRA Air Room Refill (20g) White Musk",
       "description": "FELCE: товар для дома и личного ухода. Формат: 20 g, 20g.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3297-white-musk-refill-20ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3297-white-musk-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3297-white-musk-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3297-white-musk-refill-20ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -63886,8 +63906,12 @@
       "sourceCode": "3306",
       "title": "FELCE AZZURRA Air Spray Refill (250ml) Bamboo",
       "description": "FELCE: товар для дома и личного ухода. Формат: 250 ml, 250ml.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3306-bamboo-lotus-spray-refill-250ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3306-bamboo-lotus-spray-refill-250ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3306-bamboo-lotus-spray-refill-250ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3306-bamboo-lotus-spray-refill-250ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -63950,8 +63974,12 @@
       "sourceCode": "3304",
       "title": "FELCE AZZURRA Air Spray Refill (250ml) Classic",
       "description": "FELCE: товар для дома и личного ухода. Формат: 250 ml, 250ml.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3304-classico-spray-refill-250ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3304-classico-spray-refill-250ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3304-classico-spray-refill-250ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3304-classico-spray-refill-250ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -64014,8 +64042,12 @@
       "sourceCode": "3308",
       "title": "FELCE AZZURRA Air Spray Refill (250ml) Moon Flower",
       "description": "FELCE: товар для дома и личного ухода. Формат: 250 ml, 250ml.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3308-moon-flowers-spray-refill-250ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3308-moon-flowers-spray-refill-250ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3308-moon-flowers-spray-refill-250ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3308-moon-flowers-spray-refill-250ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -64079,8 +64111,12 @@
       "sourceCode": "3307",
       "title": "FELCE AZZURRA Air Spray Refill (250ml) Sea Salt",
       "description": "FELCE: товар для дома и личного ухода. Формат: 250 ml, 250ml.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3307-sea-salt-magnolia-spray-refill-250ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3307-sea-salt-magnolia-spray-refill-250ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3307-sea-salt-magnolia-spray-refill-250ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3307-sea-salt-magnolia-spray-refill-250ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -64144,8 +64180,12 @@
       "sourceCode": "3305",
       "title": "FELCE AZZURRA Air Spray Refill (250ml) White Tea",
       "description": "FELCE: товар для дома и личного ухода. Формат: 250 ml, 250ml.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3305-white-tea-osmanthus-spray-refill-250ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3305-white-tea-osmanthus-spray-refill-250ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3305-white-tea-osmanthus-spray-refill-250ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3305-white-tea-osmanthus-spray-refill-250ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -64623,8 +64663,12 @@
       "restockedAt": "2026-10-19",
       "unit": "шт",
       "badge": "Felce Azzurra",
-      "galleryImages": [],
-      "image": "",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3302-bamboo-lotus-diffuser-120ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3302-bamboo-lotus-diffuser-120ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3302-bamboo-lotus-diffuser-120ml-back.jpg"
+      ],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3302-bamboo-lotus-diffuser-120ml-card-front.jpg",
       "rating": 4.8,
       "audience": "unknown",
       "status": "active",

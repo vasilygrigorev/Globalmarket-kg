@@ -331,6 +331,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://globalmarket.kg/brand/vanish/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://globalmarket.kg/brand/yc/</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -3828,7 +3834,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/generic.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/felce-azzurra/felce-azzurra-3296-cherry-blossom-refill-20ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -3837,7 +3843,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/generic.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/felce-azzurra/felce-azzurra-3295-lavender-iris-refill-20ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -3864,7 +3870,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/generic.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/felce-azzurra/felce-azzurra-3297-white-musk-refill-20ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -3873,7 +3879,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/generic.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/felce-azzurra/felce-azzurra-3306-bamboo-lotus-spray-refill-250ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -3882,7 +3888,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/generic.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/felce-azzurra/felce-azzurra-3304-classico-spray-refill-250ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -3891,7 +3897,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/generic.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/felce-azzurra/felce-azzurra-3308-moon-flowers-spray-refill-250ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -3900,7 +3906,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/generic.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/felce-azzurra/felce-azzurra-3307-sea-salt-magnolia-spray-refill-250ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -3909,7 +3915,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/generic.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/felce-azzurra/felce-azzurra-3305-white-tea-osmanthus-spray-refill-250ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -3918,7 +3924,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/generic.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/felce-azzurra/felce-azzurra-3302-bamboo-lotus-diffuser-120ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -6114,7 +6120,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/fabric-softener.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/lenor/lenor-3291-sensitive-cotton-washing-liquid-900ml-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -7842,7 +7848,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://globalmarket.kg/assets/placeholders/laundry-powder.svg</image:loc>
+      <image:loc>https://globalmarket.kg/assets/products/vanish/vanish-3292-oxi-action-pink-powder-750g-card-front.jpg</image:loc>
     </image:image>
   </url>
   <url>

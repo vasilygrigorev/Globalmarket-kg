@@ -1,5 +1,5 @@
 {
-  "count": 62,
+  "count": 63,
   "pages": [
     {
       "type": "category",
@@ -485,7 +485,7 @@
         "товары Lenor",
         "Lenor купить Бишкек"
       ],
-      "shown": 7,
+      "shown": 8,
       "retainedLegacy": false
     },
     {
@@ -844,6 +844,21 @@
         "TRISA",
         "товары TRISA",
         "TRISA купить Бишкек"
+      ],
+      "shown": 2,
+      "retainedLegacy": false
+    },
+    {
+      "type": "brand",
+      "slug": "vanish",
+      "title": "Vanish",
+      "path": "/brand/vanish/",
+      "url": "https://globalmarket.kg/brand/vanish/",
+      "count": 2,
+      "seoTerms": [
+        "Vanish",
+        "товары Vanish",
+        "Vanish купить Бишкек"
       ],
       "shown": 2,
       "retainedLegacy": false
