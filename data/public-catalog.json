@@ -494,7 +494,7 @@
     {
       "firstSeenAt": null,
       "productKind": "",
-      "image": null,
+      "image": "assets/products/dash/dash-1940-color-frische-5-5kg-110-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "laundry",
@@ -523,7 +523,11 @@
       "id": "prd_ae674eab81b8",
       "icon": "🫧",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dash/dash-1940-color-frische-5-5kg-110-card-front.jpg",
+        "assets/products/dash/dash-1940-color-frische-5-5kg-110-front.jpg",
+        "assets/products/dash/dash-1940-color-frische-5-5kg-110-back.jpg"
+      ],
       "searchTerms": [
         "dash",
         "5kg",
@@ -1384,7 +1388,7 @@
     {
       "firstSeenAt": "2026-08-18",
       "productKind": "laundry_gel",
-      "image": null,
+      "image": "assets/products/dalli/dalli-3064-vollwaschmittel-gel-2-25l-50-card-front.jpg",
       "form": "gel",
       "rating": 4.8,
       "useArea": "laundry",
@@ -1412,7 +1416,11 @@
       "id": "prd_1c_3064",
       "icon": "🫧",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dalli/dalli-3064-vollwaschmittel-gel-2-25l-50-card-front.jpg",
+        "assets/products/dalli/dalli-3064-vollwaschmittel-gel-2-25l-50-front.jpg",
+        "assets/products/dalli/dalli-3064-vollwaschmittel-gel-2-25l-50-back.jpg"
+      ],
       "searchTerms": [
         "dalli",
         "gel",
@@ -10242,7 +10250,7 @@
     {
       "firstSeenAt": "2026-08-18",
       "productKind": "soap",
-      "image": null,
+      "image": "assets/products/dalli/dalli-3062-kernseife-125g-card-front.jpg",
       "form": "solid",
       "rating": 4.8,
       "useArea": "body",
@@ -10269,7 +10277,11 @@
       "id": "prd_1c_3062",
       "icon": "🌸",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dalli/dalli-3062-kernseife-125g-card-front.jpg",
+        "assets/products/dalli/dalli-3062-kernseife-125g-front.jpg",
+        "assets/products/dalli/dalli-3062-kernseife-125g-back.jpg"
+      ],
       "searchTerms": [
         "dalli",
         "мыло",
@@ -17640,7 +17652,7 @@
     {
       "firstSeenAt": "2026-08-18",
       "productKind": "deodorant_spray",
-      "image": null,
+      "image": "assets/products/rexona/rexona-1155-advanced-protection-invisible-200ml-card-front.jpg",
       "form": "spray",
       "rating": 4.8,
       "useArea": "deodorants",
@@ -17664,7 +17676,11 @@
       "id": "prd_1c_1155",
       "icon": "💜",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/rexona/rexona-1155-advanced-protection-invisible-200ml-card-front.jpg",
+        "assets/products/rexona/rexona-1155-advanced-protection-invisible-200ml-front.jpg",
+        "assets/products/rexona/rexona-1155-advanced-protection-invisible-200ml-back.jpg"
+      ],
       "searchTerms": [
         "rexona",
         "body",
@@ -18671,7 +18687,7 @@
     {
       "firstSeenAt": null,
       "productKind": "deodorant_stick",
-      "image": null,
+      "image": "assets/products/rexona/rexona-1248-invisible-black-white-stick-40g-card-front.jpg",
       "form": "stick",
       "rating": 4.8,
       "useArea": "deodorants",
@@ -18698,7 +18714,11 @@
       "id": "prd_cd48dd9956e1",
       "icon": "💜",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/rexona/rexona-1248-invisible-black-white-stick-40g-card-front.jpg",
+        "assets/products/rexona/rexona-1248-invisible-black-white-stick-40g-front.jpg",
+        "assets/products/rexona/rexona-1248-invisible-black-white-stick-40g-back.jpg"
+      ],
       "searchTerms": [
         "rexona",
         "stick",
@@ -19062,7 +19082,7 @@
     {
       "firstSeenAt": null,
       "productKind": "deodorant_stick",
-      "image": null,
+      "image": "assets/products/rexona/rexona-2961-men-ice-cool-stick-40g-card-front.jpg",
       "form": "stick",
       "rating": 4.8,
       "useArea": "deodorants",
@@ -19088,7 +19108,11 @@
       "id": "prd_f024c1fb0785",
       "icon": "💜",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/rexona/rexona-2961-men-ice-cool-stick-40g-card-front.jpg",
+        "assets/products/rexona/rexona-2961-men-ice-cool-stick-40g-front.jpg",
+        "assets/products/rexona/rexona-2961-men-ice-cool-stick-40g-back.jpg"
+      ],
       "searchTerms": [
         "rexona",
         "stick",
@@ -19827,7 +19851,7 @@
     {
       "firstSeenAt": null,
       "productKind": "",
-      "image": null,
+      "image": "assets/products/axe/axe-1212-signature-suave-122ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "deodorants",
@@ -19852,7 +19876,11 @@
       "id": "prd_af4df5014530",
       "icon": "💜",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/axe/axe-1212-signature-suave-122ml-card-front.jpg",
+        "assets/products/axe/axe-1212-signature-suave-122ml-front.jpg",
+        "assets/products/axe/axe-1212-signature-suave-122ml-back.jpg"
+      ],
       "searchTerms": [
         "axe",
         "deo",
@@ -24497,7 +24525,7 @@
     {
       "firstSeenAt": "2026-08-18",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3100-deo-rollon-fresco-50ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -24524,7 +24552,11 @@
       "id": "prd_1c_3100",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3100-deo-rollon-fresco-50ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3100-deo-rollon-fresco-50ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3100-deo-rollon-fresco-50ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -36910,7 +36942,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "shower_gel",
-      "image": null,
+      "image": "assets/products/fa/fa-3281-fresh-sport-shower-gel-250ml-card-front.jpg",
       "form": "gel",
       "rating": 4.8,
       "useArea": "body",
@@ -36926,28 +36958,30 @@
       "collectionLabels": [],
       "categoryId": "body",
       "audience": "men",
-      "title": "Fa гель/душ MEN (250) Lemon Fresh",
+      "title": "Fa Fresh Sport гель для душа, 250 мл",
       "sourceCode": "3281",
       "collections": [],
-      "description": "Fa: средство для ухода за кожей и ежедневной гигиены.",
+      "description": "Fa Men Fresh Sport — мужской гель для душа с освежающим ароматом лайма и мяты. Мягко очищает кожу и подходит для ежедневного использования. Объём 250 мл; нанесите на влажную кожу, вспеньте и смойте водой.",
       "brand": "Fa",
       "registeredPriceKgs": 291,
       "id": "prd_1c_3281",
       "icon": "🌸",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/fa/fa-3281-fresh-sport-shower-gel-250ml-card-front.jpg",
+        "assets/products/fa/fa-3281-fresh-sport-shower-gel-250ml-front.jpg",
+        "assets/products/fa/fa-3281-fresh-sport-shower-gel-250ml-back.jpg"
+      ],
       "searchTerms": [
         "fa",
-        "гель",
-        "душ",
-        "men",
-        "250",
-        "lemon",
         "fresh",
+        "sport",
+        "гель",
         "душа",
-        "уход",
-        "за",
-        "телом"
+        "250",
+        "мл",
+        "лайм",
+        "мята"
       ],
       "category": "Уход за телом",
       "sectionLabels": [
@@ -36956,9 +36990,9 @@
       ],
       "badge": "Fa",
       "restockedAt": "2026-10-10",
-      "searchText": "fa гель/душ men (250) lemon fresh fa гель для душа уход за телом fa: средство для ухода за кожей и ежедневной гигиены.",
+      "searchText": "fa fresh sport гель для душа 250 мл мужской lime mint лайм мята уход за телом ванная",
       "retailPriceKgs": 300,
-      "unit": "шт",
+      "unit": "250 мл",
       "tones": [
         "#f2d9c7",
         "#c7876a"
@@ -37468,7 +37502,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/dr-beckmann/dr-beckmann-3233-backofen-grill-power-gel-375ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "home_cleaning",
@@ -37491,7 +37525,11 @@
       "id": "prd_1c_3233",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dr-beckmann/dr-beckmann-3233-backofen-grill-power-gel-375ml-card-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3233-backofen-grill-power-gel-375ml-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3233-backofen-grill-power-gel-375ml-back.jpg"
+      ],
       "searchTerms": [
         "dr",
         "beckmann",
@@ -38132,7 +38170,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/dr-beckmann/dr-beckmann-3231-intensiv-glaskeramik-edelstahl-250ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -38155,7 +38193,11 @@
       "id": "prd_1c_3231",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dr-beckmann/dr-beckmann-3231-intensiv-glaskeramik-edelstahl-250ml-card-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3231-intensiv-glaskeramik-edelstahl-250ml-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3231-intensiv-glaskeramik-edelstahl-250ml-back.jpg"
+      ],
       "searchTerms": [
         "dr",
         "beckmann",
@@ -38611,7 +38653,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/dr-beckmann/dr-beckmann-3227-washing-machine-cleaner-vinegar-250ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "home_cleaning",
@@ -38634,7 +38676,11 @@
       "id": "prd_1c_3227",
       "icon": "✨",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dr-beckmann/dr-beckmann-3227-washing-machine-cleaner-vinegar-250ml-card-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3227-washing-machine-cleaner-vinegar-250ml-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3227-washing-machine-cleaner-vinegar-250ml-back.jpg"
+      ],
       "searchTerms": [
         "dr",
         "beckmann",
@@ -39299,7 +39345,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "air_freshener",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3270-white-musk-gel-140g-card-front.jpg",
       "form": "spray",
       "rating": 4.8,
       "useArea": "",
@@ -39325,7 +39371,11 @@
       "id": "prd_1c_3270",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3270-white-musk-gel-140g-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3270-white-musk-gel-140g-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3270-white-musk-gel-140g-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -39358,7 +39408,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3294-classico-refill-20ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -39381,7 +39431,11 @@
       "id": "prd_1c_3294",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3294-classico-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3294-classico-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3294-classico-refill-20ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -39527,7 +39581,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3299-moon-flowers-refill-20ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -39550,7 +39604,11 @@
       "id": "prd_1c_3299",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3299-moon-flowers-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3299-moon-flowers-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3299-moon-flowers-refill-20ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -39583,7 +39641,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3298-vanilla-monoi-refill-20ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "",
@@ -39606,7 +39664,11 @@
       "id": "prd_1c_3298",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3298-vanilla-monoi-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3298-vanilla-monoi-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3298-vanilla-monoi-refill-20ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -40086,7 +40148,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "shower_gel",
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3262-almond-white-tea-650ml-card-front.jpg",
       "form": "gel",
       "rating": 4.8,
       "useArea": "body",
@@ -40111,7 +40173,11 @@
       "id": "prd_1c_3262",
       "icon": "🛍️",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3262-almond-white-tea-650ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3262-almond-white-tea-650ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3262-almond-white-tea-650ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",
@@ -40203,7 +40269,7 @@
     {
       "firstSeenAt": "2026-10-10",
       "productKind": "",
-      "image": null,
+      "image": "assets/products/the-pink-stuff/the-pink-stuff-3261-platinum-kitchen-cleaner-750ml-card-front.jpg",
       "form": "",
       "rating": 4.8,
       "useArea": "home_cleaning",
@@ -40226,7 +40292,11 @@
       "id": "prd_1c_3261",
       "icon": "✨",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/the-pink-stuff/the-pink-stuff-3261-platinum-kitchen-cleaner-750ml-card-front.jpg",
+        "assets/products/the-pink-stuff/the-pink-stuff-3261-platinum-kitchen-cleaner-750ml-front.jpg",
+        "assets/products/the-pink-stuff/the-pink-stuff-3261-platinum-kitchen-cleaner-750ml-back.jpg"
+      ],
       "searchTerms": [
         "the",
         "pink",
@@ -40384,7 +40454,7 @@
     {
       "firstSeenAt": "2026-10-19",
       "productKind": "fabric_softener",
-      "image": "",
+      "image": "assets/products/felce-azzurra/felce-azzurra-3268-orchid-laundry-fragrance-220ml-card-front.jpg",
       "form": "liquid",
       "rating": 4.8,
       "useArea": "laundry",
@@ -40414,7 +40484,11 @@
       "id": "prd_1c_3268",
       "icon": "",
       "status": "active",
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3268-orchid-laundry-fragrance-220ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3268-orchid-laundry-fragrance-220ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3268-orchid-laundry-fragrance-220ml-back.jpg"
+      ],
       "searchTerms": [
         "felce",
         "azzurra",

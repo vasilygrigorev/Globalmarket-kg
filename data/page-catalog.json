@@ -568,14 +568,18 @@
       "collectionLabels": [
         "Европа"
       ],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dash/dash-1940-color-frische-5-5kg-110-card-front.jpg",
+        "assets/products/dash/dash-1940-color-frische-5-5kg-110-front.jpg",
+        "assets/products/dash/dash-1940-color-frische-5-5kg-110-back.jpg"
+      ],
       "status": "active",
       "id": "prd_ae674eab81b8",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/dash/dash-1940-color-frische-5-5kg-110-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 2614,
       "description": "G.DASH: товар для дома и личного ухода. Формат: 5.5 kg, 110 стир, 5.5kg, 110стир.",
@@ -1584,14 +1588,18 @@
       "collectionLabels": [
         "Европа"
       ],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dalli/dalli-3064-vollwaschmittel-gel-2-25l-50-card-front.jpg",
+        "assets/products/dalli/dalli-3064-vollwaschmittel-gel-2-25l-50-front.jpg",
+        "assets/products/dalli/dalli-3064-vollwaschmittel-gel-2-25l-50-back.jpg"
+      ],
       "status": "active",
       "id": "prd_1c_3064",
       "tones": [
         "#f2dfc6",
         "#d58d79"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-3064-vollwaschmittel-gel-2-25l-50-card-front.jpg",
       "icon": "🫧",
       "registeredPriceKgs": 1445,
       "description": "Dalli Gel (2.25L)(50стир) Vollwaschmittel - гель для стирки для домашней стирки. Формат: 2.25L. Дозировку и режим стирки выбирайте по инструкции на упаковке и типу ткани.",
@@ -14253,14 +14261,18 @@
       "collectionLabels": [
         "Европа"
       ],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/dalli/dalli-3062-kernseife-125g-card-front.jpg",
+        "assets/products/dalli/dalli-3062-kernseife-125g-front.jpg",
+        "assets/products/dalli/dalli-3062-kernseife-125g-back.jpg"
+      ],
       "status": "active",
       "id": "prd_1c_3062",
       "tones": [
         "#f2d9c7",
         "#c7876a"
       ],
-      "image": null,
+      "image": "assets/products/dalli/dalli-3062-kernseife-125g-card-front.jpg",
       "icon": "🌸",
       "registeredPriceKgs": 145,
       "description": "Dalli мыло (125g) Kernseife - уход за телом для повседневного использования. Формат: 125g. Перед применением ознакомьтесь с информацией и рекомендациями на упаковке.",
@@ -24655,14 +24667,18 @@
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/rexona/rexona-1155-advanced-protection-invisible-200ml-card-front.jpg",
+        "assets/products/rexona/rexona-1155-advanced-protection-invisible-200ml-front.jpg",
+        "assets/products/rexona/rexona-1155-advanced-protection-invisible-200ml-back.jpg"
+      ],
       "status": "active",
       "id": "prd_1c_1155",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/rexona/rexona-1155-advanced-protection-invisible-200ml-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 291,
       "description": "Rexona Body Spray (200) (L) Invisible B&W - дезодоранты для повседневного использования. Перед применением ознакомьтесь с информацией и рекомендациями на упаковке.",
@@ -26400,14 +26416,18 @@
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/rexona/rexona-1248-invisible-black-white-stick-40g-card-front.jpg",
+        "assets/products/rexona/rexona-1248-invisible-black-white-stick-40g-front.jpg",
+        "assets/products/rexona/rexona-1248-invisible-black-white-stick-40g-back.jpg"
+      ],
       "status": "active",
       "id": "prd_cd48dd9956e1",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/rexona/rexona-1248-invisible-black-white-stick-40g-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 339,
       "description": "Rexona: дезодорант для ежедневной свежести.",
@@ -27112,14 +27132,18 @@
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/rexona/rexona-2961-men-ice-cool-stick-40g-card-front.jpg",
+        "assets/products/rexona/rexona-2961-men-ice-cool-stick-40g-front.jpg",
+        "assets/products/rexona/rexona-2961-men-ice-cool-stick-40g-back.jpg"
+      ],
       "status": "active",
       "id": "prd_f024c1fb0785",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/rexona/rexona-2961-men-ice-cool-stick-40g-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 339,
       "description": "Rexona: дезодорант для ежедневной свежести.",
@@ -28346,14 +28370,18 @@
       "categoryId": "deodorants",
       "collections": [],
       "collectionLabels": [],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/axe/axe-1212-signature-suave-122ml-card-front.jpg",
+        "assets/products/axe/axe-1212-signature-suave-122ml-front.jpg",
+        "assets/products/axe/axe-1212-signature-suave-122ml-back.jpg"
+      ],
       "status": "active",
       "id": "prd_af4df5014530",
       "tones": [
         "#e1d8f3",
         "#8e78bd"
       ],
-      "image": null,
+      "image": "assets/products/axe/axe-1212-signature-suave-122ml-card-front.jpg",
       "icon": "💜",
       "registeredPriceKgs": 261,
       "description": "AXE: дезодорант для ежедневной свежести.",
@@ -35105,14 +35133,18 @@
       "collectionLabels": [
         "Европа"
       ],
-      "galleryImages": [],
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3100-deo-rollon-fresco-50ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3100-deo-rollon-fresco-50ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3100-deo-rollon-fresco-50ml-back.jpg"
+      ],
       "status": "active",
       "id": "prd_1c_3100",
       "tones": [
         "#e4ded2",
         "#a99076"
       ],
-      "image": null,
+      "image": "assets/products/felce-azzurra/felce-azzurra-3100-deo-rollon-fresco-50ml-card-front.jpg",
       "icon": "🛍️",
       "registeredPriceKgs": 475,
       "description": "FELCE AZZURRA Deo Rollon (50ml) Fresco - разное для повседневного использования. Формат: 50мл. Перед применением ознакомьтесь с информацией и рекомендациями на упаковке.",
@@ -60182,12 +60214,16 @@
     {
       "id": "prd_1c_3281",
       "sourceCode": "3281",
-      "title": "Fa гель/душ MEN (250) Lemon Fresh",
-      "description": "Fa: средство для ухода за кожей и ежедневной гигиены.",
-      "image": null,
-      "galleryImages": [],
+      "title": "Fa Fresh Sport гель для душа, 250 мл",
+      "description": "Fa Men Fresh Sport — мужской гель для душа с освежающим ароматом лайма и мяты. Мягко очищает кожу и подходит для ежедневного использования. Объём 250 мл; нанесите на влажную кожу, вспеньте и смойте водой.",
+      "image": "assets/products/fa/fa-3281-fresh-sport-shower-gel-250ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/fa/fa-3281-fresh-sport-shower-gel-250ml-card-front.jpg",
+        "assets/products/fa/fa-3281-fresh-sport-shower-gel-250ml-front.jpg",
+        "assets/products/fa/fa-3281-fresh-sport-shower-gel-250ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
-      "unit": "шт",
+      "unit": "250 мл",
       "badge": "Fa",
       "restockedAt": "2026-10-10",
       "retailPriceKgs": 300,
@@ -60205,7 +60241,7 @@
       "productType": "гель для душа",
       "brand": "Fa",
       "rating": 4.8,
-      "searchText": "fa гель/душ men (250) lemon fresh fa гель для душа уход за телом fa: средство для ухода за кожей и ежедневной гигиены. fa гель/душ men (250) fresh sport 00003252 _ fa гель/душ men (250) fresh sport",
+      "searchText": "fa fresh sport гель для душа 250 мл мужской lime mint лайм мята уход за телом ванная",
       "productKind": "shower_gel",
       "audience": "men",
       "attributes": [
@@ -60215,16 +60251,14 @@
       "useArea": "body",
       "searchTerms": [
         "fa",
-        "гель",
-        "душ",
-        "men",
-        "250",
-        "lemon",
         "fresh",
+        "sport",
+        "гель",
         "душа",
-        "уход",
-        "за",
-        "телом"
+        "250",
+        "мл",
+        "лайм",
+        "мята"
       ],
       "inStock": true,
       "stockQuantity": 147.0,
@@ -61075,8 +61109,12 @@
       "sourceCode": "3233",
       "title": "Dr.Beckmann BACKOFEN (375) для духовок",
       "description": "Dr.Beckmann: товар для дома и личного ухода.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/dr-beckmann/dr-beckmann-3233-backofen-grill-power-gel-375ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/dr-beckmann/dr-beckmann-3233-backofen-grill-power-gel-375ml-card-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3233-backofen-grill-power-gel-375ml-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3233-backofen-grill-power-gel-375ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -61900,8 +61938,12 @@
       "sourceCode": "3231",
       "title": "Dr.Beckmann INTENSIV Glas (250) для плит",
       "description": "Dr.Beckmann: товар для дома и личного ухода.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/dr-beckmann/dr-beckmann-3231-intensiv-glaskeramik-edelstahl-250ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/dr-beckmann/dr-beckmann-3231-intensiv-glaskeramik-edelstahl-250ml-card-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3231-intensiv-glaskeramik-edelstahl-250ml-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3231-intensiv-glaskeramik-edelstahl-250ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -62577,8 +62619,12 @@
       "sourceCode": "3227",
       "title": "Dr.Beckmann Washing Machine Cleaner (250ml)Vinegar",
       "description": "Gillette: товар для дома и личного ухода. Формат: 250 ml, 250ml.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/dr-beckmann/dr-beckmann-3227-washing-machine-cleaner-vinegar-250ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/dr-beckmann/dr-beckmann-3227-washing-machine-cleaner-vinegar-250ml-card-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3227-washing-machine-cleaner-vinegar-250ml-front.jpg",
+        "assets/products/dr-beckmann/dr-beckmann-3227-washing-machine-cleaner-vinegar-250ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "Gillette",
@@ -63364,8 +63410,12 @@
       "sourceCode": "3270",
       "title": "FELCE AZZURRA Air Freshener Gel (140g)White Musk",
       "description": "FELCE: товар для дома и личного ухода. Формат: 140 g, 140g.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3270-white-musk-gel-140g-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3270-white-musk-gel-140g-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3270-white-musk-gel-140g-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3270-white-musk-gel-140g-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -63432,8 +63482,12 @@
       "sourceCode": "3294",
       "title": "FELCE AZZURRA Air Room Electric (20g) Classic",
       "description": "FELCE: товар для дома и личного ухода. Формат: 20 g, 20g.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3294-classico-refill-20ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3294-classico-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3294-classico-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3294-classico-refill-20ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -63628,8 +63682,12 @@
       "sourceCode": "3299",
       "title": "FELCE AZZURRA Air Room Refill (20g) Moon Flowers",
       "description": "FELCE: товар для дома и личного ухода. Формат: 20 g, 20g.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3299-moon-flowers-refill-20ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3299-moon-flowers-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3299-moon-flowers-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3299-moon-flowers-refill-20ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -63693,8 +63751,12 @@
       "sourceCode": "3298",
       "title": "FELCE AZZURRA Air Room Refill (20g) Vanilla",
       "description": "FELCE: товар для дома и личного ухода. Формат: 20 g, 20g.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3298-vanilla-monoi-refill-20ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3298-vanilla-monoi-refill-20ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3298-vanilla-monoi-refill-20ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3298-vanilla-monoi-refill-20ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -64277,8 +64339,12 @@
       "sourceCode": "3262",
       "title": "FELCE AZZURRA Shower Gel (650ml) Almond & White",
       "description": "FELCE: товар для дома и личного ухода. Формат: 650 ml, 650ml.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3262-almond-white-tea-650ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3262-almond-white-tea-650ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3262-almond-white-tea-650ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3262-almond-white-tea-650ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -64412,8 +64478,12 @@
       "sourceCode": "3261",
       "title": "THE PINK STUFF (750ml) Platinum Kitchen Cleaner",
       "description": "THE: товар для дома и личного ухода. Формат: 750 ml, 750ml.",
-      "image": null,
-      "galleryImages": [],
+      "image": "assets/products/the-pink-stuff/the-pink-stuff-3261-platinum-kitchen-cleaner-750ml-card-front.jpg",
+      "galleryImages": [
+        "assets/products/the-pink-stuff/the-pink-stuff-3261-platinum-kitchen-cleaner-750ml-card-front.jpg",
+        "assets/products/the-pink-stuff/the-pink-stuff-3261-platinum-kitchen-cleaner-750ml-front.jpg",
+        "assets/products/the-pink-stuff/the-pink-stuff-3261-platinum-kitchen-cleaner-750ml-back.jpg"
+      ],
       "firstSeenAt": "2026-10-10",
       "unit": "шт",
       "badge": "_",
@@ -64622,8 +64692,12 @@
       "restockedAt": "2026-10-19",
       "unit": "шт",
       "badge": "Felce Azzurra",
-      "galleryImages": [],
-      "image": "",
+      "galleryImages": [
+        "assets/products/felce-azzurra/felce-azzurra-3268-orchid-laundry-fragrance-220ml-card-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3268-orchid-laundry-fragrance-220ml-front.jpg",
+        "assets/products/felce-azzurra/felce-azzurra-3268-orchid-laundry-fragrance-220ml-back.jpg"
+      ],
+      "image": "assets/products/felce-azzurra/felce-azzurra-3268-orchid-laundry-fragrance-220ml-card-front.jpg",
       "rating": 4.8,
       "audience": "family",
       "status": "active",

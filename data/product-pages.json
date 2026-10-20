@@ -145,8 +145,8 @@
       "retailPriceKgs": 2695,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/laundry-powder.svg",
-      "imageCount": 0,
+      "image": "/assets/products/dash/dash-1940-color-frische-5-5kg-110-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -421,8 +421,8 @@
       "retailPriceKgs": 1490,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/laundry-gel.svg",
-      "imageCount": 0,
+      "image": "/assets/products/dalli/dalli-3064-vollwaschmittel-gel-2-25l-50-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -3643,8 +3643,8 @@
       "retailPriceKgs": 150,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/generic.svg",
-      "imageCount": 0,
+      "image": "/assets/products/dalli/dalli-3062-kernseife-125g-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -6345,8 +6345,8 @@
       "retailPriceKgs": 300,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/deodorant-spray.svg",
-      "imageCount": 0,
+      "image": "/assets/products/rexona/rexona-1155-advanced-protection-invisible-200ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -6733,8 +6733,8 @@
       "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/deodorant-spray.svg",
-      "imageCount": 0,
+      "image": "/assets/products/rexona/rexona-1248-invisible-black-white-stick-40g-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -6913,8 +6913,8 @@
       "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/deodorant-spray.svg",
-      "imageCount": 0,
+      "image": "/assets/products/rexona/rexona-2961-men-ice-cool-stick-40g-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -7183,8 +7183,8 @@
       "retailPriceKgs": 270,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/deodorant-spray.svg",
-      "imageCount": 0,
+      "image": "/assets/products/axe/axe-1212-signature-suave-122ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -8907,8 +8907,8 @@
       "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/generic.svg",
-      "imageCount": 0,
+      "image": "/assets/products/felce-azzurra/felce-azzurra-3100-deo-rollon-fresco-50ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -14295,7 +14295,7 @@
       "slug": "fa-gel-dush-men-250-lemon-fresh-c_3281",
       "path": "/product/fa-gel-dush-men-250-lemon-fresh-c_3281/",
       "url": "https://globalmarket.kg/product/fa-gel-dush-men-250-lemon-fresh-c_3281/",
-      "title": "Fa гель/душ MEN (250) Lemon Fresh",
+      "title": "Fa Fresh Sport гель для душа, 250 мл",
       "brand": "Fa",
       "category": "Уход за телом",
       "categoryId": "body",
@@ -14303,8 +14303,8 @@
       "retailPriceKgs": 300,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/shower-gel.svg",
-      "imageCount": 0,
+      "image": "/assets/products/fa/fa-3281-fresh-sport-shower-gel-250ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -14537,8 +14537,8 @@
       "retailPriceKgs": 490,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/cleaning.svg",
-      "imageCount": 0,
+      "image": "/assets/products/dr-beckmann/dr-beckmann-3233-backofen-grill-power-gel-375ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -14753,8 +14753,8 @@
       "retailPriceKgs": 495,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/generic.svg",
-      "imageCount": 0,
+      "image": "/assets/products/dr-beckmann/dr-beckmann-3231-intensiv-glaskeramik-edelstahl-250ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -14933,8 +14933,8 @@
       "retailPriceKgs": 350,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/cleaning.svg",
-      "imageCount": 0,
+      "image": "/assets/products/dr-beckmann/dr-beckmann-3227-washing-machine-cleaner-vinegar-250ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -15131,8 +15131,8 @@
       "retailPriceKgs": 300,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/generic.svg",
-      "imageCount": 0,
+      "image": "/assets/products/felce-azzurra/felce-azzurra-3270-white-musk-gel-140g-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -15149,8 +15149,8 @@
       "retailPriceKgs": 1090,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/generic.svg",
-      "imageCount": 0,
+      "image": "/assets/products/felce-azzurra/felce-azzurra-3294-classico-refill-20ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -15203,8 +15203,8 @@
       "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/generic.svg",
-      "imageCount": 0,
+      "image": "/assets/products/felce-azzurra/felce-azzurra-3299-moon-flowers-refill-20ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -15221,8 +15221,8 @@
       "retailPriceKgs": 590,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/generic.svg",
-      "imageCount": 0,
+      "image": "/assets/products/felce-azzurra/felce-azzurra-3298-vanilla-monoi-refill-20ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -15383,8 +15383,8 @@
       "retailPriceKgs": 595,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/generic.svg",
-      "imageCount": 0,
+      "image": "/assets/products/felce-azzurra/felce-azzurra-3262-almond-white-tea-650ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -15419,8 +15419,8 @@
       "retailPriceKgs": 690,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/cleaning.svg",
-      "imageCount": 0,
+      "image": "/assets/products/the-pink-stuff/the-pink-stuff-3261-platinum-kitchen-cleaner-750ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     },
     {
@@ -15479,8 +15479,8 @@
       "retailPriceKgs": 995,
       "status": "active",
       "inStock": true,
-      "image": "/assets/placeholders/laundry-powder.svg",
-      "imageCount": 0,
+      "image": "/assets/products/felce-azzurra/felce-azzurra-3268-orchid-laundry-fragrance-220ml-card-front.jpg",
+      "imageCount": 3,
       "relatedCount": 24
     }
   ]
