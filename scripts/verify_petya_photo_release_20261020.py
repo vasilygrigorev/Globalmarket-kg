@@ -259,13 +259,31 @@ def main() -> None:
             assert sha256(source) == expected_hash == sha256(staged)
 
     tracked_asset_changes = subprocess.run(
-        ["git", "diff", "--name-only", args.baseline_commit, "--", "assets"],
+        ["git", "diff", "--name-status", args.baseline_commit, "--", "assets"],
         cwd=args.repo_root,
         check=True,
         capture_output=True,
         text=True,
-    ).stdout.strip()
-    assert not tracked_asset_changes, f"existing tracked assets changed: {tracked_asset_changes}"
+    ).stdout.splitlines()
+    expected_added_assets = {
+        path.lstrip("/")
+        for row in audit["publishedProducts"]
+        for path in row["galleryImages"]
+    }
+    actual_added_assets = {
+        line.split("\t", 1)[1]
+        for line in tracked_asset_changes
+        if line.startswith("A\t")
+    }
+    changed_existing_assets = [
+        line for line in tracked_asset_changes if not line.startswith("A\t")
+    ]
+    assert not changed_existing_assets, (
+        f"existing tracked assets changed: {changed_existing_assets}"
+    )
+    assert actual_added_assets == expected_added_assets, (
+        "added asset set does not match the approved public galleries"
+    )
 
     for document in (current_public, current_pages):
         assert "telegram-" not in json.dumps(document, ensure_ascii=False).lower()
