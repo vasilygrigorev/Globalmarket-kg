@@ -38,6 +38,7 @@ test("Google events remain free of customer-entered fields", () => {
   assert.match(script, /AW-18474068233/);
   assert.match(script, /AW-18473846742/);
   assert.match(script, /AW-18473846742\/i7tRCJa62pwdENaPgulE/);
+  assert.match(script, /AW-18474068233\/UR-oCOSq7oQdEInSj-lE/);
   assert.match(script, /order_submitted/);
   assert.match(script, /sms_code_requested/);
   assert.match(script, /sms_login_failed/);

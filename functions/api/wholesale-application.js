@@ -23,6 +23,25 @@ function json(data, status = 200) {
   });
 }
 
+export function normalizeWholesaleAttribution(payload) {
+  const source = payload && typeof payload === "object" ? payload : {};
+  const fields = {
+    utm_source: str(source.utm_source, 200),
+    utm_medium: str(source.utm_medium, 200),
+    utm_campaign: str(source.utm_campaign, 200),
+    utm_content: str(source.utm_content, 200),
+    utm_term: str(source.utm_term, 200),
+    gclid: str(source.gclid, 300),
+    gbraid: str(source.gbraid, 300),
+    wbraid: str(source.wbraid, 300),
+    referrer: str(source.referrer, 500),
+    landing_path: str(source.landing_path, 500),
+    first_seen_at: str(source.first_seen_at, 100),
+    last_seen_at: str(source.last_seen_at, 100),
+  };
+  return Object.values(fields).some(Boolean) ? fields : null;
+}
+
 // Pure: validate + normalize the incoming application.
 export function normalizeWholesaleApplication(payload) {
   if (!payload || typeof payload !== "object") return { error: "invalid_json" };
@@ -42,10 +61,23 @@ export function normalizeWholesaleApplication(payload) {
       status: "pending",
     },
     phoneDigits,
+    attribution: normalizeWholesaleAttribution(payload.attribution),
   };
 }
 
-export function buildWholesaleEmail(application) {
+export function buildWholesaleEmail(application, attribution = null) {
+  const attributionLines = attribution ? [
+    "",
+    "Источник заявки:",
+    `utm_source: ${attribution.utm_source || "не указано"}`,
+    `utm_medium: ${attribution.utm_medium || "не указано"}`,
+    `utm_campaign: ${attribution.utm_campaign || "не указано"}`,
+    `utm_content: ${attribution.utm_content || "не указано"}`,
+    `utm_term: ${attribution.utm_term || "не указано"}`,
+    `Google click id: ${attribution.gclid || attribution.gbraid || attribution.wbraid || "не указано"}`,
+    `Страница входа: ${attribution.landing_path || "не указано"}`,
+    `Referrer: ${attribution.referrer || "не указано"}`,
+  ] : [];
   return {
     subject: `Новая заявка на опт — ${application.shop_name || application.name}`,
     text: [
@@ -55,6 +87,7 @@ export function buildWholesaleEmail(application) {
       `Магазин: ${application.shop_name || "не указан"}`,
       `Адрес: ${application.city || "не указан"}`,
       `Телефон: ${application.phone}`,
+      ...attributionLines,
     ].join("\n"),
   };
 }
@@ -141,7 +174,7 @@ export async function onRequestPost(context) {
 
     let email = { attempted: false, sent: false };
     try {
-      email = await sendManagerEmail(env, buildWholesaleEmail(normalized.application));
+      email = await sendManagerEmail(env, buildWholesaleEmail(normalized.application, normalized.attribution));
     } catch (error) {
       email = { attempted: true, sent: false, reason: String(error?.message || error) };
     }

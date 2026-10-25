@@ -3,7 +3,10 @@
 
   const measurementId = "G-9KZK8Y4S7K";
   const adsDestinationIds = ["AW-18474068233", "AW-18473846742"];
-  const wholesaleLeadDestination = "AW-18473846742/i7tRCJa62pwdENaPgulE";
+  const wholesaleLeadDestinations = [
+    "AW-18473846742/i7tRCJa62pwdENaPgulE",
+    "AW-18474068233/UR-oCOSq7oQdEInSj-lE",
+  ];
   const storageKey = "gmk_google_consent_v1";
   let analyticsConfigured = false;
 
@@ -64,10 +67,12 @@
   window.gmkWholesaleLeadConversion = () => {
     if (readConsent() !== "granted") return;
     enableAnalytics();
-    window.gtag("event", "conversion", {
-      send_to: wholesaleLeadDestination,
-      value: 1,
-      currency: "USD",
+    wholesaleLeadDestinations.forEach((destination) => {
+      window.gtag("event", "conversion", {
+        send_to: destination,
+        value: 1,
+        currency: "USD",
+      });
     });
   };
 

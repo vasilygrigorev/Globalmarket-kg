@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "source": "Recovered from verified Global Market KG release manifests; append-only.",
+  "aliases": [
+    {
+      "from": "/product/cussons-pena-dlya-vanny-apple-500-ml-495133/",
+      "to": "/product/cussons-creations-peace-bottled-apple-pena-dlya-vanny-500-ml-495133/"
+    },
+    {
+      "from": "/product/cussons-pena-dlya-vanny-magnolia-500-ml-1bdcb6/",
+      "to": "/product/cussons-creations-magnolia-almond-milk-pena-dlya-vanny-500-ml-1bdcb6/"
+    },
+    {
+      "from": "/product/cussons-pena-dlya-vanny-marshmallow-500-ml-1f87a5/",
+      "to": "/product/cussons-creations-mallow-magic-pena-dlya-vanny-500-ml-1f87a5/"
+    },
+    {
+      "from": "/product/cussons-pena-dlya-vanny-paradise-fruits-500-ml-9260e5/",
+      "to": "/product/cussons-creations-paradise-fruits-pena-dlya-vanny-500-ml-9260e5/"
+    },
+    {
+      "from": "/product/cussons-pena-dlya-vanny-space-candy-500-ml-34029c/",
+      "to": "/product/cussons-creations-to-the-moon-and-back-space-candy-pena-dlya-vanny-500-ml-34029c/"
+    },
+    {
+      "from": "/product/dalli-3in1-vollwaschmittel-kapsuly-24-sht-113ca3/",
+      "to": "/product/dalli-3in1-vollwaschmittel-kapsuly-dlya-stirki-24-sht-113ca3/"
+    },
+    {
+      "from": "/product/dalli-universal-stiralnyy-poroshok-6-kg-d5ff28/",
+      "to": "/product/dalli-universal-vollwaschmittel-stiralnyy-poroshok-6-kg-100-stirok-d5ff28/"
+    },
+    {
+      "from": "/product/dove-moisture-shampun-600-ml-5c5726/",
+      "to": "/product/dove-nourishing-secrets-cool-moisture-shampun-603-ml-5c5726/"
+    },
+    {
+      "from": "/product/dove-oil-therapy-shampun-600-ml-58bb16/",
+      "to": "/product/dove-anti-frizz-oil-therapy-shampun-600-ml-58bb16/"
+    },
+    {
+      "from": "/product/felce-azzurra-air-freshener-gel-140g-giardino-zen-c_3131/",
+      "to": "/product/felce-azzurra-air-freshener-gel-giardino-zen-140-g-c_3131/"
+    },
+    {
+      "from": "/product/felce-azzurra-air-freshener-gel-140g-lavanda-iris-c_3125/",
+      "to": "/product/felce-azzurra-air-freshener-gel-lavanda-iris-140-g-c_3125/"
+    },
+    {
+      "from": "/product/felce-azzurra-air-freshener-gel-140g-pure-montag-c_3130/",
+      "to": "/product/felce-azzurra-air-freshener-gel-pure-mountain-140-g-c_3130/"
+    },
+    {
+      "from": "/product/felce-azzurra-air-freshener-gel-140g-vanila-monoi-c_3128/",
+      "to": "/product/felce-azzurra-air-freshener-gel-vanilla-monoi-140-g-c_3128/"
+    },
+    {
+      "from": "/product/felce-azzurra-deo-spray-150ml-fresco-c_3097/",
+      "to": "/product/felce-azzurra-deodorant-spray-fresco-150-ml-c_3097/"
+    },
+    {
+      "from": "/product/felce-azzurra-deo-spray-150ml-invisible-c_3098/",
+      "to": "/product/felce-azzurra-deodorant-spray-invisible-150-ml-c_3098/"
+    },
+    {
+      "from": "/product/felce-azzurra-deo-spray-150ml-original-c_3096/",
+      "to": "/product/felce-azzurra-deodorant-spray-original-150-ml-c_3096/"
+    },
+    {
+      "from": "/product/felce-azzurra-intim-wash-250ml-classic-c_3156/",
+      "to": "/product/felce-azzurra-intimate-wash-classic-250-ml-c_3156/"
+    },
+    {
+      "from": "/product/felce-azzurra-intim-wash-250ml-fresco-c_3157/",
+      "to": "/product/felce-azzurra-intimate-wash-fresco-250-ml-c_3157/"
+    },
+    {
+      "from": "/product/felce-azzurra-intim-wash-250ml-ultra-protect-c_3159/",
+      "to": "/product/felce-azzurra-intimate-wash-ultra-protect-250-ml-c_3159/"
+    },
+    {
+      "from": "/product/felce-azzurra-ironing-water-1l-c_3118/",
+      "to": "/product/felce-azzurra-ironing-water-1-l-c_3118/"
+    },
+    {
+      "from": "/product/felce-azzurra-ironing-water-spray-750ml-c_3119/",
+      "to": "/product/felce-azzurra-light-starch-spray-750-ml-c_3119/"
+    },
+    {
+      "from": "/product/felce-azzurra-laundry-fragrance-220ml-classico-c_3123/",
+      "to": "/product/felce-azzurra-laundry-fragrance-classico-220-ml-c_3123/"
+    },
+    {
+      "from": "/product/felce-azzurra-laundry-liquid-1-595l-active-color-c_3107/",
+      "to": "/product/felce-azzurra-active-color-laundry-liquid-1-595-l-c_3107/"
+    },
+    {
+      "from": "/product/felce-azzurra-laundry-liquid-1-595l-original-c_3105/",
+      "to": "/product/felce-azzurra-laundry-liquid-original-1-595-l-c_3105/"
+    },
+    {
+      "from": "/product/felce-azzurra-liquid-soap-300ml-antibacterial-c_3161/",
+      "to": "/product/felce-azzurra-liquid-soap-antibacterial-300-ml-c_3161/"
+    },
+    {
+      "from": "/product/felce-azzurra-liquid-soap-300ml-nourishing-c_3162/",
+      "to": "/product/felce-azzurra-liquid-soap-nourishing-300-ml-c_3162/"
+    },
+    {
+      "from": "/product/felce-azzurra-liquid-soap-300ml-original-c_3160/",
+      "to": "/product/felce-azzurra-liquid-soap-original-300-ml-c_3160/"
+    },
+    {
+      "from": "/product/felce-azzurra-men-s-deo-spray-150ml-cool-blue-c_3103/",
+      "to": "/product/felce-azzurra-men-deodorant-spray-cool-blue-150-ml-c_3103/"
+    },
+    {
+      "from": "/product/felce-azzurra-men-s-deo-spray-150ml-power-fresh-c_3104/",
+      "to": "/product/felce-azzurra-men-deodorant-spray-power-fresh-150-ml-c_3104/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-250ml-gold-spice-c_3149/",
+      "to": "/product/felce-azzurra-shower-gel-gold-spice-250-ml-c_3149/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-250ml-micellar-c_3152/",
+      "to": "/product/felce-azzurra-shower-gel-micellar-250-ml-c_3152/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-250ml-mint-lime-c_3147/",
+      "to": "/product/felce-azzurra-shower-gel-mint-lime-250-ml-c_3147/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-250ml-original-c_3146/",
+      "to": "/product/felce-azzurra-shower-gel-original-250-ml-c_3146/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-250ml-sublime-argan-c_3150/",
+      "to": "/product/felce-azzurra-shower-gel-sublime-argan-250-ml-c_3150/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-250ml-white-musk-c_3148/",
+      "to": "/product/felce-azzurra-shower-gel-white-musk-250-ml-c_3148/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-650ml-almond-white-tea-c_3142/",
+      "to": "/product/felce-azzurra-shower-gel-almond-white-tea-650-ml-c_3142/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-650ml-amber-argan-c_3137/",
+      "to": "/product/felce-azzurra-shower-gel-amber-argan-650-ml-c_3137/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-650ml-bergamot-jasmin-c_3135/",
+      "to": "/product/felce-azzurra-shower-gel-bergamot-jasmine-650-ml-c_3135/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-650ml-black-orchid-c_3139/",
+      "to": "/product/felce-azzurra-shower-gel-black-orchid-650-ml-c_3139/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-650ml-coconut-bamboo-c_3140/",
+      "to": "/product/felce-azzurra-shower-gel-coconut-bamboo-650-ml-c_3140/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-650ml-ebony-vanilla-c_3143/",
+      "to": "/product/felce-azzurra-shower-gel-ebony-vanilla-650-ml-c_3143/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-650ml-hibiscus-pink-c_3144/",
+      "to": "/product/felce-azzurra-shower-gel-hibiscus-pink-650-ml-c_3144/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-650ml-original-c_3134/",
+      "to": "/product/felce-azzurra-shower-gel-original-650-ml-c_3134/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-650ml-sea-salt-c_3141/",
+      "to": "/product/felce-azzurra-shower-gel-sea-salt-650-ml-c_3141/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-gel-650ml-white-musk-c_3138/",
+      "to": "/product/felce-azzurra-shower-gel-white-musk-650-ml-c_3138/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-shampoo-m-250ml-cool-blue-c_3101/",
+      "to": "/product/felce-azzurra-uomo-cool-blue-shower-shampoo-250-ml-c_3101/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-shampoo-m-250ml-fresh-ice-c_3102/",
+      "to": "/product/felce-azzurra-uomo-fresh-ice-shower-shampoo-250-ml-c_3102/"
+    },
+    {
+      "from": "/product/felce-azzurra-shower-shampoo-m-250ml-power-sport-c_3132/",
+      "to": "/product/felce-azzurra-uomo-power-sport-shower-shampoo-250-ml-c_3132/"
+    },
+    {
+      "from": "/product/felce-azzurra-softener-2l-lavanda-iris-c_3109/",
+      "to": "/product/felce-azzurra-softener-lavanda-iris-2-l-c_3109/"
+    },
+    {
+      "from": "/product/felce-azzurra-softener-2l-original-c_3108/",
+      "to": "/product/felce-azzurra-softener-original-2-l-c_3108/"
+    },
+    {
+      "from": "/product/felce-azzurra-softener-2l-pure-freshness-c_3112/",
+      "to": "/product/felce-azzurra-softener-pure-freshness-2-l-c_3112/"
+    },
+    {
+      "from": "/product/felce-azzurra-softener-2l-rose-lotus-c_3111/",
+      "to": "/product/felce-azzurra-softener-rose-lotus-2-l-c_3111/"
+    },
+    {
+      "from": "/product/felce-azzurra-softener-900ml-argan-vanilla-c_3115/",
+      "to": "/product/felce-azzurra-softener-argan-vanilla-900-ml-c_3115/"
+    },
+    {
+      "from": "/product/felce-azzurra-softener-900ml-black-orchid-c_3116/",
+      "to": "/product/felce-azzurra-softener-black-orchid-900-ml-c_3116/"
+    },
+    {
+      "from": "/product/felce-azzurra-softener-900ml-moon-flower-c_3117/",
+      "to": "/product/felce-azzurra-softener-moon-flower-900-ml-c_3117/"
+    },
+    {
+      "from": "/product/felce-azzurra-softener-900ml-original-c_3113/",
+      "to": "/product/felce-azzurra-softener-original-900-ml-c_3113/"
+    },
+    {
+      "from": "/product/felce-azzurra-softener-900ml-pure-freshness-c_3114/",
+      "to": "/product/felce-azzurra-softener-pure-freshness-900-ml-c_3114/"
+    },
+    {
+      "from": "/product/gillette-mach3-stanok-1-sht-4baa26/",
+      "to": "/product/gillette-mach3-stanok-dlya-britya-1-sht-4baa26/"
+    },
+    {
+      "from": "/product/gillette-venus-ocean-stanki-3-sht-e6e9d9/",
+      "to": "/product/gillette-venus-oceana-odnorazovye-stanki-3-sht-e6e9d9/"
+    },
+    {
+      "from": "/product/jif-lemon-chistyashchiy-krem-500-ml-118ed3/",
+      "to": "/product/jif-lemon-chistyaschiy-krem-500-ml-118ed3/"
+    },
+    {
+      "from": "/product/lazer-petals-3-zhenskie-stanki-4-sht-878dc1/",
+      "to": "/product/lazer-petals-3-zhenskie-odnorazovye-stanki-4-sht-878dc1/"
+    },
+    {
+      "from": "/product/persil-light-foam-gel-dlya-stirki-3-l-1-l-f48a33/",
+      "to": "/product/persil-deep-clean-light-foam-gel-dlya-stirki-3-l-1-l-f48a33/"
+    },
+    {
+      "from": "/product/queen-lady-razor-stanki-5-sht-karton-7fb277/",
+      "to": "/product/queen-lady-razor-zhenskie-stanki-5-sht-7fb277/"
+    },
+    {
+      "from": "/product/rexona-men-antibacterial-sprey-dezodorant-200-ml-e23d8f/",
+      "to": "/product/rexona-men-antibacterial-invisible-sprey-antiperspirant-200-ml-e23d8f/"
+    },
+    {
+      "from": "/product/rexona-men-football-fanatics-sprey-dezodorant-200-ml-ce23a5/",
+      "to": "/product/rexona-men-football-fanatics-sprey-antiperspirant-200-ml-ce23a5/"
+    },
+    {
+      "from": "/product/rexona-men-v8-sprey-dezodorant-200-ml-a295b7/",
+      "to": "/product/rexona-men-v8-sprey-antiperspirant-200-ml-a295b7/"
+    },
+    {
+      "from": "/product/the-pink-stuff-bathroom-foam-cleaner-750-ml-c_3073/",
+      "to": "/product/the-pink-stuff-bathroom-cleaner-750ml-c_3073/"
+    },
+    {
+      "from": "/product/the-pink-stuff-daily-shine-sredstvo-dlya-vannoy-750-ml-c_3071/",
+      "to": "/product/the-pink-stuff-miracle-sower-shine-750ml-c_3071/"
+    },
+    {
+      "from": "/product/the-pink-stuff-floor-cleaner-spray-750-ml-c_3085/",
+      "to": "/product/the-pink-stuff-floor-cleaner-sprey-750ml-c_3085/"
+    },
+    {
+      "from": "/product/the-pink-stuff-miracle-cream-cleaner-500-ml-c_3084/",
+      "to": "/product/the-pink-stuff-miracle-cream-cleaners-500ml-c_3084/"
+    },
+    {
+      "from": "/product/the-pink-stuff-paste-850g-c_3067/",
+      "to": "/product/the-pink-stuff-miracle-cleaning-paste-850-g-c_3067/"
+    },
+    {
+      "from": "/product/the-pink-stuff-salfetki-iz-mikrofibry-3-sht-c_3090/",
+      "to": "/product/the-pink-stuff-microfiber-sponge-3pcs-c_3090/"
+    },
+    {
+      "from": "/product/the-pink-stuff-squeezy-dual-dvustoronnyaya-gubka-skrabber-c_3088/",
+      "to": "/product/the-pink-stuff-sponge-dual-c_3088/"
+    },
+    {
+      "from": "/product/the-pink-stuff-squeezy-gubka-skrabber-c_3087/",
+      "to": "/product/the-pink-stuff-nabor-s-elektroschetkoy-c_3087/"
+    },
+    {
+      "from": "/product/the-pink-stuff-stain-remover-spray-500-ml-c_3083/",
+      "to": "/product/the-pink-stuff-stain-remover-sprey-500ml-c_3083/"
+    }
+  ]
+}

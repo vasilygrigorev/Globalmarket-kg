@@ -23,6 +23,7 @@ const goodApplication = {
   shop_name: "Магазин Радуга",
   city: "Бишкек",
   comment: "Хотим оптовые цены",
+  attribution: { utm_source: "google", utm_medium: "cpc", gclid: "click-123" },
 };
 
 function installFetchMock({ existingCustomerId = null } = {}) {

@@ -5,7 +5,44 @@
   if (!form || !status) return;
 
   const isProduction = window.location.hostname === "globalmarket.kg";
+  const attributionStorageKey = "globalMarketAttribution";
   if (!isProduction && previewNote) previewNote.hidden = false;
+
+  function compact(value, limit = 500) {
+    const text = String(value || "").replace(/\s+/g, " ").trim();
+    return text ? text.slice(0, limit) : "";
+  }
+
+  function readStoredAttribution() {
+    try {
+      return JSON.parse(localStorage.getItem(attributionStorageKey) || "{}") || {};
+    } catch (_) {
+      return {};
+    }
+  }
+
+  function trackAttribution() {
+    const params = new URLSearchParams(window.location.search);
+    const next = { ...readStoredAttribution() };
+    const keys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid", "gbraid", "wbraid"];
+    const now = new Date().toISOString();
+    let changed = false;
+    keys.forEach((key) => {
+      const value = compact(params.get(key), 300);
+      if (!value) return;
+      next[key] = value;
+      changed = true;
+    });
+    const referrer = compact(document.referrer);
+    if (referrer && (!next.referrer || changed)) next.referrer = referrer;
+    if (!next.landing_path) next.landing_path = `${window.location.pathname}${window.location.search}`;
+    if (!next.first_seen_at) next.first_seen_at = now;
+    next.last_seen_at = now;
+    try { localStorage.setItem(attributionStorageKey, JSON.stringify(next)); } catch (_) {}
+    return next;
+  }
+
+  const attribution = trackAttribution();
 
   function track(name, params = {}) {
     if (typeof window.gmkAnalyticsEvent === "function") {
@@ -52,6 +89,7 @@
       phone: String(data.get("phone") || "").trim(),
       address: String(data.get("address") || "").trim(),
       comment: String(data.get("comment") || "").trim(),
+      attribution,
     };
 
     if (!isProduction) {

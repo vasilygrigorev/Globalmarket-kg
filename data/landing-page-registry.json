@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "source": "Append-only landing URL registry. Do not remove entries when stock reaches zero.",
+  "pages": [
+    {
+      "type": "brand",
+      "slug": "air-wick",
+      "title": "Air Wick"
+    },
+    {
+      "type": "brand",
+      "slug": "alio",
+      "title": "Alio"
+    },
+    {
+      "type": "brand",
+      "slug": "ariel",
+      "title": "Ariel"
+    },
+    {
+      "type": "brand",
+      "slug": "arm-hammer",
+      "title": "Arm & Hammer"
+    },
+    {
+      "type": "brand",
+      "slug": "attar-collection",
+      "title": "Attar Collection"
+    },
+    {
+      "type": "brand",
+      "slug": "axe",
+      "title": "AXE"
+    },
+    {
+      "type": "brand",
+      "slug": "bic",
+      "title": "BIC"
+    },
+    {
+      "type": "brand",
+      "slug": "burti",
+      "title": "Burti"
+    },
+    {
+      "type": "brand",
+      "slug": "chanel",
+      "title": "Chanel"
+    },
+    {
+      "type": "brand",
+      "slug": "chlo",
+      "title": "Chloé"
+    },
+    {
+      "type": "brand",
+      "slug": "clear",
+      "title": "Clear"
+    },
+    {
+      "type": "brand",
+      "slug": "cliff",
+      "title": "Cliff"
+    },
+    {
+      "type": "brand",
+      "slug": "colgate",
+      "title": "Colgate"
+    },
+    {
+      "type": "brand",
+      "slug": "comfort",
+      "title": "Comfort"
+    },
+    {
+      "type": "brand",
+      "slug": "concord",
+      "title": "Concord"
+    },
+    {
+      "type": "brand",
+      "slug": "crest",
+      "title": "Crest"
+    },
+    {
+      "type": "brand",
+      "slug": "cussons",
+      "title": "Cussons"
+    },
+    {
+      "type": "brand",
+      "slug": "cussons-creations",
+      "title": "Cussons Creations"
+    },
+    {
+      "type": "brand",
+      "slug": "dalli",
+      "title": "Dalli"
+    },
+    {
+      "type": "brand",
+      "slug": "dash",
+      "title": "Dash"
+    },
+    {
+      "type": "brand",
+      "slug": "degree",
+      "title": "Degree"
+    },
+    {
+      "type": "brand",
+      "slug": "dove",
+      "title": "Dove"
+    },
+    {
+      "type": "brand",
+      "slug": "downy",
+      "title": "Downy"
+    },
+    {
+      "type": "brand",
+      "slug": "dr-beckmann",
+      "title": "Dr. Beckmann"
+    },
+    {
+      "type": "brand",
+      "slug": "fa",
+      "title": "Fa"
+    },
+    {
+      "type": "brand",
+      "slug": "febreze",
+      "title": "Febreze"
+    },
+    {
+      "type": "brand",
+      "slug": "felce",
+      "title": "FELCE"
+    },
+    {
+      "type": "brand",
+      "slug": "felce-azzurra",
+      "title": "Felce Azzurra"
+    },
+    {
+      "type": "brand",
+      "slug": "finish",
+      "title": "Finish"
+    },
+    {
+      "type": "brand",
+      "slug": "gillette",
+      "title": "Gillette"
+    },
+    {
+      "type": "brand",
+      "slug": "gillette-venus",
+      "title": "Gillette Venus"
+    },
+    {
+      "type": "brand",
+      "slug": "glysolid",
+      "title": "Glysolid"
+    },
+    {
+      "type": "brand",
+      "slug": "head-shoulders",
+      "title": "Head & Shoulders"
+    },
+    {
+      "type": "brand",
+      "slug": "herbal-essences",
+      "title": "Herbal Essences"
+    },
+    {
+      "type": "brand",
+      "slug": "johnson-s",
+      "title": "Johnson's"
+    },
+    {
+      "type": "brand",
+      "slug": "kamill",
+      "title": "Kamill"
+    },
+    {
+      "type": "brand",
+      "slug": "l-oreal-men-expert",
+      "title": "L'Oreal Men Expert"
+    },
+    {
+      "type": "brand",
+      "slug": "lady-speed-stick",
+      "title": "Lady Speed Stick"
+    },
+    {
+      "type": "brand",
+      "slug": "lenor",
+      "title": "Lenor"
+    },
+    {
+      "type": "brand",
+      "slug": "lux",
+      "title": "LUX"
+    },
+    {
+      "type": "brand",
+      "slug": "old-spice",
+      "title": "Old Spice"
+    },
+    {
+      "type": "brand",
+      "slug": "omo",
+      "title": "OMO"
+    },
+    {
+      "type": "brand",
+      "slug": "pantene",
+      "title": "Pantene"
+    },
+    {
+      "type": "brand",
+      "slug": "persil",
+      "title": "Persil"
+    },
+    {
+      "type": "brand",
+      "slug": "rexona",
+      "title": "Rexona"
+    },
+    {
+      "type": "brand",
+      "slug": "section",
+      "title": "Пластырь"
+    },
+    {
+      "type": "brand",
+      "slug": "skin-doctor",
+      "title": "Skin Doctor"
+    },
+    {
+      "type": "brand",
+      "slug": "st-ives",
+      "title": "St. Ives"
+    },
+    {
+      "type": "brand",
+      "slug": "sunmed",
+      "title": "SunMed"
+    },
+    {
+      "type": "brand",
+      "slug": "sunsilk",
+      "title": "Sunsilk"
+    },
+    {
+      "type": "brand",
+      "slug": "syoss",
+      "title": "Syoss"
+    },
+    {
+      "type": "brand",
+      "slug": "the-pink-stuff",
+      "title": "The Pink Stuff"
+    },
+    {
+      "type": "brand",
+      "slug": "tresemm",
+      "title": "TRESemmé"
+    },
+    {
+      "type": "brand",
+      "slug": "trisa",
+      "title": "TRISA"
+    },
+    {
+      "type": "brand",
+      "slug": "vanish",
+      "title": "Vanish"
+    },
+    {
+      "type": "brand",
+      "slug": "vatika",
+      "title": "Vatika"
+    },
+    {
+      "type": "brand",
+      "slug": "yc",
+      "title": "YC"
+    },
+    {
+      "type": "category",
+      "slug": "body",
+      "title": "Уход за телом"
+    },
+    {
+      "type": "category",
+      "slug": "deodorants",
+      "title": "Дезодоранты"
+    },
+    {
+      "type": "category",
+      "slug": "food",
+      "title": "Продукты"
+    },
+    {
+      "type": "category",
+      "slug": "hair",
+      "title": "Уход за волосами"
+    },
+    {
+      "type": "category",
+      "slug": "home_cleaning",
+      "title": "Уборка и чистота"
+    },
+    {
+      "type": "category",
+      "slug": "laundry",
+      "title": "Стирка и уход за бельем"
+    },
+    {
+      "type": "category",
+      "slug": "oral",
+      "title": "Зубная гигиена"
+    },
+    {
+      "type": "category",
+      "slug": "other",
+      "title": "Разное"
+    },
+    {
+      "type": "category",
+      "slug": "perfume",
+      "title": "Парфюм 5 мл"
+    },
+    {
+      "type": "category",
+      "slug": "shaving",
+      "title": "Бритье"
+    },
+    {
+      "type": "collection",
+      "slug": "europe",
+      "title": "Европа"
+    }
+  ]
+}

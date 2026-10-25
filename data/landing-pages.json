@@ -1,5 +1,5 @@
 {
-  "count": 63,
+  "count": 68,
   "pages": [
     {
       "type": "category",
@@ -880,36 +880,6 @@
     },
     {
       "type": "brand",
-      "slug": "lady-speed-stick",
-      "title": "Lady Speed Stick",
-      "path": "/brand/lady-speed-stick/",
-      "url": "https://globalmarket.kg/brand/lady-speed-stick/",
-      "count": 1,
-      "seoTerms": [
-        "Lady Speed Stick",
-        "товары Lady Speed Stick",
-        "Lady Speed Stick купить Бишкек"
-      ],
-      "shown": 1,
-      "retainedLegacy": true
-    },
-    {
-      "type": "brand",
-      "slug": "felce",
-      "title": "FELCE",
-      "path": "/brand/felce/",
-      "url": "https://globalmarket.kg/brand/felce/",
-      "count": 0,
-      "seoTerms": [
-        "FELCE",
-        "товары FELCE",
-        "FELCE купить Бишкек"
-      ],
-      "shown": 0,
-      "retainedLegacy": true
-    },
-    {
-      "type": "brand",
       "slug": "arm-hammer",
       "title": "Arm & Hammer",
       "path": "/brand/arm-hammer/",
@@ -955,6 +925,36 @@
     },
     {
       "type": "brand",
+      "slug": "cussons-creations",
+      "title": "Cussons Creations",
+      "path": "/brand/cussons-creations/",
+      "url": "https://globalmarket.kg/brand/cussons-creations/",
+      "count": 0,
+      "seoTerms": [
+        "Cussons Creations",
+        "товары Cussons Creations",
+        "Cussons Creations купить Бишкек"
+      ],
+      "shown": 0,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
+      "slug": "degree",
+      "title": "Degree",
+      "path": "/brand/degree/",
+      "url": "https://globalmarket.kg/brand/degree/",
+      "count": 0,
+      "seoTerms": [
+        "Degree",
+        "товары Degree",
+        "Degree купить Бишкек"
+      ],
+      "shown": 0,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
       "slug": "downy",
       "title": "Downy",
       "path": "/brand/downy/",
@@ -964,6 +964,81 @@
         "Downy",
         "товары Downy",
         "Downy купить Бишкек"
+      ],
+      "shown": 0,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
+      "slug": "felce",
+      "title": "FELCE",
+      "path": "/brand/felce/",
+      "url": "https://globalmarket.kg/brand/felce/",
+      "count": 0,
+      "seoTerms": [
+        "FELCE",
+        "товары FELCE",
+        "FELCE купить Бишкек"
+      ],
+      "shown": 0,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
+      "slug": "l-oreal-men-expert",
+      "title": "L'Oreal Men Expert",
+      "path": "/brand/l-oreal-men-expert/",
+      "url": "https://globalmarket.kg/brand/l-oreal-men-expert/",
+      "count": 0,
+      "seoTerms": [
+        "L'Oreal Men Expert",
+        "товары L'Oreal Men Expert",
+        "L'Oreal Men Expert купить Бишкек"
+      ],
+      "shown": 0,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
+      "slug": "lady-speed-stick",
+      "title": "Lady Speed Stick",
+      "path": "/brand/lady-speed-stick/",
+      "url": "https://globalmarket.kg/brand/lady-speed-stick/",
+      "count": 1,
+      "seoTerms": [
+        "Lady Speed Stick",
+        "товары Lady Speed Stick",
+        "Lady Speed Stick купить Бишкек"
+      ],
+      "shown": 1,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
+      "slug": "sunsilk",
+      "title": "Sunsilk",
+      "path": "/brand/sunsilk/",
+      "url": "https://globalmarket.kg/brand/sunsilk/",
+      "count": 0,
+      "seoTerms": [
+        "Sunsilk",
+        "товары Sunsilk",
+        "Sunsilk купить Бишкек"
+      ],
+      "shown": 0,
+      "retainedLegacy": true
+    },
+    {
+      "type": "brand",
+      "slug": "vatika",
+      "title": "Vatika",
+      "path": "/brand/vatika/",
+      "url": "https://globalmarket.kg/brand/vatika/",
+      "count": 1,
+      "seoTerms": [
+        "Vatika",
+        "товары Vatika",
+        "Vatika купить Бишкек"
       ],
       "shown": 0,
       "retainedLegacy": true

@@ -64,6 +64,7 @@ test("each landing page has a title, a seoTerms array, and a non-negative count"
 test("category landing slugs resolve to real catalog categoryIds", () => {
   const bad = pages
     .filter((p) => p.type === "category")
+    .filter((p) => !p.retainedLegacy)
     .filter((p) => !categoryIds.has(p.slug))
     .map((p) => p.slug);
   assert.deepEqual(bad, [], `category landing slugs not in catalog: ${bad.join(", ")}`);
@@ -72,6 +73,7 @@ test("category landing slugs resolve to real catalog categoryIds", () => {
 test("collection landing slugs resolve to real catalog collections", () => {
   const bad = pages
     .filter((p) => p.type === "collection")
+    .filter((p) => !p.retainedLegacy)
     .filter((p) => !collections.has(p.slug))
     .map((p) => p.slug);
   assert.deepEqual(bad, [], `collection landing slugs not in catalog: ${bad.join(", ")}`);

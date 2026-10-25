@@ -119,10 +119,13 @@ def main():
 
     public = load_json(site / "data" / "public-catalog.json")
     pages = load_json(site / "data" / "product-pages.json")
+    landing_pages = load_json(site / "data" / "landing-pages.json")
     config = load_json(site / "data" / "site-config.json")
     page_catalog_path = source / "data" / "page-catalog.json"
     page_catalog = load_json(page_catalog_path) if page_catalog_path.exists() else None
     registry = load_json(source / "data" / "product-slug-registry.json")
+    alias_registry = load_json(source / "data" / "product-url-aliases.json")
+    landing_registry = load_json(source / "data" / "landing-page-registry.json")
     current_master = load_json(Path(args.current_master))
     baseline_master = load_json(Path(args.baseline_master))
 
@@ -244,7 +247,7 @@ def main():
     product_dirs = {path.parent.name for path in (site / "product").glob("*/index.html")}
     require(manifest_slugs == product_dirs, f"manifest/files mismatch: manifest={len(manifest_slugs)} files={len(product_dirs)}", errors)
     redirects_path = site / "_redirects"
-    redirect_sources = set()
+    redirect_rows = {}
     if redirects_path.exists():
         for raw_line in redirects_path.read_text(encoding="utf-8").splitlines():
             line = raw_line.strip()
@@ -252,9 +255,44 @@ def main():
                 continue
             parts = line.split()
             if len(parts) >= 2:
-                redirect_sources.add(parts[0].strip("/").split("/")[-1])
-    shadowed_pages = sorted(manifest_slugs & redirect_sources)
+                source_path, target_path = parts[0], parts[1]
+                status = parts[2] if len(parts) >= 3 else "302"
+                redirect_rows.setdefault(source_path, []).append((target_path, status))
+    redirect_product_slugs = {
+        source_path.strip("/").split("/")[-1]
+        for source_path in redirect_rows
+        if source_path.startswith("/product/")
+    }
+    shadowed_pages = sorted(manifest_slugs & redirect_product_slugs)
     require(not shadowed_pages, f"generated product pages shadowed by redirects: {', '.join(shadowed_pages[:20])}", errors)
+
+    alias_errors = []
+    for alias in alias_registry.get("aliases", []):
+        source_path = str(alias.get("from") or "").strip()
+        target_path = str(alias.get("to") or "").strip()
+        rows = redirect_rows.get(source_path, [])
+        if rows != [(target_path, "301")]:
+            alias_errors.append(f"{source_path}: {rows}")
+        if source_path in manifest_paths:
+            alias_errors.append(f"{source_path}: shadows generated page")
+        if target_path not in manifest_paths:
+            alias_errors.append(f"{source_path}: missing target {target_path}")
+    require(not alias_errors, f"legacy product URL aliases are incomplete: {'; '.join(alias_errors[:10])}", errors)
+
+    landing_manifest_keys = {
+        (item.get("type"), item.get("slug"))
+        for item in landing_pages.get("pages", [])
+    }
+    missing_landing_history = [
+        f"{item.get('type')}:{item.get('slug')}"
+        for item in landing_registry.get("pages", [])
+        if (item.get("type"), item.get("slug")) not in landing_manifest_keys
+    ]
+    require(
+        not missing_landing_history,
+        f"landing URL history missing from manifest: {', '.join(missing_landing_history[:20])}",
+        errors,
+    )
 
     inactive_checked = 0
     active_checked = 0
@@ -332,8 +370,17 @@ def main():
         require("analytics_storage: 'denied'" in html, f"denied-by-default consent missing: {path.relative_to(site)}", errors)
         if 'id="gmk-google-tag-loader"' in html and "analytics_storage: 'denied'" in html:
             require(html.index("analytics_storage: 'denied'") < html.index('id="gmk-google-tag-loader"'), f"Google loader precedes consent default: {path.relative_to(site)}", errors)
+        require("/cdn-cgi/l/email-protection" not in html, f"Cloudflare email-protection URL leaked into source: {path.relative_to(site)}", errors)
+    for path in (site / "privacy.html", policy_path, wholesale_path):
+        html = path.read_text(encoding="utf-8")
+        mailto_index = html.find('href="mailto:')
+        require(mailto_index >= 0, f"manager email link missing: {path.relative_to(site)}", errors)
+        if mailto_index >= 0:
+            begin_index = html.rfind("<!--email_off-->", 0, mailto_index)
+            end_index = html.find("<!--/email_off-->", mailto_index)
+            require(begin_index >= 0 and end_index > mailto_index, f"Cloudflare email opt-out missing: {path.relative_to(site)}", errors)
     consent_js = (site / "assets" / "google-consent.js").read_text(encoding="utf-8")
-    require("AW-18474068233" in consent_js and "order_submitted" in consent_js, "Google Ads/order measurement was lost", errors)
+    require("AW-18474068233/UR-oCOSq7oQdEInSj-lE" in consent_js and "order_submitted" in consent_js, "Google Ads/order measurement was lost", errors)
 
     headers = (site / "_headers").read_text(encoding="utf-8")
     expected_release = str(current_master.get("sourceRelease") or "").strip()

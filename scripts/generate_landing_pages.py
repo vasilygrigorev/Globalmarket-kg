@@ -13,6 +13,7 @@ PRODUCT_PAGES_PATH = ROOT / "data" / "product-pages.json"
 SITE_CONFIG_PATH = ROOT / "data" / "site-config.json"
 SEARCH_SYNONYMS_PATH = ROOT / "data" / "search-synonyms.json"
 LANDING_PAGES_PATH = ROOT / "data" / "landing-pages.json"
+LANDING_REGISTRY_PATH = ROOT / "data" / "landing-page-registry.json"
 HEADER_PARTIAL_PATH = ROOT / "partials" / "header.html"
 FOOTER_PARTIAL_PATH = ROOT / "partials" / "footer.html"
 REPORT_PATH = ROOT / "outputs" / "landing-pages-report.md"
@@ -520,9 +521,19 @@ def render_page(target, products, product_page_by_id, all_targets):
     cards_html = render_cards(products, product_page_by_id)
     context_links_html = render_context_links(target, products, all_targets)
     if not cards_html:
+        if target.get("retainedLegacy") and target.get("type") == "brand":
+            empty_message = (
+                f"Сейчас товаров бренда «{target['title']}» нет в наличии. "
+                "Страница сохранена: после нового поступления товары снова появятся здесь автоматически."
+            )
+        else:
+            empty_message = (
+                "Карточки товаров для этого раздела появятся после добавления фото. "
+                "Все позиции можно посмотреть в общем каталоге."
+            )
         cards_html = f"""
             <div class="landing-empty">
-              <p>Карточки товаров для этого раздела появятся после добавления фото. Все позиции можно посмотреть в общем каталоге.</p>
+              <p>{escape(empty_message)}</p>
               <a href="{escape(catalog_href)}">Открыть раздел в каталоге</a>
             </div>
         """
@@ -859,6 +870,8 @@ LEGACY_LANDING_TARGETS = [
 def retained_landing_targets(current_targets):
     """Keep every previously generated landing URL append-only."""
     prior = []
+    if LANDING_REGISTRY_PATH.exists():
+        prior.extend((load_json(LANDING_REGISTRY_PATH).get("pages") or []))
     if LANDING_PAGES_PATH.exists():
         prior.extend((load_json(LANDING_PAGES_PATH).get("pages") or []))
     prior.extend(LEGACY_LANDING_TARGETS)
@@ -894,6 +907,37 @@ def retained_landing_targets(current_targets):
     return current_targets + retained
 
 
+def write_landing_registry(targets):
+    """Persist every generated landing identity independently of stock state."""
+    pages = {}
+    if LANDING_REGISTRY_PATH.exists():
+        for item in load_json(LANDING_REGISTRY_PATH).get("pages") or []:
+            key = (item.get("type"), item.get("slug"))
+            if all(key) and item.get("title"):
+                pages[key] = {
+                    "type": item["type"],
+                    "slug": item["slug"],
+                    "title": item["title"],
+                }
+    for item in targets:
+        key = (item.get("type"), item.get("slug"))
+        if all(key) and item.get("title"):
+            pages[key] = {
+                "type": item["type"],
+                "slug": item["slug"],
+                "title": item["title"],
+            }
+    document = {
+        "schemaVersion": 1,
+        "source": "Append-only landing URL registry. Do not remove entries when stock reaches zero.",
+        "pages": [pages[key] for key in sorted(pages)],
+    }
+    LANDING_REGISTRY_PATH.write_text(
+        json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
 def write_landing_page(target, html_text):
     page_path = ROOT / target["path"].strip("/") / "index.html"
     page_path.parent.mkdir(parents=True, exist_ok=True)
@@ -916,6 +960,7 @@ def main():
     targets = retained_landing_targets(
         category_targets(catalog) + collection_targets(catalog) + brand_targets(products, product_page_by_id)
     )
+    write_landing_registry(targets)
     manifest_pages = []
     rows = []
 
