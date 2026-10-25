@@ -36,6 +36,9 @@ expansion setting was changed in this release.
 - Production deployment: `https://20d8a9a2.globalmarket-kg.pages.dev`.
 - Production storefront and orders API smoke checks: passed.
 - Search Console validation for the historical 404 group: started.
+- Updated `sitemap.xml` was resubmitted in Search Console on 2026-10-26;
+  Google confirmed receipt. The previous successful processing had found 908
+  URLs; the new file contains 913.
 
 ## Durable rule
 
